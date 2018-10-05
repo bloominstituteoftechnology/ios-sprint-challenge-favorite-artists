@@ -11,16 +11,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 static NSString * const artistGET = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/artist.get";
-static NSString * const lyricsGET = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/track.lyrics.get";
+static NSString * const lyricsGET = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";
 static NSString * const apiKey = @"iVSODYZpztmsh9efX06d2pLpHSQpp16cO7VjsndJ4L4RK7TlVr";
 
 @interface NSJSONSerialization (NSJSONSerialization)
 
-//-(instancetype)initWithDictionary:(NSDictionary *)songDictionary song:(Song *)song;
-//
-//-(NSDictionary *)objectDictionary;
+@property (readonly) NSMutableArray *songs;
 
--(void)searchForLyricsWithSongTitle:(NSString *)songTitle completion: (void (^)(NSArray *songs, NSError *))completion;
+-(void)searchForSongWithArtist:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSArray *songs, NSError *))completion;
+
+-(void)createSongWithTitle:(NSString*)songTitle artist:(NSString*)artist lyrics:(NSString*)lyrics rating:(NSInteger)rating;
+
+- (void)updateSong:(Song *)song title:(NSString *)title artist:(NSString *)artist;
 
 @end
 

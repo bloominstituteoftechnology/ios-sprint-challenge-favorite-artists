@@ -14,6 +14,9 @@
 		22EA06762167B65400A61412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22EA06752167B65400A61412 /* Main.storyboard */; };
 		22EA067F2167B7EF00A61412 /* SMFSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA067E2167B7EF00A61412 /* SMFSongDetailViewController.m */; };
 		22EA06822167B7FD00A61412 /* SMFSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA06812167B7FD00A61412 /* SMFSongsTableViewController.m */; };
+		22EA06862167B99C00A61412 /* LyricFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22EA06842167B99C00A61412 /* LyricFinder.xcdatamodeld */; };
+		22EA06892167BA2100A61412 /* SMFSong+SMFConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA06882167BA2100A61412 /* SMFSong+SMFConvenience.m */; };
+		22EA068C2167BDAB00A61412 /* SMFCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA068B2167BDAB00A61412 /* SMFCoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,11 @@
 		22EA067E2167B7EF00A61412 /* SMFSongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFSongDetailViewController.m; sourceTree = "<group>"; };
 		22EA06802167B7FD00A61412 /* SMFSongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFSongsTableViewController.h; sourceTree = "<group>"; };
 		22EA06812167B7FD00A61412 /* SMFSongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFSongsTableViewController.m; sourceTree = "<group>"; };
+		22EA06852167B99C00A61412 /* LyricFinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LyricFinder.xcdatamodel; sourceTree = "<group>"; };
+		22EA06872167BA2100A61412 /* SMFSong+SMFConvenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMFSong+SMFConvenience.h"; sourceTree = "<group>"; };
+		22EA06882167BA2100A61412 /* SMFSong+SMFConvenience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SMFSong+SMFConvenience.m"; sourceTree = "<group>"; };
+		22EA068A2167BDAA00A61412 /* SMFCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMFCoreDataStack.h; sourceTree = "<group>"; };
+		22EA068B2167BDAB00A61412 /* SMFCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMFCoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +71,8 @@
 			children = (
 				22EA065D2167B5F100A61412 /* AppDelegate.h */,
 				22EA065E2167B5F100A61412 /* AppDelegate.m */,
-				22EA06792167B6E000A61412 /* New Group */,
+				22EA06832167B98300A61412 /* Core Data */,
+				22EA06792167B6E000A61412 /* View Controllers */,
 				22EA06752167B65400A61412 /* Main.storyboard */,
 				22EA06662167B5FB00A61412 /* Assets.xcassets */,
 				22EA06682167B5FB00A61412 /* LaunchScreen.storyboard */,
@@ -73,7 +82,7 @@
 			path = "Lyric Finder";
 			sourceTree = "<group>";
 		};
-		22EA06792167B6E000A61412 /* New Group */ = {
+		22EA06792167B6E000A61412 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				22EA06802167B7FD00A61412 /* SMFSongsTableViewController.h */,
@@ -81,7 +90,19 @@
 				22EA067D2167B7EF00A61412 /* SMFSongDetailViewController.h */,
 				22EA067E2167B7EF00A61412 /* SMFSongDetailViewController.m */,
 			);
-			path = "New Group";
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		22EA06832167B98300A61412 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				22EA06842167B99C00A61412 /* LyricFinder.xcdatamodeld */,
+				22EA06872167BA2100A61412 /* SMFSong+SMFConvenience.h */,
+				22EA06882167BA2100A61412 /* SMFSong+SMFConvenience.m */,
+				22EA068A2167BDAA00A61412 /* SMFCoreDataStack.h */,
+				22EA068B2167BDAB00A61412 /* SMFCoreDataStack.m */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +178,10 @@
 			files = (
 				22EA066D2167B5FB00A61412 /* main.m in Sources */,
 				22EA065F2167B5F100A61412 /* AppDelegate.m in Sources */,
+				22EA06892167BA2100A61412 /* SMFSong+SMFConvenience.m in Sources */,
+				22EA068C2167BDAB00A61412 /* SMFCoreDataStack.m in Sources */,
 				22EA067F2167B7EF00A61412 /* SMFSongDetailViewController.m in Sources */,
+				22EA06862167B99C00A61412 /* LyricFinder.xcdatamodeld in Sources */,
 				22EA06822167B7FD00A61412 /* SMFSongsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +368,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		22EA06842167B99C00A61412 /* LyricFinder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				22EA06852167B99C00A61412 /* LyricFinder.xcdatamodel */,
+			);
+			currentVersion = 22EA06852167B99C00A61412 /* LyricFinder.xcdatamodel */;
+			path = LyricFinder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 22EA06522167B5F100A61412 /* Project object */;
 }

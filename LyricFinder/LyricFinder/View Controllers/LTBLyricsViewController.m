@@ -29,7 +29,11 @@
     [self updateViews];
 }
 
-- (IBAction)search:(id)sender {
+- (IBAction)search:(id)sender
+{
+    [self.lyricController loadLyricsWithTitle:self.titleTextField.text artist:self.artistTextField.text completion:^(NSString * _Nonnull lyric, NSError * _Nonnull error) {
+        self.lyricsTextView.text = lyric;
+    }];
 }
 
 - (IBAction)save:(id)sender
@@ -38,12 +42,12 @@
     NSString *artist = self.artistTextField.text;
     NSString *lyrics = self.lyricsTextView.text;
     
-    if (title.length == 0 || text.length == 0) return;
+    if (title.length == 0 || artist.length == 0 || lyrics.length == 0) return;
     
     if (self.lyrics) {
-        [self.lyricController updateDocument:self.document title:title text:text];
+        [self.lyricController updateLyrics:lyrics title:title artist:artist];
     } else {
-        [self.documentController createDocumentWithTitle:title text:text];
+        [self.lyricController createWithTitle:title artist:artist lyrics:lyrics rating:0];
     }
     
     [self.navigationController popViewControllerAnimated:TRUE];
@@ -68,6 +72,5 @@
         self.navigationItem.title = @"Create Document";
     }
 }
-
 
 @end

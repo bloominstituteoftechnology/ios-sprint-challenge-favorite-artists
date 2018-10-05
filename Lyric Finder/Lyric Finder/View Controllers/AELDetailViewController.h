@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AELSongController;
+@class AELSong;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,11 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)search:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *songTitleField;
-
 @property (weak, nonatomic) IBOutlet UITextField *artistField;
-
 @property (weak, nonatomic) IBOutlet UITextView *lyricTextView;
 
+@property AELSongController *songController;
+@property AELSong *song;
 @end
 
 NS_ASSUME_NONNULL_END

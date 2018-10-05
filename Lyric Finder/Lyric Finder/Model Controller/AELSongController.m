@@ -22,7 +22,7 @@
 {
     self = [super init];
     if (self) {
-        _internalSongs = [NSMutableArray init];
+        _internalSongs = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -49,8 +49,49 @@
     [[self internalSongs] removeObject:song];
 }
 
-#pragma mark -Properties
+#pragma mark - Persistence Methods
+-(void) saveToPersistentFile{
+    NSFileManager *fm = [[NSFileManager alloc] init];
+}
+
+#pragma mark - Networking
+
+- (void)searchForLyricsWithTitle:(NSString *)title by:(NSString *)artist completion:(void (^)(NSString* lyrics, NSError *error))completion
+{
+    NSURL *baseURL = [NSURL URLWithString:baseURLString];
+    NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
+    NSURLQueryItem *artistQueryItem = [NSURLQueryItem queryItemWithName:@"q_artist" value:[artist lowercaseString]];
+    NSURLQueryItem *titleQueryItem = [NSURLQueryItem queryItemWithName:@"q_track" value:[title lowercaseString]];
+    [components setQueryItems: @[artistQueryItem, titleQueryItem]];
+    NSURL *requestURL = [components URL];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
+    
+    [request setValue:@"kXoo0gl9rEmshO0LdGwMvnzrJAsLp1n1y7FjsnDM80FhRpkgVr" forHTTPHeaderField:@"X-Mashape-Key"];
+    
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *r, NSError *error) {
+        if (error){
+            NSLog(@"Error fetching data; %@", error);
+            completion(nil,error);
+            return;
+        }
+        
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        if (![dictionary isKindOfClass: [NSDictionary class]]) {
+            NSLog(@"JSON was not a dictionary");
+            completion(nil, [[NSError alloc] init]);
+            return;
+        }
+        NSString *lyrics = dictionary[@"lyrics_body"];
+        
+        completion(lyrics,nil);
+    }]resume];
+}
+
+#pragma mark - Properties
 -(NSArray *) songs{
     return [[self internalSongs] copy];
 }
+
+static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";
 @end

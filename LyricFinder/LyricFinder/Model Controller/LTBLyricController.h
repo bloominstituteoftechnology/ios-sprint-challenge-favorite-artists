@@ -16,10 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSArray<LTBLyric *> *lyrics;
 
-- (void)createLyricWithTitle:(NSString *)title artist:(NSString *)artist;
-- (void)updateLyric:(LTBLyric *)lyric title:(NSString *)title artist:(NSString *)artist;
+- (void)createWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating;
 
-- (void)loadLyricsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(LTBLyric *lyric, NSError *error))completion;
+- (void)updateLyrics:(LTBLyric *)lyrics title:(NSString *)title artist:(NSString *)artist;
+
+- (void)loadLyricsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(NSString *lyric, NSError *error))completion;
 
 @end
 

@@ -71,6 +71,16 @@
     [[self songs] addObject:song];
 }
 
+- (void)loadSongsFromDocuments {
+    NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentsDirectory = [dirPaths objectAtIndex:0];
+    NSArray *files = [[self manager] contentsOfDirectoryAtPath:documentsDirectory error:nil];
+//    for (NSData *file in files) {
+//        CGASong *song = [NSKeyedUnarchiver unarchiveObjectWithData:file];
+//        NSLog(@"%@", song);
+//    }
+}
+
 static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";
 
 @end

@@ -125,7 +125,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="X9h-HC-5SW" firstAttribute="trailing" secondItem="LxB-NL-yDk" secondAttribute="trailing" constant="16" id="A98-7l-32b"/>
                             <constraint firstItem="LxB-NL-yDk" firstAttribute="top" secondItem="X9h-HC-5SW" secondAttribute="top" constant="16" id="Zs8-Nt-VJY"/>

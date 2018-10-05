@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)fetchSongsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(NSMutableArray *songs, NSError *))completion;
 - (void)persistSongToLocalStore:(STDSong *)song completion:(void (^)(NSError *))completion;
+- (void)updateSongsInLocalStore:(STDSong *)song completion:(void (^)(NSError *))completion;
 - (void)fetchSongsFromLocalStore:(void (^)(NSError *))completion;
 
 @end

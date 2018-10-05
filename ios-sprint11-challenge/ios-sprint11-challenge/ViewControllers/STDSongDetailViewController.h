@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property STDSong *song;
 @property STDSongController *songController;
+@property NSInteger *rating;
 @property (weak, nonatomic) IBOutlet UILabel *ratingTextLabel;
 @property (weak, nonatomic) IBOutlet UITextField *songTextField;
 @property (weak, nonatomic) IBOutlet UITextField *artistTextField;

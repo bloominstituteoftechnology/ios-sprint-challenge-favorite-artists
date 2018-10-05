@@ -59,15 +59,30 @@
     NSString *artist = [self.artistTextField text];
     NSString *lyric = [self.lyricsTextView text];
     
-    STDSong *song = [[STDSong alloc] initWithTitle:title artist:artist lyric:lyric];
-    
-    [self.songController persistSongToLocalStore:song completion:^(NSError * error) {
-        if (error) {
-            NSLog(@"Error fetching songs from local store.");
-        }
+    // If does not exist then save, else update and save
+    if (!song) {
+        STDSong *song = [[STDSong alloc] initWithTitle:title artist:artist lyric:lyric];
         
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
+        [self.songController persistSongToLocalStore:song completion:^(NSError * error) {
+            if (error) {
+                NSLog(@"Error saving songs in local store.");
+            }
+        }];
+    } else {
+        self.song.artist = artist;
+        self.song.title = title;
+        self.song.lyric = lyric;
+        self.song.rating = self.rating;
+        
+        [self.songController updateSongsInLocalStore:song completion:^(NSError * error) {
+            if (error) {
+                NSLog(@"Error updating songs in local store.");
+            }
+        }];
+    }
+    
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

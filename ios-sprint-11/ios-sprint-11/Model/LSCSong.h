@@ -1,5 +1,5 @@
 //
-//  Song.h
+//  LSCSong.h
 //  ios-sprint-11
 //
 //  Created by David Doswell on 10/5/18.
@@ -10,12 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// 8qtbkHldIDmshDldTEfaYNMnr4t0p1OJIZZjsnSxzLKNFu051Y'
-@interface Song : NSObject
+@interface LSCSong : NSObject
+
+- (instancetype)initWithSongTitle:(NSString *)songTitle artistName:(NSString *)artistName songLyrics:(NSString *)songLyrics songRatings:(NSNumber *)songRating;
 
 @property NSString *songTitle;
 @property NSString *artistName;
 @property NSString *songLyrics;
+@property NSNumber *songRating;
 
 @end
 

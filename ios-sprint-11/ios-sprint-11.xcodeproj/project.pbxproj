@@ -13,7 +13,7 @@
 		491754EF2167BB1400A7BC36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491754ED2167BB1400A7BC36 /* LaunchScreen.storyboard */; };
 		491754F22167BB1400A7BC36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 491754F12167BB1400A7BC36 /* main.m */; };
 		491754FA2167BDF400A7BC36 /* LSCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491754F92167BDF400A7BC36 /* LSCTableViewController.m */; };
-		491755002167BF5600A7BC36 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 491754FF2167BF5600A7BC36 /* Song.m */; };
+		491755032167C24800A7BC36 /* LSCSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 491755022167C24800A7BC36 /* LSCSong.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		491754F12167BB1400A7BC36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		491754F82167BDF400A7BC36 /* LSCTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCTableViewController.h; sourceTree = "<group>"; };
 		491754F92167BDF400A7BC36 /* LSCTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCTableViewController.m; sourceTree = "<group>"; };
-		491754FE2167BF5600A7BC36 /* Song.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
-		491754FF2167BF5600A7BC36 /* Song.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		491755012167C24800A7BC36 /* LSCSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCSong.h; sourceTree = "<group>"; };
+		491755022167C24800A7BC36 /* LSCSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCSong.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 		491754FD2167BF1700A7BC36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				491754FE2167BF5600A7BC36 /* Song.h */,
-				491754FF2167BF5600A7BC36 /* Song.m */,
+				491755012167C24800A7BC36 /* LSCSong.h */,
+				491755022167C24800A7BC36 /* LSCSong.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,8 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				491755002167BF5600A7BC36 /* Song.m in Sources */,
 				491754F22167BB1400A7BC36 /* main.m in Sources */,
+				491755032167C24800A7BC36 /* LSCSong.m in Sources */,
 				491754FA2167BDF400A7BC36 /* LSCTableViewController.m in Sources */,
 				491754E42167BB1200A7BC36 /* AppDelegate.m in Sources */,
 			);

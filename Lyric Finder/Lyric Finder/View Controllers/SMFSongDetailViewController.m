@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.saveButton.enabled = NO;
     self.ratingStepper.minimumValue = 0.0;
     self.ratingStepper.maximumValue = 5.0;
     self.lyricsTextView.editable = NO;
@@ -53,6 +54,7 @@
 }
 
 - (IBAction)changeRating:(id)sender {
+    self.saveButton.enabled = YES;
     NSNumber *rating = [NSNumber numberWithInteger:self.song.rating];
     self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %i", (int)rating.integerValue];
 }
@@ -66,6 +68,8 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             self.lyricsTextView.text = lyrics;
+            self.saveButton.enabled = YES;
+            self.searchButton.hidden = YES;
         });
     }];
 }

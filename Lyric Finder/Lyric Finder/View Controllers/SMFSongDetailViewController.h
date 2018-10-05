@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class SMFSong;
+@class SMFSongController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SMFSongDetailViewController : UIViewController
+
+@property SMFSong *song;
+@property SMFSongController *songController;
 
 @end
 

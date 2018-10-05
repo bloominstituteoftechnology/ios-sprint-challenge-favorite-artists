@@ -86,6 +86,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="anl-PT-OnR">
                                                 <rect key="frame" x="249" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="changeRating:" destination="4ZD-2f-cFF" eventType="valueChanged" id="j14-pT-KKa"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -104,6 +107,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRE-bJ-8PZ">
                                         <rect key="frame" x="0.0" y="113" width="343" height="30"/>
                                         <state key="normal" title="Search for lyrics"/>
+                                        <connections>
+                                            <action selector="search:" destination="4ZD-2f-cFF" eventType="touchUpInside" id="pdx-mf-3Kc"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u6b-Fo-SsI">
                                         <rect key="frame" x="0.0" y="151" width="343" height="368"/>
@@ -124,8 +130,21 @@
                         <viewLayoutGuide key="safeArea" id="pqd-ee-YCD"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Song Lyrics" id="1qp-Ev-KDP">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mpR-y8-spA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mpR-y8-spA">
+                            <connections>
+                                <action selector="save:" destination="4ZD-2f-cFF" id="6fQ-HM-0qz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="CCg-cD-DBl" id="Nu8-cj-vTn"/>
+                        <outlet property="lyricsTextView" destination="u6b-Fo-SsI" id="8gr-hD-BYd"/>
+                        <outlet property="ratingLabel" destination="n3n-3F-m8r" id="ads-to-QRV"/>
+                        <outlet property="ratingStepper" destination="anl-PT-OnR" id="PPG-xK-Yhg"/>
+                        <outlet property="saveButton" destination="mpR-y8-spA" id="2Nv-BP-tub"/>
+                        <outlet property="searchButton" destination="dRE-bJ-8PZ" id="rbC-OO-BV0"/>
+                        <outlet property="titleTextField" destination="Scr-1J-XCg" id="89O-dL-8aw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7U-JF-CiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

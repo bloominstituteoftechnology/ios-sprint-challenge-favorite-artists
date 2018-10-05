@@ -9,6 +9,12 @@
 #import "CGASongController.h"
 #import "CGASong.h"
 
+@interface CGASongController ()
+
+@property NSFileManager *manager;
+
+@end
+
 @implementation CGASongController
 
 - (instancetype)init
@@ -16,6 +22,7 @@
     self = [super init];
     if (self) {
         _songs = [[NSMutableArray alloc] init];
+        _manager = [NSFileManager defaultManager];
     }
     return self;
 }
@@ -55,6 +62,12 @@
 
 - (void)createSongWithArtist:(NSString *)artist track:(NSString *)track lyrics:(NSString *)lyrics rating:(double)rating {
     CGASong *song = [[CGASong alloc] initWithSong:track artist:artist lyrics:lyrics rating:rating];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:song requiringSecureCoding:false error:nil];
+    NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [dirPaths objectAtIndex:0];
+    NSString *getDataPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", track]];
+    [data writeToFile:getDataPath atomically:YES];
+    
     [[self songs] addObject:song];
 }
 

@@ -21,4 +21,24 @@
     return self;
 }
 
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+    [encoder encodeObject:[self song] forKey:@"song"];
+    [encoder encodeObject:[self artist] forKey:@"artist"];
+    [encoder encodeObject:[self lyrics] forKey:@"lyrics"];
+    [encoder encodeObject:[NSString stringWithFormat:@"%i", [self rating]] forKey:@"rating"];
+    
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self) {
+        self.song = [aDecoder decodeObjectForKey:@"song"];
+        self.artist = [aDecoder decodeObjectForKey:@"artist"];
+        self.lyrics = [aDecoder decodeObjectForKey:@"lyrics"];
+        self.rating = [[aDecoder decodeObjectForKey:@"rating"] intValue];
+    }
+    return self;
+}
+
 @end

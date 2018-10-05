@@ -15,6 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)searchForLyricsWithSongTitle:(NSString *)title byArtist:(NSString *)artist completionHandler: (void (^)(JTMSongLyrics *lyrics, NSError *))completion;
 
+-(void)saveNewLyricFromDictionary:(NSDictionary *)dictionary;
+
+-(void)saveToPersistentStore;
+
+-(void)loadFromPersistentStore;
+
+@property (nonatomic) NSArray *lyricsDictionaries;
+
 @end
 
 NS_ASSUME_NONNULL_END

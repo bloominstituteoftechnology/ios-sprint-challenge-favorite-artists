@@ -8,7 +8,27 @@
 
 #import "JTMLongLyricsController.h"
 
+@interface JTMLongLyricsController ()
+
+@property (nonatomic) NSMutableArray *internalLyricsDictionaries;
+
+@property NSFileManager *fileManager;
+
+@end
+
 @implementation JTMLongLyricsController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _internalLyricsDictionaries = [[NSMutableArray alloc] init];
+        _fileManager = [NSFileManager defaultManager];
+    }
+    return self;
+}
+
+// MARK: Networking
 
 -(void)searchForLyricsWithSongTitle:(NSString *)title byArtist:(NSString *)artist completionHandler:(void (^)(JTMSongLyrics *, NSError *))completion
 {
@@ -44,6 +64,38 @@
         
     }] resume];
     
+}
+
+// MARK: Backing Management
+
+-(void)saveNewLyricFromDictionary:(NSDictionary *)dictionary
+{
+    [_internalLyricsDictionaries addObject:dictionary];
+}
+
+-(NSArray *)lyricsDictionaries
+{
+    return [[self lyricsDictionaries] copy];
+}
+
+// MARK: Persistence
+
+- (void)saveToPersistentStore
+{
+    // pseudo code for saving using self.fileManager:
+    // save a path as a const from homeDirectoryForCurrentUser
+    // create a data object from JSON serialization
+    // call createFileAtPath:contents:attributes:
+    // this saves over the file if it already exists
+}
+
+-(void)loadFromPersistentStore
+{
+    // use self.fileManager
+    // call contentsAtPath:
+    // which returns a data object
+    // call restoreFromDictionary on the model for each entry in the array
+    // probably also work in real JSONSerialization somewhere
 }
 
 static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";

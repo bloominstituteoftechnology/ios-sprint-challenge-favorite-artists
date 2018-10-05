@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		13954ADF2167B472003B8072 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13954ADE2167B472003B8072 /* AppDelegate.m */; };
-		13954AE22167B472003B8072 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13954AE12167B472003B8072 /* ViewController.m */; };
 		13954AE52167B472003B8072 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13954AE32167B472003B8072 /* Main.storyboard */; };
 		13954AE72167B474003B8072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13954AE62167B474003B8072 /* Assets.xcassets */; };
 		13954AEA2167B474003B8072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13954AE82167B474003B8072 /* LaunchScreen.storyboard */; };
@@ -19,8 +18,6 @@
 		13954ADA2167B472003B8072 /* ios-lyric-finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-lyric-finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13954ADD2167B472003B8072 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13954ADE2167B472003B8072 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		13954AE02167B472003B8072 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		13954AE12167B472003B8072 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		13954AE42167B472003B8072 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13954AE62167B474003B8072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13954AE92167B474003B8072 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +57,6 @@
 			children = (
 				13954ADD2167B472003B8072 /* AppDelegate.h */,
 				13954ADE2167B472003B8072 /* AppDelegate.m */,
-				13954AE02167B472003B8072 /* ViewController.h */,
-				13954AE12167B472003B8072 /* ViewController.m */,
 				13954AE32167B472003B8072 /* Main.storyboard */,
 				13954AE62167B474003B8072 /* Assets.xcassets */,
 				13954AE82167B474003B8072 /* LaunchScreen.storyboard */,
@@ -141,7 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13954AE22167B472003B8072 /* ViewController.m in Sources */,
 				13954AED2167B474003B8072 /* main.m in Sources */,
 				13954ADF2167B472003B8072 /* AppDelegate.m in Sources */,
 			);

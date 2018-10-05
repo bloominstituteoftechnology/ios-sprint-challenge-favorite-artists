@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface STDSong : NSObject
 
+- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyric:(NSString *)lyric;
+
 @property NSString *title;
 @property NSString *artist;
 @property NSString *lyric;

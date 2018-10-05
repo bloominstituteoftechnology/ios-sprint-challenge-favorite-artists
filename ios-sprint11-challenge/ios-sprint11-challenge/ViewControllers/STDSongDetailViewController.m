@@ -7,6 +7,8 @@
 //
 
 #import "STDSongDetailViewController.h"
+#import "STDSongController.h"
+#import "STDSong.h"
 
 @interface STDSongDetailViewController ()
 
@@ -16,23 +18,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
+- (void)updateViews
+{
+    if (self.song) {
+        
+        [self.ratingTextLabel setText: [NSString stringWithFormat:@"%ld", self.song.rating]];
+        [self.songTextField setText:self.song.title];
+        [self.artistTextField  setText:self.song.artist];
+        [self.lyricsTextView setText:self.song.lyric];
+    }
+}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)ratingStepper:(UIStepper *)sender
+{
+    
 }
-*/
 
-- (IBAction)ratingStepper:(UIStepper *)sender {
+- (IBAction)search:(UIButton *)sender
+{
+    NSString *title = [self.songTextField text];
+    NSString *artist = [self.artistTextField text];
+    
+    [self.songController fetchSongsWithTitle:title artist:artist completion:^(NSMutableArray * _Nonnull songs, NSError * error) {
+        if (error) {
+            NSLog(@"Error fetching songs from server.");
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateViews];
+        });
+    }];
 }
-- (IBAction)search:(UIButton *)sender {
+
+- (IBAction)save:(UIBarButtonItem *)sender
+{
+    NSString *title = [self.songTextField text];
+    NSString *artist = [self.artistTextField text];
+    NSString *lyric = [self.lyricsTextView text];
+    
+    STDSong *song = [[STDSong alloc] initWithTitle:title artist:artist lyric:lyric];
+    
+    [self.songController persistSongToLocalStore:song completion:^(NSError * error) {
+        if (error) {
+            NSLog(@"Error fetching songs from local store.");
+        }
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
 }
-- (IBAction)save:(UIBarButtonItem *)sender {
-}
+
 @end

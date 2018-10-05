@@ -32,6 +32,7 @@
 {
     AELSong *newSong = [[AELSong alloc] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [[self internalSongs] addObject:newSong];
+    [self saveToPersistentFile];
 }
 
 -(void) updateSong:(AELSong *) song lyrics: (NSString*) lyrics rating: (NSUInteger) rating
@@ -41,6 +42,7 @@
     [song setLyrics:lyrics];
     [song setRating:rating];
     [[self internalSongs] insertObject:song atIndex:index];
+    [self saveToPersistentFile];
     
 }
 
@@ -51,7 +53,21 @@
 
 #pragma mark - Persistence Methods
 -(void) saveToPersistentFile{
-    NSFileManager *fm = [[NSFileManager alloc] init];
+    
+    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *filePath = [documentPath stringByAppendingPathComponent:@"data.json"];
+    
+    NSData* data = [NSJSONSerialization dataWithJSONObject:[self songs] options:0 error:NULL];
+    [data writeToFile:filePath atomically:YES];
+}
+
+-(void) loadFromPersistentFile{
+    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *filePath = [documentPath stringByAppendingPathComponent:@"data.json"];
+
+    NSData *data = [NSData dataWithContentsOfFile: filePath];
+    
+    [[self internalSongs] setArray:[NSJSONSerialization JSONObjectWithData:data options:0 error: NULL]];
 }
 
 #pragma mark - Networking

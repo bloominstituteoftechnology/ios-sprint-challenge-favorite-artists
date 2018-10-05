@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark Networking
 - (void)searchForLyricsWithTitle:(NSString *)title by:(NSString *)artist completion:(void (^)(NSString* lyrics, NSError *error))completion;
 
+#pragma mark Persistence
+-(void) loadFromPersistentFile;
+-(void) saveToPersistentFile;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    _songController = [[AELSongController alloc] init];
+    [[self songController] loadFromPersistentFile];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		10C466962167BC5900D1A91D /* AELLyricTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C466952167BC5900D1A91D /* AELLyricTableViewController.m */; };
 		10C466992167BC6E00D1A91D /* AELDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C466982167BC6E00D1A91D /* AELDetailViewController.m */; };
+		10C4669D2167BFAB00D1A91D /* AELSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C4669C2167BFAB00D1A91D /* AELSong.m */; };
+		10C466A22167BFD400D1A91D /* AELSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C466A12167BFD400D1A91D /* AELSongController.m */; };
 		10C817BA2167B7A70003B234 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C817B92167B7A70003B234 /* AppDelegate.m */; };
 		10C817C02167B7A70003B234 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C817BE2167B7A70003B234 /* Main.storyboard */; };
 		10C817C22167B7A90003B234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C817C12167B7A90003B234 /* Assets.xcassets */; };
@@ -21,6 +23,10 @@
 		10C466952167BC5900D1A91D /* AELLyricTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AELLyricTableViewController.m; sourceTree = "<group>"; };
 		10C466972167BC6E00D1A91D /* AELDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AELDetailViewController.h; sourceTree = "<group>"; };
 		10C466982167BC6E00D1A91D /* AELDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AELDetailViewController.m; sourceTree = "<group>"; };
+		10C4669B2167BFAB00D1A91D /* AELSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AELSong.h; sourceTree = "<group>"; };
+		10C4669C2167BFAB00D1A91D /* AELSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AELSong.m; sourceTree = "<group>"; };
+		10C466A02167BFD400D1A91D /* AELSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AELSongController.h; sourceTree = "<group>"; };
+		10C466A12167BFD400D1A91D /* AELSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AELSongController.m; sourceTree = "<group>"; };
 		10C817B52167B7A70003B234 /* Lyric Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lyric Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C817B82167B7A70003B234 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10C817B92167B7A70003B234 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +59,24 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		10C4669A2167BF9700D1A91D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10C4669B2167BFAB00D1A91D /* AELSong.h */,
+				10C4669C2167BFAB00D1A91D /* AELSong.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10C4669E2167BFB400D1A91D /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10C466A02167BFD400D1A91D /* AELSongController.h */,
+				10C466A12167BFD400D1A91D /* AELSongController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		10C817AC2167B7A70003B234 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +99,8 @@
 				10C817B82167B7A70003B234 /* AppDelegate.h */,
 				10C817B92167B7A70003B234 /* AppDelegate.m */,
 				10C817BE2167B7A70003B234 /* Main.storyboard */,
+				10C4669A2167BF9700D1A91D /* Model */,
+				10C4669E2167BFB400D1A91D /* Model Controller */,
 				10C466932167BC2F00D1A91D /* View Controllers */,
 				10C817CE2167B8B40003B234 /* Resources */,
 			);
@@ -163,10 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C4669D2167BFAB00D1A91D /* AELSong.m in Sources */,
 				10C466992167BC6E00D1A91D /* AELDetailViewController.m in Sources */,
 				10C466962167BC5900D1A91D /* AELLyricTableViewController.m in Sources */,
 				10C817C82167B7A90003B234 /* main.m in Sources */,
 				10C817BA2167B7A70003B234 /* AppDelegate.m in Sources */,
+				10C466A22167BFD400D1A91D /* AELSongController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

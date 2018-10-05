@@ -14,6 +14,8 @@
 		F8610C902167B714007E2934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8610C8E2167B714007E2934 /* LaunchScreen.storyboard */; };
 		F8610C932167B714007E2934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610C922167B714007E2934 /* main.m */; };
 		F8610C9B2167BA4E007E2934 /* JTMSongLyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610C9A2167BA4E007E2934 /* JTMSongLyrics.m */; };
+		F8610CA42167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610CA32167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m */; };
+		F8610CA72167C020007E2934 /* JTMLongLyricsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610CA62167C020007E2934 /* JTMLongLyricsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		F8610C922167B714007E2934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8610C992167BA4E007E2934 /* JTMSongLyrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMSongLyrics.h; sourceTree = "<group>"; };
 		F8610C9A2167BA4E007E2934 /* JTMSongLyrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMSongLyrics.m; sourceTree = "<group>"; };
+		F8610CA22167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JTMSongLyrics+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		F8610CA32167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JTMSongLyrics+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		F8610CA52167C020007E2934 /* JTMLongLyricsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMLongLyricsController.h; sourceTree = "<group>"; };
+		F8610CA62167C020007E2934 /* JTMLongLyricsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMLongLyricsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,10 @@
 				F8610C922167B714007E2934 /* main.m */,
 				F8610C992167BA4E007E2934 /* JTMSongLyrics.h */,
 				F8610C9A2167BA4E007E2934 /* JTMSongLyrics.m */,
+				F8610CA22167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.h */,
+				F8610CA32167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m */,
+				F8610CA52167C020007E2934 /* JTMLongLyricsController.h */,
+				F8610CA62167C020007E2934 /* JTMLongLyricsController.m */,
 			);
 			path = "Lyric Finder";
 			sourceTree = "<group>";
@@ -150,7 +160,9 @@
 				F8610C882167B713007E2934 /* ViewController.m in Sources */,
 				F8610C932167B714007E2934 /* main.m in Sources */,
 				F8610C9B2167BA4E007E2934 /* JTMSongLyrics.m in Sources */,
+				F8610CA72167C020007E2934 /* JTMLongLyricsController.m in Sources */,
 				F8610C852167B713007E2934 /* AppDelegate.m in Sources */,
+				F8610CA42167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

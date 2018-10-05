@@ -7,10 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "STDSong.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface STDSongController : NSObject
+
+// Immutable readonly list of songs
+@property (nonatomic, readonly) NSArray *songs;
+
+- (void)fetchSongsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(NSMutableArray *songs, NSError *))completion;
+- (void)persistSongToLocalStore:(STDSong *)song completion:(void (^)(NSError *))completion;
+- (void)fetchSongsFromLocalStore:(void (^)(NSError *))completion;
 
 @end
 

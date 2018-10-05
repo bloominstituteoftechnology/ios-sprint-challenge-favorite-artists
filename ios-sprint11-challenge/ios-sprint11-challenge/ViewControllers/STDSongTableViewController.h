@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STDSongController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface STDSongTableViewController : UITableViewController
 
-
+@property STDSongController *songController;
 
 @end
 

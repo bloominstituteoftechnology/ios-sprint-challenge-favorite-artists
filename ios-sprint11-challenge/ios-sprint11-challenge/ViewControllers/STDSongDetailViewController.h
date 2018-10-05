@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STDSong.h"
+#import "STDSongController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface STDSongDetailViewController : UIViewController
 
+@property STDSong *song;
+@property STDSongController *songController;
 @property (weak, nonatomic) IBOutlet UILabel *ratingTextLabel;
 @property (weak, nonatomic) IBOutlet UITextField *songTextField;
 @property (weak, nonatomic) IBOutlet UITextField *artistTextField;

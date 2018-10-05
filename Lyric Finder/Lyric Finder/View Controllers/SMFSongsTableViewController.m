@@ -50,13 +50,14 @@
 - (NSFetchedResultsController *)createFRC {
     NSManagedObjectContext *context = self.songController.moc;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"SMFSong"];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    NSSortDescriptor *titleDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+    NSSortDescriptor *ratingDescriptor = [[NSSortDescriptor alloc] initWithKey:@"rating" ascending:YES];
+    [fetchRequest setSortDescriptors:@[ratingDescriptor, titleDescriptor]];
     
     return [[NSFetchedResultsController alloc]
             initWithFetchRequest:fetchRequest
             managedObjectContext:context
-            sectionNameKeyPath:nil
+            sectionNameKeyPath:@"rating"
             cacheName:nil];
     
     
@@ -116,8 +117,14 @@
 
 
 #pragma mark - Table view data source
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.frc.sections.count;
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return self.frc.sections[section].name;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.frc.fetchedObjects.count;
+    return self.frc.sections[section].numberOfObjects;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell" forIndexPath:indexPath];

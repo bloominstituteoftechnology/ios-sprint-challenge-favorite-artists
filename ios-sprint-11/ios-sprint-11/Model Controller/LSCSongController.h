@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSCSongController : NSObject
 
+// set up array property
 @property (readonly) NSArray *songs;
 
 @end

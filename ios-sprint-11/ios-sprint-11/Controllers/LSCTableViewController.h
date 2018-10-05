@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSCSongController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSCTableViewController : UITableViewController
 
-
+@property LSCSongController *songController;
 
 @end
 

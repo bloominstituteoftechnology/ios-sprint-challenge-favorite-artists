@@ -10,6 +10,7 @@
 
 @implementation LSCSong
 
+// initialize model objects and instance type
 - (instancetype)initWithSongTitle:(NSString *)songTitle artistName:(NSString *)artistName songLyrics:(NSString *)songLyrics songRating:(NSInteger)songRating
 {
     self = [super init];

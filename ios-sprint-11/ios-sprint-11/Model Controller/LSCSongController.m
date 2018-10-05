@@ -10,14 +10,14 @@
 #import "LSCSong.h"
 
 @implementation LSCSongController
-
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _songs = [[NSArray alloc ] initWithObjects:
-                  [[LSCSong alloc] initWithSongTitle:@"Get Back" artistName:@"The Beatles" songLyrics:@"Get back! Get back! Get back to where you belong." songRating:4],
-                  nil];
+        // initialize an empty array
+        NSString *song = [NSString stringWithFormat:@""];
+        NSMutableArray *songs = [[NSMutableArray alloc] init];
+        [songs addObject:song];
     }
     return self;
 }

@@ -57,13 +57,21 @@
 			children = (
 				13954ADD2167B472003B8072 /* AppDelegate.h */,
 				13954ADE2167B472003B8072 /* AppDelegate.m */,
+				13954AF32167B859003B8072 /* Resources */,
+			);
+			path = "ios-lyric-finder";
+			sourceTree = "<group>";
+		};
+		13954AF32167B859003B8072 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				13954AE32167B472003B8072 /* Main.storyboard */,
 				13954AE62167B474003B8072 /* Assets.xcassets */,
 				13954AE82167B474003B8072 /* LaunchScreen.storyboard */,
 				13954AEB2167B474003B8072 /* Info.plist */,
 				13954AEC2167B474003B8072 /* main.m */,
 			);
-			path = "ios-lyric-finder";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "ios-lyric-finder/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ios-lyric-finder/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "ios-lyric-finder/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ios-lyric-finder/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

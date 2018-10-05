@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CGASongController : NSObject
 
 - (void)searchForSongWithArtist:(NSString *)artist track:(NSString *)track completion:(void (^)(NSString *, NSError *))completion;
+- (void)createSongWithArtist:(NSString *)artist track:(NSString *)track lyrics:(NSString *)lyrics rating:(double)rating;
+
+@property NSMutableArray *songs;
 
 @end
 

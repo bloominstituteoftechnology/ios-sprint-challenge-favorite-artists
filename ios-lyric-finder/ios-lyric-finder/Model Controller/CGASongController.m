@@ -7,11 +7,20 @@
 //
 
 #import "CGASongController.h"
+#import "CGASong.h"
 
 @implementation CGASongController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _songs = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 - (void)searchForSongWithArtist:(NSString *)artist track:(NSString *)track completion:(void (^)(NSString *, NSError *))completion {
-    NSLog(@"Searching...");
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
     NSURLQueryItem *artistQueryItem = [NSURLQueryItem queryItemWithName:@"q_artist" value:artist];
@@ -42,6 +51,11 @@
         
     }] resume];
     
+}
+
+- (void)createSongWithArtist:(NSString *)artist track:(NSString *)track lyrics:(NSString *)lyrics rating:(double)rating {
+    CGASong *song = [[CGASong alloc] initWithSong:track artist:artist lyrics:lyrics rating:rating];
+    [[self songs] addObject:song];
 }
 
 static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";

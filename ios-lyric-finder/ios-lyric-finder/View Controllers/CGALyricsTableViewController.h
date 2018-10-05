@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class CGASongController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CGALyricsTableViewController : UITableViewController
-
+@property CGASongController *songController;
 @end
 
 NS_ASSUME_NONNULL_END

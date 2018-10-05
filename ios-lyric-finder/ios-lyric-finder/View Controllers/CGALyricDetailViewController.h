@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CGASongController.h"
+#import "CGASong.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CGALyricDetailViewController : UIViewController
-
+@property CGASongController *songController;
+@property CGASong *song;
 @end
 
 NS_ASSUME_NONNULL_END

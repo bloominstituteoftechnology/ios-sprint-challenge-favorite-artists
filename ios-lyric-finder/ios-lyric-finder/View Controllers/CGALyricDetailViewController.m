@@ -10,20 +10,19 @@
 #import "CGASongController.h"
 
 @interface CGALyricDetailViewController ()
-
-@property CGASongController *songController;
 @property (strong, nonatomic) IBOutlet UITextField *songNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *artistTextField;
 @property (strong, nonatomic) IBOutlet UITextView *lyricsTextView;
 - (IBAction)searchForLyricsTapped:(id)sender;
+- (IBAction)saveSong:(id)sender;
 
 @end
 
 @implementation CGALyricDetailViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.songController = [[CGASongController alloc] init];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateViews];
 }
 
 - (IBAction)searchForLyricsTapped:(id)sender {
@@ -35,6 +34,26 @@
             [[self lyricsTextView] setText:songWithLyrics];
         });
     }];
+}
+
+- (IBAction)saveSong:(id)sender {
+    NSString *artistName = [[self artistTextField] text];
+    NSString *track = [[self songNameTextField] text];
+    NSString *lyrics = [[self lyricsTextView] text];
+    [[self songController] createSongWithArtist:artistName track:track lyrics:lyrics rating:0.0];
+    [[self navigationController] popViewControllerAnimated:true];
+}
+
+- (void)updateViews {
+    if ([self song]) {
+        NSString *title = [[self song] song];
+        NSString *songLyrics = [[self song] lyrics];
+        NSString *songArtist = [[self song] artist];
+        self.title = title;
+        [[self songNameTextField] setText:title];
+        [[self artistTextField] setText:songArtist];
+        [[self lyricsTextView] setText:songLyrics];
+    }
 }
 
 @end

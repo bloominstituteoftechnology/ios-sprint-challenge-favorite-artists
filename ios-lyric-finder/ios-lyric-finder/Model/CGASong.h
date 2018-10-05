@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CGASong : NSObject
 
-- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int) rating;
+- (instancetype)initWithSong:(NSString *)song artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int) rating;
 
-@property NSString *title;
+@property NSString *song;
 @property NSString *artist;
 @property NSString *lyrics;
 @property int rating;

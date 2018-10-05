@@ -62,7 +62,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vkv-hc-d2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="116"/>
+            <point key="canvasLocation" x="73" y="116"/>
         </scene>
         <!--New Song Lyrics-->
         <scene sceneID="dx5-Iz-5og">
@@ -128,7 +128,11 @@
                         <viewLayoutGuide key="safeArea" id="LuD-0W-ITm"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Song Lyrics" id="X4t-Z6-Rn9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="m7O-5F-k0p"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="m7O-5F-k0p">
+                            <connections>
+                                <action selector="saveSong:" destination="ZSM-pm-CZV" id="Vrd-c3-5JJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistTextField" destination="dhC-Dc-DwL" id="5pX-MG-jzd"/>
@@ -158,6 +162,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bo7-uy-ADn"/>
+        <segue reference="SeG-G5-7Zk"/>
     </inferredMetricsTieBreakers>
 </document>

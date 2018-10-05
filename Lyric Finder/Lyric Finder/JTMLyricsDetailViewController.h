@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JTMLongLyricsController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JTMLyricsDetailViewController : UIViewController
+
+@property JTMLongLyricsController *songController;
+@property JTMSongLyrics *lyric;
 
 @end
 

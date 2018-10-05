@@ -8,6 +8,7 @@
 
 #import "JTMSavedLyricsTableViewController.h"
 #import "JTMLongLyricsController.h"
+#import "JTMLyricsDetailViewController.h"
 
 @interface JTMSavedLyricsTableViewController ()
 - (IBAction)addNewLyric:(id)sender;
@@ -42,10 +43,13 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    JTMLyricsDetailViewController *vc = [segue destinationViewController];
+    vc.songController = self.songController;
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    if ([[segue identifier]  isEqual: @"ShowDetail"]) {
+        vc.lyric = self.songController.lyricsDictionaries[indexPath.row];
+    }
 }
 
 - (IBAction)addNewLyric:(id)sender {

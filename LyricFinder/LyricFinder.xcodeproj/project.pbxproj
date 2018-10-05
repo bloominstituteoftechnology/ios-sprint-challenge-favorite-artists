@@ -12,6 +12,12 @@
 		3903503A2167B59F00A249E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 390350392167B59F00A249E3 /* Assets.xcassets */; };
 		3903503D2167B59F00A249E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3903503B2167B59F00A249E3 /* LaunchScreen.storyboard */; };
 		390350402167B59F00A249E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3903503F2167B59F00A249E3 /* main.m */; };
+		3903504D2167B6B400A249E3 /* LTBLyric.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3903504B2167B6B400A249E3 /* LTBLyric.xcdatamodeld */; };
+		390350592167B7E300A249E3 /* LTBCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 390350582167B7E300A249E3 /* LTBCoreDataStack.m */; };
+		390350622167BC3800A249E3 /* LTBLyric+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 390350612167BC3800A249E3 /* LTBLyric+Convenience.m */; };
+		390350662167BE4C00A249E3 /* LTBLyricController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390350652167BE4C00A249E3 /* LTBLyricController.m */; };
+		390350692167C23000A249E3 /* LTBLyricFinderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390350682167C23000A249E3 /* LTBLyricFinderTableViewController.m */; };
+		3903506C2167C24900A249E3 /* LTBLyricsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3903506B2167C24900A249E3 /* LTBLyricsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,17 @@
 		3903503C2167B59F00A249E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3903503E2167B59F00A249E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3903503F2167B59F00A249E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3903504C2167B6B400A249E3 /* LTBLyric.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LTBLyric.xcdatamodel; sourceTree = "<group>"; };
+		390350572167B7E300A249E3 /* LTBCoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBCoreDataStack.h; sourceTree = "<group>"; };
+		390350582167B7E300A249E3 /* LTBCoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBCoreDataStack.m; sourceTree = "<group>"; };
+		390350602167BC3800A249E3 /* LTBLyric+Convenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LTBLyric+Convenience.h"; sourceTree = "<group>"; };
+		390350612167BC3800A249E3 /* LTBLyric+Convenience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LTBLyric+Convenience.m"; sourceTree = "<group>"; };
+		390350642167BE4C00A249E3 /* LTBLyricController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBLyricController.h; sourceTree = "<group>"; };
+		390350652167BE4C00A249E3 /* LTBLyricController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBLyricController.m; sourceTree = "<group>"; };
+		390350672167C23000A249E3 /* LTBLyricFinderTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBLyricFinderTableViewController.h; sourceTree = "<group>"; };
+		390350682167C23000A249E3 /* LTBLyricFinderTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBLyricFinderTableViewController.m; sourceTree = "<group>"; };
+		3903506A2167C24900A249E3 /* LTBLyricsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBLyricsViewController.h; sourceTree = "<group>"; };
+		3903506B2167C24900A249E3 /* LTBLyricsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBLyricsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				390350462167B5BB00A249E3 /* App Lifecycle */,
+				3903504A2167B67A00A249E3 /* Model */,
+				390350632167BDE900A249E3 /* Model Controller */,
 				390350472167B5C700A249E3 /* View Controllers */,
 				390350482167B5D000A249E3 /* Storyboards */,
 				390350492167B5D900A249E3 /* Resources */,
@@ -75,6 +94,10 @@
 		390350472167B5C700A249E3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				390350672167C23000A249E3 /* LTBLyricFinderTableViewController.h */,
+				390350682167C23000A249E3 /* LTBLyricFinderTableViewController.m */,
+				3903506A2167C24900A249E3 /* LTBLyricsViewController.h */,
+				3903506B2167C24900A249E3 /* LTBLyricsViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -96,6 +119,27 @@
 				3903503F2167B59F00A249E3 /* main.m */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3903504A2167B67A00A249E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3903504B2167B6B400A249E3 /* LTBLyric.xcdatamodeld */,
+				390350602167BC3800A249E3 /* LTBLyric+Convenience.h */,
+				390350612167BC3800A249E3 /* LTBLyric+Convenience.m */,
+				390350572167B7E300A249E3 /* LTBCoreDataStack.h */,
+				390350582167B7E300A249E3 /* LTBCoreDataStack.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		390350632167BDE900A249E3 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				390350642167BE4C00A249E3 /* LTBLyricController.h */,
+				390350652167BE4C00A249E3 /* LTBLyricController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +168,7 @@
 		390350252167B59F00A249E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LTB;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Linh Bouniol";
 				TargetAttributes = {
@@ -168,8 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				390350662167BE4C00A249E3 /* LTBLyricController.m in Sources */,
+				390350692167C23000A249E3 /* LTBLyricFinderTableViewController.m in Sources */,
+				3903504D2167B6B400A249E3 /* LTBLyric.xcdatamodeld in Sources */,
+				3903506C2167C24900A249E3 /* LTBLyricsViewController.m in Sources */,
 				390350402167B59F00A249E3 /* main.m in Sources */,
+				390350622167BC3800A249E3 /* LTBLyric+Convenience.m in Sources */,
 				390350322167B59F00A249E3 /* AppDelegate.m in Sources */,
+				390350592167B7E300A249E3 /* LTBCoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +414,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3903504B2167B6B400A249E3 /* LTBLyric.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3903504C2167B6B400A249E3 /* LTBLyric.xcdatamodel */,
+			);
+			currentVersion = 3903504C2167B6B400A249E3 /* LTBLyric.xcdatamodel */;
+			path = LTBLyric.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 390350252167B59F00A249E3 /* Project object */;
 }

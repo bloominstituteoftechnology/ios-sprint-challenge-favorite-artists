@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(NSDictionary *)convertToDictionaryWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int)rating;
 
+-(instancetype)restoreFromDictionary:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

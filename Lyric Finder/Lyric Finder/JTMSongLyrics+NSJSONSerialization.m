@@ -19,7 +19,17 @@
 
 -(NSDictionary *)convertToDictionaryWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int)rating
 {
-    return @{@"title": title, @"artist": artist, @"lyrics_body": lyrics, @"rating": @(rating)};
+    return @{@"title": title, @"artist": artist, @"lyrics": lyrics, @"rating": @(rating)};
+}
+
+-(instancetype)restoreFromDictionary:(NSDictionary *)dictionary
+{
+    NSString *title = dictionary[@"title"];
+    NSString *artist = dictionary[@"artist"];
+    NSString *lyrics = dictionary[@"lyrics"];
+    NSNumber *rating = dictionary[@"rating"];
+    
+    return [self initWithTitle:title artist:artist lyrics:lyrics rating:[rating integerValue]];
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  STDSong.h
+//  NSJSONSerialization+NSJSONSerialization.h
 //  ios-sprint11-challenge
 //
 //  Created by De MicheliStefano on 05.10.18.
@@ -10,12 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface STDSong : NSObject
-
-@property NSString *title;
-@property NSString *artist;
-@property NSString *lyric;
-@property NSInteger rating;
+@interface NSJSONSerialization (NSJSONSerialization)
 
 @end
 

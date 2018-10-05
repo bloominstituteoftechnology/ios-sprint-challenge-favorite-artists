@@ -10,4 +10,16 @@
 
 @implementation STDSong
 
+- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyric:(NSString *)lyric
+{
+    self = [super init];
+    if (self) {
+        _title = title;
+        _artist = artist;
+        _lyric = lyric;
+        _rating = 0;
+    }
+    return self;
+}
+
 @end

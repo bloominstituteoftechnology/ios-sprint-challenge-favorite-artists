@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class LTBLyricController, LTBLyric;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LTBLyricsViewController : UIViewController
+@interface LTBLyricsViewController : UIViewController <UITextViewDelegate>
+
+@property (nonatomic) LTBLyricController *lyricController;
+@property (nonatomic) LTBLyric *lyrics;
+
+- (void)updateViews;
 
 @end
 

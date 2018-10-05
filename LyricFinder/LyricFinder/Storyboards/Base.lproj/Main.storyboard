@@ -148,6 +148,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="artistTextField" destination="O9Z-GQ-jPc" id="NXO-2j-22F"/>
+                        <outlet property="lyricsTextView" destination="VHS-gx-5Qe" id="GLm-CZ-x9K"/>
                         <outlet property="ratingLabel" destination="4uc-E1-dbH" id="1mw-PC-EYN"/>
                         <outlet property="segmentedControl" destination="FTE-ef-51k" id="VEE-C4-oPH"/>
                         <outlet property="titleTextField" destination="H0g-TN-7QT" id="vMc-FL-JdW"/>

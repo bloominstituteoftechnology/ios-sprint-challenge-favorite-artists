@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
+@class LTBLyricController;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LTBLyricFinderTableViewController : UITableViewController
+@interface LTBLyricFinderTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+@property (nonatomic) LTBLyricController *lyricController;
 
 @end
 

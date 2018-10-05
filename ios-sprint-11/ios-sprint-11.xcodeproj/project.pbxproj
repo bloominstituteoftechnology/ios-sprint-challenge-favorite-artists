@@ -14,6 +14,7 @@
 		491754F22167BB1400A7BC36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 491754F12167BB1400A7BC36 /* main.m */; };
 		491754FA2167BDF400A7BC36 /* LSCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491754F92167BDF400A7BC36 /* LSCTableViewController.m */; };
 		491755032167C24800A7BC36 /* LSCSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 491755022167C24800A7BC36 /* LSCSong.m */; };
+		491755062167C9BD00A7BC36 /* LSCSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491755052167C9BD00A7BC36 /* LSCSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		491754F92167BDF400A7BC36 /* LSCTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCTableViewController.m; sourceTree = "<group>"; };
 		491755012167C24800A7BC36 /* LSCSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCSong.h; sourceTree = "<group>"; };
 		491755022167C24800A7BC36 /* LSCSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCSong.m; sourceTree = "<group>"; };
+		491755042167C9BD00A7BC36 /* LSCSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCSongController.h; sourceTree = "<group>"; };
+		491755052167C9BD00A7BC36 /* LSCSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				491754F02167BB1400A7BC36 /* Info.plist */,
 				491754E82167BB1200A7BC36 /* Main.storyboard */,
 				491754FD2167BF1700A7BC36 /* Model */,
+				491755072167C9C300A7BC36 /* Model Controller */,
 				491754FC2167BE1100A7BC36 /* Views */,
 				491754FB2167BE0400A7BC36 /* Controllers */,
 				491754F12167BB1400A7BC36 /* main.m */,
@@ -98,6 +102,15 @@
 				491755022167C24800A7BC36 /* LSCSong.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		491755072167C9C300A7BC36 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				491755042167C9BD00A7BC36 /* LSCSongController.h */,
+				491755052167C9BD00A7BC36 /* LSCSongController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				491754F22167BB1400A7BC36 /* main.m in Sources */,
+				491755062167C9BD00A7BC36 /* LSCSongController.m in Sources */,
 				491755032167C24800A7BC36 /* LSCSong.m in Sources */,
 				491754FA2167BDF400A7BC36 /* LSCTableViewController.m in Sources */,
 				491754E42167BB1200A7BC36 /* AppDelegate.m in Sources */,

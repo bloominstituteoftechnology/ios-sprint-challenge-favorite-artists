@@ -10,7 +10,7 @@
 
 @implementation LSCSong
 
-- (instancetype)initWithSongTitle:(NSString *)songTitle artistName:(NSString *)artistName songLyrics:(NSString *)songLyrics songRatings:(NSNumber *)songRating
+- (instancetype)initWithSongTitle:(NSString *)songTitle artistName:(NSString *)artistName songLyrics:(NSString *)songLyrics songRating:(NSInteger)songRating
 {
     self = [super init];
     
@@ -18,7 +18,7 @@
         _songTitle = songTitle;
         _artistName = artistName;
         _songLyrics = songLyrics;
-        _songRating = songRating;
+        _songRating = &songRating;
     }
     return self;
 }

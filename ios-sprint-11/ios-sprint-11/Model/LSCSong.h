@@ -12,12 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSCSong : NSObject
 
-- (instancetype)initWithSongTitle:(NSString *)songTitle artistName:(NSString *)artistName songLyrics:(NSString *)songLyrics songRatings:(NSNumber *)songRating;
+- (instancetype)initWithSongTitle:(NSString *)songTitle artistName:(NSString *)artistName songLyrics:(NSString *)songLyrics songRating:(NSInteger)songRating;
 
 @property NSString *songTitle;
 @property NSString *artistName;
 @property NSString *songLyrics;
-@property NSNumber *songRating;
+@property NSInteger *songRating;
 
 @end
 

@@ -13,7 +13,7 @@
         <!--Lyric Finder-->
         <scene sceneID="srG-9g-fyE">
             <objects>
-                <tableViewController id="1Qp-9Z-moE" sceneMemberID="viewController">
+                <tableViewController id="1Qp-9Z-moE" customClass="CGALyricsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BaI-gh-arz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
         <!--New Song Lyrics-->
         <scene sceneID="dx5-Iz-5og">
             <objects>
-                <viewController id="ZSM-pm-CZV" sceneMemberID="viewController">
+                <viewController id="ZSM-pm-CZV" customClass="CGALyricDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9AS-nl-ufr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

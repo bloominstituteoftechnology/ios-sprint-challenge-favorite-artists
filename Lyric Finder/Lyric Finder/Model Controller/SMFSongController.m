@@ -21,6 +21,11 @@
 #pragma mark - Implementation
 @implementation SMFSongController
 
+#pragma mark - Static properties
+static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";
+static NSString * const apiKey = @"M6hNpOsGrGmshbZ8nzvPlPwkNO12p1bpAvJjsnYjVcf0DgeXIB";
+
+#pragma mark - Initializer
 - (instancetype)init
 {
     self = [super init];
@@ -36,6 +41,42 @@
     if ([self.moc save:&error] == NO) {
         NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
     }
+}
+
+#pragma mark - Networking (API)
+- (void)fetchSongLyricsWithTitle:(NSString *)title artist:(NSString *)artist completionHandler:(void (^)(NSString *lyrics, NSError *error))completionHandler {
+    #pragma mark URL construction
+    NSURL *baseURL = [NSURL URLWithString:baseURLString];
+    NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
+    NSURLQueryItem *titleQuery = [NSURLQueryItem queryItemWithName:@"q_track" value:title];
+    NSURLQueryItem *artistQuery = [NSURLQueryItem queryItemWithName:@"q_artist" value:artist];
+    [urlComponents setQueryItems:@[artistQuery, titleQuery]];
+    NSURL *url = [urlComponents URL];
+    
+    #pragma mark Request construction
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setValue:apiKey forHTTPHeaderField:@"X-Mashape-Key"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
+    #pragma mark NSURLSession
+    [[NSURLSession.sharedSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *r, NSError *error) {
+        #pragma mark Error handling
+        if (error) {
+            NSLog(@"Error fetching song lyrics %@", error);
+            completionHandler(nil, error);
+            return;
+        }
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        if (![dictionary isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"JSON was not a dictionary");
+            completionHandler(nil, [[NSError alloc] init]);
+            return;
+        }
+        #pragma mark JSON parsing
+        NSString *lyrics = dictionary[@"lyrics_body"];
+        
+        completionHandler(lyrics, nil);
+    }] resume];
 }
 
 #pragma mark - CRUD

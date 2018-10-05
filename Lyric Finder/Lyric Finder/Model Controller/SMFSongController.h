@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSManagedObjectContext *moc;
 
+- (void)fetchSongLyricsWithTitle:(NSString *)title artist:(NSString *)artist completionHandler:(void (^)(NSString *lyrics, NSError *error))completionHandler;
+
 - (void)createWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating;
 - (void)updateSong:(SMFSong *)song rating:(NSInteger)rating;
 - (void)deleteSong:(SMFSong *)song;

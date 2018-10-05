@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextView *lyricTextView;
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *ratingSegmentControl;
 @property AELSongController *songController;
 @property AELSong *song;
 @end

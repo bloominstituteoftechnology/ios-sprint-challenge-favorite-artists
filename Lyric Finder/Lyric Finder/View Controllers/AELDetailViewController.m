@@ -50,16 +50,27 @@
     NSString *title = [[self songTitleField] text];
     NSString *artist = [[self artistField] text];
     NSString *lyrics = [[self lyricTextView] text];
-    NSUInteger rating = [[[self ratingLabel] text] intValue];
+    NSUInteger rating = [[[self ratingLabel] text] integerValue];
     
-    if([self song]){
+    if(![self song]){
         [[self songController] addSongWithTitle:title artist:artist lyrics:lyrics rating:rating ];
     } else {
         [[self songController] updateSong:[self song] lyrics:lyrics rating:rating];
     }
+    
+    [[self navigationController] popViewControllerAnimated:YES];
 }
 
 - (IBAction)ratingControl:(id)sender {
+    NSUInteger index = [[self ratingSegmentControl] selectedSegmentIndex];
+    NSUInteger rating = [[[self ratingLabel] text] integerValue];
+    if(index == 0) {
+        rating -= 1;
+    } else {
+        rating += 1;
+    }
+    [[self ratingLabel] setText: [@(rating) stringValue]];
+    
 }
 
 - (IBAction)search:(id)sender {

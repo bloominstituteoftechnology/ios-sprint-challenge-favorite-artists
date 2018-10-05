@@ -13,7 +13,6 @@
 
 @interface AELLyricTableViewController ()
 @property AELSongController *songController;
-@property AELSong *song;
 @end
 
 @implementation AELLyricTableViewController
@@ -57,7 +56,9 @@
         [destinationVC setSongController: [self songController]];
     } else {
         [destinationVC setSongController: [self songController]];
-        [destinationVC setSong: [self song]];
+        NSInteger index = [[[self tableView] indexPathForSelectedRow] row];
+        AELSong *song = [[[self songController] songs]objectAtIndex: index];
+        [destinationVC setSong: song];
     }
 }
 

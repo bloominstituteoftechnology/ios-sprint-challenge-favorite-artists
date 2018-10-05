@@ -151,6 +151,7 @@
                         <outlet property="artistField" destination="dti-0r-hy0" id="9OP-Ja-n7p"/>
                         <outlet property="lyricTextView" destination="BOI-9m-H6A" id="u1m-ji-p8x"/>
                         <outlet property="ratingLabel" destination="qwV-Ue-OYp" id="xiQ-Pj-CmK"/>
+                        <outlet property="ratingSegmentControl" destination="Jt6-Zx-a5E" id="6Dt-Vs-ZUW"/>
                         <outlet property="songTitleField" destination="ihh-jl-Uh3" id="oQW-Zk-xRv"/>
                     </connections>
                 </viewController>

@@ -12,6 +12,8 @@
 		13954AE72167B474003B8072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13954AE62167B474003B8072 /* Assets.xcassets */; };
 		13954AEA2167B474003B8072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13954AE82167B474003B8072 /* LaunchScreen.storyboard */; };
 		13954AED2167B474003B8072 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13954AEC2167B474003B8072 /* main.m */; };
+		13954AF72167B8A5003B8072 /* CGALyricDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13954AF62167B8A5003B8072 /* CGALyricDetailViewController.m */; };
+		13954AFA2167B8B9003B8072 /* CGALyricsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13954AF92167B8B9003B8072 /* CGALyricsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		13954AE92167B474003B8072 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13954AEB2167B474003B8072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13954AEC2167B474003B8072 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13954AF52167B8A5003B8072 /* CGALyricDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGALyricDetailViewController.h; sourceTree = "<group>"; };
+		13954AF62167B8A5003B8072 /* CGALyricDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGALyricDetailViewController.m; sourceTree = "<group>"; };
+		13954AF82167B8B9003B8072 /* CGALyricsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGALyricsTableViewController.h; sourceTree = "<group>"; };
+		13954AF92167B8B9003B8072 /* CGALyricsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGALyricsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		13954ADC2167B472003B8072 /* ios-lyric-finder */ = {
 			isa = PBXGroup;
 			children = (
+				13954AF42167B875003B8072 /* View Controllers */,
 				13954ADD2167B472003B8072 /* AppDelegate.h */,
 				13954ADE2167B472003B8072 /* AppDelegate.m */,
 				13954AF32167B859003B8072 /* Resources */,
@@ -72,6 +79,17 @@
 				13954AEC2167B474003B8072 /* main.m */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		13954AF42167B875003B8072 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				13954AF52167B8A5003B8072 /* CGALyricDetailViewController.h */,
+				13954AF62167B8A5003B8072 /* CGALyricDetailViewController.m */,
+				13954AF82167B8B9003B8072 /* CGALyricsTableViewController.h */,
+				13954AF92167B8B9003B8072 /* CGALyricsTableViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +118,7 @@
 		13954AD22167B472003B8072 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CGA;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Conner;
 				TargetAttributes = {
@@ -145,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13954AED2167B474003B8072 /* main.m in Sources */,
+				13954AFA2167B8B9003B8072 /* CGALyricsTableViewController.m in Sources */,
+				13954AF72167B8A5003B8072 /* CGALyricDetailViewController.m in Sources */,
 				13954ADF2167B472003B8072 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

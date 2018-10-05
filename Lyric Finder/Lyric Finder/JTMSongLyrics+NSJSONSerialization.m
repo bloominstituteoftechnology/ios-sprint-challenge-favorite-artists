@@ -17,4 +17,9 @@
     return [self initWithTitle:title artist:artist lyrics:lyrics rating:0];
 }
 
+-(NSDictionary *)convertToDictionaryWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int)rating
+{
+    return @{@"title": title, @"artist": artist, @"lyrics_body": lyrics, @"rating": @(rating)};
+}
+
 @end

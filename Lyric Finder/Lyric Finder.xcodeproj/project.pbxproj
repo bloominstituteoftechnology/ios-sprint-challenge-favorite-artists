@@ -13,6 +13,7 @@
 		F8610C8D2167B714007E2934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8610C8C2167B714007E2934 /* Assets.xcassets */; };
 		F8610C902167B714007E2934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8610C8E2167B714007E2934 /* LaunchScreen.storyboard */; };
 		F8610C932167B714007E2934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610C922167B714007E2934 /* main.m */; };
+		F8610C9B2167BA4E007E2934 /* JTMSongLyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610C9A2167BA4E007E2934 /* JTMSongLyrics.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F8610C8F2167B714007E2934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8610C912167B714007E2934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8610C922167B714007E2934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8610C992167BA4E007E2934 /* JTMSongLyrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMSongLyrics.h; sourceTree = "<group>"; };
+		F8610C9A2167BA4E007E2934 /* JTMSongLyrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMSongLyrics.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				F8610C8E2167B714007E2934 /* LaunchScreen.storyboard */,
 				F8610C912167B714007E2934 /* Info.plist */,
 				F8610C922167B714007E2934 /* main.m */,
+				F8610C992167BA4E007E2934 /* JTMSongLyrics.h */,
+				F8610C9A2167BA4E007E2934 /* JTMSongLyrics.m */,
 			);
 			path = "Lyric Finder";
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			files = (
 				F8610C882167B713007E2934 /* ViewController.m in Sources */,
 				F8610C932167B714007E2934 /* main.m in Sources */,
+				F8610C9B2167BA4E007E2934 /* JTMSongLyrics.m in Sources */,
 				F8610C852167B713007E2934 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

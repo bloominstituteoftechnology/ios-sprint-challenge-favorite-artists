@@ -38,7 +38,7 @@
     song.artist = artist;
 }
 
--(void)searchForSongWithArtist:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSArray *songs, NSError *))completion
+-(void)searchForSongWithArtist:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSString *lyrics, NSError *))completion
 {
     NSURL *baseURL = [NSURL URLWithString:lyricsGET];
     
@@ -94,7 +94,7 @@
             return;
         }
         
-        NSArray *songs = dictionary[@"lyrics_body"];
+        NSString *songs = dictionary[@"lyrics_body"];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             completion(songs, nil);

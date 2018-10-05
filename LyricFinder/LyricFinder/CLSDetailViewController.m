@@ -45,7 +45,20 @@
 
 - (IBAction)search:(id)sender
 {
+    NSString *title = self.titleTextField.text;
+    NSString *artist = self.artistTextField.text;
     
+    [self.songController searchForSongWithArtist:artist trackName:title completion:^(NSString *lyrics, NSError *error) {
+        
+        if (error) {
+            NSLog(@"Error fetching song lyrics: %@", error);
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.lyricsTextView.text = lyrics;
+            
+        });
+    }];
 }
 
 -(IBAction)valueChanged:(UIStepper *)sender

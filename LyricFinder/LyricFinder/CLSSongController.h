@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSMutableArray *songs;
 
--(void)searchForSongWithArtist:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSArray *songs, NSError *))completion;
+-(void)searchForSongWithArtist:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSString *lyrics, NSError *))completion;
 
 -(void)createSongWithTitle:(NSString*)songTitle artist:(NSString*)artist lyrics:(NSString*)lyrics rating:(NSInteger)rating;
 

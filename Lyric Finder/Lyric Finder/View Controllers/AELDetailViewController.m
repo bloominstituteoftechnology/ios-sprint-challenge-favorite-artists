@@ -7,6 +7,8 @@
 //
 
 #import "AELDetailViewController.h"
+#import "AELSong.h"
+#import "AELSongController.h"
 
 @interface AELDetailViewController ()
 
@@ -14,20 +16,29 @@
 
 @implementation AELDetailViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self updateView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) updateView
+{
+    if (![self isViewLoaded]){
+        return;
+    }
+    if([self song]){
+        //if there is a song
+        [[self songTitleField] setText: [[self song] title]];
+        [[self artistField] setText: [[self song] artist]];
+        [[self lyricTextView] setText: [[self song] lyrics]];
+        
+        
+    } else {
+        
+    }
 }
-*/
+
 
 - (IBAction)save:(id)sender {
 }

@@ -22,6 +22,11 @@
     [super viewDidLoad];
    _songController = [[AELSongController alloc] init];
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+    
+}
 
 #pragma mark - Table view data source
 
@@ -49,9 +54,10 @@
     AELDetailViewController *destinationVC = (AELDetailViewController *)[segue destinationViewController];
     
     if ([[segue identifier] isEqualToString:@"AddLyric"]){
-        destinationVC 
+        [destinationVC setSongController: [self songController]];
     } else {
-        
+        [destinationVC setSongController: [self songController]];
+        [destinationVC setSong: [self song]];
     }
 }
 

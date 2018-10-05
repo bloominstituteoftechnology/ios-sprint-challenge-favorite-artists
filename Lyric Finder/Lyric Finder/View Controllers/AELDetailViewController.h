@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *songTitleField;
 @property (weak, nonatomic) IBOutlet UITextField *artistField;
 @property (weak, nonatomic) IBOutlet UITextView *lyricTextView;
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 
 @property AELSongController *songController;
 @property AELSong *song;

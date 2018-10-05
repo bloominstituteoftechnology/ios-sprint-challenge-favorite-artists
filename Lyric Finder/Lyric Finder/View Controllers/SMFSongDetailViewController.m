@@ -55,7 +55,7 @@
 
 - (IBAction)changeRating:(id)sender {
     self.saveButton.enabled = YES;
-    NSNumber *rating = [NSNumber numberWithInteger:self.song.rating];
+    NSNumber *rating = [NSNumber numberWithInteger:self.ratingStepper.value];
     self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %i", (int)rating.integerValue];
 }
 - (IBAction)search:(id)sender {

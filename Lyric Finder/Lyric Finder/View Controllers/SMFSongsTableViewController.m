@@ -27,6 +27,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        _songController = [[SMFSongController alloc] init];
         _frc = [self createFRC];
         NSError *error;
         __unused BOOL success = [_frc performFetch:&error];

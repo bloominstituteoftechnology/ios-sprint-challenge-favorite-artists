@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        _container = [[NSPersistentContainer alloc] initWithName:@"SMFDocuments"];
+        _container = [[NSPersistentContainer alloc] initWithName:@"LyricFinder"];
         [_container loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *d, NSError *error) {
             if (error != nil) {
                 [NSException raise:@"UnloadedPersistentStore" format:@"Failed to load persistent stores: %@", error];

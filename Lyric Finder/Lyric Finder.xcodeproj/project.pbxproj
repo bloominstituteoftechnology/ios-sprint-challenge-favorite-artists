@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F8610C852167B713007E2934 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610C842167B713007E2934 /* AppDelegate.m */; };
-		F8610C882167B713007E2934 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610C872167B713007E2934 /* ViewController.m */; };
 		F8610C8B2167B713007E2934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8610C892167B713007E2934 /* Main.storyboard */; };
 		F8610C8D2167B714007E2934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8610C8C2167B714007E2934 /* Assets.xcassets */; };
 		F8610C902167B714007E2934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8610C8E2167B714007E2934 /* LaunchScreen.storyboard */; };
@@ -16,14 +15,14 @@
 		F8610C9B2167BA4E007E2934 /* JTMSongLyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610C9A2167BA4E007E2934 /* JTMSongLyrics.m */; };
 		F8610CA42167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610CA32167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m */; };
 		F8610CA72167C020007E2934 /* JTMLongLyricsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610CA62167C020007E2934 /* JTMLongLyricsController.m */; };
+		F8610CAA2167D935007E2934 /* JTMLyricsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610CA92167D935007E2934 /* JTMLyricsDetailViewController.m */; };
+		F8610CAD2167DA79007E2934 /* JTMSavedLyricsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8610CAC2167DA79007E2934 /* JTMSavedLyricsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F8610C802167B713007E2934 /* Lyric Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lyric Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8610C832167B713007E2934 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8610C842167B713007E2934 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8610C862167B713007E2934 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F8610C872167B713007E2934 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F8610C8A2167B713007E2934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8610C8C2167B714007E2934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8610C8F2167B714007E2934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +34,10 @@
 		F8610CA32167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JTMSongLyrics+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		F8610CA52167C020007E2934 /* JTMLongLyricsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMLongLyricsController.h; sourceTree = "<group>"; };
 		F8610CA62167C020007E2934 /* JTMLongLyricsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMLongLyricsController.m; sourceTree = "<group>"; };
+		F8610CA82167D935007E2934 /* JTMLyricsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMLyricsDetailViewController.h; sourceTree = "<group>"; };
+		F8610CA92167D935007E2934 /* JTMLyricsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMLyricsDetailViewController.m; sourceTree = "<group>"; };
+		F8610CAB2167DA79007E2934 /* JTMSavedLyricsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMSavedLyricsTableViewController.h; sourceTree = "<group>"; };
+		F8610CAC2167DA79007E2934 /* JTMSavedLyricsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMSavedLyricsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +72,6 @@
 			children = (
 				F8610C832167B713007E2934 /* AppDelegate.h */,
 				F8610C842167B713007E2934 /* AppDelegate.m */,
-				F8610C862167B713007E2934 /* ViewController.h */,
-				F8610C872167B713007E2934 /* ViewController.m */,
 				F8610C892167B713007E2934 /* Main.storyboard */,
 				F8610C8C2167B714007E2934 /* Assets.xcassets */,
 				F8610C8E2167B714007E2934 /* LaunchScreen.storyboard */,
@@ -82,6 +83,10 @@
 				F8610CA32167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m */,
 				F8610CA52167C020007E2934 /* JTMLongLyricsController.h */,
 				F8610CA62167C020007E2934 /* JTMLongLyricsController.m */,
+				F8610CA82167D935007E2934 /* JTMLyricsDetailViewController.h */,
+				F8610CA92167D935007E2934 /* JTMLyricsDetailViewController.m */,
+				F8610CAB2167DA79007E2934 /* JTMSavedLyricsTableViewController.h */,
+				F8610CAC2167DA79007E2934 /* JTMSavedLyricsTableViewController.m */,
 			);
 			path = "Lyric Finder";
 			sourceTree = "<group>";
@@ -157,10 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8610C882167B713007E2934 /* ViewController.m in Sources */,
+				F8610CAD2167DA79007E2934 /* JTMSavedLyricsTableViewController.m in Sources */,
 				F8610C932167B714007E2934 /* main.m in Sources */,
 				F8610C9B2167BA4E007E2934 /* JTMSongLyrics.m in Sources */,
 				F8610CA72167C020007E2934 /* JTMLongLyricsController.m in Sources */,
+				F8610CAA2167D935007E2934 /* JTMLyricsDetailViewController.m in Sources */,
 				F8610C852167B713007E2934 /* AppDelegate.m in Sources */,
 				F8610CA42167BEC4007E2934 /* JTMSongLyrics+NSJSONSerialization.m in Sources */,
 			);

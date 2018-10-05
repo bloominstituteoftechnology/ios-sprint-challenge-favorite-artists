@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JTMLyricsDetailViewController.h
 //  Lyric Finder
 //
 //  Created by Jonathan T. Miles on 10/5/18.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface JTMLyricsDetailViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

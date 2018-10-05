@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSJSONSerialization (NSJSONSerialization)
 
+- (NSDictionary *)getSongDictionaryForData:(NSData *)data artist:(NSString *)artist title:(NSString *)title;
+
 @end
 
 NS_ASSUME_NONNULL_END

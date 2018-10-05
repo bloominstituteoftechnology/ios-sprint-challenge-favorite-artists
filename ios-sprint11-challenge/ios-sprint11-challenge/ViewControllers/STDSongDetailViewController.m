@@ -25,7 +25,7 @@
 {
     if (self.song) {
         
-        [self.ratingTextLabel setText: [NSString stringWithFormat:@"%ld", self.song.rating]];
+        [self.ratingTextLabel setText: [NSString stringWithFormat:@"Rating: %ld", self.song.rating]];
         [self.songTextField setText:self.song.title];
         [self.artistTextField  setText:self.song.artist];
         [self.lyricsTextView setText:self.song.lyric];
@@ -42,7 +42,7 @@
     NSString *title = [self.songTextField text];
     NSString *artist = [self.artistTextField text];
     
-    [self.songController fetchSongsWithTitle:title artist:artist completion:^(NSMutableArray * _Nonnull songs, NSError * error) {
+    [self.songController fetchSongsWithTitle:title artist:artist completion:^(STDSong * _Nonnull song, NSError * error) {
         if (error) {
             NSLog(@"Error fetching songs from server.");
         }
@@ -60,7 +60,7 @@
     NSString *lyric = [self.lyricsTextView text];
     
     // If does not exist then save, else update and save
-    if (!song) {
+    if (!self.song) {
         STDSong *song = [[STDSong alloc] initWithTitle:title artist:artist lyric:lyric];
         
         [self.songController persistSongToLocalStore:song completion:^(NSError * error) {
@@ -72,9 +72,9 @@
         self.song.artist = artist;
         self.song.title = title;
         self.song.lyric = lyric;
-        self.song.rating = self.rating;
+        self.song.rating = *(self.rating);
         
-        [self.songController updateSongsInLocalStore:song completion:^(NSError * error) {
+        [self.songController updateSongsInLocalStore:self.song completion:^(NSError * error) {
             if (error) {
                 NSLog(@"Error updating songs in local store.");
             }

@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 // Immutable readonly list of songs
 @property (nonatomic, readonly) NSArray *songs;
 
-- (void)fetchSongsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(NSMutableArray *songs, NSError *))completion;
+- (void)fetchSongsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(STDSong *songs, NSError *))completion;
 - (void)persistSongToLocalStore:(STDSong *)song completion:(void (^)(NSError *))completion;
 - (void)updateSongsInLocalStore:(STDSong *)song completion:(void (^)(NSError *))completion;
 - (void)fetchSongsFromLocalStore:(void (^)(NSError *))completion;

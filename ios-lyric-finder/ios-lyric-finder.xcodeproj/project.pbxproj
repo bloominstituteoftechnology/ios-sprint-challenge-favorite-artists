@@ -15,6 +15,7 @@
 		13954AF72167B8A5003B8072 /* CGALyricDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13954AF62167B8A5003B8072 /* CGALyricDetailViewController.m */; };
 		13954AFA2167B8B9003B8072 /* CGALyricsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13954AF92167B8B9003B8072 /* CGALyricsTableViewController.m */; };
 		13954AFD2167BAA6003B8072 /* CGASong.m in Sources */ = {isa = PBXBuildFile; fileRef = 13954AFC2167BAA6003B8072 /* CGASong.m */; };
+		13954B012167BC19003B8072 /* CGASongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13954B002167BC19003B8072 /* CGASongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		13954AF92167B8B9003B8072 /* CGALyricsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGALyricsTableViewController.m; sourceTree = "<group>"; };
 		13954AFB2167BAA6003B8072 /* CGASong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGASong.h; sourceTree = "<group>"; };
 		13954AFC2167BAA6003B8072 /* CGASong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGASong.m; sourceTree = "<group>"; };
+		13954AFF2167BC19003B8072 /* CGASongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGASongController.h; sourceTree = "<group>"; };
+		13954B002167BC19003B8072 /* CGASongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGASongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 				13954ADE2167B472003B8072 /* AppDelegate.m */,
 				13954AF32167B859003B8072 /* Resources */,
 				13954AFE2167BAAC003B8072 /* Model */,
+				13954B022167BC1D003B8072 /* Model Controller */,
 			);
 			path = "ios-lyric-finder";
 			sourceTree = "<group>";
@@ -103,6 +107,15 @@
 				13954AFC2167BAA6003B8072 /* CGASong.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		13954B022167BC1D003B8072 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13954AFF2167BC19003B8072 /* CGASongController.h */,
+				13954B002167BC19003B8072 /* CGASongController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +193,7 @@
 				13954AFA2167B8B9003B8072 /* CGALyricsTableViewController.m in Sources */,
 				13954AF72167B8A5003B8072 /* CGALyricDetailViewController.m in Sources */,
 				13954AFD2167BAA6003B8072 /* CGASong.m in Sources */,
+				13954B012167BC19003B8072 /* CGASongController.m in Sources */,
 				13954ADF2167B472003B8072 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

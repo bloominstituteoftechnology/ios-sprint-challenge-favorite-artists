@@ -7,8 +7,15 @@
 //
 
 #import "CGALyricDetailViewController.h"
+#import "CGASongController.h"
 
 @interface CGALyricDetailViewController ()
+
+@property CGASongController *songController;
+@property (strong, nonatomic) IBOutlet UITextField *songNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *artistTextField;
+@property (strong, nonatomic) IBOutlet UITextView *lyricsTextView;
+- (IBAction)searchForLyricsTapped:(id)sender;
 
 @end
 
@@ -16,17 +23,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.songController = [[CGASongController alloc] init];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)searchForLyricsTapped:(id)sender {
+    NSString *artistName = [[self artistTextField] text];
+    NSString *track = [[self songNameTextField] text];
+    
+    [[self songController] searchForSongWithArtist:artistName track:track completion:^(NSString * songWithLyrics, NSError * error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[self lyricsTextView] setText:songWithLyrics];
+        });
+    }];
 }
-*/
 
 @end

@@ -89,13 +89,13 @@
                                             </stepper>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3i2-on-U70">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3i2-on-U70">
                                         <rect key="frame" x="0.0" y="39" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhC-Dc-DwL">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhC-Dc-DwL">
                                         <rect key="frame" x="0.0" y="79" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -104,6 +104,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duG-0S-nj5">
                                         <rect key="frame" x="0.0" y="119" width="343" height="30"/>
                                         <state key="normal" title="Search For Lyrics"/>
+                                        <connections>
+                                            <action selector="searchForLyricsTapped:" destination="ZSM-pm-CZV" eventType="touchUpInside" id="rZr-5d-Nad"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bNF-qW-pA6">
                                         <rect key="frame" x="0.0" y="159" width="343" height="360"/>
@@ -127,6 +130,11 @@
                     <navigationItem key="navigationItem" title="New Song Lyrics" id="X4t-Z6-Rn9">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="m7O-5F-k0p"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="dhC-Dc-DwL" id="5pX-MG-jzd"/>
+                        <outlet property="lyricsTextView" destination="bNF-qW-pA6" id="k9F-Xs-s2U"/>
+                        <outlet property="songNameTextField" destination="3i2-on-U70" id="bS5-Qh-cll"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Rf-5t-zHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

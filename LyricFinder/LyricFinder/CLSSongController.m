@@ -1,18 +1,20 @@
 //
-//  NSJSONSerialization+NSJSONSerialization.m
+//  CLSSongController.m
 //  LyricFinder
 //
 //  Created by Carolyn Lea on 10/5/18.
 //  Copyright © 2018 Carolyn Lea. All rights reserved.
 //
 
-#import "NSJSONSerialization+NSJSONSerialization.h"
+#import "CLSSongController.h"
 
-@interface NSJSONSerialization ()
+@interface CLSSongController ()
+
 @property(readwrite) NSMutableArray *songs;
+
 @end
 
-@implementation NSJSONSerialization (NSJSONSerialization)
+@implementation CLSSongController
 
 -(instancetype)init
 {
@@ -79,7 +81,7 @@
         }
         
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-            
+        
         if (![dictionary isKindOfClass:[NSDictionary class]])
         {
             NSLog(@"JSON was not a dictionary");
@@ -92,13 +94,13 @@
             return;
         }
         
-            NSArray *songs = dictionary[@"lyrics_body"];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(songs, nil);
-            });
-        }] resume];
-
+        NSArray *songs = dictionary[@"lyrics_body"];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(songs, nil);
+        });
+    }] resume];
+    
 }
 
 @end

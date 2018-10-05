@@ -8,21 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DE6566822167B553007CD45F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6566812167B553007CD45F /* AppDelegate.m */; };
-		DE6566852167B553007CD45F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6566842167B553007CD45F /* ViewController.m */; };
 		DE6566882167B553007CD45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6566862167B553007CD45F /* Main.storyboard */; };
 		DE65668A2167B553007CD45F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6566892167B553007CD45F /* Assets.xcassets */; };
 		DE65668D2167B553007CD45F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE65668B2167B553007CD45F /* LaunchScreen.storyboard */; };
 		DE6566902167B553007CD45F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE65668F2167B553007CD45F /* main.m */; };
 		DE6566982167B82B007CD45F /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6566972167B82B007CD45F /* Song.m */; };
-		DE65669B2167B955007CD45F /* NSJSONSerialization+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DE65669A2167B955007CD45F /* NSJSONSerialization+NSJSONSerialization.m */; };
+		DE65669E2167F4FF007CD45F /* CLSSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE65669D2167F4FF007CD45F /* CLSSongsTableViewController.m */; };
+		DE6566A12167F514007CD45F /* CLSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6566A02167F514007CD45F /* CLSDetailViewController.m */; };
+		DE6566A42167FD7D007CD45F /* CLSSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6566A32167FD7D007CD45F /* CLSSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE65667D2167B553007CD45F /* LyricFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6566802167B553007CD45F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DE6566812167B553007CD45F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DE6566832167B553007CD45F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DE6566842167B553007CD45F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DE6566872167B553007CD45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE6566892167B553007CD45F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE65668C2167B553007CD45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,8 +29,12 @@
 		DE65668F2167B553007CD45F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE6566962167B82B007CD45F /* Song.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		DE6566972167B82B007CD45F /* Song.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
-		DE6566992167B955007CD45F /* NSJSONSerialization+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+NSJSONSerialization.h"; sourceTree = "<group>"; };
-		DE65669A2167B955007CD45F /* NSJSONSerialization+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		DE65669C2167F4FF007CD45F /* CLSSongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLSSongsTableViewController.h; sourceTree = "<group>"; };
+		DE65669D2167F4FF007CD45F /* CLSSongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLSSongsTableViewController.m; sourceTree = "<group>"; };
+		DE65669F2167F514007CD45F /* CLSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLSDetailViewController.h; sourceTree = "<group>"; };
+		DE6566A02167F514007CD45F /* CLSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLSDetailViewController.m; sourceTree = "<group>"; };
+		DE6566A22167FD7D007CD45F /* CLSSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLSSongController.h; sourceTree = "<group>"; };
+		DE6566A32167FD7D007CD45F /* CLSSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLSSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +71,12 @@
 				DE6566812167B553007CD45F /* AppDelegate.m */,
 				DE6566962167B82B007CD45F /* Song.h */,
 				DE6566972167B82B007CD45F /* Song.m */,
-				DE6566992167B955007CD45F /* NSJSONSerialization+NSJSONSerialization.h */,
-				DE65669A2167B955007CD45F /* NSJSONSerialization+NSJSONSerialization.m */,
-				DE6566832167B553007CD45F /* ViewController.h */,
-				DE6566842167B553007CD45F /* ViewController.m */,
+				DE6566A22167FD7D007CD45F /* CLSSongController.h */,
+				DE6566A32167FD7D007CD45F /* CLSSongController.m */,
+				DE65669C2167F4FF007CD45F /* CLSSongsTableViewController.h */,
+				DE65669D2167F4FF007CD45F /* CLSSongsTableViewController.m */,
+				DE65669F2167F514007CD45F /* CLSDetailViewController.h */,
+				DE6566A02167F514007CD45F /* CLSDetailViewController.m */,
 				DE6566862167B553007CD45F /* Main.storyboard */,
 				DE6566892167B553007CD45F /* Assets.xcassets */,
 				DE65668B2167B553007CD45F /* LaunchScreen.storyboard */,
@@ -152,9 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6566A12167F514007CD45F /* CLSDetailViewController.m in Sources */,
 				DE6566982167B82B007CD45F /* Song.m in Sources */,
-				DE65669B2167B955007CD45F /* NSJSONSerialization+NSJSONSerialization.m in Sources */,
-				DE6566852167B553007CD45F /* ViewController.m in Sources */,
+				DE65669E2167F4FF007CD45F /* CLSSongsTableViewController.m in Sources */,
+				DE6566A42167FD7D007CD45F /* CLSSongController.m in Sources */,
 				DE6566902167B553007CD45F /* main.m in Sources */,
 				DE6566822167B553007CD45F /* AppDelegate.m in Sources */,
 			);

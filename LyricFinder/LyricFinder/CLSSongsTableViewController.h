@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CLSSongsTableViewController.h
 //  LyricFinder
 //
 //  Created by Carolyn Lea on 10/5/18.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface CLSSongsTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

@@ -12,14 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Song : NSObject
 
-@property NSString *title;
-@property NSString *artist;
-@property NSString *lyrics;
-@property NSInteger rating;
+@property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, copy, readonly) NSString *artist;
+@property (nonatomic, copy, readonly) NSString *lyrics;
+@property (nonatomic) NSInteger rating;
 
 -(instancetype)initWithArtist:(NSString *)artist title:(NSString *)title lyrics:(NSString *)lyrics rating:(NSInteger)rating;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+- (NSDictionary *)dictionaryRepresentation;
 
 @end
 

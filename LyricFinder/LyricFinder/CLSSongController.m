@@ -10,7 +10,7 @@
 
 @interface CLSSongController ()
 
-@property(readwrite) NSMutableArray *songs;
+@property (nonatomic, copy) NSMutableArray *internalSongs;
 
 @end
 
@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        self.songs = [[NSMutableArray alloc] init];
+        _internalSongs = [[self loadSongs] mutableCopy];
     }
     return self;
 }
@@ -29,16 +29,17 @@
 {
     Song *song = [[Song alloc] initWithArtist:artist  title:title lyrics:lyrics  rating:rating];
     
-    [self.songs addObject:song];
+    [self.internalSongs addObject:song];
+    [self saveSongs];
 }
 
-- (void)updateSong:(Song *)song title:(NSString *)title artist:(NSString *)artist
-{
-    song.title = title;
-    song.artist = artist;
-}
+//- (void)updateSong:(Song *)song title:(NSString *)title artist:(NSString *)artist
+//{
+//    song.title = title;
+//    song.artist = artist;
+//}
 
--(void)searchForSongWithArtist:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSString *lyrics, NSError *))completion
+-(void)searchForSongWithArtist:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSString *, NSError *))completion
 {
     NSURL *baseURL = [NSURL URLWithString:lyricsGET];
     
@@ -82,7 +83,7 @@
         
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
         
-        if (![dictionary isKindOfClass:[NSDictionary class]])
+        if (!dictionary || ![dictionary isKindOfClass:[NSDictionary class]])
         {
             NSLog(@"JSON was not a dictionary");
             
@@ -94,13 +95,72 @@
             return;
         }
         
-        NSString *songs = dictionary[@"lyrics_body"];
+        NSString *lyrics = dictionary[@"lyrics_body"];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            completion(songs, nil);
+            completion(lyrics, nil);
         });
     }] resume];
     
+}
+
+-(NSURL *)songsFileURL
+{
+    NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    
+    NSString *fileName = @"songs.json";
+    
+    return [documentDirectory URLByAppendingPathComponent:fileName];
+}
+
+-(void)saveSongs
+{
+    NSMutableArray *songDictionaries = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < self.internalSongs.count; i++)
+    {
+        Song *song = self.internalSongs[i];
+        [songDictionaries addObject: [song dictionaryRepresentation]];
+    }
+    
+    NSData *songsData = [NSJSONSerialization dataWithJSONObject:songDictionaries options:0 error:nil];
+    
+    [songsData writeToURL:[self songsFileURL] atomically:YES];
+}
+
+-(NSArray *)loadSongs
+{
+    NSData *songsData = [NSData dataWithContentsOfURL:[self songsFileURL]];
+    
+    if (!songsData) { return @[]; }
+    
+    NSArray *songDictionaries = [NSJSONSerialization JSONObjectWithData:songsData options:0 error:nil];
+    
+    NSMutableArray *songs = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < songDictionaries.count; i++)
+    {
+        
+        NSDictionary *songDictionary = songDictionaries[i];
+        
+        Song *song = [[Song alloc] initWithDictionary:songDictionary];
+        
+        [songs addObject:song];
+    }
+    
+    if (songs)
+    {
+        return songs;
+    }
+    else
+    {
+        return @[];
+    }
+}
+
+-(NSArray *)songs
+{
+    return self.internalSongs;
 }
 
 @end

@@ -14,22 +14,41 @@
 @interface CLSSongsTableViewController ()
 
 @property Song *song;
-@property CLSSongController *songController;
+@property (nonatomic, copy, readonly) CLSSongController *songController;
 
 @end
 
 @implementation CLSSongsTableViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _songController = [[CLSSongController alloc] init];
+    }
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _songController = [[CLSSongController alloc] init];
+    }
+    return self;
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _song = [[Song alloc] init];
-    _songController = [[CLSSongController alloc] init];
+//    _song = [[Song alloc] init];
+//    _songController = [[CLSSongController alloc] init];
     self.title = @"Song List";
 }
 
@@ -46,20 +65,20 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell" forIndexPath:indexPath];
     
     _song = _songController.songs[indexPath.row];
-    cell.textLabel.text = _song.artist;
-    cell.detailTextLabel.text = _song.title;
+    cell.textLabel.text = _song.title;
+    cell.detailTextLabel.text = _song.artist;
     
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
-        
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete)
+//    {
+//        
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    }
+//}
 
 #pragma mark - Navigation
 //ShowAddView, ShowDetailView

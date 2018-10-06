@@ -90,33 +90,27 @@
                             </stackView>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="iBo-cY-xMb">
                                 <rect key="frame" x="257" y="87" width="94" height="29"/>
+                                <connections>
+                                    <action selector="changeRating:" destination="ZFS-Al-MDV" eventType="valueChanged" id="9eO-Gl-64A"/>
+                                </connections>
                             </stepper>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="d8n-9F-fQ8">
                                 <rect key="frame" x="24" y="151" width="327" height="492"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TD6-qC-V7U">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="tjX-vg-oAe"/>
-                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paj-3J-q2w">
                                         <rect key="frame" x="0.0" y="42" width="327" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="cuI-hz-qI3"/>
-                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIZ-2s-Hf5">
                                         <rect key="frame" x="0.0" y="84" width="327" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="LZ5-Gf-wpn"/>
-                                        </constraints>
                                         <state key="normal" title="Search For Lyrics"/>
                                         <connections>
                                             <action selector="search:" destination="ZFS-Al-MDV" eventType="touchUpInside" id="1if-eh-irf"/>
@@ -156,6 +150,7 @@
                         <outlet property="artistTextField" destination="paj-3J-q2w" id="2A5-Bz-k7D"/>
                         <outlet property="lyricsTextView" destination="YtP-NQ-9Pa" id="NcX-19-JGr"/>
                         <outlet property="ratingsLabel" destination="eZ4-Xw-3Eb" id="YjY-m0-uNw"/>
+                        <outlet property="searchButton" destination="RIZ-2s-Hf5" id="LxJ-cC-ora"/>
                         <outlet property="stepperView" destination="iBo-cY-xMb" id="ZJo-ul-nFM"/>
                         <outlet property="titleTextField" destination="TD6-qC-V7U" id="dau-PC-x62"/>
                     </connections>

@@ -41,6 +41,7 @@
     _artistTextField.delegate = self;
     _titleTextField.delegate = self;
     _lyricsTextView.delegate = self;
+    //[self updateViews];
 }
 
 - (IBAction)search:(id)sender
@@ -61,33 +62,55 @@
     }];
 }
 
--(IBAction)valueChanged:(UIStepper *)sender
+- (IBAction)changeRating:(id)sender
 {
-    sender = _stepperView;
-    double value = [sender value];
-    [_ratingsLabel setText:[NSString stringWithFormat:@"%d", (int)value]];
+    NSInteger rating = (NSInteger)self.stepperView.value;
+    [self setRatingTextWithRating: rating];
 }
 
 - (IBAction)save:(id)sender
 {
-    if(_song != nil)
-    {
-        _song.title = self.titleTextField.text;
-        _song.artist = self.artistTextField.text;
-        _song.lyrics = self.lyricsTextView.text;
-        _song.rating = self.stepperView.value;
-    }
-    else
-    {
-        NSString *title = self.titleTextField.text;
-        NSString *artist = self.artistTextField.text;
-        NSString *lyrics = self.lyricsTextView.text;
-        NSString *ratings = [NSString stringWithFormat: @"%f",self.stepperView.value];
-        
-        [_songController createSongWithTitle:title artist:artist lyrics:lyrics rating:(int)ratings];
-    }
+    NSString *title = self.titleTextField.text;
+    NSString *artist = self.artistTextField.text;
+    NSString *lyrics = self.lyricsTextView.text;
+    NSInteger rating = (NSInteger)self.stepperView.value;;
+    
+    [_songController createSongWithTitle:title artist:artist lyrics:lyrics rating:rating];
     
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+//- (void)updateViews
+//{
+//    if (self.song)
+//    {
+//        self.title = self.song.title;
+//        self.titleTextField.text = self.song.title;
+//        self.titleTextField.userInteractionEnabled = NO;
+//        
+//        self.artistTextField.text = self.song.artist;
+//        self.artistTextField.userInteractionEnabled = NO;
+//        
+//        self.lyricsTextView.text = self.song.lyrics;
+//        
+//        [self setRatingTextWithRating:self.song.rating];
+//        
+//        [self.searchButton removeFromSuperview];
+//        [self.stepperView removeFromSuperview];
+//        
+//        self.navigationItem.rightBarButtonItem = nil;
+//    }
+//    else
+//    {
+//        [self setRatingTextWithRating: (NSInteger)self.stepperView.value];
+//        self.title = @"New Song Lyrics";
+//    }
+//}
+
+- (void)setRatingTextWithRating:(NSInteger)rating
+{
+    self.ratingsLabel.text = [NSString stringWithFormat:@"%ld", rating];
+}
+
 
 @end

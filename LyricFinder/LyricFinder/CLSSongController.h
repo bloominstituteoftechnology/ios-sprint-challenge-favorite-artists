@@ -16,13 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CLSSongController : NSObject
 
-@property (readonly) NSMutableArray *songs;
+@property (nonatomic, copy, readonly) NSArray *songs;
 
 -(void)searchForSongWithArtist:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSString *lyrics, NSError *))completion;
 
 -(void)createSongWithTitle:(NSString*)songTitle artist:(NSString*)artist lyrics:(NSString*)lyrics rating:(NSInteger)rating;
 
-- (void)updateSong:(Song *)song title:(NSString *)title artist:(NSString *)artist;
+//- (void)updateSong:(Song *)song title:(NSString *)title artist:(NSString *)artist;
+
+- (void)saveSongs;
+- (NSArray *)loadSongs;
 
 @end
 

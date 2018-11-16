@@ -7,6 +7,7 @@
 //
 
 #import "FAFSongsTableViewController.h"
+#import "FAFSongController.h"
 
 @interface FAFSongsTableViewController ()
 
@@ -17,11 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    FAFSongController *songController = [[FAFSongController alloc] init];
+    [songController fetchLyricsWithName:@"paradise" artist:@"coldplay" completion:^(NSString *lyrics, NSError *error) {
+        NSLog(@"%@", lyrics);
+    }];
 }
 
 #pragma mark - Table view data source

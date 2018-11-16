@@ -15,6 +15,7 @@
 		D862F806219F2883006C1494 /* FAFSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F805219F2883006C1494 /* FAFSongsTableViewController.m */; };
 		D862F809219F2B65006C1494 /* FAFSong.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F808219F2B65006C1494 /* FAFSong.m */; };
 		D862F80C219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F80B219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m */; };
+		D8723997219F3294005DFB59 /* FAFSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8723996219F3294005DFB59 /* FAFSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		D862F808219F2B65006C1494 /* FAFSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAFSong.m; sourceTree = "<group>"; };
 		D862F80A219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+FAFNSJSONSerialization.h"; sourceTree = "<group>"; };
 		D862F80B219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FAFNSJSONSerialization.m"; sourceTree = "<group>"; };
+		D8723995219F3294005DFB59 /* FAFSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAFSongController.h; sourceTree = "<group>"; };
+		D8723996219F3294005DFB59 /* FAFSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAFSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				D862F808219F2B65006C1494 /* FAFSong.m */,
 				D862F80A219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.h */,
 				D862F80B219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m */,
+				D8723995219F3294005DFB59 /* FAFSongController.h */,
+				D8723996219F3294005DFB59 /* FAFSongController.m */,
 				D862F804219F2883006C1494 /* FAFSongsTableViewController.h */,
 				D862F805219F2883006C1494 /* FAFSongsTableViewController.m */,
 				D862F7F7219F1E2B006C1494 /* Assets.xcassets */,
@@ -154,6 +159,7 @@
 			files = (
 				D862F809219F2B65006C1494 /* FAFSong.m in Sources */,
 				D862F7FE219F1E2B006C1494 /* main.m in Sources */,
+				D8723997219F3294005DFB59 /* FAFSongController.m in Sources */,
 				D862F80C219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m in Sources */,
 				D862F806219F2883006C1494 /* FAFSongsTableViewController.m in Sources */,
 				D862F7F0219F1E2A006C1494 /* AppDelegate.m in Sources */,

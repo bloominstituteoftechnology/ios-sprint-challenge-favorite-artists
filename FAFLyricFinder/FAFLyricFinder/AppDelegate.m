@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FAFSongController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    UIButton.appearance.layer.cornerRadius = 15;
     
     return YES;
 }

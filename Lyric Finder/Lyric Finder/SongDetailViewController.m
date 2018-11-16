@@ -28,13 +28,20 @@
         _songLyricsTextView.text = self.song.lyrics;
         NSNumber *num = [NSNumber numberWithInteger:self.song.rating];
         _ratingLabel.text = [num stringValue];
+        self.rating = self.song.rating;
+        self.lyrics = self.song.lyrics;
     }
 }
 
 - (IBAction)stepper:(UIStepper *)sender {
     NSNumber *doubleNumber = [NSNumber numberWithDouble:sender.value];
-    _ratingLabel.text = [doubleNumber stringValue];
-    self.rating =  [doubleNumber integerValue];
+    if(self.rating) {
+        NSInteger *num = (int)self.rating + (int)sender.value;
+        _ratingLabel.text = [[NSNumber numberWithInteger:num] stringValue];
+        self.rating = num;
+    } else {
+        _ratingLabel.text = [doubleNumber stringValue];
+    }
 }
 - (IBAction)searchForLyrics:(id)sender {
     [self.songController searchForLyricsWithTitle:_songTitleTextField.text artist:_artistTextField.text completion:^(NSString *lyrics, NSError *error) {

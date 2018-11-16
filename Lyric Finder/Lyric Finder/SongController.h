@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) loadSongs;
 
+- (void) saveSong;
+
 - (void) changeRatingOfSong:(Song *)song rating:(NSInteger *)rating;
 
 @property (nonatomic, readonly) NSArray *songs;

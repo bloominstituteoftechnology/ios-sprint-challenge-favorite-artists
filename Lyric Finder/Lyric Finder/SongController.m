@@ -27,7 +27,12 @@
 {
     Song *song =  [[[Song alloc] init] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.internalSongs addObject:song];
-    
+    [self saveSong];
+}
+
+
+- (void)saveSong
+{
     NSURL *documentDirectory = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:@"songs.json"];
     
     NSMutableArray *songDictionaries = [[NSMutableArray alloc] init];
@@ -40,7 +45,6 @@
     NSData *data = [NSJSONSerialization dataWithJSONObject:songDictionaries options:0 error:nil];
     
     [data writeToURL:documentDirectory atomically:YES];
-    
 }
 
 - (void)loadSongs

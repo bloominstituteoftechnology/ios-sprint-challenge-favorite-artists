@@ -14,6 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSArray *songs;
 
+- (void)createSongWithTitle:(NSString *)title
+                     artist:(NSString *)artist
+                     lyrics:(NSString *)lyrics
+                     rating:(NSInteger)rating;
+
 @end
 
 NS_ASSUME_NONNULL_END

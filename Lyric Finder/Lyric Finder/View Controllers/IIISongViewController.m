@@ -7,6 +7,7 @@
 //
 
 #import "IIISongViewController.h"
+#import "IIISongController.h"
 #import "IIISong.h"
 
 @interface IIISongViewController ()
@@ -29,17 +30,22 @@
 
 - (IBAction)ratingStepperTapped:(id)sender
 {
-    
+    // Update ratingLabel's text
 }
 
 - (IBAction)searchLyricsTapped:(id)sender
 {
-    
+    // SongController FetchLyrics needed
 }
 
 - (IBAction)saveTapped:(id)sender
 {
+    NSString *title = self.songTitleTextField.text;
+    NSString *artist = self.artistTextField.text;
+    NSString *lyrics = self.lyricsTextView.text;
+    NSInteger rating = [self.ratingLabel.text integerValue];
     
+    [self.songController createSongWithTitle:title artist:artist lyrics:lyrics rating:rating];
 }
 
 - (void)updateViews
@@ -59,6 +65,9 @@
     }
 }
 
+#pragma mark Setter
+
+// This method gets called everytime song's value is changed
 - (void)setSong:(IIISong *)song
 {
     _song = song;

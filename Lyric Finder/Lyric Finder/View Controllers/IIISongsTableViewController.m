@@ -26,9 +26,10 @@ NSString *reuseIdentifier = @"SongCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _songController = [[IIISongController alloc] init];
-    
     self.clearsSelectionOnViewWillAppear = NO;
+    
+    // We can, maybe should use TableViewControllers inits. But I wanted try this one
+    _songController = [[IIISongController alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -60,9 +61,11 @@ NSString *reuseIdentifier = @"SongCell";
         IIISongViewController *destVC = segue.destinationViewController;
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         IIISong *song = self.songController.songs[indexPath.row];
+        
         destVC.song = song;
     } else if ([segue.identifier isEqualToString:addSegue]) {
         IIISongViewController *destVC = segue.destinationViewController;
+        
         destVC.songController = self.songController;
     }
 }

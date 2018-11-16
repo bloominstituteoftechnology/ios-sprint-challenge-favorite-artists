@@ -96,8 +96,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-Tv-nbn">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="29"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zw-pG-KmG">
-                                                <rect key="frame" x="0.0" y="0.0" width="241" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zw-pG-KmG">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-2p-tQk">
+                                                <rect key="frame" x="61.5" y="0.0" width="179.5" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -160,7 +166,7 @@
                     <connections>
                         <outlet property="artistTextField" destination="qfv-Ef-Oa8" id="eui-di-UlK"/>
                         <outlet property="lyricsTextView" destination="Ngb-XN-XMP" id="7dv-rh-XP9"/>
-                        <outlet property="ratingLabel" destination="8zw-pG-KmG" id="7iw-2s-0eF"/>
+                        <outlet property="ratingLabel" destination="ENL-2p-tQk" id="eQd-mt-0s7"/>
                         <outlet property="ratingStepper" destination="6FS-5n-DCS" id="z8C-4P-umk"/>
                         <outlet property="searchLyricsButton" destination="cIa-Pj-i06" id="GDw-us-0hR"/>
                         <outlet property="songTitleTextField" destination="Hy6-cW-3EC" id="Xgd-4j-R89"/>

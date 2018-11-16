@@ -28,33 +28,37 @@
     Song *song =  [[[Song alloc] init] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.internalSongs addObject:song];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *documentDirectory = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:@"songs.json"];
     
     NSMutableArray *songDictionaries = [[NSMutableArray alloc] init];
     
     for(Song *internalSong in self.internalSongs) {
-        NSNumber *numRating = [NSNumber numberWithInteger:internalSong.rating ];
-        NSString *stringRating = [numRating stringValue];
-        NSDictionary *songDictionary = @{@"title": internalSong.title, @"artist": internalSong.artist, @"lyrics": internalSong.lyrics, @"rating": numRating};
+        NSDictionary *songDictionary = @{@"title": internalSong.title, @"artist": internalSong.artist, @"lyrics": internalSong.lyrics, @"rating": [NSNumber numberWithInteger:internalSong.rating]};
         [songDictionaries addObject:songDictionary];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:songDictionaries options:0 error:nil];
     
-    [data writeToFile:documentsDirectory atomically:YES];
+    [data writeToURL:documentDirectory atomically:YES];
     
 }
 
 - (void)loadSongs
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSURL *documentDirectory = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:@"songs.json"];
     
-    NSData *data = [NSData dataWithContentsOfFile:documentsDirectory];
-    self.internalSongs = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSData *data = [NSData dataWithContentsOfURL:documentDirectory];
     
+    if(!data) {
+        return;
+    }
+    
+    NSArray *songDictionaries = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    for(NSDictionary *songDictionary in songDictionaries) {
+        Song *song = [[Song alloc] initWithDictionary: songDictionary];
+        [self.internalSongs addObject:song];
+    }
 }
 
 - (void)updateSongWithSong:(Song *)song title:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating

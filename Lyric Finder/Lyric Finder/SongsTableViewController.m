@@ -36,6 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.songController loadSongs];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -22,9 +22,14 @@
     return self;
 }
 
--(void) initWithDictionary: (NSDictionary *)dictionary rating:(NSInteger *)rating
+-(instancetype) initWithDictionary: (NSDictionary *)dictionary;
 {
-    //Probably won't need this
+    NSInteger *rating = [dictionary[@"rating"] integerValue];
+    NSString *artist = dictionary[@"artist"];
+    NSString *title = dictionary[@"title"];
+    NSString *lyrics = dictionary[@"lyrics"];
+    
+    return [self initWithTitle:title artist:artist lyrics:lyrics rating:rating];
 }
 
 @end

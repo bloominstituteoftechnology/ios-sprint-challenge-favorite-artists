@@ -37,7 +37,14 @@
 
 - (IBAction)searchLyricsTapped:(id)sender
 {
-    // SongController FetchLyrics needed
+    NSString *title = self.songTitleTextField.text;
+    NSString *artist = self.artistTextField.text;
+    
+    [self.songController searchLyricsWithArtist:artist title:title completion:^(NSString * _Nonnull lyrics, NSError * _Nonnull error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.lyricsTextView.text = lyrics;
+        });
+    }];
 }
 
 - (IBAction)saveTapped:(id)sender

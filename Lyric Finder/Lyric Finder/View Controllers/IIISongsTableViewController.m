@@ -28,7 +28,8 @@ NSString *reuseIdentifier = @"SongCell";
     [super viewDidLoad];
     self.clearsSelectionOnViewWillAppear = NO;
     
-    // We can, maybe should use TableViewControllers inits. But I wanted try this one
+    // We can, maybe should use TableViewControllers initWithCoder/Nib to initialize Model Controller
+    // But I wanted try this one
     _songController = [[IIISongController alloc] init];
 }
 

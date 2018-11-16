@@ -17,6 +17,9 @@
 
 @implementation IIISongController
 
+static NSString * const baseURLSting = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";
+static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnqpapjJKAKbMX";
+
 - (instancetype)init
 {
     self = [super init];
@@ -35,7 +38,56 @@
     [self.internalSongs addObject:song];
 }
 
+- (void)searchLyricsWithArtist:(NSString *)artist title:(NSString *)title completion:(void (^)(NSString *lyrics, NSError *error))completion
+{
+    NSURL *baseURL = [[NSURL alloc] initWithString:baseURLSting];
+    NSURLQueryItem *artistParameter = [[NSURLQueryItem alloc] initWithName:@"q_artist" value:artist];
+    NSURLQueryItem *titleParameter = [[NSURLQueryItem alloc] initWithName:@"q_track" value:title];
+    
+    NSURLComponents *components = [[NSURLComponents alloc] initWithURL:baseURL resolvingAgainstBaseURL:YES];
+    [components setQueryItems:@[artistParameter, titleParameter]];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:(components.URL)];
+    [request setValue:apiKEYString forHTTPHeaderField:@"X-Mashape-Key"];
+    
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"Error searching for lyrics %@", error);
+            completion(nil, error);
+            return;
+        }
+        
+        if (!data) {
+            NSLog(@"No data returned");
+            completion(nil, error);
+            return;
+        }
+        
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        if (![dictionary isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"JSON is not a dictionary");
+            completion(nil, error);
+            return;
+        }
+        
+        NSString *lyricsBody = dictionary[@"lyrics_body"];
+        completion(lyricsBody,nil);
+        
+    }] resume];
+}
 
+#pragma mark Persistent Store
+
+- (void)saveToPersistentStore
+{
+    
+}
+
+- (void)loadFromPersistentStore
+{
+    
+}
 
 #pragma mark Getter
 

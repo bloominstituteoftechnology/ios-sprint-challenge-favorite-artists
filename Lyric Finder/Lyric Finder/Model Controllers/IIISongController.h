@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
                      lyrics:(NSString *)lyrics
                      rating:(NSInteger)rating;
 
+- (void)searchLyricsWithArtist:(NSString *)artist
+                       title:(NSString *)title
+                   completion:(void (^)(NSString *lyrics, NSError *error))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END

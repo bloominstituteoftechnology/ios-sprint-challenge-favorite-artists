@@ -30,7 +30,9 @@
 
 - (IBAction)ratingStepperTapped:(id)sender
 {
-    // Update ratingLabel's text
+    self.ratingStepper.maximumValue = 5;
+    double value = [self.ratingStepper value];
+    self.ratingLabel.text = [NSString stringWithFormat:@"%.0f", value];
 }
 
 - (IBAction)searchLyricsTapped:(id)sender
@@ -46,6 +48,7 @@
     NSInteger rating = [self.ratingLabel.text integerValue];
     
     [self.songController createSongWithTitle:title artist:artist lyrics:lyrics rating:rating];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)updateViews

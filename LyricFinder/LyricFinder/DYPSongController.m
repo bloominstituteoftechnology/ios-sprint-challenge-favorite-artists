@@ -7,6 +7,7 @@
 //
 
 #import "DYPSongController.h"
+#import "DYPSong.h"
 
 @interface DYPSongController ()
 
@@ -25,9 +26,23 @@
     return self;
 }
 
+- (void)addASongWithTitle:(NSString *)title artistName:(NSString *)artistName lyrics:(NSString *)lyrics rating:(NSInteger)rating
+{
+    DYPSong *song = [[DYPSong alloc] initWithTitle:title artistName:artistName lyrics:lyrics rating:rating];
+    [self.internalSongs addObject:song];
+}
+
+- (void)searchLyricsForSongTitle:(NSString *)title artistName:(NSString *)artistName completion:(void (^)(NSString * _Nullable, NSError * _Nullable))completion
+{
+    
+}
+
 - (NSArray *)songs
 {
     return self.internalSongs;
 }
+
+static NSString * const baseURLString = @"";
+static NSString * const APIKey = @"";
 
 @end

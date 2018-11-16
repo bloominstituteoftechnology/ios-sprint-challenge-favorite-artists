@@ -12,12 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DYPSong : NSObject
 
-- (instancetype)initWithTitle:(NSString *)title artistName:(NSString *)artistName lyrics:(NSString *)lyrics rating:(NSInteger *)rating;
+- (instancetype)initWithTitle:(NSString *)title artistName:(NSString *)artistName lyrics:(NSString *)lyrics rating:(NSInteger)rating;
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *artistName;
 @property (nonatomic, copy) NSString *lyrics;
-@property (nonatomic) NSInteger *rating;
+@property (nonatomic) NSInteger rating;
 
 @end
 

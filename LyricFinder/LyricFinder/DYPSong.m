@@ -10,7 +10,7 @@
 
 @implementation DYPSong
 
-- (instancetype)initWithTitle:(NSString *)title artistName:(NSString *)artistName lyrics:(NSString *)lyrics rating:(NSInteger *)rating
+- (instancetype)initWithTitle:(NSString *)title artistName:(NSString *)artistName lyrics:(NSString *)lyrics rating:(NSInteger)rating
 {
     self = [super init];
     if (self) {

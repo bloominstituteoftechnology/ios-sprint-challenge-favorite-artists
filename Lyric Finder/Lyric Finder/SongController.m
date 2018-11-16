@@ -7,7 +7,7 @@
 //
 
 #import "SongController.h"
-
+#import "Song.h"
 @interface  SongController ()
 @property (nonatomic, copy) NSMutableArray *internalSongs;
 @end
@@ -27,6 +27,34 @@
 {
     Song *song =  [[[Song alloc] init] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.internalSongs addObject:song];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSMutableArray *songDictionaries = [[NSMutableArray alloc] init];
+    
+    for(Song *internalSong in self.internalSongs) {
+        NSNumber *numRating = [NSNumber numberWithInteger:internalSong.rating ];
+        NSString *stringRating = [numRating stringValue];
+        NSDictionary *songDictionary = @{@"title": internalSong.title, @"artist": internalSong.artist, @"lyrics": internalSong.lyrics, @"rating": numRating};
+        [songDictionaries addObject:songDictionary];
+    }
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:songDictionaries options:0 error:nil];
+    
+    [data writeToFile:documentsDirectory atomically:YES];
+    
+}
+
+- (void)loadSongs
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSData *data = [NSData dataWithContentsOfFile:documentsDirectory];
+    self.internalSongs = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
 }
 
 - (void)updateSongWithSong:(Song *)song title:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating

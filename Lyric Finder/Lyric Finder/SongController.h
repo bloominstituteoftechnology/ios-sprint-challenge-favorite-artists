@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) searchForLyricsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(NSString *lyrics, NSError *))completion;
 
+- (void) loadSongs;
+
 - (void) changeRatingOfSong:(Song *)song rating:(NSInteger *)rating;
 
 @property (nonatomic, readonly) NSArray *songs;

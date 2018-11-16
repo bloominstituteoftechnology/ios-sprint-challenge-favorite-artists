@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="R4Z-pw-vAK">
-                                <rect key="frame" x="16" y="132" width="343" height="500"/>
+                                <rect key="frame" x="16" y="132" width="343" height="519"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-Tv-nbn">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="29"/>
@@ -117,42 +117,39 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hy6-cW-3EC">
-                                        <rect key="frame" x="0.0" y="41" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="41" width="343" height="49"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfv-Ef-Oa8">
-                                        <rect key="frame" x="0.0" y="83" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="102" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIa-Pj-i06">
-                                        <rect key="frame" x="0.0" y="125" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="144" width="343" height="30"/>
                                         <state key="normal" title="Search Lyrics"/>
                                         <connections>
                                             <action selector="searchLyricsTapped:" destination="DXW-Az-zJU" eventType="touchUpInside" id="1dv-EO-Yvf"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-XN-XMP">
-                                        <rect key="frame" x="0.0" y="167" width="343" height="333"/>
+                                        <rect key="frame" x="0.0" y="186" width="343" height="333"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="OaQ-I6-lQq"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="R4Z-pw-vAK" firstAttribute="leading" secondItem="aYB-Eu-Dcy" secondAttribute="leading" constant="16" id="01c-Cw-MM9"/>
-                            <constraint firstItem="aYB-Eu-Dcy" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="R4Z-pw-vAK" secondAttribute="bottom" constant="16" id="SdR-2V-sML"/>
-                            <constraint firstItem="aYB-Eu-Dcy" firstAttribute="trailing" secondItem="R4Z-pw-vAK" secondAttribute="trailing" constant="16" id="XlP-mj-5Iu"/>
-                            <constraint firstItem="R4Z-pw-vAK" firstAttribute="top" secondItem="aYB-Eu-Dcy" secondAttribute="top" constant="16" id="waC-5j-9Ly"/>
+                            <constraint firstItem="R4Z-pw-vAK" firstAttribute="top" secondItem="aYB-Eu-Dcy" secondAttribute="top" constant="16" id="Llq-PL-kpd"/>
+                            <constraint firstItem="R4Z-pw-vAK" firstAttribute="leading" secondItem="aYB-Eu-Dcy" secondAttribute="leading" constant="16" id="Lpf-w1-VC1"/>
+                            <constraint firstItem="aYB-Eu-Dcy" firstAttribute="trailing" secondItem="R4Z-pw-vAK" secondAttribute="trailing" constant="16" id="SGp-2H-79Y"/>
+                            <constraint firstItem="aYB-Eu-Dcy" firstAttribute="bottom" secondItem="R4Z-pw-vAK" secondAttribute="bottom" constant="16" id="Sbk-xF-17g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aYB-Eu-Dcy"/>
                     </view>

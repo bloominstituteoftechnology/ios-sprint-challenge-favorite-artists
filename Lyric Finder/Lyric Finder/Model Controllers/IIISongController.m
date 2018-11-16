@@ -92,10 +92,8 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
 
 - (void)saveToPersistentStore
 {
-    NSData *data = [NSData data];
-    NSMutableArray *songsFromData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//    NSData *data = [NSJSONSerialization dataWithJSONObject:self.internalSongs options:0 error:nil];
-    [songsFromData writeToURL:self.songsURL atomically:YES];
+    NSData *songsData = [NSJSONSerialization dataWithJSONObject:self.internalSongs options:0 error:nil];
+    [songsData writeToURL:self.songsURL atomically:YES];
 }
 
 // Don't know where is the proper place to call this ???

@@ -10,12 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IIISong : NSObject
+@interface IIISong : NSObject <NSCoding>
 
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *artist;
 @property (nonatomic) NSString *lyrics;
-@property (nonatomic) int *rating;
+@property (nonatomic) int rating;
 
 - (instancetype)initWithTitle: (NSString *)title
                        artist: (NSString *)artist

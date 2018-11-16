@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IIISongController : NSObject //NSCoding
+@interface IIISongController : NSObject
 
 @property (nonatomic) NSArray *songs;
 

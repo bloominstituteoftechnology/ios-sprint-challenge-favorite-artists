@@ -20,8 +20,25 @@
         _title = title;
         _artist = artist;
         _lyrics = lyrics;
-        _rating = &rating;
+        _rating = rating;
     }
+    return self;
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.title];
+    [aCoder encodeObject:self.artist];
+    [aCoder encodeObject:self.lyrics];
+    [aCoder encodeInt:self.rating forKey:@"rating"];
+}
+
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder
+{
+    self.title = [[aDecoder decodeObject] copy];
+    self.artist = [[aDecoder decodeObject] copy];
+    self.lyrics = [[aDecoder decodeObject] copy];
+    self.rating = [aDecoder decodeIntForKey:@"rating"];
     return self;
 }
 

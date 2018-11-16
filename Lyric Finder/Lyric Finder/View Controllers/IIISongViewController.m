@@ -54,7 +54,7 @@
     NSString *title = self.songTitleTextField.text;
     NSString *artist = self.artistTextField.text;
     NSString *lyrics = self.lyricsTextView.text;
-    int rating = (int)self.ratingLabel.text;
+    int rating = [self.ratingLabel.text intValue];
     
     [self.songController createSongWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.navigationController popViewControllerAnimated:YES];

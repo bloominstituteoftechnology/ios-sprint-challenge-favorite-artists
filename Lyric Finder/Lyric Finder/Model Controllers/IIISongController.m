@@ -26,7 +26,6 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
     self = [super init];
     if (self) {
         _internalSongs = [[NSMutableArray alloc] init];
-        [self loadFromPersistentStore];
     }
     return self;
 }
@@ -38,7 +37,7 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
 {
     IIISong *song = [[IIISong alloc] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.internalSongs addObject:song];
-    [self saveToPersistentStore];
+//    [self saveToPersistentStore];
 }
 
 - (void)searchLyricsWithArtist:(NSString *)artist title:(NSString *)title completion:(void (^)(NSString *lyrics, NSError *error))completion
@@ -97,10 +96,11 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
     [data writeToURL:self.songsURL atomically:YES];
 }
 
+// Don't know where is the proper place to call this ???
 - (void)loadFromPersistentStore
 {
     NSData *data = [NSData dataWithContentsOfURL:self.songsURL];
-    NSArray *songsFromData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSMutableArray *songsFromData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     self.internalSongs = songsFromData;
 }
 

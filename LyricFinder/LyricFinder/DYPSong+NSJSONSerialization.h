@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initFromDictionary:(NSDictionary *)dictionary songTitle:(NSString *)title artistName:(NSString *)artistName;
 
+- (instancetype)initFromPlistDictionary:(NSDictionary *)dictionary;
+
 @property (nonatomic,readonly) NSDictionary *songDictionary;
 
 @end

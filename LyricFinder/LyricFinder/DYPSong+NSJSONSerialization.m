@@ -16,6 +16,16 @@
     return [[DYPSong alloc] initWithTitle:title artistName:artistName lyrics:lyrics rating:0];
 }
 
+- (instancetype)initFromPlistDictionary:(NSDictionary *)dictionary
+{
+    NSString *title = dictionary[@"title"];
+    NSString *artistName = dictionary[@"artistName"];
+    NSString *lyrics = dictionary[@"lyrics"];
+    NSString *ratingString = dictionary[@"rating"];
+    NSInteger rating = [ratingString integerValue];
+    return [[DYPSong alloc] initWithTitle:title artistName:artistName lyrics:lyrics rating:rating];
+}
+
 - (NSDictionary *)songDictionary
 {
     return [[NSDictionary alloc] initWithObjectsAndKeys:@[self.title, @"title", self.artistName, @"artistName", self.lyrics, @"lyrics", [NSString stringWithFormat:@"Ratings: %ld", (long)self.rating], @"rating"], nil];

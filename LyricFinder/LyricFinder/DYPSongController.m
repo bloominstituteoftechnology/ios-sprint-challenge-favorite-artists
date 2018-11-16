@@ -23,6 +23,7 @@
     self = [super init];
     if (self) {
         _internalSongs = [@[] mutableCopy];
+        [self loadFromPersistenceStore];
     }
     return self;
 }
@@ -31,6 +32,8 @@
 {
     DYPSong *song = [[DYPSong alloc] initWithTitle:title artistName:artistName lyrics:lyrics rating:rating];
     [self.internalSongs addObject:song];
+    
+    //[self persistSong:song];
 }
 
 - (void)searchLyricsForSongTitle:(NSString *)title artistName:(NSString *)artistName completion:(void (^)(NSString * _Nullable lyrics, NSError * _Nullable error))completion
@@ -84,8 +87,25 @@
     NSString *path = [documentsDirectory stringByAppendingPathComponent:@"LyricFinderSavedSongs.plist"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
+    //Add dictionary of songs not just the one song.
     NSDictionary *songDictionary = song.songDictionary;
-    //NSData *plistData = NSPropertyListSerialization writePropertyList:<#(nonnull id)#> toStream:<#(nonnull NSOutputStream *)#> format:<#(NSPropertyListFormat)#> options:<#(NSPropertyListWriteOptions)#> error:<#(out NSError * _Nullable __autoreleasing * _Nullable)#>
+    [songDictionary writeToFile:path atomically:YES];
+}
+
+- (void)loadFromPersistenceStore
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"LyricFinderSavedSongs.plist"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSDictionary *resultDictionary = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    if (resultDictionary) {
+        //Set songs to songs.
+        DYPSong *song = [[DYPSong alloc] initFromPlistDictionary:resultDictionary];
+        [self.internalSongs addObject:song];
+    }
 }
 
 - (NSArray *)songs

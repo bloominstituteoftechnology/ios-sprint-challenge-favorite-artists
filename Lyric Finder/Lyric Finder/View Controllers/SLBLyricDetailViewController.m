@@ -7,12 +7,15 @@
 //
 
 #import "SLBLyricDetailViewController.h"
+#import "SLBSong.h"
 
 @interface SLBLyricDetailViewController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 @property (weak, nonatomic) IBOutlet UITextField *songTitleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *artistTextField;
 @property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
 
 @end
 
@@ -24,11 +27,13 @@
 }
 
 - (IBAction)ratingStepper:(id)sender {
-    
+   
+    self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %0.0f", self.stepper.value];
+        
 }
 
 - (IBAction)saveButton:(id)sender {
-    
+    NSLog(@"Saved");
 }
 
 @end

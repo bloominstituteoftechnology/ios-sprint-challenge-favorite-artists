@@ -84,7 +84,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xKx-pC-C8y">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="xKx-pC-C8y">
                                                 <rect key="frame" x="249" y="0.0" width="94" height="29"/>
                                                 <connections>
                                                     <action selector="ratingStepper:" destination="KOG-8W-kgZ" eventType="valueChanged" id="K5C-V4-znW"/>
@@ -134,6 +134,7 @@
                         <outlet property="lyricsTextView" destination="rkK-aH-iuF" id="0oi-pD-has"/>
                         <outlet property="ratingLabel" destination="hxa-P1-st9" id="Q3M-Y7-GAi"/>
                         <outlet property="songTitleTextField" destination="QKW-X1-XDW" id="0hL-Qf-cbt"/>
+                        <outlet property="stepper" destination="xKx-pC-C8y" id="K3S-uu-efI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nR-B6-VsA" userLabel="First Responder" sceneMemberID="firstResponder"/>

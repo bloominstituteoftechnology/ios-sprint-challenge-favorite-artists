@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SLBSongController : NSObject
 
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SongController.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SongsTableViewController : UITableViewController
+
+@property (nonatomic) SongController *songController;
 
 @end
 

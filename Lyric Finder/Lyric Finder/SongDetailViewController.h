@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class SongController;
+@class Song;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SongDetailViewController : UIViewController
+
+
+@property SongController *songController;
+@property Song *song;
+-(void) updateViews;
 
 @end
 

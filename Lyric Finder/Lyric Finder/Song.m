@@ -22,4 +22,9 @@
     return self;
 }
 
+-(void) initWithDictionary: (NSDictionary *)dictionary rating:(NSInteger *)rating
+{
+    
+}
+
 @end

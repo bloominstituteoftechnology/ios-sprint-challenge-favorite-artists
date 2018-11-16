@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SongController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    SongController *songController = [[SongController alloc] init];
+//    [songController searchForLyricsWithTitle:@"Hey Jude" artist:@"The Beatles" completion:^(NSString *lyrics, NSError *error) {
+//        return;
+//    }];
     return YES;
 }
 

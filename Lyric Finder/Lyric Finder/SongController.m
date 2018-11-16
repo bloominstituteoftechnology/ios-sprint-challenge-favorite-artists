@@ -21,6 +21,48 @@
     [self.internalSongs addObject:song];
 }
 
+- (void)searchForLyricsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(NSString *lyrics, NSError *))completion
+{
+    NSURL *baseURL = [NSURL URLWithString:baseURLString];
+    NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
+    NSURLQueryItem *artistQueryItem = [[NSURLQueryItem alloc] initWithName:@"q_artist" value:artist];
+    NSURLQueryItem *titleQueryItem = [[NSURLQueryItem alloc] initWithName:@"q_track" value:title];
+    
+    [components setQueryItems: @[artistQueryItem, titleQueryItem]];
+    NSURL *URL = [components URL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
+    
+    [request setValue:apiKey forHTTPHeaderField:@"X-Mashape-Key"];
+    
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"Error searching for person: %@", error);
+            completion(nil, error);
+            return;
+        }
+        
+        if(!data) {
+            NSLog(@"No data returned from data task");
+            completion(nil, [[NSError alloc] init]);
+        }
+        
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        
+        if (![dictionary isKindOfClass: [NSDictionary class]]) {
+            NSLog(@"JSON is not a dictionary");
+            completion(nil, [[NSError alloc] init]);
+            return;
+        }
+        
+        NSString *lyrics = dictionary[@"lyrics_body"];
+        
+        
+        completion(lyrics, nil);
+        
+    }] resume];
+}
+
 - (void)changeRatingOfSong:(Song *)song rating:(NSInteger *)rating
 {
     song.rating = rating;
@@ -29,5 +71,8 @@
 -(NSArray *)songs {
     return [self.internalSongs copy];
 }
+
+static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";
+static NSString * const apiKey = @"Zn6GslkyY9mshlvCHYSrczsmBUnSp1a5FqijsnbRDlvYCO175m";
 
 @end

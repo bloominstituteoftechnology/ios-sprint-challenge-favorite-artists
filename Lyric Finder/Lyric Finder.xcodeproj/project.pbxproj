@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A108E59F219F22AD002AB536 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A108E59E219F22AD002AB536 /* AppDelegate.m */; };
-		A108E5A2219F22AD002AB536 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A108E5A1219F22AD002AB536 /* ViewController.m */; };
 		A108E5A5219F22AD002AB536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A108E5A3219F22AD002AB536 /* Main.storyboard */; };
 		A108E5A7219F22AE002AB536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A108E5A6219F22AE002AB536 /* Assets.xcassets */; };
 		A108E5AA219F22AE002AB536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A108E5A8219F22AE002AB536 /* LaunchScreen.storyboard */; };
@@ -23,8 +22,6 @@
 		A108E59A219F22AD002AB536 /* Lyric Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lyric Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A108E59D219F22AD002AB536 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A108E59E219F22AD002AB536 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A108E5A0219F22AD002AB536 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A108E5A1219F22AD002AB536 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A108E5A4219F22AD002AB536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A108E5A6219F22AE002AB536 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A108E5A9219F22AE002AB536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,8 +69,6 @@
 			children = (
 				A108E59D219F22AD002AB536 /* AppDelegate.h */,
 				A108E59E219F22AD002AB536 /* AppDelegate.m */,
-				A108E5A0219F22AD002AB536 /* ViewController.h */,
-				A108E5A1219F22AD002AB536 /* ViewController.m */,
 				A108E5A3219F22AD002AB536 /* Main.storyboard */,
 				A108E5B3219F27AD002AB536 /* Song.h */,
 				A108E5B4219F27AD002AB536 /* Song.m */,
@@ -164,7 +159,6 @@
 				A108E5BB219F27D6002AB536 /* SongsTableViewController.m in Sources */,
 				A108E5B5219F27AD002AB536 /* Song.m in Sources */,
 				A108E5BE219F27EC002AB536 /* SongDetailViewController.m in Sources */,
-				A108E5A2219F22AD002AB536 /* ViewController.m in Sources */,
 				A108E5AD219F22AE002AB536 /* main.m in Sources */,
 				A108E59F219F22AD002AB536 /* AppDelegate.m in Sources */,
 				A108E5B8219F27C2002AB536 /* SongController.m in Sources */,

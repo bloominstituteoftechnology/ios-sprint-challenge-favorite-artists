@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype) initWithTitle: (NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating;
 
+-(void) initWithDictionary: (NSDictionary *)dictionary rating:(NSInteger *)rating;
+
 @property NSString *title;
 @property NSString *artist;
 @property NSString *lyrics;

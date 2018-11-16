@@ -1,16 +1,18 @@
 //
-//  SongsTableViewController.h
+//  IIISongController.h
 //  Lyric Finder
 //
 //  Created by Ilgar Ilyasov on 11/16/18.
 //  Copyright © 2018 Lambda School. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SongsTableViewController : UITableViewController
+@interface IIISongController : NSObject
+
+@property (nonatomic) NSArray *songs;
 
 @end
 

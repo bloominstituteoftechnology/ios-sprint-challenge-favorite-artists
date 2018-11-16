@@ -13,7 +13,7 @@
         <!--Lyric Finder-->
         <scene sceneID="YX1-eJ-wFw">
             <objects>
-                <tableViewController id="Jm5-St-gx6" customClass="SongsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="Jm5-St-gx6" customClass="IIISongsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hAC-Oa-Cnv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +85,7 @@
         <!--Title-->
         <scene sceneID="vui-7T-Dnw">
             <objects>
-                <viewController id="DXW-Az-zJU" customClass="SongViewController" sceneMemberID="viewController">
+                <viewController id="DXW-Az-zJU" customClass="IIISongViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gaq-u6-TrK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +104,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6FS-5n-DCS">
                                                 <rect key="frame" x="249" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="ratingStepperTapped:" destination="DXW-Az-zJU" eventType="valueChanged" id="NKp-LH-w8m"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -122,6 +125,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIa-Pj-i06">
                                         <rect key="frame" x="0.0" y="125" width="343" height="30"/>
                                         <state key="normal" title="Search Lyrics"/>
+                                        <connections>
+                                            <action selector="searchLyricsTapped:" destination="DXW-Az-zJU" eventType="touchUpInside" id="1dv-EO-Yvf"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-XN-XMP">
                                         <rect key="frame" x="0.0" y="167" width="343" height="333"/>
@@ -145,8 +151,20 @@
                         <viewLayoutGuide key="safeArea" id="aYB-Eu-Dcy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="tht-C2-qGd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cJO-X0-Oo3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cJO-X0-Oo3">
+                            <connections>
+                                <action selector="saveTapped:" destination="DXW-Az-zJU" id="8HW-OS-X6I"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="qfv-Ef-Oa8" id="eui-di-UlK"/>
+                        <outlet property="lyricsTextView" destination="Ngb-XN-XMP" id="7dv-rh-XP9"/>
+                        <outlet property="ratingLabel" destination="8zw-pG-KmG" id="7iw-2s-0eF"/>
+                        <outlet property="ratingStepper" destination="6FS-5n-DCS" id="z8C-4P-umk"/>
+                        <outlet property="searchLyricsButton" destination="cIa-Pj-i06" id="GDw-us-0hR"/>
+                        <outlet property="songTitleTextField" destination="Hy6-cW-3EC" id="Xgd-4j-R89"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YY8-m9-v6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

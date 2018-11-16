@@ -1,5 +1,5 @@
 //
-//  Song.h
+//  IIISong.h
 //  Lyric Finder
 //
 //  Created by Ilgar Ilyasov on 11/16/18.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Song : NSObject
+@interface IIISong : NSObject
 
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *artist;

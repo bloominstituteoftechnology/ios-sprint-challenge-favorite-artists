@@ -1,14 +1,14 @@
 //
-//  Song.m
+//  IIISong.m
 //  Lyric Finder
 //
 //  Created by Ilgar Ilyasov on 11/16/18.
 //  Copyright © 2018 Lambda School. All rights reserved.
 //
 
-#import "Song.h"
+#import "IIISong.h"
 
-@implementation Song
+@implementation IIISong
 
 - (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating
 {

@@ -16,6 +16,7 @@
 		7B3AACBA219F25020098CD16 /* DYPSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AACB9219F25020098CD16 /* DYPSongController.m */; };
 		7B3AACBD219F28690098CD16 /* DYPSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AACBC219F28690098CD16 /* DYPSongsTableViewController.m */; };
 		7B3AACC0219F2B4D0098CD16 /* DYPSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AACBF219F2B4D0098CD16 /* DYPSongDetailViewController.m */; };
+		7B3AACC3219F3A050098CD16 /* DYPSong+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AACC2219F3A050098CD16 /* DYPSong+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		7B3AACBC219F28690098CD16 /* DYPSongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYPSongsTableViewController.m; sourceTree = "<group>"; };
 		7B3AACBE219F2B4D0098CD16 /* DYPSongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYPSongDetailViewController.h; sourceTree = "<group>"; };
 		7B3AACBF219F2B4D0098CD16 /* DYPSongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYPSongDetailViewController.m; sourceTree = "<group>"; };
+		7B3AACC1219F3A050098CD16 /* DYPSong+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DYPSong+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		7B3AACC2219F3A050098CD16 /* DYPSong+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DYPSong+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				7B3AACB6219F23F00098CD16 /* DYPSong.m */,
 				7B3AACB8219F25020098CD16 /* DYPSongController.h */,
 				7B3AACB9219F25020098CD16 /* DYPSongController.m */,
+				7B3AACC1219F3A050098CD16 /* DYPSong+NSJSONSerialization.h */,
+				7B3AACC2219F3A050098CD16 /* DYPSong+NSJSONSerialization.m */,
 				7B3AACBB219F28690098CD16 /* DYPSongsTableViewController.h */,
 				7B3AACBC219F28690098CD16 /* DYPSongsTableViewController.m */,
 				7B3AACBE219F2B4D0098CD16 /* DYPSongDetailViewController.h */,
@@ -158,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3AACB7219F23F00098CD16 /* DYPSong.m in Sources */,
+				7B3AACC3219F3A050098CD16 /* DYPSong+NSJSONSerialization.m in Sources */,
 				7B3AACAF219F1FCC0098CD16 /* main.m in Sources */,
 				7B3AACBA219F25020098CD16 /* DYPSongController.m in Sources */,
 				7B3AACA1219F1FCA0098CD16 /* AppDelegate.m in Sources */,

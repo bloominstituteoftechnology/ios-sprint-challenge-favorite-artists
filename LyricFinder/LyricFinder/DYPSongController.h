@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class DYPSong;
 
 NS_ASSUME_NONNULL_BEGIN
 

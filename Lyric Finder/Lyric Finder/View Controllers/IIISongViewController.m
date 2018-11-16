@@ -56,8 +56,11 @@
     NSString *lyrics = self.lyricsTextView.text;
     int rating = [self.ratingLabel.text intValue];
     
-    [self.songController createSongWithTitle:title artist:artist lyrics:lyrics rating:rating];
-    [self.navigationController popViewControllerAnimated:YES];
+    if (![title isEqualToString:@""]) {
+        [self.songController createSongWithTitle:title artist:artist lyrics:lyrics rating:rating];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+
 }
 
 - (void)updateViews

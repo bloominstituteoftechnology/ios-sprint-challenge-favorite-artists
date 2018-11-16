@@ -12,7 +12,19 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    return self;
+    NSString *title = dictionary[@"title"];
+    NSString *artist = dictionary[@"artist"];
+    NSString *lyrics = dictionary[@"lyrics"];
+    NSNumber *ratingNumber = dictionary[@"rating"];
+    
+    return [[IIISong alloc] initWithTitle:title artist:artist lyrics:lyrics rating:[ratingNumber intValue]];
+}
+
+- (NSDictionary *)songDictionary
+{
+    NSDictionary *dictionary = @{@"title" : self.title, @"artist" : self.artist,
+                                 @"lyrics" : self.lyrics, @"rating" : @(self.rating)};
+    return dictionary;
 }
 
 @end

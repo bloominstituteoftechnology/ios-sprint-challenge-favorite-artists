@@ -138,7 +138,6 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-XN-XMP">
                                         <rect key="frame" x="0.0" y="167" width="343" height="333"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -151,6 +150,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="R4Z-pw-vAK" firstAttribute="leading" secondItem="aYB-Eu-Dcy" secondAttribute="leading" constant="16" id="01c-Cw-MM9"/>
+                            <constraint firstItem="aYB-Eu-Dcy" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="R4Z-pw-vAK" secondAttribute="bottom" constant="16" id="SdR-2V-sML"/>
                             <constraint firstItem="aYB-Eu-Dcy" firstAttribute="trailing" secondItem="R4Z-pw-vAK" secondAttribute="trailing" constant="16" id="XlP-mj-5Iu"/>
                             <constraint firstItem="R4Z-pw-vAK" firstAttribute="top" secondItem="aYB-Eu-Dcy" secondAttribute="top" constant="16" id="waC-5j-9Ly"/>
                         </constraints>

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface IIISong (IIIJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)songDictionary;
 
 @end
 

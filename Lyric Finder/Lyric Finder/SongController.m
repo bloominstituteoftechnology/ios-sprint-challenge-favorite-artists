@@ -14,11 +14,29 @@
 
 @implementation SongController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _internalSongs = [@[] mutableCopy];
+    }
+    return self;
+}
 
 - (void)createSongWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating
 {
     Song *song =  [[[Song alloc] init] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.internalSongs addObject:song];
+}
+
+- (void)updateSongWithSong:(Song *)song title:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating
+{
+    unsigned long index = [self.internalSongs indexOfObject:song];
+    Song *existingSong = self.internalSongs[index];
+    [existingSong setTitle: title];
+    [existingSong setArtist: artist];
+    [existingSong setLyrics: lyrics];
+    [existingSong setRating: rating];
 }
 
 - (void)searchForLyricsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(NSString *lyrics, NSError *))completion

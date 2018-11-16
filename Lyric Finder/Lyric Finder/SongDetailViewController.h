@@ -18,6 +18,21 @@ NS_ASSUME_NONNULL_BEGIN
 @property Song *song;
 -(void) updateViews;
 
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+
+- (IBAction)stepper:(UIStepper *)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *songTitleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *artistTextField;
+
+- (IBAction)searchForLyrics:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextView *songLyricsTextView;
+
+- (IBAction)saveSong:(id)sender;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

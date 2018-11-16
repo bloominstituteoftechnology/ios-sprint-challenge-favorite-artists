@@ -38,6 +38,12 @@
     [super viewDidLoad];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    [[self tableView] reloadData];
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.songController.songs.count;
@@ -58,6 +64,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"NewSong"]) {
         SongDetailViewController *vc = [segue destinationViewController];
+        
         [vc setSongController: self.songController];
     } else if ([segue.identifier isEqualToString:@"ViewSong"]) {
         SongDetailViewController *vc = [segue destinationViewController];

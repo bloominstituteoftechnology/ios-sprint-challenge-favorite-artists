@@ -42,7 +42,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ZrS-zi-OcR" kind="show" identifier="ViewLyric" id="mE6-Hu-017"/>
+                                    <segue destination="ZrS-zi-OcR" kind="show" identifier="ViewSong" id="mE6-Hu-017"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lyric Finder" id="m8Y-oD-PRO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0ZJ-8t-Z9O"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0ZJ-8t-Z9O">
+                            <connections>
+                                <segue destination="ZrS-zi-OcR" kind="show" identifier="NewSong" id="AzA-6Q-naY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNC-YB-U4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,14 +74,10 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kGT-f3-ut2">
                                 <rect key="frame" x="265" y="151" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepper:" destination="ZrS-zi-OcR" eventType="valueChanged" id="P9B-2S-Pq9"/>
+                                </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTZ-bm-Gwl">
-                                <rect key="frame" x="16" y="159" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQ6-uR-vX9">
                                 <rect key="frame" x="16" y="202" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,14 +103,41 @@
                                 <rect key="frame" x="128" y="272" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search For Lyrics"/>
+                                <connections>
+                                    <action selector="searchForLyrics:" destination="ZrS-zi-OcR" eventType="touchUpInside" id="bhx-Zb-YY7"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAJ-9o-Dqd">
+                                <rect key="frame" x="16" y="159" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTZ-bm-Gwl">
+                                <rect key="frame" x="76" y="159" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Svm-xU-z4h"/>
                     </view>
                     <navigationItem key="navigationItem" id="lcP-km-d5e">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="XmN-q9-epO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="XmN-q9-epO">
+                            <connections>
+                                <action selector="saveSong:" destination="ZrS-zi-OcR" id="wdY-sW-gr8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="ERZ-KT-LYg" id="b2H-W5-GDN"/>
+                        <outlet property="ratingLabel" destination="wTZ-bm-Gwl" id="RzV-h2-rDM"/>
+                        <outlet property="songLyricsTextView" destination="HIL-9d-ehf" id="vVb-1b-u51"/>
+                        <outlet property="songTitleTextField" destination="HQ6-uR-vX9" id="lca-we-F8G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ck0-oh-wjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,4 +162,7 @@
             <point key="canvasLocation" x="-79.200000000000003" y="143.47826086956522"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mE6-Hu-017"/>
+    </inferredMetricsTieBreakers>
 </document>

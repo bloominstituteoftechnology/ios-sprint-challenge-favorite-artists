@@ -24,7 +24,7 @@
 
 -(void) initWithDictionary: (NSDictionary *)dictionary rating:(NSInteger *)rating
 {
-    
+    //Probably won't need this
 }
 
 @end

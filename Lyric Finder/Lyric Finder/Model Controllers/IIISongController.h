@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)createSongWithTitle:(NSString *)title
                      artist:(NSString *)artist
                      lyrics:(NSString *)lyrics
-                     rating:(NSInteger)rating;
+                     rating:(int)rating;
 
 - (void)searchLyricsWithArtist:(NSString *)artist
                        title:(NSString *)title

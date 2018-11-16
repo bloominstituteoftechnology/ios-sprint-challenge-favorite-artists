@@ -12,6 +12,7 @@
 @interface IIISongController()
 
 @property (nonatomic) NSMutableArray *internalSongs;
+@property (nonatomic) NSURL *songsURL;
 
 @end
 
@@ -25,6 +26,7 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
     self = [super init];
     if (self) {
         _internalSongs = [[NSMutableArray alloc] init];
+        [self loadFromPersistentStore];
     }
     return self;
 }
@@ -32,10 +34,11 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
 - (void)createSongWithTitle:(NSString *)title
                      artist:(NSString *)artist
                      lyrics:(NSString *)lyrics
-                     rating:(NSInteger)rating
+                     rating:(int)rating
 {
     IIISong *song = [[IIISong alloc] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.internalSongs addObject:song];
+    [self saveToPersistentStore];
 }
 
 - (void)searchLyricsWithArtist:(NSString *)artist title:(NSString *)title completion:(void (^)(NSString *lyrics, NSError *error))completion
@@ -79,14 +82,26 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
 
 #pragma mark Persistent Store
 
+- (NSURL *)songsURL
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *fileName = @"LyricFinder.plist";
+    NSURL *documentDirectory = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    
+    return [documentDirectory URLByAppendingPathComponent:fileName];
+}
+
 - (void)saveToPersistentStore
 {
-    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self.internalSongs options:0 error:nil];
+    [data writeToURL:self.songsURL atomically:YES];
 }
 
 - (void)loadFromPersistentStore
 {
-    
+    NSData *data = [NSData dataWithContentsOfURL:self.songsURL];
+    NSArray *songsFromData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    self.internalSongs = songsFromData;
 }
 
 #pragma mark Getter

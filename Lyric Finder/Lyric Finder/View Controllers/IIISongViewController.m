@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateViews];
+    self.songTitleTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
+    self.artistTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
 }
 
 - (IBAction)ratingStepperTapped:(id)sender
@@ -52,7 +54,7 @@
     NSString *title = self.songTitleTextField.text;
     NSString *artist = self.artistTextField.text;
     NSString *lyrics = self.lyricsTextView.text;
-    NSInteger rating = [self.ratingLabel.text integerValue];
+    int rating = (int)self.ratingLabel.text;
     
     [self.songController createSongWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.navigationController popViewControllerAnimated:YES];
@@ -66,7 +68,11 @@
             self.artistTextField.text = self.song.artist;
             self.lyricsTextView.text = self.song.lyrics;
             
+            // This is acting weird. Don't have enought time spend this right now
+            self.ratingLabel.text = [NSString stringWithFormat:@"%i", (int)self.song.rating];
+            
             self.navigationItem.title = self.song.title;
+            [self.ratingStepper setHidden:YES];
             [self.searchLyricsButton setHidden:YES];
         } else {
             self.navigationItem.title = @"New Lyrics";

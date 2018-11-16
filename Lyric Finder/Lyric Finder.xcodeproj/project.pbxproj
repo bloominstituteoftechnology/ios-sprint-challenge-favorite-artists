@@ -16,6 +16,7 @@
 		8298AF80219F21DB006A48E2 /* IIISongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF7F219F21DB006A48E2 /* IIISongViewController.m */; };
 		8298AF83219F239D006A48E2 /* IIISong.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF82219F239D006A48E2 /* IIISong.m */; };
 		8298AF87219F23B9006A48E2 /* IIISongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF86219F23B9006A48E2 /* IIISongController.m */; };
+		8298AF8B219F41A4006A48E2 /* IIISong+IIIJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF8A219F41A4006A48E2 /* IIISong+IIIJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		8298AF82219F239D006A48E2 /* IIISong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IIISong.m; sourceTree = "<group>"; };
 		8298AF85219F23B9006A48E2 /* IIISongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IIISongController.h; sourceTree = "<group>"; };
 		8298AF86219F23B9006A48E2 /* IIISongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IIISongController.m; sourceTree = "<group>"; };
+		8298AF89219F41A4006A48E2 /* IIISong+IIIJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IIISong+IIIJSONSerialization.h"; sourceTree = "<group>"; };
+		8298AF8A219F41A4006A48E2 /* IIISong+IIIJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IIISong+IIIJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 			children = (
 				8298AF81219F239D006A48E2 /* IIISong.h */,
 				8298AF82219F239D006A48E2 /* IIISong.m */,
+				8298AF8C219F41AB006A48E2 /* Categories */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +128,15 @@
 				8298AF86219F23B9006A48E2 /* IIISongController.m */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		8298AF8C219F41AB006A48E2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8298AF89219F41A4006A48E2 /* IIISong+IIIJSONSerialization.h */,
+				8298AF8A219F41A4006A48E2 /* IIISong+IIIJSONSerialization.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +214,7 @@
 				8298AF83219F239D006A48E2 /* IIISong.m in Sources */,
 				8298AF7D219F21BC006A48E2 /* IIISongsTableViewController.m in Sources */,
 				8298AF80219F21DB006A48E2 /* IIISongViewController.m in Sources */,
+				8298AF8B219F41A4006A48E2 /* IIISong+IIIJSONSerialization.m in Sources */,
 				8298AF72219F1F89006A48E2 /* main.m in Sources */,
 				8298AF64219F1F89006A48E2 /* AppDelegate.m in Sources */,
 			);

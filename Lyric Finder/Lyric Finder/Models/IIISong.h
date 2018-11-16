@@ -15,12 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *artist;
 @property (nonatomic) NSString *lyrics;
-@property (nonatomic) NSInteger *rating;
+@property (nonatomic) int *rating;
 
 - (instancetype)initWithTitle: (NSString *)title
                        artist: (NSString *)artist
                        lyrics: (NSString *)lyrics
-                       rating: (NSInteger)rating;
+                       rating: (int)rating;
 
 @end
 

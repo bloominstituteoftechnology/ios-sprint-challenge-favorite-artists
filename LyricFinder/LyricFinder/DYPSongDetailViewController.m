@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *artistNameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
 @property NSInteger rating;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+@property (weak, nonatomic) IBOutlet UIButton *subtractButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 @end
 
@@ -32,6 +35,25 @@
 }
 
 - (IBAction)searchForLyrics:(id)sender {
+    
+    NSString *songTitle = self.songTitleTextField.text;
+    NSString *artistName = self.artistNameTextField.text;
+    
+    if (songTitle && artistName) {
+        [self.songController searchLyricsForSongTitle:songTitle artistName:artistName completion:^(NSString * _Nullable lyrics, NSError * _Nullable error) {
+            
+            if (error) {
+                NSLog(@"Error searching for lyrics.");
+                return;
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.lyricsTextView setText:lyrics];
+            });
+            
+        }];
+    }
+    
 }
 
 - (IBAction)addToRating:(id)sender {
@@ -64,6 +86,9 @@
         [self.lyricsTextView setText:self.song.lyrics];
         NSString *ratingString = [NSString stringWithFormat:@"Ratings: %ld", (long)self.rating];
         [self.ratingsLabel setText:ratingString];
+        [self.addButton setHidden:YES];
+        [self.subtractButton setHidden:YES];
+        [self.saveButton setEnabled:NO];
     } else {
         NSString *ratingString = [NSString stringWithFormat:@"Ratings: %ld", (long)self.rating];
         [self.ratingsLabel setText:ratingString];

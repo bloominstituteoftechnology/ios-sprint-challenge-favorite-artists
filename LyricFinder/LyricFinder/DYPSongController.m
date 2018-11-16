@@ -8,6 +8,7 @@
 
 #import "DYPSongController.h"
 #import "DYPSong.h"
+#import "DYPSong+NSJSONSerialization.h"
 
 @interface DYPSongController ()
 
@@ -61,10 +62,30 @@
             return;
         }
         
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         
+        if (![dictionary isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"JSON is not a dictionary");
+            completion(nil, [[NSError alloc] init]);
+            return;
+        }
+        
+        DYPSong *song = [[DYPSong alloc] initFromDictionary:dictionary songTitle:title artistName:artistName];
+        completion(song.lyrics, nil);
         
     }] resume];
     
+}
+
+- (void)persistSong:(DYPSong *)song
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"LyricFinderSavedSongs.plist"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSDictionary *songDictionary = song.songDictionary;
+    //NSData *plistData = NSPropertyListSerialization writePropertyList:<#(nonnull id)#> toStream:<#(nonnull NSOutputStream *)#> format:<#(NSPropertyListFormat)#> options:<#(NSPropertyListWriteOptions)#> error:<#(out NSError * _Nullable __autoreleasing * _Nullable)#>
 }
 
 - (NSArray *)songs

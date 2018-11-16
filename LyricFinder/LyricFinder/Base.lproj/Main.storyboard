@@ -151,10 +151,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="qiS-FM-7Bv" id="i2K-lk-JSe"/>
                         <outlet property="artistNameTextField" destination="Dt3-Vh-xmu" id="bzh-tg-FdS"/>
                         <outlet property="lyricsTextView" destination="v0L-b3-j5z" id="ALD-CP-buX"/>
                         <outlet property="ratingsLabel" destination="dfg-CJ-9cW" id="dHM-AW-olb"/>
+                        <outlet property="saveButton" destination="ebW-ox-cwZ" id="hQd-HT-fjL"/>
                         <outlet property="songTitleTextField" destination="3zh-5a-tlN" id="1h5-wY-hVA"/>
+                        <outlet property="subtractButton" destination="Cyw-Mp-0OO" id="tWq-IF-crQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9Z-2K-R0a" userLabel="First Responder" sceneMemberID="firstResponder"/>

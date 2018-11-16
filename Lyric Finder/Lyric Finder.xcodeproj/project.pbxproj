@@ -12,6 +12,11 @@
 		F173ADD7219F1EFF006DC97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F173ADD6219F1EFF006DC97D /* Assets.xcassets */; };
 		F173ADDA219F1EFF006DC97D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F173ADD8219F1EFF006DC97D /* LaunchScreen.storyboard */; };
 		F173ADDD219F1EFF006DC97D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADDC219F1EFF006DC97D /* main.m */; };
+		F173ADE7219F2679006DC97D /* SLBLyricTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADE6219F2679006DC97D /* SLBLyricTableViewController.m */; };
+		F173ADEA219F2698006DC97D /* SLBLyricDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADE9219F2698006DC97D /* SLBLyricDetailViewController.m */; };
+		F173ADF0219F2773006DC97D /* SLBSong.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADEF219F2773006DC97D /* SLBSong.m */; };
+		F173ADF3219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADF2219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m */; };
+		F173ADF7219F2AFA006DC97D /* SLBSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADF6219F2AFA006DC97D /* SLBSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,16 @@
 		F173ADD9219F1EFF006DC97D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F173ADDB219F1EFF006DC97D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F173ADDC219F1EFF006DC97D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F173ADE5219F2679006DC97D /* SLBLyricTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLBLyricTableViewController.h; sourceTree = "<group>"; };
+		F173ADE6219F2679006DC97D /* SLBLyricTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLBLyricTableViewController.m; sourceTree = "<group>"; };
+		F173ADE8219F2698006DC97D /* SLBLyricDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLBLyricDetailViewController.h; sourceTree = "<group>"; };
+		F173ADE9219F2698006DC97D /* SLBLyricDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLBLyricDetailViewController.m; sourceTree = "<group>"; };
+		F173ADEE219F2773006DC97D /* SLBSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLBSong.h; sourceTree = "<group>"; };
+		F173ADEF219F2773006DC97D /* SLBSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLBSong.m; sourceTree = "<group>"; };
+		F173ADF1219F2A0A006DC97D /* NSJSONSerialization+Dictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+Dictionary.h"; sourceTree = "<group>"; };
+		F173ADF2219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+Dictionary.m"; sourceTree = "<group>"; };
+		F173ADF5219F2AFA006DC97D /* SLBSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLBSongController.h; sourceTree = "<group>"; };
+		F173ADF6219F2AFA006DC97D /* SLBSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLBSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +70,13 @@
 		F173ADCC219F1EFE006DC97D /* Lyric Finder */ = {
 			isa = PBXGroup;
 			children = (
-				F173ADDC219F1EFF006DC97D /* main.m */,
+				F173ADF4219F2A1D006DC97D /* Catigories */,
+				F173ADEC219F26BB006DC97D /* Models */,
+				F173ADED219F26C1006DC97D /* Model Controllers */,
+				F173ADEB219F26A4006DC97D /* View Controllers */,
 				F173ADE4219F1F5E006DC97D /* Storyboards */,
 				F173ADE3219F1F41006DC97D /* Resources */,
+				F173ADDC219F1EFF006DC97D /* main.m */,
 			);
 			path = "Lyric Finder";
 			sourceTree = "<group>";
@@ -80,6 +99,44 @@
 				F173ADD8219F1EFF006DC97D /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F173ADEB219F26A4006DC97D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADE5219F2679006DC97D /* SLBLyricTableViewController.h */,
+				F173ADE6219F2679006DC97D /* SLBLyricTableViewController.m */,
+				F173ADE8219F2698006DC97D /* SLBLyricDetailViewController.h */,
+				F173ADE9219F2698006DC97D /* SLBLyricDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F173ADEC219F26BB006DC97D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADEE219F2773006DC97D /* SLBSong.h */,
+				F173ADEF219F2773006DC97D /* SLBSong.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F173ADED219F26C1006DC97D /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADF5219F2AFA006DC97D /* SLBSongController.h */,
+				F173ADF6219F2AFA006DC97D /* SLBSongController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		F173ADF4219F2A1D006DC97D /* Catigories */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADF1219F2A0A006DC97D /* NSJSONSerialization+Dictionary.h */,
+				F173ADF2219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m */,
+			);
+			path = Catigories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +210,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F173ADF7219F2AFA006DC97D /* SLBSongController.m in Sources */,
 				F173ADDD219F1EFF006DC97D /* main.m in Sources */,
 				F173ADCF219F1EFE006DC97D /* AppDelegate.m in Sources */,
+				F173ADF0219F2773006DC97D /* SLBSong.m in Sources */,
+				F173ADE7219F2679006DC97D /* SLBLyricTableViewController.m in Sources */,
+				F173ADF3219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m in Sources */,
+				F173ADEA219F2698006DC97D /* SLBLyricDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

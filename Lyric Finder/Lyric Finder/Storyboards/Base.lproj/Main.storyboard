@@ -13,7 +13,7 @@
         <!--Lyric Finder-->
         <scene sceneID="pSo-hu-FAP">
             <objects>
-                <tableViewController id="x1k-Qs-ZRx" sceneMemberID="viewController">
+                <tableViewController id="x1k-Qs-ZRx" customClass="SLBLyricTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aN8-hw-NNx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
         <!--Title-->
         <scene sceneID="LgW-iw-qnY">
             <objects>
-                <viewController id="KOG-8W-kgZ" sceneMemberID="viewController">
+                <viewController id="KOG-8W-kgZ" customClass="SLBLyricDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YsP-Mg-bLD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,6 +86,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xKx-pC-C8y">
                                                 <rect key="frame" x="249" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="ratingStepper:" destination="KOG-8W-kgZ" eventType="valueChanged" id="K5C-V4-znW"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -120,8 +123,18 @@
                         <viewLayoutGuide key="safeArea" id="cYC-uL-kLq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="czp-CT-Mkg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6sh-mi-25o"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6sh-mi-25o">
+                            <connections>
+                                <action selector="saveButton:" destination="KOG-8W-kgZ" id="zzj-Di-Icp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="alk-8k-Y5z" id="lwM-O9-SiK"/>
+                        <outlet property="lyricsTextView" destination="rkK-aH-iuF" id="0oi-pD-has"/>
+                        <outlet property="ratingLabel" destination="hxa-P1-st9" id="Q3M-Y7-GAi"/>
+                        <outlet property="songTitleTextField" destination="QKW-X1-XDW" id="0hL-Qf-cbt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nR-B6-VsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Songs-->
         <scene sceneID="6MY-qK-yV7">
             <objects>
                 <tableViewController id="mAh-mo-XWW" customClass="FAFSongsTableViewController" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Yyd-kr-xMj" detailTextLabel="gSW-KZ-0WJ" style="IBUITableViewCellStyleSubtitle" id="oh4-e0-NVv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" textLabel="Yyd-kr-xMj" detailTextLabel="gSW-KZ-0WJ" style="IBUITableViewCellStyleSubtitle" id="oh4-e0-NVv">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oh4-e0-NVv" id="lFO-Ve-0XA">
@@ -44,7 +44,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="3Fk-3h-pl4" kind="show" identifier="NewSong" id="g9q-jH-pi1"/>
+                                    <segue destination="3Fk-3h-pl4" kind="show" identifier="ViewSong" id="g9q-jH-pi1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,10 +53,10 @@
                             <outlet property="delegate" destination="mAh-mo-XWW" id="1Bj-Hs-0wW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Du6-gN-90D">
+                    <navigationItem key="navigationItem" title="Songs" id="Du6-gN-90D">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="2Hh-tc-tgM">
                             <connections>
-                                <segue destination="3Fk-3h-pl4" kind="show" identifier="AddSong" id="bCp-HQ-OOx"/>
+                                <segue destination="3Fk-3h-pl4" kind="show" identifier="NewSong" id="bCp-HQ-OOx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="276" y="157"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="qsR-3V-g4f">
             <objects>
-                <viewController id="3Fk-3h-pl4" sceneMemberID="viewController">
+                <viewController id="3Fk-3h-pl4" customClass="FAFNewSongViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OcG-o4-Cet">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,14 +85,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKZ-RM-jGH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKZ-RM-jGH">
                                                 <rect key="frame" x="69" y="0.0" width="188" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="uNi-Gt-pxi">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="uNi-Gt-pxi">
                                                 <rect key="frame" x="265" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="changeRating:" destination="3Fk-3h-pl4" eventType="valueChanged" id="zLP-Xi-aTu"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -115,6 +118,9 @@
                                         <state key="normal" title="Get Lyrics">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getLyrics:" destination="3Fk-3h-pl4" eventType="touchUpInside" id="7IS-Hg-5sr"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lyrics will appear here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eev-N2-KL8">
                                         <rect key="frame" x="0.0" y="142.5" width="359" height="370.5"/>
@@ -137,6 +143,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1qs-lW-GQM"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="ZLe-bp-rYp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="tmZ-60-Nr6">
+                            <connections>
+                                <action selector="createSong:" destination="3Fk-3h-pl4" id="dE0-Ar-vgr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistNameField" destination="wLh-5y-geL" id="cdc-H6-pxA"/>
+                        <outlet property="lyricsTextView" destination="eev-N2-KL8" id="xfu-ec-aQV"/>
+                        <outlet property="ratingLabel" destination="aKZ-RM-jGH" id="RZD-sr-yNS"/>
+                        <outlet property="ratingStepper" destination="uNi-Gt-pxi" id="vnx-yO-uoJ"/>
+                        <outlet property="songNameField" destination="xBm-y9-R5f" id="MVH-Dc-wf5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAU-vV-m2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,6 +180,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="g9q-jH-pi1"/>
+        <segue reference="bCp-HQ-OOx"/>
     </inferredMetricsTieBreakers>
 </document>

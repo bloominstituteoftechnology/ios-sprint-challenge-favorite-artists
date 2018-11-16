@@ -16,6 +16,7 @@
 		D862F809219F2B65006C1494 /* FAFSong.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F808219F2B65006C1494 /* FAFSong.m */; };
 		D862F80C219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F80B219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m */; };
 		D8723997219F3294005DFB59 /* FAFSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8723996219F3294005DFB59 /* FAFSongController.m */; };
+		D872399A219F5952005DFB59 /* FAFNewSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8723999219F5952005DFB59 /* FAFNewSongViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		D862F80B219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FAFNSJSONSerialization.m"; sourceTree = "<group>"; };
 		D8723995219F3294005DFB59 /* FAFSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAFSongController.h; sourceTree = "<group>"; };
 		D8723996219F3294005DFB59 /* FAFSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAFSongController.m; sourceTree = "<group>"; };
+		D8723998219F5952005DFB59 /* FAFNewSongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAFNewSongViewController.h; sourceTree = "<group>"; };
+		D8723999219F5952005DFB59 /* FAFNewSongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAFNewSongViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,20 +73,46 @@
 				D862F7EE219F1E2A006C1494 /* AppDelegate.h */,
 				D862F7EF219F1E2A006C1494 /* AppDelegate.m */,
 				D862F7F4219F1E2A006C1494 /* Main.storyboard */,
-				D862F807219F2B65006C1494 /* FAFSong.h */,
-				D862F808219F2B65006C1494 /* FAFSong.m */,
+				D872399B219F5958005DFB59 /* View Controllers */,
+				D872399C219F5961005DFB59 /* Model */,
 				D862F80A219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.h */,
 				D862F80B219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m */,
-				D8723995219F3294005DFB59 /* FAFSongController.h */,
-				D8723996219F3294005DFB59 /* FAFSongController.m */,
-				D862F804219F2883006C1494 /* FAFSongsTableViewController.h */,
-				D862F805219F2883006C1494 /* FAFSongsTableViewController.m */,
+				D872399D219F5969005DFB59 /* Model Controller */,
 				D862F7F7219F1E2B006C1494 /* Assets.xcassets */,
 				D862F7F9219F1E2B006C1494 /* LaunchScreen.storyboard */,
 				D862F7FC219F1E2B006C1494 /* Info.plist */,
 				D862F7FD219F1E2B006C1494 /* main.m */,
 			);
 			path = FAFLyricFinder;
+			sourceTree = "<group>";
+		};
+		D872399B219F5958005DFB59 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8723998219F5952005DFB59 /* FAFNewSongViewController.h */,
+				D8723999219F5952005DFB59 /* FAFNewSongViewController.m */,
+				D862F804219F2883006C1494 /* FAFSongsTableViewController.h */,
+				D862F805219F2883006C1494 /* FAFSongsTableViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D872399C219F5961005DFB59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D862F807219F2B65006C1494 /* FAFSong.h */,
+				D862F808219F2B65006C1494 /* FAFSong.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D872399D219F5969005DFB59 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8723995219F3294005DFB59 /* FAFSongController.h */,
+				D8723996219F3294005DFB59 /* FAFSongController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +192,7 @@
 				D862F80C219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m in Sources */,
 				D862F806219F2883006C1494 /* FAFSongsTableViewController.m in Sources */,
 				D862F7F0219F1E2A006C1494 /* AppDelegate.m in Sources */,
+				D872399A219F5952005DFB59 /* FAFNewSongViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

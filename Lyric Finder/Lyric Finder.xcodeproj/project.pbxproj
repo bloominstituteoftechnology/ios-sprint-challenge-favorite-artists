@@ -12,6 +12,10 @@
 		8298AF6C219F1F89006A48E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8298AF6B219F1F89006A48E2 /* Assets.xcassets */; };
 		8298AF6F219F1F89006A48E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8298AF6D219F1F89006A48E2 /* LaunchScreen.storyboard */; };
 		8298AF72219F1F89006A48E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF71219F1F89006A48E2 /* main.m */; };
+		8298AF7D219F21BC006A48E2 /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF7C219F21BC006A48E2 /* SongsTableViewController.m */; };
+		8298AF80219F21DB006A48E2 /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF7F219F21DB006A48E2 /* SongViewController.m */; };
+		8298AF83219F239D006A48E2 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF82219F239D006A48E2 /* Song.m */; };
+		8298AF87219F23B9006A48E2 /* SongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298AF86219F23B9006A48E2 /* SongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,14 @@
 		8298AF6E219F1F89006A48E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8298AF70219F1F89006A48E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8298AF71219F1F89006A48E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8298AF7B219F21BC006A48E2 /* SongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongsTableViewController.h; sourceTree = "<group>"; };
+		8298AF7C219F21BC006A48E2 /* SongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongsTableViewController.m; sourceTree = "<group>"; };
+		8298AF7E219F21DB006A48E2 /* SongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongViewController.h; sourceTree = "<group>"; };
+		8298AF7F219F21DB006A48E2 /* SongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongViewController.m; sourceTree = "<group>"; };
+		8298AF81219F239D006A48E2 /* Song.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		8298AF82219F239D006A48E2 /* Song.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		8298AF85219F23B9006A48E2 /* SongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongController.h; sourceTree = "<group>"; };
+		8298AF86219F23B9006A48E2 /* SongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +67,8 @@
 		8298AF61219F1F89006A48E2 /* Lyric Finder */ = {
 			isa = PBXGroup;
 			children = (
+				8298AF84219F23A3006A48E2 /* Models */,
+				8298AF88219F23BC006A48E2 /* Model Controllers */,
 				8298AF7A219F1FA5006A48E2 /* View Controllers */,
 				8298AF79219F1F9E006A48E2 /* Storyboards */,
 				8298AF78219F1F92006A48E2 /* Resources */,
@@ -86,8 +100,30 @@
 		8298AF7A219F1FA5006A48E2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8298AF7B219F21BC006A48E2 /* SongsTableViewController.h */,
+				8298AF7C219F21BC006A48E2 /* SongsTableViewController.m */,
+				8298AF7E219F21DB006A48E2 /* SongViewController.h */,
+				8298AF7F219F21DB006A48E2 /* SongViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8298AF84219F23A3006A48E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8298AF81219F239D006A48E2 /* Song.h */,
+				8298AF82219F239D006A48E2 /* Song.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8298AF88219F23BC006A48E2 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8298AF85219F23B9006A48E2 /* SongController.h */,
+				8298AF86219F23B9006A48E2 /* SongController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +196,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8298AF87219F23B9006A48E2 /* SongController.m in Sources */,
+				8298AF83219F239D006A48E2 /* Song.m in Sources */,
+				8298AF7D219F21BC006A48E2 /* SongsTableViewController.m in Sources */,
+				8298AF80219F21DB006A48E2 /* SongViewController.m in Sources */,
 				8298AF72219F1F89006A48E2 /* main.m in Sources */,
 				8298AF64219F1F89006A48E2 /* AppDelegate.m in Sources */,
 			);

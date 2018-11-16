@@ -13,13 +13,13 @@
         <!--Lyric Finder-->
         <scene sceneID="YX1-eJ-wFw">
             <objects>
-                <tableViewController id="Jm5-St-gx6" sceneMemberID="viewController">
+                <tableViewController id="Jm5-St-gx6" customClass="SongsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hAC-Oa-Cnv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="9g6-vI-jPv" detailTextLabel="2xX-Jc-tLr" style="IBUITableViewCellStyleSubtitle" id="SOB-FU-6gl">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" textLabel="9g6-vI-jPv" detailTextLabel="2xX-Jc-tLr" style="IBUITableViewCellStyleSubtitle" id="SOB-FU-6gl">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SOB-FU-6gl" id="mP1-ly-CW9">
@@ -85,7 +85,7 @@
         <!--Title-->
         <scene sceneID="vui-7T-Dnw">
             <objects>
-                <viewController id="DXW-Az-zJU" sceneMemberID="viewController">
+                <viewController id="DXW-Az-zJU" customClass="SongViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gaq-u6-TrK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

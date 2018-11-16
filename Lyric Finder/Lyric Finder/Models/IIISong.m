@@ -8,6 +8,11 @@
 
 #import "IIISong.h"
 
+#define titleKey @"title"
+#define artistKey @"artist"
+#define lyricsKey @"lyrics"
+#define ratingKey @"rating"
+
 @implementation IIISong
 
 - (instancetype)initWithTitle:(NSString *)title
@@ -25,20 +30,24 @@
     return self;
 }
 
-- (void)encodeWithCoder:(nonnull NSCoder *)aCoder
+- (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    [aCoder encodeObject:self.title];
-    [aCoder encodeObject:self.artist];
-    [aCoder encodeObject:self.lyrics];
-    [aCoder encodeInt:self.rating forKey:@"rating"];
+    [aCoder encodeObject:self.title forKey:titleKey];
+    [aCoder encodeObject:self.artist forKey:artistKey];
+    [aCoder encodeObject:self.lyrics forKey:lyricsKey];
+    [aCoder encodeInt:self.rating forKey:ratingKey];
 }
 
-- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self.title = [[aDecoder decodeObject] copy];
-    self.artist = [[aDecoder decodeObject] copy];
-    self.lyrics = [[aDecoder decodeObject] copy];
-    self.rating = [aDecoder decodeIntForKey:@"rating"];
+    self = [super init];
+    if (self) {
+        self.title = [aDecoder decodeObjectForKey:titleKey];
+        self.artist = [aDecoder decodeObjectForKey:artistKey];
+        self.lyrics = [aDecoder decodeObjectForKey:lyricsKey];
+        self.rating = [aDecoder decodeIntForKey:ratingKey];
+    }
+    
     return self;
 }
 

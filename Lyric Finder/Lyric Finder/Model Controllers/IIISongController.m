@@ -8,6 +8,7 @@
 
 #import "IIISongController.h"
 #import "IIISong.h"
+#import "IIISong+IIIJSONSerialization.h"
 
 @interface IIISongController()
 
@@ -25,7 +26,8 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
 {
     self = [super init];
     if (self) {
-        _internalSongs = [[NSMutableArray alloc] init];
+        _internalSongs = [[self loadFromPersistentStore] mutableCopy];
+        _songsURL = [[NSURL alloc] init];
     }
     return self;
 }
@@ -37,7 +39,7 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
 {
     IIISong *song = [[IIISong alloc] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.internalSongs addObject:song];
-//    [self saveToPersistentStore];
+    [self saveToPersistentStore];
 }
 
 - (void)searchLyricsWithArtist:(NSString *)artist title:(NSString *)title completion:(void (^)(NSString *lyrics, NSError *error))completion
@@ -92,16 +94,38 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
 
 - (void)saveToPersistentStore
 {
-    NSData *songsData = [NSJSONSerialization dataWithJSONObject:self.internalSongs options:0 error:nil];
+    NSMutableArray *songDictionaries = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < self.internalSongs.count; i++) {
+        IIISong *song = self.internalSongs[i];
+        [songDictionaries addObject:[song songDictionary]];
+    }
+    
+    NSData *songsData = [NSJSONSerialization dataWithJSONObject:songDictionaries options:0 error:nil];
     [songsData writeToURL:self.songsURL atomically:YES];
+    
 }
 
 // Don't know where is the proper place to call this ???
-- (void)loadFromPersistentStore
+- (NSArray *)loadFromPersistentStore
 {
-    NSData *data = [NSData dataWithContentsOfURL:self.songsURL];
-    NSMutableArray *songsFromData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    self.internalSongs = songsFromData;
+    NSData *songData = [NSData dataWithContentsOfURL:self.songsURL];
+    if (!songData) { return @[]; }
+    
+    NSArray *songDictionariesFromData = [NSJSONSerialization JSONObjectWithData:songData options:0 error:nil];
+    NSMutableArray *songs = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < songDictionariesFromData.count; i++) {
+        NSDictionary *songDictionary = songDictionariesFromData[i];
+        IIISong *song = [[IIISong alloc] initWithDictionary:songDictionary];
+        [songs addObject:song];
+    }
+    
+    if (songs) {
+        return songs;
+    } else {
+        return @[];
+    }
 }
 
 #pragma mark Getter

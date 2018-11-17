@@ -34,13 +34,11 @@
 }
 
 - (IBAction)stepper:(UIStepper *)sender {
-    NSNumber *doubleNumber = [NSNumber numberWithDouble:sender.value];
     if(self.rating) {
-        NSInteger *num = (int)self.rating + (int)sender.value;
+        NSInteger num = (int)self.rating + (int)sender.value;
         _ratingLabel.text = [[NSNumber numberWithInteger:num] stringValue];
-        self.rating = num;
     } else {
-        _ratingLabel.text = [doubleNumber stringValue];
+        _ratingLabel.text = [[NSNumber numberWithDouble:sender.value] stringValue];
     }
 }
 - (IBAction)searchForLyrics:(id)sender {
@@ -52,6 +50,7 @@
     }];
 }
 - (IBAction)saveSong:(id)sender {
+    self.rating = [self.ratingLabel.text integerValue];
     if (!self.song) {
         [self.songController createSongWithTitle:_songTitleTextField.text artist:_artistTextField.text lyrics:self.lyrics rating:self.rating];
         [self.navigationController popViewControllerAnimated:YES];

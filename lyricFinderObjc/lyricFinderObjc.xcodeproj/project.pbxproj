@@ -14,6 +14,7 @@
 		11CECA5421FB6721004DAF13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CECA5221FB6721004DAF13 /* LaunchScreen.storyboard */; };
 		11CECA5721FB6721004DAF13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA5621FB6721004DAF13 /* main.m */; };
 		11CECA5F21FB687D004DAF13 /* NKTSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA5E21FB687D004DAF13 /* NKTSong.m */; };
+		11CECA6321FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA6221FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		11CECA5621FB6721004DAF13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11CECA5D21FB687D004DAF13 /* NKTSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKTSong.h; sourceTree = "<group>"; };
 		11CECA5E21FB687D004DAF13 /* NKTSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKTSong.m; sourceTree = "<group>"; };
+		11CECA6121FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+NKTNSJSONSerialization.h"; sourceTree = "<group>"; };
+		11CECA6221FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+NKTNSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 		11CECA4621FB6720004DAF13 /* lyricFinderObjc */ = {
 			isa = PBXGroup;
 			children = (
+				11CECA6121FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.h */,
+				11CECA6221FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m */,
 				11CECA4721FB6720004DAF13 /* AppDelegate.h */,
 				11CECA4821FB6720004DAF13 /* AppDelegate.m */,
 				11CECA4A21FB6720004DAF13 /* ViewController.h */,
@@ -157,6 +162,7 @@
 				11CECA5F21FB687D004DAF13 /* NKTSong.m in Sources */,
 				11CECA4C21FB6720004DAF13 /* ViewController.m in Sources */,
 				11CECA5721FB6721004DAF13 /* main.m in Sources */,
+				11CECA6321FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m in Sources */,
 				11CECA4921FB6720004DAF13 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

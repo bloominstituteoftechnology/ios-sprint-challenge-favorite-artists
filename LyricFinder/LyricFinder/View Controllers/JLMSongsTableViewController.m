@@ -10,6 +10,7 @@
 #import "JLMSongController.h"
 #import "JLMSong.h"
 #import "JLMSongDetailsViewController.h"
+#import "JLMSongTableViewCell.h"
 
 @interface JLMSongsTableViewController ()
 
@@ -39,6 +40,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    self.tableView.rowHeight = 70;
     [self.tableView reloadData];
 }
 
@@ -49,12 +51,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell" forIndexPath:indexPath];
+    
+    JLMSongTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell" forIndexPath:indexPath];
     
     JLMSong *song = [self.songController.songs objectAtIndex:[indexPath row]];
     
-    [cell.textLabel setText:song.title];
-    [cell.detailTextLabel setText:song.artist];
+    cell.songTitleLabel.text = song.title;
+    cell.artistNameLabel.text = [song.artist uppercaseString];
     
     return cell;
 }

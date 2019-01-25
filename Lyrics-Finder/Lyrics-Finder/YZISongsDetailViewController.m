@@ -27,12 +27,12 @@
 - (IBAction)save:(id)sender {
     
     NSString *lyrics = self.lyricsTextView.text;
-    NSString *artist = self.artistName.text;
+    NSString *artistName = self.artistName.text;
     NSString *title = self.songName.text;
     int rating = [self.ratingLabel.text intValue];
     
     if (![title isEqualToString:@""]) {
-        [self.songController createSongsWithTitle:title artist:artist lyrics:lyrics  rating:rating];
+        [self.songController createSongsWithTitle:title artistName:artistName lyrics:lyrics  rating:rating];
         [self.navigationController popViewControllerAnimated:YES];
     }
 

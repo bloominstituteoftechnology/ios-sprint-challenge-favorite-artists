@@ -17,15 +17,15 @@
 
 @implementation YZISongs
 
-- (instancetype)initWithTitle:(NSString *)title
-                       artist:(NSString *)artist
-                       lyrics:(NSString *)lyrics
-                       rating:(int)rating
+- (instancetype)initWithTitle: (NSString *)title
+                       lyrics: (NSString *)lyrics
+                   artistName: (NSString *)artistName
+                       rating: (int)rating
 {
     self = [super init];
     if (self) {
         _title = title;
-        _artistName = artist;
+        _artistName = artistName;
         _lyrics = lyrics;
         _rating = rating;
     }

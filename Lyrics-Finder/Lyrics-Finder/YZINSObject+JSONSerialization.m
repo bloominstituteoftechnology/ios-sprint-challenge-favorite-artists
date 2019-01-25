@@ -16,11 +16,11 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     NSString *title = dictionary[@"title"];
-    NSString *artist = dictionary[@"artist"];
+    NSString *artistName = dictionary[@"artist"];
     NSString *lyrics = dictionary[@"lyrics"];
     NSNumber *ratings = dictionary[@"rating"];
     
-    return [[YZISongs alloc] initWithTitle:title lyrics:lyrics artist:artist  rating:[ratings intValue]];
+    return [[YZISongs alloc] initWithTitle:title lyrics:lyrics artistName:artistName  rating:[ratings intValue]];
 }
 
 - (NSDictionary *)songDictionary

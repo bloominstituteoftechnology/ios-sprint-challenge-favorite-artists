@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YZISongs : NSObject
+@interface YZISongs : NSObject <NSCoding>
+
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *lyrics;
 @property (nonatomic) NSString *artistName;
@@ -18,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithTitle: (NSString *)title
                        lyrics: (NSString *)lyrics
-                       artist: (NSString *)artist
+                       artistName: (NSString *)artistName
                        rating: (int)rating;
 
 @end

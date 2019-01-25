@@ -123,5 +123,28 @@ static NSString *baseUrlString = @"https://musixmatchcom-musixmatch.p.mashape.co
     
 }
 
+- (void)loadSongs
+{
+    NSURL *documentsDir = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:@"savedSongs.json"];
+    
+    // Get the data from documents
+    NSData *data = [NSData dataWithContentsOfURL:documentsDir];
+    
+    if (data == nil) {
+        NSLog(@"Got not data from documents Dir");
+        return;
+    }
+    
+    // Turn data into array of song dictionaries
+    NSArray *songDictionaries = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    for (NSDictionary *songDict in songDictionaries)
+    {
+//        Song *song [[NKTSong alloc] init]
+    }
+    
+    
+}
+
 
 @end

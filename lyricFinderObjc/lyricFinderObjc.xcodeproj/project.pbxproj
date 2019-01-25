@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		11CECA4921FB6720004DAF13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA4821FB6720004DAF13 /* AppDelegate.m */; };
-		11CECA4C21FB6720004DAF13 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA4B21FB6720004DAF13 /* ViewController.m */; };
 		11CECA4F21FB6720004DAF13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CECA4D21FB6720004DAF13 /* Main.storyboard */; };
 		11CECA5121FB6721004DAF13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11CECA5021FB6721004DAF13 /* Assets.xcassets */; };
 		11CECA5421FB6721004DAF13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CECA5221FB6721004DAF13 /* LaunchScreen.storyboard */; };
@@ -16,14 +15,14 @@
 		11CECA5F21FB687D004DAF13 /* NKTSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA5E21FB687D004DAF13 /* NKTSong.m */; };
 		11CECA6321FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA6221FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m */; };
 		11CECA6621FB6C1A004DAF13 /* NKTSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA6521FB6C1A004DAF13 /* NKTSongController.m */; };
+		11CECA6A21FB7A86004DAF13 /* NKTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA6921FB7A86004DAF13 /* NKTTVC.m */; };
+		11CECA6E21FB7AC4004DAF13 /* NKTSongVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA6D21FB7AC4004DAF13 /* NKTSongVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11CECA4421FB6720004DAF13 /* lyricFinderObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lyricFinderObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CECA4721FB6720004DAF13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11CECA4821FB6720004DAF13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		11CECA4A21FB6720004DAF13 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		11CECA4B21FB6720004DAF13 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		11CECA4E21FB6720004DAF13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11CECA5021FB6721004DAF13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11CECA5321FB6721004DAF13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +34,10 @@
 		11CECA6221FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+NKTNSJSONSerialization.m"; sourceTree = "<group>"; };
 		11CECA6421FB6C1A004DAF13 /* NKTSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKTSongController.h; sourceTree = "<group>"; };
 		11CECA6521FB6C1A004DAF13 /* NKTSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKTSongController.m; sourceTree = "<group>"; };
+		11CECA6821FB7A86004DAF13 /* NKTTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKTTVC.h; sourceTree = "<group>"; };
+		11CECA6921FB7A86004DAF13 /* NKTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKTTVC.m; sourceTree = "<group>"; };
+		11CECA6C21FB7AC4004DAF13 /* NKTSongVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKTSongVC.h; sourceTree = "<group>"; };
+		11CECA6D21FB7AC4004DAF13 /* NKTSongVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKTSongVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +74,9 @@
 				11CECA6221FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m */,
 				11CECA4721FB6720004DAF13 /* AppDelegate.h */,
 				11CECA4821FB6720004DAF13 /* AppDelegate.m */,
-				11CECA4A21FB6720004DAF13 /* ViewController.h */,
+				11CECA6B21FB7A89004DAF13 /* View Controllers */,
 				11CECA6721FB6C1D004DAF13 /* Model Controllers */,
 				11CECA6021FB6880004DAF13 /* Model */,
-				11CECA4B21FB6720004DAF13 /* ViewController.m */,
 				11CECA4D21FB6720004DAF13 /* Main.storyboard */,
 				11CECA5021FB6721004DAF13 /* Assets.xcassets */,
 				11CECA5221FB6721004DAF13 /* LaunchScreen.storyboard */,
@@ -100,6 +102,17 @@
 				11CECA6521FB6C1A004DAF13 /* NKTSongController.m */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		11CECA6B21FB7A89004DAF13 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11CECA6821FB7A86004DAF13 /* NKTTVC.h */,
+				11CECA6921FB7A86004DAF13 /* NKTTVC.m */,
+				11CECA6C21FB7AC4004DAF13 /* NKTSongVC.h */,
+				11CECA6D21FB7AC4004DAF13 /* NKTSongVC.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +186,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				11CECA5F21FB687D004DAF13 /* NKTSong.m in Sources */,
-				11CECA4C21FB6720004DAF13 /* ViewController.m in Sources */,
 				11CECA6621FB6C1A004DAF13 /* NKTSongController.m in Sources */,
+				11CECA6E21FB7AC4004DAF13 /* NKTSongVC.m in Sources */,
 				11CECA5721FB6721004DAF13 /* main.m in Sources */,
+				11CECA6A21FB7A86004DAF13 /* NKTTVC.m in Sources */,
 				11CECA6321FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m in Sources */,
 				11CECA4921FB6720004DAF13 /* AppDelegate.m in Sources */,
 			);

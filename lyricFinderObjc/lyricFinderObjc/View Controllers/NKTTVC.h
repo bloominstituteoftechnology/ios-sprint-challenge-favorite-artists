@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NKTTVC.h
 //  lyricFinderObjc
 //
 //  Created by Nikita Thomas on 1/25/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface NKTTVC : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

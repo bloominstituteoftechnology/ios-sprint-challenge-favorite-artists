@@ -42,6 +42,9 @@
 {
     [self.songController loadSongs];
     [[self tableView] reloadData];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"diamond"]];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 }
 
 - (void)viewWillAppear:(BOOL)animated

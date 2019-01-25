@@ -27,6 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"diamond"]];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
     NSString *title = [[self song] title];
     NSString *artist = [[self song] artist];
     NSString *rating = [NSString stringWithFormat:@"%ld",(long)[[self song] rating]];

@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="679.20000000000005" y="94.902548725637189"/>
         </scene>
-        <!--SongVC-->
+        <!--Title-->
         <scene sceneID="JKU-ZI-JXZ">
             <objects>
                 <viewController id="ofm-mz-ckg" customClass="NKTSongVC" sceneMemberID="viewController">
@@ -70,6 +70,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="UPz-Ib-rly">
                                                 <rect key="frame" x="211" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="ratingStepperTapped:" destination="ofm-mz-ckg" eventType="valueChanged" id="Qyu-yA-jDT"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -88,6 +91,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYD-JV-lS5">
                                         <rect key="frame" x="0.0" y="155" width="305" height="30"/>
                                         <state key="normal" title="Search For Lyrics"/>
+                                        <connections>
+                                            <action selector="searchForLyricsTapped:" destination="ofm-mz-ckg" eventType="touchUpInside" id="Alb-TB-QyB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -110,6 +116,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ME4-S6-x3s"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="oMT-Kd-9p9">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="wnb-I9-faZ">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="ofm-mz-ckg" id="l4y-xm-XZu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="fY9-OF-IQL" id="42K-3S-TUb"/>
+                        <outlet property="lyricsTextView" destination="Hb0-NJ-NxZ" id="PFt-UM-1Ik"/>
+                        <outlet property="ratingLabel" destination="fZe-Xz-Xci" id="kK3-Je-nZV"/>
+                        <outlet property="ratingStepper" destination="UPz-Ib-rly" id="3Ab-px-ueQ"/>
+                        <outlet property="titleTextField" destination="uMd-No-y3T" id="N0t-eN-yTf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3s-hL-lZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

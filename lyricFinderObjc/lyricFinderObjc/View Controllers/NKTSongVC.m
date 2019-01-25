@@ -7,8 +7,18 @@
 //
 
 #import "NKTSongVC.h"
+#import "NKTSong.h"
 
 @interface NKTSongVC ()
+
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+@property (weak, nonatomic) IBOutlet UIStepper *ratingStepper;
+
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *artistTextField;
+
+@property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
+
 
 @end
 
@@ -16,17 +26,77 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSString *title = [[self song] title];
+    NSString *artist = [[self song] artist];
+    NSString *rating = [NSString stringWithFormat:@"%ld",(long)[[self song] rating]];
+    NSString *lyrics = [[self song] lyrics];
+    
+    // Check to see if we already have a song or if we're going to be searching for a song
+    
+    if (title && artist && rating && lyrics)
+    {
+        [[self titleTextField]setText:title];
+        [[self artistTextField]setText:artist];
+        [[self lyricsTextView]setText:lyrics];
+        [[self ratingLabel]setText:rating];
+    }
+    
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)ratingStepperTapped:(id)sender {
+    
+    // Get value of rating from the stepper as a double
+    double rating = [[self ratingStepper] value];
+    
+    // Convert the double into a NSNumber
+    NSNumber *ratingNumber = [NSNumber numberWithDouble:rating];
+    
+    // Present the stringValue of the NSNumber as the label
+    [[self ratingLabel] setText:ratingNumber.stringValue];
+    
 }
-*/
+
+- (IBAction)saveButtonTapped:(id)sender {
+    
+    NSString *title = [[self titleTextField] text];
+    NSString *artist = [[self artistTextField] text];
+    NSString *lyrics = [[self lyricsTextView] text];
+    NSInteger rating = (NSInteger)[[self ratingStepper] value];
+    
+    if (title && artist && lyrics && rating)
+    {
+        [[self songController]newSongWithTitle:title artist:artist rating:rating lyrics:lyrics];
+        
+        [[self navigationController]popViewControllerAnimated:YES];
+    }
+
+}
+
+- (IBAction)searchForLyricsTapped:(id)sender {
+    
+    NSString *title = [[self titleTextField]text];
+    NSString *artist = [[self artistTextField] text];
+    
+    [[self songController] getLyricsWithTitle:title artist:artist completion:^(NSString *lyrics, NSError *error) {
+        
+        if (error)
+        {
+            NSLog(@"Error searching for lyrics: %@", error);
+            return;
+        }
+        
+        // MUST update lyrics text on main que because search is done on background thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[self lyricsTextView] setText:lyrics];
+        });
+        
+        
+        
+    }];
+    
+}
+
 
 @end

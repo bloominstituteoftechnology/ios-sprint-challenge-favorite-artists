@@ -140,7 +140,8 @@ static NSString *baseUrlString = @"https://musixmatchcom-musixmatch.p.mashape.co
     
     for (NSDictionary *songDict in songDictionaries)
     {
-//        Song *song [[NKTSong alloc] init]
+        NKTSong *song = [[NKTSong alloc] initWithDictionary:songDict];
+        [self.songs addObject:song];
     }
     
     

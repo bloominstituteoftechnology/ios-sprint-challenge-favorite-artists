@@ -22,9 +22,12 @@
     return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary title:(NSString *)title artist:(NSString *)artist rating:(NSInteger)rating
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSString *lyrics = dictionary[@"lyrics_body"];
+    NSString *title = dictionary[@"title"];
+    NSString *artist = dictionary[@"artist"];
+    NSString *lyrics = dictionary[@"lyrics"];
+    NSInteger *rating = [dictionary[@"rating"]integerValue];
     
     return [self initWithTitle:title artist:artist lyrics:lyrics rating:rating];
 }

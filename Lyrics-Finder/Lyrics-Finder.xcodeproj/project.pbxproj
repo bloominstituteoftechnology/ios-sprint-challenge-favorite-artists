@@ -16,6 +16,7 @@
 		44AF873E21FB6E7E00DDA798 /* YZISongsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AF873D21FB6E7E00DDA798 /* YZISongsController.m */; };
 		44AF874121FB6EC800DDA798 /* YZISongsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AF874021FB6EC800DDA798 /* YZISongsDetailViewController.m */; };
 		44AF874421FB6EE400DDA798 /* YZISongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AF874321FB6EE400DDA798 /* YZISongsTableViewController.m */; };
+		44AF874621FB7F8200DDA798 /* YZINSObject+JSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AF874521FB7F8200DDA798 /* YZINSObject+JSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		44AF874021FB6EC800DDA798 /* YZISongsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZISongsDetailViewController.m; sourceTree = "<group>"; };
 		44AF874221FB6EE400DDA798 /* YZISongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZISongsTableViewController.h; sourceTree = "<group>"; };
 		44AF874321FB6EE400DDA798 /* YZISongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZISongsTableViewController.m; sourceTree = "<group>"; };
+		44AF874521FB7F8200DDA798 /* YZINSObject+JSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YZINSObject+JSONSerialization.m"; sourceTree = "<group>"; };
+		44AF874721FB7FB100DDA798 /* YZINSObject+JSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YZINSObject+JSONSerialization.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				44AF873A21FB6E6A00DDA798 /* YZISongs.m */,
 				44AF873C21FB6E7E00DDA798 /* YZISongsController.h */,
 				44AF873D21FB6E7E00DDA798 /* YZISongsController.m */,
+				44AF874521FB7F8200DDA798 /* YZINSObject+JSONSerialization.m */,
+				44AF874721FB7FB100DDA798 /* YZINSObject+JSONSerialization.h */,
 				44AF873F21FB6EC800DDA798 /* YZISongsDetailViewController.h */,
 				44AF874021FB6EC800DDA798 /* YZISongsDetailViewController.m */,
 				44AF874221FB6EE400DDA798 /* YZISongsTableViewController.h */,
@@ -161,6 +166,7 @@
 				44AF874421FB6EE400DDA798 /* YZISongsTableViewController.m in Sources */,
 				44AF874121FB6EC800DDA798 /* YZISongsDetailViewController.m in Sources */,
 				44AF873E21FB6E7E00DDA798 /* YZISongsController.m in Sources */,
+				44AF874621FB7F8200DDA798 /* YZINSObject+JSONSerialization.m in Sources */,
 				44AF873321FB682C00DDA798 /* main.m in Sources */,
 				44AF872521FB682B00DDA798 /* AppDelegate.m in Sources */,
 			);

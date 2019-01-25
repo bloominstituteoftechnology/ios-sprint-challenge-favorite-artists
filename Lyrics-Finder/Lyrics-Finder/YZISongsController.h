@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YZISongsController : NSObject
 
+-(void)createSongsWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int)rating ;
+
+- (void)searchLyricsWithArtist:(NSString *)artist title:(NSString *)title completion:(void(^)(NSString *lyrics, NSError *error)) completion ;
+
 @end
 
 NS_ASSUME_NONNULL_END

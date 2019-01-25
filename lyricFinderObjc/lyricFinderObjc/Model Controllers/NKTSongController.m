@@ -10,7 +10,7 @@
 #import "NKTSong.h"
 
 @interface NKTSongController()
-@property NSMutableArray *songs;
+@property (nonatomic, copy) NSMutableArray *songs;
 @end
 
 @implementation NKTSongController
@@ -49,7 +49,7 @@ static NSString *baseUrlString = @"https://musixmatchcom-musixmatch.p.mashape.co
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:urlComponents.URL];
     
     // Add the api key onto the header
-    [urlRequest setValue:@"ebqYTnQWLRmshYHvX2utm4ZMvIm3p1sJocgjsnNU5WlRxHkzTc" forHTTPHeaderField:@"X-Mashape-Key"];
+    [urlRequest setValue:@"yWB9mTltoqmshJYNabHtYPWYvAibp1qhExijsn7qNCcGLAhiG4" forHTTPHeaderField:@"X-Mashape-Key"];
     
     // DataTask
     [[[NSURLSession sharedSession]dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -68,7 +68,7 @@ static NSString *baseUrlString = @"https://musixmatchcom-musixmatch.p.mashape.co
         }
         
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        
+        NSLog(@"dict, %@", dict);
         // Check to make sure that our data correctly turned into a dictionary object
         if (![dict isKindOfClass:[NSDictionary class]])
         {
@@ -97,6 +97,31 @@ static NSString *baseUrlString = @"https://musixmatchcom-musixmatch.p.mashape.co
     // TODO: CoreData save function would go here
 }
 
+- (void)saveSong
+{
+    NSURL *documentsDir = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:@"savedSongs.json"];
+    
+    NSMutableArray *songSavableDicts = [[NSMutableArray alloc]init];
+    
+    
+    // Loop through songs and convert them to dictionary format for saving
+    for(NKTSong *song in self.songs)
+    {
+        // Either use jsonSerialization or manually build the dictionary.
+        // 
+        // Rating number must be converted to NSNumber
+        NSDictionary *songDict = @{@"title": song.title, @"artist": song.artist, @"lyrics": song.lyrics, @"rating": [NSNumber numberWithInt:song.rating]};
+        
+        [songSavableDicts addObject:songDict];
+    }
+    
+    // Turn array of song dictionaries into data
+    NSData *data = [NSJSONSerialization dataWithJSONObject:songSavableDicts options:0 error:nil];
+    
+    // Write data to the url
+    [data writeToURL:documentsDir atomically:YES];
+    
+}
 
 
 @end

@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)newSongWithTitle:(NSString *)title artist:(NSString *)artist rating:(NSInteger)rating lyrics:(NSString *)lyrics;
 
+- (void)saveSong;
+
+- (void)loadSongs;
+
 @end
 
 NS_ASSUME_NONNULL_END

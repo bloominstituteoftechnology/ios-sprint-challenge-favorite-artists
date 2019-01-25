@@ -8,24 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		7B76C00621FB8216007E9E18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C00521FB8216007E9E18 /* AppDelegate.m */; };
-		7B76C00921FB8216007E9E18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C00821FB8216007E9E18 /* ViewController.m */; };
 		7B76C00C21FB8216007E9E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B76C00A21FB8216007E9E18 /* Main.storyboard */; };
 		7B76C00E21FB821B007E9E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B76C00D21FB821B007E9E18 /* Assets.xcassets */; };
 		7B76C01121FB821B007E9E18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B76C00F21FB821B007E9E18 /* LaunchScreen.storyboard */; };
 		7B76C01421FB821B007E9E18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C01321FB821B007E9E18 /* main.m */; };
+		7B76C01C21FB830D007E9E18 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C01B21FB830D007E9E18 /* Song.m */; };
+		7B76C01F21FB8342007E9E18 /* SongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C01E21FB8342007E9E18 /* SongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B76C00121FB8216007E9E18 /* Lyric Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lyric Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B76C00421FB8216007E9E18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B76C00521FB8216007E9E18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7B76C00721FB8216007E9E18 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7B76C00821FB8216007E9E18 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7B76C00B21FB8216007E9E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B76C00D21FB821B007E9E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B76C01021FB821B007E9E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B76C01221FB821B007E9E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B76C01321FB821B007E9E18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B76C01A21FB830D007E9E18 /* Song.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		7B76C01B21FB830D007E9E18 /* Song.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		7B76C01D21FB8342007E9E18 /* SongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongController.h; sourceTree = "<group>"; };
+		7B76C01E21FB8342007E9E18 /* SongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +63,11 @@
 			children = (
 				7B76C00421FB8216007E9E18 /* AppDelegate.h */,
 				7B76C00521FB8216007E9E18 /* AppDelegate.m */,
-				7B76C00721FB8216007E9E18 /* ViewController.h */,
-				7B76C00821FB8216007E9E18 /* ViewController.m */,
 				7B76C00A21FB8216007E9E18 /* Main.storyboard */,
+				7B76C01A21FB830D007E9E18 /* Song.h */,
+				7B76C01B21FB830D007E9E18 /* Song.m */,
+				7B76C01D21FB8342007E9E18 /* SongController.h */,
+				7B76C01E21FB8342007E9E18 /* SongController.m */,
 				7B76C00D21FB821B007E9E18 /* Assets.xcassets */,
 				7B76C00F21FB821B007E9E18 /* LaunchScreen.storyboard */,
 				7B76C01221FB821B007E9E18 /* Info.plist */,
@@ -141,8 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B76C00921FB8216007E9E18 /* ViewController.m in Sources */,
+				7B76C01C21FB830D007E9E18 /* Song.m in Sources */,
 				7B76C01421FB821B007E9E18 /* main.m in Sources */,
+				7B76C01F21FB8342007E9E18 /* SongController.m in Sources */,
 				7B76C00621FB8216007E9E18 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

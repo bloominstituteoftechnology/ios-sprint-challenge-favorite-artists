@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)searchLyricsWithArtist:(NSString *)artist title:(NSString *)title completion:(void(^)(NSString *lyrics, NSError *error)) completion ;
 
+@property (nonatomic) NSArray *songs;
+
 @end
 
 NS_ASSUME_NONNULL_END

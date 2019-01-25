@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class YZISongs;
+@class YZISongsController;
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YZISongsDetailViewController : UIViewController
+@property (nonatomic) YZISongs *songs;
+@property (nonatomic) YZISongsController *songController;
 
 @end
 

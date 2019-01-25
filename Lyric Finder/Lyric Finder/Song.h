@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *title;
 @property NSString *artist;
 @property NSString *lyrics;
-@property NSInteger *rating;
+@property (nonatomic, assign) NSInteger *rating;
 
 @end
 

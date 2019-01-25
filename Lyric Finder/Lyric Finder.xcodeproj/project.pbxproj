@@ -14,6 +14,8 @@
 		7B76C01421FB821B007E9E18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C01321FB821B007E9E18 /* main.m */; };
 		7B76C01C21FB830D007E9E18 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C01B21FB830D007E9E18 /* Song.m */; };
 		7B76C01F21FB8342007E9E18 /* SongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C01E21FB8342007E9E18 /* SongController.m */; };
+		7B76C02221FB842A007E9E18 /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C02121FB842A007E9E18 /* SongsTableViewController.m */; };
+		7B76C02521FB846B007E9E18 /* SongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C02421FB846B007E9E18 /* SongDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		7B76C01B21FB830D007E9E18 /* Song.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		7B76C01D21FB8342007E9E18 /* SongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongController.h; sourceTree = "<group>"; };
 		7B76C01E21FB8342007E9E18 /* SongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongController.m; sourceTree = "<group>"; };
+		7B76C02021FB842A007E9E18 /* SongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongsTableViewController.h; sourceTree = "<group>"; };
+		7B76C02121FB842A007E9E18 /* SongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongsTableViewController.m; sourceTree = "<group>"; };
+		7B76C02321FB846B007E9E18 /* SongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongDetailViewController.h; sourceTree = "<group>"; };
+		7B76C02421FB846B007E9E18 /* SongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,10 @@
 				7B76C01B21FB830D007E9E18 /* Song.m */,
 				7B76C01D21FB8342007E9E18 /* SongController.h */,
 				7B76C01E21FB8342007E9E18 /* SongController.m */,
+				7B76C02021FB842A007E9E18 /* SongsTableViewController.h */,
+				7B76C02121FB842A007E9E18 /* SongsTableViewController.m */,
+				7B76C02321FB846B007E9E18 /* SongDetailViewController.h */,
+				7B76C02421FB846B007E9E18 /* SongDetailViewController.m */,
 				7B76C00D21FB821B007E9E18 /* Assets.xcassets */,
 				7B76C00F21FB821B007E9E18 /* LaunchScreen.storyboard */,
 				7B76C01221FB821B007E9E18 /* Info.plist */,
@@ -147,8 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B76C01C21FB830D007E9E18 /* Song.m in Sources */,
+				7B76C02221FB842A007E9E18 /* SongsTableViewController.m in Sources */,
 				7B76C01421FB821B007E9E18 /* main.m in Sources */,
 				7B76C01F21FB8342007E9E18 /* SongController.m in Sources */,
+				7B76C02521FB846B007E9E18 /* SongDetailViewController.m in Sources */,
 				7B76C00621FB8216007E9E18 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

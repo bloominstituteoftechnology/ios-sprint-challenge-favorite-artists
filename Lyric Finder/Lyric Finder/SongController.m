@@ -38,7 +38,7 @@
     NSMutableArray *songDictionaries = [[NSMutableArray alloc] init];
     
     for(Song *internalSong in self.internalSongs) {
-        NSDictionary *songDictionary = @{@"title": internalSong.title, @"artist": internalSong.artist, @"lyrics": internalSong.lyrics, @"rating": [NSNumber numberWithInteger:internalSong.rating]};
+        NSDictionary *songDictionary = @{@"title": internalSong.title, @"artist": internalSong.artist, @"lyrics": internalSong.lyrics, @"rating": [NSNumber numberWithInteger:*((internalSong.rating))]};
         [songDictionaries addObject:songDictionary];
     }
     
@@ -119,7 +119,7 @@
 
 - (void)changeRatingOfSong:(Song *)song rating:(NSInteger *)rating
 {
-    song.rating = rating;
+    song.rating = &(*rating);
 }
 
 -(NSArray *)songs {
@@ -127,6 +127,6 @@
 }
 
 static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";
-static NSString * const apiKey = @"Zn6GslkyY9mshlvCHYSrczsmBUnSp1a5FqijsnbRDlvYCO175m";
+static NSString * const apiKey = @"huoBhh9ul7mshuHI7XttcHwmIdlgp1OsCiqjsnwz7p4wvhwFP4";
 
 @end

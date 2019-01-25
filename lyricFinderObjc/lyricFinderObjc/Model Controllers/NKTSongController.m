@@ -67,8 +67,27 @@ static NSString *baseUrlString = @"https://musixmatchcom-musixmatch.p.mashape.co
             completion(nil, nil);
         }
         
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSString *testJSON = @" \
+        { \
+        \"lyrics_id\": 7650688, \
+        \"restricted\": false, \
+        \"instrumental\": false, \
+        \"lyrics_body\": \"When she was just a girl...\\n\\n\", \
+        \"lyrics_language\": \"en\", \
+        \"script_tracking_url\": \"http://tracking.musixmatch.com/t1.0/GR6Q97jE/\", \
+        \"pixel_tracking_url\": \"http://tracking.musixmatch.com/t1.0/O+uCbCYZ50IP8zibMOqQz2+cq5dy1Pz9nQVd8BZap1EL6+OfjEXUlyasewf3QW7gBY4/5kyfynZFKchgk6p7KP3dGlgHfbwCrWLHvIGxH98ZBN74uBTD8ww1/\", \
+        \"html_tracking_url\": \"http://tracking.musixmatch.com/t1.0/mzoCLtOg7U2B2B6ROdSvu+HvAFuzkE0/cTF/\", \
+        \"lyrics_copyright\": \"Lyrics powered by www.musiXmatch.com. This Lyrics is NOT for Commercial use and only 30% of the lyrics are returned.\", \
+        \"updated_time\": \"2012-08-24T10:15:05Z\" \
+        } \
+        ";
+        
+        NSData *testData = [testJSON dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:testData options:0 error:nil];
         NSLog(@"dict, %@", dict);
+        
+        
         // Check to make sure that our data correctly turned into a dictionary object
         if (![dict isKindOfClass:[NSDictionary class]])
         {

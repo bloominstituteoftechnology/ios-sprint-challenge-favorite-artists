@@ -65,12 +65,22 @@
     NSString *lyrics = [[self lyricsTextView] text];
     NSInteger rating = (NSInteger)[[self ratingStepper] value];
     
-    if (title && artist && lyrics && rating)
-    {
-        [[self songController]newSongWithTitle:title artist:artist rating:rating lyrics:lyrics];
+    if (self.song){
+        // We already have a song so just update it
         
+        [[self songController]updateSong:self.song title:title artist:artist lyrics:lyrics rating:rating];
         [[self navigationController]popViewControllerAnimated:YES];
+    } else {
+        // This is a new song
+        if (title && artist && lyrics && rating)
+        {
+            [[self songController]newSongWithTitle:title artist:artist rating:rating lyrics:lyrics];
+            
+            [[self navigationController]popViewControllerAnimated:YES];
+        }
     }
+    
+    
 
 }
 

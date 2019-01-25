@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NKTSong.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)saveSong;
 
 - (void)loadSongs;
+
+- (void) updateSong:(NKTSong *)song title:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating;
 
 @end
 

@@ -167,4 +167,26 @@ static NSString *baseUrlString = @"https://musixmatchcom-musixmatch.p.mashape.co
 }
 
 
+
+- (void)updateSong:(NKTSong *)song title:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating
+{
+    
+    long songIndex = [self.songs indexOfObject:song];
+    [_songs removeObjectAtIndex:songIndex];
+    
+    // Create song object
+    NKTSong *newSong = [[NKTSong alloc]initWithTitle:title artist:artist lyrics:lyrics rating:rating];
+    
+    // Add song with the lyrics to the songs array
+    [[self songs]addObject:newSong];
+    
+//    NKTSong *newSong = self.songsProperty[songIndex];
+//
+//    [newSong setTitle: title];
+//    [newSong setArtist: artist];
+//    [newSong setLyrics: lyrics];
+//    [newSong setRating: *rating];
+}
+
+
 @end

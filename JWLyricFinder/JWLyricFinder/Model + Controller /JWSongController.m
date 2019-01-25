@@ -27,11 +27,30 @@
 
 }
 
+-(void)addSongWithTitle:(NSString *)title
+             artistName:(NSString *)artistName
+                 lyrics:(NSString *)lyrics
+                 rating:(NSInteger *)rating; {
+    
+}
+
+
+-(void)searchLyrics:(NSString *)title
+         artistName:(NSString *)artistName
+         completion: (void (^)(NSString * _Nullable lyrics, NSError * _Nullable error))completion; {
+
+
+}
+
 // Computed property?
 -(NSArray *)songs {
     return self.songArray;
 }
 
 
+// base url Strings (static)
+
+static NSString * const baseURLString = @""; // not working.
+static NSString * const APIKey = @""; // not working smh
 
 @end

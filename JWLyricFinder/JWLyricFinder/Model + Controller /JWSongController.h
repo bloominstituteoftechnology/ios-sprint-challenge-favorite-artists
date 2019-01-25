@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
                  lyrics:(NSString *)lyrics
                  rating:(NSInteger *)rating;
 
+
+-(void)searchLyrics:(NSString *)title
+         artistName:(NSString *)artistName
+         completion: (void (^)(NSString * _Nullable lyrics, NSError * _Nullable error))completion;
+
+
 // properties (like var Array)
 
 @property (nonatomic, readonly) NSArray *songs;

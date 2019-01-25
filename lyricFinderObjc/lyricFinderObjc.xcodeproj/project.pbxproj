@@ -15,6 +15,7 @@
 		11CECA5721FB6721004DAF13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA5621FB6721004DAF13 /* main.m */; };
 		11CECA5F21FB687D004DAF13 /* NKTSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA5E21FB687D004DAF13 /* NKTSong.m */; };
 		11CECA6321FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA6221FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m */; };
+		11CECA6621FB6C1A004DAF13 /* NKTSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA6521FB6C1A004DAF13 /* NKTSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		11CECA5E21FB687D004DAF13 /* NKTSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKTSong.m; sourceTree = "<group>"; };
 		11CECA6121FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+NKTNSJSONSerialization.h"; sourceTree = "<group>"; };
 		11CECA6221FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+NKTNSJSONSerialization.m"; sourceTree = "<group>"; };
+		11CECA6421FB6C1A004DAF13 /* NKTSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKTSongController.h; sourceTree = "<group>"; };
+		11CECA6521FB6C1A004DAF13 /* NKTSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKTSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 				11CECA4721FB6720004DAF13 /* AppDelegate.h */,
 				11CECA4821FB6720004DAF13 /* AppDelegate.m */,
 				11CECA4A21FB6720004DAF13 /* ViewController.h */,
+				11CECA6721FB6C1D004DAF13 /* Model Controllers */,
 				11CECA6021FB6880004DAF13 /* Model */,
 				11CECA4B21FB6720004DAF13 /* ViewController.m */,
 				11CECA4D21FB6720004DAF13 /* Main.storyboard */,
@@ -87,6 +91,15 @@
 				11CECA5E21FB687D004DAF13 /* NKTSong.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		11CECA6721FB6C1D004DAF13 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11CECA6421FB6C1A004DAF13 /* NKTSongController.h */,
+				11CECA6521FB6C1A004DAF13 /* NKTSongController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +174,7 @@
 			files = (
 				11CECA5F21FB687D004DAF13 /* NKTSong.m in Sources */,
 				11CECA4C21FB6720004DAF13 /* ViewController.m in Sources */,
+				11CECA6621FB6C1A004DAF13 /* NKTSongController.m in Sources */,
 				11CECA5721FB6721004DAF13 /* main.m in Sources */,
 				11CECA6321FB6A38004DAF13 /* NSJSONSerialization+NKTNSJSONSerialization.m in Sources */,
 				11CECA4921FB6720004DAF13 /* AppDelegate.m in Sources */,

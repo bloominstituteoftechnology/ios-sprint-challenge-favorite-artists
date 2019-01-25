@@ -14,6 +14,7 @@
 		4744CBC121FB694800980C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4744CBBF21FB694800980C8A /* LaunchScreen.storyboard */; };
 		4744CBC421FB694800980C8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4744CBC321FB694800980C8A /* main.m */; };
 		4744CBCE21FB7FBD00980C8A /* JWSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 4744CBCD21FB7FBD00980C8A /* JWSong.m */; };
+		4744CBD121FB81F000980C8A /* JWSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4744CBD021FB81F000980C8A /* JWSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		4744CBC321FB694800980C8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4744CBCC21FB7FBD00980C8A /* JWSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWSong.h; sourceTree = "<group>"; };
 		4744CBCD21FB7FBD00980C8A /* JWSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWSong.m; sourceTree = "<group>"; };
+		4744CBCF21FB81F000980C8A /* JWSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWSongController.h; sourceTree = "<group>"; };
+		4744CBD021FB81F000980C8A /* JWSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +64,7 @@
 		4744CBB321FB694600980C8A /* JWLyricFinder */ = {
 			isa = PBXGroup;
 			children = (
-				4744CBCC21FB7FBD00980C8A /* JWSong.h */,
-				4744CBCD21FB7FBD00980C8A /* JWSong.m */,
+				4744CBD221FB81F800980C8A /* Model + Controller  */,
 				4744CBB421FB694600980C8A /* AppDelegate.h */,
 				4744CBB521FB694600980C8A /* AppDelegate.m */,
 				4744CBB721FB694600980C8A /* ViewController.h */,
@@ -74,6 +76,17 @@
 				4744CBC321FB694800980C8A /* main.m */,
 			);
 			path = JWLyricFinder;
+			sourceTree = "<group>";
+		};
+		4744CBD221FB81F800980C8A /* Model + Controller  */ = {
+			isa = PBXGroup;
+			children = (
+				4744CBCC21FB7FBD00980C8A /* JWSong.h */,
+				4744CBCD21FB7FBD00980C8A /* JWSong.m */,
+				4744CBCF21FB81F000980C8A /* JWSongController.h */,
+				4744CBD021FB81F000980C8A /* JWSongController.m */,
+			);
+			path = "Model + Controller ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4744CBB921FB694600980C8A /* ViewController.m in Sources */,
+				4744CBD121FB81F000980C8A /* JWSongController.m in Sources */,
 				4744CBC421FB694800980C8A /* main.m in Sources */,
 				4744CBB621FB694600980C8A /* AppDelegate.m in Sources */,
 				4744CBCE21FB7FBD00980C8A /* JWSong.m in Sources */,

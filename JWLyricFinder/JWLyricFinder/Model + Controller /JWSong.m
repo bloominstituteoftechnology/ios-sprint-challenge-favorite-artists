@@ -21,11 +21,19 @@
         _title = [title copy];
         _artistName = [artistName copy];
         _lyrics = [lyrics copy];
-        _rating = rating;
+        _rating = rating; // no copy here
 }
     return self;
 }
 
+-(void)addSongWithTitle:(NSString *)title
+             artistName:(NSString *)artistName
+                 lyrics:(NSString *)lyrics
+                 rating:(NSInteger *)rating; {
+    
+    
+    
+}
 
 @end
 

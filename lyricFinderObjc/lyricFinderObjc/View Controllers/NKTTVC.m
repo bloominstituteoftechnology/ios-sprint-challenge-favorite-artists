@@ -42,6 +42,7 @@
 {
     [super viewWillAppear:animated];
     [[self tableView] reloadData];
+    [self.songController loadSongs];
 }
 
 

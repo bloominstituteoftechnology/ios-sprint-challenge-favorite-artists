@@ -74,7 +74,7 @@ static NSString *baseUrlString = @"https://musixmatchcom-musixmatch.p.mashape.co
         {
             NSLog(@"Could not turn JSON data into a dictionary");
             completion(nil, nil);
-            return
+            return;
         }
         
         // At this point, we're guaranteed to have a dictionary from the JSON
@@ -84,6 +84,17 @@ static NSString *baseUrlString = @"https://musixmatchcom-musixmatch.p.mashape.co
         
     }]resume];
 
+}
+
+- (void)newSongWithTitle:(NSString *)title artist:(NSString *)artist rating:(NSInteger)rating lyrics:(NSString *)lyrics
+{
+    // Create song object
+    NKTSong *song = [[NKTSong alloc]initWithTitle:title artist:artist lyrics:lyrics rating:rating];
+    
+    // Add song with the lyrics to the songs array
+    [[self songs]addObject:song];
+    
+    // TODO: CoreData save function would go here
 }
 
 

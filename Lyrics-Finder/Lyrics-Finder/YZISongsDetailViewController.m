@@ -7,6 +7,8 @@
 //
 
 #import "YZISongsDetailViewController.h"
+#import "YZISongsController.h"
+#import "YZISongs.h"
 
 @interface YZISongsDetailViewController ()
 
@@ -22,19 +24,79 @@
 
 @implementation YZISongsDetailViewController
 
+- (IBAction)save:(id)sender {
+    
+    NSString *lyrics = self.lyricsTextView.text;
+    NSString *artist = self.artistName.text;
+    NSString *title = self.songName.text;
+    int rating = [self.ratingLabel.text intValue];
+    
+    if (![title isEqualToString:@""]) {
+        [self.songController createSongsWithTitle:title artist:artist lyrics:lyrics  rating:rating];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+
+}
+
+
+
+
+
 - (IBAction)ratingsStepper:(id)sender
 {
+    double value = [self.ratingStepper value];
+    self.ratingLabel.text = [NSString stringWithFormat:@"%.0f", value];
 }
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   [self updateViews];
 }
+
+- (void)updateViews
+{
+    if (self.isViewLoaded) {
+        self.songName.autocapitalizationType = UITextAutocapitalizationTypeWords;
+        self.artistName.autocapitalizationType = UITextAutocapitalizationTypeWords;
+        if (self.songs) {
+            self.songName.text = self.songs.title;
+            self.artistName.text = self.songs.artistName;
+            self.lyricsTextView.text = self.songs.lyrics;
+            
+            
+            self.ratingLabel.text = [NSString stringWithFormat:@"%i", (int)self.songs.rating];
+            
+            self.navigationItem.title = self.songs.title;
+            [self.ratingStepper setHidden:YES];
+            [self.searchLyricsButton setHidden:YES];
+        } else {
+            self.navigationItem.title = @"New Song Lyrics";
+            [self.searchLyricsButton setHidden:NO];
+        }
+    }
+}
+
+- (void)songAssigner:(YZISongs *)song
+{
+    _songs = song;
+    [self updateViews];
+}
+
+
+
+
 
 - (IBAction)searchLyricsEntered:(id)sender
 {
+    NSString *artist = self.artistName.text;
+    NSString *title = self.songName.text;
+    [self.songController searchLyricsWithArtist:artist title:title completion:^(NSString * lyrics, NSError *  error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.lyricsTextView.text = lyrics;
+        });
+    }];
 
 }
 

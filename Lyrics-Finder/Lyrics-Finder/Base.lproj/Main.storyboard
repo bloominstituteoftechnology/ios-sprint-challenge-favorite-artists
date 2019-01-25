@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2wO-ZG-6aO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -145,7 +145,11 @@
                         <viewLayoutGuide key="safeArea" id="Ohf-le-iiY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="G5m-br-xnX">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Afh-5f-7IM"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Afh-5f-7IM">
+                            <connections>
+                                <action selector="save:" destination="vwu-bt-Svn" id="I3A-iV-txK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistName" destination="F9T-Vn-xPB" id="X0k-vG-Q4n"/>

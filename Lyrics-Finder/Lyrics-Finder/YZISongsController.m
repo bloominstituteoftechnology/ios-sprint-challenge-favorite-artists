@@ -134,7 +134,7 @@
 }
 
 static NSString * const baseURLSting = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";
-static NSString * const apiKEYString = @"SmEk59cVPUmshCuD7TgaYSGQCzXjp1N6gB8jsngwLrFSCZhFtl";
+static NSString * const apiKEYString = @"YYuDPJ0WWgmshw9qvFktQuGnL9O5p1lRn5wjsn5UTBkAYfCu6b";
 
 
 

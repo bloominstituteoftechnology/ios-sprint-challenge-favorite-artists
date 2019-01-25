@@ -16,6 +16,7 @@
 		961E1E1F21FB77D500A7B9FF /* JLMSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961E1E1E21FB77D500A7B9FF /* JLMSongController.m */; };
 		961E1E2521FB7A0900A7B9FF /* JLMSongDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961E1E2421FB7A0900A7B9FF /* JLMSongDetailsViewController.m */; };
 		961E1E2821FB7FE800A7B9FF /* JLMSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961E1E2721FB7FE800A7B9FF /* JLMSongsTableViewController.m */; };
+		96F400E921FB93070024DEC8 /* JLMSong+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F400E821FB93070024DEC8 /* JLMSong+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		961E1E2421FB7A0900A7B9FF /* JLMSongDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLMSongDetailsViewController.m; sourceTree = "<group>"; };
 		961E1E2621FB7FE800A7B9FF /* JLMSongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLMSongsTableViewController.h; sourceTree = "<group>"; };
 		961E1E2721FB7FE800A7B9FF /* JLMSongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLMSongsTableViewController.m; sourceTree = "<group>"; };
+		96F400E721FB93070024DEC8 /* JLMSong+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JLMSong+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		96F400E821FB93070024DEC8 /* JLMSong+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JLMSong+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				961E1E1A21FB773D00A7B9FF /* JLMSong.m */,
 				961E1E1D21FB77D500A7B9FF /* JLMSongController.h */,
 				961E1E1E21FB77D500A7B9FF /* JLMSongController.m */,
+				96F400E721FB93070024DEC8 /* JLMSong+NSJSONSerialization.h */,
+				96F400E821FB93070024DEC8 /* JLMSong+NSJSONSerialization.m */,
 			);
 			path = "Model + Model Controller";
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				961E1E1F21FB77D500A7B9FF /* JLMSongController.m in Sources */,
 				961E1E2821FB7FE800A7B9FF /* JLMSongsTableViewController.m in Sources */,
 				961E1E1221FB6C8200A7B9FF /* main.m in Sources */,
+				96F400E921FB93070024DEC8 /* JLMSong+NSJSONSerialization.m in Sources */,
 				961E1E2521FB7A0900A7B9FF /* JLMSongDetailsViewController.m in Sources */,
 				961E1E0421FB6C8100A7B9FF /* AppDelegate.m in Sources */,
 				961E1E1B21FB773D00A7B9FF /* JLMSong.m in Sources */,

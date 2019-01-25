@@ -8,6 +8,7 @@
 
 #import "JLMSongController.h"
 #import "JLMSong.h"
+#import "JLMSong+NSJSONSerialization.h"
 
 @interface  JLMSongController ()
 
@@ -22,6 +23,7 @@
     self = [super init];
     if (self) {
         _internalSongs = [@[] mutableCopy];
+        [self loadSongs];
     }
     return self;
 }

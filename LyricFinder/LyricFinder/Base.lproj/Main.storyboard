@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="471" y="95"/>
         </scene>
-        <!--Find new lyrics-->
+        <!--Song Details View Controller-->
         <scene sceneID="y7Z-PY-tep">
             <objects>
                 <viewController id="gmy-Lz-iWi" customClass="JLMSongDetailsViewController" sceneMemberID="viewController">
@@ -180,7 +180,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a2y-7O-lKy"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Find new lyrics" id="3o1-qU-YKd">
+                    <navigationItem key="navigationItem" id="3o1-qU-YKd">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="Q0q-H9-g2h">
                             <connections>
                                 <action selector="saveSong:" destination="gmy-Lz-iWi" id="lcV-gG-8K2"/>

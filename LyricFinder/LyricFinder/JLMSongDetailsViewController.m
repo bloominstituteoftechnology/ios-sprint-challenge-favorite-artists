@@ -11,6 +11,8 @@
 
 @interface JLMSongDetailsViewController ()
 
+-(void)hideKeyboard;
+
 @property (nonatomic) NSString *lyrics;
 @property (nonatomic) NSInteger rating;
 
@@ -20,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UITapGestureRecognizer *hideKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.view addGestureRecognizer:hideKeyboard];
     [self updateViews];
 }
 
@@ -27,28 +31,33 @@
 {
     
     if(self.song) {
+        [self setTitle:self.song.title];
         _artistTextField.text = self.song.artist;
         _songTitleTextField.text = self.song.title;
         _songLyricsTextView.text = self.song.lyrics;
+        [self.navigationController setTitle:self.song.title];
         NSNumber *num = [NSNumber numberWithInteger:self.song.rating];
         _ratingLabel.text = [num stringValue];
         [self.stepper setValue:self.song.rating];
         self.rating = self.song.rating;
         self.lyrics = self.song.lyrics;
+    } else {
+        [self setTitle:@"Find new lyrics"];
     }
+}
+
+-(void)hideKeyboard
+{
+    [self resignFirstResponder];
 }
 
 - (IBAction)stepper:(UIStepper *)sender {
-    
-    if(self.rating) {
-        NSInteger num = (int)self.rating + (int)sender.value;
-        _ratingLabel.text = [[NSNumber numberWithInteger:num] stringValue];
-    } else {
-        _ratingLabel.text = [[NSNumber numberWithDouble:sender.value] stringValue];
-    }
+    _ratingLabel.text = [[NSNumber numberWithDouble:sender.value] stringValue];
 }
 
 - (IBAction)searchForLyrics:(id)sender {
+    
+    [self hideKeyboard];
     
     [self.songController searchForLyricsWithTitle:_songTitleTextField.text artist:_artistTextField.text completion:^(NSString *lyrics, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{

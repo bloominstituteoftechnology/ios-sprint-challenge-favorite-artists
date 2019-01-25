@@ -74,11 +74,8 @@
 				961E1E0321FB6C8100A7B9FF /* AppDelegate.m */,
 				961E1E0821FB6C8100A7B9FF /* Main.storyboard */,
 				961E1E1C21FB779200A7B9FF /* Model + Model Controller */,
+				96F400EA21FB9FF90024DEC8 /* View Controllers */,
 				961E1E1821FB6C9D00A7B9FF /* Resources */,
-				961E1E2621FB7FE800A7B9FF /* JLMSongsTableViewController.h */,
-				961E1E2721FB7FE800A7B9FF /* JLMSongsTableViewController.m */,
-				961E1E2321FB7A0900A7B9FF /* JLMSongDetailsViewController.h */,
-				961E1E2421FB7A0900A7B9FF /* JLMSongDetailsViewController.m */,
 			);
 			path = LyricFinder;
 			sourceTree = "<group>";
@@ -105,6 +102,17 @@
 				96F400E821FB93070024DEC8 /* JLMSong+NSJSONSerialization.m */,
 			);
 			path = "Model + Model Controller";
+			sourceTree = "<group>";
+		};
+		96F400EA21FB9FF90024DEC8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				961E1E2621FB7FE800A7B9FF /* JLMSongsTableViewController.h */,
+				961E1E2721FB7FE800A7B9FF /* JLMSongsTableViewController.m */,
+				961E1E2321FB7A0900A7B9FF /* JLMSongDetailsViewController.h */,
+				961E1E2421FB7A0900A7B9FF /* JLMSongDetailsViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

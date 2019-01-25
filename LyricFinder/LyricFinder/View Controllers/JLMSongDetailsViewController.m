@@ -57,7 +57,9 @@
 
 - (IBAction)searchForLyrics:(id)sender {
     
-    [self hideKeyboard];
+    [self.songTitleTextField resignFirstResponder];
+    [self.artistTextField resignFirstResponder];
+    [self resignFirstResponder];
     
     [self.songController searchForLyricsWithTitle:_songTitleTextField.text artist:_artistTextField.text completion:^(NSString *lyrics, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -96,23 +96,19 @@
     [request setValue:APIKey forHTTPHeaderField:@"X-Mashape-Key"];
     
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-
-        // API error
         
-//        if (error) {
-//            NSLog(@"Error searching for person: %@", error);
-//            completion(nil, error);
-//            return;
-//        }
-//
-//        if(!data) {
-//            NSLog(@"No data returned from data task");
-//            completion(nil, [[NSError alloc] init]);
-//        }
+        if (error) {
+            NSLog(@"Error searching for person: %@", error);
+            completion(nil, error);
+            return;
+        }
 
-        NSData* testJSONData = [testJSON dataUsingEncoding:NSUTF8StringEncoding];
+        if(!data) {
+            NSLog(@"No data returned from data task");
+            completion(nil, [[NSError alloc] init]);
+        }
         
-        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:testJSONData options:0 error:NULL];
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
         
         if (![dictionary isKindOfClass: [NSDictionary class]]) {
             NSLog(@"JSON is not a dictionary");

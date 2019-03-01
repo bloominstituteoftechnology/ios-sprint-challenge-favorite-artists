@@ -9,6 +9,7 @@
 #import "ABCLyricsSearchViewController.h"
 #import "LyricsController.h"
 #import "ABCSongController.h"
+#import "Song+NSJSONSerialization.h"
 
 @interface ABCLyricsSearchViewController ()
 
@@ -40,11 +41,26 @@
         newSong.title = _trackTextField.text;
         newSong.artist = _artistTextField.text;
         newSong.rating = [_ratingLabel.text integerValue];
+        NSDictionary *newDictionary = [[NSDictionary alloc] init];
+        newDictionary = [newSong songAsDictionary:newSong];
+        NSData *data = [[NSData alloc] init];
+        [NSJSONSerialization dataWithJSONObject: newDictionary options:NSJSONWritingPrettyPrinted error:nil];
+        data = [newDictionary ]
+        [_fileManager]
         
     }
 }
 
 - (IBAction)ratingIncrememnterSegmentedControlTapped:(id)sender {
+    NSInteger oldRating;
+    NSInteger newRating;
+    if ([_ratingIncrementerSegmentedControl selectedSegmentIndex] == 0) {
+        oldRating = [_ratingLabel.text integerValue];
+        newRating = oldRating - 1;
+    } else {
+        oldRating = [_ratingLabel.text integerValue];
+        newRating = oldRating + 1;
+    }
 }
 
 - (IBAction)searchForLyricsButtonTapped:(id)sender {

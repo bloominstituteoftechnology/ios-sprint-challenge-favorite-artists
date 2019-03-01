@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property LMSSong *song;
 
 - (void)updateViews;
+- (void)updateRating: (NSInteger)rating;
 
 @end
 

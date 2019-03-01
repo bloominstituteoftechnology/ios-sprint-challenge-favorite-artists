@@ -69,12 +69,14 @@
     NSString *trackName = self.trackNameTextField.text;
     
     [self.songController fetchSongLyrics:artist andTrackName:trackName withCompletion:^(NSString *lyrics) {
-        self.lyricsTextView.text = lyrics;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.lyricsTextView.text = lyrics;
+        });
     }];
 }
 
 - (void)updateRating: (NSInteger)rating {
-    [self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %ld", rating];
+    [self.ratingLabel setText:[NSString stringWithFormat:@"Rating: %ld", rating]];
 }
 
 @end

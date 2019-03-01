@@ -7,10 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LMSSong.h"
+
+typedef void (^CompletionHandler)(NSString *);
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LMSSongController : NSObject
+
+@property (readonly) NSMutableArray *lyrics;
+
+- (void)createLyricsWithArtist: (NSString *)artist andTrackName: (NSString *)trackName andLyrics: (NSString *)lyrics andRating: (int)rating;
+
+- (void)fetchSongLyrics: (NSString *)artist andTrackName: (NSString *)trackName withCompletion: (CompletionHandler)completion;
 
 @end
 

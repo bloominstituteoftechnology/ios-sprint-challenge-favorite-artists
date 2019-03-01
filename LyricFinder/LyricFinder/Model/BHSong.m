@@ -17,23 +17,8 @@
         _title = @"";
         _artist = @"";
         _lyrics = @"";
-        _rating = 0;
     }
     return self;
 }
-
-@synthesize rating = _rating;
-
-////Setter method
-//- (void) setRating:(int)rating {
-//    
-//    _rating = [_bodyText wordCount];
-//}
-//
-////Getter method
-//- (int) rating {
-//    return _wordCount;
-//}
-
 
 @end

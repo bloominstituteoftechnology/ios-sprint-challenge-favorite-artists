@@ -83,14 +83,14 @@
     BHSongDetailViewController *destVC = [segue destinationViewController];
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
-    if([segue.identifier  isEqual: @"AddNewDocumentSegue"]){
+    if([segue.identifier  isEqual: @"AddNewSongSegue"]){
         // do something
         destVC.searchController = _searchController;
         [destVC setIsUpdatingView: NO];
         BHSong *newSong = [[BHSong alloc] init];
         destVC.song = newSong;
         
-    } else if ([segue.identifier  isEqual: @"ViewExistingDocumentSegue"]){
+    } else if ([segue.identifier  isEqual: @"ViewExistingSongSegue"]){
         // do something else
         destVC.searchController = _searchController;
         destVC.isUpdatingView = @YES;

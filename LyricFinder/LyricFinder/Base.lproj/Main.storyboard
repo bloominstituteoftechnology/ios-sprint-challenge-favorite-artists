@@ -108,7 +108,7 @@
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Kwd-hH-lhC">
                                         <rect key="frame" x="241" y="0.0" width="94" height="29"/>
                                         <connections>
-                                            <action selector="stepperTapped:" destination="H9a-1E-YlG" eventType="valueChanged" id="CnR-fq-VMh"/>
+                                            <action selector="stepperTapped:" destination="H9a-1E-YlG" eventType="valueChanged" id="7KK-mI-5Vd"/>
                                         </connections>
                                     </stepper>
                                 </subviews>

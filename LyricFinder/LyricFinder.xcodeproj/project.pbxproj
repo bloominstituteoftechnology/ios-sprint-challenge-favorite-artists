@@ -17,6 +17,7 @@
 		D19162F722299006005CE4FD /* NSObject+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162F622299006005CE4FD /* NSObject+NSJSONSerialization.m */; };
 		D19162FC22299058005CE4FD /* BHSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162FB22299058005CE4FD /* BHSongsTableViewController.m */; };
 		D19162FF22299072005CE4FD /* BHSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162FE22299072005CE4FD /* BHSongDetailViewController.m */; };
+		D19163042229955C005CE4FD /* BHSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163032229955C005CE4FD /* BHSongTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		D19162FB22299058005CE4FD /* BHSongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongsTableViewController.m; sourceTree = "<group>"; };
 		D19162FD22299072005CE4FD /* BHSongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSongDetailViewController.h; sourceTree = "<group>"; };
 		D19162FE22299072005CE4FD /* BHSongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongDetailViewController.m; sourceTree = "<group>"; };
+		D19163022229955C005CE4FD /* BHSongTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSongTableViewCell.h; sourceTree = "<group>"; };
+		D19163032229955C005CE4FD /* BHSongTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		D19162D722298DD7005CE4FD /* LyricFinder */ = {
 			isa = PBXGroup;
 			children = (
+				D19163002229953A005CE4FD /* Views */,
 				D19162F922299031005CE4FD /* ViewControllers */,
 				D19162F822299016005CE4FD /* ModelController */,
 				D19162F422298F17005CE4FD /* Model */,
@@ -113,6 +117,15 @@
 				D19162FE22299072005CE4FD /* BHSongDetailViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D19163002229953A005CE4FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D19163022229955C005CE4FD /* BHSongTableViewCell.h */,
+				D19163032229955C005CE4FD /* BHSongTableViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +202,7 @@
 				D19162F322298F11005CE4FD /* BHSong.m in Sources */,
 				D19162FF22299072005CE4FD /* BHSongDetailViewController.m in Sources */,
 				D19162F022298EF7005CE4FD /* BHSearchNetworkController.m in Sources */,
+				D19163042229955C005CE4FD /* BHSongTableViewCell.m in Sources */,
 				D19162F722299006005CE4FD /* NSObject+NSJSONSerialization.m in Sources */,
 				D19162E822298DD9005CE4FD /* main.m in Sources */,
 				D19162DA22298DD7005CE4FD /* AppDelegate.m in Sources */,

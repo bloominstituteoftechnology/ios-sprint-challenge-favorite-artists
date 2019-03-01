@@ -55,7 +55,6 @@
                     <navigationItem key="navigationItem" title="Lyric Finder" id="7yc-0D-dCI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qyX-gI-4SD">
                             <connections>
-                                <action selector="addNewSongButtonClicked:" destination="jQG-X8-Nn8" id="GZL-80-hfK"/>
                                 <segue destination="H9a-1E-YlG" kind="show" identifier="AddNewSongSegue" id="Lw9-Gs-ej1"/>
                             </connections>
                         </barButtonItem>

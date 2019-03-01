@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *artist;
 @property NSString *trackName;
 @property NSString *lyrics;
-@property int rating;
+@property NSInteger rating;
 
-- (instancetype)initWithArtist: (NSString *)artist andTrackName: (NSString *)trackName andLyrics: (NSString *)lyrics andRating: (int)rating;
+- (instancetype)initWithArtist: (NSString *)artist andTrackName: (NSString *)trackName andLyrics: (NSString *)lyrics andRating: (NSInteger)rating;
 
 @end
 

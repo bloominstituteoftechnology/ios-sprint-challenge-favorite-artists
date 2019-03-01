@@ -10,8 +10,8 @@
 
 @implementation LMSSongController
 
-static NSString *baseURL = @"";
-static NSString *apiKey = @"";
+static NSString *baseURL = @"https://musixmatchcom-musixmatch.p.rapidapi.com/wsr/1.1/matcher.lyrics.get";
+static NSString *apiKey = @"fb00534250msh9ff07c452612a67p138fb1jsn921e8a2b3e43";
 
 - (void)createLyricsWithArtist:(NSString *)artist andTrackName:(NSString *)trackName andLyrics:(NSString *)lyrics andRating:(int)rating {
     LMSSong *newSongLyric = [[LMSSong alloc] initWithArtist:artist andTrackName:trackName andLyrics:lyrics andRating:rating];

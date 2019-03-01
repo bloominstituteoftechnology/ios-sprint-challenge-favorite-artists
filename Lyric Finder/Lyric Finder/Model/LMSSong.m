@@ -10,7 +10,7 @@
 
 @implementation LMSSong
 
-- (instancetype)initWithArtist:(NSString *)artist andTrackName:(NSString *)trackName andLyrics:(NSString *)lyrics andRating:(int)rating {
+- (instancetype)initWithArtist:(NSString *)artist andTrackName:(NSString *)trackName andLyrics:(NSString *)lyrics andRating:(NSInteger)rating {
     self = [super init];
     
     if (self != nil) {

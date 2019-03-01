@@ -1,8 +1,8 @@
 //
-//  Song.h
-//  Lyric Finder
+//  SHSong.h
+//  LyricFinder
 //
-//  Created by Sean Hendrix on 1/25/19.
+//  Created by Sean Hendrix on 3/1/19.
 //  Copyright © 2019 Sean Hendrix. All rights reserved.
 //
 
@@ -10,16 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Song : NSObject
+@interface SHSong : NSObject
 
--(instancetype) initWithTitle: (NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating;
+-(instancetype) initWithTitle: (NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating;
 
 -(instancetype) initWithDictionary: (NSDictionary *)dictionary;
 
 @property NSString *title;
 @property NSString *artist;
 @property NSString *lyrics;
-@property (nonatomic, assign) NSInteger *rating;
+@property NSInteger rating;
 
 @end
 

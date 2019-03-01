@@ -1,31 +1,36 @@
 //
-//  SongController.m
-//  Lyric Finder
+//  SHSongController.m
+//  LyricFinder
 //
-//  Created by Sean Hendrix on 1/25/19.
+//  Created by Sean Hendrix on 3/1/19.
 //  Copyright © 2019 Sean Hendrix. All rights reserved.
 //
 
-#import "SongController.h"
-#import "Song.h"
-@interface  SongController ()
+#import "SHSongController.h"
+#import "SHSong.h"
+#import "SHSong+NSJSONSerialization.h"
+
+@interface  SHSongController ()
+
 @property (nonatomic, copy) NSMutableArray *internalSongs;
+
 @end
 
-@implementation SongController
+@implementation SHSongController
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         _internalSongs = [@[] mutableCopy];
+        [self loadSongs];
     }
     return self;
 }
 
-- (void)createSongWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating
+- (void)createSongWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating
 {
-    Song *song =  [[[Song alloc] init] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
+    SHSong *song =  [[[SHSong alloc] init] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [self.internalSongs addObject:song];
     [self saveSong];
 }
@@ -37,13 +42,15 @@
     
     NSMutableArray *songDictionaries = [[NSMutableArray alloc] init];
     
-    for(Song *internalSong in self.internalSongs) {
-        NSDictionary *songDictionary = @{@"title": internalSong.title, @"artist": internalSong.artist, @"lyrics": internalSong.lyrics, @"rating": [NSNumber numberWithInteger:*((internalSong.rating))]};
+    for(SHSong *internalSong in self.internalSongs) {
+        NSDictionary *songDictionary = @{@"title": internalSong.title,
+                                         @"artist": internalSong.artist,
+                                         @"lyrics": internalSong.lyrics,
+                                         @"rating": [NSNumber numberWithInteger:internalSong.rating]};
         [songDictionaries addObject:songDictionary];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:songDictionaries options:0 error:nil];
-    
     [data writeToURL:documentDirectory atomically:YES];
 }
 
@@ -60,15 +67,15 @@
     NSArray *songDictionaries = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     
     for(NSDictionary *songDictionary in songDictionaries) {
-        Song *song = [[Song alloc] initWithDictionary: songDictionary];
+        SHSong *song = [[SHSong alloc] initWithDictionary: songDictionary];
         [self.internalSongs addObject:song];
     }
 }
 
-- (void)updateSongWithSong:(Song *)song title:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating
+- (void)updateSongWithSong:(SHSong *)song title:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating
 {
     unsigned long index = [self.internalSongs indexOfObject:song];
-    Song *existingSong = self.internalSongs[index];
+    SHSong *existingSong = self.internalSongs[index];
     [existingSong setTitle: title];
     [existingSong setArtist: artist];
     [existingSong setLyrics: lyrics];
@@ -86,7 +93,7 @@
     NSURL *URL = [components URL];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     
-    [request setValue:apiKey forHTTPHeaderField:@"X-Mashape-Key"];
+    [request setValue:APIKey forHTTPHeaderField:@"X-Mashape-Key"];
     
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
@@ -117,9 +124,9 @@
     }] resume];
 }
 
-- (void)changeRatingOfSong:(Song *)song rating:(NSInteger *)rating
+- (void)changeRatingOfSong:(SHSong *)song rating:(NSInteger)rating
 {
-    song.rating = &(*rating);
+    song.rating = rating;
 }
 
 -(NSArray *)songs {
@@ -127,6 +134,21 @@
 }
 
 static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.mashape.com/wsr/1.1/matcher.lyrics.get";
-static NSString * const apiKey = @"huoBhh9ul7mshuHI7XttcHwmIdlgp1OsCiqjsnwz7p4wvhwFP4";
+static NSString * const APIKey = @"PJqtq9cUrumshDECZcaVAnGsycRcp15ejX3jsn2HtbcCWVeLRX";
+
+static NSString * const testJSON = @" \
+{ \
+\"lyrics_id\": 7650688, \
+\"restricted\": false, \
+\"instrumental\": false, \
+\"lyrics_body\": \"Thought I'd end up with Sean\\nBut he wasn't a match\\nWrote some songs about Ricky\\nNow I listen and laugh\\nEven almost got married\\nAnd for Pete I'm so thankful\\nWish I could say thank you to Malcolm\\n'Cause he was an angel\\n\\nOne taught me love\\nOne taught me patience\\nAnd one taught me pain\\nNow I'm so amazin'\\nSay I've loved and I've lost\\nBut that's not what I see\\nLook what I've got\\nLook what you taught me\\nAnd for that I say\\n\\nThank you, next (next)\\nThank you, next (next)\\nThank you, next\\nI'm so, I'm so grateful for my ex\\nThank you, next (next)\\nThank you, next (next),\\nThank you, next\\nI'm so, I'm so grateful\", \
+\"lyrics_language\": \"en\", \
+\"script_tracking_url\": \"http://tracking.musixmatch.com/t1.0/GR6Q97jE/\", \
+\"pixel_tracking_url\": \"http://tracking.musixmatch.com/t1.0/O+uCbCYZ50IP8zibMOqQz2+cq5dy1Pz9nQVd8BZap1EL6+OfjEXUlyasewf3QW7gBY4/5kyfynZFKchgk6p7KP3dGlgHfbwCrWLHvIGxH98ZBN74uBTD8ww1/\", \
+\"html_tracking_url\": \"http://tracking.musixmatch.com/t1.0/mzoCLtOg7U2B2B6ROdSvu+HvAFuzkE0/cTF/\", \
+\"lyrics_copyright\": \"Lyrics powered by www.musiXmatch.com. This Lyrics is NOT for Commercial use and only 30% of the lyrics are returned.\", \
+\"updated_time\": \"2012-08-24T10:15:05Z\" \
+} \
+";
 
 @end

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  Lyric Finder
+//  LyricFinder
 //
-//  Created by Sean Hendrix on 1/25/19.
+//  Created by Sean Hendrix on 3/1/19.
 //  Copyright © 2019 Sean Hendrix. All rights reserved.
 //
 

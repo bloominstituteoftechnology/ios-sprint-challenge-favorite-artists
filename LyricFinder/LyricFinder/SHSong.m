@@ -1,16 +1,16 @@
 //
-//  Song.m
-//  Lyric Finder
+//  SHSong.m
+//  LyricFinder
 //
-//  Created by Sean Hendrix on 1/25/19.
+//  Created by Sean Hendrix on 3/1/19.
 //  Copyright © 2019 Sean Hendrix. All rights reserved.
 //
 
-#import "Song.h"
+#import "SHSong.h"
 
-@implementation Song
+@implementation SHSong
 
--(instancetype) initWithTitle: (NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger *)rating
+-(instancetype) initWithTitle: (NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating
 {
     self = [super init];
     if (self) {
@@ -24,7 +24,7 @@
 
 -(instancetype) initWithDictionary: (NSDictionary *)dictionary;
 {
-    NSInteger *rating = [dictionary[@"rating"] integerValue];
+    NSInteger rating = [dictionary[@"rating"] integerValue];
     NSString *artist = dictionary[@"artist"];
     NSString *title = dictionary[@"title"];
     NSString *lyrics = dictionary[@"lyrics"];

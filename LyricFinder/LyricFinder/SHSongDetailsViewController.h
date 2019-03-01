@@ -1,37 +1,33 @@
 //
-//  SongDetailViewController.h
-//  Lyric Finder
+//  SHSongDetailsViewController.h
+//  LyricFinder
 //
-//  Created by Sean Hendrix on 1/25/19.
+//  Created by Sean Hendrix on 3/1/19.
 //  Copyright © 2019 Sean Hendrix. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-@class SongController;
-@class Song;
+@class SHSongController;
+@class SHSong;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SongDetailViewController : UIViewController
+@interface SHSongDetailsViewController : UIViewController
 
+@property SHSongController *songController;
+@property SHSong *song;
 
-@property SongController *songController;
-@property Song *song;
 -(void) updateViews;
 
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
-
-- (IBAction)stepper:(UIStepper *)sender;
-
 @property (weak, nonatomic) IBOutlet UITextField *songTitleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *artistTextField;
-
-- (IBAction)searchForLyrics:(id)sender;
-
 @property (weak, nonatomic) IBOutlet UITextView *songLyricsTextView;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
 
+- (IBAction)stepper:(UIStepper *)sender;
+- (IBAction)searchForLyrics:(id)sender;
 - (IBAction)saveSong:(id)sender;
-
-
 
 @end
 

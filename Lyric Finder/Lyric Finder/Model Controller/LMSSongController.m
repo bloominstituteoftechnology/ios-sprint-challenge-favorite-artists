@@ -33,13 +33,13 @@ static NSString *apiKey = @"";
     
     NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
-            NSLog(@"");
+            NSLog(@"Error fetching lyrics: %@", error);
             completion(nil);
             return;
         }
         
         if (!data) {
-            NSLog(@"");
+            NSLog(@"No data was found by data task");
             completion(nil);
             return;
         }

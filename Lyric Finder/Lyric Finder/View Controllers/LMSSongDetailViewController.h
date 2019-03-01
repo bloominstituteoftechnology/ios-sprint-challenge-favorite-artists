@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LMSSongController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LMSSongDetailViewController : UIViewController
+
+@property LMSSongController *songController;
 
 @end
 

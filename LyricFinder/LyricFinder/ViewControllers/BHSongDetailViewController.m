@@ -42,7 +42,7 @@
 
 - (void) updateRating{
     
-    NSString *newRatingString = [NSString stringWithFormat:@"Rating: %f", [_song rating]];
+    NSString *newRatingString = [NSString stringWithFormat:@"Rating: %.0f", [_song rating]];
     _ratingLabel.text = newRatingString;
     
 }
@@ -51,16 +51,15 @@
     
     UIStepper *stepper = (UIStepper*)sender;
     double newRatingValue = [stepper value];
-    NSString *newRatingValueStr = [NSString stringWithFormat:@"Stepper value is: %f", _ratingStepper.value];
-    NSLog(newRatingValueStr);
     
-    _song.rating = newRatingValue;
+    if (newRatingValue > 5) {
+        newRatingValue = 5;
+    } else if (newRatingValue < 0) {
+        newRatingValue = 0;
+    }
     
     [_song setRating:newRatingValue];
-    
-    
-    NSString *songValue = [NSString stringWithFormat:@"Song value is: %f", _song.rating];
-    NSLog(songValue);
+
     [self updateRating];
 }
 

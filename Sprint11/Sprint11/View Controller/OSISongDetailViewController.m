@@ -32,11 +32,21 @@
 }
 
 - (void)saveButton:(id)sender {
+    NSString *title = self.songTitleTextField.text;
+    NSString *artist = self.artistTextField.text;
+    NSString *lyrics = self.songTitleTextField.text;
+    NSInteger rating = [self.songRating.text intValue];
     
-}
+    [_osiSongController createSong:title artist:artist lyrics:lyrics rating:rating];
+    [self.navigationController popViewControllerAnimated:YES];}
 
 - (void)searchButton:(id)sender {
-    
+    [_osiSongController searchForSong:_artistTextField.text trackName:_songTitleTextField.text completion:^(NSDictionary * _Nonnull song, NSError *error) {
+       
+        dispatch_async(dispatch_get_main_queue(), ^{
+        self.textBodyTextView.text = song[@"lyrics_body"];
+        });
+    }];
 }
 
 - (void)stepperAction:(id)sender {

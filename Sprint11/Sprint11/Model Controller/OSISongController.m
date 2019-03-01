@@ -12,7 +12,7 @@
 
 @implementation OSISongController
 
-static NSString * const baseURL = @"https://api.openweathermap.org/data/2.5/forecast/daily";
+static NSString * const baseURL = @"https://musixmatchcom-musixmatch.p.rapidapi.com/wsr/1.1/matcher.lyrics.get";
 static NSString * const apiKey = @"70692b9171mshcb5f4b3a80503a7p191039jsn6d9be1aa176e";
 
 - (instancetype)init {
@@ -74,6 +74,12 @@ static NSString * const apiKey = @"70692b9171mshcb5f4b3a80503a7p191039jsn6d9be1a
               
               return;
           }
+          
+          NSString *dataAsStrig =[[NSString alloc]
+                                  initWithData:data encoding:NSUTF8StringEncoding];
+          NSLog(@"encoded to %@", dataAsStrig);
+          NSString *lyrics = dict[@"lyrics_body"];
+          NSLog(lyrics);
           completion(dict, error);
           
           

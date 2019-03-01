@@ -11,12 +11,13 @@
 @implementation Song (NSJSONSerialization)
 
 - (NSDictionary *)songAsDictionary:(Song *)song {
-    NSDictionary *newDictionary = [[NSDictionary alloc]init];
-    [newDictionary setValue:song.artist forKey: @"artist"];
-    [newDictionary setValue:song.lyrics forKey: @"lyrics"];
-    [newDictionary setValue:@(song.rating)
-                     forKey: @"rating"];
-    [newDictionary setValue:song.title forKey: @"title"];
+    NSDictionary *newDictionary = [[NSDictionary alloc] init];
+    newDictionary = @{
+                      @"artist" : song.artist,
+                      @"title" : song.title,
+                      @"lyrics" : song.lyrics,
+                      @"rating" : @(song.rating)
+                      };
     
     return newDictionary;
     

@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ABCSongController : NSObject
 
-@property NSArray *savedSongsArray;
+@property NSMutableArray *savedSongsArray;
+
+- (void)saveSongwithTrack: (NSString *)track withArtist: (NSString *)artist withLyrics: (NSString *)lyrics withRating: (NSInteger)rating;
 
 @end
 

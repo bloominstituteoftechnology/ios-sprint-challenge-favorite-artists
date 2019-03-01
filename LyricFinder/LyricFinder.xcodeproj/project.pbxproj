@@ -94,24 +94,16 @@
 				A2AE133E2229A136002AF65F /* ABCSongController.m */,
 				A2AE132D222996F7002AF65F /* LyricsController.h */,
 				A2AE132E222996F7002AF65F /* LyricsController.m */,
-				A2AE133C22299BA8002AF65F /* Categories */,
+				A2AE133622299996002AF65F /* Lyrics+NSJSONSerialization.h */,
+				A2AE133722299996002AF65F /* Lyrics+NSJSONSerialization.m */,
+				A2AE133922299B92002AF65F /* Song+NSJSONSerialization.h */,
+				A2AE133A22299B92002AF65F /* Song+NSJSONSerialization.m */,
 				A2AE1317222992E1002AF65F /* Assets.xcassets */,
 				A2AE1319222992E1002AF65F /* LaunchScreen.storyboard */,
 				A2AE131C222992E1002AF65F /* Info.plist */,
 				A2AE131D222992E1002AF65F /* main.m */,
 			);
 			path = LyricFinder;
-			sourceTree = "<group>";
-		};
-		A2AE133C22299BA8002AF65F /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				A2AE133622299996002AF65F /* Lyrics+NSJSONSerialization.h */,
-				A2AE133722299996002AF65F /* Lyrics+NSJSONSerialization.m */,
-				A2AE133922299B92002AF65F /* Song+NSJSONSerialization.h */,
-				A2AE133A22299B92002AF65F /* Song+NSJSONSerialization.m */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

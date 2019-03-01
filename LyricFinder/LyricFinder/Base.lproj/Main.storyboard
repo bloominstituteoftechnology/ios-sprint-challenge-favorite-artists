@@ -12,13 +12,13 @@
         <!--Root View Controller-->
         <scene sceneID="Zba-4p-7Ds">
             <objects>
-                <tableViewController id="HPg-7Z-OzE" sceneMemberID="viewController">
+                <tableViewController id="HPg-7Z-OzE" customClass="ABCSavedLyricsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CQu-6b-o8a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="adk-0z-dVV" detailTextLabel="ZEy-jZ-v4j" style="IBUITableViewCellStyleSubtitle" id="dEa-fU-Dd0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" textLabel="adk-0z-dVV" detailTextLabel="ZEy-jZ-v4j" style="IBUITableViewCellStyleSubtitle" id="dEa-fU-Dd0">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dEa-fU-Dd0" id="2WA-yT-fdF">
@@ -41,9 +41,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="dJa-Mt-6lP" kind="show" id="ut5-RG-wCj"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -74,14 +71,14 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-Xv-WyA">
                                 <rect key="frame" x="20" y="84" width="335" height="28"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKU-s6-Sqk">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKU-s6-Sqk">
+                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-AZ-1N2">
-                                        <rect key="frame" x="222" y="0.0" width="113" height="29"/>
+                                        <rect key="frame" x="190.5" y="0.0" width="144.5" height="29"/>
                                         <segments>
                                             <segment title="-"/>
                                             <segment title="+"/>
@@ -177,7 +174,4 @@
             <point key="canvasLocation" x="-785" y="139"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="wSP-gO-1fq"/>
-    </inferredMetricsTieBreakers>
 </document>

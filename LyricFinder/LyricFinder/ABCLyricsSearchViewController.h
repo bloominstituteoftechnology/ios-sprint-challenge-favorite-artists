@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ABCSongController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,8 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)ratingIncrememnterSegmentedControlTapped:(id)sender;
 - (IBAction)searchForLyricsButtonTapped:(id)sender;
 
-
-
+//MARK: Other Properties
+@property ABCSongController *songController;
 
 
 @end

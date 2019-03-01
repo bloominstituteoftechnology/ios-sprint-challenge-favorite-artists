@@ -8,15 +8,14 @@
 
 #import "ABCLyricsSearchViewController.h"
 #import "LyricsController.h"
-#import "ABCSongController.h"
 #import "Song+NSJSONSerialization.h"
 
 @interface ABCLyricsSearchViewController ()
 
 @property NSFileManager *fileManager;
 @property LyricsController *lyricsController;
-@property ABCSongController *songController;
 @property(nonatomic) NSString *results;
+
 
 @end
 
@@ -25,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _lyricsController = [[LyricsController alloc] init];
-    _songController = [[ABCSongController alloc] init];
     _fileManager = NSFileManager.defaultManager;
 }
 
@@ -35,18 +33,7 @@
 
 - (IBAction)saveButtonTapped:(id)sender {
     if (_lyricsTextView.text != nil) {
-    [_fileManager createDirectoryAtURL:NSBundle.mainBundle.bundleURL withIntermediateDirectories: NO attributes: nil error: nil];
-    Song *newSong = [[Song alloc] init];
-        newSong.lyrics = _lyricsTextView.text;
-        newSong.title = _trackTextField.text;
-        newSong.artist = _artistTextField.text;
-        newSong.rating = [_ratingLabel.text integerValue];
-        NSDictionary *newDictionary = [[NSDictionary alloc] init];
-        newDictionary = [newSong songAsDictionary:newSong];
-        NSData *data = [[NSData alloc] init];
-        [NSJSONSerialization dataWithJSONObject: newDictionary options:NSJSONWritingPrettyPrinted error:nil];
-        data = [newDictionary ]
-        [_fileManager]
+        [_songController saveSongwithTrack: _trackTextField.text withArtist:_artistTextField.text withLyrics:_lyricsTextView.text withRating: [_ratingLabel.text integerValue] ];
         
     }
 }
@@ -65,17 +52,22 @@
 
 - (IBAction)searchForLyricsButtonTapped:(id)sender {
     if (_artistTextField.text != nil && _trackTextField.text != nil) {
+        NSString *artist = [[NSString alloc]initWithString:_artistTextField.text];
+        NSString *track = [[NSString alloc] initWithString: _trackTextField.text];
         NSBlockOperation *fetchOperation = [[NSBlockOperation alloc] init];
         NSBlockOperation *updateOperation = [[NSBlockOperation alloc] init];
         [updateOperation addExecutionBlock:^{
-            [self updateViews];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self updateViews];
+            });
         }];
         [fetchOperation addExecutionBlock:^{
-            [self->_lyricsController fetchLyricsWithArtist:_artistTextField.text withTrack:_trackTextField.text withCompletionHandler:^(NSError * _Nonnull error) {
+            [self->_lyricsController fetchLyricsWithArtist:artist withTrack: track withCompletionHandler:^(NSError * _Nonnull error) {
             }];
         }];
-        [fetchOperation start];
-        [updateOperation start];
+        NSOperationQueue *opQueue = [[NSOperationQueue alloc] init];
+        [opQueue addOperation:fetchOperation];
+        [opQueue addOperation:updateOperation];
 
         
     }

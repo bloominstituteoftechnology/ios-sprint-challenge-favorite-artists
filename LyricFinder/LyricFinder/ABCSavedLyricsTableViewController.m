@@ -7,16 +7,20 @@
 //
 
 #import "ABCSavedLyricsTableViewController.h"
+#import "ABCSongController.h"
+#import "ABCLyricsSearchViewController.h"
 
 @interface ABCSavedLyricsTableViewController ()
 
+@property ABCSongController *songController;
+
 @end
 
-@implementation ABCSAvedLyricsTableViewController : UITableViewController
+@implementation ABCSavedLyricsTableViewController : UITableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _songController = [[ABCSongController alloc] init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -24,27 +28,30 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [_songController.savedSongsArray count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = [[_songController.savedSongsArray objectAtIndex:indexPath.row] title];
+    cell.detailTextLabel.text = [NSString stringWithFormat: @"%lu", [[_songController.savedSongsArray objectAtIndex:indexPath.row] rating]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -80,14 +87,14 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    ABCLyricsSearchViewController *destination = segue.destinationViewController;
+    destination.songController = [[ABCSongController alloc] init];
+    destination.songController = [self songController];
 }
-*/
 
 @end

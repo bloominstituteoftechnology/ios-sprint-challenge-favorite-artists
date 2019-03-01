@@ -14,13 +14,13 @@
         <!--Lyric Finder-->
         <scene sceneID="0y4-XR-XBA">
             <objects>
-                <tableViewController id="Vb2-H7-kB4" sceneMemberID="viewController">
+                <tableViewController id="Vb2-H7-kB4" customClass="DRMLyricsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h3i-gX-nQ7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8Ct-9I-1Y8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LyricCell" id="8Ct-9I-1Y8">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Ct-9I-1Y8" id="bdx-03-jMc">
@@ -52,7 +52,7 @@
         <!--Title-->
         <scene sceneID="aPx-Ap-VV4">
             <objects>
-                <viewController id="vq7-BO-jd4" sceneMemberID="viewController">
+                <viewController id="vq7-BO-jd4" customClass="DRMLyricSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtc-sA-Nfb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qwp-v4-HB8">
                                                 <rect key="frame" x="241" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="changeRating:" destination="vq7-BO-jd4" eventType="valueChanged" id="qdp-DK-Raz"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -89,6 +92,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFv-vy-Ui3">
                                         <rect key="frame" x="0.0" y="113" width="335" height="30"/>
                                         <state key="normal" title="Search for Lyrics"/>
+                                        <connections>
+                                            <action selector="searchForLyrics:" destination="vq7-BO-jd4" eventType="touchUpInside" id="dgF-6X-SPv"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v3R-xF-NPu">
                                         <rect key="frame" x="0.0" y="151" width="335" height="360"/>
@@ -109,8 +115,18 @@
                         <viewLayoutGuide key="safeArea" id="SJa-gc-BEi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="1WO-G4-rYY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CSX-CX-hbf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CSX-CX-hbf">
+                            <connections>
+                                <action selector="saveLyrics:" destination="vq7-BO-jd4" id="1Bv-xU-Nvm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="oiK-gy-guc" id="Pav-jN-LP0"/>
+                        <outlet property="lyricTextView" destination="v3R-xF-NPu" id="x67-ff-yot"/>
+                        <outlet property="ratingLabel" destination="xds-LC-wai" id="ydx-Q0-yAt"/>
+                        <outlet property="trackTextField" destination="fF0-UB-MMt" id="DVh-Nq-1wF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESZ-va-iMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

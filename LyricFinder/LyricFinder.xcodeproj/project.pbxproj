@@ -13,6 +13,8 @@
 		347A5CD622298DCB00A923E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347A5CD422298DCB00A923E8 /* LaunchScreen.storyboard */; };
 		347A5CD922298DCB00A923E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A5CD822298DCB00A923E8 /* main.m */; };
 		347A5CE322298DCB00A923E8 /* LyricFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A5CE222298DCB00A923E8 /* LyricFinderTests.m */; };
+		347A5CEF2229907500A923E8 /* DRMLyricsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A5CEE2229907500A923E8 /* DRMLyricsTableViewController.m */; };
+		347A5CF22229909600A923E8 /* DRMLyricSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A5CF12229909600A923E8 /* DRMLyricSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,10 @@
 		347A5CDE22298DCB00A923E8 /* LyricFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		347A5CE222298DCB00A923E8 /* LyricFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricFinderTests.m; sourceTree = "<group>"; };
 		347A5CE422298DCB00A923E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347A5CED2229907500A923E8 /* DRMLyricsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRMLyricsTableViewController.h; sourceTree = "<group>"; };
+		347A5CEE2229907500A923E8 /* DRMLyricsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRMLyricsTableViewController.m; sourceTree = "<group>"; };
+		347A5CF02229909600A923E8 /* DRMLyricSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRMLyricSearchViewController.h; sourceTree = "<group>"; };
+		347A5CF12229909600A923E8 /* DRMLyricSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRMLyricSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,10 @@
 			children = (
 				347A5CC922298DC900A923E8 /* AppDelegate.h */,
 				347A5CCA22298DC900A923E8 /* AppDelegate.m */,
+				347A5CED2229907500A923E8 /* DRMLyricsTableViewController.h */,
+				347A5CEE2229907500A923E8 /* DRMLyricsTableViewController.m */,
+				347A5CF02229909600A923E8 /* DRMLyricSearchViewController.h */,
+				347A5CF12229909600A923E8 /* DRMLyricSearchViewController.m */,
 				347A5CCF22298DC900A923E8 /* Main.storyboard */,
 				347A5CD222298DCB00A923E8 /* Assets.xcassets */,
 				347A5CD422298DCB00A923E8 /* LaunchScreen.storyboard */,
@@ -198,6 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347A5CF22229909600A923E8 /* DRMLyricSearchViewController.m in Sources */,
+				347A5CEF2229907500A923E8 /* DRMLyricsTableViewController.m in Sources */,
 				347A5CD922298DCB00A923E8 /* main.m in Sources */,
 				347A5CCB22298DC900A923E8 /* AppDelegate.m in Sources */,
 			);

@@ -8,24 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		A5CF1A6C222990EB00E39209 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A6B222990EB00E39209 /* AppDelegate.m */; };
-		A5CF1A6F222990EB00E39209 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A6E222990EB00E39209 /* ViewController.m */; };
 		A5CF1A72222990EB00E39209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CF1A70222990EB00E39209 /* Main.storyboard */; };
 		A5CF1A74222990EC00E39209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CF1A73222990EC00E39209 /* Assets.xcassets */; };
 		A5CF1A77222990EC00E39209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CF1A75222990EC00E39209 /* LaunchScreen.storyboard */; };
 		A5CF1A7A222990EC00E39209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A79222990EC00E39209 /* main.m */; };
+		A5CF1A822229951500E39209 /* OSISongTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A812229951500E39209 /* OSISongTableViewController.m */; };
+		A5CF1A852229952F00E39209 /* OSISongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A842229952F00E39209 /* OSISongDetailViewController.m */; };
+		A5CF1A892229956200E39209 /* OSISong.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A882229956200E39209 /* OSISong.m */; };
+		A5CF1A8C2229957700E39209 /* OSISongController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A8B2229957700E39209 /* OSISongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5CF1A67222990EB00E39209 /* Sprint11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sprint11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CF1A6A222990EB00E39209 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5CF1A6B222990EB00E39209 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A5CF1A6D222990EB00E39209 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A5CF1A6E222990EB00E39209 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A5CF1A71222990EB00E39209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5CF1A73222990EC00E39209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5CF1A76222990EC00E39209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5CF1A78222990EC00E39209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5CF1A79222990EC00E39209 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5CF1A802229951500E39209 /* OSISongTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSISongTableViewController.h; sourceTree = "<group>"; };
+		A5CF1A812229951500E39209 /* OSISongTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSISongTableViewController.m; sourceTree = "<group>"; };
+		A5CF1A832229952F00E39209 /* OSISongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSISongDetailViewController.h; sourceTree = "<group>"; };
+		A5CF1A842229952F00E39209 /* OSISongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSISongDetailViewController.m; sourceTree = "<group>"; };
+		A5CF1A872229956200E39209 /* OSISong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSISong.h; sourceTree = "<group>"; };
+		A5CF1A882229956200E39209 /* OSISong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSISong.m; sourceTree = "<group>"; };
+		A5CF1A8A2229957700E39209 /* OSISongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSISongController.h; sourceTree = "<group>"; };
+		A5CF1A8B2229957700E39209 /* OSISongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSISongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +69,45 @@
 			children = (
 				A5CF1A6A222990EB00E39209 /* AppDelegate.h */,
 				A5CF1A6B222990EB00E39209 /* AppDelegate.m */,
-				A5CF1A6D222990EB00E39209 /* ViewController.h */,
-				A5CF1A6E222990EB00E39209 /* ViewController.m */,
 				A5CF1A70222990EB00E39209 /* Main.storyboard */,
+				A5CF1A8D2229958300E39209 /* Model */,
+				A5CF1A8E222995AD00E39209 /* Model Controller */,
+				A5CF1A862229953900E39209 /* View Controller */,
 				A5CF1A73222990EC00E39209 /* Assets.xcassets */,
 				A5CF1A75222990EC00E39209 /* LaunchScreen.storyboard */,
 				A5CF1A78222990EC00E39209 /* Info.plist */,
 				A5CF1A79222990EC00E39209 /* main.m */,
 			);
 			path = Sprint11;
+			sourceTree = "<group>";
+		};
+		A5CF1A862229953900E39209 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF1A802229951500E39209 /* OSISongTableViewController.h */,
+				A5CF1A812229951500E39209 /* OSISongTableViewController.m */,
+				A5CF1A832229952F00E39209 /* OSISongDetailViewController.h */,
+				A5CF1A842229952F00E39209 /* OSISongDetailViewController.m */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A5CF1A8D2229958300E39209 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF1A872229956200E39209 /* OSISong.h */,
+				A5CF1A882229956200E39209 /* OSISong.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5CF1A8E222995AD00E39209 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF1A8A2229957700E39209 /* OSISongController.h */,
+				A5CF1A8B2229957700E39209 /* OSISongController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +136,7 @@
 		A5CF1A5F222990EB00E39209 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = OSI;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Sergey Osipyan";
 				TargetAttributes = {
@@ -141,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5CF1A6F222990EB00E39209 /* ViewController.m in Sources */,
+				A5CF1A8C2229957700E39209 /* OSISongController.m in Sources */,
+				A5CF1A892229956200E39209 /* OSISong.m in Sources */,
+				A5CF1A852229952F00E39209 /* OSISongDetailViewController.m in Sources */,
 				A5CF1A7A222990EC00E39209 /* main.m in Sources */,
+				A5CF1A822229951500E39209 /* OSISongTableViewController.m in Sources */,
 				A5CF1A6C222990EB00E39209 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,7 @@
 		347A5CF22229909600A923E8 /* DRMLyricSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A5CF12229909600A923E8 /* DRMLyricSearchViewController.m */; };
 		347A5CF5222991A200A923E8 /* DRMLyric.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A5CF4222991A200A923E8 /* DRMLyric.m */; };
 		347A5CF82229938600A923E8 /* DRMLyric+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A5CF72229938600A923E8 /* DRMLyric+NSJSONSerialization.m */; };
+		347A5CFB222996FA00A923E8 /* DRMLyricController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A5CFA222996FA00A923E8 /* DRMLyricController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		347A5CF4222991A200A923E8 /* DRMLyric.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRMLyric.m; sourceTree = "<group>"; };
 		347A5CF62229938600A923E8 /* DRMLyric+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DRMLyric+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		347A5CF72229938600A923E8 /* DRMLyric+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DRMLyric+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		347A5CF9222996FA00A923E8 /* DRMLyricController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRMLyricController.h; sourceTree = "<group>"; };
+		347A5CFA222996FA00A923E8 /* DRMLyricController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRMLyricController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				347A5CF4222991A200A923E8 /* DRMLyric.m */,
 				347A5CF62229938600A923E8 /* DRMLyric+NSJSONSerialization.h */,
 				347A5CF72229938600A923E8 /* DRMLyric+NSJSONSerialization.m */,
+				347A5CF9222996FA00A923E8 /* DRMLyricController.h */,
+				347A5CFA222996FA00A923E8 /* DRMLyricController.m */,
 				347A5CCF22298DC900A923E8 /* Main.storyboard */,
 				347A5CD222298DCB00A923E8 /* Assets.xcassets */,
 				347A5CD422298DCB00A923E8 /* LaunchScreen.storyboard */,
@@ -222,6 +227,7 @@
 				347A5CEF2229907500A923E8 /* DRMLyricsTableViewController.m in Sources */,
 				347A5CD922298DCB00A923E8 /* main.m in Sources */,
 				347A5CF82229938600A923E8 /* DRMLyric+NSJSONSerialization.m in Sources */,
+				347A5CFB222996FA00A923E8 /* DRMLyricController.m in Sources */,
 				347A5CCB22298DC900A923E8 /* AppDelegate.m in Sources */,
 				347A5CF5222991A200A923E8 /* DRMLyric.m in Sources */,
 			);

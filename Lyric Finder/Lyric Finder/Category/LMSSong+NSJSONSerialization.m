@@ -10,4 +10,17 @@
 
 @implementation LMSSong (NSJSONSerialization)
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    NSString *artist = dictionary[@"artist"];
+    NSString *trackName = dictionary[@"trackName"];
+    NSString *lyrics = dictionary[@"lyrics"];
+    NSNumber *rating = dictionary[@"rating"];
+    
+    return [self initWithArtist:artist andTrackName:trackName andLyrics:lyrics andRating:rating.intValue];
+}
+
+- (NSDictionary *)dictionaryRep {
+    return @{@"artist": self.artist, @"trackName": self.trackName, @"lyrics": self.lyrics, @"rating": @(self.rating)};
+}
+
 @end

@@ -97,15 +97,10 @@
         // do something else
         destVC.songController = _songController;
         destVC.isUpdatingView = @YES;
-        destVC.song = [_searchController.songs objectAtIndex:indexPath.row];
+        destVC.song = [_songController.songs objectAtIndex:indexPath.row];
         
-    } else {
-        // do something else
     }
     
 }
 
-
-- (IBAction)addNewSongButtonClicked:(id)sender {
-}
 @end

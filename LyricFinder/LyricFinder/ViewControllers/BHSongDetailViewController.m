@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+     [self updateViews];
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -39,6 +39,15 @@
         _searchController = [[BHSearchNetworkController alloc] init];
     }
     return self;
+}
+
+-(void)updateViews{
+    
+    _lyricTextView.text = [_song lyrics];
+    _songNameTextField.text = [_song title];
+    _artistNameTextField.text = [_song artist];
+    
+    [self updateRating];
 }
 
 - (void) updateRating{
@@ -65,6 +74,15 @@
 }
 
 - (IBAction)searchButtonTapped:(id)sender {
+    
+    [_searchController searchForSongLyricsForArtist:[_artistNameTextField text] withSong:[_songNameTextField  text] completion:^(NSString *lyrics, NSError *error){
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.lyricTextView.text = lyrics;
+        });
+        
+        
+    }];
 }
 
 - (IBAction)saveButtonTapped:(id)sender {

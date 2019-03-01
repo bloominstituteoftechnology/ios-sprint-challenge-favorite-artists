@@ -1,5 +1,5 @@
 //
-//  NSObject+NSJSONSerialization.h
+//  BHFileManager.h
 //  LyricFinder
 //
 //  Created by Benjamin Hakes on 3/1/19.
@@ -10,8 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (NSJSONSerialization)
-
+@interface BHFileManager : NSFileManager
 
 @end
 

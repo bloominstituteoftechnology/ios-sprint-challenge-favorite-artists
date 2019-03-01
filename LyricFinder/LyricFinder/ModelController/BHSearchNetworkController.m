@@ -20,7 +20,7 @@
     return self;
 }
 
-- (void)searchForSongLyrics:(NSString *)artist for:(NSString *)song completion:(void (^)(NSMutableArray *forecastsFromZipcode, NSError *))completion {
+- (void)searchForSongLyricsForArtist:(NSString *)artist withSong:(NSString *)song completion:(void (^)(NSString *lyrics, NSError *))completion {
     
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
@@ -47,7 +47,7 @@
             return;
         }
         
-//        NSString *cityName = dictionary[@"city"][@"name"];
+        NSString *lyrics_body = dictionary[@"lyrics_body"];
 //        NSArray *forecasts = dictionary[@"list"];
         
 //        for (NSDictionary *forecastTemp in songs) {
@@ -57,7 +57,7 @@
 //            [[self songs] addObject:forecast];
 //        }
         
-        completion([self songs], nil);
+        completion(lyrics_body, nil);
         
     }] resume];
     
@@ -68,6 +68,6 @@
 
 
 static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.rapidapi.com/wsr/1.1/matcher.lyrics.get";
-static NSString * const apiKey = @"a1fc2c19d548237a56e0edd7b79b3ebc";
+static NSString * const apiKey = @"168ccdedc4msh7ab784d5d3d2678p168253jsn0b531d8de768";
 
 @end

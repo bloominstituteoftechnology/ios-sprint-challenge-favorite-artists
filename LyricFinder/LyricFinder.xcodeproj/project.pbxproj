@@ -19,6 +19,7 @@
 		D19162FF22299072005CE4FD /* BHSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162FE22299072005CE4FD /* BHSongDetailViewController.m */; };
 		D19163042229955C005CE4FD /* BHSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163032229955C005CE4FD /* BHSongTableViewCell.m */; };
 		D19163072229A716005CE4FD /* BHSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163062229A716005CE4FD /* BHSongController.m */; };
+		D191630A2229B1C4005CE4FD /* BHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163092229B1C4005CE4FD /* BHFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		D19163032229955C005CE4FD /* BHSongTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongTableViewCell.m; sourceTree = "<group>"; };
 		D19163052229A716005CE4FD /* BHSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSongController.h; sourceTree = "<group>"; };
 		D19163062229A716005CE4FD /* BHSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongController.m; sourceTree = "<group>"; };
+		D19163082229B1C4005CE4FD /* BHFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHFileManager.h; sourceTree = "<group>"; };
+		D19163092229B1C4005CE4FD /* BHFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHFileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				D19162EF22298EF7005CE4FD /* BHSearchNetworkController.m */,
 				D19163052229A716005CE4FD /* BHSongController.h */,
 				D19163062229A716005CE4FD /* BHSongController.m */,
+				D19163082229B1C4005CE4FD /* BHFileManager.h */,
+				D19163092229B1C4005CE4FD /* BHFileManager.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				D19162FC22299058005CE4FD /* BHSongsTableViewController.m in Sources */,
 				D19162F322298F11005CE4FD /* BHSong.m in Sources */,
 				D19162FF22299072005CE4FD /* BHSongDetailViewController.m in Sources */,
+				D191630A2229B1C4005CE4FD /* BHFileManager.m in Sources */,
 				D19162F022298EF7005CE4FD /* BHSearchNetworkController.m in Sources */,
 				D19163042229955C005CE4FD /* BHSongTableViewCell.m in Sources */,
 				D19162F722299006005CE4FD /* NSObject+NSJSONSerialization.m in Sources */,

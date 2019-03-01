@@ -91,7 +91,7 @@
                                         <rect key="frame" x="0.0" y="76" width="335" height="30"/>
                                         <state key="normal" title="Search for Lyrics"/>
                                         <connections>
-                                            <action selector="searchButtonTapped:" destination="H9a-1E-YlG" eventType="touchUpInside" id="NLn-wJ-tbS"/>
+                                            <action selector="searchButtonTapped:" destination="H9a-1E-YlG" eventType="touchUpInside" id="YT2-70-ofs"/>
                                         </connections>
                                     </button>
                                 </subviews>

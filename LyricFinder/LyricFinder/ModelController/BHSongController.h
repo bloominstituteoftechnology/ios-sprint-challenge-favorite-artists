@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BHSongController : NSObject
 
 @property NSMutableArray *songs;
+@property NSFileManager *fileManager;
 
 // create
 -(void)createSong: (BHSong *)song;

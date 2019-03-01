@@ -15,15 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 //MARK: IBOutlets
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *ratingIncrementerSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITextField *artistTextField;
 @property (weak, nonatomic) IBOutlet UITextField *trackTextField;
 @property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
 
 //MARK: IBActions
 - (IBAction)saveButtonTapped:(id)sender;
-- (IBAction)ratingIncrememnterSegmentedControlTapped:(id)sender;
 - (IBAction)searchForLyricsButtonTapped:(id)sender;
+- (IBAction)ratingButtonTapped:(id)sender;
 
 //MARK: Other Properties
 @property ABCSongController *songController;

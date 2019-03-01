@@ -38,18 +38,6 @@
     }
 }
 
-- (IBAction)ratingIncrememnterSegmentedControlTapped:(id)sender {
-    NSInteger oldRating;
-    NSInteger newRating;
-    if ([_ratingIncrementerSegmentedControl selectedSegmentIndex] == 0) {
-        oldRating = [_ratingLabel.text integerValue];
-        newRating = oldRating - 1;
-    } else {
-        oldRating = [_ratingLabel.text integerValue];
-        newRating = oldRating + 1;
-    }
-}
-
 - (IBAction)searchForLyricsButtonTapped:(id)sender {
     if (_artistTextField.text != nil && _trackTextField.text != nil) {
         NSString *artist = [[NSString alloc]initWithString:_artistTextField.text];
@@ -71,6 +59,17 @@
 
         
     }
+}
+
+- (IBAction)ratingButtonTapped:(id)sender {
+    NSInteger oldValue = [_ratingLabel.text integerValue];
+    NSInteger newvalue = 0;
+    if ([sender tag] == 0) {
+        newvalue = oldValue - 1;
+    } else {
+        newvalue = oldValue + 1;
+    }
+    _ratingLabel.text = [NSString stringWithFormat:@"%lu", newvalue];
 }
 
 - (void)updateViews {

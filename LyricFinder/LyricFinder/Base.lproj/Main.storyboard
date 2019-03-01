@@ -68,58 +68,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-Xv-WyA">
-                                <rect key="frame" x="20" y="84" width="335" height="28"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKU-s6-Sqk">
-                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="28"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-AZ-1N2">
-                                        <rect key="frame" x="190.5" y="0.0" width="144.5" height="29"/>
-                                        <segments>
-                                            <segment title="-"/>
-                                            <segment title="+"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="ratingIncrememnterSegmentedControlTapped:" destination="dJa-Mt-6lP" eventType="valueChanged" id="NtR-ie-uyc"/>
-                                        </connections>
-                                    </segmentedControl>
-                                </subviews>
-                            </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c5Y-a8-5ep">
-                                <rect key="frame" x="20" y="120" width="335" height="30"/>
+                                <rect key="frame" x="20" y="122" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-45-zFy">
-                                <rect key="frame" x="20" y="158" width="335" height="30"/>
+                                <rect key="frame" x="20" y="160" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbE-1R-mxu">
-                                <rect key="frame" x="128" y="196" width="119" height="30"/>
+                                <rect key="frame" x="128" y="198" width="119" height="30"/>
                                 <state key="normal" title="Search For Lyrics"/>
                                 <connections>
                                     <action selector="searchForLyricsButtonTapped:" destination="dJa-Mt-6lP" eventType="touchUpInside" id="gAf-T3-Bnx"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k3N-pR-gSe">
-                                <rect key="frame" x="20" y="234" width="335" height="425"/>
+                                <rect key="frame" x="20" y="236" width="335" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKU-s6-Sqk">
+                                <rect key="frame" x="20" y="84" width="10.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPS-UX-dXo">
+                                <rect key="frame" x="295" y="84" width="60" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhg-uf-l2N">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="ratingButtonTapped:" destination="dJa-Mt-6lP" eventType="touchUpInside" id="7nB-aa-RtQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czT-cs-FWQ">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="ratingButtonTapped:" destination="dJa-Mt-6lP" eventType="touchUpInside" id="Oes-Mt-Zek"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OvY-Dn-s1C" firstAttribute="trailing" secondItem="Oca-45-zFy" secondAttribute="trailing" constant="20" id="1Hs-mz-icC"/>
-                            <constraint firstItem="hUc-Xv-WyA" firstAttribute="top" secondItem="OvY-Dn-s1C" secondAttribute="top" constant="20" id="5Iq-aZ-wyx"/>
+                            <constraint firstItem="OvY-Dn-s1C" firstAttribute="trailing" secondItem="FPS-UX-dXo" secondAttribute="trailing" constant="20" id="6Z4-SU-pkg"/>
                             <constraint firstItem="k3N-pR-gSe" firstAttribute="leading" secondItem="OvY-Dn-s1C" secondAttribute="leading" constant="20" id="8wm-KN-MHb"/>
                             <constraint firstItem="OvY-Dn-s1C" firstAttribute="trailing" secondItem="k3N-pR-gSe" secondAttribute="trailing" constant="20" id="A0m-Pe-j8A"/>
                             <constraint firstItem="ZbE-1R-mxu" firstAttribute="centerX" secondItem="GAB-dG-b9h" secondAttribute="centerX" id="BW3-kx-Fbd"/>
@@ -128,13 +132,15 @@
                             <constraint firstItem="OvY-Dn-s1C" firstAttribute="trailing" secondItem="c5Y-a8-5ep" secondAttribute="trailing" constant="20" id="OBO-Co-WDB"/>
                             <constraint firstItem="c5Y-a8-5ep" firstAttribute="leading" secondItem="OvY-Dn-s1C" secondAttribute="leading" constant="20" id="RJ9-Qv-Pj8"/>
                             <constraint firstItem="Oca-45-zFy" firstAttribute="leading" secondItem="OvY-Dn-s1C" secondAttribute="leading" constant="20" id="UID-I4-Ewf"/>
-                            <constraint firstItem="c5Y-a8-5ep" firstAttribute="top" secondItem="hUc-Xv-WyA" secondAttribute="bottom" constant="8" id="UqS-fq-VE7"/>
-                            <constraint firstItem="hUc-Xv-WyA" firstAttribute="leading" secondItem="OvY-Dn-s1C" secondAttribute="leading" constant="20" id="YZJ-5p-gGf"/>
+                            <constraint firstItem="bKU-s6-Sqk" firstAttribute="leading" secondItem="c5Y-a8-5ep" secondAttribute="leading" id="VgJ-Ob-ipf"/>
+                            <constraint firstItem="bKU-s6-Sqk" firstAttribute="top" secondItem="FPS-UX-dXo" secondAttribute="top" id="XDl-iy-sDS"/>
                             <constraint firstItem="ZbE-1R-mxu" firstAttribute="top" secondItem="Oca-45-zFy" secondAttribute="bottom" constant="8" id="hLg-p7-fHo"/>
                             <constraint firstItem="Oca-45-zFy" firstAttribute="centerX" secondItem="GAB-dG-b9h" secondAttribute="centerX" id="iGR-r6-PO4"/>
-                            <constraint firstItem="OvY-Dn-s1C" firstAttribute="trailing" secondItem="hUc-Xv-WyA" secondAttribute="trailing" constant="20" id="keu-gv-gnv"/>
+                            <constraint firstItem="c5Y-a8-5ep" firstAttribute="top" secondItem="FPS-UX-dXo" secondAttribute="bottom" constant="8" symbolic="YES" id="nxd-bE-PhG"/>
                             <constraint firstItem="OvY-Dn-s1C" firstAttribute="bottom" secondItem="k3N-pR-gSe" secondAttribute="bottom" constant="8" id="q7g-53-D82"/>
                             <constraint firstItem="c5Y-a8-5ep" firstAttribute="centerX" secondItem="GAB-dG-b9h" secondAttribute="centerX" id="s75-yH-YzF"/>
+                            <constraint firstItem="c5Y-a8-5ep" firstAttribute="top" secondItem="bKU-s6-Sqk" secondAttribute="bottom" constant="8" symbolic="YES" id="sXc-0p-ELQ"/>
+                            <constraint firstItem="bKU-s6-Sqk" firstAttribute="top" secondItem="OvY-Dn-s1C" secondAttribute="top" constant="20" id="y48-az-ZZI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OvY-Dn-s1C"/>
                     </view>
@@ -148,14 +154,13 @@
                     <connections>
                         <outlet property="artistTextField" destination="c5Y-a8-5ep" id="tBI-KO-RXA"/>
                         <outlet property="lyricsTextView" destination="k3N-pR-gSe" id="Tyd-vz-6Uh"/>
-                        <outlet property="ratingIncrementerSegmentedControl" destination="mjR-AZ-1N2" id="SSs-Yq-3g8"/>
                         <outlet property="ratingLabel" destination="bKU-s6-Sqk" id="YyP-Ga-qY1"/>
                         <outlet property="trackTextField" destination="Oca-45-zFy" id="Oei-Qa-fVE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IpD-Sb-P9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="139"/>
+            <point key="canvasLocation" x="909.60000000000002" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YN5-fG-X5B">

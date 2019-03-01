@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LMSSong : NSObject
 
+@property NSString *artist;
+@property NSString *trackName;
+@property NSString *lyrics;
+@property int rating;
+
+- (instancetype)initWithArtist: (NSString *)artist andTrackName: (NSString *)trackName andLyrics: (NSString *)lyrics andRating: (int)rating;
+
 @end
 
 NS_ASSUME_NONNULL_END

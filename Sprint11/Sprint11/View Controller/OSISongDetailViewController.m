@@ -22,6 +22,7 @@
 - (IBAction)saveButton:(id)sender;
 - (IBAction)stepperAction:(id)sender;
 - (IBAction)searchButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIStepper *stepperOutlet;
 @end
 
 @implementation OSISongDetailViewController
@@ -34,7 +35,7 @@
 - (void)saveButton:(id)sender {
     NSString *title = self.songTitleTextField.text;
     NSString *artist = self.artistTextField.text;
-    NSString *lyrics = self.songTitleTextField.text;
+    NSString *lyrics = self.textBodyTextView.text;
     NSInteger rating = [self.songRating.text intValue];
     
     [_osiSongController createSong:title artist:artist lyrics:lyrics rating:rating];
@@ -59,8 +60,14 @@
     self.artistTextField.text = song.artist;
 }
 
-- (void)stepperAction:(id)sender {
-    
+- (void)stepperAction:(UIStepper *)sender {
+    if (self.song) {
+        self.song.rating = [NSString stringWithFormat:@"%d", (int)sender.value];
+        _songRating.text = [NSString stringWithFormat:@"%i", (int)self.song.rating];
+    } else {
+         [_stepperOutlet setValue:5];
+        _songRating.text = [NSString stringWithFormat:@"%i", (int)self.song.rating];
+    }
     
 }
 

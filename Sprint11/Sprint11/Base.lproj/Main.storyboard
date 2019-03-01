@@ -155,6 +155,7 @@
                         <outlet property="songNavigationItem" destination="hSz-l5-r62" id="Bjn-sm-a5y"/>
                         <outlet property="songRating" destination="IVV-ui-n4m" id="KLw-mz-Ghi"/>
                         <outlet property="songTitleTextField" destination="OCk-Eh-bP8" id="5KD-M8-atl"/>
+                        <outlet property="stepperOutlet" destination="LVe-tO-ZIJ" id="zzp-kM-X1m"/>
                         <outlet property="textBodyTextView" destination="cKe-YG-pBj" id="cs2-RG-6dr"/>
                     </connections>
                 </viewController>

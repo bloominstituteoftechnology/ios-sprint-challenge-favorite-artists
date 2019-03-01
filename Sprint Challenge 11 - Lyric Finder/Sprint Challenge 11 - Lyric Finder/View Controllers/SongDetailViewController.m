@@ -5,6 +5,8 @@
 #import "SongDetailViewController.h"
 
 @interface SongDetailViewController ()
+    
+    @property ALWSongController *songController;
 
     @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
     
@@ -29,7 +31,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Initialize the song controller
+    _songController = [[ALWSongController alloc] init];
 }
 
 /*
@@ -43,6 +47,13 @@
 */
 
 - (IBAction)searchForLyrics:(id)sender {
+    [ _songController searchLyricsWithArtist:_artistTextField.text andTitle:_songTitleTextField.text withCompletionBlock:^(ALWSong * _Nonnull lyrics, NSError * _Nonnull error) {
+        
+    }];
+    
+//    [ _songController searchLyricsWithArtist:@"coldplay" andTitle:@"paradise" withCompletionBlock:^(ALWSong * _Nonnull lyrics, NSError * _Nonnull error) {
+//
+//    }];
 }
     
 - (IBAction)save:(id)sender {

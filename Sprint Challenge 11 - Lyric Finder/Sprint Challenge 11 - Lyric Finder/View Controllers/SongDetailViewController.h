@@ -3,6 +3,7 @@
 //  
 
 #import <UIKit/UIKit.h>
+#import "ALWSongController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

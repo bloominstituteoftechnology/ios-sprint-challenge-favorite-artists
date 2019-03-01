@@ -13,7 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *songLyrics;
 @property NSInteger *songRating;
     
-- (instancetype)initWithSongTitle:(NSString *)songTitle andArtist:(NSString *)songArtist andLyrics:(NSString *)songLyrics;
+- (instancetype)initWithSongTitle:(NSString *)songTitle andArtist:(NSString *)songArtist;
+    
+- (instancetype)initWithSongLyrics:(NSString *)songLyrics;
+    
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

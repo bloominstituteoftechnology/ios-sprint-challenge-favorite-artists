@@ -16,6 +16,7 @@
 		84169E832229905A007F7A33 /* SongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169E822229905A007F7A33 /* SongDetailViewController.m */; };
 		84169E87222999A2007F7A33 /* ALWSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169E86222999A2007F7A33 /* ALWSong.m */; };
 		84169E8A222999C5007F7A33 /* ALWSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169E89222999C5007F7A33 /* ALWSongController.m */; };
+		84169E8D22299DDC007F7A33 /* ALWLyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169E8C22299DDC007F7A33 /* ALWLyrics.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		84169E86222999A2007F7A33 /* ALWSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALWSong.m; sourceTree = "<group>"; };
 		84169E88222999C5007F7A33 /* ALWSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALWSongController.h; sourceTree = "<group>"; };
 		84169E89222999C5007F7A33 /* ALWSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALWSongController.m; sourceTree = "<group>"; };
+		84169E8B22299DDC007F7A33 /* ALWLyrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALWLyrics.h; sourceTree = "<group>"; };
+		84169E8C22299DDC007F7A33 /* ALWLyrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALWLyrics.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				84169E85222999A2007F7A33 /* ALWSong.h */,
 				84169E86222999A2007F7A33 /* ALWSong.m */,
+				84169E8B22299DDC007F7A33 /* ALWLyrics.h */,
+				84169E8C22299DDC007F7A33 /* ALWLyrics.m */,
 				84169E88222999C5007F7A33 /* ALWSongController.h */,
 				84169E89222999C5007F7A33 /* ALWSongController.m */,
 			);
@@ -185,6 +190,7 @@
 				84169E7622298F60007F7A33 /* main.m in Sources */,
 				84169E8A222999C5007F7A33 /* ALWSongController.m in Sources */,
 				84169E832229905A007F7A33 /* SongDetailViewController.m in Sources */,
+				84169E8D22299DDC007F7A33 /* ALWLyrics.m in Sources */,
 				84169E6822298F5E007F7A33 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

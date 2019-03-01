@@ -44,9 +44,12 @@ extern double stepperValue;
 }
 */
 
+// Big thanks to @Dave Delong for his fantastic 10-15-2011 SO answer on this...
+///https://stackoverflow.com/questions/7779443/how-to-use-uistepper
 - (IBAction)valueChanged:(UIStepper *)sender {
     double value = [sender value];
     stepperValue = value;
+    NSLog(@"%@", [NSString stringWithFormat:@"%f", stepperValue]);
     
     [_ratingValueLabel setText:[NSString stringWithFormat:@"%d", (int)value]];
 }

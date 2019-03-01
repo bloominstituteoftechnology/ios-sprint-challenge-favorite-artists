@@ -9,7 +9,7 @@
 #import "OSISongTableViewController.h"
 
 @interface OSISongTableViewController ()
-
+- (IBAction)saveButton:(id)sender;
 @end
 
 @implementation OSISongTableViewController

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Dillon McElhinney. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "DRMLyric.h"
 
 typedef void (^CompletionHandler)(NSString * lyrics);
@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)createLyricWithArtist: (NSString *)artist trackName: (NSString *)trackName lyrics: (NSString *)lyrics andRating: (int)rating;
 - (void)updateLyric: (DRMLyric *)lyric withRating: (int)rating;
-- (void)deleteLyric: (DRMLyric *)lyric;
+- (void)deleteLyricAt: (NSIndexPath *)indexPath;
 
 - (void)fetchLyricsForArtist: (NSString *)artist andTrackName: (NSString *)trackName withCompletion: (CompletionHandler)completion;
 

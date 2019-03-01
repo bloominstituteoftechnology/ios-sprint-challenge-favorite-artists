@@ -22,8 +22,8 @@ static NSString * apiKey = @"485bf8151emshd2b8d386cb8abf2p1f19ebjsnc1b5d543e37c"
     [lyric setRating: rating];
 }
 
-- (void)deleteLyric:(DRMLyric *)lyric {
-    [self.lyrics removeObject: lyric];
+- (void)deleteLyricAt:(NSIndexPath *)indexPath {
+    [self.lyrics removeObjectAtIndex: indexPath.row];
 }
 
 - (void)fetchLyricsForArtist:(NSString *)artist andTrackName:(NSString *)trackName withCompletion:(CompletionHandler)completion {
@@ -53,8 +53,6 @@ static NSString * apiKey = @"485bf8151emshd2b8d386cb8abf2p1f19ebjsnc1b5d543e37c"
             NSLog(@"No data was returned.");
             completion(nil);
         }
-        
-        
     }];
     
     [datatask resume];

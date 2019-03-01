@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DRMLyricController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DRMLyricSearchViewController : UIViewController
+
+@property DRMLyricController *lyricController;
 
 @end
 

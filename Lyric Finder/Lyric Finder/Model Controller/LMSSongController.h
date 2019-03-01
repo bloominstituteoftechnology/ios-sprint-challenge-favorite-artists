@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)fetchSongLyrics: (NSString *)artist andTrackName: (NSString *)trackName withCompletion: (CompletionHandler)completion;
 
+- (void)saveToStore;
+- (void)loadFromStore;
+
 @end
 
 NS_ASSUME_NONNULL_END

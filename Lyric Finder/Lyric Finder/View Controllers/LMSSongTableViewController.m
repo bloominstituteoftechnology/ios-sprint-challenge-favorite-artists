@@ -51,6 +51,15 @@
     if ([segue.identifier isEqualToString:@"AddLyricSegue"]) {
         LMSSongDetailViewController *destinationVC = segue.destinationViewController;
         destinationVC.songController = self.songController;
+        
+    } else if ([segue.identifier isEqualToString:@"ViewLyricSegue"]) {
+        
+        LMSSongDetailViewController *destinationVC = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        
+        LMSSong *song = self.songController.lyrics[indexPath.row];
+        destinationVC.songController = self.songController;
+        destinationVC.song = song;
     }
 }
 

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSString *title;
 @property NSString *artist;
-@property Lyrics *lyrics;
+@property NSString *lyrics;
 @property NSInteger rating;
 
 @end

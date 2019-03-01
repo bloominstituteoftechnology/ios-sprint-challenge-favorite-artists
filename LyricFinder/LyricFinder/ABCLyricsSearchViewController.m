@@ -12,6 +12,7 @@
 
 @interface ABCLyricsSearchViewController ()
 
+@property NSFileManager *fileManager;
 @property LyricsController *lyricsController;
 @property ABCSongController *songController;
 @property(nonatomic) NSString *results;
@@ -24,6 +25,7 @@
     [super viewDidLoad];
     _lyricsController = [[LyricsController alloc] init];
     _songController = [[ABCSongController alloc] init];
+    _fileManager = NSFileManager.defaultManager;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -31,6 +33,15 @@
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
+    if (_lyricsTextView.text != nil) {
+    [_fileManager createDirectoryAtURL:NSBundle.mainBundle.bundleURL withIntermediateDirectories: NO attributes: nil error: nil];
+    Song *newSong = [[Song alloc] init];
+        newSong.lyrics = _lyricsTextView.text;
+        newSong.title = _trackTextField.text;
+        newSong.artist = _artistTextField.text;
+        newSong.rating = [_ratingLabel.text integerValue];
+        
+    }
 }
 
 - (IBAction)ratingIncrememnterSegmentedControlTapped:(id)sender {

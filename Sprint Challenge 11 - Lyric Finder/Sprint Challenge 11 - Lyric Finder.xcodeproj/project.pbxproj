@@ -14,6 +14,8 @@
 		84169E7622298F60007F7A33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169E7522298F60007F7A33 /* main.m */; };
 		84169E802229900C007F7A33 /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169E7F2229900C007F7A33 /* SongsTableViewController.m */; };
 		84169E832229905A007F7A33 /* SongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169E822229905A007F7A33 /* SongDetailViewController.m */; };
+		84169E87222999A2007F7A33 /* ALWSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169E86222999A2007F7A33 /* ALWSong.m */; };
+		84169E8A222999C5007F7A33 /* ALWSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169E89222999C5007F7A33 /* ALWSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		84169E7F2229900C007F7A33 /* SongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongsTableViewController.m; sourceTree = "<group>"; };
 		84169E812229905A007F7A33 /* SongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongDetailViewController.h; sourceTree = "<group>"; };
 		84169E822229905A007F7A33 /* SongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewController.m; sourceTree = "<group>"; };
+		84169E85222999A2007F7A33 /* ALWSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALWSong.h; sourceTree = "<group>"; };
+		84169E86222999A2007F7A33 /* ALWSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALWSong.m; sourceTree = "<group>"; };
+		84169E88222999C5007F7A33 /* ALWSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALWSongController.h; sourceTree = "<group>"; };
+		84169E89222999C5007F7A33 /* ALWSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALWSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 		84169E6522298F5E007F7A33 /* Sprint Challenge 11 - Lyric Finder */ = {
 			isa = PBXGroup;
 			children = (
+				84169E8422299973007F7A33 /* Model */,
 				84169E7C22298F7E007F7A33 /* Storyboards */,
 				84169E7D22298FE3007F7A33 /* View Controllers */,
 				84169E6622298F5E007F7A33 /* AppDelegate.h */,
@@ -90,6 +97,17 @@
 				84169E822229905A007F7A33 /* SongDetailViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		84169E8422299973007F7A33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84169E85222999A2007F7A33 /* ALWSong.h */,
+				84169E86222999A2007F7A33 /* ALWSong.m */,
+				84169E88222999C5007F7A33 /* ALWSongController.h */,
+				84169E89222999C5007F7A33 /* ALWSongController.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84169E87222999A2007F7A33 /* ALWSong.m in Sources */,
 				84169E802229900C007F7A33 /* SongsTableViewController.m in Sources */,
 				84169E7622298F60007F7A33 /* main.m in Sources */,
+				84169E8A222999C5007F7A33 /* ALWSongController.m in Sources */,
 				84169E832229905A007F7A33 /* SongDetailViewController.m in Sources */,
 				84169E6822298F5E007F7A33 /* AppDelegate.m in Sources */,
 			);

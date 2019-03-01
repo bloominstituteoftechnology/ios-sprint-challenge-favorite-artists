@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2AE1310222992DF002AF65F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE130F222992DF002AF65F /* AppDelegate.m */; };
+		A2AE1316222992DF002AF65F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE1314222992DF002AF65F /* Main.storyboard */; };
+		A2AE1318222992E1002AF65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AE1317222992E1002AF65F /* Assets.xcassets */; };
+		A2AE131B222992E1002AF65F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE1319222992E1002AF65F /* LaunchScreen.storyboard */; };
+		A2AE131E222992E1002AF65F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE131D222992E1002AF65F /* main.m */; };
+		A2AE1326222994CD002AF65F /* ABCLyricsSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE1325222994CD002AF65F /* ABCLyricsSearchViewController.m */; };
+		A2AE1329222994E7002AF65F /* ABCSavedLyricsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE1328222994E7002AF65F /* ABCSavedLyricsTableViewController.m */; };
+		A2AE132C22299691002AF65F /* Lyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE132B22299691002AF65F /* Lyrics.m */; };
+		A2AE132F222996F7002AF65F /* LyricsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE132E222996F7002AF65F /* LyricsController.m */; };
+		A2AE1332222997C8002AF65F /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE1331222997C8002AF65F /* Song.m */; };
+		A2AE133822299996002AF65F /* Lyrics+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE133722299996002AF65F /* Lyrics+NSJSONSerialization.m */; };
+		A2AE133B22299B92002AF65F /* Song+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE133A22299B92002AF65F /* Song+NSJSONSerialization.m */; };
+		A2AE133F2229A136002AF65F /* ABCSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE133E2229A136002AF65F /* ABCSongController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2AE130B222992DF002AF65F /* LyricFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AE130E222992DF002AF65F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A2AE130F222992DF002AF65F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A2AE1315222992DF002AF65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2AE1317222992E1002AF65F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2AE131A222992E1002AF65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2AE131C222992E1002AF65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2AE131D222992E1002AF65F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2AE1324222994CD002AF65F /* ABCLyricsSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCLyricsSearchViewController.h; sourceTree = "<group>"; };
+		A2AE1325222994CD002AF65F /* ABCLyricsSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCLyricsSearchViewController.m; sourceTree = "<group>"; };
+		A2AE1327222994E7002AF65F /* ABCSavedLyricsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCSavedLyricsTableViewController.h; sourceTree = "<group>"; };
+		A2AE1328222994E7002AF65F /* ABCSavedLyricsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCSavedLyricsTableViewController.m; sourceTree = "<group>"; };
+		A2AE132A22299691002AF65F /* Lyrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lyrics.h; sourceTree = "<group>"; };
+		A2AE132B22299691002AF65F /* Lyrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lyrics.m; sourceTree = "<group>"; };
+		A2AE132D222996F7002AF65F /* LyricsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricsController.h; sourceTree = "<group>"; };
+		A2AE132E222996F7002AF65F /* LyricsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricsController.m; sourceTree = "<group>"; };
+		A2AE1330222997C8002AF65F /* Song.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		A2AE1331222997C8002AF65F /* Song.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		A2AE133622299996002AF65F /* Lyrics+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lyrics+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		A2AE133722299996002AF65F /* Lyrics+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Lyrics+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		A2AE133922299B92002AF65F /* Song+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Song+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		A2AE133A22299B92002AF65F /* Song+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Song+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		A2AE133D2229A136002AF65F /* ABCSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCSongController.h; sourceTree = "<group>"; };
+		A2AE133E2229A136002AF65F /* ABCSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCSongController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2AE1308222992DF002AF65F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2AE1302222992DF002AF65F = {
+			isa = PBXGroup;
+			children = (
+				A2AE130D222992DF002AF65F /* LyricFinder */,
+				A2AE130C222992DF002AF65F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2AE130C222992DF002AF65F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE130B222992DF002AF65F /* LyricFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2AE130D222992DF002AF65F /* LyricFinder */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE1324222994CD002AF65F /* ABCLyricsSearchViewController.h */,
+				A2AE1325222994CD002AF65F /* ABCLyricsSearchViewController.m */,
+				A2AE1327222994E7002AF65F /* ABCSavedLyricsTableViewController.h */,
+				A2AE1328222994E7002AF65F /* ABCSavedLyricsTableViewController.m */,
+				A2AE130E222992DF002AF65F /* AppDelegate.h */,
+				A2AE130F222992DF002AF65F /* AppDelegate.m */,
+				A2AE1314222992DF002AF65F /* Main.storyboard */,
+				A2AE132A22299691002AF65F /* Lyrics.h */,
+				A2AE132B22299691002AF65F /* Lyrics.m */,
+				A2AE1330222997C8002AF65F /* Song.h */,
+				A2AE1331222997C8002AF65F /* Song.m */,
+				A2AE133D2229A136002AF65F /* ABCSongController.h */,
+				A2AE133E2229A136002AF65F /* ABCSongController.m */,
+				A2AE132D222996F7002AF65F /* LyricsController.h */,
+				A2AE132E222996F7002AF65F /* LyricsController.m */,
+				A2AE133C22299BA8002AF65F /* Categories */,
+				A2AE1317222992E1002AF65F /* Assets.xcassets */,
+				A2AE1319222992E1002AF65F /* LaunchScreen.storyboard */,
+				A2AE131C222992E1002AF65F /* Info.plist */,
+				A2AE131D222992E1002AF65F /* main.m */,
+			);
+			path = LyricFinder;
+			sourceTree = "<group>";
+		};
+		A2AE133C22299BA8002AF65F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE133622299996002AF65F /* Lyrics+NSJSONSerialization.h */,
+				A2AE133722299996002AF65F /* Lyrics+NSJSONSerialization.m */,
+				A2AE133922299B92002AF65F /* Song+NSJSONSerialization.h */,
+				A2AE133A22299B92002AF65F /* Song+NSJSONSerialization.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2AE130A222992DF002AF65F /* LyricFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2AE1321222992E1002AF65F /* Build configuration list for PBXNativeTarget "LyricFinder" */;
+			buildPhases = (
+				A2AE1307222992DF002AF65F /* Sources */,
+				A2AE1308222992DF002AF65F /* Frameworks */,
+				A2AE1309222992DF002AF65F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LyricFinder;
+			productName = LyricFinder;
+			productReference = A2AE130B222992DF002AF65F /* LyricFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2AE1303222992DF002AF65F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Austin Cole";
+				TargetAttributes = {
+					A2AE130A222992DF002AF65F = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = A2AE1306222992DF002AF65F /* Build configuration list for PBXProject "LyricFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2AE1302222992DF002AF65F;
+			productRefGroup = A2AE130C222992DF002AF65F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2AE130A222992DF002AF65F /* LyricFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2AE1309222992DF002AF65F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AE131B222992E1002AF65F /* LaunchScreen.storyboard in Resources */,
+				A2AE1318222992E1002AF65F /* Assets.xcassets in Resources */,
+				A2AE1316222992DF002AF65F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2AE1307222992DF002AF65F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AE133B22299B92002AF65F /* Song+NSJSONSerialization.m in Sources */,
+				A2AE1332222997C8002AF65F /* Song.m in Sources */,
+				A2AE133822299996002AF65F /* Lyrics+NSJSONSerialization.m in Sources */,
+				A2AE133F2229A136002AF65F /* ABCSongController.m in Sources */,
+				A2AE132C22299691002AF65F /* Lyrics.m in Sources */,
+				A2AE132F222996F7002AF65F /* LyricsController.m in Sources */,
+				A2AE1329222994E7002AF65F /* ABCSavedLyricsTableViewController.m in Sources */,
+				A2AE131E222992E1002AF65F /* main.m in Sources */,
+				A2AE1310222992DF002AF65F /* AppDelegate.m in Sources */,
+				A2AE1326222994CD002AF65F /* ABCLyricsSearchViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A2AE1314222992DF002AF65F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2AE1315222992DF002AF65F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2AE1319222992E1002AF65F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2AE131A222992E1002AF65F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2AE131F222992E1002AF65F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A2AE1320222992E1002AF65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2AE1322222992E1002AF65F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LyricFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AustinCole.LyricFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2AE1323222992E1002AF65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LyricFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AustinCole.LyricFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2AE1306222992DF002AF65F /* Build configuration list for PBXProject "LyricFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AE131F222992E1002AF65F /* Debug */,
+				A2AE1320222992E1002AF65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2AE1321222992E1002AF65F /* Build configuration list for PBXNativeTarget "LyricFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AE1322222992E1002AF65F /* Debug */,
+				A2AE1323222992E1002AF65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2AE1303222992DF002AF65F /* Project object */;
+}

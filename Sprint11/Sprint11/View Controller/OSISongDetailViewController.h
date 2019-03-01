@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OSISongDetailViewController : UIViewController
-@property OSISong *song;
+@property (nonatomic) OSISong *song;
 @property OSISongController *osiSongController;
 @end
 

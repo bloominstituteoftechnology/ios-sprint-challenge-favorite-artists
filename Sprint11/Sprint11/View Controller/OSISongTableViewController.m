@@ -45,9 +45,16 @@ static NSString * const reuseIdentifier = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[self tableView] reloadData];
-   
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
+
+    
+    
 #pragma mark - Table view data source
 
 

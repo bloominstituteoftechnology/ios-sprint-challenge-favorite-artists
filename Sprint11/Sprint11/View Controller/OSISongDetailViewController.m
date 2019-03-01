@@ -12,7 +12,7 @@
 
 @interface OSISongDetailViewController ()
 //@property OSISong *song;
-//@property OSISongController *osiSongController;
+//@prope(nonatomic) rty OSISongController *osiSongController;
 
 @property (weak, nonatomic) IBOutlet UILabel *songRating;
 @property (weak, nonatomic) IBOutlet UITextField *songTitleTextField;
@@ -49,10 +49,22 @@
     }];
 }
 
+- (void)setSong:(OSISong *)song {
+    _song = song;
+    [self loadViewIfNeeded];
+    self.title = self.song.title;
+    self.songRating.text = [NSString stringWithFormat:@"%li", (long)self.song.rating];
+    self.songTitleTextField.text = song.title;
+    self.textBodyTextView.text = song.lyrics;
+    self.artistTextField.text = song.artist;
+}
+
 - (void)stepperAction:(id)sender {
     
     
 }
+
+
 
 
 

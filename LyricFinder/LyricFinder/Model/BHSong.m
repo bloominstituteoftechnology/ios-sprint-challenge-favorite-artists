@@ -13,6 +13,7 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
+        _UUID = [[NSUUID UUID] UUIDString];
         _title = @"";
         _artist = @"";
         _lyrics = @"";
@@ -20,5 +21,19 @@
     }
     return self;
 }
+
+@synthesize rating = _rating;
+
+////Setter method
+//- (void) setRating:(int)rating {
+//    
+//    _rating = [_bodyText wordCount];
+//}
+//
+////Getter method
+//- (int) rating {
+//    return _wordCount;
+//}
+
 
 @end

@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BHSearchNetworkController : NSObject
 
+@property NSMutableArray *songs;
+
+- (void)searchForSongLyrics:(NSString *)artist for:(NSString *)song completion:(void (^)(NSMutableArray *forecastsFromZipcode, NSError *))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END

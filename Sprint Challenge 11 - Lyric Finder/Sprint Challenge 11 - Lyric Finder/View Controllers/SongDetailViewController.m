@@ -6,6 +6,23 @@
 
 @interface SongDetailViewController ()
 
+    @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+    
+    @property (weak, nonatomic) IBOutlet UITextField *songTitleTextField;
+    
+    @property (weak, nonatomic) IBOutlet UITextField *artistTextField;
+    
+    @property (weak, nonatomic) IBOutlet UIButton *searchButton;
+    
+    @property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
+    
+- (IBAction)searchForLyrics:(id)sender;
+    
+- (IBAction)save:(id)sender;
+    
+- (IBAction)stepperChanged:(id)sender;
+    
+    
 @end
 
 @implementation SongDetailViewController
@@ -25,4 +42,15 @@
 }
 */
 
-@end
+- (IBAction)searchForLyrics:(id)sender {
+}
+    
+- (IBAction)save:(id)sender {
+}
+    
+- (IBAction)stepperChanged:(id)sender {
+    self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %d", [[NSNumber numberWithDouble: [(UIStepper *)sender value]] intValue]];
+    
+    
+}
+    @end

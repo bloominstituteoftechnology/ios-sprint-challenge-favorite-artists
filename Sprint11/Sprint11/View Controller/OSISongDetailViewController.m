@@ -11,8 +11,8 @@
 #import "OSISong.h"
 
 @interface OSISongDetailViewController ()
-@property OSISong *song;
-@property OSISongController *osiSOngController;
+//@property OSISong *song;
+//@property OSISongController *osiSongController;
 
 @property (weak, nonatomic) IBOutlet UILabel *songRating;
 @property (weak, nonatomic) IBOutlet UITextField *songTitleTextField;
@@ -30,6 +30,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+- (void)saveButton:(id)sender {
+    
+}
+
+- (void)searchButton:(id)sender {
+    
+}
+
+- (void)stepperAction:(id)sender {
+    
+    
+}
+
 
 
 @end

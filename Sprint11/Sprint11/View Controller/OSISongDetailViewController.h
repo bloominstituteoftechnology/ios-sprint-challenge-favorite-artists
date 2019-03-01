@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OSISong.h"
+#import "OSISongController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OSISongDetailViewController : UIViewController
-
+@property OSISong *song;
+@property OSISongController *osiSongController;
 @end
 
 NS_ASSUME_NONNULL_END

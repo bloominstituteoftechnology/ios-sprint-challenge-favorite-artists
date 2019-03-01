@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="0di-TA-FFF" kind="show" identifier="showDetail" id="3ID-uh-rtq"/>
+                                    <segue destination="0di-TA-FFF" kind="show" identifier="showCell" id="3ID-uh-rtq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" id="2zi-uX-2uT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pjw-Ip-NHJ">
                             <connections>
-                                <action selector="saveButton:" destination="0su-sg-VFr" id="tQA-nM-Djv"/>
+                                <action selector="addButton:" destination="0su-sg-VFr" id="z4r-gr-0XG"/>
                                 <segue destination="0di-TA-FFF" kind="show" identifier="addNew" id="jCS-mN-ZVG"/>
                             </connections>
                         </barButtonItem>

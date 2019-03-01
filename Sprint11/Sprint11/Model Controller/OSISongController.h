@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OSISongController : NSObject
 
+@property (readonly) NSMutableArray *songs;
+
+-(void)searchForSong:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSDictionary *song, NSError *))completion;
+
+-(void)createSong:(NSString*)title artist:(NSString*)artist lyrics:(NSString*)lyrics rating:(NSInteger)rating;
+
 @end
 
 NS_ASSUME_NONNULL_END

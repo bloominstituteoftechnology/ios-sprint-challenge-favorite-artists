@@ -74,57 +74,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MBi-Mp-fJd">
-                                <rect key="frame" x="16" y="132" width="343" height="519"/>
+                                <rect key="frame" x="16" y="132" width="343" height="508.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-8R-RFU">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="28.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVV-ui-n4m">
-                                                <rect key="frame" x="0.0" y="0.0" width="241" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating 0:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVV-ui-n4m">
+                                                <rect key="frame" x="0.0" y="0.0" width="241" height="28.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LVe-tO-ZIJ">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="LVe-tO-ZIJ">
                                                 <rect key="frame" x="249" y="0.0" width="94" height="29"/>
                                                 <connections>
                                                     <action selector="stepperAction:" destination="0di-TA-FFF" eventType="valueChanged" id="h57-Hb-Czc"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="LVe-tO-ZIJ" firstAttribute="height" secondItem="IVV-ui-n4m" secondAttribute="height" id="TcX-vb-N5R"/>
+                                        </constraints>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCk-Eh-bP8">
-                                        <rect key="frame" x="0.0" y="49" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="48.5" width="343" height="28.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JdN-CP-jay">
-                                        <rect key="frame" x="0.0" y="99" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="97" width="343" height="28.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28.5" id="nvg-Qj-yNg"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt7-AK-4bm">
-                                        <rect key="frame" x="0.0" y="149" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="145.5" width="343" height="29.5"/>
                                         <state key="normal" title="Search for Lyrics"/>
                                         <connections>
                                             <action selector="searchButton:" destination="0di-TA-FFF" eventType="touchUpInside" id="hti-d8-BC6"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cKe-YG-pBj">
-                                        <rect key="frame" x="0.0" y="199" width="343" height="320"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="751" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cKe-YG-pBj">
+                                        <rect key="frame" x="0.0" y="195" width="343" height="313.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="OCk-Eh-bP8" firstAttribute="height" secondItem="uVH-8R-RFU" secondAttribute="height" id="cAR-QH-poJ"/>
+                                    <constraint firstItem="JdN-CP-jay" firstAttribute="height" secondItem="uVH-8R-RFU" secondAttribute="height" id="gv5-a8-1Jk"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7WJ-Or-qIu" firstAttribute="bottom" secondItem="MBi-Mp-fJd" secondAttribute="bottom" constant="16" id="IXM-Mm-j03"/>
+                            <constraint firstItem="7WJ-Or-qIu" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MBi-Mp-fJd" secondAttribute="bottom" constant="16" id="IXM-Mm-j03"/>
                             <constraint firstItem="MBi-Mp-fJd" firstAttribute="top" secondItem="7WJ-Or-qIu" secondAttribute="top" constant="16" id="Pa3-Xv-Yf9"/>
                             <constraint firstItem="MBi-Mp-fJd" firstAttribute="leading" secondItem="7WJ-Or-qIu" secondAttribute="leading" constant="16" id="aGc-Rf-3sZ"/>
                             <constraint firstItem="7WJ-Or-qIu" firstAttribute="trailing" secondItem="MBi-Mp-fJd" secondAttribute="trailing" constant="16" id="vEo-xr-exc"/>

@@ -16,25 +16,8 @@
 		AB59BD902229141F00190925 /* NSDictionary+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BD8F2229141F00190925 /* NSDictionary+NSJSONSerialization.m */; };
 		AB59BD95222914C300190925 /* JKSongTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BD94222914C300190925 /* JKSongTableViewController.m */; };
 		AB59BD9A2229151300190925 /* JKSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BD992229151300190925 /* JKSongDetailViewController.m */; };
-		AB59BE0022299C8B00190925 /* libUnirest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB59BDFD22299C3A00190925 /* libUnirest.a */; };
+		AB59BE032229BF2900190925 /* JKLyricFinderController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE022229BF2900190925 /* JKLyricFinderController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		AB59BDFC22299C3A00190925 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB59BDF722299C3900190925 /* Unirest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A9E78BA916E9801F006B80FD;
-			remoteInfo = Unirest;
-		};
-		AB59BDFE22299C3A00190925 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB59BDF722299C3900190925 /* Unirest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A9E78BBA16E9801F006B80FD;
-			remoteInfo = UnirestTests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AB59BD6E222909DA00190925 /* LyricFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +36,8 @@
 		AB59BD94222914C300190925 /* JKSongTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSongTableViewController.m; sourceTree = "<group>"; };
 		AB59BD982229151300190925 /* JKSongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKSongDetailViewController.h; sourceTree = "<group>"; };
 		AB59BD992229151300190925 /* JKSongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSongDetailViewController.m; sourceTree = "<group>"; };
-		AB59BDF722299C3900190925 /* Unirest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Unirest.xcodeproj; path = "../../../Downloads/unirest-obj-c-master/Unirest.xcodeproj"; sourceTree = "<group>"; };
+		AB59BE012229BF2900190925 /* JKLyricFinderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKLyricFinderController.h; sourceTree = "<group>"; };
+		AB59BE022229BF2900190925 /* JKLyricFinderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKLyricFinderController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB59BE0022299C8B00190925 /* libUnirest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +56,6 @@
 			children = (
 				AB59BD70222909DA00190925 /* LyricFinder */,
 				AB59BD6F222909DA00190925 /* Products */,
-				AB59BDE92229983C00190925 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,8 +72,9 @@
 			children = (
 				AB59BD71222909DA00190925 /* AppDelegate.h */,
 				AB59BD72222909DA00190925 /* AppDelegate.m */,
-				AB59BD96222914C700190925 /* View Controllers */,
 				AB59BD8A222912C400190925 /* Model */,
+				AB59BD96222914C700190925 /* View Controllers */,
+				AB59BE042229BF2E00190925 /* Model Controller */,
 				AB59BD922229148900190925 /* Categories */,
 				AB59BD7A222909DB00190925 /* Assets.xcassets */,
 				AB59BD77222909DA00190925 /* Main.storyboard */,
@@ -155,21 +138,13 @@
 			path = JKSongDetailViewController;
 			sourceTree = "<group>";
 		};
-		AB59BDE92229983C00190925 /* Frameworks */ = {
+		AB59BE042229BF2E00190925 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AB59BDF722299C3900190925 /* Unirest.xcodeproj */,
+				AB59BE012229BF2900190925 /* JKLyricFinderController.h */,
+				AB59BE022229BF2900190925 /* JKLyricFinderController.m */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AB59BDF822299C3900190925 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AB59BDFD22299C3A00190925 /* libUnirest.a */,
-				AB59BDFF22299C3A00190925 /* UnirestTests.octest */,
-			);
-			name = Products;
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,35 +192,12 @@
 			mainGroup = AB59BD65222909DA00190925;
 			productRefGroup = AB59BD6F222909DA00190925 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = AB59BDF822299C3900190925 /* Products */;
-					ProjectRef = AB59BDF722299C3900190925 /* Unirest.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				AB59BD6D222909DA00190925 /* LyricFinder */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		AB59BDFD22299C3A00190925 /* libUnirest.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libUnirest.a;
-			remoteRef = AB59BDFC22299C3A00190925 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AB59BDFF22299C3A00190925 /* UnirestTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = UnirestTests.octest;
-			remoteRef = AB59BDFE22299C3A00190925 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AB59BD6C222909DA00190925 /* Resources */ = {
@@ -266,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB59BD902229141F00190925 /* NSDictionary+NSJSONSerialization.m in Sources */,
+				AB59BE032229BF2900190925 /* JKLyricFinderController.m in Sources */,
 				AB59BD89222912C000190925 /* JKSong.m in Sources */,
 				AB59BD95222914C300190925 /* JKSongTableViewController.m in Sources */,
 				AB59BD81222909DB00190925 /* main.m in Sources */,

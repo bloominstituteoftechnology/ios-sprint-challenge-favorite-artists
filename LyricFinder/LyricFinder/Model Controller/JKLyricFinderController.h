@@ -10,17 +10,21 @@
 #import "JKSong.h"
 
 
-typedef void (^CompletionBlock)(NSError *error);
+typedef void (^JKSongCompletionBlock)(NSError *error);
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JKLyricFinderController : NSObject
 
-@property NSDictionary *songs;
+@property (nonatomic, readonly) NSArray *savedSongs;
 
 - (instancetype)init;
 
-- (void)fetchSongInfoByArtist: (NSString *)artist andWithTitle: (NSString *)title withBlock: (CompletionBlock)block;
+- (void)saveSong:(JKSong *)song;
+
+- (void)removeSavedSong:(JKSong *)song;
+
+- (void)fetchSongInfoByArtist: (NSString *)artist andWithTitle: (NSString *)title withBlock: (JKSongCompletionBlock)block;
 
 @end
 

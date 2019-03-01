@@ -13,9 +13,9 @@
 
 @interface JKSong : NSObject
 
-@property NSString *songTitle;
-@property NSString *artistName;
-@property NSString *songLyrics;
+@property (nonatomic, copy) NSString *songTitle;
+@property (nonatomic, copy) NSString *artistName;
+@property (nonatomic, copy) NSString *songLyrics;
 @property double *songRating;
 extern double stepperValue;
 

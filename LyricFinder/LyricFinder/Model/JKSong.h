@@ -7,16 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JKSongDetailViewController.h"
 
-NS_ASSUME_NONNULL_BEGIN
+
 
 @interface JKSong : NSObject
 
 @property NSString *songTitle;
 @property NSString *artistName;
 @property NSString *songLyrics;
-@property NSInteger *songRating;
+@property double *songRating;
+extern double stepperValue;
+
+- (instancetype)initWithSongTitle: (NSString *)songTitle andArtistName: (NSString *)artistName andSongLyrics: (NSString *)songLyrics andSongRating: (double)songRating;
 
 @end
 
-NS_ASSUME_NONNULL_END
+

@@ -21,6 +21,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *songLyricsTextView;
 
+extern double stepperValue;
+
 - (IBAction)valueChanged:(UIStepper *)sender;
 
 @end
@@ -44,6 +46,7 @@
 
 - (IBAction)valueChanged:(UIStepper *)sender {
     double value = [sender value];
+    stepperValue = value;
     
     [_ratingValueLabel setText:[NSString stringWithFormat:@"%d", (int)value]];
 }

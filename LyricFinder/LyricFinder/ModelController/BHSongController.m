@@ -9,13 +9,28 @@
 #import "BHSongController.h"
 #import "BHSong.h"
 
+@interface BHSongController()
+
+
+@end
+
 @implementation BHSongController
 
 -(instancetype)init{
     self = [super init];
     if (self) {
         
-        _songs = [[NSMutableArray<BHSong *> alloc] init];
+        // file manager setup
+        _fileManager = [[NSFileManager alloc] init];
+        _fileManager = [NSFileManager defaultManager];
+        NSURL *documentsDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+        [_fileManager contentsOfDirectoryAtURL:documentsDirectoryURL includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles error:nil];
+        
+        if (![self getSongsFromDisk]) {
+            _songs = [[NSMutableArray<BHSong *> alloc] init];
+        } else {
+            _songs = [self getSongsFromDisk];
+        }
         
     }
     return self;
@@ -64,9 +79,10 @@
     if (![_songs writeToURL:url atomically:YES]) {
         NSLog(@"Failed to writeToURL:'%@'", url);
     }
+    
 }
 
--(NSArray*)getSongsFromDisk {
+-(NSMutableArray*)getSongsFromDisk {
     
     // get the document directory URL
     NSURL *documentsDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
@@ -74,7 +90,8 @@
     // append our file name
     NSURL *url = [documentsDirectoryURL URLByAppendingPathComponent:@"Songs.data" isDirectory:NO];
     
-    return [[NSArray arrayWithContentsOfURL:url] mutableCopy];
+    return [[NSMutableArray arrayWithContentsOfURL:url] mutableCopy];
+
 }
 
 @end

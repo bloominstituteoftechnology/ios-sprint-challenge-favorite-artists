@@ -57,10 +57,16 @@
     NSString *lyrics = self.lyricTextView.text;
     int rating = self.ratingStepper.value;
     
-    if (artist && ![artist isEqualToString:@""] && trackName && ![trackName isEqualToString:@""] && lyrics && ![lyrics isEqualToString:@""]) {
-        [self.lyricController createLyricWithArtist: artist trackName: trackName lyrics: lyrics andRating: rating];
+    if (self.lyric) {
+        [self.lyricController updateLyric: self.lyric withRating: rating];
         [self.navigationController popViewControllerAnimated: YES];
+    } else {
+        if (artist && ![artist isEqualToString:@""] && trackName && ![trackName isEqualToString:@""] && lyrics && ![lyrics isEqualToString:@""]) {
+            [self.lyricController createLyricWithArtist: artist trackName: trackName lyrics: lyrics andRating: rating];
+            [self.navigationController popViewControllerAnimated: YES];
+        }
     }
+    
 }
 
 - (void)updateViews {

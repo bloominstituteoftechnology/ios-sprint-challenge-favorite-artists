@@ -62,6 +62,12 @@
     if ([segue.identifier isEqualToString:@"AddLyricsSegue"]) {
         DRMLyricSearchViewController *destinationVC = segue.destinationViewController;
         destinationVC.lyricController = self.lyricController;
+    } else if ([segue.identifier isEqualToString:@"ShowLyricsSegue"]) {
+        DRMLyricSearchViewController *destinationVC = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        DRMLyric *lyric = self.lyricController.lyrics[indexPath.row];
+        destinationVC.lyricController = self.lyricController;
+        destinationVC.lyric = lyric;
     }
 }
 

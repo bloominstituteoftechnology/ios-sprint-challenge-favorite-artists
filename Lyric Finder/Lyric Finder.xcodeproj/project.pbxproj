@@ -16,6 +16,7 @@
 		2CF230AB22299DE0006A4C2E /* LyricFinderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF230AA22299DE0006A4C2E /* LyricFinderDetailViewController.m */; };
 		2CF230AE22299E0F006A4C2E /* LyricFinderSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF230AD22299E0F006A4C2E /* LyricFinderSearchViewController.m */; };
 		2CF230B22229A048006A4C2E /* IACLyric.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF230B12229A048006A4C2E /* IACLyric.m */; };
+		2CF230B62229B1A9006A4C2E /* IACLyricController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF230B52229B1A9006A4C2E /* IACLyricController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		2CF230AD22299E0F006A4C2E /* LyricFinderSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricFinderSearchViewController.m; sourceTree = "<group>"; };
 		2CF230B02229A048006A4C2E /* IACLyric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IACLyric.h; sourceTree = "<group>"; };
 		2CF230B12229A048006A4C2E /* IACLyric.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IACLyric.m; sourceTree = "<group>"; };
+		2CF230B42229B1A9006A4C2E /* IACLyricController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IACLyricController.h; sourceTree = "<group>"; };
+		2CF230B52229B1A9006A4C2E /* IACLyricController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IACLyricController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 				2C6BE2D02229923C00CE1C24 /* Resources */,
 				2C6BE2D12229925B00CE1C24 /* Views */,
 				2CF230A522299D20006A4C2E /* View Controllers */,
+				2CF230B32229AEB0006A4C2E /* Lyric Controller */,
 				2CF230AF22299F31006A4C2E /* Model */,
 			);
 			path = "Lyric Finder";
@@ -116,6 +120,15 @@
 				2CF230B12229A048006A4C2E /* IACLyric.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2CF230B32229AEB0006A4C2E /* Lyric Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2CF230B42229B1A9006A4C2E /* IACLyricController.h */,
+				2CF230B52229B1A9006A4C2E /* IACLyricController.m */,
+			);
+			path = "Lyric Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF230B62229B1A9006A4C2E /* IACLyricController.m in Sources */,
 				2CF230A822299DB6006A4C2E /* LyricFinderTableViewController.m in Sources */,
 				2C6BE2CA2229921900CE1C24 /* main.m in Sources */,
 				2C6BE2BC2229920700CE1C24 /* AppDelegate.m in Sources */,

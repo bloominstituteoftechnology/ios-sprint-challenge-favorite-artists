@@ -7,26 +7,47 @@
 //
 
 #import "LyricFinderSearchViewController.h"
+#import "IACLyricController.h"
+#import "IACLyric.h"
 
 @interface LyricFinderSearchViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+@property (weak, nonatomic) IBOutlet UITextField *artistTextField;
+@property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
+@property NSInteger rating;
 @end
 
 @implementation LyricFinderSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.rating = 0;
     // Do any additional setup after loading the view.
+    [self updateViews];
+}
+- (IBAction)searchButtonTapped:(id)sender {
+    // Perform fetch results...
+}
+- (IBAction)minusButtonTapped:(id)sender {
+    self.rating -= 1;
+    [self updateViews];
+}
+- (IBAction)addButtonTapped:(id)sender {
+    self.rating += 1;
+    [self updateViews];
+}
+- (IBAction)saveButtonTapped:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews{
+    
+    // Because Objective-C won't let me simply cast an int to a string... :(
+    NSString *ratingString = [NSString stringWithFormat:@"Rating: %ld", (long)self.rating];
+    [self.ratingLabel setText:ratingString];
+    NSLog(@"Hello...%@", self.ratingLabel.text);
+    // And I'm being dumb...
 }
-*/
 
 @end

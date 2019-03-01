@@ -57,8 +57,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t8K-Y4-L1B">
-                                <rect key="frame" x="28" y="132" width="319" height="77.5"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t8K-Y4-L1B">
+                                <rect key="frame" x="28" y="132" width="319" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXo-fq-UpH">
                                         <rect key="frame" x="0.0" y="0.0" width="319" height="20.5"/>
@@ -66,22 +66,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lb-Zz-J5D">
-                                        <rect key="frame" x="0.0" y="28.5" width="319" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3su-Cp-uuR">
+                                        <rect key="frame" x="0.0" y="28.5" width="319" height="30"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kip-Oh-4xl">
-                                        <rect key="frame" x="0.0" y="57" width="319" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Artist" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="auY-Xt-zZ2">
+                                        <rect key="frame" x="0.0" y="66.5" width="319" height="30"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GKO-xT-8n3">
-                                <rect key="frame" x="28" y="217.5" width="319" height="433.5"/>
+                                <rect key="frame" x="28" y="236.5" width="319" height="414.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -101,6 +101,12 @@
                         <viewLayoutGuide key="safeArea" id="ug6-NY-Lsm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="75C-8z-FLB"/>
+                    <connections>
+                        <outlet property="artistTextField" destination="auY-Xt-zZ2" id="73c-91-A4D"/>
+                        <outlet property="lyricsTextView" destination="GKO-xT-8n3" id="nZ9-H4-1ki"/>
+                        <outlet property="ratingLabel" destination="PXo-fq-UpH" id="mVK-jM-8H0"/>
+                        <outlet property="titleTextField" destination="3su-Cp-uuR" id="fFm-Vz-ECF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STA-Vx-fPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +134,10 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1YE-E0-5h6">
                                                 <rect key="frame" x="225" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="addButtonTapped:" destination="3h7-Qw-ccB" eventType="valueChanged" id="YSr-6w-2Eq"/>
+                                                    <action selector="minusButtonTapped:" destination="3h7-Qw-ccB" eventType="valueChanged" id="yYI-hq-krl"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -146,6 +156,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-ES-xyD">
                                         <rect key="frame" x="8" y="113" width="319" height="30"/>
                                         <state key="normal" title="Search For Lyrics"/>
+                                        <connections>
+                                            <action selector="searchButtonTapped:" destination="3h7-Qw-ccB" eventType="touchUpInside" id="aZe-Tm-Jts"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -181,8 +194,18 @@
                         <viewLayoutGuide key="safeArea" id="Xu2-Ni-DJn"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Song Lyrics" id="deC-gO-Jvd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6HY-Zh-sND"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6HY-Zh-sND">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="3h7-Qw-ccB" id="OTe-ZD-7s2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="TgK-FL-Unv" id="ajU-nD-ycM"/>
+                        <outlet property="lyricsTextView" destination="JhD-iG-gyu" id="XgK-yu-3He"/>
+                        <outlet property="ratingLabel" destination="rFo-cM-pBO" id="cRF-4e-LxH"/>
+                        <outlet property="titleTextField" destination="2X5-r3-baj" id="Gon-JY-wzo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQi-rv-jYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

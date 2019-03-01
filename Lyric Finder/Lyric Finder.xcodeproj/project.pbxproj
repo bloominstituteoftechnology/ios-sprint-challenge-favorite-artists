@@ -8,24 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		FFB24CAB222992E80096E395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24CAA222992E80096E395 /* AppDelegate.m */; };
-		FFB24CAE222992E80096E395 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24CAD222992E80096E395 /* ViewController.m */; };
 		FFB24CB1222992E80096E395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB24CAF222992E80096E395 /* Main.storyboard */; };
 		FFB24CB3222992E90096E395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB24CB2222992E90096E395 /* Assets.xcassets */; };
 		FFB24CB6222992E90096E395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB24CB4222992E90096E395 /* LaunchScreen.storyboard */; };
 		FFB24CB9222992E90096E395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24CB8222992E90096E395 /* main.m */; };
+		FFB24CC7222996EA0096E395 /* LMSSongTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24CC6222996EA0096E395 /* LMSSongTableViewController.m */; };
+		FFB24CCA2229971D0096E395 /* LMSSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24CC92229971D0096E395 /* LMSSongDetailViewController.m */; };
+		FFB24CCD2229973A0096E395 /* LMSSong.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24CCC2229973A0096E395 /* LMSSong.m */; };
+		FFB24CD02229974F0096E395 /* LMSSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24CCF2229974F0096E395 /* LMSSongController.m */; };
+		FFB24CD62229991B0096E395 /* LMSSong+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24CD52229991B0096E395 /* LMSSong+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFB24CA6222992E80096E395 /* Lyric Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lyric Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB24CA9222992E80096E395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FFB24CAA222992E80096E395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FFB24CAC222992E80096E395 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FFB24CAD222992E80096E395 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FFB24CB0222992E80096E395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB24CB2222992E90096E395 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB24CB5222992E90096E395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFB24CB7222992E90096E395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB24CB8222992E90096E395 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFB24CC5222996EA0096E395 /* LMSSongTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSSongTableViewController.h; sourceTree = "<group>"; };
+		FFB24CC6222996EA0096E395 /* LMSSongTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSSongTableViewController.m; sourceTree = "<group>"; };
+		FFB24CC82229971C0096E395 /* LMSSongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSSongDetailViewController.h; sourceTree = "<group>"; };
+		FFB24CC92229971D0096E395 /* LMSSongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSSongDetailViewController.m; sourceTree = "<group>"; };
+		FFB24CCB2229973A0096E395 /* LMSSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSSong.h; sourceTree = "<group>"; };
+		FFB24CCC2229973A0096E395 /* LMSSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSSong.m; sourceTree = "<group>"; };
+		FFB24CCE2229974F0096E395 /* LMSSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSSongController.h; sourceTree = "<group>"; };
+		FFB24CCF2229974F0096E395 /* LMSSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSSongController.m; sourceTree = "<group>"; };
+		FFB24CD42229991B0096E395 /* LMSSong+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LMSSong+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		FFB24CD52229991B0096E395 /* LMSSong+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LMSSong+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +70,73 @@
 		FFB24CA8222992E80096E395 /* Lyric Finder */ = {
 			isa = PBXGroup;
 			children = (
+				FFB24CC4222996BE0096E395 /* Model */,
+				FFB24CC3222996390096E395 /* Model Controller */,
+				FFB24CC22229962C0096E395 /* Category */,
+				FFB24CC12229961C0096E395 /* View Controllers */,
+				FFB24CBF222993A80096E395 /* Storyboards */,
+				FFB24CC0222993B90096E395 /* Resources */,
+			);
+			path = "Lyric Finder";
+			sourceTree = "<group>";
+		};
+		FFB24CBF222993A80096E395 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24CAF222992E80096E395 /* Main.storyboard */,
+				FFB24CB4222992E90096E395 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FFB24CC0222993B90096E395 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				FFB24CA9222992E80096E395 /* AppDelegate.h */,
 				FFB24CAA222992E80096E395 /* AppDelegate.m */,
-				FFB24CAC222992E80096E395 /* ViewController.h */,
-				FFB24CAD222992E80096E395 /* ViewController.m */,
-				FFB24CAF222992E80096E395 /* Main.storyboard */,
 				FFB24CB2222992E90096E395 /* Assets.xcassets */,
-				FFB24CB4222992E90096E395 /* LaunchScreen.storyboard */,
 				FFB24CB7222992E90096E395 /* Info.plist */,
 				FFB24CB8222992E90096E395 /* main.m */,
 			);
-			path = "Lyric Finder";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FFB24CC12229961C0096E395 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24CC5222996EA0096E395 /* LMSSongTableViewController.h */,
+				FFB24CC6222996EA0096E395 /* LMSSongTableViewController.m */,
+				FFB24CC82229971C0096E395 /* LMSSongDetailViewController.h */,
+				FFB24CC92229971D0096E395 /* LMSSongDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FFB24CC22229962C0096E395 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24CD42229991B0096E395 /* LMSSong+NSJSONSerialization.h */,
+				FFB24CD52229991B0096E395 /* LMSSong+NSJSONSerialization.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FFB24CC3222996390096E395 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24CCE2229974F0096E395 /* LMSSongController.h */,
+				FFB24CCF2229974F0096E395 /* LMSSongController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		FFB24CC4222996BE0096E395 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24CCB2229973A0096E395 /* LMSSong.h */,
+				FFB24CCC2229973A0096E395 /* LMSSong.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB24CAE222992E80096E395 /* ViewController.m in Sources */,
+				FFB24CCD2229973A0096E395 /* LMSSong.m in Sources */,
+				FFB24CC7222996EA0096E395 /* LMSSongTableViewController.m in Sources */,
+				FFB24CCA2229971D0096E395 /* LMSSongDetailViewController.m in Sources */,
+				FFB24CD62229991B0096E395 /* LMSSong+NSJSONSerialization.m in Sources */,
 				FFB24CB9222992E90096E395 /* main.m in Sources */,
 				FFB24CAB222992E80096E395 /* AppDelegate.m in Sources */,
+				FFB24CD02229974F0096E395 /* LMSSongController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +359,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
-				INFOPLIST_FILE = "Lyric Finder/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Lyric Finder/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
-				INFOPLIST_FILE = "Lyric Finder/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Lyric Finder/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

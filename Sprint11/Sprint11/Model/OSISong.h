@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OSISong : NSObject
 
-@property NSString *title;
-@property NSString *artist;
-@property NSString *lyrics;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *artist;
+@property (nonatomic) NSString *lyrics;
 @property NSInteger rating;
 
 - (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating;

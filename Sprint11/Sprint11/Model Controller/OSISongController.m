@@ -29,6 +29,10 @@ static NSString * const apiKey = @"70692b9171mshcb5f4b3a80503a7p191039jsn6d9be1a
     [[self songs] addObject:song];
 }
 
+- (void)updateSong:(OSISong *)song rating:(NSInteger)rating{
+    song.rating = rating;
+}
+
 - (void)searchForSong:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSDictionary *song, NSError * _Nullable))completion {
     
 //    NSDictionary *headers = @{@"X-RapidAPI-Key": @"70692b9171mshcb5f4b3a80503a7p191039jsn6d9be1aa176e"};

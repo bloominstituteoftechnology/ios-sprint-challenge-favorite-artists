@@ -29,17 +29,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
 }
 
 - (void)saveButton:(id)sender {
+    if (!self.song) {
     NSString *title = self.songTitleTextField.text;
     NSString *artist = self.artistTextField.text;
     NSString *lyrics = self.textBodyTextView.text;
     NSInteger rating = [self.songRating.text intValue];
     
     [_osiSongController createSong:title artist:artist lyrics:lyrics rating:rating];
-    [self.navigationController popViewControllerAnimated:YES];}
+    } else {
+        
+        [_osiSongController updateSong:_song rating:_songRating.text];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
 
 - (void)searchButton:(id)sender {
     [_osiSongController searchForSong:_artistTextField.text trackName:_songTitleTextField.text completion:^(NSDictionary * _Nonnull song, NSError *error) {
@@ -50,27 +57,38 @@
     }];
 }
 
-- (void)setSong:(OSISong *)song {
-    _song = song;
-    [self loadViewIfNeeded];
-    self.title = self.song.title;
-    self.songRating.text = [NSString stringWithFormat:@"%li", (long)self.song.rating];
-    self.songTitleTextField.text = song.title;
-    self.textBodyTextView.text = song.lyrics;
-    self.artistTextField.text = song.artist;
-}
-
 - (void)stepperAction:(UIStepper *)sender {
     if (self.song) {
-        self.song.rating = [NSString stringWithFormat:@"%d", (int)sender.value];
-        _songRating.text = [NSString stringWithFormat:@"%i", (int)self.song.rating];
+        
+        NSNumber *ratingValue = @(sender.value);
+        NSString *ratingString = [NSNumberFormatter localizedStringFromNumber:ratingValue numberStyle:NSNumberFormatterDecimalStyle];
+        self.songRating.text = ratingString;
     } else {
          [_stepperOutlet setValue:5];
-        _songRating.text = [NSString stringWithFormat:@"%i", (int)self.song.rating];
+        NSNumber *ratingValue = @(sender.value);
+        NSString *ratingString = [NSNumberFormatter localizedStringFromNumber:ratingValue numberStyle:NSNumberFormatterDecimalStyle];
+        _songRating.text = ratingString;
     }
     
 }
 
+- (void)updateViews {
+    if (self.isViewLoaded == NO) { return ;}
+
+    if (self.song == nil) {
+        self.title = @"New Song Lyrics";
+        self.songRating.text = @"Rating: 5";
+        self.songTitleTextField.text = @"";
+        self.textBodyTextView.text = @"";
+        self.artistTextField.text = @"";
+    } else {
+        self.title = self.song.title;
+        self.songRating.text = [NSString stringWithFormat:@"%li", (long)self.song.rating];
+        self.songTitleTextField.text = self.song.title;
+        self.textBodyTextView.text = self.song.lyrics;
+        self.artistTextField.text = self.song.artist;
+    }
+}
 
 
 

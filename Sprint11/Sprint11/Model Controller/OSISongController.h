@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OSISong.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)searchForSong:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSDictionary *song, NSError *))completion;
 
 -(void)createSong:(NSString*)title artist:(NSString*)artist lyrics:(NSString*)lyrics rating:(NSInteger)rating;
+
+-(void)updateSong:(OSISong *)song rating:(NSInteger)rating;
 
 @end
 

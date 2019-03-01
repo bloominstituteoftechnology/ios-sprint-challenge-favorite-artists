@@ -12,6 +12,9 @@
 		2C6BE2C42229921900CE1C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6BE2C32229921900CE1C24 /* Assets.xcassets */; };
 		2C6BE2C72229921900CE1C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6BE2C52229921900CE1C24 /* LaunchScreen.storyboard */; };
 		2C6BE2CA2229921900CE1C24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BE2C92229921900CE1C24 /* main.m */; };
+		2CF230A822299DB6006A4C2E /* LyricFinderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF230A722299DB6006A4C2E /* LyricFinderTableViewController.m */; };
+		2CF230AB22299DE0006A4C2E /* LyricFinderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF230AA22299DE0006A4C2E /* LyricFinderDetailViewController.m */; };
+		2CF230AE22299E0F006A4C2E /* LyricFinderSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF230AD22299E0F006A4C2E /* LyricFinderSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,12 @@
 		2C6BE2C62229921900CE1C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C6BE2C82229921900CE1C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C6BE2C92229921900CE1C24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CF230A622299DB6006A4C2E /* LyricFinderTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricFinderTableViewController.h; sourceTree = "<group>"; };
+		2CF230A722299DB6006A4C2E /* LyricFinderTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricFinderTableViewController.m; sourceTree = "<group>"; };
+		2CF230A922299DE0006A4C2E /* LyricFinderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricFinderDetailViewController.h; sourceTree = "<group>"; };
+		2CF230AA22299DE0006A4C2E /* LyricFinderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricFinderDetailViewController.m; sourceTree = "<group>"; };
+		2CF230AC22299E0F006A4C2E /* LyricFinderSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricFinderSearchViewController.h; sourceTree = "<group>"; };
+		2CF230AD22299E0F006A4C2E /* LyricFinderSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricFinderSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +64,11 @@
 		2C6BE2B92229920700CE1C24 /* Lyric Finder */ = {
 			isa = PBXGroup;
 			children = (
+				2C6BE2C92229921900CE1C24 /* main.m */,
 				2C6BE2D02229923C00CE1C24 /* Resources */,
 				2C6BE2D12229925B00CE1C24 /* Views */,
-				2C6BE2C92229921900CE1C24 /* main.m */,
+				2CF230A522299D20006A4C2E /* View Controllers */,
+				2CF230AF22299F31006A4C2E /* Model */,
 			);
 			path = "Lyric Finder";
 			sourceTree = "<group>";
@@ -80,6 +91,26 @@
 				2C6BE2C52229921900CE1C24 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2CF230A522299D20006A4C2E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CF230A622299DB6006A4C2E /* LyricFinderTableViewController.h */,
+				2CF230A722299DB6006A4C2E /* LyricFinderTableViewController.m */,
+				2CF230A922299DE0006A4C2E /* LyricFinderDetailViewController.h */,
+				2CF230AA22299DE0006A4C2E /* LyricFinderDetailViewController.m */,
+				2CF230AC22299E0F006A4C2E /* LyricFinderSearchViewController.h */,
+				2CF230AD22299E0F006A4C2E /* LyricFinderSearchViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2CF230AF22299F31006A4C2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF230A822299DB6006A4C2E /* LyricFinderTableViewController.m in Sources */,
 				2C6BE2CA2229921900CE1C24 /* main.m in Sources */,
 				2C6BE2BC2229920700CE1C24 /* AppDelegate.m in Sources */,
+				2CF230AB22299DE0006A4C2E /* LyricFinderDetailViewController.m in Sources */,
+				2CF230AE22299E0F006A4C2E /* LyricFinderSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

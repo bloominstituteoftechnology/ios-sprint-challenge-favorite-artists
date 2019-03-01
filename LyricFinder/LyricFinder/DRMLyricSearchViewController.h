@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property DRMLyricController *lyricController;
 
+@property DRMLyric *lyric;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -85,7 +85,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qwp-v4-HB8">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qwp-v4-HB8">
                                                 <rect key="frame" x="241" y="0.0" width="94" height="29"/>
                                                 <connections>
                                                     <action selector="changeRating:" destination="vq7-BO-jd4" eventType="valueChanged" id="qdp-DK-Raz"/>
@@ -141,6 +141,7 @@
                         <outlet property="artistTextField" destination="oiK-gy-guc" id="Pav-jN-LP0"/>
                         <outlet property="lyricTextView" destination="v3R-xF-NPu" id="x67-ff-yot"/>
                         <outlet property="ratingLabel" destination="xds-LC-wai" id="ydx-Q0-yAt"/>
+                        <outlet property="ratingStepper" destination="qwp-v4-HB8" id="F0E-eu-rhP"/>
                         <outlet property="trackTextField" destination="fF0-UB-MMt" id="DVh-Nq-1wF"/>
                     </connections>
                 </viewController>

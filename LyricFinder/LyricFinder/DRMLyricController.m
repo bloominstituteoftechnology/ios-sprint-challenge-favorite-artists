@@ -13,6 +13,14 @@
 static NSString * baseURL = @"https://musixmatchcom-musixmatch.p.rapidapi.com/wsr/1.1/matcher.lyrics.get";
 static NSString * apiKey = @"485bf8151emshd2b8d386cb8abf2p1f19ebjsnc1b5d543e37c";
 
+- (instancetype)init {
+    self = [super init];
+    if (self != nil) {
+        _lyrics = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 - (void)createLyricWithArtist:(NSString *)artist trackName:(NSString *)trackName lyrics:(NSString *)lyrics andRating:(int)rating {
     DRMLyric *newLyric = [[DRMLyric alloc] initWith: artist trackName: trackName lyrics: lyrics andRating: rating];
     [self.lyrics addObject: newLyric];

@@ -10,10 +10,12 @@
 #import "BHSearchNetworkController.h"
 #import "BHSongTableViewCell.h"
 #import "BHSongDetailViewController.h"
+#import "BHSongController.h"
 
 @interface BHSongsTableViewController ()
 
 @property BHSearchNetworkController *searchController;
+@property BHSongController *songController;
 
 @end
 
@@ -23,7 +25,7 @@
     [super viewDidLoad];
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     _searchController = [[BHSearchNetworkController alloc] init];
-    
+    _songController = [[BHSongController alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -40,14 +42,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _searchController.songs.count;
+    return _songController.songs.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     BHSongTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"SongCell" forIndexPath:indexPath];
-    BHSong *song = [_searchController.songs objectAtIndex: indexPath.row];
+    BHSong *song = [_songController.songs objectAtIndex: indexPath.row];
     
     cell.textLabel.text = [song title];
     
@@ -67,7 +69,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //add code here for when you hit delete
         // Delete the row from the data source
-        [_searchController.songs removeObjectAtIndex:indexPath.row];
+        [_songController.songs removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
     }
@@ -86,13 +88,14 @@
     if([segue.identifier  isEqual: @"AddNewSongSegue"]){
         // do something
         destVC.searchController = _searchController;
+        destVC.songController = _songController;
         [destVC setIsUpdatingView: NO];
         BHSong *newSong = [[BHSong alloc] init];
         destVC.song = newSong;
         
     } else if ([segue.identifier  isEqual: @"ViewExistingSongSegue"]){
         // do something else
-        destVC.searchController = _searchController;
+        destVC.songController = _songController;
         destVC.isUpdatingView = @YES;
         destVC.song = [_searchController.songs objectAtIndex:indexPath.row];
         

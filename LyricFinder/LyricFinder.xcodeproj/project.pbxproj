@@ -18,6 +18,7 @@
 		D19162FC22299058005CE4FD /* BHSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162FB22299058005CE4FD /* BHSongsTableViewController.m */; };
 		D19162FF22299072005CE4FD /* BHSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162FE22299072005CE4FD /* BHSongDetailViewController.m */; };
 		D19163042229955C005CE4FD /* BHSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163032229955C005CE4FD /* BHSongTableViewCell.m */; };
+		D19163072229A716005CE4FD /* BHSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163062229A716005CE4FD /* BHSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		D19162FE22299072005CE4FD /* BHSongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongDetailViewController.m; sourceTree = "<group>"; };
 		D19163022229955C005CE4FD /* BHSongTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSongTableViewCell.h; sourceTree = "<group>"; };
 		D19163032229955C005CE4FD /* BHSongTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongTableViewCell.m; sourceTree = "<group>"; };
+		D19163052229A716005CE4FD /* BHSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSongController.h; sourceTree = "<group>"; };
+		D19163062229A716005CE4FD /* BHSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				D19162EE22298EF7005CE4FD /* BHSearchNetworkController.h */,
 				D19162EF22298EF7005CE4FD /* BHSearchNetworkController.m */,
+				D19163052229A716005CE4FD /* BHSongController.h */,
+				D19163062229A716005CE4FD /* BHSongController.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				D19162F022298EF7005CE4FD /* BHSearchNetworkController.m in Sources */,
 				D19163042229955C005CE4FD /* BHSongTableViewCell.m in Sources */,
 				D19162F722299006005CE4FD /* NSObject+NSJSONSerialization.m in Sources */,
+				D19163072229A716005CE4FD /* BHSongController.m in Sources */,
 				D19162E822298DD9005CE4FD /* main.m in Sources */,
 				D19162DA22298DD7005CE4FD /* AppDelegate.m in Sources */,
 			);

@@ -9,6 +9,7 @@
 #import "BHSongDetailViewController.h"
 #import "BHSearchNetworkController.h"
 #import "BHSong.h"
+#import "BHSongController.h"
 
 @interface BHSongDetailViewController ()
 
@@ -67,5 +68,19 @@
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
+    
+    _song.rating = [_ratingStepper value];
+    _song.title = [_songNameTextField text];
+    _song.artist = [_artistNameTextField text];
+    _song.lyrics = [_lyricTextView text];
+    
+    if (_isUpdatingView) {
+        [_songController updateSong:_song];
+    } else {
+        [_songController createSong:_song];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 @end

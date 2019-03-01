@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "BHSearchNetworkController.h"
 #import "BHSong.h"
+#import "BHSongController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BHSongDetailViewController : UIViewController
 
 @property BHSearchNetworkController *searchController;
+@property BHSongController *songController;
 @property BHSong *song;
 @property BOOL isUpdatingView;
 

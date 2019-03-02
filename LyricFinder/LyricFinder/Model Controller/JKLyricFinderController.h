@@ -10,7 +10,9 @@
 #import "JKSong.h"
 
 
-typedef void (^JKSongCompletionBlock)(NSError *error);
+typedef void (^JKSongCompletionBlock)(JKSong * _Nullable, NSError * _Nullable);
+
+@class JKSong;
 
 NS_ASSUME_NONNULL_BEGIN
 

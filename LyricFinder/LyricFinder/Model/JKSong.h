@@ -19,7 +19,7 @@
 @property double *songRating;
 extern double stepperValue;
 
-- (instancetype)initWithSongTitle: (NSString *)songTitle andArtistName: (NSString *)artistName andSongLyrics: (NSString *)songLyrics andSongRating: (double)songRating;
+//- (instancetype)initWithSongTitle: (NSString *)songTitle andArtistName: (NSString *)artistName andSongLyrics: (NSString *)songLyrics andSongRating: (double)songRating;
 
 @end
 

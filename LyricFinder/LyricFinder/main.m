@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+// global stepperValue
 double stepperValue;
-
-
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

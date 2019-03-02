@@ -105,22 +105,8 @@ static NSString *xMashapeKey = @"229497ddc9msh1274a5e55aaf19bp1d89a8jsn08a5dcd5d
         return;
     }
     
-    NSArray *results = [decodedObject objectForKey:@"results"];
-    if ([results isKindOfClass:[NSArray class]] == NO) {
-        NSLog(@"JSON does not have results array");
-        completionBlock(nil, nil);
-        return;
-    }
-    
-    NSDictionary *firstResult = [results firstObject];
-    if ([firstResult isKindOfClass:[NSDictionary class]] == NO) {
-        NSLog(@"First JSON result is not a dictionary");
-        completionBlock(nil, nil);
-        return;
-    }
-    
     JKSong *song = [[JKSong alloc] init];
-    song.songLyrics = [firstResult objectForKey:@"lyrics_body"];
+    song.songLyrics = [decodedObject objectForKey:@"lyrics_body"];
     song.artistName = artist;
     song.songTitle = title;
     song.songRating = &(stepperValue);

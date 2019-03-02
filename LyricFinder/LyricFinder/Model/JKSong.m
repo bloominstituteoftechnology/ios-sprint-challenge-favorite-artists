@@ -7,7 +7,7 @@
 //
 
 #import "JKSong.h"
-#import "JKSongDetailViewController.h"
+
 
 @implementation JKSong
 

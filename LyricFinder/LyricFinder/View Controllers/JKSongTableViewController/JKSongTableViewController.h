@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JKLyricFinderController.h"
+#import "JKSongDetailViewController.h"
 
 
 

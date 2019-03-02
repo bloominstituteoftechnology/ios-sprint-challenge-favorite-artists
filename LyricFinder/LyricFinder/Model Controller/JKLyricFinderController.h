@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "JKSong.h"
 
+//@class JKSong;
 
 typedef void (^JKSongCompletionBlock)(JKSong * _Nullable, NSError * _Nullable);
-
-@class JKSong;
 
 NS_ASSUME_NONNULL_BEGIN
 

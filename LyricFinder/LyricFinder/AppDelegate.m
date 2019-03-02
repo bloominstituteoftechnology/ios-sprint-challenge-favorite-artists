@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "JKLyricFinderController.h"
+
 
 @interface AppDelegate ()
 

@@ -29,11 +29,6 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.lyricFinderController.savedSongs.count;
 }
@@ -92,7 +87,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqual:@"ShowSongDetail"]) {
-        JKSongDetailViewController *destinationVC = segue.destinationViewController;
+        JKSongDetailViewController *destinationVC = [segue destinationViewController];
         NSIndexPath *selectedRow = self.tableView.indexPathForSelectedRow;
         NSInteger row = selectedRow.row;
         JKSong *song = [self.lyricFinderController.savedSongs objectAtIndex:row];
@@ -100,7 +95,7 @@
         destinationVC.songRating = song.songRating;
         destinationVC.lyricFinderController = self.lyricFinderController;
     }else if ([segue.identifier isEqual:@"ShowAddNewSongLyrics"]) {
-        JKSongDetailViewController *destinationVC = segue.destinationViewController;
+        JKSongDetailViewController *destinationVC = [segue destinationViewController];
         
         destinationVC.lyricFinderController = self.lyricFinderController;
         destinationVC.songRating = &(stepperValue);

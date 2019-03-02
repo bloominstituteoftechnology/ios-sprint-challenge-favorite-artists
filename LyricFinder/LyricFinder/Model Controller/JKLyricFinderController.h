@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JKLyricFinderController : NSObject
 
-@property (nonatomic, readonly) NSArray *savedSongs;;
+@property (nonatomic, readonly) NSArray *savedSongs;
+
 - (instancetype)init;
 
 - (void)saveSong:(JKSong *)song;

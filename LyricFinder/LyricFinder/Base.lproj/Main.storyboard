@@ -13,7 +13,7 @@
         <!--Lyric Finder-->
         <scene sceneID="RiK-JZ-wwG">
             <objects>
-                <tableViewController id="fRr-cn-q5e" sceneMemberID="viewController">
+                <tableViewController id="fRr-cn-q5e" customClass="JKSongTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="niN-Tb-ZhX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +131,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kck-1X-udK">
                                 <rect key="frame" x="128" y="201" width="119" height="30"/>
                                 <state key="normal" title="Search For Lyrics"/>
+                                <connections>
+                                    <action selector="searchForLyricsButtonTapped:" destination="d7o-Vv-wmh" eventType="touchUpInside" id="fOr-oH-5PS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,7 +154,11 @@
                         <viewLayoutGuide key="safeArea" id="oI1-Tx-nZ4"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Song Lyrics" largeTitleDisplayMode="always" id="I4S-yg-IbA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7MS-ku-xBq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7MS-ku-xBq">
+                            <connections>
+                                <action selector="saveSongButtonTapped:" destination="d7o-Vv-wmh" id="Msk-Es-W1i"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistNameTextField" destination="sPh-Uz-JOg" id="48m-FE-bEq"/>
@@ -186,6 +193,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qr0-0a-riS"/>
+        <segue reference="jv9-sC-L2O"/>
     </inferredMetricsTieBreakers>
 </document>

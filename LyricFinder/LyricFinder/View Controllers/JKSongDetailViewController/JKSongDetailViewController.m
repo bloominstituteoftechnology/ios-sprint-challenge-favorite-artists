@@ -36,8 +36,17 @@ extern double stepperValue;
     self.songTitleTextField.delegate = self;
     self.artistNameTextField.delegate = self;
     self.songLyricsTextView.delegate = self;
+    [self hideSearchView];
+    [self updateViews];
     
 }
+
+- (void)setSong:(JKSong *)song {
+    _song = song;
+    [self updateViews];
+}
+
+
 
 /*
 #pragma mark - Navigation
@@ -49,7 +58,27 @@ extern double stepperValue;
 }
 */
 
-// Big thanks to @Dave Delong for his fantastic 10-15-2011 SO answer on this...
+- (IBAction)saveSongButtonTapped:(id)sender {
+    if (self.song == nil) { return; }
+    
+    [self.lyricFinderController saveSong:self.song];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)searchForLyricsButtonTapped:(id)sender {
+    NSString *title = _songTitleTextField.text;
+    NSString *artist = _artistNameTextField.text;
+    if (title.length == 0 || artist.length == 0) { return; }
+    
+    [self.lyricFinderController fetchSongInfoByArtist:artist andWithTitle:title withBlock:^(JKSong * _Nullable song, NSError * _Nullable error) {
+        
+        self.song = song;
+        NSLog(@"%@", song);
+    }];
+}
+
+
+// Big thanks to @Dave DeLong for his fantastic 10-15-2011 SO answer on this...
 ///https://stackoverflow.com/questions/7779443/how-to-use-uistepper
 - (IBAction)valueChanged:(UIStepper *)sender {
     double value = [sender value];
@@ -58,5 +87,27 @@ extern double stepperValue;
     
     [_ratingValueLabel setText:[NSString stringWithFormat:@"%d", (int)value]];
 }
+
+#pragma mark -Private Methods
+
+- (void)hideSearchView {
+    if (self.song == nil) {return;}
+    self.searchForLyricsButton.hidden = YES;
+//    self.navigationController.title = _song.songTitle;
+//    self.songRating = _song.songRating;
+    
+}
+
+- (void)updateViews {
+    if (self.isViewLoaded == NO) { return; }
+    
+    if (self.song == nil) {
+        self.title = @"New Song Lyrics";
+        self.songLyricsTextView.text = @"Search for a song to find the lyrics";
+    }else {
+        self.title = self.song.songTitle;
+    }
+}
+
 
 @end

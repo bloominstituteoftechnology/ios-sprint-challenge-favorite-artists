@@ -11,17 +11,5 @@
 
 @implementation JKSong
 
-//- (instancetype)initWithSongTitle:(NSString *)songTitle andArtistName:(NSString *)artistName andSongLyrics:(NSString *)songLyrics andSongRating:(double)songRating {
-//    self = [super init];
-//    if (self != nil){
-//        [self setSongTitle:songTitle];
-//        [self setArtistName:artistName];
-//        [self setSongLyrics:songLyrics];
-//        [self setSongRating:&stepperValue];
-//        
-//    }
-//    return self;
-//}
-
 
 @end

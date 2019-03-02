@@ -94,11 +94,12 @@
         destinationVC.song = song;
         destinationVC.songRating = song.songRating;
         destinationVC.lyricFinderController = self.lyricFinderController;
+        
     }else if ([segue.identifier isEqual:@"ShowAddNewSongLyrics"]) {
         JKSongDetailViewController *destinationVC = [segue destinationViewController];
         
         destinationVC.lyricFinderController = self.lyricFinderController;
-        destinationVC.songRating = &(stepperValue);
+        
     }
 }
 

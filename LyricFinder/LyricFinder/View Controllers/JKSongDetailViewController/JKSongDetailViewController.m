@@ -73,7 +73,7 @@ extern double stepperValue;
     [self.lyricFinderController fetchSongInfoByArtist:artist andWithTitle:title withBlock:^(JKSong * _Nullable song, NSError * _Nullable error) {
         
         self.song = song;
-        NSLog(@"%@", song);
+
     }];
 }
 
@@ -83,6 +83,7 @@ extern double stepperValue;
 - (IBAction)valueChanged:(UIStepper *)sender {
     double value = [sender value];
     stepperValue = value;
+    
     NSLog(@"%@", [NSString stringWithFormat:@"%f", stepperValue]);
     
     [_ratingValueLabel setText:[NSString stringWithFormat:@"%d", (int)value]];
@@ -93,9 +94,6 @@ extern double stepperValue;
 - (void)hideSearchView {
     if (self.song == nil) {return;}
     self.searchForLyricsButton.hidden = YES;
-//    self.navigationController.title = _song.songTitle;
-//    self.songRating = _song.songRating;
-    
 }
 
 - (void)updateViews {
@@ -106,6 +104,11 @@ extern double stepperValue;
         self.songLyricsTextView.text = @"Search for a song to find the lyrics";
     }else {
         self.title = self.song.songTitle;
+        self.songTitleTextField.text = self.song.songTitle;
+        self.artistNameTextField.text = self.song.artistName;
+        self.songLyricsTextView.text = self.song.songLyrics;
+        
+        [_ratingValueLabel setText:[NSString stringWithFormat:@"%d", (int)self.song.songRating]];
     }
 }
 

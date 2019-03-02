@@ -16,10 +16,9 @@
 @property (nonatomic, copy) NSString *songTitle;
 @property (nonatomic, copy) NSString *artistName;
 @property (nonatomic, copy) NSString *songLyrics;
-@property double *songRating;
+@property double songRating;
 extern double stepperValue;
 
-//- (instancetype)initWithSongTitle: (NSString *)songTitle andArtistName: (NSString *)artistName andSongLyrics: (NSString *)songLyrics andSongRating: (double)songRating;
 
 @end
 

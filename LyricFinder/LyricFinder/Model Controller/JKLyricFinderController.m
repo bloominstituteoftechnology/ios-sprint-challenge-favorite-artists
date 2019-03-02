@@ -109,7 +109,7 @@ static NSString *xMashapeKey = @"229497ddc9msh1274a5e55aaf19bp1d89a8jsn08a5dcd5d
     song.songLyrics = [decodedObject objectForKey:@"lyrics_body"];
     song.artistName = artist;
     song.songTitle = title;
-    song.songRating = &(stepperValue);
+    song.songRating = stepperValue;
     
     completionBlock(song, nil);
 }

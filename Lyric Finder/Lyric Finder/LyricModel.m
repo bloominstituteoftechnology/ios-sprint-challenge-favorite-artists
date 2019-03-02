@@ -10,7 +10,13 @@
 
 @interface Lyric ()
 
+struct Lyric {
+    NSString title
+    NSString artist
+};
+
 @end
+
 
 
 @implementation Lyric

@@ -14,12 +14,13 @@
 		D19162E822298DD9005CE4FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162E722298DD9005CE4FD /* main.m */; };
 		D19162F022298EF7005CE4FD /* BHSearchNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162EF22298EF7005CE4FD /* BHSearchNetworkController.m */; };
 		D19162F322298F11005CE4FD /* BHSong.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162F222298F11005CE4FD /* BHSong.m */; };
-		D19162F722299006005CE4FD /* NSObject+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162F622299006005CE4FD /* NSObject+NSJSONSerialization.m */; };
 		D19162FC22299058005CE4FD /* BHSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162FB22299058005CE4FD /* BHSongsTableViewController.m */; };
 		D19162FF22299072005CE4FD /* BHSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162FE22299072005CE4FD /* BHSongDetailViewController.m */; };
 		D19163042229955C005CE4FD /* BHSongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163032229955C005CE4FD /* BHSongTableViewCell.m */; };
 		D19163072229A716005CE4FD /* BHSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163062229A716005CE4FD /* BHSongController.m */; };
 		D191630A2229B1C4005CE4FD /* BHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163092229B1C4005CE4FD /* BHFileManager.m */; };
+		D19163102229E319005CE4FD /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D191630F2229E319005CE4FD /* CoreDataStack.m */; };
+		D19163132229F336005CE4FD /* BHSong+NSJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163122229F336005CE4FD /* BHSong+NSJSONSerializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +36,6 @@
 		D19162EF22298EF7005CE4FD /* BHSearchNetworkController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSearchNetworkController.m; sourceTree = "<group>"; };
 		D19162F122298F11005CE4FD /* BHSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSong.h; sourceTree = "<group>"; };
 		D19162F222298F11005CE4FD /* BHSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSong.m; sourceTree = "<group>"; };
-		D19162F522299006005CE4FD /* NSObject+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSJSONSerialization.h"; sourceTree = "<group>"; };
-		D19162F622299006005CE4FD /* NSObject+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		D19162FA22299058005CE4FD /* BHSongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSongsTableViewController.h; sourceTree = "<group>"; };
 		D19162FB22299058005CE4FD /* BHSongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongsTableViewController.m; sourceTree = "<group>"; };
 		D19162FD22299072005CE4FD /* BHSongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSongDetailViewController.h; sourceTree = "<group>"; };
@@ -47,6 +46,10 @@
 		D19163062229A716005CE4FD /* BHSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSongController.m; sourceTree = "<group>"; };
 		D19163082229B1C4005CE4FD /* BHFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHFileManager.h; sourceTree = "<group>"; };
 		D19163092229B1C4005CE4FD /* BHFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHFileManager.m; sourceTree = "<group>"; };
+		D191630E2229E319005CE4FD /* CoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		D191630F2229E319005CE4FD /* CoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		D19163112229F336005CE4FD /* BHSong+NSJSONSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BHSong+NSJSONSerializer.h"; sourceTree = "<group>"; };
+		D19163122229F336005CE4FD /* BHSong+NSJSONSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BHSong+NSJSONSerializer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +100,12 @@
 		D19162F422298F17005CE4FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D19162F522299006005CE4FD /* NSObject+NSJSONSerialization.h */,
-				D19162F622299006005CE4FD /* NSObject+NSJSONSerialization.m */,
 				D19162F122298F11005CE4FD /* BHSong.h */,
+				D19163112229F336005CE4FD /* BHSong+NSJSONSerializer.h */,
+				D19163122229F336005CE4FD /* BHSong+NSJSONSerializer.m */,
 				D19162F222298F11005CE4FD /* BHSong.m */,
+				D191630E2229E319005CE4FD /* CoreDataStack.h */,
+				D191630F2229E319005CE4FD /* CoreDataStack.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,10 +219,11 @@
 				D191630A2229B1C4005CE4FD /* BHFileManager.m in Sources */,
 				D19162F022298EF7005CE4FD /* BHSearchNetworkController.m in Sources */,
 				D19163042229955C005CE4FD /* BHSongTableViewCell.m in Sources */,
-				D19162F722299006005CE4FD /* NSObject+NSJSONSerialization.m in Sources */,
 				D19163072229A716005CE4FD /* BHSongController.m in Sources */,
+				D19163132229F336005CE4FD /* BHSong+NSJSONSerializer.m in Sources */,
 				D19162E822298DD9005CE4FD /* main.m in Sources */,
 				D19162DA22298DD7005CE4FD /* AppDelegate.m in Sources */,
+				D19163102229E319005CE4FD /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +364,7 @@
 		D19162EC22298DD9005CE4FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5U94G8XN2;
@@ -375,6 +382,7 @@
 		D19162ED22298DD9005CE4FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5U94G8XN2;

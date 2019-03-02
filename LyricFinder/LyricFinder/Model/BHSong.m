@@ -21,4 +21,15 @@
     return self;
 }
 
+- (instancetype)initWithTitle: (NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics uuid:(NSString *)uuid{
+    self = [super init];
+    if (self) {
+        _UUID = uuid;
+        _title = title;
+        _artist = artist;
+        _lyrics = lyrics;
+    }
+    return self;
+}
+
 @end

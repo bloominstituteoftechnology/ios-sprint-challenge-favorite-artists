@@ -1,17 +1,18 @@
 //
-//  NSObject+NSJSONSerialization.h
+//  BHSong+NSJSONSerializer.h
 //  LyricFinder
 //
 //  Created by Benjamin Hakes on 3/1/19.
 //  Copyright © 2019 Benjamin Hakes. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BHSong.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (NSJSONSerialization)
+@interface BHSong (NSJSONSerializer)
 
+-(NSDictionary *)makeDictionaryFromSong: (BHSong *)song;
 
 @end
 

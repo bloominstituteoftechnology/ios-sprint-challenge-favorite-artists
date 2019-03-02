@@ -48,24 +48,12 @@
         }
         
         NSString *lyrics_body = dictionary[@"lyrics_body"];
-//        NSArray *forecasts = dictionary[@"list"];
-        
-//        for (NSDictionary *forecastTemp in songs) {
-//            NSString *forecastIconId = forecastTemp[@"weather"][0][@"icon"];
-//            NSNumber *forecastDayTemp = forecastTemp[@"temp"][@"day"];
-//            BHSong *song = [[CGAForecast alloc] initWithCity:cityName temperature:forecastDayTemp forecastIcon: [UIImage imageNamed: forecastIconId]];
-//            [[self songs] addObject:forecast];
-//        }
         
         completion(lyrics_body, nil);
         
     }] resume];
     
 }
-
-
-
-
 
 static NSString * const baseURLString = @"https://musixmatchcom-musixmatch.p.rapidapi.com/wsr/1.1/matcher.lyrics.get";
 static NSString * const apiKey = @"168ccdedc4msh7ab784d5d3d2678p168253jsn0b531d8de768";

@@ -8,6 +8,7 @@
 
 #import "BHSongController.h"
 #import "BHSong.h"
+#import "BHSong+NSJSONSerializer.h"
 
 @interface BHSongController()
 
@@ -76,7 +77,23 @@
     // append our file name
     NSURL *url = [documentsDirectoryURL URLByAppendingPathComponent:@"Songs.data" isDirectory:NO];
     
-    if (![_songs writeToURL:url atomically:YES]) {
+    NSUInteger j = [_songs count];
+    
+    NSMutableArray *topLevelArray = [[NSMutableArray alloc] init];
+    
+    for (int q = 0; q < j; q++)
+    {
+        
+        BHSong *thisObject = [_songs objectAtIndex:q];
+        
+        NSDictionary *newDictionary = [thisObject makeDictionaryFromSong:thisObject];
+        
+        [topLevelArray addObject:newDictionary];
+    }
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:topLevelArray options:NSJSONWritingPrettyPrinted error:nil];
+    
+    if (![data writeToURL:url atomically:YES]) {
         NSLog(@"Failed to writeToURL:'%@'", url);
     }
     
@@ -90,7 +107,25 @@
     // append our file name
     NSURL *url = [documentsDirectoryURL URLByAppendingPathComponent:@"Songs.data" isDirectory:NO];
     
-    return [[NSMutableArray arrayWithContentsOfURL:url] mutableCopy];
+    NSData* data = [NSData dataWithContentsOfURL:url];
+
+    NSMutableArray *objects = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    
+    NSUInteger j = [objects count];
+    
+    NSMutableArray *newArray = [[NSMutableArray<BHSong *> alloc] init];
+    
+    for (int q = 0; q < j; q++)
+    {
+        
+        NSDictionary *thisObject = [objects objectAtIndex:q];
+        
+        BHSong *newSong = [[BHSong alloc] initWithTitle:[thisObject objectForKey:@"title"] artist:[thisObject objectForKey:@"artist"] lyrics:[thisObject objectForKey:@"lyrics"] uuid:[thisObject objectForKey:@"uuid"]];
+
+        [newArray addObject:newSong];
+    }
+
+    return newArray;
 
 }
 

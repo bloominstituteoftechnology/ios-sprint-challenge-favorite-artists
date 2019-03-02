@@ -32,10 +32,11 @@ extern double stepperValue;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     self.songTitleTextField.delegate = self;
     self.artistNameTextField.delegate = self;
     self.songLyricsTextView.delegate = self;
-    // Do any additional setup after loading the view.
+    
 }
 
 /*

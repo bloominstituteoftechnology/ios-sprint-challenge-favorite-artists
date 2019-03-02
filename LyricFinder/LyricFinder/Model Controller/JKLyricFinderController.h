@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "JKSong.h"
 
-//@class JKSong;
+@class JKSong;
 
 typedef void (^JKSongCompletionBlock)(JKSong * _Nullable, NSError * _Nullable);
 
@@ -17,8 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JKLyricFinderController : NSObject
 
-@property (nonatomic, readonly) NSArray *savedSongs;
-
+@property (nonatomic, readonly) NSArray *savedSongs;;
 - (instancetype)init;
 
 - (void)saveSong:(JKSong *)song;

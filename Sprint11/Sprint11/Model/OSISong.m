@@ -10,7 +10,7 @@
 
 @implementation OSISong
 
-- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating {
+- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSString*)rating {
     
     self = [super init];
     if (self) {

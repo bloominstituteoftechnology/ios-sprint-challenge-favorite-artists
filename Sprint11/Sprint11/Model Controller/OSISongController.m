@@ -23,13 +23,13 @@ static NSString * const apiKey = @"70692b9171mshcb5f4b3a80503a7p191039jsn6d9be1a
     return self;
 }
 
-- (void)createSong:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating {
+- (void)createSong:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSString *)rating {
     
     OSISong *song = [[OSISong alloc] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     [[self songs] addObject:song];
 }
 
-- (void)updateSong:(OSISong *)song rating:(NSInteger)rating{
+- (void)updateSong:(OSISong *)song rating:(NSString *)rating{
     song.rating = rating;
 }
 

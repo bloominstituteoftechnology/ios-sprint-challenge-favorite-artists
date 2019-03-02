@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)searchForSong:(NSString *)artist trackName:(NSString *)trackName completion:(void (^)(NSDictionary *song, NSError *))completion;
 
--(void)createSong:(NSString*)title artist:(NSString*)artist lyrics:(NSString*)lyrics rating:(NSInteger)rating;
+-(void)createSong:(NSString*)title artist:(NSString*)artist lyrics:(NSString*)lyrics rating:(NSString *)rating;
 
--(void)updateSong:(OSISong *)song rating:(NSInteger)rating;
+-(void)updateSong:(OSISong *)song rating:(NSString *)rating;
 
 @end
 

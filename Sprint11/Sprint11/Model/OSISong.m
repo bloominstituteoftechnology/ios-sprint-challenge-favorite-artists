@@ -10,7 +10,7 @@
 
 @implementation OSISong
 
-- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSString*)rating {
+- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSString*)rating stepperValue:(int)stepperValue {
     
     self = [super init];
     if (self) {
@@ -18,6 +18,7 @@
         _artist = artist;
         _lyrics = lyrics;
         _rating = rating;
+        _stepperValue = stepperValue;
     }
     
     return self;

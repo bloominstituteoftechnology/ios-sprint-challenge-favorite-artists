@@ -16,8 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *artist;
 @property (nonatomic) NSString *lyrics;
 @property (nonatomic) NSString* rating;
+@property (nonatomic) int stepperValue;
 
-- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSString*)rating;
+- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSString*)rating stepperValue:(int)stepperValue;
 
 @end
 

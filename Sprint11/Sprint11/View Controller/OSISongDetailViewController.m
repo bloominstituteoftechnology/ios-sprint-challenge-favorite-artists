@@ -35,18 +35,23 @@
     self.stepperOutlet.maximumValue = 5;
 }
 
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    [self updateViews];
+//}
+
 - (void)saveButton:(id)sender {
     if (!self.song) {
     NSString *title = self.songTitleTextField.text;
     NSString *artist = self.artistTextField.text;
     NSString *lyrics = self.textBodyTextView.text;
     NSString *rating = self.songRating.text;
-    
-    [_osiSongController createSong:title artist:artist lyrics:lyrics rating:rating];
+    int stepperValue = self.stepperOutlet.value;
+        [_osiSongController createSong:title artist:artist lyrics:lyrics rating:rating stepperValue:stepperValue];
     } else {
-        NSNumber *ratingValue = @((int)self.stepperOutlet.value);
+        NSNumber *ratingValue = @(_stepperOutlet.value);
         NSString *ratingString = [NSNumberFormatter localizedStringFromNumber:ratingValue numberStyle:NSNumberFormatterDecimalStyle];
-        [_osiSongController updateSong:_song rating:[@"Rating: " stringByAppendingString:ratingString]];
+        [_osiSongController updateSong:_song rating:[@"Rating: " stringByAppendingString:ratingString] stepperValue:_stepperOutlet.value];
     }
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -77,13 +82,17 @@
     if (self.song == nil) {
         self.title = @"New Song Lyrics";
         
-        NSNumber *ratingValue = @((int)_stepperOutlet.value);
+        NSNumber *ratingValue = @(_stepperOutlet.value);
         NSString *ratingString = [NSNumberFormatter localizedStringFromNumber:ratingValue numberStyle:NSNumberFormatterDecimalStyle];
         self.songRating.text = [@"Rating: " stringByAppendingString:ratingString];
         self.songTitleTextField.text = @"";
         self.textBodyTextView.text = @"";
         self.artistTextField.text = @"";
     } else {
+        [self.stepperOutlet setValue:_song.stepperValue];
+        NSNumber *ratingValue = @(_song.stepperValue);
+        NSString *ratingString = [NSNumberFormatter localizedStringFromNumber:ratingValue numberStyle:NSNumberFormatterDecimalStyle];
+        self.songRating.text = [@"Rating: " stringByAppendingString:ratingString];
         self.title = self.song.title;
         self.songRating.text = self.song.rating;
         self.songTitleTextField.text = self.song.title;

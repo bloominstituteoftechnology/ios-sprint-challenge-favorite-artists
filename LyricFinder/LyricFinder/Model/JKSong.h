@@ -8,16 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-
-
+extern NSNumber *ratingStepperValue;
 
 @interface JKSong : NSObject
 
 @property (nonatomic, copy) NSString *songTitle;
 @property (nonatomic, copy) NSString *artistName;
 @property (nonatomic, copy) NSString *songLyrics;
-@property double songRating;
-extern double stepperValue;
+@property (nonatomic)NSNumber *jKSongRating;
+
 
 
 @end

@@ -10,7 +10,8 @@
 #import "AppDelegate.h"
 
 // global stepperValue
-double stepperValue;
+NSNumber *ratingStepperValue;
+
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

@@ -22,7 +22,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *songLyricsTextView;
 
-extern double stepperValue;
 
 - (IBAction)valueChanged:(UIStepper *)sender;
 
@@ -59,9 +58,11 @@ extern double stepperValue;
 */
 
 - (IBAction)saveSongButtonTapped:(id)sender {
+
     if (self.song == nil) { return; }
-    
+    self.song.jKSongRating = ratingStepperValue;
     [self.lyricFinderController saveSong:self.song];
+//    [self.lyricFinderController saveToNSUserDefaults];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -74,6 +75,7 @@ extern double stepperValue;
         
         self.song = song;
 
+
     }];
 }
 
@@ -81,12 +83,11 @@ extern double stepperValue;
 // Big thanks to @Dave DeLong for his fantastic 10-15-2011 SO answer on this...
 ///https://stackoverflow.com/questions/7779443/how-to-use-uistepper
 - (IBAction)valueChanged:(UIStepper *)sender {
-    double value = [sender value];
-    stepperValue = value;
+    int value = [sender value];
     
-    NSLog(@"%@", [NSString stringWithFormat:@"%f", stepperValue]);
-    
-    [_ratingValueLabel setText:[NSString stringWithFormat:@"%d", (int)value]];
+    ratingStepperValue = [NSNumber numberWithDouble:value];
+ 
+    [_ratingValueLabel setText:[NSString stringWithFormat:@"%@", ratingStepperValue]];
 }
 
 #pragma mark -Private Methods
@@ -108,7 +109,8 @@ extern double stepperValue;
         self.artistNameTextField.text = self.song.artistName;
         self.songLyricsTextView.text = self.song.songLyrics;
         
-        [_ratingValueLabel setText:[NSString stringWithFormat:@"%d", (int)self.song.songRating]];
+        if (self.song.jKSongRating == NULL) { self.song.jKSongRating = [NSNumber numberWithInt:(0)]; }
+        [_ratingValueLabel setText:[NSString stringWithFormat:@"%@", self.song.jKSongRating]];
     }
 }
 

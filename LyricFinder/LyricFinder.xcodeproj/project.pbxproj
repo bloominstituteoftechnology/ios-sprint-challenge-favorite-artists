@@ -55,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				AB59BD70222909DA00190925 /* LyricFinder */,
+				AB59BD922229148900190925 /* Categories */,
 				AB59BD6F222909DA00190925 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +76,6 @@
 				AB59BD8A222912C400190925 /* Model */,
 				AB59BD96222914C700190925 /* View Controllers */,
 				AB59BE042229BF2E00190925 /* Model Controller */,
-				AB59BD922229148900190925 /* Categories */,
 				AB59BD7A222909DB00190925 /* Assets.xcassets */,
 				AB59BD77222909DA00190925 /* Main.storyboard */,
 				AB59BD7C222909DB00190925 /* LaunchScreen.storyboard */,

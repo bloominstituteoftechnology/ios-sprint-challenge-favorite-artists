@@ -17,13 +17,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JKLyricFinderController : NSObject
 
-@property (nonatomic, readonly) NSArray *savedSongs;
+@property (nonatomic) NSArray *savedSongs;
 
 - (instancetype)init;
 
 - (void)saveSong:(JKSong *)song;
 
 - (void)removeSavedSong:(JKSong *)song;
+
+- (void)saveToNSUserDefaults;
 
 - (void)fetchSongInfoByArtist: (NSString *)artist andWithTitle: (NSString *)title withBlock: (JKSongCompletionBlock)block;
 

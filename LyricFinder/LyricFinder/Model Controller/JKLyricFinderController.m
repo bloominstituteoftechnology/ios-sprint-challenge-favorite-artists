@@ -25,12 +25,19 @@ static NSString *xMashapeKey = @"229497ddc9msh1274a5e55aaf19bp1d89a8jsn08a5dcd5d
     return self;
 }
 
+- (void)saveToNSUserDefaults {
+    [[NSUserDefaults standardUserDefaults] setObject:_savedSongs forKey:@"SavedSongs"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 - (void)saveSong:(JKSong *)song {
     [_savedSongs addObject:song];
+//    [self saveToNSUserDefaults];
 }
 
 - (void)removeSavedSong:(JKSong *)song {
     [_savedSongs removeObject:song];
+//    [self saveToNSUserDefaults];
 }
 
 - (void)fetchSongInfoByArtist:(NSString *)artist andWithTitle:(NSString *)title withBlock:(JKSongCompletionBlock)completionBlock {
@@ -73,10 +80,7 @@ static NSString *xMashapeKey = @"229497ddc9msh1274a5e55aaf19bp1d89a8jsn08a5dcd5d
 
 - (void)processResponse:(NSData *)data error:(NSError *)error byArtist:(NSString *)artist forSongTitle:(NSString *)title completionBlock:(JKSongCompletionBlock)completionBlock {
     
-    // when the data task completes:
-    // check for errors
-    // try to decode the JSON
-    // report back via the completion handler
+
     if (error != nil) {
         NSLog(@"Error fetching person information: %@", error);
         completionBlock(nil, error);
@@ -85,7 +89,6 @@ static NSString *xMashapeKey = @"229497ddc9msh1274a5e55aaf19bp1d89a8jsn08a5dcd5d
     
     if (data == nil) {
         NSLog(@"No error, but missing data???");
-        // maybe i should create an NSError to report here?
         completionBlock(nil, nil);
         return;
     }
@@ -109,7 +112,7 @@ static NSString *xMashapeKey = @"229497ddc9msh1274a5e55aaf19bp1d89a8jsn08a5dcd5d
     song.songLyrics = [decodedObject objectForKey:@"lyrics_body"];
     song.artistName = artist;
     song.songTitle = title;
-    song.songRating = stepperValue;
+    song.jKSongRating = ratingStepperValue;
     
     completionBlock(song, nil);
 }

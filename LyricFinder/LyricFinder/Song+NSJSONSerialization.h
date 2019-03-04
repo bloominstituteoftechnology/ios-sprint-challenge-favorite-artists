@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Song (NSJSONSerialization)
 
-
+- (instancetype)initWithDictionary: (NSDictionary *)dictionary;
 - (NSDictionary *)songAsDictionary: (Song *)song;
 
 @end

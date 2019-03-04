@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSMutableArray *savedSongsArray;
 
 - (void)saveSongwithTrack: (NSString *)track withArtist: (NSString *)artist withLyrics: (NSString *)lyrics withRating: (NSInteger)rating;
-
+- (NSArray *)loadSongs;
 @end
 
 NS_ASSUME_NONNULL_END

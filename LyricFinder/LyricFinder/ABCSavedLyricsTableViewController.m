@@ -9,10 +9,13 @@
 #import "ABCSavedLyricsTableViewController.h"
 #import "ABCSongController.h"
 #import "ABCLyricsSearchViewController.h"
+#import "Song+NSJSONSerialization.h"
 
 @interface ABCSavedLyricsTableViewController ()
 
 @property ABCSongController *songController;
+@property NSInteger count;
+@property Song *song;
 
 @end
 
@@ -21,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _songController = [[ABCSongController alloc] init];
+    _count = 0;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -31,6 +36,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[self tableView] reloadData];
+    _count += 1;
+    
 }
 #pragma mark - Table view data source
 
@@ -46,46 +53,61 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [[_songController.savedSongsArray objectAtIndex:indexPath.row] title];
-    cell.detailTextLabel.text = [NSString stringWithFormat: @"%lu", [[_songController.savedSongsArray objectAtIndex:indexPath.row] rating]];
+    
+    //FIXME: This is a bad band-aid fix.
+    if ([_songController.savedSongsArray objectAtIndex:indexPath.row] == [_songController.savedSongsArray objectAtIndex: _songController.savedSongsArray.count - 1] && _count > 1) {
+        NSDictionary *songDictionary = _songController.savedSongsArray.lastObject;
+        _song = [_song initWithDictionary:songDictionary];
+    } else {
+        _song = [_songController.savedSongsArray objectAtIndex:indexPath.row];
+    }
+    
+    
+    
+    
+    
+    cell.textLabel.text = _song.title;
+    NSInteger rating = _song.rating;
+    NSString *ratingString = [[NSString alloc] initWithFormat:@"%lu", rating];
+    cell.detailTextLabel.text = ratingString;
     
     return cell;
 }
 
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 
 #pragma mark - Navigation

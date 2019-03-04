@@ -33,8 +33,16 @@
 
 - (IBAction)saveButtonTapped:(id)sender {
     if (_lyricsTextView.text != nil) {
-        [_songController saveSongwithTrack: _trackTextField.text withArtist:_artistTextField.text withLyrics:_lyricsTextView.text withRating: [_ratingLabel.text integerValue] ];
-        
+        NSBlockOperation *saveOp = [[NSBlockOperation alloc] init];
+        NSOperationQueue *opQueue = [[NSOperationQueue alloc] init];
+        NSString *track = [[NSString alloc] initWithString:_trackTextField.text];
+        NSString *artist = [[NSString alloc] initWithString:_artistTextField.text];
+        NSString *lyrics = [[NSString alloc] initWithString:_lyricsTextView.text];
+        NSInteger rating = [[[NSString alloc] initWithString:_ratingLabel.text] integerValue];
+        [saveOp addExecutionBlock:^{
+            [self->_songController saveSongwithTrack:track withArtist:artist withLyrics:lyrics withRating:rating];
+        }];
+        [opQueue addOperation:saveOp];
     }
 }
 
@@ -56,6 +64,7 @@
         NSOperationQueue *opQueue = [[NSOperationQueue alloc] init];
         [opQueue addOperation:fetchOperation];
         [opQueue addOperation:updateOperation];
+        
 
         
     }

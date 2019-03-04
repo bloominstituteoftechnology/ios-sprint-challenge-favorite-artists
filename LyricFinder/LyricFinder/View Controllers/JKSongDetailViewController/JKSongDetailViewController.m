@@ -8,6 +8,7 @@
 
 #import "JKSongDetailViewController.h"
 
+
 @interface JKSongDetailViewController () <UITextFieldDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *ratingValueLabel;
@@ -62,7 +63,6 @@
     if (self.song == nil) { return; }
     self.song.jKSongRating = ratingStepperValue;
     [self.lyricFinderController saveSong:self.song];
-//    [self.lyricFinderController saveToNSUserDefaults];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

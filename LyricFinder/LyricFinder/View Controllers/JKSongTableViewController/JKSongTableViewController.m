@@ -21,13 +21,16 @@
     [super viewDidLoad];
     _lyricFinderController = [[JKLyricFinderController alloc] init];
     
-//    if ( _lyricFinderController.savedSongs == nil ){
-//        _lyricFinderController.savedSongs = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"SavedSongs"] mutableCopy];
+//    if ( _lyricFinderController.savedSongs.count == 0 ){
+//        [_lyricFinderController loadWithNSFileManger];
+//        NSLog(@"%@", _lyricFinderController.savedSongs);
 //    }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
     [[self tableView] reloadData];
 }
 

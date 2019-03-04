@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JKLyricFinderController.h"
+#import "NSDictionary+NSJSONSerialization.h"
 
 
 

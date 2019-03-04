@@ -25,7 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)removeSavedSong:(JKSong *)song;
 
-- (void)saveToNSUserDefaults;
+- (void)saveWithNSFileManager;
+
+- (void)loadWithNSFileManger;
 
 - (void)fetchSongInfoByArtist: (NSString *)artist andWithTitle: (NSString *)title withBlock: (JKSongCompletionBlock)block;
 

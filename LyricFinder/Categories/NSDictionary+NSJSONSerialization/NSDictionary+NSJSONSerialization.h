@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDictionary (NSJSONSerialization)
 
++ (void)savedSongsDictFrom:(NSArray *)savedSongs;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -25,19 +25,32 @@ static NSString *xMashapeKey = @"229497ddc9msh1274a5e55aaf19bp1d89a8jsn08a5dcd5d
     return self;
 }
 
-- (void)saveToNSUserDefaults {
-    [[NSUserDefaults standardUserDefaults] setObject:_savedSongs forKey:@"SavedSongs"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+- (void)saveWithNSFileManager {
+    // get the document directory URL
+    NSURL *documentsDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    // append our file name
+    NSURL *url = [documentsDirectoryURL URLByAppendingPathComponent:@"SavedSongs" isDirectory:NO];
+    // write our array to the file
+    [_savedSongs writeToURL:url atomically:YES];
+}
+
+- (void)loadWithNSFileManger {
+    // get the document directory URL
+    NSURL *documentsDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    // append our file name
+    NSURL *url = [documentsDirectoryURL URLByAppendingPathComponent:@"SavedSongs" isDirectory:NO];
+    // read (mutable) array from file
+    _savedSongs = [[NSArray arrayWithContentsOfURL:url] mutableCopy];
 }
 
 - (void)saveSong:(JKSong *)song {
     [_savedSongs addObject:song];
-//    [self saveToNSUserDefaults];
+    [self saveWithNSFileManager];
 }
 
 - (void)removeSavedSong:(JKSong *)song {
     [_savedSongs removeObject:song];
-//    [self saveToNSUserDefaults];
+    [self saveWithNSFileManager];
 }
 
 - (void)fetchSongInfoByArtist:(NSString *)artist andWithTitle:(NSString *)title withBlock:(JKSongCompletionBlock)completionBlock {

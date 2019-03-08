@@ -15,6 +15,8 @@
 		4C1E2CF122299BB300723CCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E2CF022299BB300723CCB /* main.m */; };
 		4C1E2CF92229A65700723CCB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E2CF82229A65700723CCB /* SearchViewController.m */; };
 		4C1E2CFF2229B4F900723CCB /* LyricModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E2CFE2229B4F900723CCB /* LyricModel.m */; };
+		4C2190F32232D81700D5A845 /* LyricsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2190F22232D81700D5A845 /* LyricsController.m */; };
+		4C2190F62232D8CE00D5A845 /* LyricsJSONSerialisation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2190F52232D8CE00D5A845 /* LyricsJSONSerialisation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		4C1E2CF82229A65700723CCB /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		4C1E2CFD2229B4B000723CCB /* LyricModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricModel.h; sourceTree = "<group>"; };
 		4C1E2CFE2229B4F900723CCB /* LyricModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricModel.m; sourceTree = "<group>"; };
+		4C2190F12232D81700D5A845 /* LyricsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricsController.h; sourceTree = "<group>"; };
+		4C2190F22232D81700D5A845 /* LyricsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricsController.m; sourceTree = "<group>"; };
+		4C2190F42232D8CE00D5A845 /* LyricsJSONSerialisation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricsJSONSerialisation.h; sourceTree = "<group>"; };
+		4C2190F52232D8CE00D5A845 /* LyricsJSONSerialisation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricsJSONSerialisation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,16 +72,44 @@
 			children = (
 				4C1E2CE122299BB100723CCB /* AppDelegate.h */,
 				4C1E2CE222299BB100723CCB /* AppDelegate.m */,
+				4C2190F82232D90F00D5A845 /* Model */,
+				4C2190F72232D8E300D5A845 /* Managers */,
 				4C5E8A47222E050C003480FB /* View Controllers */,
-				4C1E2CFD2229B4B000723CCB /* LyricModel.h */,
-				4C1E2CFE2229B4F900723CCB /* LyricModel.m */,
-				4C1E2CE722299BB100723CCB /* Main.storyboard */,
+				4C2190F92232D92100D5A845 /* Storyboards */,
 				4C1E2CEA22299BB300723CCB /* Assets.xcassets */,
-				4C1E2CEC22299BB300723CCB /* LaunchScreen.storyboard */,
 				4C1E2CEF22299BB300723CCB /* Info.plist */,
 				4C1E2CF022299BB300723CCB /* main.m */,
 			);
 			path = "Lyric Finder";
+			sourceTree = "<group>";
+		};
+		4C2190F72232D8E300D5A845 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4C2190F42232D8CE00D5A845 /* LyricsJSONSerialisation.h */,
+				4C2190F52232D8CE00D5A845 /* LyricsJSONSerialisation.m */,
+				4C2190F12232D81700D5A845 /* LyricsController.h */,
+				4C2190F22232D81700D5A845 /* LyricsController.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4C2190F82232D90F00D5A845 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E2CFD2229B4B000723CCB /* LyricModel.h */,
+				4C1E2CFE2229B4F900723CCB /* LyricModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C2190F92232D92100D5A845 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E2CE722299BB100723CCB /* Main.storyboard */,
+				4C1E2CEC22299BB300723CCB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		4C5E8A47222E050C003480FB /* View Controllers */ = {
@@ -160,10 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1E2CE622299BB100723CCB /* LyricTableController.m in Sources */,
+				4C2190F32232D81700D5A845 /* LyricsController.m in Sources */,
 				4C1E2CF122299BB300723CCB /* main.m in Sources */,
 				4C1E2CF92229A65700723CCB /* SearchViewController.m in Sources */,
 				4C1E2CE322299BB100723CCB /* AppDelegate.m in Sources */,
 				4C1E2CFF2229B4F900723CCB /* LyricModel.m in Sources */,
+				4C2190F62232D8CE00D5A845 /* LyricsJSONSerialisation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

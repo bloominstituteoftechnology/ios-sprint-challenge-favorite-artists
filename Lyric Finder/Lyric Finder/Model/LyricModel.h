@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy) NSString *lyrics;
 @property int rating;
 
-- (instancetype)init: (NSString *)song artist: (NSString *)musician lyrics: (NSString *)lyrics score: (int)rating;
+- (instancetype)initLyrics: (NSString *)song musician: (NSString *)musician lyrics: (NSString *)lyrics score: (int)rating;
 
 @end
 

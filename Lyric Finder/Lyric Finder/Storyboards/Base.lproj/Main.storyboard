@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="cIn-v5-tih" kind="show" identifier="viewSegue" id="p7X-vp-Vpp"/>
+                                    <segue destination="rcp-t3-eZL" kind="show" identifier="viewSegue" id="nHX-GR-hK2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,76 +47,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdZ-aE-ISO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853.60000000000002" y="-120.08995502248877"/>
-        </scene>
-        <!--View Lyrics-->
-        <scene sceneID="Vw9-aC-lJg">
-            <objects>
-                <viewController title="View Lyrics" id="cIn-v5-tih" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7w9-QS-qSa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="S7q-fo-P4g">
-                                <rect key="frame" x="16" y="137" width="343" height="510"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-OT-6f4">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="114"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozr-xs-smy">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R0g-qn-QSY">
-                                                <rect key="frame" x="0.0" y="39" width="343" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Musician:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1E-oT-NGe">
-                                                <rect key="frame" x="0.0" y="84" width="343" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWL-tp-Icu">
-                                        <rect key="frame" x="114" y="129" width="115" height="30"/>
-                                        <state key="normal" title="Search for Lyrics"/>
-                                        <connections>
-                                            <segue destination="rcp-t3-eZL" kind="show" id="ZhI-7x-nWC"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-5u-h0e">
-                                        <rect key="frame" x="0.0" y="174" width="343" height="336"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Ha4-OT-6f4" firstAttribute="leading" secondItem="S7q-fo-P4g" secondAttribute="leading" id="1zm-Tf-y5Z"/>
-                                    <constraint firstItem="Ha4-OT-6f4" firstAttribute="top" secondItem="S7q-fo-P4g" secondAttribute="top" id="F4t-zl-afM"/>
-                                    <constraint firstItem="YWL-tp-Icu" firstAttribute="top" secondItem="Ha4-OT-6f4" secondAttribute="bottom" constant="15" id="t12-jf-h5H"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ha4-OT-6f4" secondAttribute="trailing" id="uGD-I4-m5X"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="S7q-fo-P4g" firstAttribute="leading" secondItem="7w9-QS-qSa" secondAttribute="leadingMargin" id="7tq-4g-Uiu"/>
-                            <constraint firstItem="S7q-fo-P4g" firstAttribute="top" secondItem="SgD-1b-fMT" secondAttribute="top" constant="21" id="Men-Nf-3bz"/>
-                            <constraint firstAttribute="bottom" secondItem="S7q-fo-P4g" secondAttribute="bottom" constant="20" symbolic="YES" id="pkd-ne-9vh"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="SgD-1b-fMT"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="New Song Lyrics" id="Ree-l1-UXK"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IC7-uA-9m9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1638" y="252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o5p-1Y-War">
@@ -211,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERt-LU-C8J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="-439"/>
+            <point key="canvasLocation" x="1766" y="-120"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

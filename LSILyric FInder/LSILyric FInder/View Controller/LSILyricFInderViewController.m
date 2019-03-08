@@ -7,6 +7,8 @@
 //
 
 #import "LSILyricFInderViewController.h"
+#import "LSILyricsController.h"
+#import "lSILyric.h"
 
 @interface LSILyricFInderViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
@@ -17,6 +19,7 @@
 - (IBAction)searchButtonTapped:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
 - (IBAction)save:(id)sender;
+
 
 @end
 

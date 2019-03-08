@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSILyricFInderViewController : UIViewController
+@property LSILyricsController *lyricsController;
 
 @end
 

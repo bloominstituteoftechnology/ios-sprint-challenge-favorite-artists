@@ -7,9 +7,8 @@
 //
 
 #import "LyricsJSONSerialisation.h"
-#import "LyricModel.h"
 
-@implementation LyricsJSONSerialisation
+@implementation LyricModel
 
 - (instancetype)initDictionary:(NSDictionary *)dictionary {
     NSString *song = dictionary[@"song"];
@@ -17,7 +16,7 @@
     NSString *lyrics = dictionary[@"lyrics"];
     NSNumber *rating = dictionary[@"rating"];
     
-    return [self initLyrics: song musician: musician lyrics: lyrics score: rating.intValue];
+    return [self initLyrics: song byMusician: musician theLyrics: lyrics score: rating.intValue];
 }
 
 - (NSDictionary *)lyricsDictionary {

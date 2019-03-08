@@ -10,7 +10,7 @@
 
 @implementation LyricModel
 
-- (instancetype)initLyrics:(NSString *)song musician:(NSString *)musician lyrics:(NSString *)lyrics score:(int)rating {
+- (instancetype)initLyrics:(NSString *)song byMusician:(NSString *)musician theLyrics:(NSString *)lyrics score:(int)rating {
     self = [super init];
     if (self != nil) {
         self.song = song;

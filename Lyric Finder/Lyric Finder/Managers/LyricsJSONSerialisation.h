@@ -6,12 +6,11 @@
 //  Copyright © 2019 Sugabelly LLC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "LyricModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LyricsJSONSerialisation : NSJSONSerialization
+@interface LyricModel : NSJSONSerialization
 
 - (instancetype)initDictionary: (NSDictionary *)dictionary;
 

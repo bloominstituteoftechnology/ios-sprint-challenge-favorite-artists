@@ -10,7 +10,7 @@
 #import "IACLyricsQueryViewController.h"
 #import "IACLyricsDetailViewController.h"
 #import "IACLyricsController.h"
-#import "IACLyrics.h"
+
 
 @interface IACLyricsTableViewController ()
 @property IACLyricsController *lyricsController;
@@ -21,11 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setLyricsController:[[IACLyricsController alloc] init]];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -36,12 +31,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return self.lyricsController.songs.count;
 }
 

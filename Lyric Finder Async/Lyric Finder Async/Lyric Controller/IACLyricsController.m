@@ -13,6 +13,14 @@ NSString *apiKey = @"cbd2b1a12fmsh0aaf0cc245b3792p14052ajsn976898523b4d";
 
 @implementation IACLyricsController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _songs = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 - (void)fetchLyricsForTitle:(NSString *)title artist:(NSString *)artist completionBlock:(CompletionHandler)completionBlock {
     NSURLComponents *urlComponents = [NSURLComponents componentsWithString: baseURL];
     NSMutableArray *queryItems = [@[[NSURLQueryItem queryItemWithName:@"q_artist" value: artist],

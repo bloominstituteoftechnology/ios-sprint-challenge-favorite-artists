@@ -21,16 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _songTitleTextField.text = _song.title;
+    _artistTextField.text = _song.artist;
+    _lyricsTextView.text = _song.lyrics;
+    _ratingLabel.text = [NSString stringWithFormat:@"Rating %i", [_song rating]];
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

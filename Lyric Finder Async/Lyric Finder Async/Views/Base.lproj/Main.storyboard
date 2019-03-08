@@ -154,6 +154,10 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="tto-Y5-7BK">
                                                 <rect key="frame" x="241" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="decreaseButtonTapped:" destination="dWF-gm-7es" eventType="valueChanged" id="o02-M9-5ti"/>
+                                                    <action selector="increaseButtonTapped:" destination="dWF-gm-7es" eventType="valueChanged" id="avK-QI-3OF"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -172,6 +176,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVb-Pa-sPw">
                                         <rect key="frame" x="0.0" y="113" width="335" height="30"/>
                                         <state key="normal" title="Search For Lyrics"/>
+                                        <connections>
+                                            <action selector="searchButtonTapped:" destination="dWF-gm-7es" eventType="touchUpInside" id="N0z-9k-Gyi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -202,7 +209,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xLW-r8-Iix"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Song Lyrics" id="ltm-Gw-54L"/>
+                    <navigationItem key="navigationItem" title="New Song Lyrics" id="ltm-Gw-54L">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ijm-i0-v97">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="dWF-gm-7es" id="GZA-eB-X2R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="AkE-zA-4yw" id="svf-Gg-dGv"/>
+                        <outlet property="lyricsTextView" destination="Xg9-eL-En1" id="hAV-nJ-1Fh"/>
+                        <outlet property="ratingLabel" destination="t7m-s7-sFw" id="KMk-b1-t6z"/>
+                        <outlet property="ratingStepper" destination="tto-Y5-7BK" id="KuZ-Ou-nNV"/>
+                        <outlet property="songTitleTextField" destination="5Bp-Eo-UJt" id="tXC-tW-7r6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eee-gK-hYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

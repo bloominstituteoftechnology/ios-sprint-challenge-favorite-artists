@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface IACLyricsController : NSObject
 @property NSMutableArray *songs;
-
+- (instancetype) init;
 - (void)createLyricWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int)rating;
 - (void)updateLyric:(IACLyrics *)song rating:(int)rating;
 - (void)deleteLyric:(IACLyrics *)song;

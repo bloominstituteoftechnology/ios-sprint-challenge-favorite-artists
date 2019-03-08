@@ -36,7 +36,7 @@
                             <outlet property="delegate" destination="FKd-de-fyP" id="Gef-wy-aCM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="CX3-Xk-Gpm">
+                    <navigationItem key="navigationItem" id="CX3-Xk-Gpm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1EC-VL-Spi">
                             <connections>
                                 <segue destination="rcp-t3-eZL" kind="show" identifier="newSegue" id="EkM-k9-64y"/>
@@ -48,19 +48,19 @@
             </objects>
             <point key="canvasLocation" x="853.60000000000002" y="-120.08995502248877"/>
         </scene>
-        <!--New Song Lyrics-->
+        <!--View Lyrics-->
         <scene sceneID="Vw9-aC-lJg">
             <objects>
-                <viewController title="New Song Lyrics" id="cIn-v5-tih" sceneMemberID="viewController">
+                <viewController title="View Lyrics" id="cIn-v5-tih" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7w9-QS-qSa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="S7q-fo-P4g">
-                                <rect key="frame" x="16" y="85" width="343" height="562"/>
+                                <rect key="frame" x="16" y="137" width="343" height="510"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-OT-6f4">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="119"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="114"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozr-xs-smy">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
@@ -69,13 +69,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R0g-qn-QSY">
-                                                <rect key="frame" x="0.0" y="39" width="343" height="35"/>
+                                                <rect key="frame" x="0.0" y="39" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Musician:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1E-oT-NGe">
-                                                <rect key="frame" x="0.0" y="89" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="84" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -83,14 +83,14 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWL-tp-Icu">
-                                        <rect key="frame" x="114" y="134" width="115" height="30"/>
+                                        <rect key="frame" x="114" y="129" width="115" height="30"/>
                                         <state key="normal" title="Search for Lyrics"/>
                                         <connections>
                                             <segue destination="rcp-t3-eZL" kind="show" id="ZhI-7x-nWC"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-5u-h0e">
-                                        <rect key="frame" x="0.0" y="179" width="343" height="383"/>
+                                        <rect key="frame" x="0.0" y="174" width="343" height="336"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -112,7 +112,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SgD-1b-fMT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Song Lyrics" largeTitleDisplayMode="always" id="Ree-l1-UXK"/>
+                    <navigationItem key="navigationItem" title="New Song Lyrics" id="Ree-l1-UXK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IC7-uA-9m9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,8 +123,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1o3-m5-fAX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TTp-Uv-y4b">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="TTp-Uv-y4b">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -136,25 +136,25 @@
             </objects>
             <point key="canvasLocation" x="-85.599999999999994" y="-120.08995502248877"/>
         </scene>
-        <!--View Lyrics-->
+        <!--New Song Lyrics-->
         <scene sceneID="0yJ-fE-ui5">
             <objects>
-                <viewController title="View Lyrics" id="rcp-t3-eZL" sceneMemberID="viewController">
+                <viewController title="New Song Lyrics" id="rcp-t3-eZL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QeJ-tM-qya">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OLw-EY-b3i">
-                                <rect key="frame" x="16" y="85" width="343" height="562"/>
+                                <rect key="frame" x="16" y="137" width="343" height="510"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bKx-pn-hUr">
-                                        <rect key="frame" x="0.5" y="0.0" width="342.5" height="119"/>
+                                        <rect key="frame" x="0.5" y="0.0" width="342.5" height="114"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="170" translatesAutoresizingMaskIntoConstraints="NO" id="sEA-Es-APA">
-                                                <rect key="frame" x="0.0" y="0.0" width="342.5" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="342.5" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0Q-y5-1RU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -165,13 +165,13 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3O-2s-Riu">
-                                                <rect key="frame" x="0.0" y="44" width="342.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="39" width="342.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Musician:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Bo-ca-X5h">
-                                                <rect key="frame" x="0.0" y="89" width="342.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="84" width="342.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -185,11 +185,11 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylE-ty-VVW">
-                                        <rect key="frame" x="114" y="134" width="115" height="30"/>
+                                        <rect key="frame" x="114" y="129" width="115" height="30"/>
                                         <state key="normal" title="Search for Lyrics"/>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0t9-Yi-RI3">
-                                        <rect key="frame" x="0.0" y="179" width="343" height="383"/>
+                                        <rect key="frame" x="0.0" y="174" width="343" height="336"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -205,7 +205,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gBT-cy-jC4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="View Lyrics" largeTitleDisplayMode="always" id="IeK-rf-eaT">
+                    <navigationItem key="navigationItem" title="View Lyrics" id="IeK-rf-eaT">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="eTl-hq-jSS"/>
                     </navigationItem>
                 </viewController>
@@ -215,6 +215,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZhI-7x-nWC"/>
+        <segue reference="EkM-k9-64y"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,7 +14,6 @@
 		4C1E2CEE22299BB300723CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1E2CEC22299BB300723CCB /* LaunchScreen.storyboard */; };
 		4C1E2CF122299BB300723CCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E2CF022299BB300723CCB /* main.m */; };
 		4C1E2CF92229A65700723CCB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E2CF82229A65700723CCB /* SearchViewController.m */; };
-		4C1E2CFC2229A73C00723CCB /* LyricDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E2CFB2229A73C00723CCB /* LyricDetailView.m */; };
 		4C1E2CFF2229B4F900723CCB /* LyricModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E2CFE2229B4F900723CCB /* LyricModel.m */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +30,6 @@
 		4C1E2CF022299BB300723CCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C1E2CF72229A63000723CCB /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		4C1E2CF82229A65700723CCB /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		4C1E2CFA2229A6B400723CCB /* LyricDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricDetailView.h; sourceTree = "<group>"; };
-		4C1E2CFB2229A73C00723CCB /* LyricDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricDetailView.m; sourceTree = "<group>"; };
 		4C1E2CFD2229B4B000723CCB /* LyricModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricModel.h; sourceTree = "<group>"; };
 		4C1E2CFE2229B4F900723CCB /* LyricModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,14 +66,9 @@
 			children = (
 				4C1E2CE122299BB100723CCB /* AppDelegate.h */,
 				4C1E2CE222299BB100723CCB /* AppDelegate.m */,
-				4C1E2CE422299BB100723CCB /* LyricTableController.h */,
+				4C5E8A47222E050C003480FB /* View Controllers */,
 				4C1E2CFD2229B4B000723CCB /* LyricModel.h */,
 				4C1E2CFE2229B4F900723CCB /* LyricModel.m */,
-				4C1E2CF72229A63000723CCB /* SearchViewController.h */,
-				4C1E2CFA2229A6B400723CCB /* LyricDetailView.h */,
-				4C1E2CFB2229A73C00723CCB /* LyricDetailView.m */,
-				4C1E2CF82229A65700723CCB /* SearchViewController.m */,
-				4C1E2CE522299BB100723CCB /* LyricTableController.m */,
 				4C1E2CE722299BB100723CCB /* Main.storyboard */,
 				4C1E2CEA22299BB300723CCB /* Assets.xcassets */,
 				4C1E2CEC22299BB300723CCB /* LaunchScreen.storyboard */,
@@ -84,6 +76,17 @@
 				4C1E2CF022299BB300723CCB /* main.m */,
 			);
 			path = "Lyric Finder";
+			sourceTree = "<group>";
+		};
+		4C5E8A47222E050C003480FB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E2CE422299BB100723CCB /* LyricTableController.h */,
+				4C1E2CE522299BB100723CCB /* LyricTableController.m */,
+				4C1E2CF72229A63000723CCB /* SearchViewController.h */,
+				4C1E2CF82229A65700723CCB /* SearchViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +162,6 @@
 				4C1E2CE622299BB100723CCB /* LyricTableController.m in Sources */,
 				4C1E2CF122299BB300723CCB /* main.m in Sources */,
 				4C1E2CF92229A65700723CCB /* SearchViewController.m in Sources */,
-				4C1E2CFC2229A73C00723CCB /* LyricDetailView.m in Sources */,
 				4C1E2CE322299BB100723CCB /* AppDelegate.m in Sources */,
 				4C1E2CFF2229B4F900723CCB /* LyricModel.m in Sources */,
 			);

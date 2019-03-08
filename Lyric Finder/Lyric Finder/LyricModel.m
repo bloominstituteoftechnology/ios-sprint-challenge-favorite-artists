@@ -6,22 +6,3 @@
 //  Copyright © 2019 Sugabelly LLC. All rights reserved.
 //
 
-#import "LyricModel.h"
-
-@interface Lyric ()
-
-struct Lyric {
-    NSString title
-    NSString artist
-};
-
-@end
-
-
-
-@implementation Lyric
-
-
-
-
-@end

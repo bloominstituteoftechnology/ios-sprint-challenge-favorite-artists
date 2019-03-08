@@ -6,10 +6,3 @@
 //  Copyright © 2019 Sugabelly LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface SearchViewController : UIViewController
-
-
-@end
-

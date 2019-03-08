@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LyricModel : NSJSONSerialization
+@interface LyricModel (NSJSONSerialization)
 
 - (instancetype)initDictionary: (NSDictionary *)dictionary;
 

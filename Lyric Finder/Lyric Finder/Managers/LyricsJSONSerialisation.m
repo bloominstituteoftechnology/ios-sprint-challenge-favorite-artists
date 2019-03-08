@@ -8,7 +8,7 @@
 
 #import "LyricsJSONSerialisation.h"
 
-@implementation LyricModel
+@implementation LyricModel (NSJSONSerialization)
 
 - (instancetype)initDictionary:(NSDictionary *)dictionary {
     NSString *song = dictionary[@"song"];

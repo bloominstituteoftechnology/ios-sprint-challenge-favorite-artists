@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LSILyricFinderTableViewController.h
 //  LSILyric FInder
 //
 //  Created by Iyin Raphael on 3/8/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface LSILyricFinderTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

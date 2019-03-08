@@ -8,24 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		EBFEFC472232C2470072EDF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC462232C2470072EDF1 /* AppDelegate.m */; };
-		EBFEFC4A2232C2470072EDF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC492232C2470072EDF1 /* ViewController.m */; };
 		EBFEFC4D2232C2470072EDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBFEFC4B2232C2470072EDF1 /* Main.storyboard */; };
 		EBFEFC4F2232C24A0072EDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFEFC4E2232C24A0072EDF1 /* Assets.xcassets */; };
 		EBFEFC522232C24A0072EDF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBFEFC502232C24A0072EDF1 /* LaunchScreen.storyboard */; };
 		EBFEFC552232C24A0072EDF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC542232C24A0072EDF1 /* main.m */; };
+		EBFEFC612232C7570072EDF1 /* LSILyricFInderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC602232C7570072EDF1 /* LSILyricFInderViewController.m */; };
+		EBFEFC642232C77C0072EDF1 /* LSILyricFinderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC632232C77C0072EDF1 /* LSILyricFinderTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EBFEFC422232C2470072EDF1 /* LSILyric FInder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LSILyric FInder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFEFC452232C2470072EDF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EBFEFC462232C2470072EDF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EBFEFC482232C2470072EDF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EBFEFC492232C2470072EDF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EBFEFC4C2232C2470072EDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBFEFC4E2232C24A0072EDF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBFEFC512232C24A0072EDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBFEFC532232C24A0072EDF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBFEFC542232C24A0072EDF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBFEFC5F2232C7570072EDF1 /* LSILyricFInderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSILyricFInderViewController.h; sourceTree = "<group>"; };
+		EBFEFC602232C7570072EDF1 /* LSILyricFInderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSILyricFInderViewController.m; sourceTree = "<group>"; };
+		EBFEFC622232C77C0072EDF1 /* LSILyricFinderTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSILyricFinderTableViewController.h; sourceTree = "<group>"; };
+		EBFEFC632232C77C0072EDF1 /* LSILyricFinderTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSILyricFinderTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +61,51 @@
 		EBFEFC442232C2470072EDF1 /* LSILyric FInder */ = {
 			isa = PBXGroup;
 			children = (
+				EBFEFC5E2232C3900072EDF1 /* Resources */,
+				EBFEFC5D2232C36B0072EDF1 /* View Controller */,
+				EBFEFC5C2232C33F0072EDF1 /* Model */,
+				EBFEFC5B2232C3380072EDF1 /* Model Controller */,
+				EBFEFC532232C24A0072EDF1 /* Info.plist */,
+			);
+			path = "LSILyric FInder";
+			sourceTree = "<group>";
+		};
+		EBFEFC5B2232C3380072EDF1 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		EBFEFC5C2232C33F0072EDF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EBFEFC5D2232C36B0072EDF1 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EBFEFC5F2232C7570072EDF1 /* LSILyricFInderViewController.h */,
+				EBFEFC602232C7570072EDF1 /* LSILyricFInderViewController.m */,
+				EBFEFC622232C77C0072EDF1 /* LSILyricFinderTableViewController.h */,
+				EBFEFC632232C77C0072EDF1 /* LSILyricFinderTableViewController.m */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		EBFEFC5E2232C3900072EDF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				EBFEFC452232C2470072EDF1 /* AppDelegate.h */,
 				EBFEFC462232C2470072EDF1 /* AppDelegate.m */,
-				EBFEFC482232C2470072EDF1 /* ViewController.h */,
-				EBFEFC492232C2470072EDF1 /* ViewController.m */,
 				EBFEFC4B2232C2470072EDF1 /* Main.storyboard */,
 				EBFEFC4E2232C24A0072EDF1 /* Assets.xcassets */,
 				EBFEFC502232C24A0072EDF1 /* LaunchScreen.storyboard */,
-				EBFEFC532232C24A0072EDF1 /* Info.plist */,
 				EBFEFC542232C24A0072EDF1 /* main.m */,
 			);
-			path = "LSILyric FInder";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBFEFC4A2232C2470072EDF1 /* ViewController.m in Sources */,
+				EBFEFC642232C77C0072EDF1 /* LSILyricFinderTableViewController.m in Sources */,
 				EBFEFC552232C24A0072EDF1 /* main.m in Sources */,
 				EBFEFC472232C2470072EDF1 /* AppDelegate.m in Sources */,
+				EBFEFC612232C7570072EDF1 /* LSILyricFInderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

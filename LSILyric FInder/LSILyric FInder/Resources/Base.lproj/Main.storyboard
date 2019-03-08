@@ -79,35 +79,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UKX-kB-5yu">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="246" verticalHuggingPriority="251" horizontalCompressionResistancePriority="763" text="Ratings: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1W-uL-v6G">
-                                                <rect key="frame" x="0.0" y="0.0" width="267" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="246" verticalHuggingPriority="251" horizontalCompressionResistancePriority="763" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1W-uL-v6G">
+                                                <rect key="frame" x="0.0" y="0.0" width="241" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPR-vA-c2T">
-                                                <rect key="frame" x="275" y="0.0" width="30" height="30"/>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="+">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Fhd-jg-GqA">
+                                                <rect key="frame" x="249" y="0.0" width="94" height="29"/>
                                                 <connections>
-                                                    <action selector="addButtonTapped:" destination="7jk-Yb-IjV" eventType="touchUpInside" id="POU-gp-r5L"/>
-                                                    <action selector="addToRating:" destination="7jk-Yb-IjV" eventType="touchUpInside" id="DhE-VL-Q4b"/>
+                                                    <action selector="ratingStepper:" destination="7jk-Yb-IjV" eventType="valueChanged" id="DeD-Rv-teS"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13d-QL-zeQ">
-                                                <rect key="frame" x="313" y="0.0" width="30" height="30"/>
-                                                <state key="normal" title="-"/>
-                                                <connections>
-                                                    <action selector="substractButtonTaped:" destination="7jk-Yb-IjV" eventType="touchUpInside" id="DFP-GX-676"/>
-                                                    <action selector="subtractFromRating:" destination="7jk-Yb-IjV" eventType="touchUpInside" id="mHv-rz-P8p"/>
-                                                </connections>
-                                            </button>
+                                            </stepper>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="13d-QL-zeQ" firstAttribute="width" secondItem="iPR-vA-c2T" secondAttribute="width" id="oeJ-2N-YNH"/>
-                                        </constraints>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mPF-Uu-yFM">
                                         <rect key="frame" x="0.0" y="49" width="343" height="30"/>
@@ -157,6 +141,7 @@
                         <outlet property="artistNameTextField" destination="LHO-ex-YiP" id="3hM-Ai-KEx"/>
                         <outlet property="lyricsTextView" destination="ttz-gJ-cXk" id="XOw-Qm-iy0"/>
                         <outlet property="ratingLabel" destination="a1W-uL-v6G" id="OES-bA-Xsu"/>
+                        <outlet property="ratingStep" destination="Fhd-jg-GqA" id="KrE-3I-Hy2"/>
                         <outlet property="songTitleTextField" destination="mPF-Uu-yFM" id="I24-eh-yMe"/>
                     </connections>
                 </viewController>

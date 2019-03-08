@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSILyricsController.h"
+#import "LSILyric.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSILyricFInderViewController : UIViewController
 @property LSILyricsController *lyricsController;
+@property LSILyric *song;
 
 @end
 

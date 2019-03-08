@@ -44,7 +44,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7jk-Yb-IjV" kind="show" identifier="ViewSong" id="akZ-o9-Fwl"/>
+                                    <segue destination="7jk-Yb-IjV" kind="show" identifier="showSong" id="akZ-o9-Fwl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -88,7 +88,7 @@
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Fhd-jg-GqA">
                                                 <rect key="frame" x="249" y="0.0" width="94" height="29"/>
                                                 <connections>
-                                                    <action selector="ratingStepper:" destination="7jk-Yb-IjV" eventType="valueChanged" id="DeD-Rv-teS"/>
+                                                    <action selector="ratingStepper:" destination="7jk-Yb-IjV" eventType="valueChanged" id="wmD-Ue-46V"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
@@ -167,6 +167,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8L6-F2-174"/>
+        <segue reference="akZ-o9-Fwl"/>
     </inferredMetricsTieBreakers>
 </document>

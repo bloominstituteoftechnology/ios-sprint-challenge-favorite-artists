@@ -22,6 +22,11 @@
 
 #pragma mark - Table view data source
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
@@ -51,6 +56,12 @@
     if ([segue.identifier isEqualToString:@"AddSong"]) {
         LSILyricFInderViewController *detailVC = segue.destinationViewController;
         detailVC.lyricsController = self.lyricsController;
+    } else if ([segue.identifier isEqualToString:@"showSong"]){
+        LSILyricFInderViewController *detailVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        LSILyric *song = [self.lyricsController.lyricsArray objectAtIndex:[indexPath row]];
+        [detailVC setSong:song];
+        [detailVC setLyricsController:self.lyricsController];
     }
 }
 

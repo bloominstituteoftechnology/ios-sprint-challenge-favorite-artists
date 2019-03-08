@@ -12,7 +12,9 @@
 
 @interface LSILyricFInderViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
-- (IBAction)ratingStepper:(id)sender;
+
+- (IBAction)ratingStepper:(UIStepper *)sender;
+
 @property (weak, nonatomic) IBOutlet UIStepper *ratingStep;
 
 
@@ -36,8 +38,11 @@
 }
 
 
-- (IBAction)addButtonTapped:(UIButton *)sender
-{
+
+
+
+- (IBAction)searchButtonTapped:(UIButton *)sender {
+    
     NSString *artistName = self.artistNameTextField.text;
     NSString *title = self.songTitleTextField.text;
     
@@ -48,12 +53,6 @@
             });
         }];
     }
-}
-
-
-- (IBAction)searchButtonTapped:(UIButton *)sender {
-    
-    
     
 }
 - (IBAction)save:(id)sender
@@ -91,6 +90,7 @@
 }
 
 
-- (IBAction)ratingStepper:(id)sender {
+- (IBAction)ratingStepper:(UIStepper *)sender {
+     [self updateRating:sender.value];
 }
 @end

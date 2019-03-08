@@ -18,6 +18,9 @@ static NSString *APIKey = @"aa59cb9a79msh779d707588a8c4dp1c6716jsn128fc0486c67";
 
 @property NSMutableArray *internalArray;
 
+-(void) saveToPersisitence;
+-(void) loadFromPersisitence;
+
 @end
 
 @implementation LSILyricsController

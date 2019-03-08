@@ -53,7 +53,7 @@
         [self.lyricsView setText: self.currentLyrics.lyrics];
         [self.lyricScore setValue: self.currentLyrics.rating];
     } else {
-        [self setTitle: @"Find New Lyrics"];
+        [self setTitle: @"New Song Lyrics"];
         [self.lyricScore setValue: 5];
     }
     

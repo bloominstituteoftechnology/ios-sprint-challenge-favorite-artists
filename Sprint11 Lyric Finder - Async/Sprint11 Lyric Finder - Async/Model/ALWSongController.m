@@ -31,6 +31,10 @@
     return [self.internalSongs copy];
 }
 
+- (void)addSong:(ALWSong *)song {
+    [self.internalSongs addObject:song];
+}
+
 - (void)searchForLyricsWithArtist:(NSString *)artist title:(NSString *)title withCompletionBlock:(CompletionBlock)completionBlock {
     
     // Create a URL

@@ -15,6 +15,8 @@ typedef void(^CompletionBlock)(ALWSong *, NSError *);
 
 @property (nonatomic, readonly) NSArray *savedSongs;
 
+- (void)addSong:(ALWSong *)song;
+
 - (void)searchForLyricsWithArtist:(NSString *)artist title:(NSString *)title withCompletionBlock:(CompletionBlock)completionBlock;
 
 @end

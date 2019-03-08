@@ -3,16 +3,17 @@
 //  
 
 #import <Foundation/Foundation.h>
-#import "ALWSong.h"
+
+@class ALWSong;
 
 NS_ASSUME_NONNULL_BEGIN
 
 // Completion block that returns a song and an error
-typedef void(^CompletionBlock)(ALWSong *song, NSError *error);
+typedef void(^CompletionBlock)(ALWSong *, NSError *);
 
 @interface ALWSongController : NSObject
 
-@property NSArray *savedSongs;
+@property (nonatomic, readonly) NSArray *savedSongs;
 
 - (void)searchForLyricsWithArtist:(NSString *)artist title:(NSString *)title withCompletionBlock:(CompletionBlock)completionBlock;
 

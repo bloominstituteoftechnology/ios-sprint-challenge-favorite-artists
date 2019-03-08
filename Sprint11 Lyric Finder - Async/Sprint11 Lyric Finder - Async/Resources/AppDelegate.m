@@ -1,12 +1,10 @@
 //
 //  AppDelegate.m
-//  Sprint11 Lyric Finder - Async
-//
-//  Created by Audrey Welch on 3/8/19.
-//  Copyright © 2019 Audrey Welch. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ALWSongController.h"
+#import "ALWSong.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +14,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    ALWSongController *controller = [[ALWSongController alloc] init];
+    [controller searchForLyricsWithArtist:@"Alicia Keys" title:@"No One" withCompletionBlock:^(ALWSong *song, NSError *error) {
+        NSLog(@"lyrics: %@", song);
+    }];
+    
+    
     return YES;
 }
 

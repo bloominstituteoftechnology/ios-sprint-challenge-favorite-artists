@@ -22,6 +22,8 @@
 
 
 - (IBAction)stepperChanged:(id)sender {
+    
+    self.songRatingLabel.text = [NSString stringWithFormat:@"Rating: %d", [[NSNumber numberWithDouble: [(UIStepper *)sender value]] intValue]];
 }
 
 - (IBAction)searchButton:(id)sender {

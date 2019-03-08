@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IACLyrics : NSObject
+@property (copy) NSString *title;
+@property (copy) NSString *artist;
+@property NSString *lyrics;
+@property int rating;
 
+- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int)rating;
 @end
 
 NS_ASSUME_NONNULL_END

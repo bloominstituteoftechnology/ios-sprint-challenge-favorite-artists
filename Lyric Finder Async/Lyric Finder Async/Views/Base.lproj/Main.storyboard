@@ -105,12 +105,6 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.72382614209999996" green="0.72382614209999996" blue="0.72382614209999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
                         </subviews>
@@ -182,10 +176,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.72382614209999996" green="0.72382614209999996" blue="0.72382614209999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>

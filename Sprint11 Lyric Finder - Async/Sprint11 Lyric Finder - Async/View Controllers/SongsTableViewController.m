@@ -3,87 +3,88 @@
 //  
 
 #import "SongsTableViewController.h"
+#import "ALWSongController.h"
+#import "ALWSong.h"
+#import "SongDetailViewController.h"
 
 @interface SongsTableViewController ()
+
+@property (nonatomic, readonly) ALWSongController *songController; // = ALWSongController() in SWIFT
 
 @end
 
 @implementation SongsTableViewController
 
+#pragma mark - Properties
+
+// Synthesize the property (instance variable) b/c we've created the getter
+@synthesize songController = _songController;
+
+// Lazy Instantiation
+- (ALWSongController *)songController {
+    // If it's the first time called, create one
+    if (_songController == nil) {
+        _songController = [[ALWSongController alloc] init];
+    }
+    // If already have one, return it
+    return _songController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.songController.savedSongs.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell" forIndexPath:indexPath];
+    
+    // Get the song to be displayed
+    ALWSong *song = self.songController.savedSongs[indexPath.row];
     
     // Configure the cell...
+    cell.textLabel.text = song.title;
+    cell.detailTextLabel.text = song.artist;
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    // Editing
+    if ([segue.identifier isEqualToString:@"showSongSegue"]) {
+        
+        // Get the new view controller
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        SongDetailViewController *detailVC = segue.destinationViewController;
+        
+        // Pass the selected object to the new view controller
+        detailVC.songController = self.songController;
+        detailVC.song = self.songController.savedSongs[indexPath.row];
+    }
+    // Creating
+    if ([segue.identifier isEqualToString:@"addSongSegue"]) {
+        SongDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.songController = self.songController;
+    }
 }
-*/
+
 
 @end

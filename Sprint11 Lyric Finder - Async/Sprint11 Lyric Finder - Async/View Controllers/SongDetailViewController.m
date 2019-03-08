@@ -3,6 +3,7 @@
 //  
 
 #import "SongDetailViewController.h"
+#import "ALWSong.h"
 
 @interface SongDetailViewController ()
 

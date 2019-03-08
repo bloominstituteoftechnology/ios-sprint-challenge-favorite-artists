@@ -3,6 +3,7 @@
 //  
 
 #import <UIKit/UIKit.h>
+#import "ALWSongController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -13,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *artistTextField;
 @property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
 
+@property ALWSongController *songController;
+@property ALWSong *song;
 
 @end
 

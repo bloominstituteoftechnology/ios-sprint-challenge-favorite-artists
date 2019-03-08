@@ -14,6 +14,8 @@
 		842C028F2232C9D000BBBFAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C028E2232C9D000BBBFAD /* main.m */; };
 		842C029B2232CAD100BBBFAD /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C029A2232CAD100BBBFAD /* SongsTableViewController.m */; };
 		842C029E2232CB2100BBBFAD /* SongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C029D2232CB2100BBBFAD /* SongDetailViewController.m */; };
+		842C02A12232CF3500BBBFAD /* ALWSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C02A02232CF3500BBBFAD /* ALWSong.m */; };
+		842C02A42232D9D100BBBFAD /* ALWSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C02A32232D9D100BBBFAD /* ALWSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		842C029A2232CAD100BBBFAD /* SongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongsTableViewController.m; sourceTree = "<group>"; };
 		842C029C2232CB2100BBBFAD /* SongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongDetailViewController.h; sourceTree = "<group>"; };
 		842C029D2232CB2100BBBFAD /* SongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewController.m; sourceTree = "<group>"; };
+		842C029F2232CF3500BBBFAD /* ALWSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALWSong.h; sourceTree = "<group>"; };
+		842C02A02232CF3500BBBFAD /* ALWSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALWSong.m; sourceTree = "<group>"; };
+		842C02A22232D9D100BBBFAD /* ALWSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALWSongController.h; sourceTree = "<group>"; };
+		842C02A32232D9D100BBBFAD /* ALWSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALWSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,10 @@
 		842C02982232CA9100BBBFAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				842C029F2232CF3500BBBFAD /* ALWSong.h */,
+				842C02A02232CF3500BBBFAD /* ALWSong.m */,
+				842C02A22232D9D100BBBFAD /* ALWSongController.h */,
+				842C02A32232D9D100BBBFAD /* ALWSongController.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,8 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842C02A12232CF3500BBBFAD /* ALWSong.m in Sources */,
 				842C029B2232CAD100BBBFAD /* SongsTableViewController.m in Sources */,
 				842C028F2232C9D000BBBFAD /* main.m in Sources */,
+				842C02A42232D9D100BBBFAD /* ALWSongController.m in Sources */,
 				842C029E2232CB2100BBBFAD /* SongDetailViewController.m in Sources */,
 				842C02812232C9D000BBBFAD /* AppDelegate.m in Sources */,
 			);

@@ -14,6 +14,9 @@
 		EBFEFC552232C24A0072EDF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC542232C24A0072EDF1 /* main.m */; };
 		EBFEFC612232C7570072EDF1 /* LSILyricFInderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC602232C7570072EDF1 /* LSILyricFInderViewController.m */; };
 		EBFEFC642232C77C0072EDF1 /* LSILyricFinderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC632232C77C0072EDF1 /* LSILyricFinderTableViewController.m */; };
+		EBFEFC672232C9C20072EDF1 /* LSILyric.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC662232C9C20072EDF1 /* LSILyric.m */; };
+		EBFEFC6A2232CC510072EDF1 /* LSILyricsController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC692232CC510072EDF1 /* LSILyricsController.m */; };
+		EBFEFC702232CE0F0072EDF1 /* LSILyric+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFEFC6F2232CE0F0072EDF1 /* LSILyric+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		EBFEFC602232C7570072EDF1 /* LSILyricFInderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSILyricFInderViewController.m; sourceTree = "<group>"; };
 		EBFEFC622232C77C0072EDF1 /* LSILyricFinderTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSILyricFinderTableViewController.h; sourceTree = "<group>"; };
 		EBFEFC632232C77C0072EDF1 /* LSILyricFinderTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSILyricFinderTableViewController.m; sourceTree = "<group>"; };
+		EBFEFC652232C9C20072EDF1 /* LSILyric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSILyric.h; sourceTree = "<group>"; };
+		EBFEFC662232C9C20072EDF1 /* LSILyric.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSILyric.m; sourceTree = "<group>"; };
+		EBFEFC682232CC510072EDF1 /* LSILyricsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSILyricsController.h; sourceTree = "<group>"; };
+		EBFEFC692232CC510072EDF1 /* LSILyricsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSILyricsController.m; sourceTree = "<group>"; };
+		EBFEFC6E2232CE0F0072EDF1 /* LSILyric+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSILyric+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		EBFEFC6F2232CE0F0072EDF1 /* LSILyric+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LSILyric+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +82,8 @@
 		EBFEFC5B2232C3380072EDF1 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EBFEFC682232CC510072EDF1 /* LSILyricsController.h */,
+				EBFEFC692232CC510072EDF1 /* LSILyricsController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -80,6 +91,10 @@
 		EBFEFC5C2232C33F0072EDF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBFEFC652232C9C20072EDF1 /* LSILyric.h */,
+				EBFEFC662232C9C20072EDF1 /* LSILyric.m */,
+				EBFEFC6E2232CE0F0072EDF1 /* LSILyric+NSJSONSerialization.h */,
+				EBFEFC6F2232CE0F0072EDF1 /* LSILyric+NSJSONSerialization.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,8 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBFEFC642232C77C0072EDF1 /* LSILyricFinderTableViewController.m in Sources */,
+				EBFEFC672232C9C20072EDF1 /* LSILyric.m in Sources */,
 				EBFEFC552232C24A0072EDF1 /* main.m in Sources */,
 				EBFEFC472232C2470072EDF1 /* AppDelegate.m in Sources */,
+				EBFEFC702232CE0F0072EDF1 /* LSILyric+NSJSONSerialization.m in Sources */,
+				EBFEFC6A2232CC510072EDF1 /* LSILyricsController.m in Sources */,
 				EBFEFC612232C7570072EDF1 /* LSILyricFInderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,21 +3,10 @@
 //  
 
 #import "SongDetailViewController.h"
+#import "ALWSongController.h"
 
 @interface SongDetailViewController ()
-    
-    @property ALWSongController *songController;
 
-    @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
-    
-    @property (weak, nonatomic) IBOutlet UITextField *songTitleTextField;
-    
-    @property (weak, nonatomic) IBOutlet UITextField *artistTextField;
-    
-    @property (weak, nonatomic) IBOutlet UIButton *searchButton;
-    
-    @property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
-    
 - (IBAction)searchForLyrics:(id)sender;
     
 - (IBAction)save:(id)sender;
@@ -36,6 +25,11 @@
     _songController = [[ALWSongController alloc] init];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.lyricsTextView reloadInputViews];
+    
+}
 /*
 #pragma mark - Navigation
 
@@ -47,9 +41,14 @@
 */
 
 - (IBAction)searchForLyrics:(id)sender {
-    [ _songController searchLyricsWithArtist:_artistTextField.text andTitle:_songTitleTextField.text withCompletionBlock:^(ALWSong * _Nonnull lyrics, NSError * _Nonnull error) {
-        
+    [ _songController searchLyricsWithArtist:_artistTextField.text andTitle:_songTitleTextField.text withCompletionBlock:^(ALWSong * _Nonnull song, NSError * _Nonnull error) {
+        NSLog(@"Got error: %@", error);
+        NSLog(@"Got song: %@", song);
     }];
+    
+    //_songController.song
+    
+    [self.lyricsTextView reloadInputViews];
     
 //    [ _songController searchLyricsWithArtist:@"coldplay" andTitle:@"paradise" withCompletionBlock:^(ALWSong * _Nonnull lyrics, NSError * _Nonnull error) {
 //

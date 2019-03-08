@@ -14,7 +14,16 @@
     }
     return self;
 }
-    
+
+- (instancetype)initWithSongLyrics:(NSString *)songLyrics {
+    self = [super init];
+    if (self != nil) {
+        _songLyrics = [songLyrics copy];
+    }
+    return self;
+}
+
+// Turn a dictionary into an object
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     // Pull values out of the dicionary
     NSString *songLyrics = dictionary[@"lyrics_body"];

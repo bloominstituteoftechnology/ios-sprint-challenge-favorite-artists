@@ -8,10 +8,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ALWSong : NSObject
     
-@property NSString *songTitle;
-@property NSString *songArtist;
-@property NSString *songLyrics;
-@property NSInteger *songRating;
+@property (nonatomic, copy) NSString *songTitle;
+@property (nonatomic, copy) NSString *songArtist;
+@property (nonatomic, copy) NSString *songLyrics;
+@property (nonatomic) NSInteger *songRating;
     
 - (instancetype)initWithSongTitle:(NSString *)songTitle andArtist:(NSString *)songArtist;
     

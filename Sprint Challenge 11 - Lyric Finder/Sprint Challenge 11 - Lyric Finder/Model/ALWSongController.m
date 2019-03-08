@@ -5,23 +5,36 @@
 //  https://musixmatchcom-musixmatch.p.rapidapi.com/wsr/1.1/matcher.lyrics.get?q_artist=coldplay&q_track=paradise
 
 #import "ALWSongController.h"
+#import "SongDetailViewController.h"
 
 @interface ALWSongController()
-    
+
+    @property SongDetailViewController *songDetailViewController;
     @property NSString *baseURLString;
     @property NSString *apiKey;
     
 @end
 
-@implementation ALWSongController
+@implementation ALWSongController {
+    NSMutableArray *_savedSongs;
+}
     
 - (instancetype)init {
     self = [super init];
     if (self != nil) {
+        _savedSongs = [NSMutableArray array];
         _baseURLString = @"https://musixmatchcom-musixmatch.p.rapidapi.com/wsr/1.1/matcher.lyrics.get";
         _apiKey = @"cf6d82bad1msh23e41922669f60ep127ec0jsnc636b337599c";
     }
     return self;
+}
+
+- (NSArray *)savedSongs {
+    return [_savedSongs copy];
+}
+
+- (void)saveSong:(ALWSong *)song {
+    [_savedSongs addObject:song];
 }
     
 - (void)searchLyricsWithArtist:(NSString *)songArtist andTitle:(NSString *)songTitle withCompletionBlock:(CompletionBlock)completionBlock {
@@ -53,7 +66,7 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setValue:_apiKey forHTTPHeaderField:@"X-Mashape-Key"];
     
-    NSLog(request);
+    NSLog(@"%@", request);
     
     // Create a data task
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *r, NSError *error) {
@@ -76,11 +89,20 @@
         
         // if it is a dictionary, make it into a model
         ALWSong *song = [[ALWSong alloc] initWithDictionary:dictionary];
+        [_savedSongs addObject:song];
         
-        NSLog(@"Song lyrics are %@");
+        NSLog(_savedSongs);
+        completionBlock(song, nil);
+       
+//        [_songDetailViewController.lyricsTextView setText:song.songLyrics];
+//        NSLog(@"%@", song);
+        
+//        song.songTitle = self->_songDetailViewController.songTitleTextField.text;
+//        song.songArtist = self->_songDetailViewController.artistTextField.text;
         
         
-    }] resume] ;
+        
+    }] resume];
     
 }
     

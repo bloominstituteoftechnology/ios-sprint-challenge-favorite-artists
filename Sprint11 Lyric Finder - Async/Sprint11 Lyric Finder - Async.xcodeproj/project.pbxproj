@@ -8,24 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		842C02812232C9D000BBBFAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C02802232C9D000BBBFAD /* AppDelegate.m */; };
-		842C02842232C9D000BBBFAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C02832232C9D000BBBFAD /* ViewController.m */; };
 		842C02872232C9D000BBBFAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C02852232C9D000BBBFAD /* Main.storyboard */; };
 		842C02892232C9D000BBBFAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842C02882232C9D000BBBFAD /* Assets.xcassets */; };
 		842C028C2232C9D000BBBFAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C028A2232C9D000BBBFAD /* LaunchScreen.storyboard */; };
 		842C028F2232C9D000BBBFAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C028E2232C9D000BBBFAD /* main.m */; };
+		842C029B2232CAD100BBBFAD /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C029A2232CAD100BBBFAD /* SongsTableViewController.m */; };
+		842C029E2232CB2100BBBFAD /* SongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C029D2232CB2100BBBFAD /* SongDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		842C027C2232C9D000BBBFAD /* Sprint11 Lyric Finder - Async.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sprint11 Lyric Finder - Async.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842C027F2232C9D000BBBFAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		842C02802232C9D000BBBFAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		842C02822232C9D000BBBFAD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		842C02832232C9D000BBBFAD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		842C02862232C9D000BBBFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		842C02882232C9D000BBBFAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842C028B2232C9D000BBBFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842C028D2232C9D000BBBFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842C028E2232C9D000BBBFAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		842C02992232CAD100BBBFAD /* SongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongsTableViewController.h; sourceTree = "<group>"; };
+		842C029A2232CAD100BBBFAD /* SongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongsTableViewController.m; sourceTree = "<group>"; };
+		842C029C2232CB2100BBBFAD /* SongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongDetailViewController.h; sourceTree = "<group>"; };
+		842C029D2232CB2100BBBFAD /* SongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +61,51 @@
 		842C027E2232C9D000BBBFAD /* Sprint11 Lyric Finder - Async */ = {
 			isa = PBXGroup;
 			children = (
-				842C027F2232C9D000BBBFAD /* AppDelegate.h */,
-				842C02802232C9D000BBBFAD /* AppDelegate.m */,
-				842C02822232C9D000BBBFAD /* ViewController.h */,
-				842C02832232C9D000BBBFAD /* ViewController.m */,
-				842C02852232C9D000BBBFAD /* Main.storyboard */,
-				842C02882232C9D000BBBFAD /* Assets.xcassets */,
-				842C028A2232C9D000BBBFAD /* LaunchScreen.storyboard */,
+				842C02982232CA9100BBBFAD /* Model */,
+				842C02972232CA8600BBBFAD /* View Controllers */,
+				842C02962232CA7600BBBFAD /* Storyboards */,
+				842C02952232CA6000BBBFAD /* Resources */,
 				842C028D2232C9D000BBBFAD /* Info.plist */,
-				842C028E2232C9D000BBBFAD /* main.m */,
 			);
 			path = "Sprint11 Lyric Finder - Async";
+			sourceTree = "<group>";
+		};
+		842C02952232CA6000BBBFAD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				842C027F2232C9D000BBBFAD /* AppDelegate.h */,
+				842C02802232C9D000BBBFAD /* AppDelegate.m */,
+				842C02882232C9D000BBBFAD /* Assets.xcassets */,
+				842C028E2232C9D000BBBFAD /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		842C02962232CA7600BBBFAD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				842C02852232C9D000BBBFAD /* Main.storyboard */,
+				842C028A2232C9D000BBBFAD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		842C02972232CA8600BBBFAD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				842C02992232CAD100BBBFAD /* SongsTableViewController.h */,
+				842C029A2232CAD100BBBFAD /* SongsTableViewController.m */,
+				842C029C2232CB2100BBBFAD /* SongDetailViewController.h */,
+				842C029D2232CB2100BBBFAD /* SongDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		842C02982232CA9100BBBFAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842C02842232C9D000BBBFAD /* ViewController.m in Sources */,
+				842C029B2232CAD100BBBFAD /* SongsTableViewController.m in Sources */,
 				842C028F2232C9D000BBBFAD /* main.m in Sources */,
+				842C029E2232CB2100BBBFAD /* SongDetailViewController.m in Sources */,
 				842C02812232C9D000BBBFAD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

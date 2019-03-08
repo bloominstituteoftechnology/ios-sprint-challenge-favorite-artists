@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IACLyrics.h"
+#import "IACLyricsController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IACLyricsQueryViewController : UIViewController
+
+@property IACLyrics *song;
+@property IACLyricsController *lyricsController;
 
 @end
 

@@ -13,7 +13,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IACLyricsDetailViewController : UIViewController
+
 @property IACLyrics *song;
+@property IACLyricsController *lyricsController;
 
 @end
 

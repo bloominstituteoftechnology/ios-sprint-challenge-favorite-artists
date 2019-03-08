@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^ ControllerCompletionBlock)(NSString *, NSError *);
+
 @interface LSILyricsController : NSObject
+
+-(void) fetchLyricswithArtistName: (NSString *)artisName title: (NSString *)title completionBlock: (ControllerCompletionBlock)completionBlock;
+
+-(void) createLyrics: (NSString *)artistName title: (NSString *)title lyrics: (NSString *)lytrics rating: (NSInteger)rating;
+
+@property NSArray *lyricsArray;
 
 @end
 

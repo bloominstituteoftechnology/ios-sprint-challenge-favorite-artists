@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IACLyrics.h"
+#import "IACLyricsController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IACLyricsDetailViewController : UIViewController
+@property IACLyrics *song;
 
 @end
 

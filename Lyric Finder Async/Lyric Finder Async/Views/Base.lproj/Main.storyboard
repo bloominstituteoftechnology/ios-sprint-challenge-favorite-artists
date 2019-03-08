@@ -121,6 +121,12 @@
                         <viewLayoutGuide key="safeArea" id="SQi-E2-WCn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="4Ya-I6-Qit"/>
+                    <connections>
+                        <outlet property="artistTextField" destination="ld4-6G-cj1" id="mwO-UP-4tv"/>
+                        <outlet property="lyricsTextView" destination="bDl-hK-veT" id="bvx-8l-jF0"/>
+                        <outlet property="ratingLabel" destination="vVI-BH-Twy" id="A8I-c0-mnP"/>
+                        <outlet property="songTitleTextField" destination="mko-EL-v07" id="N7l-Av-3ar"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEb-d9-mKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

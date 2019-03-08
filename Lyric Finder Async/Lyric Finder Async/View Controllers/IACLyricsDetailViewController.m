@@ -9,6 +9,10 @@
 #import "IACLyricsDetailViewController.h"
 
 @interface IACLyricsDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+@property (weak, nonatomic) IBOutlet UITextField *songTitleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *artistTextField;
+@property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
 
 @end
 

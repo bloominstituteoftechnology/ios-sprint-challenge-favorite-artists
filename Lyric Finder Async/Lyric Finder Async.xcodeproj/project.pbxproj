@@ -17,6 +17,7 @@
 		2C61E6082232D56A0063FB4C /* IACLyricsQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E6072232D56A0063FB4C /* IACLyricsQueryViewController.m */; };
 		2C61E60B2232D5840063FB4C /* IACLyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E60A2232D5840063FB4C /* IACLyrics.m */; };
 		2C61E60E2232D5940063FB4C /* IACLyricsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E60D2232D5940063FB4C /* IACLyricsController.m */; };
+		2C61E6112232E9D40063FB4C /* NSJSONSerialization+IACLyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E6102232E9D40063FB4C /* NSJSONSerialization+IACLyrics.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		2C61E60A2232D5840063FB4C /* IACLyrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IACLyrics.m; sourceTree = "<group>"; };
 		2C61E60C2232D5940063FB4C /* IACLyricsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IACLyricsController.h; sourceTree = "<group>"; };
 		2C61E60D2232D5940063FB4C /* IACLyricsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IACLyricsController.m; sourceTree = "<group>"; };
+		2C61E60F2232E9D40063FB4C /* NSJSONSerialization+IACLyrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+IACLyrics.h"; sourceTree = "<group>"; };
+		2C61E6102232E9D40063FB4C /* NSJSONSerialization+IACLyrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+IACLyrics.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		2C61E5E42232CCA30063FB4C /* Lyric Finder Async */ = {
 			isa = PBXGroup;
 			children = (
+				2C61E6122232E9E30063FB4C /* Categories */,
 				2C61E5F42232CCA50063FB4C /* main.m */,
 				2C61E5FF2232CD0C0063FB4C /* Lyric Controller */,
 				2C61E5FE2232CD000063FB4C /* Model */,
@@ -129,6 +133,15 @@
 				2C61E60D2232D5940063FB4C /* IACLyricsController.m */,
 			);
 			path = "Lyric Controller";
+			sourceTree = "<group>";
+		};
+		2C61E6122232E9E30063FB4C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2C61E60F2232E9D40063FB4C /* NSJSONSerialization+IACLyrics.h */,
+				2C61E6102232E9D40063FB4C /* NSJSONSerialization+IACLyrics.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C61E5F52232CCA50063FB4C /* main.m in Sources */,
+				2C61E6112232E9D40063FB4C /* NSJSONSerialization+IACLyrics.m in Sources */,
 				2C61E6082232D56A0063FB4C /* IACLyricsQueryViewController.m in Sources */,
 				2C61E60E2232D5940063FB4C /* IACLyricsController.m in Sources */,
 				2C61E5E72232CCA30063FB4C /* AppDelegate.m in Sources */,

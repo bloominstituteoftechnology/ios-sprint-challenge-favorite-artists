@@ -83,10 +83,18 @@
         }
         
         // If it is a dictionary, pull out the song lyrics
-        ALWSong *song = [[ALWSong alloc] init];
-        song.lyrics = [dictionary objectForKey:@"lyrics_body"];
+//        ALWSong *song = [[ALWSong alloc] init];
+//        song.lyrics = [dictionary objectForKey:@"lyrics_body"];
         
-        completionBlock(song, nil);
+        self.savedSong = [[ALWSong alloc] init];
+        self.savedSong.lyrics = [dictionary objectForKey:@"lyrics_body"];
+        
+        // Save song to array
+        NSMutableArray *songs = [[NSMutableArray alloc] init];
+        [songs addObject:self.savedSong];
+        self.internalSongs = songs;
+        
+        completionBlock(self.savedSong, nil);
         
     }] resume] ;
 }

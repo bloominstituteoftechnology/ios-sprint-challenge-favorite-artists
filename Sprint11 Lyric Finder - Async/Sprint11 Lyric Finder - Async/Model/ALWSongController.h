@@ -14,6 +14,7 @@ typedef void(^CompletionBlock)(ALWSong *, NSError *);
 @interface ALWSongController : NSObject
 
 @property (nonatomic, readonly) NSArray *savedSongs;
+@property (nonatomic) ALWSong *savedSong;
 
 - (void)addSong:(ALWSong *)song;
 

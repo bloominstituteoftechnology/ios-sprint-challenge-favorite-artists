@@ -137,17 +137,19 @@
                         <viewLayoutGuide key="safeArea" id="iIg-8I-hHc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="7BA-vF-rJh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ra0-Q5-bEi">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="8JY-bz-no7">
                             <connections>
-                                <action selector="save:" destination="zxQ-f2-EN6" id="6Xf-b3-AN7"/>
+                                <action selector="save:" destination="zxQ-f2-EN6" id="SGD-xr-AOI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistTextField" destination="qDq-g6-2ng" id="VUg-Ew-OyA"/>
                         <outlet property="lyricsTextView" destination="ahK-Sn-JO5" id="qim-Qp-1NJ"/>
+                        <outlet property="searchButtonOutlet" destination="QHi-D2-8oF" id="jDa-YR-FU0"/>
                         <outlet property="songRatingLabel" destination="7xC-ZN-mMp" id="fxe-fO-gIz"/>
                         <outlet property="songTitleTextField" destination="6Jd-ml-B6e" id="rUl-8i-YBA"/>
+                        <outlet property="stepperOutlet" destination="RJU-KK-LIm" id="jIO-eg-70A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DQ-Uv-Bdt" userLabel="First Responder" sceneMemberID="firstResponder"/>

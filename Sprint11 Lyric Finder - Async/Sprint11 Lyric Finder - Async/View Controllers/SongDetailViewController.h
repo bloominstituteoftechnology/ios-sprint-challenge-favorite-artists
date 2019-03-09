@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *artistTextField;
 @property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
 
+@property (weak, nonatomic) IBOutlet UIStepper *stepperOutlet;
+@property (weak, nonatomic) IBOutlet UIButton *searchButtonOutlet;
+
+- (IBAction)save:(UIBarButtonItem *)sender;
+
+
 @property ALWSongController *songController;
 @property ALWSong *song;
 

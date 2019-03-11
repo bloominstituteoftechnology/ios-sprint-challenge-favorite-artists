@@ -25,9 +25,9 @@
 }
 - (IBAction)searchButtonTapped:(id)sender {
     // Check this over again...
-    [self.lyricsController fetchLyricsForTitle:_titleTextField.text artist:_artistTextField.text completionBlock:^(IACSong * lyrics, NSError * error) {
+    [self.lyricsController fetchLyricsForTitle:_titleTextField.text artist:_artistTextField.text completionBlock:^(IACSong *song, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            self->_lyricsTextView.text = self->_song.lyrics;
+            self.lyricsTextView.text = song.lyrics;
         });
     }];
 }

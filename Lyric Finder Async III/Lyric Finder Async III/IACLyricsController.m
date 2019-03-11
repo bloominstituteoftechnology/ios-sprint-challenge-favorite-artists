@@ -47,7 +47,7 @@ NSString *apiKey = @"cbd2b1a12fmsh0aaf0cc245b3792p14052ajsn976898523b4d";
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setValue:apiKey forHTTPHeaderField:@"X-RapidAPI-Key"];
     
-    [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         // Check for error fetching lyrics
         if (error) {
             NSLog(@"Error fetching lyrics: %@", error);
@@ -71,12 +71,7 @@ NSString *apiKey = @"cbd2b1a12fmsh0aaf0cc245b3792p14052ajsn976898523b4d";
         }
         
         IACSong *song = [[IACSong alloc] init];
-        song.title = title;
-        song.artist = artist;
-        song.rating = 1;
-        // Comeback: I don't think I need the set any of the properties above
-        // All I think I need to do, is allocate space for the object...
-        song.lyrics = [result objectForKey: @"lyrics_body"];
+          song.lyrics = result[@"lyrics_body"];
         completionBlock(song, nil);
         return;
         

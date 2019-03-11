@@ -5,6 +5,34 @@
 #import "ALWSongController.h"
 #import "ALWSong.h"
 
+// Category
+@interface ALWSong (NSJSONSerialization)
+
+@end
+
+// Implementation of Category
+@implementation ALWSong (NSJSONSerialization)
+
+// Initializer to initialize model object from a dictionary
+- (instancetype)initWithADictionary:(NSDictionary *)dictionary title:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(NSInteger)rating {
+    
+    // Pull out lyrics from dictionary
+    lyrics = dictionary[@"lyrics_body"];
+    
+    // Check to make sure it's not nil
+    if (lyrics == nil) {
+        return nil;
+    }
+    
+    // Initialize an object with the lyrics received from the dictionary
+    return [self initWithTitle:title artist:artist lyrics:lyrics rating:rating];
+}
+
+// Return model object in dictionary form
+//[[ALWSong alloc] initWithDictionary:dictionary];
+
+@end
+
 @interface ALWSongController ()
 
 @property (nonatomic) NSMutableArray *internalSongs;
@@ -75,6 +103,8 @@
         // Take data and turn it into a JSON object (a dictionary)
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
         
+        NSLog(@"%@", dictionary);
+        
         // Check to make sure it's a dictionary and not an array
         if (![dictionary isKindOfClass:[NSDictionary class]]) {
             NSLog(@"JSON was not a dictionary");
@@ -83,11 +113,17 @@
         }
         
         // If it is a dictionary, pull out the song lyrics
-//        ALWSong *song = [[ALWSong alloc] init];
-//        song.lyrics = [dictionary objectForKey:@"lyrics_body"];
         
+        // This works, but tried below in order to use the dictionary I made in ALWSong.m
         self.savedSong = [[ALWSong alloc] init];
         self.savedSong.lyrics = [dictionary objectForKey:@"lyrics_body"];
+        
+        // This is the one that I've been using - changing it to extended init
+        //self.savedSong = [[ALWSong alloc] initWithDictionary:dictionary];
+        //self.savedSong = [[ALWSong alloc] initWithDictionary:dictionary title:title artist:artist lyrics: rating:rating];
+        
+        //ALWSong *song = [[ALWSong alloc] init];
+        //song.lyrics = [dictionary objectForKey:@"lyrics_body"];
         
         // Save song to array
         NSMutableArray *songs = [[NSMutableArray alloc] init];

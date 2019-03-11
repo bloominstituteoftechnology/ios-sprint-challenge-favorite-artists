@@ -42,9 +42,11 @@
 
 #pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     return self.songController.savedSongs.count;
 }
 
@@ -55,6 +57,8 @@
     
     // Get the song to be displayed
     ALWSong *song = self.songController.savedSongs[indexPath.row];
+
+    //cell.textLabel.text = [[[self songController] savedSongs] objectAtIndex:indexPath.row];
     
     // Configure the cell...
     cell.textLabel.text = song.title;

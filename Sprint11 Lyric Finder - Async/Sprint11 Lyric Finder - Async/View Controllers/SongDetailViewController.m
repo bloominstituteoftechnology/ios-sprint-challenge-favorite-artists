@@ -48,7 +48,7 @@
     
     [self.songController searchForLyricsWithArtist:self.artistTextField.text title:self.songTitleTextField.text withCompletionBlock:^(ALWSong * _Nonnull song, NSError * _Nonnull error) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            //_songController.savedSongs = song;
+            self.lyricsTextView.text = _songController.savedSong.lyrics;
             NSLog(@"%@", _songController.savedSongs);
             [self updateViews];
         });

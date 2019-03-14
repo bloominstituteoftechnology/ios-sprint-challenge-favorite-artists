@@ -95,7 +95,7 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
 - (void)saveToPersistentStore
 {
     NSMutableArray *songDictionaries = [[NSMutableArray alloc] init];
-    
+
     for (int i = 0; i < self.internalSongs.count; i++) {
         IIISong *song = self.internalSongs[i];
         [songDictionaries addObject:[song songDictionary]];
@@ -103,7 +103,6 @@ static NSString * const apiKEYString = @"rRDZaNCYpDmshhODZZeaGI0B2hBIp1REDV1jsnq
     
     NSData *songsData = [NSJSONSerialization dataWithJSONObject:songDictionaries options:0 error:nil];
     [songsData writeToURL:self.songsURL atomically:YES];
-    
 }
 
 // Don't know where is the proper place to call this ???

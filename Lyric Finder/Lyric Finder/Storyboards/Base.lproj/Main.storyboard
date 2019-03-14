@@ -93,8 +93,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="R4Z-pw-vAK">
                                 <rect key="frame" x="16" y="132" width="343" height="519"/>
                                 <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hy6-cW-3EC">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="49"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfv-Ef-Oa8">
+                                        <rect key="frame" x="0.0" y="61" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIa-Pj-i06">
+                                        <rect key="frame" x="0.0" y="103" width="343" height="30"/>
+                                        <state key="normal" title="Search Lyrics"/>
+                                        <connections>
+                                            <action selector="searchLyricsTapped:" destination="DXW-Az-zJU" eventType="touchUpInside" id="1dv-EO-Yvf"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-Tv-nbn">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="29"/>
+                                        <rect key="frame" x="0.0" y="145" width="343" height="29"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zw-pG-KmG">
                                                 <rect key="frame" x="0.0" y="0.0" width="53.5" height="29"/>
@@ -116,25 +135,6 @@
                                             </stepper>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hy6-cW-3EC">
-                                        <rect key="frame" x="0.0" y="41" width="343" height="49"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfv-Ef-Oa8">
-                                        <rect key="frame" x="0.0" y="102" width="343" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIa-Pj-i06">
-                                        <rect key="frame" x="0.0" y="144" width="343" height="30"/>
-                                        <state key="normal" title="Search Lyrics"/>
-                                        <connections>
-                                            <action selector="searchLyricsTapped:" destination="DXW-Az-zJU" eventType="touchUpInside" id="1dv-EO-Yvf"/>
-                                        </connections>
-                                    </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-XN-XMP">
                                         <rect key="frame" x="0.0" y="186" width="343" height="333"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,7 +163,8 @@
                     <connections>
                         <outlet property="artistTextField" destination="qfv-Ef-Oa8" id="eui-di-UlK"/>
                         <outlet property="lyricsTextView" destination="Ngb-XN-XMP" id="7dv-rh-XP9"/>
-                        <outlet property="ratingLabel" destination="ENL-2p-tQk" id="eQd-mt-0s7"/>
+                        <outlet property="ratingLabel" destination="ENL-2p-tQk" id="uBq-e6-goD"/>
+                        <outlet property="ratingNameLabel" destination="8zw-pG-KmG" id="u89-0p-xhA"/>
                         <outlet property="ratingStepper" destination="6FS-5n-DCS" id="z8C-4P-umk"/>
                         <outlet property="searchLyricsButton" destination="cIa-Pj-i06" id="GDw-us-0hR"/>
                         <outlet property="songTitleTextField" destination="Hy6-cW-3EC" id="Xgd-4j-R89"/>

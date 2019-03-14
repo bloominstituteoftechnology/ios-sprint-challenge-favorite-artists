@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *artistTextField;
 @property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
 @property (weak, nonatomic) IBOutlet UIButton *searchLyricsButton;
+@property (weak, nonatomic) IBOutlet UILabel *ratingNameLabel;
 
 @end
 
@@ -28,6 +29,9 @@
     [self updateViews];
     self.songTitleTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
     self.artistTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
+    [self.ratingNameLabel setHidden:YES];
+    [self.ratingLabel setHidden:YES];
+    [self.ratingStepper setHidden:YES];
 }
 
 - (IBAction)ratingStepperTapped:(id)sender
@@ -45,6 +49,9 @@
     [self.songController searchLyricsWithArtist:artist title:title completion:^(NSString * _Nonnull lyrics, NSError * _Nonnull error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.lyricsTextView.text = lyrics;
+            [self.ratingNameLabel setHidden:NO];
+            [self.ratingLabel setHidden:NO];
+            [self.ratingStepper setHidden:NO];
         });
     }];
 }

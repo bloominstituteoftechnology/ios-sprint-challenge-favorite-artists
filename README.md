@@ -28,17 +28,16 @@ You will be using is [The Audio DB Website](theaudiodb.com) to display a list of
 
 The requirements for this project are as follows:
 
-1.
-2. A model object that represents an artist. It should have the following properties:
+1. A model object that represents an artist. It should have the following properties:
     - Their name.
     - Their biography.
     - The year that they formed. **This must be a primitive.**
-3. A category called `NSJSONSerialization`. In this category add:
+2. A category called `NSJSONSerialization`. In this category add:
     - An initializer to intialize your model object from a dictionary.
     - A function that returns your model object in dictionary form.
-4. Add the ability to save a searched artist. Implement persistence using `NSFileManager` to save your model objects to a file in the application's document directory. **Note:** As you do not have access to `Codable` use `NSJSONSerialization` to help turn your model objects into `NSData`.
-5. A table view controller that displays a list of saved artists.
-6. A detail view controller that allows the user to search for new artists, and also view saved artist information.
+3. Add the ability to save a searched artist. Implement persistence using `NSFileManager` to save your model objects to a file in the application's document directory. **Note:** As you do not have access to `Codable` use `NSJSONSerialization` to help turn your model objects into `NSData`.
+4. A table view controller that displays a list of saved artists.
+5. A detail view controller that allows the user to search for new artists, and also view saved artist information.
 
 ## Go Further
 

@@ -14,6 +14,8 @@
 		7A75ED4D224E30D60067100E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75ED4C224E30D60067100E /* main.m */; };
 		7A75ED55224E34780067100E /* NELLyricsSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75ED54224E34780067100E /* NELLyricsSearchViewController.m */; };
 		7A75ED58224E34890067100E /* NELSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75ED57224E34890067100E /* NELSongsTableViewController.m */; };
+		7A75ED5C224E36440067100E /* NELLyricController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75ED5B224E36440067100E /* NELLyricController.m */; };
+		7A75ED60224E365D0067100E /* NELLyric.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75ED5F224E365D0067100E /* NELLyric.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		7A75ED54224E34780067100E /* NELLyricsSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NELLyricsSearchViewController.m; sourceTree = "<group>"; };
 		7A75ED56224E34890067100E /* NELSongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NELSongsTableViewController.h; sourceTree = "<group>"; };
 		7A75ED57224E34890067100E /* NELSongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NELSongsTableViewController.m; sourceTree = "<group>"; };
+		7A75ED5A224E36440067100E /* NELLyricController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NELLyricController.h; sourceTree = "<group>"; };
+		7A75ED5B224E36440067100E /* NELLyricController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NELLyricController.m; sourceTree = "<group>"; };
+		7A75ED5E224E365D0067100E /* NELLyric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NELLyric.h; sourceTree = "<group>"; };
+		7A75ED5F224E365D0067100E /* NELLyric.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NELLyric.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 			children = (
 				7A75ED3D224E30D20067100E /* AppDelegate.h */,
 				7A75ED3E224E30D20067100E /* AppDelegate.m */,
+				7A75ED61224E36620067100E /* Model */,
+				7A75ED5D224E36490067100E /* Model Controller */,
 				7A75ED59224E34930067100E /* View Controllers */,
 				7A75ED43224E30D20067100E /* Main.storyboard */,
 				7A75ED46224E30D60067100E /* Assets.xcassets */,
@@ -82,6 +90,24 @@
 				7A75ED54224E34780067100E /* NELLyricsSearchViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7A75ED5D224E36490067100E /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A75ED5A224E36440067100E /* NELLyricController.h */,
+				7A75ED5B224E36440067100E /* NELLyricController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		7A75ED61224E36620067100E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A75ED5E224E365D0067100E /* NELLyric.h */,
+				7A75ED5F224E365D0067100E /* NELLyric.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A75ED58224E34890067100E /* NELSongsTableViewController.m in Sources */,
+				7A75ED5C224E36440067100E /* NELLyricController.m in Sources */,
 				7A75ED4D224E30D60067100E /* main.m in Sources */,
 				7A75ED3F224E30D20067100E /* AppDelegate.m in Sources */,
 				7A75ED55224E34780067100E /* NELLyricsSearchViewController.m in Sources */,
+				7A75ED60224E365D0067100E /* NELLyric.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

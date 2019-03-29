@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NELLyricController : NSObject
 
+- (void)addSongWithTitle:(NSString *)title artist:(NSString *)artist lyric:(NSString *)lyric rating:(int)rating;
+
+- (void)searchLyricsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^) (NSString *lyrics, NSError *error))completion;
+
+@property (nonatomic) NSArray *songs;
+
 @end
 
 NS_ASSUME_NONNULL_END

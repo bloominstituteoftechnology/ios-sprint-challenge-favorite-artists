@@ -16,6 +16,7 @@
 		7A75ED58224E34890067100E /* NELSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75ED57224E34890067100E /* NELSongsTableViewController.m */; };
 		7A75ED5C224E36440067100E /* NELLyricController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75ED5B224E36440067100E /* NELLyricController.m */; };
 		7A75ED60224E365D0067100E /* NELLyric.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75ED5F224E365D0067100E /* NELLyric.m */; };
+		7A75ED64224E3C580067100E /* NELLyric+NELNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75ED63224E3C580067100E /* NELLyric+NELNSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		7A75ED5B224E36440067100E /* NELLyricController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NELLyricController.m; sourceTree = "<group>"; };
 		7A75ED5E224E365D0067100E /* NELLyric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NELLyric.h; sourceTree = "<group>"; };
 		7A75ED5F224E365D0067100E /* NELLyric.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NELLyric.m; sourceTree = "<group>"; };
+		7A75ED62224E3C580067100E /* NELLyric+NELNSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NELLyric+NELNSJSONSerialization.h"; sourceTree = "<group>"; };
+		7A75ED63224E3C580067100E /* NELLyric+NELNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NELLyric+NELNSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 			children = (
 				7A75ED3D224E30D20067100E /* AppDelegate.h */,
 				7A75ED3E224E30D20067100E /* AppDelegate.m */,
+				7A75ED65224E3E380067100E /* Category */,
 				7A75ED61224E36620067100E /* Model */,
 				7A75ED5D224E36490067100E /* Model Controller */,
 				7A75ED59224E34930067100E /* View Controllers */,
@@ -108,6 +112,15 @@
 				7A75ED5F224E365D0067100E /* NELLyric.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7A75ED65224E3E380067100E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7A75ED62224E3C580067100E /* NELLyric+NELNSJSONSerialization.h */,
+				7A75ED63224E3C580067100E /* NELLyric+NELNSJSONSerialization.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +199,7 @@
 				7A75ED4D224E30D60067100E /* main.m in Sources */,
 				7A75ED3F224E30D20067100E /* AppDelegate.m in Sources */,
 				7A75ED55224E34780067100E /* NELLyricsSearchViewController.m in Sources */,
+				7A75ED64224E3C580067100E /* NELLyric+NELNSJSONSerialization.m in Sources */,
 				7A75ED60224E365D0067100E /* NELLyric.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NELLyric : NSObject
 
-- (instancetype)intiWithDictionary:(NSDictionary *)dictionary;
-
 - (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int)rating;
 
 @property (nonatomic) NSString *title;

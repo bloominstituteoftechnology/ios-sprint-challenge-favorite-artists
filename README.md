@@ -22,7 +22,7 @@ Please view the screen recordings so you will know what your finished project sh
 
 ## Before you begin
 
-You will be using is [The Audio DB Website](theaudiodb.com) to display a list of the top ten most loved tracks by an artist that the user enters. You can find its API's documentation [here](https://www.theaudiodb.com/api_guide.php)
+You will be using is [The Audio DB Website](theaudiodb.com) to get information about an artist that the user searches for. The API's documentation is [here](https://www.theaudiodb.com/api_guide.php)
 
 ## Requirements
 

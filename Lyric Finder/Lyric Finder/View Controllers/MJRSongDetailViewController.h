@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MJRSongDetailViewController.h
 //  Lyric Finder
 //
 //  Created by Moses Robinson on 3/29/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface MJRSongDetailViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

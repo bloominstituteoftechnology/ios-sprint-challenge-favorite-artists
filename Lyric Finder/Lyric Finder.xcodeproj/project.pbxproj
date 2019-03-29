@@ -8,24 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		39E2F5AC224E83F8002752E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5AB224E83F8002752E1 /* AppDelegate.m */; };
-		39E2F5AF224E83F8002752E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5AE224E83F8002752E1 /* ViewController.m */; };
 		39E2F5B2224E83F8002752E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E2F5B0224E83F8002752E1 /* Main.storyboard */; };
 		39E2F5B4224E83F9002752E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E2F5B3224E83F9002752E1 /* Assets.xcassets */; };
 		39E2F5B7224E83F9002752E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E2F5B5224E83F9002752E1 /* LaunchScreen.storyboard */; };
 		39E2F5BA224E83F9002752E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5B9224E83F9002752E1 /* main.m */; };
+		39E2F5C8224E95DC002752E1 /* MJRSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5C7224E95DC002752E1 /* MJRSongsTableViewController.m */; };
+		39E2F5CB224E9624002752E1 /* MJRSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5CA224E9624002752E1 /* MJRSongDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		39E2F5A7224E83F8002752E1 /* Lyric Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lyric Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E2F5AA224E83F8002752E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39E2F5AB224E83F8002752E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		39E2F5AD224E83F8002752E1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39E2F5AE224E83F8002752E1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		39E2F5B1224E83F8002752E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39E2F5B3224E83F9002752E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39E2F5B6224E83F9002752E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39E2F5B8224E83F9002752E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E2F5B9224E83F9002752E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39E2F5C6224E95DC002752E1 /* MJRSongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRSongsTableViewController.h; sourceTree = "<group>"; };
+		39E2F5C7224E95DC002752E1 /* MJRSongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRSongsTableViewController.m; sourceTree = "<group>"; };
+		39E2F5C9224E9624002752E1 /* MJRSongDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRSongDetailViewController.h; sourceTree = "<group>"; };
+		39E2F5CA224E9624002752E1 /* MJRSongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRSongDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +61,67 @@
 		39E2F5A9224E83F8002752E1 /* Lyric Finder */ = {
 			isa = PBXGroup;
 			children = (
-				39E2F5AA224E83F8002752E1 /* AppDelegate.h */,
-				39E2F5AB224E83F8002752E1 /* AppDelegate.m */,
-				39E2F5AD224E83F8002752E1 /* ViewController.h */,
-				39E2F5AE224E83F8002752E1 /* ViewController.m */,
-				39E2F5B0224E83F8002752E1 /* Main.storyboard */,
-				39E2F5B3224E83F9002752E1 /* Assets.xcassets */,
-				39E2F5B5224E83F9002752E1 /* LaunchScreen.storyboard */,
+				39E2F5C1224E8689002752E1 /* Storyboards */,
+				39E2F5C2224E869C002752E1 /* Model */,
+				39E2F5C3224E86A2002752E1 /* Category */,
+				39E2F5C4224E86A9002752E1 /* Model Controller */,
+				39E2F5C5224E86BC002752E1 /* View Controllers */,
+				39E2F5C0224E8680002752E1 /* Resources */,
 				39E2F5B8224E83F9002752E1 /* Info.plist */,
-				39E2F5B9224E83F9002752E1 /* main.m */,
 			);
 			path = "Lyric Finder";
+			sourceTree = "<group>";
+		};
+		39E2F5C0224E8680002752E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				39E2F5AA224E83F8002752E1 /* AppDelegate.h */,
+				39E2F5AB224E83F8002752E1 /* AppDelegate.m */,
+				39E2F5B3224E83F9002752E1 /* Assets.xcassets */,
+				39E2F5B9224E83F9002752E1 /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		39E2F5C1224E8689002752E1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				39E2F5B0224E83F8002752E1 /* Main.storyboard */,
+				39E2F5B5224E83F9002752E1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		39E2F5C2224E869C002752E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39E2F5C3224E86A2002752E1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		39E2F5C4224E86A9002752E1 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		39E2F5C5224E86BC002752E1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				39E2F5C6224E95DC002752E1 /* MJRSongsTableViewController.h */,
+				39E2F5C7224E95DC002752E1 /* MJRSongsTableViewController.m */,
+				39E2F5C9224E9624002752E1 /* MJRSongDetailViewController.h */,
+				39E2F5CA224E9624002752E1 /* MJRSongDetailViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39E2F5AF224E83F8002752E1 /* ViewController.m in Sources */,
 				39E2F5BA224E83F9002752E1 /* main.m in Sources */,
 				39E2F5AC224E83F8002752E1 /* AppDelegate.m in Sources */,
+				39E2F5CB224E9624002752E1 /* MJRSongDetailViewController.m in Sources */,
+				39E2F5C8224E95DC002752E1 /* MJRSongsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

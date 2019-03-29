@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class NELLyric;
+@class NELLyricController;
+
 @interface NELLyricsSearchViewController : UIViewController
+
+@property (nonatomic) NELLyric *song;
+@property (nonatomic) NELLyricController *lyricController;
 
 @end
 

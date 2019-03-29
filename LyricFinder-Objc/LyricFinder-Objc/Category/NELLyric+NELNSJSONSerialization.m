@@ -20,8 +20,8 @@
     return [[NELLyric alloc] initWithTitle:title artist:artist lyrics:lyrics rating:[rating intValue]];
 }
 
-- (NSDictionary *)lyricDictionary
-{
+
+- (NSDictionary *)dictionaryRepresentation {
     NSDictionary *dictionary = @{@"title" : self.title, @"artist" : self.artist, @"lyrics" : self.lyrics, @"rating" : @(self.rating)};
     return dictionary;
 }

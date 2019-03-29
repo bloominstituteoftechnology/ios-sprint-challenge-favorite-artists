@@ -8,14 +8,30 @@
 
 #import "NELLyricController.h"
 #import "NELLyric.h"
+#import "NELLyric+NELNSJSONSerialization.h"
 
 @interface NELLyricController()
-@property (nonatomic) NSMutableArray *internalSongs;
 
+-(void)saveToStorage;
+-(void)getFromStorage;
+
+@property (nonatomic) NSMutableArray *internalSongs;
+@property (nonatomic) NSURL *lyricUrls;
 @end
 
 @implementation NELLyricController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        //Create an empty mutable array
+        _internalSongs = [[NSMutableArray alloc] init];
+        [self getFromStorage];
+
+    }
+    return self;
+}
 
 
 - (void)searchLyricsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(NSString * _Nonnull, NSError * _Nonnull))completion
@@ -73,6 +89,40 @@
 {
     NELLyric *songs = [[NELLyric alloc]initWithTitle:title artist:artist lyrics:lyric rating:rating];
     [self.internalSongs addObject:songs];
+    [self saveToStorage];
+}
+
+
+- (void)saveToStorage
+{
+    NSMutableArray *songDicts = [[NSMutableArray alloc] init];
+
+    for (NELLyric *lyrics in self.internalSongs) {
+        [songDicts addObject:[lyrics dictionaryRepresentation]];
+    }
+
+    NSData *lyricData = [NSJSONSerialization dataWithJSONObject:songDicts options:0 error:nil];
+    NSURL *documentsDir = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSURL *saveUrl = [documentsDir URLByAppendingPathComponent:@"lyrics"];
+    
+    [lyricData writeToURL:saveUrl atomically:YES];
+}
+
+- (void)getFromStorage
+{
+    NSURL *documentsDir = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSURL *loadContentsUrl = [documentsDir URLByAppendingPathComponent:@"lyrics"];
+    
+    NSData *data = [NSData dataWithContentsOfURL:loadContentsUrl];
+    if (data) {
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        
+        for (NSDictionary *dict in array) {
+            NELLyric *lyrics = [[NELLyric alloc]intiWithDictionary:dict];
+            [self.internalSongs addObject:lyrics];
+        }
+    }
+    
 }
 
 

@@ -8,6 +8,7 @@
 
 #import "NELLyric.h"
 
+
 @implementation NELLyric
 
 - (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist lyrics:(NSString *)lyrics rating:(int)rating

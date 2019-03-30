@@ -87,6 +87,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q8k-pq-A5Y">
                                                 <rect key="frame" x="280" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="changeRating:" destination="l7e-6m-mvL" eventType="valueChanged" id="eg2-au-n7t"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -105,6 +108,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UU-1f-Gp9">
                                         <rect key="frame" x="0.0" y="113" width="374" height="30"/>
                                         <state key="normal" title="Search For Lyrics"/>
+                                        <connections>
+                                            <action selector="searchForLyrics:" destination="l7e-6m-mvL" eventType="touchUpInside" id="CrD-tg-R7s"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d1o-p4-u4R">
                                         <rect key="frame" x="0.0" y="151" width="374" height="571"/>
@@ -125,7 +131,11 @@
                         <viewLayoutGuide key="safeArea" id="vwz-Ow-Uhz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="jxe-c1-jRH">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Awg-Fm-AY4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Awg-Fm-AY4">
+                            <connections>
+                                <action selector="save:" destination="l7e-6m-mvL" id="0zI-af-jca"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistTextField" destination="59z-nu-0yi" id="t2D-fC-GcI"/>

@@ -68,7 +68,7 @@
 
 @synthesize songController = _songController;
 
-- (MJRSongController *)documentController
+- (MJRSongController *)songController
 {
     if (!_songController) {
         _songController = [[MJRSongController alloc] init];

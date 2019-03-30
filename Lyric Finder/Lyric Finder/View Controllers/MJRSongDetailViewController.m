@@ -20,7 +20,6 @@
 @property (strong, nonatomic) IBOutlet UITextView *lyricsTextView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
-
 @end
 
 @implementation MJRSongDetailViewController

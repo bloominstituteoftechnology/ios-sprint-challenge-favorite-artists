@@ -16,6 +16,7 @@
 		39E2F5CB224E9624002752E1 /* MJRSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5CA224E9624002752E1 /* MJRSongDetailViewController.m */; };
 		39E2F5CE224EA244002752E1 /* MJRSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5CD224EA244002752E1 /* MJRSong.m */; };
 		39E2F5D2224EC4FD002752E1 /* MJRSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5D1224EC4FD002752E1 /* MJRSongController.m */; };
+		39E2F5DB224F1D3E002752E1 /* MJRSong+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5DA224F1D3E002752E1 /* MJRSong+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		39E2F5CD224EA244002752E1 /* MJRSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRSong.m; sourceTree = "<group>"; };
 		39E2F5D0224EC4FD002752E1 /* MJRSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRSongController.h; sourceTree = "<group>"; };
 		39E2F5D1224EC4FD002752E1 /* MJRSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRSongController.m; sourceTree = "<group>"; };
+		39E2F5D9224F1D3E002752E1 /* MJRSong+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MJRSong+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		39E2F5DA224F1D3E002752E1 /* MJRSong+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MJRSong+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 		39E2F5C3224E86A2002752E1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				39E2F5D9224F1D3E002752E1 /* MJRSong+NSJSONSerialization.h */,
+				39E2F5DA224F1D3E002752E1 /* MJRSong+NSJSONSerialization.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E2F5BA224E83F9002752E1 /* main.m in Sources */,
+				39E2F5DB224F1D3E002752E1 /* MJRSong+NSJSONSerialization.m in Sources */,
 				39E2F5CE224EA244002752E1 /* MJRSong.m in Sources */,
 				39E2F5AC224E83F8002752E1 /* AppDelegate.m in Sources */,
 				39E2F5CB224E9624002752E1 /* MJRSongDetailViewController.m in Sources */,

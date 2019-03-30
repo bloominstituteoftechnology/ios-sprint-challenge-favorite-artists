@@ -7,8 +7,19 @@
 //
 
 #import "MJRSongDetailViewController.h"
+#import "MJRSongController.h"
+#import "MJRSong.h"
 
 @interface MJRSongDetailViewController ()
+
+@property (strong, nonatomic) IBOutlet UILabel *ratingLabel;
+@property (strong, nonatomic) IBOutlet UIStepper *ratingStepper;
+@property (strong, nonatomic) IBOutlet UITextField *titleTextField;
+@property (strong, nonatomic) IBOutlet UITextField *artistTextField;
+@property (strong, nonatomic) IBOutlet UIButton *searchButton;
+@property (strong, nonatomic) IBOutlet UITextView *lyricsTextView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
 
 @end
 
@@ -16,17 +27,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

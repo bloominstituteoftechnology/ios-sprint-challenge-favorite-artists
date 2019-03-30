@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class MJRSongController;
+@class MJRSong;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MJRSongDetailViewController : UIViewController
+
+@property (nonatomic) MJRSongController *songController;
+@property (nonatomic) MJRSong *song;
 
 @end
 

@@ -7,6 +7,9 @@
 //
 
 #import "MJRSongsTableViewController.h"
+#import "MJRSongController.h"
+#import "MJRSong.h"
+#import "MJRSongDetailViewController.h"
 
 @interface MJRSongsTableViewController ()
 
@@ -16,43 +19,61 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 0;
+    return [[self.songController songs] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    MJRSong *song = self.songController.songs[indexPath.row];
+    
+    cell.textLabel.text = song.title;
+    cell.detailTextLabel.text = song.artist;
     
     return cell;
 }
 
-
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
-        
-        
-        
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-}
-
-
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"ShowDetail"]) {
+        
+        // Passing the task and task controller (tapped on a task cell)
+        
+        MJRSongDetailViewController *destination = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        
+        destination.songController = self.songController;
+        destination.song = self.songController.songs[indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"ShowCreate"]) {
+        
+        MJRSongDetailViewController *destination = segue.destinationViewController;
+        
+        destination.songController = self.songController;
+    }
 }
 
+// MARK: - Properties
+
+@synthesize songController = _songController;
+
+- (MJRSongController *)documentController
+{
+    if (!_songController) {
+        _songController = [[MJRSongController alloc] init];
+    }
+    return _songController;
+}
 
 @end

@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class MJRSongController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MJRSongsTableViewController : UITableViewController
+
+@property (nonatomic) MJRSongController *songController;
 
 @end
 

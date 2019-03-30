@@ -15,6 +15,7 @@
 		39E2F5C8224E95DC002752E1 /* MJRSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5C7224E95DC002752E1 /* MJRSongsTableViewController.m */; };
 		39E2F5CB224E9624002752E1 /* MJRSongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5CA224E9624002752E1 /* MJRSongDetailViewController.m */; };
 		39E2F5CE224EA244002752E1 /* MJRSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5CD224EA244002752E1 /* MJRSong.m */; };
+		39E2F5D2224EC4FD002752E1 /* MJRSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E2F5D1224EC4FD002752E1 /* MJRSongController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		39E2F5CA224E9624002752E1 /* MJRSongDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRSongDetailViewController.m; sourceTree = "<group>"; };
 		39E2F5CC224EA244002752E1 /* MJRSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRSong.h; sourceTree = "<group>"; };
 		39E2F5CD224EA244002752E1 /* MJRSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRSong.m; sourceTree = "<group>"; };
+		39E2F5D0224EC4FD002752E1 /* MJRSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRSongController.h; sourceTree = "<group>"; };
+		39E2F5D1224EC4FD002752E1 /* MJRSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRSongController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 		39E2F5C4224E86A9002752E1 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				39E2F5D0224EC4FD002752E1 /* MJRSongController.h */,
+				39E2F5D1224EC4FD002752E1 /* MJRSongController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				39E2F5CE224EA244002752E1 /* MJRSong.m in Sources */,
 				39E2F5AC224E83F8002752E1 /* AppDelegate.m in Sources */,
 				39E2F5CB224E9624002752E1 /* MJRSongDetailViewController.m in Sources */,
+				39E2F5D2224EC4FD002752E1 /* MJRSongController.m in Sources */,
 				39E2F5C8224E95DC002752E1 /* MJRSongsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

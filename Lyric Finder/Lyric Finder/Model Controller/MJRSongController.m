@@ -8,6 +8,7 @@
 
 #import "MJRSongController.h"
 #import "MJRSong.h"
+#import "MJRSong+NSJSONSerialization.h"
 
 @interface MJRSongController()
 
@@ -23,6 +24,7 @@
     if (self) {
         
         _internalSongs = [[NSMutableArray alloc] init];
+        [self loadFromFileDirectory];
     }
     return self;
 }
@@ -32,6 +34,7 @@
     MJRSong *song = [[MJRSong alloc] initWithTitle:title artist:artist lyrics:lyrics rating:rating];
     
     [self.internalSongs addObject:song];
+    [self saveToFileDirectory];
 }
 
 - (void)fetchLyricsWithTitle:(NSString *)title artist:(NSString *)artist completion:(void (^)(NSString *lyrics, NSError *error))completion
@@ -84,6 +87,38 @@
     }];
     
     [dataTask resume];
+}
+
+- (void)saveToFileDirectory
+{
+    NSURL *documentDirectory = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSURL *songsURL = [documentDirectory URLByAppendingPathComponent:@"songs.json"];
+    
+    NSMutableArray *songDictionaries = [[NSMutableArray alloc]init];
+    
+    for (MJRSong *song in self.internalSongs) {
+        
+        NSDictionary *songDictionary = [song dictionaryFromObject];
+        [songDictionaries addObject:songDictionary];
+    }
+    
+    NSData *songData = [NSJSONSerialization dataWithJSONObject:songDictionaries options:0 error:nil];
+    
+    [songData writeToURL:songsURL atomically:YES];
+}
+
+- (void)loadFromFileDirectory
+{
+    NSURL *documentDirectory = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSURL *songsURL = [documentDirectory URLByAppendingPathComponent:@"songs.json"];
+    
+    NSData *songData = [NSData dataWithContentsOfURL:songsURL];
+    NSArray *songDictionaries = [NSJSONSerialization JSONObjectWithData:songData options:0 error:nil];
+    
+    for (NSDictionary *songDictionary in songDictionaries) {
+        MJRSong *song = [[MJRSong alloc] initWithDictionary:songDictionary];
+        [self.internalSongs addObject:song];
+    }
 }
 
 - (NSArray *)songs

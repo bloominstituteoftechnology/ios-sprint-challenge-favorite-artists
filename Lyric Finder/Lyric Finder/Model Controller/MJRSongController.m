@@ -51,7 +51,7 @@
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
     
-    [request setValue:apiKey forHTTPHeaderField:@"X-Mashape-Key"];
+    [request setValue:apiKey forHTTPHeaderField:@"X-RapidAPI-Key"];
     
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:requestURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         

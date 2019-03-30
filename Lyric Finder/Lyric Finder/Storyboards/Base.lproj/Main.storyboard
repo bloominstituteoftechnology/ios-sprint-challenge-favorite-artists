@@ -112,7 +112,7 @@
                                             <action selector="searchForLyrics:" destination="l7e-6m-mvL" eventType="touchUpInside" id="CrD-tg-R7s"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d1o-p4-u4R">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d1o-p4-u4R">
                                         <rect key="frame" x="0.0" y="151" width="374" height="571"/>
                                         <color key="backgroundColor" red="1" green="0.82842576400000001" blue="0.38911424280000001" alpha="0.76642765410958902" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

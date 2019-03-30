@@ -55,9 +55,15 @@
     [self.songController fetchLyricsWithTitle:title artist:artist completion:^(NSString *lyrics, NSError *error) {
         
         if (error) {
-            
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.lyricsTextView.text = @"Error was found, since API is not working. Fun.";
+            });
+            return;
+        }
+        
+        if (!lyrics) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.lyricsTextView.text = @"Not lyrics were found, since API is not working. Fun.";
             });
             return;
         }

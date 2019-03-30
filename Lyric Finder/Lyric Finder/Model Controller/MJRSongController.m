@@ -113,11 +113,14 @@
     NSURL *songsURL = [documentDirectory URLByAppendingPathComponent:@"songs.json"];
     
     NSData *songData = [NSData dataWithContentsOfURL:songsURL];
-    NSArray *songDictionaries = [NSJSONSerialization JSONObjectWithData:songData options:0 error:nil];
     
-    for (NSDictionary *songDictionary in songDictionaries) {
-        MJRSong *song = [[MJRSong alloc] initWithDictionary:songDictionary];
-        [self.internalSongs addObject:song];
+    if (songData) {
+        NSArray *songDictionaries = [NSJSONSerialization JSONObjectWithData:songData options:0 error:nil];
+        
+        for (NSDictionary *songDictionary in songDictionaries) {
+            MJRSong *song = [[MJRSong alloc] initWithDictionary:songDictionary];
+            [self.internalSongs addObject:song];
+        }
     }
 }
 

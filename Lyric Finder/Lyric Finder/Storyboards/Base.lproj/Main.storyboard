@@ -77,10 +77,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="fvk-Hx-b23">
-                                <rect key="frame" x="20" y="164" width="374" height="694"/>
+                                <rect key="frame" x="20" y="164" width="374" height="685"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="08Y-9H-jYc">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="685"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofq-7w-Fes">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -94,15 +94,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xoy-65-t5K">
+                                                <rect key="frame" x="0.0" y="85" width="374" height="600"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="600" id="9gH-3h-bdz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUD-bp-rFH">
-                                        <rect key="frame" x="0.0" y="94" width="374" height="600"/>
-                                        <color key="backgroundColor" red="0.91316181100000005" green="0.97934174080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="600" id="kHj-g6-izn"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -118,8 +120,19 @@
                         <viewLayoutGuide key="safeArea" id="opU-Ys-U3O"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Dbn-HO-fva">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qZV-Bx-bAp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qZV-Bx-bAp">
+                            <connections>
+                                <action selector="save:" destination="Ddz-4i-fMN" id="gQc-3e-b7H"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistLabel" destination="Ofq-7w-Fes" id="2TK-f1-k1W"/>
+                        <outlet property="biographyTextView" destination="Xoy-65-t5K" id="mfk-ga-n7b"/>
+                        <outlet property="saveButton" destination="qZV-Bx-bAp" id="yTe-Rf-XfG"/>
+                        <outlet property="searchBar" destination="Vfz-Sl-5Uk" id="x2T-2q-WgM"/>
+                        <outlet property="yearLabel" destination="gIf-n0-hAk" id="fhV-iG-YFp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VvG-oY-ajJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

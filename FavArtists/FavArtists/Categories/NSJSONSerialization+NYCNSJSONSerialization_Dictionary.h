@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSJSONSerialization (NYCNSJSONSerialization_Dictionary)
 
-- (void)nyc_fetchArtist:(NSString *)artist completion:(NYCArtistFetcherCompletion)completion;
++ (void)nyc_fetchArtist:(NSString *)artist completion:(NYCArtistFetcherCompletion)completion;
 
 
 @end

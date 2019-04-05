@@ -8,6 +8,7 @@
 
 #import "NYCArtistsTableViewController.h"
 #import "NYCArtist.h"
+#import "NYCArtistDetailViewController.h"
 
 @interface NYCArtistsTableViewController ()
 
@@ -47,8 +48,19 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"Add"]) {
+        NYCArtistDetailViewController *detailVC = [segue destinationViewController];
+        detailVC.artists = [self artists];
+    }
+    
+    if ([[segue identifier] isEqualToString:@"Show"]) {
+        NYCArtistDetailViewController *detailVC = [segue destinationViewController];
+        NSIndexPath *index = [[self tableView] indexPathForSelectedRow];
+        NYCArtist *artist = [self artists][index.row];
+        detailVC.artist = artist;
+        detailVC.artists = [self artists];
+    }
 }
 
 

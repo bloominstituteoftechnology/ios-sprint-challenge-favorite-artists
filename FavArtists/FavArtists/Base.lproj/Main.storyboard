@@ -42,6 +42,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Dk2-n6-yQS" kind="show" identifier="Show" id="jh7-tr-ffL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,7 +55,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="eGC-3C-gPO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="n2w-4Z-kBj">
                             <connections>
-                                <segue destination="Dk2-n6-yQS" kind="show" id="wP3-qo-s4a"/>
+                                <segue destination="Dk2-n6-yQS" kind="show" identifier="Add" id="wP3-qo-s4a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -113,7 +116,7 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="QYD-5t-Q6v">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="TRV-CQ-DDx">
                             <connections>
-                                <action selector="saveButtonTapped:" destination="iHZ-wC-DDj" id="Yfc-SA-fCi"/>
+                                <action selector="saveButtonTapped:" destination="Dk2-n6-yQS" id="2xj-gB-2zD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -126,7 +129,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zV9-mD-ptM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="iHZ-wC-DDj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1255" y="165"/>
         </scene>
@@ -147,4 +149,7 @@
             <point key="canvasLocation" x="-410" y="165"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jh7-tr-ffL"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -53,9 +53,8 @@
     }
 }
 
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
-    NSJSONSerialization *jsonSerialization = [[NSJSONSerialization alloc] init];
-    [jsonSerialization nyc_fetchArtist:searchBar.text completion:^(NSDictionary * _Nullable dictionary, NSError * _Nullable error) {
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [NSJSONSerialization nyc_fetchArtist:searchBar.text completion:^(NSDictionary * _Nullable dictionary, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error fetching artist: %@", error);
             return;
@@ -81,9 +80,12 @@
     
     NSURL *path = [docsDirectory URLByAppendingPathComponent:@"artists.plist"];
     
+    NSLog(path.absoluteString);
+    
     if ([self artist]) {
         [NSKeyedArchiver archiveRootObject:self.artists toFile:path.absoluteString];
     }
+    [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 @end

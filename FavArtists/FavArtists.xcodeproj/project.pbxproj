@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		77700A442257A89B0010755A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77700A432257A89B0010755A /* AppDelegate.m */; };
-		77700A472257A89B0010755A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77700A462257A89B0010755A /* ViewController.m */; };
 		77700A4A2257A89B0010755A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77700A482257A89B0010755A /* Main.storyboard */; };
 		77700A4C2257A89C0010755A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77700A4B2257A89C0010755A /* Assets.xcassets */; };
 		77700A4F2257A89C0010755A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77700A4D2257A89C0010755A /* LaunchScreen.storyboard */; };
 		77700A522257A89C0010755A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77700A512257A89C0010755A /* main.m */; };
 		77700A5A2257A9640010755A /* NYCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 77700A592257A9640010755A /* NYCArtist.m */; };
+		77700A5E2257B2040010755A /* NSJSONSerialization+NYCNSJSONSerialization_Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 77700A5D2257B2040010755A /* NSJSONSerialization+NYCNSJSONSerialization_Dictionary.m */; };
+		77700A622257B4FD0010755A /* NYCArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77700A612257B4FD0010755A /* NYCArtistDetailViewController.m */; };
+		77700A652257B5160010755A /* NYCArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77700A642257B5160010755A /* NYCArtistsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		77700A3F2257A89B0010755A /* FavArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77700A422257A89B0010755A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77700A432257A89B0010755A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		77700A452257A89B0010755A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		77700A462257A89B0010755A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		77700A492257A89B0010755A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77700A4B2257A89C0010755A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77700A4E2257A89C0010755A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,6 +29,12 @@
 		77700A512257A89C0010755A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77700A582257A9640010755A /* NYCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYCArtist.h; sourceTree = "<group>"; };
 		77700A592257A9640010755A /* NYCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYCArtist.m; sourceTree = "<group>"; };
+		77700A5C2257B2040010755A /* NSJSONSerialization+NYCNSJSONSerialization_Dictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+NYCNSJSONSerialization_Dictionary.h"; sourceTree = "<group>"; };
+		77700A5D2257B2040010755A /* NSJSONSerialization+NYCNSJSONSerialization_Dictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+NYCNSJSONSerialization_Dictionary.m"; sourceTree = "<group>"; };
+		77700A602257B4FD0010755A /* NYCArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYCArtistDetailViewController.h; sourceTree = "<group>"; };
+		77700A612257B4FD0010755A /* NYCArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYCArtistDetailViewController.m; sourceTree = "<group>"; };
+		77700A632257B5160010755A /* NYCArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYCArtistsTableViewController.h; sourceTree = "<group>"; };
+		77700A642257B5160010755A /* NYCArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYCArtistsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +69,37 @@
 			children = (
 				77700A422257A89B0010755A /* AppDelegate.h */,
 				77700A432257A89B0010755A /* AppDelegate.m */,
-				77700A452257A89B0010755A /* ViewController.h */,
-				77700A462257A89B0010755A /* ViewController.m */,
 				77700A482257A89B0010755A /* Main.storyboard */,
 				77700A4B2257A89C0010755A /* Assets.xcassets */,
 				77700A4D2257A89C0010755A /* LaunchScreen.storyboard */,
 				77700A502257A89C0010755A /* Info.plist */,
 				77700A512257A89C0010755A /* main.m */,
+				77700A5B2257ABB70010755A /* Models */,
+				77700A5F2257B2110010755A /* Categories */,
+				77700A602257B4FD0010755A /* NYCArtistDetailViewController.h */,
+				77700A612257B4FD0010755A /* NYCArtistDetailViewController.m */,
+				77700A632257B5160010755A /* NYCArtistsTableViewController.h */,
+				77700A642257B5160010755A /* NYCArtistsTableViewController.m */,
+			);
+			path = FavArtists;
+			sourceTree = "<group>";
+		};
+		77700A5B2257ABB70010755A /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				77700A582257A9640010755A /* NYCArtist.h */,
 				77700A592257A9640010755A /* NYCArtist.m */,
 			);
-			path = FavArtists;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		77700A5F2257B2110010755A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				77700A5C2257B2040010755A /* NSJSONSerialization+NYCNSJSONSerialization_Dictionary.h */,
+				77700A5D2257B2040010755A /* NSJSONSerialization+NYCNSJSONSerialization_Dictionary.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77700A472257A89B0010755A /* ViewController.m in Sources */,
 				77700A522257A89C0010755A /* main.m in Sources */,
+				77700A652257B5160010755A /* NYCArtistsTableViewController.m in Sources */,
+				77700A5E2257B2040010755A /* NSJSONSerialization+NYCNSJSONSerialization_Dictionary.m in Sources */,
 				77700A442257A89B0010755A /* AppDelegate.m in Sources */,
+				77700A622257B4FD0010755A /* NYCArtistDetailViewController.m in Sources */,
 				77700A5A2257A9640010755A /* NYCArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NYCArtistsTableViewController.h
 //  FavArtists
 //
 //  Created by Nathanael Youngren on 4/5/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface NYCArtistsTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

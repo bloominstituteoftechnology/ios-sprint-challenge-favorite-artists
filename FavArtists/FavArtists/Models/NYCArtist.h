@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NYCArtist : NSObject
+@interface NYCArtist : NSObject<NSCoding>
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

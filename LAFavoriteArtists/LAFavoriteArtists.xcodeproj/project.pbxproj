@@ -18,6 +18,7 @@
 		A276EA492257A80F001509C0 /* LAArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A276EA482257A80F001509C0 /* LAArtistTableViewController.m */; };
 		A276EA4D2257A853001509C0 /* LASearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A276EA4C2257A853001509C0 /* LASearchViewController.m */; };
 		A276EA502257A862001509C0 /* LADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A276EA4F2257A862001509C0 /* LADetailViewController.m */; };
+		A2D468B52257BD0600AFE717 /* LAArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D468B42257BD0600AFE717 /* LAArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		A276EA4C2257A853001509C0 /* LASearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LASearchViewController.m; sourceTree = "<group>"; };
 		A276EA4E2257A861001509C0 /* LADetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LADetailViewController.h; sourceTree = "<group>"; };
 		A276EA4F2257A862001509C0 /* LADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LADetailViewController.m; sourceTree = "<group>"; };
+		A2D468B32257BD0600AFE717 /* LAArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAArtistController.h; sourceTree = "<group>"; };
+		A2D468B42257BD0600AFE717 /* LAArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +83,11 @@
 				A276EA302257A44C001509C0 /* LaunchScreen.storyboard */,
 				A276EA332257A44C001509C0 /* Info.plist */,
 				A276EA342257A44C001509C0 /* main.m */,
+				A276EA3E2257A6BB001509C0 /* Model */,
 				A276EA4A2257A816001509C0 /* View Controllers */,
+				A2D468B62257BD1300AFE717 /* Controllers */,
 				A276EA462257A7AE001509C0 /* Networking */,
 				A276EA422257A760001509C0 /* Helper */,
-				A276EA3E2257A6BB001509C0 /* Model */,
 			);
 			path = LAFavoriteArtists;
 			sourceTree = "<group>";
@@ -126,6 +130,15 @@
 				A276EA4F2257A862001509C0 /* LADetailViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A2D468B62257BD1300AFE717 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2D468B32257BD0600AFE717 /* LAArtistController.h */,
+				A2D468B42257BD0600AFE717 /* LAArtistController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +214,7 @@
 			files = (
 				A276EA352257A44C001509C0 /* main.m in Sources */,
 				A276EA452257A7A6001509C0 /* LAArtistFetcher.m in Sources */,
+				A2D468B52257BD0600AFE717 /* LAArtistController.m in Sources */,
 				A276EA502257A862001509C0 /* LADetailViewController.m in Sources */,
 				A276EA412257A756001509C0 /* LAArtist+NSJSONSerialization.m in Sources */,
 				A276EA492257A80F001509C0 /* LAArtistTableViewController.m in Sources */,

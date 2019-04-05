@@ -25,7 +25,6 @@
     [artistFetcher fetchArtist:@"coldplay" completionBlock:^(LAArtist *artist, NSError *error) {
         NSLog(@"%@", artist.name);
         NSLog(@"%@", artist.biography);
-        NSLog(@"%@", artist.year);
     }];
     
     return YES;

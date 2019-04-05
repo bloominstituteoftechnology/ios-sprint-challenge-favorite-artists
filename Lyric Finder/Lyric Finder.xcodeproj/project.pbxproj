@@ -8,24 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		48B3A3BF2257A58900ECC7E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3A3BE2257A58900ECC7E1 /* AppDelegate.m */; };
-		48B3A3C22257A58900ECC7E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3A3C12257A58900ECC7E1 /* ViewController.m */; };
 		48B3A3C52257A58900ECC7E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B3A3C32257A58900ECC7E1 /* Main.storyboard */; };
 		48B3A3C72257A58A00ECC7E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B3A3C62257A58A00ECC7E1 /* Assets.xcassets */; };
 		48B3A3CA2257A58A00ECC7E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B3A3C82257A58A00ECC7E1 /* LaunchScreen.storyboard */; };
 		48B3A3CD2257A58A00ECC7E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3A3CC2257A58A00ECC7E1 /* main.m */; };
+		48B3A3E52257B12D00ECC7E1 /* FCCArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3A3E42257B12D00ECC7E1 /* FCCArtistDetailViewController.m */; };
+		48B3A3E82257B23B00ECC7E1 /* FCCArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3A3E72257B23B00ECC7E1 /* FCCArtistTableViewController.m */; };
+		48B3A3EB2257B25800ECC7E1 /* FCCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3A3EA2257B25800ECC7E1 /* FCCArtist.m */; };
+		48B3A3EE2257B26600ECC7E1 /* FCCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3A3ED2257B26600ECC7E1 /* FCCArtistController.m */; };
+		48B3A3F52257B44300ECC7E1 /* FCCArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3A3F42257B44300ECC7E1 /* FCCArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48B3A3BA2257A58900ECC7E1 /* Lyric Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lyric Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B3A3BD2257A58900ECC7E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48B3A3BE2257A58900ECC7E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		48B3A3C02257A58900ECC7E1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		48B3A3C12257A58900ECC7E1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		48B3A3C42257A58900ECC7E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48B3A3C62257A58A00ECC7E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48B3A3C92257A58A00ECC7E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48B3A3CB2257A58A00ECC7E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48B3A3CC2257A58A00ECC7E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48B3A3E32257B12D00ECC7E1 /* FCCArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCCArtistDetailViewController.h; sourceTree = "<group>"; };
+		48B3A3E42257B12D00ECC7E1 /* FCCArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCCArtistDetailViewController.m; sourceTree = "<group>"; };
+		48B3A3E62257B23B00ECC7E1 /* FCCArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCCArtistTableViewController.h; sourceTree = "<group>"; };
+		48B3A3E72257B23B00ECC7E1 /* FCCArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCCArtistTableViewController.m; sourceTree = "<group>"; };
+		48B3A3E92257B25800ECC7E1 /* FCCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCCArtist.h; sourceTree = "<group>"; };
+		48B3A3EA2257B25800ECC7E1 /* FCCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCCArtist.m; sourceTree = "<group>"; };
+		48B3A3EC2257B26600ECC7E1 /* FCCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCCArtistController.h; sourceTree = "<group>"; };
+		48B3A3ED2257B26600ECC7E1 /* FCCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCCArtistController.m; sourceTree = "<group>"; };
+		48B3A3F32257B44300ECC7E1 /* FCCArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FCCArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		48B3A3F42257B44300ECC7E1 /* FCCArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FCCArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +72,9 @@
 			children = (
 				48B3A3BD2257A58900ECC7E1 /* AppDelegate.h */,
 				48B3A3BE2257A58900ECC7E1 /* AppDelegate.m */,
+				48B3A3E22257AB5E00ECC7E1 /* Category */,
 				48B3A3D52257A5CF00ECC7E1 /* Model */,
+				48B3A3EF2257B32300ECC7E1 /* Model Controller */,
 				48B3A3D32257A5A700ECC7E1 /* View Controllers */,
 				48B3A3D42257A5B800ECC7E1 /* Storyboards */,
 				48B3A3C62257A58A00ECC7E1 /* Assets.xcassets */,
@@ -73,8 +87,10 @@
 		48B3A3D32257A5A700ECC7E1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				48B3A3C02257A58900ECC7E1 /* ViewController.h */,
-				48B3A3C12257A58900ECC7E1 /* ViewController.m */,
+				48B3A3E32257B12D00ECC7E1 /* FCCArtistDetailViewController.h */,
+				48B3A3E42257B12D00ECC7E1 /* FCCArtistDetailViewController.m */,
+				48B3A3E62257B23B00ECC7E1 /* FCCArtistTableViewController.h */,
+				48B3A3E72257B23B00ECC7E1 /* FCCArtistTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -91,8 +107,28 @@
 		48B3A3D52257A5CF00ECC7E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				48B3A3E92257B25800ECC7E1 /* FCCArtist.h */,
+				48B3A3EA2257B25800ECC7E1 /* FCCArtist.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		48B3A3E22257AB5E00ECC7E1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				48B3A3F32257B44300ECC7E1 /* FCCArtist+NSJSONSerialization.h */,
+				48B3A3F42257B44300ECC7E1 /* FCCArtist+NSJSONSerialization.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		48B3A3EF2257B32300ECC7E1 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48B3A3EC2257B26600ECC7E1 /* FCCArtistController.h */,
+				48B3A3ED2257B26600ECC7E1 /* FCCArtistController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48B3A3C22257A58900ECC7E1 /* ViewController.m in Sources */,
+				48B3A3E52257B12D00ECC7E1 /* FCCArtistDetailViewController.m in Sources */,
 				48B3A3CD2257A58A00ECC7E1 /* main.m in Sources */,
+				48B3A3F52257B44300ECC7E1 /* FCCArtist+NSJSONSerialization.m in Sources */,
 				48B3A3BF2257A58900ECC7E1 /* AppDelegate.m in Sources */,
+				48B3A3EE2257B26600ECC7E1 /* FCCArtistController.m in Sources */,
+				48B3A3EB2257B25800ECC7E1 /* FCCArtist.m in Sources */,
+				48B3A3E82257B23B00ECC7E1 /* FCCArtistTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

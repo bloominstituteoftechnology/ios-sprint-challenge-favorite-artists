@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GLIArtistDetailController : NSObject
 
+- (void)fetchArtistDetailsWithCompletionBlock:(NSString *)name completion:(void (^) (NSError *error))completionBlock;
+
+@property NSMutableArray *artistDetails;
+
 @end
 
 NS_ASSUME_NONNULL_END

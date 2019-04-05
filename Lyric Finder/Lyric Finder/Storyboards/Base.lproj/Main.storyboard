@@ -13,7 +13,7 @@
         <!--Favorite Artist-->
         <scene sceneID="t43-gC-2Q3">
             <objects>
-                <tableViewController id="ZkX-2T-kGi" sceneMemberID="viewController">
+                <tableViewController id="ZkX-2T-kGi" customClass="FCCArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3jY-QV-7zk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
         <!--Title-->
         <scene sceneID="CwJ-rq-M1D">
             <objects>
-                <viewController id="Ddz-4i-fMN" sceneMemberID="viewController">
+                <viewController id="Ddz-4i-fMN" customClass="FCCArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="miC-tA-JVu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,6 +143,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ffy-Gt-8Xn"/>
+        <segue reference="gha-MK-aMz"/>
     </inferredMetricsTieBreakers>
 </document>

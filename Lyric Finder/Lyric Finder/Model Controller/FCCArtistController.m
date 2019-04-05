@@ -17,4 +17,70 @@
 
 @implementation FCCArtistController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _internalArtists = [[NSMutableArray alloc] init];
+
+    }
+    return self;
+}
+
+- (void)createFavoriteWithArtist:(NSString *)artist year:(NSInteger)year biography:(NSString *)biography {
+    
+    FCCArtist *favorite = [[FCCArtist alloc] initWithArtist:artist year:year biography:biography];
+    [self.internalArtists addObject:favorite];
+    
+}
+
+- (void)fetchWithArtist:(NSString *)artist completion:(void (^)(NSError * _Nonnull))completion {
+    
+    NSURL *baseURL = [NSURL URLWithString: baseURLString];
+    NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
+    
+    NSURLQueryItem *artistItem = [[NSURLQueryItem alloc] initWithName:@"strArtist" value:artist];
+    [components setQueryItems:@[artistItem]];
+    
+    NSURL *requestURL = components.URL;
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
+    
+    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:requestURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        if (error) {
+            NSLog(@"error fetching data: %@", error);
+            completion(error);
+            return;
+        }
+        
+        if (data == nil) {
+            NSLog(@"No data returned form data task");
+            completion(error);
+            return;
+        }
+        
+        NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        if (![jsonDictionary isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"JSON was not a dictionary");
+            completion(error);
+            return;
+        }
+        
+        NSMutableArray *artists = [[NSMutableArray alloc] init];
+
+        self.internalArtists = artists;
+        completion(nil);
+    }];
+    
+    [dataTask resume];
+
+}
+
+
+
+
+static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s";
+static NSString * const apiKey = @"1";
+
 @end

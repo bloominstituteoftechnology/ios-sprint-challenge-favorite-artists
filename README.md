@@ -22,7 +22,7 @@ Please view the screen recordings so you will know what your finished project sh
 
 ## Before you begin
 
-You will be using is [The Audio DB Website](theaudiodb.com) to get information about an artist that the user searches for. The API's documentation is [here](https://www.theaudiodb.com/api_guide.php).
+You will be using is [The Audio DB Website](https://theaudiodb.com) to get information about an artist that the user searches for. The API's documentation is [here](https://www.theaudiodb.com/api_guide.php).
 
 **NOTE:** In the place of an actual API key, use the number `1` instead. This is the API's demo key.
 

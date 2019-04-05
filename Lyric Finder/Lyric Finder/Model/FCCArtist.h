@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FCCArtist : NSObject
 
+@property NSString *artist;
+@property NSInteger year;
+@property NSString *biography;
+
+- (instancetype)initWithArtist:(NSString *)artist year:(NSInteger)year biography:(NSString *)biography;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,4 +10,17 @@
 
 @implementation FCCArtist
 
+- (instancetype)initWithArtist:(NSString *)artist year:(NSInteger)year biography:(NSString *)biography; {
+    
+    self = [super init];
+    if (self) {
+        _artist = artist;
+        _year = year;
+        _biography = biography;
+        
+    }
+    return self;
+}
+
+
 @end

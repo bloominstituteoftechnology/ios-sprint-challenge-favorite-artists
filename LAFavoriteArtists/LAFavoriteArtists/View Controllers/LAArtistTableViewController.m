@@ -14,6 +14,12 @@
 
 @implementation LAArtistTableViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+        // IMPLEMENT FILEMANAGER CHECK TO UPDATE TABLE VIEWS IF NEW ARTIST IS SAVED
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

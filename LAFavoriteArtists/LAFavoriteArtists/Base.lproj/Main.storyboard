@@ -107,6 +107,11 @@
                         <viewLayoutGuide key="safeArea" id="Uwq-Dk-540"/>
                     </view>
                     <navigationItem key="navigationItem" title="ArtistName" id="nRJ-Ue-J6n"/>
+                    <connections>
+                        <outlet property="biographyTextView" destination="KY8-fm-5ym" id="9hN-zc-98n"/>
+                        <outlet property="nameLabel" destination="CQv-t3-upJ" id="va8-HL-30Z"/>
+                        <outlet property="yearLabel" destination="py8-at-cPL" id="hJa-kQ-kcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHK-Py-fRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,8 +150,16 @@
                         <viewLayoutGuide key="safeArea" id="KlG-Rx-0As"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="eoR-5a-6Jf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="JP8-eI-2AR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="JP8-eI-2AR">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="LO7-hj-zNs" id="dXm-Uf-yUj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="biographyTextView" destination="Cqq-UA-x83" id="nWH-fL-QMO"/>
+                        <outlet property="searchBar" destination="jl5-of-hOe" id="fkh-QP-yea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZL-i3-dc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

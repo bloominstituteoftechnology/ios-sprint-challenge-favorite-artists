@@ -9,6 +9,9 @@
 #import "LADetailViewController.h"
 
 @interface LADetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *biographyTextView;
 
 @end
 

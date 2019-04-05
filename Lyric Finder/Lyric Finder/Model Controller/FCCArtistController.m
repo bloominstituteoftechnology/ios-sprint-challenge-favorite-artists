@@ -17,10 +17,12 @@
 
 @implementation FCCArtistController
 
-- (instancetype)init {
+- (instancetype)init
+{
     self = [super init];
     if (self) {
         _internalArtists = [[NSMutableArray alloc] init];
+        [self loadFromFileDirectory];
 
     }
     return self;
@@ -30,10 +32,12 @@
     
     FCCArtist *favorite = [[FCCArtist alloc] initWithArtist:artist year:year biography:biography];
     [self.internalArtists addObject:favorite];
+    [self saveToFileDirectory];
     
 }
 
-- (void)fetchWithArtist:(NSString *)artist completion:(void (^)(NSError * _Nonnull))completion {
+- (void)fetchWithArtist:(NSString *)artist completion:(void (^)(NSError * _Nonnull))completion
+{
     
     NSURL *baseURL = [NSURL URLWithString: baseURLString];
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
@@ -43,7 +47,9 @@
     
     NSURL *requestURL = components.URL;
     
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
+    
     
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:requestURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
@@ -77,8 +83,45 @@
 
 }
 
+- (void)saveToFileDirectory
+{
+    NSURL *documentDirectory = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSURL *artistsURL = [documentDirectory URLByAppendingPathComponent:@"artists.json"];
+    
+    NSMutableArray *artistDictionaries = [[NSMutableArray alloc]init];
+    
+    for (FCCArtist *artist in self.internalArtists) {
+        
+        NSDictionary *artistDictionary = [artist dictionaryFromObject];
+        [artistDictionaries addObject:artistDictionary];
+    }
+    
+    NSData *artistData = [NSJSONSerialization dataWithJSONObject:artistDictionaries options:0 error:nil];
+    
+    [artistData writeToURL:artistsURL atomically:YES];
+}
 
+- (void)loadFromFileDirectory
+{
+    NSURL *documentDirectory = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSURL *artistsURL = [documentDirectory URLByAppendingPathComponent:@"artists.json"];
+    
+    NSData *artistData = [NSData dataWithContentsOfURL:artistsURL];
+    
+    if (artistData) {
+        NSArray *artistDictionaries = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
+        
+        for (NSDictionary *artistDictionary in artistDictionaries) {
+            FCCArtist *artist = [[FCCArtist alloc] initWithDictionary:artistDictionary];
+            [self.internalArtists addObject:artist];
+        }
+    }
+}
 
+- (NSArray *)artists
+{
+    return self.internalArtists;
+}
 
 static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s";
 static NSString * const apiKey = @"1";

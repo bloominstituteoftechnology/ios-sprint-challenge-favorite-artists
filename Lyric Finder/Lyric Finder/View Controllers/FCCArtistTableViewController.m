@@ -17,21 +17,25 @@
 
 @implementation FCCArtistTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return [[self.artistController artists] count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"artistCell" forIndexPath:indexPath];
     
     FCCArtist *artist = self.artistController.artists[indexPath.row];
@@ -42,16 +46,19 @@
 }
 
 #pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
   
-    if ([segue.identifier isEqualToString:@"artistSegue"]) {
+    if ([segue.identifier isEqualToString:@"artistSegue"])
+    {
         FCCArtistDetailViewController *destination = segue.destinationViewController;
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         
         destination.artistController  = self.artistController;
         destination.artist = self.artistController.artists[indexPath.row];
         
-    } else if ([segue.identifier isEqualToString:@"addSegue"]) {
+    } else if ([segue.identifier isEqualToString:@"addSegue"])
+    {
         FCCArtistDetailViewController *destination = segue.destinationViewController;
         destination.artistController = self.artistController;
         
@@ -59,8 +66,10 @@
 }
 
 @synthesize artistController = _artistController;
-- (FCCArtistController *)artistController {
-    if (!_artistController) {
+- (FCCArtistController *)artistController
+{
+    if (!_artistController)
+    {
         _artistController = [[FCCArtistController alloc] init];
     }
     return _artistController;

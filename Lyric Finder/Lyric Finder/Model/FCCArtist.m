@@ -10,7 +10,8 @@
 
 @implementation FCCArtist
 
-- (instancetype)initWithArtist:(NSString *)artist year:(NSInteger)year biography:(NSString *)biography; {
+- (instancetype)initWithArtist:(NSString *)artist year:(NSInteger)year biography:(NSString *)biography;
+{
     
     self = [super init];
     if (self) {

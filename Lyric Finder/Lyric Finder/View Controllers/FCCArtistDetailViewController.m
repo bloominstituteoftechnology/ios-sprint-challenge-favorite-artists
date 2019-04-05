@@ -22,14 +22,16 @@
 @implementation FCCArtistDetailViewController
 
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self updateViews];
     self.searchBar.delegate = self;
     
 }
 
-- (IBAction)save:(id)sender {
+- (IBAction)save:(id)sender
+{
     NSString *artist = self.artistLabel.text;
     NSInteger year = (int)self.yearLabel.text;
     NSString *biography = self.biographyTextView.text;
@@ -39,14 +41,16 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
     NSString *artist = self.searchBar.text;
     
     [self.artistController fetchWithArtist:artist completion:^(NSError * _Nonnull error)]
     
 }
 
-- (void)updateViews {
+- (void)updateViews
+{
     
     if (!self.isViewLoaded || !self.artist) { return; }
     self.title = self.artist.artist;

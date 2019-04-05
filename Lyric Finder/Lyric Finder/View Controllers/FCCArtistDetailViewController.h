@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class FCCArtistController;
+@class FCCArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FCCArtistDetailViewController : UIViewController
+
+@property (nonatomic) FCCArtistController *artistController;
+@property (nonatomic) FCCArtist * artist;
 
 @end
 

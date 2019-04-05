@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class FCCArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FCCArtistTableViewController : UITableViewController
+
+@property (nonatomic) FCCArtistController *artistController;
 
 @end
 

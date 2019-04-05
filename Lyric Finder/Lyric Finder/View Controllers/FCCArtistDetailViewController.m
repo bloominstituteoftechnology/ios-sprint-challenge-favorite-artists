@@ -7,6 +7,8 @@
 //
 
 #import "FCCArtistDetailViewController.h"
+#import "FCCArtistController.h"
+#import "FCCArtist.h"
 
 @interface FCCArtistDetailViewController ()
 

@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 //typealias
-typedef void (^LAArtistFetcherCompletionBlock)(NSArray *, NSError *);
+typedef void (^LAArtistFetcherCompletionBlock)(LAArtist *, NSError *);
 // ******* MAY NEED TO CHANGE NSARRAY HERE TO NSDICTIONARY FIRST
 
 @interface LAArtistFetcher : NSObject

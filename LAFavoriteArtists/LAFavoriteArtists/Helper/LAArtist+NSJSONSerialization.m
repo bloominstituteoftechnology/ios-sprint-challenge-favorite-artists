@@ -21,14 +21,16 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary{
     self = [super init];
     if(self){
-        NSArray *artists = dictionary [@"artists"];
-        NSDictionary *artistDictionary = artists[0];
-        //        self.name =  [dictionary objectForKey:@"strArtist"];
-        //        self.biography = [dictionary objectForKey:@"strBiographyEN"];
-        //        self.year = (int)[dictionary objectForKey:@"intFormedYear"];
-        self.name = artistDictionary[@"strArtist"];
-        self.biography = artistDictionary[@"strBiographyEN"];
-        self.year = (int)artistDictionary[@"intFormedYear"];
+//        NSArray *artists = dictionary [@"artists"];
+//        NSDictionary *artistDictionary = artists[0];
+        
+                self.name =  [dictionary objectForKey:@"strArtist"];
+                self.biography = [dictionary objectForKey:@"strBiographyEN"];
+                self.year = (int)[dictionary objectForKey:@"intFormedYear"];
+        
+//        self.name = artistDictionary[@"strArtist"];
+//        self.biography = artistDictionary[@"strBiographyEN"];
+//        self.year = (int)artistDictionary[@"intFormedYear"];
     }
     return self;
 }

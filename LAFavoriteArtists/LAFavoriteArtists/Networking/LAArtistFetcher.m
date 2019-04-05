@@ -7,6 +7,8 @@
 //
 
 #import "LAArtistFetcher.h"
+#import "LAArtist.h"
+#import "LAArtist+NSJSONSerialization.h"
 
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
 
@@ -16,8 +18,45 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     
     NSURLComponents *urlComponents = [[NSURLComponents alloc]initWithString:baseURLString];
     // Query parameters
-    NSString *urlString = baseURLString;
-    *urlString = [urlString stringByAppendingString: [@"", name]];
+    NSArray *queryItems = @[[NSURLQueryItem queryItemWithName:@"s" value:name]];
+    
+    urlComponents.queryItems = queryItems;
+    
+    //URL
+    
+    NSURL *url = urlComponents.URL;
+    NSLog (@"The URL is: %@", url);
+    //DataTask
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        // Error handling
+        if(error){
+            NSLog(@"The URL being used: %@", url);
+            NSLog(@"Error fetching artist: %@", error);
+            return;
+        }
+        
+        // Parse JSON
+        NSError *jsonError;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        if(!dictionary){
+            NSLog(@"Error decoding: %@", error);
+            completionBlock(nil, error);
+            return;
+        }
+        
+        NSArray *artistDictionary = dictionary[@"artists"];
+//        NSMutableArray *artists = [[NSMutableArray alloc]init];
+//
+//        for(NSDictionary *dict in artists){
+//            LAArtist *artist = [[LAArtist alloc]initWithDictionary:dict];
+//            [artists addObject:artist];
+//        }
+        LAArtist *artist = [[LAArtist alloc]initWithDictionary:artistDictionary[0]];
+        completionBlock(artist, nil);
+        
+    }];
+    [task resume];
 }
 
 @end

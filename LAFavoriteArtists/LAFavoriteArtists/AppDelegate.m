@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LAArtistFetcher.h"
+#import "LAArtist.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    LAArtistFetcher *artistFetcher = [[LAArtistFetcher alloc]init];
+    
+    [artistFetcher fetchArtist:@"coldplay" completionBlock:^(LAArtist *artist, NSError *error) {
+        NSLog(@"%@", artist.name);
+        NSLog(@"%@", artist.biography);
+        NSLog(@"%@", artist.year);
+    }];
+    
     return YES;
 }
 

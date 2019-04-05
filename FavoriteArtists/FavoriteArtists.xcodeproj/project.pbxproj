@@ -13,6 +13,7 @@
 		C4CFFBE72257A7E400CD3151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CFFBE62257A7E400CD3151 /* Assets.xcassets */; };
 		C4CFFBEA2257A7E400CD3151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CFFBE82257A7E400CD3151 /* LaunchScreen.storyboard */; };
 		C4CFFBED2257A7E400CD3151 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CFFBEC2257A7E400CD3151 /* main.m */; };
+		C4CFFBF82257ACD800CD3151 /* GLIArtistDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CFFBF72257ACD800CD3151 /* GLIArtistDetail.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C4CFFBE92257A7E400CD3151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4CFFBEB2257A7E400CD3151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4CFFBEC2257A7E400CD3151 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4CFFBF62257ACD800CD3151 /* GLIArtistDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLIArtistDetail.h; sourceTree = "<group>"; };
+		C4CFFBF72257ACD800CD3151 /* GLIArtistDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLIArtistDetail.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		C4CFFBDC2257A7E200CD3151 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				C4CFFBF62257ACD800CD3151 /* GLIArtistDetail.h */,
+				C4CFFBF72257ACD800CD3151 /* GLIArtistDetail.m */,
 				C4CFFBDD2257A7E200CD3151 /* AppDelegate.h */,
 				C4CFFBDE2257A7E200CD3151 /* AppDelegate.m */,
 				C4CFFBE02257A7E200CD3151 /* ViewController.h */,
@@ -143,6 +148,7 @@
 			files = (
 				C4CFFBE22257A7E200CD3151 /* ViewController.m in Sources */,
 				C4CFFBED2257A7E400CD3151 /* main.m in Sources */,
+				C4CFFBF82257ACD800CD3151 /* GLIArtistDetail.m in Sources */,
 				C4CFFBDF2257A7E200CD3151 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

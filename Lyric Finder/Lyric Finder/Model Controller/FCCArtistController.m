@@ -7,6 +7,13 @@
 //
 
 #import "FCCArtistController.h"
+#import "FCCArtist.h"
+#import "FCCArtist+NSJSONSerialization.h"
+
+@interface FCCArtistController()
+@property (nonatomic) NSMutableArray *internalArtists;
+
+@end
 
 @implementation FCCArtistController
 

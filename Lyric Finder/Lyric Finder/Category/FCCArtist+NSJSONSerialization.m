@@ -10,4 +10,25 @@
 
 @implementation FCCArtist (NSJSONSerialization)
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    
+    NSString *artist = dictionary[@"artist"];
+    NSNumber *yearObject = dictionary[@"year"];
+    NSInteger year = [yearObject integerValue];
+    NSString *biography = dictionary[@"biography"];
+    
+    return [[FCCArtist alloc] initWithArtist:artist year:year biography:biography];
+}
+
+- (NSDictionary *)dictionaryFromObject {
+    
+    NSNumber *year = [NSNumber numberWithInteger:self.year];
+    
+    return @{
+             @"artist" : self.artist,
+             @"year" : year,
+             @"biography" : self.biography
+             };
+}
+
 @end

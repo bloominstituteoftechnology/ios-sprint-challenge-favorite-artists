@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FCCArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FCCArtist (NSJSONSerialization)
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)dictionaryFromObject;
 
 @end
 

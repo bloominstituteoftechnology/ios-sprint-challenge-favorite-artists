@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FCCArtistController : NSObject
 
+- (void)createFavoriteWithArtist:(NSString *)artist year:(NSInteger)year biography:(NSString *)biography;
+
+- (void)fetchWithArtist:(NSString *)artist completion:(void (^)(NSError *))completion;
+
+@property(nonatomic, readonly) NSArray *artists;
+
 @end
 
 NS_ASSUME_NONNULL_END

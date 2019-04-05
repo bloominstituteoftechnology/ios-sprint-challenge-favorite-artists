@@ -25,4 +25,20 @@
     return self;
 }
 
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.biography forKey:@"biography"];
+    [aCoder encodeInteger:self.yearFormed forKey:@"yearFormed"];
+}
+
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        _name = [aDecoder decodeObjectForKey:@"name"];
+        _biography = [aDecoder decodeObjectForKey:@"biography"];
+        _yearFormed = [aDecoder decodeIntForKey:@"yearFormed"];
+    }
+    return self;
+}
+
 @end

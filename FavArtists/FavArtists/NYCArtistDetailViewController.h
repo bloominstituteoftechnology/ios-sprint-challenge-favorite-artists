@@ -11,11 +11,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NYCArtistDetailViewController : UIViewController<UISearchBarDelegate>
+@interface NYCArtistDetailViewController : UIViewController<UISearchBarDelegate, NSCoding>
 
 - (void)updateViews;
 
 @property (nonatomic) NYCArtist *artist;
+
+@property (nonatomic) NSMutableArray *artists;
 
 @end
 

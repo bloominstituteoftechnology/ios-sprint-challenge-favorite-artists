@@ -12,7 +12,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 
 @implementation NSJSONSerialization (NYCNSJSONSerialization_Dictionary)
 
-- (void)fetchArtist:(NSString *)artist completion:(NYCArtistFetcherCompletion)completion {
+- (void)nyc_fetchArtist:(NSString *)artist completion:(NYCArtistFetcherCompletion)completion {
     
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString: baseURLString];
     

@@ -10,6 +10,17 @@
 
 @implementation GLIArtistDetail
 
-
+- (instancetype) initWithName:(NSString *)artistName artistBio:(NSString *)biography yearFormed:(NSInteger)yearFormed
+{
+    self = [super init];
+    if (self) {
+        _artistName = artistName;
+        _biography = biography;
+        _yearFormed = yearFormed;
+        
+    }
+    
+    return self;
+}
 
 @end

@@ -1,5 +1,5 @@
 //
-//  ArtistDetailTableViewController.h
+//  GLIArtistDetailTableViewController.h
 //  FavoriteArtists
 //
 //  Created by Julian A. Fordyce on 4/6/19.
@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class GLIArtistDetailController;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ArtistDetailTableViewController : UITableViewController
+@interface GLIArtistDetailTableViewController : UITableViewController
+
+@property GLIArtistDetailController *detailController;
 
 @end
 

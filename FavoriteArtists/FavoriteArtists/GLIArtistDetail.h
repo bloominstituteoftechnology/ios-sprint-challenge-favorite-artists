@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GLIArtistDetail : NSObject
 
-// - (instancetype)initWithName:(NSString *)artistName dictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithName:(NSString *)artistName artistBio:(NSString *)biography yearFormed:(int)yearFormed dictionary:(NSDictionary *)dictionary;
 
-- (instancetype)initWithName:(NSString *)artistName artistBio:(NSString *)biography yearFormed:(NSInteger)yearFormed;
+- (instancetype)initWithName:(NSString *)artistName artistBio:(NSString *)biography yearFormed:(int)yearFormed;
 
 @property (nonatomic) NSString *artistName;
 @property (nonatomic) NSString *biography;
-@property (nonatomic) NSInteger yearFormed;
+@property (nonatomic) int yearFormed;
 
 
 @end

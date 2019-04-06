@@ -28,27 +28,31 @@
     [[self searchBar] setDelegate: self];
     if ([self artist]) {
         [[self searchBar] setHidden:YES];
-        [[self saveButton] setAccessibilityElementsHidden:YES];
+        self.saveButton.enabled = false;
+        self.saveButton.title = @"";
     } else {
         [[self searchBar] setHidden:NO];
         [[self saveButton] setAccessibilityElementsHidden:NO];
+        self.saveButton.enabled = true;
+        self.saveButton.title = @"Save";
     }
     [self updateViews];
 }
 
 - (void)updateViews {
-    NYCArtist *artist = [self artist];
-    
-    if (artist) {
-        [[self artistNameLabel] setText: artist.name];
-        NSNumber *yearFormed = [NSNumber numberWithInteger: artist.yearFormed];
+    if ([self artist]) {
+        [[self artistNameLabel] setText: self.artist.name];
+        NSNumber *yearFormed = [NSNumber numberWithInteger: self.artist.yearFormed];
         
         [[self yearFormedLabel] setText: yearFormed.stringValue];
-        [[self artistBiographyTextView] setText: artist.biography];
+        [[self artistBiographyTextView] setText: self.artist.biography];
+        
+        [[self navigationItem] setTitle: self.artist.name];
     } else {
         [[self artistNameLabel] setText: @""];
         [[self yearFormedLabel] setText: @""];
         [[self artistBiographyTextView] setText: @""];
+        [[self navigationItem] setTitle:@"Add New Artist"];
     }
 }
 

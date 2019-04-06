@@ -8,6 +8,12 @@
 
 #import "NSJSONSerialization+NYCNSJSONSerialization_Dictionary.h"
 
+@interface NSJSONSerialization ()
+
+@property (nonatomic) NSMutableData *_Nullable dataRepresentation;
+
+@end
+
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 @implementation NSJSONSerialization (NYCNSJSONSerialization_Dictionary)

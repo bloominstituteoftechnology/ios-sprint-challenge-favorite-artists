@@ -23,7 +23,6 @@
 
 @implementation NYCArtistDetailViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[self searchBar] setDelegate: self];
@@ -65,8 +64,6 @@
             NYCArtist *artist = [[NYCArtist alloc] initWithDictionary:dictionary];
             self.artist = artist;
             
-            [self.artists addObject:artist];
-            
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateViews];
             });
@@ -76,15 +73,36 @@
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     
-    NSURL *docsDirectory =  [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+    NSDictionary *artistDict = [[self artist] dictionaryRepresentation];
+    NSMutableArray *arrayOfDicts;
     
-    NSURL *path = [docsDirectory URLByAppendingPathComponent:@"artists.plist"];
-    
-    NSLog(path.absoluteString);
-    
-    if ([self artist]) {
-        [NSKeyedArchiver archiveRootObject:self.artists toFile:path.absoluteString];
+    if ([self artists]) {
+        arrayOfDicts = [[NSMutableArray alloc] init];
+        for (NYCArtist *artist in self.artists) {
+            NSDictionary *artistDictionary = [artist dictionaryRepresentation];
+            [arrayOfDicts addObject:artistDictionary];
+        }
+        [arrayOfDicts addObject:artistDict];
+    } else {
+        arrayOfDicts = [[NSMutableArray alloc] initWithObjects:artistDict, nil];
     }
+    
+    NSArray *artistsArray = [[NSArray alloc] initWithArray:arrayOfDicts];
+    
+    NSDictionary *artistsDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:artistsArray, @"artists", nil];
+    
+    NSError *jsonError;
+    
+    NSData *artistsData = [NSJSONSerialization dataWithJSONObject:artistsDictionary options:0 error:&jsonError];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSURL *docsDirectory =  [fileManager URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+    
+    NSURL *path = [[docsDirectory URLByAppendingPathComponent:@"artists"] URLByAppendingPathExtension:@"json"];
+
+    [artistsData writeToURL:path atomically:YES];
+    
     [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 

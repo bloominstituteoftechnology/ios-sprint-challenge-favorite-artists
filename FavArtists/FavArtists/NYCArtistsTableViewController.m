@@ -12,22 +12,44 @@
 
 @interface NYCArtistsTableViewController ()
 
+- (NSMutableArray *)fetchFromPersistence;
+
 @end
 
 @implementation NYCArtistsTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    NSURL *docsDirectory =  [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-    NSURL *path = [docsDirectory URLByAppendingPathComponent:@"artists.plist"];
-    self.artists = [NSKeyedUnarchiver unarchiveObjectWithFile:path.absoluteString];
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        _artists = [self fetchFromPersistence];
+//    }
+//    return self;
+//}
+//
+//- (instancetype)initWithCoder:(NSCoder *)coder
+//{
+//    self = [super initWithCoder:coder];
+//    if (self) {
+//        _artists = [self fetchFromPersistence];
+//    }
+//    return self;
+//}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.artists = [self fetchFromPersistence];
+    [[self tableView] reloadData];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.artists.count;
+    if (self.artists) {
+        return self.artists.count;
+    } else {
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -44,14 +66,41 @@
     return cell;
 }
 
+- (NSMutableArray *)fetchFromPersistence {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *docsDirectory =  [fileManager URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+    NSURL *path = [[docsDirectory URLByAppendingPathComponent:@"artists"] URLByAppendingPathExtension:@"json"];
+    
+    NSData *artistsData = [[NSData alloc] initWithContentsOfURL:path];
+    
+    NSDictionary *artistDictionaries = [NSJSONSerialization JSONObjectWithData:artistsData options:0 error:nil];
+    
+    NSDictionary *artistsDict = artistDictionaries[@"artists"];
+    
+    NSMutableArray *artists = [[[NSMutableArray alloc] init] mutableCopy];
+    
+    for (NSDictionary *artistDict in artistsDict) {
+        NSArray *fauxArray = [[NSArray alloc] initWithObjects:artistDict, nil];
+        NSDictionary *fauxDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:fauxArray, @"artists", nil];
+        
+        NYCArtist *artist = [[NYCArtist alloc] initWithDictionary:fauxDictionary];
+        [artists addObject:artist];
+    }
+    
+    return artists;
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"Add"]) {
         NYCArtistDetailViewController *detailVC = [segue destinationViewController];
-        detailVC.artists = [self artists];
+        if (self.artists) {
+            detailVC.artists = self.artists;
+        } else {
+            detailVC.artists = NULL;
+        }
     }
     
     if ([[segue identifier] isEqualToString:@"Show"]) {
@@ -62,6 +111,5 @@
         detailVC.artists = [self artists];
     }
 }
-
 
 @end

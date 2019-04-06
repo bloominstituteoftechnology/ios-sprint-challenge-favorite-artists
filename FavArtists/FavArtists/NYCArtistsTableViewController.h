@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NYCArtistsTableViewController : UITableViewController
 
-@property (nonatomic) NSMutableArray *artists;
+@property (nonatomic) NSMutableArray *_Nullable artists;
 
 @end
 

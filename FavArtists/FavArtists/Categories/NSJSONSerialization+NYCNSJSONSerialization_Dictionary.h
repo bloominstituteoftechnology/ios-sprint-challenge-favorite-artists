@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)nyc_fetchArtist:(NSString *)artist completion:(NYCArtistFetcherCompletion)completion;
 
-
 @end
 
 NS_ASSUME_NONNULL_END

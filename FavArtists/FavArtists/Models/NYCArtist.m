@@ -25,20 +25,22 @@
     return self;
 }
 
-- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
-    [aCoder encodeObject:self.name forKey:@"name"];
-    [aCoder encodeObject:self.biography forKey:@"biography"];
-    [aCoder encodeInteger:self.yearFormed forKey:@"yearFormed"];
-}
-
-- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
+- (instancetype)initWithName:(NSString *)name biography:(NSString *)biography andYearFormed:(int)yearFormed {
+    
     self = [super init];
     if (self) {
-        _name = [aDecoder decodeObjectForKey:@"name"];
-        _biography = [aDecoder decodeObjectForKey:@"biography"];
-        _yearFormed = [aDecoder decodeIntForKey:@"yearFormed"];
+        _name = name;
+        _biography = biography;
+        _yearFormed = yearFormed;
     }
     return self;
+}
+
+- (NSDictionary *)dictionaryRepresentation {
+    
+    NSNumber *year = [NSNumber numberWithInt:self.yearFormed];
+    
+    return @{@"strArtist": self.name, @"strBiographyEN": self.biography, @"intFormedYear": year.stringValue};
 }
 
 @end

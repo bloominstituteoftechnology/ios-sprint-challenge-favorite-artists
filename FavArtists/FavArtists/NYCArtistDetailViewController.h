@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NYCArtist *artist;
 
-@property (nonatomic) NSMutableArray *artists;
+@property (atomic) NSMutableArray *_Nullable artists;
 
 @end
 

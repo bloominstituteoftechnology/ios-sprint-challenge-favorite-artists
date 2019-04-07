@@ -67,22 +67,15 @@
                 [self.navigationItem setTitle:artist.name];
                 [self->_biographyTextView setText:artist.biography];
                 self.saveButton.enabled = YES;
-//                [self saveArtist:artist];
             });
         }
     }];
-    
-    
-    // Turn model into something that can be saved
-    //
-     // CALL A METHOD THAT LETS YOU SAVE THE ARTIST TO FILEMANAGER
     
 }
 
 -(void) saveArtist: (LAArtist *)artist{
     if(artist){
         // Turn artist into data that can be saved
-        //LAArtist *artist = [[LAArtist alloc]initWithDictionary:artistDictionary[0]];
         
         NSData *artistData = [NSJSONSerialization dataWithJSONObject:[artist makeArtistDictionary] options:0 error:NULL];
         
@@ -91,8 +84,6 @@
         NSURL *documentDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
         
         // Create a unique URL inside the documentsDirectory for the artist file
-//        NSUUID *uuid = [NSUUID UUID];
-//        NSString *str = [uuid UUIDString];
         NSURL *artistURL = [[documentDirectory URLByAppendingPathComponent:_artistToSave.name] URLByAppendingPathExtension:@"json"];
         // Write the data to the URL
         

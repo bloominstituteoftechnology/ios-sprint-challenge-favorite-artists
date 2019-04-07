@@ -41,13 +41,22 @@
         [self saveArtist:_artistToSave];
     // POP VIEW CONTROLLER ? Maybe not
 //    [self.navigationController popViewControllerAnimated:true];
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Artist Saved" message:(@"Successfully saved %@", _artistToSave.name) preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Artist Saved" message:((void)(@"Successfully saved %@"), _artistToSave.name) preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
                                         style:UIAlertActionStyleDefault
                                                          handler:nil];
         //You can use a block here to handle a press on this button
         [alertController addAction:actionOk];
         [self presentViewController:alertController animated:YES completion:nil];
+        self.saveButton.enabled= NO;
+        
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        
+        NSArray *filePathsArray = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:documentsDirectory  error:nil];
+        
+        NSLog(@"files array %@", filePathsArray);
     }
     else {
         NSLog(@"Artist to save is Nil");
@@ -114,7 +123,9 @@
         NSURL *documentDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
         
         // Create a unique URL inside the documentsDirectory for the artist file
-        NSURL *artistURL = [[documentDirectory URLByAppendingPathComponent:artist.name] URLByAppendingPathExtension:@"json"];
+//        NSUUID *uuid = [NSUUID UUID];
+//        NSString *str = [uuid UUIDString];
+        NSURL *artistURL = [[documentDirectory URLByAppendingPathComponent:_artistToSave.name] URLByAppendingPathExtension:@"json"];
         NSLog(@"%@", artistURL.absoluteString);
         // Write the data to the URL
         

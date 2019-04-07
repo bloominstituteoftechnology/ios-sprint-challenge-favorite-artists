@@ -35,7 +35,38 @@
     [self.internalArtists addObject: artist];
 }
 
--(NSArray *)artists {
+-(NSArray *)fetchAllSavedArtists {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSArray *filePathsArray = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:documentsDirectory  error:nil];
+    
+    NSLog(@"files array %@", filePathsArray);
+    
+    for (NSString* artistPath in filePathsArray){
+        
+        NSString *filePath = [[NSString alloc]initWithFormat:@"Documents/%@", artistPath];
+        NSString *artistFilePath = [NSHomeDirectory()stringByAppendingPathComponent:filePath];
+    
+    // and to convert that back into a URL:
+        NSURL *artistURL = [NSURL fileURLWithPath:artistFilePath];
+        
+        NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
+        
+        
+        if (artistData){
+        NSDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:NULL];
+        
+        LAArtist *artist = [[LAArtist alloc] initWithDictionary:artistDictionary];
+        [self.internalArtists addObject:artist];
+            NSLog(@"Number of artists in array: %lu", (unsigned long)self.internalArtists.count);
+        } else {
+            NSLog(@"%@", artistFilePath);
+            NSLog(@"artistData is nil");
+        }
+    }
+    
     return self.internalArtists; //_internalArtists
 }
 

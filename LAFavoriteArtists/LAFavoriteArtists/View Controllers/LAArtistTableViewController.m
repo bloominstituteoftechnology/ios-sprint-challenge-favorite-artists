@@ -7,6 +7,7 @@
 //
 
 #import "LAArtistTableViewController.h"
+#import "LAArtistController.h"
 
 @interface LAArtistTableViewController ()
 
@@ -18,11 +19,13 @@
     
         // IMPLEMENT FILEMANAGER CHECK TO UPDATE TABLE VIEWS IF NEW ARTIST IS SAVED
     
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    LAArtistController *artistcontroller = [[LAArtistController alloc]init];
+    [artistcontroller fetchAllSavedArtists];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 // fetch Artist from file
 -(LAArtist *)fetchSavedArtist:(LAArtist *)artist;
 
--(NSArray *)fetchAllSavedArtists;
+-(NSMutableArray *)fetchAllSavedArtists;
 
 // Encapsulate the artists (protect our data)
 @property (nonatomic, readonly) NSArray *artists;

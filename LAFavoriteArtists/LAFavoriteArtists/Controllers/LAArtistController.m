@@ -35,7 +35,7 @@
     [self.internalArtists addObject: artist];
 }
 
--(NSArray *)fetchAllSavedArtists {
+-(NSMutableArray *)fetchAllSavedArtists {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];

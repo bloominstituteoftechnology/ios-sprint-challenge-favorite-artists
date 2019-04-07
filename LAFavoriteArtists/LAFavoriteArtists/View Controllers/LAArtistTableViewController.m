@@ -10,22 +10,28 @@
 #import "LAArtistController.h"
 
 @interface LAArtistTableViewController ()
-
+@property LAArtistController *artistController;
+@property NSMutableArray *artistArray;
 @end
 
 @implementation LAArtistTableViewController
 
 - (void)viewWillAppear:(BOOL)animated{
-    
-        // IMPLEMENT FILEMANAGER CHECK TO UPDATE TABLE VIEWS IF NEW ARTIST IS SAVED
-    
+    if(!self.artistController){
+    self.artistController = [[LAArtistController alloc]init];
+        NSLog(@"Created new artistController");
+    }
+    [_artistArray removeAllObjects];
+    self.artistArray = [self.artistController fetchAllSavedArtists];
+    self.tableView.reloadData;
+    // IMPLEMENT FILEMANAGER CHECK TO UPDATE TABLE VIEWS IF NEW ARTIST IS SAVED
+    NSLog(@"%lu", (unsigned long)_artistArray.count);
     
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LAArtistController *artistcontroller = [[LAArtistController alloc]init];
-    [artistcontroller fetchAllSavedArtists];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -35,25 +41,22 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _artistArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    LAArtist *artist = _artistArray[indexPath.row];
+    cell.textLabel.text = artist.name;
+    NSString *yearString = [NSString stringWithFormat:@"%d",artist.year];
+    cell.detailTextLabel.text = yearString;
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

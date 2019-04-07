@@ -42,8 +42,6 @@
     
     NSArray *filePathsArray = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:documentsDirectory  error:nil];
     
-    NSLog(@"files array %@", filePathsArray);
-    
     for (NSString* artistPath in filePathsArray){
         
         NSString *filePath = [[NSString alloc]initWithFormat:@"Documents/%@", artistPath];
@@ -60,9 +58,7 @@
         
         LAArtist *artist = [[LAArtist alloc] initWithDictionary:artistDictionary];
         [self.internalArtists addObject:artist];
-            NSLog(@"Number of artists in array: %lu", (unsigned long)self.internalArtists.count);
         } else {
-            NSLog(@"%@", artistFilePath);
             NSLog(@"artistData is nil");
         }
     }
@@ -75,7 +71,6 @@
     
     
     NSURL *artistURL = [[documentDirectory URLByAppendingPathComponent:artist.name] URLByAppendingPathComponent:@"json"];
-    NSLog(@"Where the saved artist is: %@", artistURL.absoluteString);
     
     NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
     

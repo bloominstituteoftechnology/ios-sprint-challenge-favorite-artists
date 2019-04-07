@@ -39,8 +39,6 @@
     // IMPLEMENT SAVE USING NSFILEMANAGER
     if(self.artistToSave){
         [self saveArtist:_artistToSave];
-    // POP VIEW CONTROLLER ? Maybe not
-//    [self.navigationController popViewControllerAnimated:true];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Artist Saved" message:((void)(@"Successfully saved %@"), _artistToSave.name) preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
                                         style:UIAlertActionStyleDefault
@@ -49,41 +47,12 @@
         [alertController addAction:actionOk];
         [self presentViewController:alertController animated:YES completion:nil];
         self.saveButton.enabled= NO;
-        
-        
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        
-        NSArray *filePathsArray = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:documentsDirectory  error:nil];
-        
-        NSLog(@"files array %@", filePathsArray);
     }
     else {
         NSLog(@"Artist to save is Nil");
     }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
--(void)updateViews{
-    
-}
-
-//-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-//    LAArtistController *artistController = [[LAArtistController alloc]init];
-//    if (searchText.length == 0){
-//        [artistController]
-//    }
-//
-//}
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     LAArtistFetcher *fetcher = [[LAArtistFetcher alloc]init];
     
@@ -97,7 +66,6 @@
                 self.artistToSave = artist;
                 [self.navigationItem setTitle:artist.name];
                 [self->_biographyTextView setText:artist.biography];
-                NSLog(@"Should be an artist here...@%", artist.name);
                 self.saveButton.enabled = YES;
 //                [self saveArtist:artist];
             });
@@ -126,7 +94,6 @@
 //        NSUUID *uuid = [NSUUID UUID];
 //        NSString *str = [uuid UUIDString];
         NSURL *artistURL = [[documentDirectory URLByAppendingPathComponent:_artistToSave.name] URLByAppendingPathExtension:@"json"];
-        NSLog(@"%@", artistURL.absoluteString);
         // Write the data to the URL
         
         [artistData writeToURL:artistURL atomically:YES];

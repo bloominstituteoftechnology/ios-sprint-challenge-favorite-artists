@@ -8,24 +8,27 @@
 
 #import "LAArtistTableViewController.h"
 #import "LAArtistController.h"
+#import "LADetailViewController.h"
 
 @interface LAArtistTableViewController ()
 @property LAArtistController *artistController;
 @property NSMutableArray *artistArray;
+@property LAArtist *artistForSegue;
 @end
 
 @implementation LAArtistTableViewController
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:true];
+    // Initialize artistController
     if(!self.artistController){
-    self.artistController = [[LAArtistController alloc]init];
-        NSLog(@"Created new artistController");
+        self.artistController = [[LAArtistController alloc]init];
+        self.artistForSegue = [[LAArtist alloc]init];
     }
+    // Clear array so no duplicates will be added to our tableView then fetch all saved artists and reload table
     [_artistArray removeAllObjects];
     self.artistArray = [self.artistController fetchAllSavedArtists];
     self.tableView.reloadData;
-    // IMPLEMENT FILEMANAGER CHECK TO UPDATE TABLE VIEWS IF NEW ARTIST IS SAVED
-    NSLog(@"%lu", (unsigned long)_artistArray.count);
     
 }
 
@@ -55,6 +58,11 @@
     NSString *yearString = [NSString stringWithFormat:@"%d",artist.year];
     cell.detailTextLabel.text = yearString;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.artistForSegue = [_artistArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"showDetail" sender:self.artistForSegue];
 }
 
 
@@ -92,14 +100,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier  isEqual: @"showDetail"]){
+    LADetailViewController *detailVC = segue.destinationViewController;
+    detailVC.artist = sender;
+    }
 }
-*/
+
 
 @end

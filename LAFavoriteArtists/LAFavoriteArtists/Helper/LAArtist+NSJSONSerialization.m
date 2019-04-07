@@ -25,7 +25,6 @@
     NSMutableDictionary *artistDictionary = [NSMutableDictionary dictionary];
     [artistDictionary setObject:self.name forKey:@"strArtist"];
     [artistDictionary setObject:self.biography forKey:@"strBiographyEN"];
-    //    NSString* yearString = [NSString stringWithFormat:@"%i", artist.year];
     NSString *yearString = @(self.year).stringValue;
     NSLog(@"This is the year formed: %@", yearString);
     [artistDictionary setObject:yearString forKey:@"intFormedYear"];

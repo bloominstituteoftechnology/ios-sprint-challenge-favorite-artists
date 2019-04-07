@@ -21,9 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(NSMutableArray *)fetchAllSavedArtists;
 
-// Encapsulate the artists (protect our data)
-@property (nonatomic, readonly) NSArray *artists;
-
 @end
 
 NS_ASSUME_NONNULL_END

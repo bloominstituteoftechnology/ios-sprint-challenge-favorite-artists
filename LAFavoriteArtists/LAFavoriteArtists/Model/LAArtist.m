@@ -9,15 +9,6 @@
 
 #import "LAArtist.h"
 
-//@interface LAArtist(){
-//
-//    NSString *_name;
-//    NSString *_biography;
-//    int _year;
-//}
-//
-//@end
-
 @implementation LAArtist
 
 

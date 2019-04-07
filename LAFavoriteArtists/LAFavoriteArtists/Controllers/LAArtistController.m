@@ -8,6 +8,8 @@
 
 
 #import "LAArtistController.h"
+#import "LAArtist.h"
+#import "LAArtist+NSJSONSerialization.h"
 
 @interface LAArtistController() {
     
@@ -35,6 +37,21 @@
 
 -(NSArray *)artists {
     return self.internalArtists; //_internalArtists
+}
+
+- (LAArtist *)fetchSavedArtist:(LAArtist *)artist{
+    NSURL *documentDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+    
+    
+    NSURL *artistURL = [[documentDirectory URLByAppendingPathComponent:artist.name] URLByAppendingPathComponent:@"json"];
+    NSLog(@"Where the saved artist is: %@", artistURL.absoluteString);
+    
+    NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
+    
+    NSDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:NULL];
+    
+    LAArtist *savedArtist = [[LAArtist alloc] initWithDictionary:artistDictionary];
+    return savedArtist;
 }
 
 @end

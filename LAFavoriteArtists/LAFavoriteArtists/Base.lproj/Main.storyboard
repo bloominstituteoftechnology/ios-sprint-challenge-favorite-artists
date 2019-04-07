@@ -158,6 +158,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="biographyTextView" destination="Cqq-UA-x83" id="nWH-fL-QMO"/>
+                        <outlet property="saveButton" destination="JP8-eI-2AR" id="J7W-8i-lAG"/>
                         <outlet property="searchBar" destination="jl5-of-hOe" id="fkh-QP-yea"/>
                     </connections>
                 </viewController>

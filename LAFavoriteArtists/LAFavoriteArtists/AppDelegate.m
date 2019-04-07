@@ -20,12 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    LAArtistFetcher *artistFetcher = [[LAArtistFetcher alloc]init];
-    
-    [artistFetcher fetchArtist:@"coldplay" completionBlock:^(LAArtist *artist, NSError *error) {
-        NSLog(@"%@", artist.name);
-        NSLog(@"%@", artist.biography);
-    }];
+//    LAArtistFetcher *artistFetcher = [[LAArtistFetcher alloc]init];
+//
+//    [artistFetcher fetchArtist:@"coldplay" completionBlock:^(LAArtist *artist, NSError *error) {
+//        NSLog(@"%@", artist.name);
+//        NSLog(@"%@", artist.biography);
+//    }];
     
     return YES;
 }

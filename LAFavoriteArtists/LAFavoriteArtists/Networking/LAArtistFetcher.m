@@ -45,7 +45,12 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
             return;
         }
         
+        
         NSArray *artistDictionary = dictionary[@"artists"];
+        if (artistDictionary == nil){
+            NSLog(@"NO ARTIST RETURNED");
+            return;
+        }
 //        NSMutableArray *artists = [[NSMutableArray alloc]init];
 //
 //        for(NSDictionary *dict in artists){

@@ -18,24 +18,6 @@
 
 @implementation NYCArtistsTableViewController
 
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self) {
-//        _artists = [self fetchFromPersistence];
-//    }
-//    return self;
-//}
-//
-//- (instancetype)initWithCoder:(NSCoder *)coder
-//{
-//    self = [super initWithCoder:coder];
-//    if (self) {
-//        _artists = [self fetchFromPersistence];
-//    }
-//    return self;
-//}
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.artists = [self fetchFromPersistence];
@@ -73,21 +55,25 @@
     
     NSData *artistsData = [[NSData alloc] initWithContentsOfURL:path];
     
-    NSDictionary *artistDictionaries = [NSJSONSerialization JSONObjectWithData:artistsData options:0 error:nil];
-    
-    NSDictionary *artistsDict = artistDictionaries[@"artists"];
-    
-    NSMutableArray *artists = [[[NSMutableArray alloc] init] mutableCopy];
-    
-    for (NSDictionary *artistDict in artistsDict) {
-        NSArray *fauxArray = [[NSArray alloc] initWithObjects:artistDict, nil];
-        NSDictionary *fauxDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:fauxArray, @"artists", nil];
+    if (artistsData) {
+        NSDictionary *artistDictionaries = [NSJSONSerialization JSONObjectWithData:artistsData options:0 error:nil];
         
-        NYCArtist *artist = [[NYCArtist alloc] initWithDictionary:fauxDictionary];
-        [artists addObject:artist];
+        NSDictionary *artistsDict = artistDictionaries[@"artists"];
+        
+        NSMutableArray *artists = [[[NSMutableArray alloc] init] mutableCopy];
+        
+        for (NSDictionary *artistDict in artistsDict) {
+            NSArray *fauxArray = [[NSArray alloc] initWithObjects:artistDict, nil];
+            NSDictionary *fauxDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:fauxArray, @"artists", nil];
+            
+            NYCArtist *artist = [[NYCArtist alloc] initWithDictionary:fauxDictionary];
+            [artists addObject:artist];
+        }
+        
+        return artists;
+    } else {
+        return [[NSMutableArray alloc] init];
     }
-    
-    return artists;
 }
 
 #pragma mark - Navigation

@@ -40,7 +40,7 @@
     
     FCCArtist *artist = self.artistController.artists[indexPath.row];
     cell.textLabel.text = artist.artist;
-    //cell.detailTextLabel.text = artist.year;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %ld", (long)artist.year];
     
     return cell;
 }

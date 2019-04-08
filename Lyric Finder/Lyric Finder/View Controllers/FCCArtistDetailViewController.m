@@ -45,7 +45,7 @@
 {
     NSString *artist = self.searchBar.text;
     
-    [self.artistController fetchWithArtist:artist completion:^(NSError * _Nonnull error)]
+    [self.artistController fetchWithArtist:artist completion:^(NSError * _Nonnull error)];
     
 }
 
@@ -56,7 +56,7 @@
     self.title = self.artist.artist;
     
     self.artistLabel.text = self.artist.artist;
-    self.yearLabel.text = (int)self.artist.year;
+    self.yearLabel.text = [NSString stringWithFormat:@"Formed in %ld"];
     self.biographyTextView.text = self.artist.biography;
     
     self.navigationItem.rightBarButtonItem = nil;

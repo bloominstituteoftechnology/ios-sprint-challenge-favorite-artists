@@ -76,7 +76,7 @@
         NSMutableArray *artists = [[NSMutableArray alloc] init];
 
         self.internalArtists = artists;
-        completion(nil);
+        completion(error);
     }];
     
     [dataTask resume];
@@ -123,7 +123,7 @@
     return self.internalArtists;
 }
 
-static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s";
+static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 static NSString * const apiKey = @"1";
 
 @end

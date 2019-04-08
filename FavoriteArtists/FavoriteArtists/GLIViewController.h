@@ -24,7 +24,7 @@
 
 - (IBAction)saveInfo:(id)sender;
 
-- void (updateViews)
+- (void)updateViews;
 
 
 @end

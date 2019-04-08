@@ -7,6 +7,7 @@
 //
 
 #import "GLIArtistDetailTableViewController.h"
+#import "GLIArtistDetailController.h"
 
 @interface GLIArtistDetailTableViewController ()
 
@@ -14,6 +15,30 @@
 
 @implementation GLIArtistDetailTableViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _detailController = [[GLIArtistDetailController alloc] init];
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _detailController = [[GLIArtistDetailController alloc] init];
+    }
+    return self;
+}
+
+
+- (void)viewDidLoad
+{
+    
+}
 
 
 #pragma mark - Table view data source

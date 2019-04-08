@@ -9,7 +9,7 @@
 #import "GLIArtistDetailController.h"
 #import "GLIArtistDetail.h"
 
-NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
+static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
 @implementation GLIArtistDetailController
 
@@ -20,8 +20,27 @@ NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
     
     urlComponents.queryItems = queryItems;
     NSURL *url = urlComponents.URL;
-
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
+        if (error) {
+            NSLog(@"Error fetching artist. %@", error);
+     
+            return;
+        }
+        
+        NSError *jsonError;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        
+        if (!dictionary) {
+            NSLog(@"Error decoding: %@", error);
+        
+            return;
+        }
+      
+    }];
+    [task resume];
 }
+
 
 @end

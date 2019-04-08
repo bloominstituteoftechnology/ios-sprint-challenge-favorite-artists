@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C4CFFBDF2257A7E200CD3151 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CFFBDE2257A7E200CD3151 /* AppDelegate.m */; };
-		C4CFFBE22257A7E200CD3151 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CFFBE12257A7E200CD3151 /* ViewController.m */; };
+		C4CFFBE22257A7E200CD3151 /* GLIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CFFBE12257A7E200CD3151 /* GLIViewController.m */; };
 		C4CFFBE52257A7E200CD3151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CFFBE32257A7E200CD3151 /* Main.storyboard */; };
 		C4CFFBE72257A7E400CD3151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CFFBE62257A7E400CD3151 /* Assets.xcassets */; };
 		C4CFFBEA2257A7E400CD3151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CFFBE82257A7E400CD3151 /* LaunchScreen.storyboard */; };
@@ -22,8 +22,8 @@
 		C4CFFBDA2257A7E200CD3151 /* FavoriteArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CFFBDD2257A7E200CD3151 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4CFFBDE2257A7E200CD3151 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C4CFFBE02257A7E200CD3151 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C4CFFBE12257A7E200CD3151 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C4CFFBE02257A7E200CD3151 /* GLIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLIViewController.h; sourceTree = "<group>"; };
+		C4CFFBE12257A7E200CD3151 /* GLIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLIViewController.m; sourceTree = "<group>"; };
 		C4CFFBE42257A7E200CD3151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4CFFBE62257A7E400CD3151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4CFFBE92257A7E400CD3151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,8 +75,8 @@
 				C4CFFC252258A91500CD3151 /* GLIArtistDetailTableViewController.m */,
 				C4CFFBDD2257A7E200CD3151 /* AppDelegate.h */,
 				C4CFFBDE2257A7E200CD3151 /* AppDelegate.m */,
-				C4CFFBE02257A7E200CD3151 /* ViewController.h */,
-				C4CFFBE12257A7E200CD3151 /* ViewController.m */,
+				C4CFFBE02257A7E200CD3151 /* GLIViewController.h */,
+				C4CFFBE12257A7E200CD3151 /* GLIViewController.m */,
 				C4CFFBE32257A7E200CD3151 /* Main.storyboard */,
 				C4CFFBE62257A7E400CD3151 /* Assets.xcassets */,
 				C4CFFBE82257A7E400CD3151 /* LaunchScreen.storyboard */,
@@ -156,7 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4CFFBE22257A7E200CD3151 /* ViewController.m in Sources */,
+				C4CFFBE22257A7E200CD3151 /* GLIViewController.m in Sources */,
 				C4CFFBED2257A7E400CD3151 /* main.m in Sources */,
 				C4CFFBF82257ACD800CD3151 /* GLIArtistDetail.m in Sources */,
 				C4CFFBDF2257A7E200CD3151 /* AppDelegate.m in Sources */,

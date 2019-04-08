@@ -11,7 +11,7 @@
 @class GLIArtistDetail;
 @class GLIArtistDetailController;
 
-@interface GLIViewController : UIViewController
+@interface GLIViewController : UIViewController<UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
@@ -23,6 +23,8 @@
 
 
 - (IBAction)saveInfo:(id)sender;
+
+- void (updateViews)
 
 
 @end

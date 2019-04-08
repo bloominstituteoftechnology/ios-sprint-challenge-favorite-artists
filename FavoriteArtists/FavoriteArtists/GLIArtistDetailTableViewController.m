@@ -8,6 +8,7 @@
 
 #import "GLIArtistDetailTableViewController.h"
 #import "GLIArtistDetailController.h"
+#import "GLIArtistDetail.h"
 
 @interface GLIArtistDetailTableViewController ()
 
@@ -41,23 +42,23 @@
 }
 
 
+
+
 #pragma mark - Table view data source
 
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [[[self detailController] artistDetails] count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    GLIArtistDetail *
     return cell;
 }
 

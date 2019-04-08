@@ -27,7 +27,7 @@
     if (self) {
         _artistName = artistName;
         _biography = biography;
-        _yearFormed = yearFormed;
+        _yearFormed = yearFormed; 
         
     }
     

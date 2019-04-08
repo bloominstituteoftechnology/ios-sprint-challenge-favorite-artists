@@ -25,7 +25,7 @@ static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
         
         if (error) {
             NSLog(@"Error fetching artist. %@", error);
-     
+            completionBlock(error);
             return;
         }
         
@@ -34,7 +34,7 @@ static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
         
         if (!dictionary) {
             NSLog(@"Error decoding: %@", error);
-        
+            completionBlock(error);
             return;
         }
       

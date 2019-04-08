@@ -10,16 +10,19 @@
 
 @implementation GLIArtistDetail
 
-- (instancetype)initWithName:(NSString *)artistName artistBio:(NSString *)biography yearFormed:(int)yearFormed dictionary:(NSDictionary *)dictionary
+- (instancetype)initWithDictionary:(NSString *)artistName dictionary:(NSDictionary *)dictionary
 {
     self = [super init];
     if (self) {
         _artistName = dictionary[@"strArtist"];
         _biography = dictionary[@"strBiographyEN"];
         _yearFormed = [dictionary[@"intFormedYear"] intValue];
+    
     }
+    
     return self;
 }
+
 
 - (instancetype) initWithName:(NSString *)artistName artistBio:(NSString *)biography yearFormed:(int)yearFormed
 {

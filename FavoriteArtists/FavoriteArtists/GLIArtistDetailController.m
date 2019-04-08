@@ -37,6 +37,11 @@ static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
             completionBlock(error);
             return;
         }
+        
+        
+        // MARK: - Note 1. for loop belongs here to decode model objects from dictionary
+        
+        // MARK: - Note 2. add to array here.
       
     }];
     [task resume];

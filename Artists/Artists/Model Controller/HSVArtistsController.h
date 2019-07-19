@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)saveToFileDirectory;
 
+- (void) loadFromFileDirectory;
+
 
 
 @end

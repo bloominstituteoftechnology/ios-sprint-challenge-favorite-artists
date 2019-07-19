@@ -17,9 +17,9 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
 	self = [super init];
 	if(self) {
-		NSString *name = dictionary[@"artists"][0][@"strArtist"];
-		NSString *biography = dictionary[@"artists"][0][@"strBiographyEN"];
-		int yearFormed = (int)[dictionary[@"artists"][0][@"intFormedYear"] integerValue];
+		NSString *name = dictionary[@"strArtist"];
+		NSString *biography = dictionary[@"strBiographyEN"];
+		int yearFormed = (int)[dictionary[@"intFormedYear"] integerValue];
 		self = [self initWithName:name biography:biography yearFormed:yearFormed];
 	}
 	return self;
@@ -27,9 +27,9 @@
 
 - (NSDictionary *)toDictionary {
 	NSString *yf = [[NSString alloc] initWithFormat:@"%i", self.yearFormed];
-	return @{@"name": self.name,
-			 @"biography": self.biography,
-			 @"yearFormed": yf
+	return @{@"strArtist": self.name,
+			 @"strBiographyEN": self.biography,
+			 @"intFormedYear": yf
 			 };
 }
 

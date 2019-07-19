@@ -25,6 +25,7 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 	self = [super init];
 	if (self) {
 		_internalArtists = [[NSMutableArray alloc] init];
+		[self loadFromFileDirectory];
 	}
 	return self;
 }
@@ -64,7 +65,7 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 			return;
 		}
 		
-		HSVArtist *artist = [[HSVArtist alloc] initWithDictionary:jsonDict];
+		HSVArtist *artist = [[HSVArtist alloc] initWithDictionary:jsonDict[@"artists"][0]];
 		completion(artist, nil);
 		[self addArtist:artist];
 
@@ -87,7 +88,20 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 	[artisData writeToURL:artistUrl atomically:YES];
 }
 
+- (void) loadFromFileDirectory {
+	NSURL *documentDirectory = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+	NSURL *artistUrl = [documentDirectory URLByAppendingPathComponent:@"artists.json"];
 
+	NSData *artistData = [NSData dataWithContentsOfURL:artistUrl];
+	
+	if (artistData) {
+		NSArray *artists = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
+		for (NSDictionary *artist in artists) {
+			HSVArtist *a = [[HSVArtist alloc] initWithDictionary:artist];
+			[self.internalArtists addObject:a];
+		}
+	}
+}
 
 
 

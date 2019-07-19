@@ -15,6 +15,8 @@
 		9E189FBE22E21C4100EDBD30 /* DLJArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189FBD22E21C4100EDBD30 /* DLJArtistTableViewController.m */; };
 		9E189FC122E21C6500EDBD30 /* DLJSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189FC022E21C6500EDBD30 /* DLJSearchViewController.m */; };
 		9E189FC422E21C8100EDBD30 /* DLJDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189FC322E21C8100EDBD30 /* DLJDetailViewController.m */; };
+		9E189FC822E2222E00EDBD30 /* DLJArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189FC722E2222E00EDBD30 /* DLJArtist.m */; };
+		9E189FD222E22B0900EDBD30 /* DLJJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189FD122E22B0900EDBD30 /* DLJJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		9E189FC022E21C6500EDBD30 /* DLJSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLJSearchViewController.m; sourceTree = "<group>"; };
 		9E189FC222E21C8100EDBD30 /* DLJDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLJDetailViewController.h; sourceTree = "<group>"; };
 		9E189FC322E21C8100EDBD30 /* DLJDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLJDetailViewController.m; sourceTree = "<group>"; };
+		9E189FC622E2222E00EDBD30 /* DLJArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLJArtist.h; sourceTree = "<group>"; };
+		9E189FC722E2222E00EDBD30 /* DLJArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLJArtist.m; sourceTree = "<group>"; };
+		9E189FD022E22B0900EDBD30 /* DLJJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLJJSONSerialization.h; sourceTree = "<group>"; };
+		9E189FD122E22B0900EDBD30 /* DLJJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLJJSONSerialization.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 				9E189FB422E2151B00EDBD30 /* Info.plist */,
 				9E189FB522E2151B00EDBD30 /* main.m */,
 				9E189FC522E2217900EDBD30 /* ViewControllers */,
+				9E189FC922E2223400EDBD30 /* Model */,
+				9E189FD022E22B0900EDBD30 /* DLJJSONSerialization.h */,
+				9E189FD122E22B0900EDBD30 /* DLJJSONSerialization.m */,
 			);
 			path = FavoriteArtistApp;
 			sourceTree = "<group>";
@@ -87,6 +96,15 @@
 				9E189FBC22E21C4100EDBD30 /* DLJArtistTableViewController.h */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9E189FC922E2223400EDBD30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E189FC622E2222E00EDBD30 /* DLJArtist.h */,
+				9E189FC722E2222E00EDBD30 /* DLJArtist.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +183,8 @@
 				9E189FBE22E21C4100EDBD30 /* DLJArtistTableViewController.m in Sources */,
 				9E189FA822E214FD00EDBD30 /* AppDelegate.m in Sources */,
 				9E189FC122E21C6500EDBD30 /* DLJSearchViewController.m in Sources */,
+				9E189FD222E22B0900EDBD30 /* DLJJSONSerialization.m in Sources */,
+				9E189FC822E2222E00EDBD30 /* DLJArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

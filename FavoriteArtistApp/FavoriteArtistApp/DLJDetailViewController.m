@@ -23,7 +23,7 @@
 
     self.artistNameLabel.text = self.artist.name;
     self.textView.text = self.artist.bio;
-    NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %@", self.artist.yearFormed];
+    NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
 
     self.formedLabel.text = yearFormedString;
 

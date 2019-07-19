@@ -55,10 +55,18 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            [[self artistLabel] setText:[artist artistName]];
+            if ([artist artistName]){
+                [[self artistLabel] setText:[artist artistName]];
+            } else {
+                [[self artistLabel] setText:@"Artist Not Found"];
+            }
             
-            NSString *year = [NSString stringWithFormat:@"%lu", [artist yearFormed]];
-            [[self yearLabel] setText:year];
+            if ([artist yearFormed] == 0) {
+                [[self yearLabel] setText:@""];
+            } else {
+                NSString *year = [NSString stringWithFormat:@"%lu", [artist yearFormed]];
+                [[self yearLabel] setText:year];
+            }
             
             [[self bioTextView] setText:[artist bio]];
             

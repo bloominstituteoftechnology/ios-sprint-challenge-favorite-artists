@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HSVArtistDetailViewController : UIViewController
+@interface HSVArtistDetailViewController : UIViewController <UISearchBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UISearchBar *serchBar;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;

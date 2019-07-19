@@ -16,9 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
+	self.serchBar.delegate = self;
 	self.nameLabel.text = @"Test";
 	
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+
+	NSString *text = [searchBar text];
+	
+	NSLog(@"Search bar button clicked: %@", text);
 }
 
 /*

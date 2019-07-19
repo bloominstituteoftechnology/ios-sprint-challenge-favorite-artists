@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class LSIArtistController;
+
 @interface LSIArtistTableViewController : UITableViewController
+
+@property (nonatomic) LSIArtistController *artistController;
 
 @end
 

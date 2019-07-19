@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LSIArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property /* (nonatomic) */ NSArray *bands;     //not sure why i'd need to specify nonatomic here
 
-- (void)fetchArtist:(NSString *)searchTerm;
+- (void)fetchArtistWith:(NSString *)searchTerm;
+
+- (void)addArtist:(LSIArtist *)artist;
+
+- (NSUInteger)countOfArtists;
 
 @end
 

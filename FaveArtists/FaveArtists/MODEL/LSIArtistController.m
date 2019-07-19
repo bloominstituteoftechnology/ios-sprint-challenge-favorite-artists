@@ -8,6 +8,21 @@
 
 #import "LSIArtistController.h"
 
+
+// Class Extension (Anonymous Category)
+
+@interface LSIArtistController () {
+    // private variables in here
+}
+
+// Private properties
+@property NSMutableArray *internalBands;
+
+@end
+
+
+
+
 @implementation LSIArtistController
 
 - (instancetype)init
@@ -15,7 +30,6 @@
     self = [super init];
     if (self) {
         _internalBands = [[NSMutableArray alloc] init];
-        
     }
     return self;
 }
@@ -77,11 +91,15 @@
     
 }
 
+- (NSUInteger)countOfArtists {
+    return [_internalBands count];
+}
+
 - (void)addArtist:(LSIArtist *)artist {
     
-    // add artist to NSMutableArray _bands
+    LSIArtist *newArtist = [[LSIArtist alloc] initWithStrArtist:artist.strArtist strBiographyEN:artist.strBiographyEN intFormedYear:artist.intFormedYear];
     
-    
+    [self.internalBands addObject:newArtist];
 }
 
 @end

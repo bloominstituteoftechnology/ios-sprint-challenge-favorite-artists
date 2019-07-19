@@ -10,14 +10,16 @@
 
 @implementation LSIArtist
 
-
-- (instancetype)InitWithStrArtist:(NSString *)strArtist {
+- (instancetype)initWithStrArtist:(NSString *)strArtist
+                   strBiographyEN:(NSString *)strBiographyEN
+                    intFormedYear:(long)intFormedYear {
     self = [super init];
     if (self) {
-        
-        _strArtist = 
-        
+        _strArtist = [strArtist copy];
+        _strBiographyEN = [strBiographyEN copy];
+        _intFormedYear = intFormedYear;
     }
+    return self;
 }
 
 

@@ -12,11 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIArtist : NSObject
 
-@property NSString *strArtist;
-@property NSString *strBiographyEN;
+@property (copy) NSString *strArtist;
+@property (copy) NSString *strBiographyEN;
 @property long intFormedYear;
 
-- (instancetype)InitWithStrArtist:(NSString *)strArtist;
+- (instancetype)initWithStrArtist:(NSString *)strArtist
+                   strBiographyEN:(NSString *)strBiographyEN
+                    intFormedYear:(long )intFormedYear;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

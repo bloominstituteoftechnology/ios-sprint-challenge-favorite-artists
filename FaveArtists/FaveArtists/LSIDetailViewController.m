@@ -35,7 +35,7 @@
     if (!self.isViewLoaded || !self.artist) { return; }
     
     self.artistLabel.text = self.artist.strArtist;
-    self.notesTextView.text = self.artist.intFormedYear;
+    self.yearFoundedLabel.text = [NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"%ld", self.artist.intFormedYear]];
     self.bioTextView.text = self.artist.strBiographyEN;
     
 }
@@ -44,20 +44,22 @@
     
     // call fetchArtistInfo function of ArtistController
     
-    [self.artistController fetchArtist]    // fetchArtist needs a return value of artist
+    // we may need a completionHandler here so we can get back artist
+    [self.artistController fetchArtistWith:(NSString *)searchBar];
     
-    //display search results with [self updateViews]
+    [self updateViews];
     
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
     
     // initialize an Artist Model with data from 3 Outlets
-    artist = [[LSIArtist alloc] init];
-    [self createArtistFromSearchResults:self.artist]
-     [self.artistController artist];
+    _artist = [[LSIArtist alloc] init];   // compiler demanded _artist instedo artist
+    [self createArtistFromSearchResults:self.artist]  // is artist ok going func to func here?
     
     // add Artist to bands array to persist
+    [self.artistController addArtist:artist];
+    
     
     [self.navigationController popViewControllerAnimated:YES];
 }

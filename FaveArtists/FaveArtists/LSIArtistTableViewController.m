@@ -7,7 +7,10 @@
 //
 
 #import "LSIArtistTableViewController.h"
+#import "LSIDetailViewController.h"
 #import "LSIArtist.h"
+#import "LSIArtistController.h"
+#import "LSIDetailViewController.h"
 
 
 @interface LSIArtistTableViewController ()
@@ -18,20 +21,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    
+    [self.tableView reloadData];
+}
+
+
+- (LSIArtistController *)artistController {
+
+    if(!_artistController) {
+
+        _artistController = [[LSIArtistController alloc] init];
+    }
+    return _artistController;
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.artistController.countOfArtists;
 }
 
 

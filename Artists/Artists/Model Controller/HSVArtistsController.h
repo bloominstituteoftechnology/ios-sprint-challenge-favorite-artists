@@ -12,9 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HSVArtistsController : NSObject
 
+@property (nonatomic, copy, readonly) NSArray *artists;
 
+- (instancetype)init;
 
-
+- (void)fetchArtistWithName:(NSString *)name completion:(void (^)(NSError *))completion;
 
 
 @end

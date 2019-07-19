@@ -11,7 +11,7 @@
 
 @interface HSVArtistsController()
 
-@property (nonatomic, copy) NSMutableArray *_internalArtists;
+@property (nonatomic, copy) NSMutableArray *internalArtists;
 
 @end
 
@@ -23,13 +23,13 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 {
 	self = [super init];
 	if (self) {
-		__internalArtists = [[NSMutableArray alloc] init];
+		_internalArtists = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
 
 - (NSArray *)artists {
-	return self._internalArtists;
+	return self.internalArtists;
 }
 
 - (void)fetchArtistWithName:(NSString *)name completion:(void (^)(NSError *))completion{

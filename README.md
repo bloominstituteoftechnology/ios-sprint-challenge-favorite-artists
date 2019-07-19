@@ -41,7 +41,7 @@ The requirements for this project are as follows:
     - Their biography.
     - The year that they formed. **This must be a primitive.**
 2. A category called `NSJSONSerialization`. In this category add:
-    - An initializer to intialize your model object from a dictionary.
+    - An initializer to create your model object from a dictionary.
         
         `- (void)initWithDictionary:(NSDictionary *)`
         

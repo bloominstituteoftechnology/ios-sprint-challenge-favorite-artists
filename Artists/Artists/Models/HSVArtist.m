@@ -14,7 +14,7 @@
 - (instancetype)initWithName:(NSString *)name biography:(NSString *)biography yearFormed:(int)yearFormed {
 	if (self = [super init]) {
 		_name = name;
-		_biography = biography
+		_biography = biography;
 		_yearFormed = yearFormed;
 	}
 	return self;

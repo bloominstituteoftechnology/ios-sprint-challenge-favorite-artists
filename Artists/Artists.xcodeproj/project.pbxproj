@@ -15,6 +15,8 @@
 		E8ED8AEE22E216A800C54782 /* HSVArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AED22E216A800C54782 /* HSVArtistsTableViewController.m */; };
 		E8ED8AF222E216D500C54782 /* HSVArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AF122E216D500C54782 /* HSVArtistDetailViewController.m */; };
 		E8ED8AF522E21C8A00C54782 /* HSVArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AF422E21C8A00C54782 /* HSVArtist.m */; };
+		E8ED8AF922E2206B00C54782 /* NSJSONSerialization+HSVInitModelFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AF822E2206B00C54782 /* NSJSONSerialization+HSVInitModelFromDictionary.m */; };
+		E8ED8AFD22E2239300C54782 /* HSVArtistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AFC22E2239300C54782 /* HSVArtistsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		E8ED8AF122E216D500C54782 /* HSVArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVArtistDetailViewController.m; sourceTree = "<group>"; };
 		E8ED8AF322E21C8A00C54782 /* HSVArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVArtist.h; sourceTree = "<group>"; };
 		E8ED8AF422E21C8A00C54782 /* HSVArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVArtist.m; sourceTree = "<group>"; };
+		E8ED8AF722E2206B00C54782 /* NSJSONSerialization+HSVInitModelFromDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+HSVInitModelFromDictionary.h"; sourceTree = "<group>"; };
+		E8ED8AF822E2206B00C54782 /* NSJSONSerialization+HSVInitModelFromDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+HSVInitModelFromDictionary.m"; sourceTree = "<group>"; };
+		E8ED8AFB22E2239300C54782 /* HSVArtistsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVArtistsController.h; sourceTree = "<group>"; };
+		E8ED8AFC22E2239300C54782 /* HSVArtistsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVArtistsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +72,9 @@
 			children = (
 				E8ED8AD622E213F800C54782 /* AppDelegate.h */,
 				E8ED8AD722E213F800C54782 /* AppDelegate.m */,
+				E8ED8AFA22E2207600C54782 /* Category */,
 				E8ED8AF622E21DD600C54782 /* Models */,
+				E8ED8AFE22E2239B00C54782 /* Model Controller */,
 				E8ED8AEF22E216AD00C54782 /* View Controller  */,
 				E8ED8ADC22E213F800C54782 /* Main.storyboard */,
 				E8ED8AE122E213FB00C54782 /* LaunchScreen.storyboard */,
@@ -95,6 +103,24 @@
 				E8ED8AF422E21C8A00C54782 /* HSVArtist.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E8ED8AFA22E2207600C54782 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E8ED8AF722E2206B00C54782 /* NSJSONSerialization+HSVInitModelFromDictionary.h */,
+				E8ED8AF822E2206B00C54782 /* NSJSONSerialization+HSVInitModelFromDictionary.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E8ED8AFE22E2239B00C54782 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8ED8AFB22E2239300C54782 /* HSVArtistsController.h */,
+				E8ED8AFC22E2239300C54782 /* HSVArtistsController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +195,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8ED8AF222E216D500C54782 /* HSVArtistDetailViewController.m in Sources */,
+				E8ED8AF922E2206B00C54782 /* NSJSONSerialization+HSVInitModelFromDictionary.m in Sources */,
 				E8ED8AEE22E216A800C54782 /* HSVArtistsTableViewController.m in Sources */,
 				E8ED8AE622E213FB00C54782 /* main.m in Sources */,
 				E8ED8AF522E21C8A00C54782 /* HSVArtist.m in Sources */,
+				E8ED8AFD22E2239300C54782 /* HSVArtistsController.m in Sources */,
 				E8ED8AD822E213F800C54782 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

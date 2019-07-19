@@ -12,6 +12,9 @@
 		9E189FB022E2151B00EDBD30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E189FAF22E2151B00EDBD30 /* Assets.xcassets */; };
 		9E189FB322E2151B00EDBD30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E189FB122E2151B00EDBD30 /* LaunchScreen.storyboard */; };
 		9E189FB622E2151B00EDBD30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189FB522E2151B00EDBD30 /* main.m */; };
+		9E189FBE22E21C4100EDBD30 /* DLJArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189FBD22E21C4100EDBD30 /* DLJArtistTableViewController.m */; };
+		9E189FC122E21C6500EDBD30 /* DLJSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189FC022E21C6500EDBD30 /* DLJSearchViewController.m */; };
+		9E189FC422E21C8100EDBD30 /* DLJDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E189FC322E21C8100EDBD30 /* DLJDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,12 @@
 		9E189FB222E2151B00EDBD30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E189FB422E2151B00EDBD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E189FB522E2151B00EDBD30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9E189FBC22E21C4100EDBD30 /* DLJArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLJArtistTableViewController.h; sourceTree = "<group>"; };
+		9E189FBD22E21C4100EDBD30 /* DLJArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLJArtistTableViewController.m; sourceTree = "<group>"; };
+		9E189FBF22E21C6500EDBD30 /* DLJSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLJSearchViewController.h; sourceTree = "<group>"; };
+		9E189FC022E21C6500EDBD30 /* DLJSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLJSearchViewController.m; sourceTree = "<group>"; };
+		9E189FC222E21C8100EDBD30 /* DLJDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLJDetailViewController.h; sourceTree = "<group>"; };
+		9E189FC322E21C8100EDBD30 /* DLJDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLJDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +71,22 @@
 				9E189FB122E2151B00EDBD30 /* LaunchScreen.storyboard */,
 				9E189FB422E2151B00EDBD30 /* Info.plist */,
 				9E189FB522E2151B00EDBD30 /* main.m */,
+				9E189FC522E2217900EDBD30 /* ViewControllers */,
 			);
 			path = FavoriteArtistApp;
+			sourceTree = "<group>";
+		};
+		9E189FC522E2217900EDBD30 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E189FC322E21C8100EDBD30 /* DLJDetailViewController.m */,
+				9E189FC222E21C8100EDBD30 /* DLJDetailViewController.h */,
+				9E189FBF22E21C6500EDBD30 /* DLJSearchViewController.h */,
+				9E189FC022E21C6500EDBD30 /* DLJSearchViewController.m */,
+				9E189FBD22E21C4100EDBD30 /* DLJArtistTableViewController.m */,
+				9E189FBC22E21C4100EDBD30 /* DLJArtistTableViewController.h */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E189FB622E2151B00EDBD30 /* main.m in Sources */,
+				9E189FC422E21C8100EDBD30 /* DLJDetailViewController.m in Sources */,
+				9E189FBE22E21C4100EDBD30 /* DLJArtistTableViewController.m in Sources */,
 				9E189FA822E214FD00EDBD30 /* AppDelegate.m in Sources */,
+				9E189FC122E21C6500EDBD30 /* DLJSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

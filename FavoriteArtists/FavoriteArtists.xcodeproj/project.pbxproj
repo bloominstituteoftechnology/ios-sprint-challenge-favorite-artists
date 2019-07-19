@@ -15,6 +15,8 @@
 		FAE4A97022E21CA400E781BA /* LSIDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE4A96F22E21CA400E781BA /* LSIDetailViewController.m */; };
 		FAE4A97322E21CBE00E781BA /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE4A97222E21CBE00E781BA /* LSIArtistsTableViewController.m */; };
 		FAE4A97622E2203C00E781BA /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE4A97522E2203C00E781BA /* LSIArtist.m */; };
+		FAE4A97922E2224C00E781BA /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE4A97822E2224C00E781BA /* LSIArtistController.m */; };
+		FAE4A97C22E2226900E781BA /* LSINSObject+JSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE4A97B22E2226900E781BA /* LSINSObject+JSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		FAE4A97222E21CBE00E781BA /* LSIArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistsTableViewController.m; sourceTree = "<group>"; };
 		FAE4A97422E2203C00E781BA /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
 		FAE4A97522E2203C00E781BA /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
+		FAE4A97722E2224C00E781BA /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
+		FAE4A97822E2224C00E781BA /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
+		FAE4A97A22E2226900E781BA /* LSINSObject+JSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSINSObject+JSONSerialization.h"; sourceTree = "<group>"; };
+		FAE4A97B22E2226900E781BA /* LSINSObject+JSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LSINSObject+JSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,10 @@
 		FAE4A96C22E21BA600E781BA /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAE4A97722E2224C00E781BA /* LSIArtistController.h */,
+				FAE4A97822E2224C00E781BA /* LSIArtistController.m */,
+				FAE4A97A22E2226900E781BA /* LSINSObject+JSONSerialization.h */,
+				FAE4A97B22E2226900E781BA /* LSINSObject+JSONSerialization.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -193,6 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE4A96322E21B8100E781BA /* main.m in Sources */,
+				FAE4A97922E2224C00E781BA /* LSIArtistController.m in Sources */,
+				FAE4A97C22E2226900E781BA /* LSINSObject+JSONSerialization.m in Sources */,
 				FAE4A97022E21CA400E781BA /* LSIDetailViewController.m in Sources */,
 				FAE4A97322E21CBE00E781BA /* LSIArtistsTableViewController.m in Sources */,
 				FAE4A95522E21B8100E781BA /* AppDelegate.m in Sources */,
@@ -339,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = FavoriteArtists/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -355,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = FavoriteArtists/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -24,6 +24,10 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)searchBarPressed:(UISearchBar *)searchBar {
+    
+}
+
 /*
 #pragma mark - Navigation
 

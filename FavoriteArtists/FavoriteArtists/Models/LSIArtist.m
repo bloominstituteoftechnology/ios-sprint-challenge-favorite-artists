@@ -10,4 +10,16 @@
 
 @implementation LSIArtist
 
+- (instancetype) initWithName:(NSString *)name formed:(NSInteger)formed bio:(NSString *)bio {
+    
+    if (self = [super init]) {
+        _name = name;
+        _formed = formed;
+        _bio = bio;
+    }
+    return self;
+}
+
+
+
 @end

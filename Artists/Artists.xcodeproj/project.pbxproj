@@ -63,12 +63,12 @@
 			children = (
 				E8ED8AD622E213F800C54782 /* AppDelegate.h */,
 				E8ED8AD722E213F800C54782 /* AppDelegate.m */,
+				E8ED8AEF22E216AD00C54782 /* View Controller  */,
 				E8ED8ADC22E213F800C54782 /* Main.storyboard */,
 				E8ED8AE122E213FB00C54782 /* LaunchScreen.storyboard */,
 				E8ED8ADF22E213FB00C54782 /* Assets.xcassets */,
 				E8ED8AE422E213FB00C54782 /* Info.plist */,
 				E8ED8AE522E213FB00C54782 /* main.m */,
-				E8ED8AEF22E216AD00C54782 /* View Controller  */,
 			);
 			path = Artists;
 			sourceTree = "<group>";

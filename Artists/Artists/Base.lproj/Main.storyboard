@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Artists Table View Controller-->
         <scene sceneID="hNQ-an-ygP">
             <objects>
-                <tableViewController id="Din-WV-ibN" sceneMemberID="viewController">
+                <tableViewController id="Din-WV-ibN" customClass="HSVArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OM0-uH-a35">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="5iS-nD-lF8" detailTextLabel="LxD-XO-3Nn" style="IBUITableViewCellStyleSubtitle" id="qi8-wr-NfH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" textLabel="5iS-nD-lF8" detailTextLabel="LxD-XO-3Nn" style="IBUITableViewCellStyleSubtitle" id="qi8-wr-NfH">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qi8-wr-NfH" id="Qxt-Ba-Zas">
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="784.05797101449286" y="158.70535714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="l7a-x5-47Z">
             <objects>
-                <viewController id="vKF-of-NoT" sceneMemberID="viewController">
+                <viewController id="vKF-of-NoT" customClass="HSVArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ciM-hv-qOr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

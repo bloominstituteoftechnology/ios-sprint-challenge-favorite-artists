@@ -42,7 +42,13 @@ The requirements for this project are as follows:
     - The year that they formed. **This must be a primitive.**
 2. A category called `NSJSONSerialization`. In this category add:
     - An initializer to intialize your model object from a dictionary.
+        
+        `- (void)initWithDictionary:(NSDictionary *)`
+        
     - A function that returns your model object in dictionary form.
+        
+        `- (NSDictionary *)toDictionary`
+        
 3. Add the ability to save a searched artist. 
     - Implement persistence using `NSFileManager` to save your model objects to a file in the application's Document directory. 
     - **Note:** As you do not have access to `Codable` use `NSJSONSerialization` to help turn your model objects into `NSData`.

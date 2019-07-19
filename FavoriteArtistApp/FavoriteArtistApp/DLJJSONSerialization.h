@@ -6,15 +6,15 @@
 //  Copyright © 2019 Diante Lewis-Jolley. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "DLJArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSJSONSerialization (ArtistModel)
+@interface DLJArtist (NSJSONSerialization)
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
-
+-(NSDictionary *)artistDictionary;
 
 @end
 

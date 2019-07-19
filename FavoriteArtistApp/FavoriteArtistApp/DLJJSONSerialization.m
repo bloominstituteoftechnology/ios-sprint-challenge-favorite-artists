@@ -12,11 +12,11 @@
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary {
 
-    NSString *artistName = dictionary[@"artists"][@"strArtist"];
+    NSString *artistName = dictionary[@"strArtist"];
     NSString *bio = dictionary[@"strBiographyEN"];
     NSString *yearFormed = dictionary[@"intFormedYear"];
 
-    return [self initWithArtistName:artistName biography:bio yearFormed:yearFormed.intValue];
+    return [[DLJArtist alloc]initWithArtistName:artistName biography:bio yearFormed:yearFormed.intValue];
 }
 
 -(NSDictionary *)artistDictionary {

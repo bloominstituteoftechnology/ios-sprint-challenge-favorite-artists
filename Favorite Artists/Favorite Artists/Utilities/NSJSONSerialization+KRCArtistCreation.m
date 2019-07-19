@@ -14,14 +14,30 @@
 
 + (KRCArtist *)ArtistFromJson:(NSDictionary *)jsonictionary {
     
-    
     NSArray *artistArray = [jsonictionary objectForKey:@"artists"];
     
-    NSDictionary *artistInfo = [artistArray objectAtIndex:0];
+    NSDictionary *artistInfo = [[NSDictionary alloc] init];
+    
+    if ([artistArray objectAtIndex:0]) {
+        artistInfo = [artistArray objectAtIndex:0];
+    }
+    
+    
+    NSString *name = nil;
+    NSString *bio = nil;
+    NSInteger yearFormed = 0;
 
-    NSString *name = [NSString stringWithFormat:@"%@", [artistInfo objectForKey:@"strArtist"]];
-    NSString *bio = [NSString stringWithFormat:@"%@", [artistInfo objectForKey:@"strBiographyEN"]];
-    NSInteger yearFormed = [[artistInfo objectForKey:@"intFormedYear"] integerValue];
+    if ([artistInfo objectForKey:@"strArtist"]) {
+        name = [NSString stringWithFormat:@"%@", [artistInfo objectForKey:@"strArtist"]];
+    }
+    
+    if ([artistInfo objectForKey:@"strBiographyEN"]) {
+        bio = [NSString stringWithFormat:@"%@", [artistInfo objectForKey:@"strBiographyEN"]];
+    }
+    
+    if ([artistInfo objectForKey:@"intFormedYear"]) {
+        yearFormed = [[artistInfo objectForKey:@"intFormedYear"] integerValue];
+    }
 
     return [[KRCArtist alloc] initWithName:name year:yearFormed bio:bio];
 }

@@ -29,13 +29,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [[self artistController] loadFile];
-    
     [[self tableView] reloadData];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[self artistController] loadFile];
+    [[self tableView] reloadData];
 }
 
 #pragma mark - Table view data source
@@ -97,6 +98,13 @@
     if ([[segue identifier] isEqualToString:@"ShowAddArtist"]) {
         KRCDetailViewController *detailVC = [segue destinationViewController];
         [detailVC setArtistController:[self artistController]];
+    } if ([[segue identifier] isEqualToString:@"ShowDetailArtist"]) {
+        
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+        
+        KRCDetailViewController *detailVC = [segue destinationViewController];
+        [detailVC setArtistController:[self artistController]];
+        [detailVC setArtist:[[[self artistController] artistCollection] objectAtIndex:[indexPath row]]];
     }
 }
 

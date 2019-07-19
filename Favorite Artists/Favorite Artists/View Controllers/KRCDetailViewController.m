@@ -33,6 +33,12 @@
     
     if ([[self artist] artistName]) {
         [self setTitle:[[self artist] artistName]];
+        [[self artistLabel] setText:[[self artist] artistName]];
+        [[self bioTextView] setText:[[self artist] bio]];
+        
+        NSString *year = [NSString stringWithFormat:@"%lu",[[self artist] yearFormed]];
+        
+        [[self yearLabel] setText:year];
     }
 }
 

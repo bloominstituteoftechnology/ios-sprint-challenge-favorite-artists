@@ -117,6 +117,10 @@
     NSString* fileName = @"artists.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
     
+    if (![[NSFileManager defaultManager] fileExistsAtPath:fileAtPath]) {
+        [[NSFileManager defaultManager] createFileAtPath:fileAtPath contents:nil attributes:nil];
+    }
+    
     NSError *error = nil;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:fileAtPath] options:0 error:&error];
     

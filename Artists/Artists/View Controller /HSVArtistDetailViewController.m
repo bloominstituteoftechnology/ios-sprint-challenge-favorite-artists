@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.serchBar.delegate = self;
+	[self setupViews];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {

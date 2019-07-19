@@ -78,7 +78,10 @@
 		HSVArtistDetailViewController *destination = (HSVArtistDetailViewController *)[segue destinationViewController];
 		destination.artistController = self.artistsController;
 		
-//		destination.artist = 
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		HSVArtist *artist = self.artistsController.artists[indexPath.row];
+		
+		destination.artist = artist;
 	
 	}
 

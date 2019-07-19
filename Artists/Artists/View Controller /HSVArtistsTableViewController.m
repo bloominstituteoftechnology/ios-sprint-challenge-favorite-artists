@@ -34,7 +34,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	
-	
+	[self.artistsController fetchArtistWithName:@"Morrissey" completion:^(NSError * _Nonnull error) {
+		if (error)
+			NSLog(@"Error fetching: %@", error);
+	}];
 	
 }
 
@@ -50,9 +53,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell" forIndexPath:indexPath];
-    
-	cell.textLabel.text = @"cell";
-    
+	
+	
+	HSVArtist *artist = self.artistsController.artists[indexPath.row];
+	
+	cell.textLabel.text = artist.name;
+	
+	int yearFormed = artist.yearFormed;
+	cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%i", yearFormed];
+	
     return cell;
 }
 

@@ -12,18 +12,20 @@
 @implementation SLRArtist (NSJSONSerialization)
 
 - (instancetype) initFromDictionary: (NSDictionary *)dictionary {
-    
-    NSString *artistName = dictionary[@"artistName"];
-    NSString *biography = dictionary[@"biography"];
-    NSInteger *yearFormed = [dictionary yearFormed];
+
+    NSString *artistName = [dictionary[@"properties"][@"strArtist"]artistName];
+    NSString *biography = [dictionary[@"properties"][@"strBiographyEN"]biography];
+    NSString *yearFormed = [dictionary[@"properties"][@"intFormedYear"]yearFormed];
     
     return [self initWithArtistName:artistName biography:biography yearFormed:yearFormed];
 }
-
+    
 - (NSDictionary *) dataDictionary {
-return @{@"artistName" : self.artistName,
-         @"biography" : self.biography,
-         @"yearFormed" : self.yearFormed
-         };
+    return @{@"artistName" : self.artistName,
+             @"biography" : self.biography,
+             @"yearFormed" : self.yearFormed
+             };
 }
+
+
 @end

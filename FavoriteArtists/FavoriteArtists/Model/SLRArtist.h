@@ -23,10 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 // Properties
 @property NSString *artistName;
 @property NSString *biography;
-@property NSInteger *yearFormed;
+@property NSString *yearFormed;
 
 // Initializer
-- (instancetype)initWithArtistName: (NSString *)artistName biography: (NSString *)biography yearFormed: (NSInteger *)yearFormed;
+- (instancetype)initWithArtistName: (NSString *)artistName biography: (NSString *)biography yearFormed: (NSString *)yearFormed;
 
 @end
 

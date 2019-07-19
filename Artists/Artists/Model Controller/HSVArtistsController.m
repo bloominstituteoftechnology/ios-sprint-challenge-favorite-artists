@@ -35,9 +35,7 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 
 - (void) addArtist:(HSVArtist *)aritst {
 	[self.internalArtists addObject:aritst];
-	
 	//save to file
-	
 }
 
 - (void)fetchArtistWithName:(NSString *)name completion:(void (^)(HSVArtist *,NSError *))completion{
@@ -56,7 +54,13 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 		
 		if (jsonError){
 			NSLog(@"Error wit jsonSerialization %@", jsonError);
-			completion(nil, jsonError);
+			completion(nil, [[NSError alloc] init]);
+			return;
+		}
+		
+		if (![jsonDict isKindOfClass:[NSDictionary class]]) {
+			NSLog(@"found nil");
+			completion(nil, [[NSError alloc] init]);
 			return;
 		}
 		

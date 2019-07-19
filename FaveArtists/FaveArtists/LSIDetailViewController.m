@@ -10,6 +10,13 @@
 
 @interface LSIDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UISearchBar *artistSearchBar;
+
+@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearFoundedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
+
+
 @end
 
 @implementation LSIDetailViewController
@@ -18,6 +25,10 @@
     [super viewDidLoad];
     
     //[self updateViews]
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
 }
 
 - (IBAction)saveButtonTapped:(id)sender {

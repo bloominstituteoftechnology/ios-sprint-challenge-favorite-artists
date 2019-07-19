@@ -121,6 +121,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistLabel" destination="XY8-vD-847" id="M7x-Y0-uiA"/>
+                        <outlet property="artistSearchBar" destination="tbb-o6-lAv" id="0b9-fF-3Zf"/>
+                        <outlet property="bioTextView" destination="vBr-3h-7TE" id="Kvz-4w-fbI"/>
+                        <outlet property="yearFoundedLabel" destination="Wfb-OK-1xr" id="mww-5v-dj0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sve-7o-LVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Uz-JA-NrQ" userLabel="Exit" sceneMemberID="exit"/>

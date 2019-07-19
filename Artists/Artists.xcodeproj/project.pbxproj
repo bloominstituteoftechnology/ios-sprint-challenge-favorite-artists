@@ -14,6 +14,7 @@
 		E8ED8AE622E213FB00C54782 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AE522E213FB00C54782 /* main.m */; };
 		E8ED8AEE22E216A800C54782 /* HSVArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AED22E216A800C54782 /* HSVArtistsTableViewController.m */; };
 		E8ED8AF222E216D500C54782 /* HSVArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AF122E216D500C54782 /* HSVArtistDetailViewController.m */; };
+		E8ED8AF522E21C8A00C54782 /* HSVArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AF422E21C8A00C54782 /* HSVArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		E8ED8AED22E216A800C54782 /* HSVArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVArtistsTableViewController.m; sourceTree = "<group>"; };
 		E8ED8AF022E216D500C54782 /* HSVArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVArtistDetailViewController.h; sourceTree = "<group>"; };
 		E8ED8AF122E216D500C54782 /* HSVArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVArtistDetailViewController.m; sourceTree = "<group>"; };
+		E8ED8AF322E21C8A00C54782 /* HSVArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVArtist.h; sourceTree = "<group>"; };
+		E8ED8AF422E21C8A00C54782 /* HSVArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 			children = (
 				E8ED8AD622E213F800C54782 /* AppDelegate.h */,
 				E8ED8AD722E213F800C54782 /* AppDelegate.m */,
+				E8ED8AF622E21DD600C54782 /* Models */,
 				E8ED8AEF22E216AD00C54782 /* View Controller  */,
 				E8ED8ADC22E213F800C54782 /* Main.storyboard */,
 				E8ED8AE122E213FB00C54782 /* LaunchScreen.storyboard */,
@@ -82,6 +86,15 @@
 				E8ED8AF122E216D500C54782 /* HSVArtistDetailViewController.m */,
 			);
 			path = "View Controller ";
+			sourceTree = "<group>";
+		};
+		E8ED8AF622E21DD600C54782 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8ED8AF322E21C8A00C54782 /* HSVArtist.h */,
+				E8ED8AF422E21C8A00C54782 /* HSVArtist.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +171,7 @@
 				E8ED8AF222E216D500C54782 /* HSVArtistDetailViewController.m in Sources */,
 				E8ED8AEE22E216A800C54782 /* HSVArtistsTableViewController.m in Sources */,
 				E8ED8AE622E213FB00C54782 /* main.m in Sources */,
+				E8ED8AF522E21C8A00C54782 /* HSVArtist.m in Sources */,
 				E8ED8AD822E213F800C54782 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

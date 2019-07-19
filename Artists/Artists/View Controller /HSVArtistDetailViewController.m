@@ -28,11 +28,15 @@
 	NSLog(@"Search bar button clicked: %@", text);
 	
 	[self.artistController fetchArtistWithName:text completion:^(HSVArtist * _Nonnull artist, NSError * _Nonnull error) {
+		if (error){
+			NSLog(@"error with fetch: %@", error);
+		}else {
 		
-		dispatch_async(dispatch_get_main_queue(), ^{
-			self.artist = artist;
-			[self setupViews];
-		});
+			dispatch_async(dispatch_get_main_queue(), ^{
+				self.artist = artist;
+				[self setupViews];
+			});
+		}
 	}];
 }
 

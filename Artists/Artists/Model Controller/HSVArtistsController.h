@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init;
 
-- (void) createArtistWithName:(NSString *)name biography:(NSString *)bio yearFormed:(int)formedYear;
+- (void) addArtist:(HSVArtist *)aritst;
 
 - (void)fetchArtistWithName:(NSString *)name completion:(void (^)(HSVArtist *,NSError *))completion;
 

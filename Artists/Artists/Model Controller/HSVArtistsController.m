@@ -33,11 +33,11 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 	return self.internalArtists;
 }
 
-- (void) createArtistWithName:(NSString *)name biography:(NSString *)bio yearFormed:(int)formedYear {
-	HSVArtist *artist = [[HSVArtist alloc] initWithName:name biography:bio yearFormed:formedYear];
+- (void) addArtist:(HSVArtist *)aritst {
+	[self.internalArtists addObject:aritst];
 	
-	[self.internalArtists addObject:artist];
 	//save to file
+	
 }
 
 - (void)fetchArtistWithName:(NSString *)name completion:(void (^)(HSVArtist *,NSError *))completion{
@@ -62,9 +62,8 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 		
 		HSVArtist *artist = [[HSVArtist alloc] initWithDictionary:jsonDict];
 		completion(artist, nil);
-		
-//		[self createArtistWithName:name biography:bio yearFormed:formedYear];
-//		NSLog(@"%@", artist.name);
+		[self addArtist:artist];
+
 	}];
 	
 	[task resume];

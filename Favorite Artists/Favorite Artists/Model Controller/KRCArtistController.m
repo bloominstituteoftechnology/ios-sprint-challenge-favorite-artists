@@ -117,10 +117,27 @@
     NSString* fileName = @"artists.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
     
+    NSError *error = nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:fileAtPath] options:0 error:&error];
     
-    NSString *json = [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
+    if (error) {
+        NSLog(@"%@", error);
+        return;
+    }
     
-    NSLog(@"%@\n\n\n\n%@", fileAtPath, json);
+    NSArray *allArtists = [json objectForKey:@"artists"];
+    
+    for(int i = 0; i < [allArtists count]; i++) {
+        NSDictionary *artistDictionary = [allArtists objectAtIndex:i];
+        
+        NSString *name = [artistDictionary objectForKey:@"strArtist"];
+        NSString *bio = [artistDictionary objectForKey:@"strBiographyEN"];
+        NSString *year = [artistDictionary objectForKey:@"intFormedYear"];
+        
+        KRCArtist *artist = [[KRCArtist alloc] initWithName:name year:[year integerValue] bio:bio];
+        
+        [[self internalArtistCollection] addObject:artist];
+    }
     
 }
 

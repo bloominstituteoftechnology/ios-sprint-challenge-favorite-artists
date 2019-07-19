@@ -29,6 +29,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [[self artistController] loadFile];
+    
     [[self tableView] reloadData];
 }
 

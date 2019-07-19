@@ -66,7 +66,10 @@
 
     if ([segue.identifier isEqualToString:@"DetailSegue"]) {
         DLJDetailViewController *DetailVC = segue.destinationViewController;
-        DetailVC.artist = self.artist;
+
+        // Set the Saved Artist as the Detail Artist
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+        DetailVC.artist = [self artistArray][indexPath.row];
     } else {
         if ([segue.identifier isEqualToString:@"SearchSegue"]) {
             DLJSearchViewController *SearchVC = segue.destinationViewController;

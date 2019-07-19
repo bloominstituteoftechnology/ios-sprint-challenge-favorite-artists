@@ -14,8 +14,8 @@
 
     self = [super init];
     if (self) {
-        self.name = name;
-        self.bio = bio;
+        self.name = [name copy];
+        self.bio = [bio copy];
         self.yearFormed = yearFormed;
     }
 

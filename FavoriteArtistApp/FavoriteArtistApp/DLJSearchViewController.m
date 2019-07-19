@@ -41,7 +41,7 @@
             self.searchedArtist = artist;
             self.artistNameLabel.text = self.searchedArtist.name;
             self.textView.text = self.searchedArtist.bio;
-            NSString *formedString = [NSString stringWithFormat:@"Formed in %@", self.searchedArtist.yearFormed];
+            NSString *formedString = [NSString stringWithFormat:@"Formed in %d", self.searchedArtist.yearFormed];
             self.formedLabel.text = formedString;
 
         });

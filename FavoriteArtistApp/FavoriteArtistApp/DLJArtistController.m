@@ -10,8 +10,8 @@
 #import "DLJArtist.h"
 #import "DLJJSONSerialization.h"
 
-static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
-static NSString *apiKey = @"1";
+static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?=";
+
 
 @interface DLJArtistController()
 @property (nonatomic) NSMutableArray *internalArtists;
@@ -62,24 +62,23 @@ static NSString *apiKey = @"1";
 
 - (void)fetchArtistsWithName:(NSString *)name completion:(DLJCompletionBlock)completion {
 
-    // Need base URL
-    NSURL *baseURL = [NSURL URLWithString:baseURLString];
-
-    // Make components
-    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithURL:baseURL resolvingAgainstBaseURL:true];
+    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
 
     // Query Items
-    NSURLQueryItem *queryItems = [[NSURLQueryItem alloc] initWithName:@"s" value:name];
+    NSArray *queryItems = @[
+                            [NSURLQueryItem queryItemWithName:@"s" value:name]
+                            ];
 
-    [urlComponents setQueryItems:@[queryItems]];
+    urlComponents.queryItems = queryItems;
+    NSURL *url = urlComponents.URL;
 
     // create URLRequest
 
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:urlComponents.URL];
+   // NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:urlComponents.URL];
 
     //URLSession dataTask
 
-    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error fetching artist from dataTask: %@", error);
             completion(nil, error);
@@ -89,8 +88,14 @@ static NSString *apiKey = @"1";
         NSError *jsonError;
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 
-        NSArray *dictionary = json[@"artists"];
-        DLJArtist *artist = [[DLJArtist alloc] initWithDictionary:dictionary[0]];
+        if (jsonError){
+            NSLog(@"Error wit jsonSerialization %@", jsonError);
+            completion(nil, jsonError);
+            return;
+        }
+
+       NSArray *jsonDict = json[@"artists"];
+        DLJArtist *artist = [[DLJArtist alloc] initWithDictionary: jsonDict[0]];
         completion(artist, nil);
 
     }];

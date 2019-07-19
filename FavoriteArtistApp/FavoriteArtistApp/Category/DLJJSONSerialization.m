@@ -11,16 +11,28 @@
 @implementation DLJArtist (NSJSONSerialization)
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
 
-    NSString *artistName = dictionary[@"strArtist"];
-    NSString *bio = dictionary[@"strBiographyEN"];
-    NSString *yearFormed = dictionary[@"intFormedYear"];
+    if (self) {
+        self.name = [dictionary objectForKey:@"strArtist"];
+        self.bio = [dictionary objectForKey:@"strBiographyEN"];
+        self.yearFormed = [[dictionary objectForKey:@"intFormedYear"] intValue];
+    }
 
-    return [[DLJArtist alloc]initWithArtistName:artistName biography:bio yearFormed:yearFormed.intValue];
+    return self;
 }
 
 -(NSDictionary *)artistDictionary {
-    return @{@"strArtist": self.name, @"strBiographyEN": self.bio, @"intFormedYear": @(self.yearFormed) };
+    NSMutableDictionary *artistDictionary = [NSMutableDictionary dictionary];
+    [artistDictionary setObject:self.name forKey:@"strArtist"];
+    [artistDictionary setObject:self.bio forKey:@"strBiographyEN"];
+
+    NSString *yearFormedString = @(self.yearFormed).stringValue;
+    [artistDictionary setObject:yearFormedString forKey:@"intFormedYear"];
+
+
+    NSDictionary *artistDict = [NSDictionary dictionaryWithObjectsAndKeys:self.name, @"strArtist", self.bio, @"strBiographyEN", yearFormedString, @"intFormedYear", nil];
+    return artistDict;
 }
 
 @end

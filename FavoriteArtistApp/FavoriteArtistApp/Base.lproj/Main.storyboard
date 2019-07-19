@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="brk-PD-tTi" kind="show" id="iqA-qs-Kac"/>
+                                    <segue destination="brk-PD-tTi" kind="show" identifier="DetailSegue" id="iqA-qs-Kac"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="UFo-Ql-Ogr">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="z6O-OF-NEg">
                             <connections>
-                                <segue destination="s1C-O6-Ve9" kind="show" id="lpH-M1-Sgj"/>
+                                <segue destination="s1C-O6-Ve9" kind="show" identifier="SearchSegue" id="lpH-M1-Sgj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

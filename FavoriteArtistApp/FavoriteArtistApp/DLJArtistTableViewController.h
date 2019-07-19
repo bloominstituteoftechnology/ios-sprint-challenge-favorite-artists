@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class DLJArtistController;
+
 @interface DLJArtistTableViewController : UITableViewController
+
+//@property (nonatomic, copy) DLJArtistController *artistController;
 
 @end
 

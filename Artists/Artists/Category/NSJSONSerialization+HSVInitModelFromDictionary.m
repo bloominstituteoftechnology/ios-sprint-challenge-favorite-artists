@@ -10,4 +10,15 @@
 
 @implementation NSJSONSerialization (HSVInitModelFromDictionary)
 
+
+- (void)initWithDictionary:(NSDictionary *)otherDictionary {
+	
+}
+
+- (NSDictionary *)toDictionary {
+	return @{@"strArtist": @"",
+			@"intFormedYear": @"",
+			 @"strBiographyEN": @""};
+}
+
 @end

@@ -46,16 +46,17 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 		}
 		
 		NSError *jsonError = nil;
-		NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+		NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+		
 		if (jsonError){
 			NSLog(@"Error wit jsonSerialization %@", jsonError);
 			completion(jsonError);
 			return;
 		}
 
-		NSLog(@"%@", json[@"artists"][0][@"strArtist"]);
-		NSLog(@"%@", json[@"artists"][0][@"intFormedYear"]);
-		NSLog(@"%@", json[@"artists"][0][@"strBiographyEN"]);
+		NSLog(@"%@", jsonDict[@"artists"][0][@"strArtist"]);
+		NSLog(@"%li", (long)[jsonDict[@"artists"][0][@"intFormedYear"] integerValue]);
+		NSLog(@"%@", jsonDict[@"artists"][0][@"strBiographyEN"]);
 		
 	}];
 	[task resume];

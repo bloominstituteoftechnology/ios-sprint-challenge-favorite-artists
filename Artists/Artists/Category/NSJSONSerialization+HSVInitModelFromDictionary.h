@@ -12,8 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSJSONSerialization (HSVInitModelFromDictionary)
 
+- (void)initWithDictionary:(NSDictionary *)otherDictionary;
 
-
+- (NSDictionary *)toDictionary;
 
 @end
 

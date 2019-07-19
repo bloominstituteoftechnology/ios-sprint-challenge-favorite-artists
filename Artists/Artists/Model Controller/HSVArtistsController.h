@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)fetchArtistWithName:(NSString *)name completion:(void (^)(HSVArtist *,NSError *))completion;
 
+- (void)saveToFileDirectory;
+
+
 
 @end
 

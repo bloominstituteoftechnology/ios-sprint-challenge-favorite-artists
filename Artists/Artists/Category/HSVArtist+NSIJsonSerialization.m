@@ -26,10 +26,11 @@
 }
 
 - (NSDictionary *)toDictionary {
-	
-	
-	
-	return nil;
+	NSString *yf = [[NSString alloc] initWithFormat:@"%i", self.yearFormed];
+	return @{@"name": self.name,
+			 @"biography": self.biography,
+			 @"yearFormed": yf
+			 };
 }
 
 @end

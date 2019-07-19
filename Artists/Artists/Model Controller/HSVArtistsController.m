@@ -73,5 +73,10 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 	[task resume];
 }
 
+- (void)saveToFileDirectory {
+	NSURL *documentDirectory = [NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+	NSURL *songsUrl = [documentDirectory URLByAppendingPathComponent:@"artists.json"];
+}
+
 
 @end

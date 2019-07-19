@@ -45,7 +45,7 @@
     
     HHArtist *artist = _artistArray[indexPath.row];
     cell.textLabel.text = artist.name;
-    NSString *yearFormed = [NSString stringWithFormat:@"%d", artist.yearFormed];
+    NSString *yearFormed = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
     cell.detailTextLabel.text = yearFormed;
     
     return cell;
@@ -54,7 +54,7 @@
 #pragma mark - Navigation
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.artistForSegue = [_artistArray objectAtIndex:indexPath.row];
+    self.artistForSegue = [self.artistArray objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"toDetailVC" sender:self.artistForSegue];
 }
 

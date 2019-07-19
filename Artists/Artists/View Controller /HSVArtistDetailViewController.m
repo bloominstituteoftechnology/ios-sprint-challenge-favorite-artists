@@ -46,5 +46,12 @@
 	}
 }
 
+- (IBAction)saveButtonPressed:(id)sender {
+	NSLog(@"save button pressed");
+	if (self.artist) {
+		[self.artistController addArtist:self.artist];
+		[self.navigationController popViewControllerAnimated:true];
+	}
+}
 
 @end

@@ -67,8 +67,6 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 		
 		HSVArtist *artist = [[HSVArtist alloc] initWithDictionary:jsonDict[@"artists"][0]];
 		completion(artist, nil);
-		[self addArtist:artist];
-
 	}];
 	
 	[task resume];

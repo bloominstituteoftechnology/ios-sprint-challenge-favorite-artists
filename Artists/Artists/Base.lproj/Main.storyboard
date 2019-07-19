@@ -71,13 +71,58 @@
                     <view key="view" contentMode="scaleToFill" id="ciM-hv-qOr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5iA-20-axO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="75"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ly0-Gs-h8k">
+                                <rect key="frame" x="8" y="171" width="398" height="717"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weezer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uc-8Q-tPW">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weezer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1Q-Oz-3EC">
+                                        <rect key="frame" x="0.0" y="40.5" width="398" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1nD-Gk-38W">
+                                        <rect key="frame" x="0.0" y="81" width="398" height="636"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5iA-20-axO" firstAttribute="trailing" secondItem="pRb-YZ-9BW" secondAttribute="trailing" id="2vt-nl-EDK"/>
+                            <constraint firstItem="pRb-YZ-9BW" firstAttribute="trailing" secondItem="ly0-Gs-h8k" secondAttribute="trailing" constant="8" id="4YB-a4-8DS"/>
+                            <constraint firstAttribute="bottom" secondItem="ly0-Gs-h8k" secondAttribute="bottom" constant="8" id="7gi-Am-7wv"/>
+                            <constraint firstItem="5iA-20-axO" firstAttribute="leading" secondItem="pRb-YZ-9BW" secondAttribute="leading" id="9IR-3V-fCH"/>
+                            <constraint firstItem="ly0-Gs-h8k" firstAttribute="top" secondItem="5iA-20-axO" secondAttribute="bottom" constant="8" id="BK4-er-J5g"/>
+                            <constraint firstItem="ly0-Gs-h8k" firstAttribute="leading" secondItem="pRb-YZ-9BW" secondAttribute="leading" constant="8" id="QYy-ot-X4A"/>
+                            <constraint firstItem="5iA-20-axO" firstAttribute="top" secondItem="pRb-YZ-9BW" secondAttribute="top" id="qAG-5y-AMT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pRb-YZ-9BW"/>
                     </view>
+                    <connections>
+                        <outlet property="formedDateLabel" destination="F1Q-Oz-3EC" id="l6z-9H-TgT"/>
+                        <outlet property="nameLabel" destination="0uc-8Q-tPW" id="BLb-NF-ei0"/>
+                        <outlet property="serchBar" destination="5iA-20-axO" id="cIM-LP-tCf"/>
+                        <outlet property="textView" destination="1nD-Gk-38W" id="cqX-me-VIE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnF-5c-2z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1625" y="159"/>
+            <point key="canvasLocation" x="1624.6376811594205" y="158.70535714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tfD-PY-Xja">

@@ -10,17 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class TXCArtistController;
+
 @interface TXCArtistDetailViewController : UIViewController
 
 
-
-
-
-
-
-
-
-
+@property TXCArtistController *artistController;
 
 
 

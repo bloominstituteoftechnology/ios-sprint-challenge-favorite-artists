@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TXCArtistController : NSObject
 
+typedef void (^TXCArtistFetcherCompletionBlock)(NSError *);
+
+@property NSMutableArray *artists;
+
+- (void)fetchArtistWithName:(NSString *)name
+            completionBlock:(TXCArtistFetcherCompletionBlock)completionBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

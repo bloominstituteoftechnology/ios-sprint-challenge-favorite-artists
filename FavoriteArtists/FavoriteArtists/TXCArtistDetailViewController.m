@@ -20,12 +20,18 @@
 
 @implementation TXCArtistDetailViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
  
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
+    
+    //Add artist object to artists array.
+    //pop back to TVC.
+    
 }
 
 

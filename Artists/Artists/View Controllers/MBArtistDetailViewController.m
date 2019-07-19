@@ -19,12 +19,15 @@
     [super viewDidLoad];
     self.searchBar.delegate = self;
     if (_artist) {
-        //self.searchBar.isHidden;
+        self.searchBar.isHidden;
         self.title = _artist.artist;
-    } else {
-        _artistLabel.text = @"";
-        _yearLabel.text = @"";
-        _bioTextView.text = @"";
+        self.artistLabel.text = _artist.artist;
+        self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)_artist.year];
+        self.bioTextView.text = _artist.bio;
+    } else if (!_artist){
+        self.artistLabel.text = @"";
+        self.yearLabel.text = @"";
+        self.bioTextView.text = @"";
     }
 }
 

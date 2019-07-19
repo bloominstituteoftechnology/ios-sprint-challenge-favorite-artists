@@ -58,7 +58,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"SeeArtist"])
+    if ([[segue identifier] isEqualToString:@"ShowArtist"])
     {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         MBArtist *artist = self.artistController.artists[indexPath.row];

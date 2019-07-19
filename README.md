@@ -26,6 +26,10 @@ You will be using is [The Audio DB Website](https://theaudiodb.com) to get infor
 
 **NOTE:** In the place of an actual API key, use the number `1` instead. This is the API's demo key.
 
+A sample request for Macklemore looks like this (a request may take a few seconds to complete):
+
+[https://theaudiodb.com/api/v1/json/1/searchalbum.php?s=Macklemore](https://theaudiodb.com/api/v1/json/1/searchalbum.php?s=Macklemore)
+
 ## Requirements
 
 The requirements for this project are as follows:

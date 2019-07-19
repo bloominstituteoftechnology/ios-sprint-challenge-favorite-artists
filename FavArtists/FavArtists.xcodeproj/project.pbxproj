@@ -14,6 +14,8 @@
 		57F0265F22E2440000AE6879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F0265D22E2440000AE6879 /* LaunchScreen.storyboard */; };
 		57F0266222E2440000AE6879 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F0266122E2440000AE6879 /* main.m */; };
 		57F0266E22E2450700AE6879 /* VDRArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F0266D22E2450700AE6879 /* VDRArtist.m */; };
+		57F0267122E245A400AE6879 /* VDRArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F0267022E245A400AE6879 /* VDRArtistController.m */; };
+		57F0267422E2464C00AE6879 /* VDRArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F0267322E2464C00AE6879 /* VDRArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		57F0266122E2440000AE6879 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57F0266C22E244F500AE6879 /* VDRArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VDRArtist.h; sourceTree = "<group>"; };
 		57F0266D22E2450700AE6879 /* VDRArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VDRArtist.m; sourceTree = "<group>"; };
+		57F0266F22E2459000AE6879 /* VDRArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VDRArtistController.h; sourceTree = "<group>"; };
+		57F0267022E245A400AE6879 /* VDRArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VDRArtistController.m; sourceTree = "<group>"; };
+		57F0267222E2463C00AE6879 /* VDRArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VDRArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		57F0267322E2464C00AE6879 /* VDRArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "VDRArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,10 @@
 				57F0266122E2440000AE6879 /* main.m */,
 				57F0266C22E244F500AE6879 /* VDRArtist.h */,
 				57F0266D22E2450700AE6879 /* VDRArtist.m */,
+				57F0266F22E2459000AE6879 /* VDRArtistController.h */,
+				57F0267022E245A400AE6879 /* VDRArtistController.m */,
+				57F0267222E2463C00AE6879 /* VDRArtist+NSJSONSerialization.h */,
+				57F0267322E2464C00AE6879 /* VDRArtist+NSJSONSerialization.m */,
 			);
 			path = FavArtists;
 			sourceTree = "<group>";
@@ -149,6 +159,8 @@
 				57F0265722E243F900AE6879 /* ViewController.m in Sources */,
 				57F0266E22E2450700AE6879 /* VDRArtist.m in Sources */,
 				57F0266222E2440000AE6879 /* main.m in Sources */,
+				57F0267422E2464C00AE6879 /* VDRArtist+NSJSONSerialization.m in Sources */,
+				57F0267122E245A400AE6879 /* VDRArtistController.m in Sources */,
 				57F0265422E243F900AE6879 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

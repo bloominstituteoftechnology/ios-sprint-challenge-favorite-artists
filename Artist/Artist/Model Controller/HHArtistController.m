@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  HHArtistController.m
 //  Artist
 //
 //  Created by Hayden Hastings on 7/19/19.
 //  Copyright © 2019 Hayden Hastings. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HHArtistController.h"
 
-@interface ViewController : UIViewController
-
+@implementation HHArtistController
 
 @end
-

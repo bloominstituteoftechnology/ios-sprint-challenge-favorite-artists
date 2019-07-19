@@ -36,9 +36,10 @@
             return;
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.artistLabel.text = self.artist.artist;
-                self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)self.artist.year];
-                self.bioTextView.text = self.artist.bio;
+                self.searchedArtist = artist;
+                self.artistLabel.text = self.searchedArtist.artist;
+                self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)self.searchedArtist.year];
+                self.bioTextView.text = self.searchedArtist.bio;
             });
         }
     }];
@@ -46,8 +47,8 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
-    if (_artist) {
-       [_artistController createArtist:_artist];
+    if (_searchedArtist) {
+       [_artistController createArtist:_searchedArtist];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }

@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property MBArtist *artist;
 @property MBArtistController *artistController;
+@property MBArtist *searchedArtist;
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;

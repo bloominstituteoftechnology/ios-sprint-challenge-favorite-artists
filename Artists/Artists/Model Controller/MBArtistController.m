@@ -55,6 +55,35 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
     [task resume];
 }
 
+- (MBArtist *)fetchSavedArtist:(MBArtist *)artist {
+    NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+    NSURL *url = [[directory URLByAppendingPathComponent:artist.artist] URLByAppendingPathExtension:@"json"];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    MBArtist *savedArtist = [[MBArtist alloc] initWithDictionary:dictionary];
+    return savedArtist;
+}
+
+- (NSMutableArray *)fetchedArtists {
+    NSArray *searchPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *directory = [searchPath objectAtIndex:0];
+    NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:directory error:nil];
+    for (NSString *artist in filePaths) {
+        NSString *filePath = [[NSString alloc]initWithFormat:@"Documents/%@", artist];
+        NSString *artistPath = [NSHomeDirectory()stringByAppendingPathComponent:filePath];
+        NSURL *artistURL = [NSURL fileURLWithPath:artistPath];
+        NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
+        if (artistData != nil) {
+            NSDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
+            MBArtist *artist = [[MBArtist alloc] initWithDictionary:artistDictionary];
+            [self.artists addObject:artist];
+        } else {
+            NSLog(@"Artist Data returned nil");
+        }
+    }
+    return self.artists;
+}
+
 - (void)deleteArtist:(MBArtist *)artist
 {
     [self.artists removeObject:artist];

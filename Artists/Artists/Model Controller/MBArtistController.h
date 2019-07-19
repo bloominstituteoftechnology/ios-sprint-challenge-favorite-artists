@@ -17,11 +17,14 @@ typedef void (^MBCompletionBlock)(MBArtist *, NSError *);
 @interface MBArtistController : NSObject
 
 @property NSMutableArray *artists;
+@property NSMutableArray *fetchedArtists;
 
 - (void)createArtist:(MBArtist *)artist;
 
 - (void)getArtist:(NSString *)name
   completionBlock:(MBCompletionBlock)completionBlock;
+
+- (MBArtist *)fetchSavedArtist:(MBArtist *)artist;
 
 - (void)deleteArtist:(MBArtist *)artist;
 

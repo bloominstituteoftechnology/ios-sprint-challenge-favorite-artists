@@ -15,6 +15,9 @@
 		EFFC982E22E2146B001C21DE /* HHArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFC982D22E2146B001C21DE /* HHArtist.m */; };
 		EFFC983122E2147F001C21DE /* HHArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFC983022E2147F001C21DE /* HHArtistController.m */; };
 		EFFC983922E2157C001C21DE /* HHArtist+HHJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFC983822E2157C001C21DE /* HHArtist+HHJSONSerialization.m */; };
+		EFFC983C22E22686001C21DE /* HHArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFC983B22E22686001C21DE /* HHArtistTableViewController.m */; };
+		EFFC983F22E226AB001C21DE /* HHArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFC983E22E226AB001C21DE /* HHArtistDetailViewController.m */; };
+		EFFC984222E226BA001C21DE /* HHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFC984122E226BA001C21DE /* HHSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,12 @@
 		EFFC983022E2147F001C21DE /* HHArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHArtistController.m; sourceTree = "<group>"; };
 		EFFC983722E2157C001C21DE /* HHArtist+HHJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HHArtist+HHJSONSerialization.h"; sourceTree = "<group>"; };
 		EFFC983822E2157C001C21DE /* HHArtist+HHJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HHArtist+HHJSONSerialization.m"; sourceTree = "<group>"; };
+		EFFC983A22E22686001C21DE /* HHArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHArtistTableViewController.h; sourceTree = "<group>"; };
+		EFFC983B22E22686001C21DE /* HHArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHArtistTableViewController.m; sourceTree = "<group>"; };
+		EFFC983D22E226AB001C21DE /* HHArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHArtistDetailViewController.h; sourceTree = "<group>"; };
+		EFFC983E22E226AB001C21DE /* HHArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHArtistDetailViewController.m; sourceTree = "<group>"; };
+		EFFC984022E226BA001C21DE /* HHSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHSearchViewController.h; sourceTree = "<group>"; };
+		EFFC984122E226BA001C21DE /* HHSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +107,12 @@
 		EFFC982922E21427001C21DE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFFC983A22E22686001C21DE /* HHArtistTableViewController.h */,
+				EFFC983B22E22686001C21DE /* HHArtistTableViewController.m */,
+				EFFC983D22E226AB001C21DE /* HHArtistDetailViewController.h */,
+				EFFC983E22E226AB001C21DE /* HHArtistDetailViewController.m */,
+				EFFC984022E226BA001C21DE /* HHSearchViewController.h */,
+				EFFC984122E226BA001C21DE /* HHSearchViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -200,8 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFFC984222E226BA001C21DE /* HHSearchViewController.m in Sources */,
 				EFFC982122E21336001C21DE /* main.m in Sources */,
 				EFFC983922E2157C001C21DE /* HHArtist+HHJSONSerialization.m in Sources */,
+				EFFC983F22E226AB001C21DE /* HHArtistDetailViewController.m in Sources */,
+				EFFC983C22E22686001C21DE /* HHArtistTableViewController.m in Sources */,
 				EFFC982E22E2146B001C21DE /* HHArtist.m in Sources */,
 				EFFC983122E2147F001C21DE /* HHArtistController.m in Sources */,
 				EFFC981322E21335001C21DE /* AppDelegate.m in Sources */,

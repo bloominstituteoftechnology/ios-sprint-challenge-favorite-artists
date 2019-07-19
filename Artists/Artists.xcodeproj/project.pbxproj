@@ -8,24 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		3D34968122E213B800953A4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D34968022E213B800953A4D /* AppDelegate.m */; };
-		3D34968422E213B800953A4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D34968322E213B800953A4D /* ViewController.m */; };
 		3D34968722E213B800953A4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D34968522E213B800953A4D /* Main.storyboard */; };
 		3D34968922E213BA00953A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D34968822E213BA00953A4D /* Assets.xcassets */; };
 		3D34968C22E213BA00953A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D34968A22E213BA00953A4D /* LaunchScreen.storyboard */; };
 		3D34968F22E213BA00953A4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D34968E22E213BA00953A4D /* main.m */; };
+		3DA6A99B22E215280010861B /* MBArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6A99A22E215280010861B /* MBArtistsTableViewController.m */; };
+		3DA6A99F22E2154C0010861B /* MBArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6A99E22E2154C0010861B /* MBArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D34967C22E213B800953A4D /* Artists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D34967F22E213B800953A4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D34968022E213B800953A4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3D34968222E213B800953A4D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3D34968322E213B800953A4D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D34968622E213B800953A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D34968822E213BA00953A4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D34968B22E213BA00953A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D34968D22E213BA00953A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D34968E22E213BA00953A4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DA6A99922E215280010861B /* MBArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBArtistsTableViewController.h; sourceTree = "<group>"; };
+		3DA6A99A22E215280010861B /* MBArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBArtistsTableViewController.m; sourceTree = "<group>"; };
+		3DA6A99D22E2154C0010861B /* MBArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBArtistDetailViewController.h; sourceTree = "<group>"; };
+		3DA6A99E22E2154C0010861B /* MBArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +61,43 @@
 		3D34967E22E213B800953A4D /* Artists */ = {
 			isa = PBXGroup;
 			children = (
-				3D34967F22E213B800953A4D /* AppDelegate.h */,
-				3D34968022E213B800953A4D /* AppDelegate.m */,
-				3D34968222E213B800953A4D /* ViewController.h */,
-				3D34968322E213B800953A4D /* ViewController.m */,
-				3D34968522E213B800953A4D /* Main.storyboard */,
-				3D34968822E213BA00953A4D /* Assets.xcassets */,
-				3D34968A22E213BA00953A4D /* LaunchScreen.storyboard */,
-				3D34968D22E213BA00953A4D /* Info.plist */,
-				3D34968E22E213BA00953A4D /* main.m */,
+				3DA6A99C22E215320010861B /* View Controllers */,
+				3D34969622E2140200953A4D /* Storyboards */,
+				3D34969522E213F100953A4D /* Resources */,
 			);
 			path = Artists;
+			sourceTree = "<group>";
+		};
+		3D34969522E213F100953A4D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D34967F22E213B800953A4D /* AppDelegate.h */,
+				3D34968022E213B800953A4D /* AppDelegate.m */,
+				3D34968D22E213BA00953A4D /* Info.plist */,
+				3D34968E22E213BA00953A4D /* main.m */,
+				3D34968822E213BA00953A4D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D34969622E2140200953A4D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3D34968522E213B800953A4D /* Main.storyboard */,
+				3D34968A22E213BA00953A4D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3DA6A99C22E215320010861B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3DA6A99922E215280010861B /* MBArtistsTableViewController.h */,
+				3DA6A99A22E215280010861B /* MBArtistsTableViewController.m */,
+				3DA6A99D22E2154C0010861B /* MBArtistDetailViewController.h */,
+				3DA6A99E22E2154C0010861B /* MBArtistDetailViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +126,7 @@
 		3D34967422E213B800953A4D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MB;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Mitchell Budge";
 				TargetAttributes = {
@@ -141,8 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D34968422E213B800953A4D /* ViewController.m in Sources */,
 				3D34968F22E213BA00953A4D /* main.m in Sources */,
+				3DA6A99F22E2154C0010861B /* MBArtistDetailViewController.m in Sources */,
+				3DA6A99B22E215280010861B /* MBArtistsTableViewController.m in Sources */,
 				3D34968122E213B800953A4D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,12 +318,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3F959XXFV;
-				INFOPLIST_FILE = Artists/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Artists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellbudge.Artists;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellbudge.Pointers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,12 +335,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3F959XXFV;
-				INFOPLIST_FILE = Artists/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Artists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellbudge.Artists;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellbudge.Pointers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

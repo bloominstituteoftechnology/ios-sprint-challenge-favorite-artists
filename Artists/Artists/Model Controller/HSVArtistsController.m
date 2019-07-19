@@ -35,7 +35,7 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 
 - (void) addArtist:(HSVArtist *)aritst {
 	[self.internalArtists addObject:aritst];
-	//save to file
+	[self saveToFileDirectory];
 }
 
 - (void)fetchArtistWithName:(NSString *)name completion:(void (^)(HSVArtist *,NSError *))completion{
@@ -74,9 +74,21 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 }
 
 - (void)saveToFileDirectory {
-	NSURL *documentDirectory = [NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
-	NSURL *songsUrl = [documentDirectory URLByAppendingPathComponent:@"artists.json"];
+	NSURL *documentDirectory = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+	NSURL *artistUrl = [documentDirectory URLByAppendingPathComponent:@"artists.json"];
+	NSMutableArray *artistDictionary = [[NSMutableArray alloc] init];
+
+	for (HSVArtist *artist in self.internalArtists) {
+		NSDictionary *dict = [artist toDictionary];
+		[artistDictionary addObject:dict];
+	}
+	
+	NSData *artisData = [NSJSONSerialization dataWithJSONObject:artistDictionary options:0 error:nil];
+	[artisData writeToURL:artistUrl atomically:YES];
 }
+
+
+
 
 
 @end

@@ -15,6 +15,8 @@
 		EC92039922E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92039822E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m */; };
 		EC92039B22E21F40001E7670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92039A22E21F40001E7670 /* Main.storyboard */; };
 		EC92039F22E220CE001E7670 /* KRCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92039E22E220CE001E7670 /* KRCDetailViewController.m */; };
+		EC9203A322E2222E001E7670 /* KRCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9203A222E2222E001E7670 /* KRCArtistController.m */; };
+		EC9203A622E2306D001E7670 /* KRCArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9203A522E2306D001E7670 /* KRCArtistTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		EC92039A22E21F40001E7670 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EC92039D22E220CE001E7670 /* KRCDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KRCDetailViewController.h; sourceTree = "<group>"; };
 		EC92039E22E220CE001E7670 /* KRCDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KRCDetailViewController.m; sourceTree = "<group>"; };
+		EC9203A122E2222E001E7670 /* KRCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KRCArtistController.h; sourceTree = "<group>"; };
+		EC9203A222E2222E001E7670 /* KRCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KRCArtistController.m; sourceTree = "<group>"; };
+		EC9203A422E2306D001E7670 /* KRCArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KRCArtistTableViewController.h; sourceTree = "<group>"; };
+		EC9203A522E2306D001E7670 /* KRCArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KRCArtistTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +70,10 @@
 		EC92037922E21632001E7670 /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
-				EC92039C22E2204D001E7670 /* View Controllers */,
 				EC92039622E21952001E7670 /* Utilities */,
+				EC9203A022E221F5001E7670 /* Model Controller */,
 				EC92039222E216CE001E7670 /* Model */,
+				EC92039C22E2204D001E7670 /* View Controllers */,
 				EC92039122E21670001E7670 /* Storyboards */,
 				EC92039022E21663001E7670 /* App */,
 				EC92038322E21633001E7670 /* Assets.xcassets */,
@@ -115,10 +122,21 @@
 		EC92039C22E2204D001E7670 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EC9203A422E2306D001E7670 /* KRCArtistTableViewController.h */,
+				EC9203A522E2306D001E7670 /* KRCArtistTableViewController.m */,
 				EC92039D22E220CE001E7670 /* KRCDetailViewController.h */,
 				EC92039E22E220CE001E7670 /* KRCDetailViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EC9203A022E221F5001E7670 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC9203A122E2222E001E7670 /* KRCArtistController.h */,
+				EC9203A222E2222E001E7670 /* KRCArtistController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +214,9 @@
 				EC92039F22E220CE001E7670 /* KRCDetailViewController.m in Sources */,
 				EC92039522E21721001E7670 /* KRCArtist.m in Sources */,
 				EC92039922E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m in Sources */,
+				EC9203A622E2306D001E7670 /* KRCArtistTableViewController.m in Sources */,
 				EC92037C22E21632001E7670 /* AppDelegate.m in Sources */,
+				EC9203A322E2222E001E7670 /* KRCArtistController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

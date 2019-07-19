@@ -13,13 +13,13 @@
         <!--Favorite Artists-->
         <scene sceneID="Yec-xl-dII">
             <objects>
-                <tableViewController id="l7f-ob-4Qv" customClass="KRCPokemonTableViewController" sceneMemberID="viewController">
+                <tableViewController id="l7f-ob-4Qv" customClass="KRCArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F9t-TX-CR0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokemonCell" textLabel="F2u-d1-Ngv" style="IBUITableViewCellStyleDefault" id="iOf-Jf-11S">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="F2u-d1-Ngv" detailTextLabel="i7m-4i-95P" style="IBUITableViewCellStyleSubtitle" id="iOf-Jf-11S">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iOf-Jf-11S" id="SY7-Qq-sJT">
@@ -27,16 +27,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F2u-d1-Ngv">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i7m-4i-95P">
+                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="D2g-Q5-jD8" kind="show" identifier="ShowDetailPokemon" id="RAC-zo-OGb"/>
+                                    <segue destination="D2g-Q5-jD8" kind="show" identifier="ShowDetailArtist" id="RAC-zo-OGb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +55,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="qVq-Za-C2n">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9aR-Wf-Qzu">
                             <connections>
-                                <segue destination="D2g-Q5-jD8" kind="show" identifier="ShowAddPokemon" id="Dbg-zs-vmQ"/>
+                                <segue destination="D2g-Q5-jD8" kind="show" identifier="ShowAddArtist" id="Dbg-zs-vmQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,10 +80,10 @@
                                 <rect key="frame" x="16" y="212" width="382" height="627"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-PK-HKi">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1j-l9-qQM">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1j-l9-qQM">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -84,10 +91,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-BB-C27">
-                                        <rect key="frame" x="0.0" y="28.5" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="58" width="382" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCa-1l-vjt">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCa-1l-vjt">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -95,7 +102,7 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hUL-zJ-YS2">
-                                        <rect key="frame" x="0.0" y="57" width="382" height="570"/>
+                                        <rect key="frame" x="0.0" y="116" width="382" height="511"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -125,7 +132,7 @@
                     <connections>
                         <outlet property="artistLabel" destination="w1j-l9-qQM" id="iFk-V4-9fE"/>
                         <outlet property="bioTextView" destination="hUL-zJ-YS2" id="ejg-Pp-sIl"/>
-                        <outlet property="searchBar" destination="hm4-Dl-4Pv" id="kE1-Cd-s4Q"/>
+                        <outlet property="searchBar" destination="hm4-Dl-4Pv" id="vet-GB-ZxW"/>
                         <outlet property="yearLabel" destination="NCa-1l-vjt" id="hjV-qk-kHH"/>
                     </connections>
                 </viewController>
@@ -153,6 +160,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RAC-zo-OGb"/>
+        <segue reference="Dbg-zs-vmQ"/>
     </inferredMetricsTieBreakers>
 </document>

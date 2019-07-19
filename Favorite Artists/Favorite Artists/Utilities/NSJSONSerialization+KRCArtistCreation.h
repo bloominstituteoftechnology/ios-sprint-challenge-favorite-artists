@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSJSONSerialization (KRCArtistCreation)
 
-- (KRCArtist *)ArtistFromJson:(NSDictionary *)json;
++ (KRCArtist *)ArtistFromJson:(NSDictionary *)jsonictionary;
 
-- (NSDictionary *)JsonFromArtist:(KRCArtist *)artist;
++ (NSDictionary *)JsonFromArtists:(NSArray *)artists;
 
 @end
 

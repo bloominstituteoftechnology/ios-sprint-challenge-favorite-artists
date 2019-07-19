@@ -9,30 +9,38 @@
 #import "NSJSONSerialization+KRCArtistCreation.h"
 #import "KRCArtist.h"
 
+
 @implementation NSJSONSerialization (KRCArtistCreation)
 
-- (KRCArtist *)ArtistFromJson:(NSDictionary *)json {
++ (KRCArtist *)ArtistFromJson:(NSDictionary *)jsonictionary {
     
-    NSArray *artistArray = [json objectForKey:@"artist"];
+    
+    NSArray *artistArray = [jsonictionary objectForKey:@"artists"];
+    
     NSDictionary *artistInfo = [artistArray objectAtIndex:0];
-    
+
     NSString *name = [NSString stringWithFormat:@"%@", [artistInfo objectForKey:@"strArtist"]];
     NSString *bio = [NSString stringWithFormat:@"%@", [artistInfo objectForKey:@"strBiographyEN"]];
     NSInteger yearFormed = [[artistInfo objectForKey:@"intFormedYear"] integerValue];
-    
+
     return [[KRCArtist alloc] initWithName:name year:yearFormed bio:bio];
 }
 
-- (NSDictionary *)JsonFromArtist:(KRCArtist *)artist {
- 
-    NSString *name = [artist artistName];
-    NSString *bio = [artist bio];
-    NSInteger yearFormed = [artist yearFormed];
++ (NSDictionary *)JsonFromArtists:(NSArray *)artists {
     
-    NSNumber *year = [NSNumber numberWithInteger:yearFormed];
+    NSMutableArray *artistArray = [[NSMutableArray alloc] init];
     
-    NSDictionary *artistInfo = @{@"trArtist": name, @"strBiographyEN": bio, @"strBiographyEN": year};
-    NSArray *artistArray = @[artistInfo];
+    for(int i = 0; [artists count]; i++) {
+        KRCArtist *artist = [artists objectAtIndex:i];
+        
+        NSString *name = [artist artistName];
+        NSString *bio = [artist bio];
+        NSInteger yearFormed = [artist yearFormed];
+        NSNumber *year = [NSNumber numberWithInteger:yearFormed];
+        NSDictionary *artistInfo = @{@"trArtist": name, @"strBiographyEN": bio, @"strBiographyEN": year};
+        [artistArray addObject:artistInfo];
+    }
+    
     NSDictionary *jsonDictionary = @{@"artist": artistArray};
     
     return jsonDictionary;

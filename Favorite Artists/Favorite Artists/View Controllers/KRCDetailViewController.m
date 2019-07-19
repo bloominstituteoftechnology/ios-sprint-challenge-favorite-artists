@@ -7,21 +7,78 @@
 //
 
 #import "KRCDetailViewController.h"
+#import "KRCArtistController.h"
+#import "KRCArtist.h"
 
 @interface KRCDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 
 @end
 
 @implementation KRCDetailViewController
 
+- (void)setArtistController:(KRCArtistController *)artistController {
+    _artistController = artistController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [[self searchBar] setDelegate:self];
+    
+    if ([[self artist] artistName]) {
+        [self setTitle:[[self artist] artistName]];
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    NSLog(@"Starting search for: %@", [searchBar text]);
+    
+    [[self artistController] fetchArtistNamed:[searchBar text] completion:^(KRCArtist * _Nullable artist, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+            return;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [[self artistLabel] setText:[artist artistName]];
+            
+            NSString *year = [NSString stringWithFormat:@"%lu", [artist yearFormed]];
+            [[self yearLabel] setText:year];
+            
+            [[self bioTextView] setText:[artist bio]];
+            
+            [self setArtist:artist];
+        });
+        
+    }];
+    
+    [searchBar setText:@""];
+}
+
+- (IBAction)saveButtonTapped:(id)sender {
+    
+    if (![self artist]) {
+        return;
+    }
+    
+    
+    
+    [[self artistController] addArtist:[self artist]];
+    
+    NSLog(@"%lu", [[[self artistController] artistCollection] count]);
+//
+//    [[self artistController] saveToFIle];
+//
+//    [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 @end

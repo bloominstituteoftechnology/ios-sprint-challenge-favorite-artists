@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HSVArtist : NSObject
 
 
-@property (nonatomic, copy) NSString 	*name;
-@property (nonatomic, copy) NSString 	*biography;
-@property (nonatomic) 		int 		yearFormed;
+@property (nonatomic, readonly, copy) NSString 	*name;
+@property (nonatomic, readonly, copy) NSString 	*biography;
+@property (nonatomic, readonly) 		int 		yearFormed;
 
 
 - (instancetype) initWithName:(NSString *)name biography:(NSString *)biography yearFormed:(int)yearFormed;

@@ -13,16 +13,11 @@
 
 - (instancetype)initWithName:(NSString *)name biography:(NSString *)biography yearFormed:(int)yearFormed {
 	if (self = [super init]) {
-		_name = name;
-		_biography = biography;
+		_name = [name copy];
+		_biography = [biography copy];
 		_yearFormed = yearFormed;
 	}
 	return self;
 }
-
-
-
-
-
 
 @end

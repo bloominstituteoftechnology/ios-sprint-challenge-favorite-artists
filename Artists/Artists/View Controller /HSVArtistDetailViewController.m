@@ -29,7 +29,11 @@
 	
 	NSLog(@"Search bar button clicked: %@", text);
 	
-	
+	[self.artistController fetchArtistWithName:text completion:^(NSError * _Nonnull error) {
+		if (error)
+			NSLog(@"e");
+			
+	}];
 }
 
 

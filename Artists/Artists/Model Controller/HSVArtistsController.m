@@ -8,6 +8,7 @@
 
 #import "HSVArtistsController.h"
 #import "../Models/HSVArtist.h"
+#import "../Category/HSVArtist+NSIJsonSerialization.h"
 
 @interface HSVArtistsController()
 
@@ -32,11 +33,16 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 	return self.internalArtists;
 }
 
-- (void)fetchArtistWithName:(NSString *)name completion:(void (^)(NSError *))completion{
+- (void) createArtistWithName:(NSString *)name biography:(NSString *)bio yearFormed:(int)formedYear {
+	HSVArtist *artist = [[HSVArtist alloc] initWithName:name biography:bio yearFormed:formedYear];
 	
+	[self.internalArtists addObject:artist];
+	//save to file
+}
+
+- (void)fetchArtistWithName:(NSString *)name completion:(void (^)(NSError *))completion{
 	NSString *base = [[NSString alloc] initWithFormat:@"%@%@", baseUrl, name];
 	NSURL *url = [[NSURL alloc] initWithString:base];
-	NSLog(@"%@", url);
 	
 	NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 		if (error) {
@@ -53,23 +59,19 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 			completion(jsonError);
 			return;
 		}
+		HSVArtist *artist = [[HSVArtist alloc] initWithDictionary:jsonDict];
 		
-		
-		
+	
 		NSString *name =  jsonDict[@"artists"][0][@"strArtist"];
 		int formedYear = (int)[jsonDict[@"artists"][0][@"intFormedYear"] integerValue];
 		NSString *bio =  jsonDict[@"artists"][0][@"strBiographyEN"];
 		
-		HSVArtist *artist = [[HSVArtist alloc] initWithName:name biography:bio yearFormed:formedYear];
-		[self.internalArtists addObject:artist];
-		
+		[self createArtistWithName:name biography:bio yearFormed:formedYear];
+		NSLog(@"%@", artist.name);
 	}];
-	
 	
 	[task resume];
 }
-
-
 
 
 @end

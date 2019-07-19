@@ -10,13 +10,16 @@
 
 @implementation SLRArtist
 
-// theaudiodb.com/api/v1/json/1/search.php?s=coldplay
-// name = strArtist
-// biography = strBiographyEN
-// yearFormed = intFormedYear
-// ----
-// image = strArtistThumb
-// logo = strArtistLogo
 
+- (instancetype)initWithArtistName: (NSString *)artistName biography: (NSString *)biography year: (int)year {
+    
+    if (self = [super init]) {
+        self.artistName = artistName;
+        self.biography = biography;
+        self.year = year;
+    }
+    
+    return self;
+}
 
 @end

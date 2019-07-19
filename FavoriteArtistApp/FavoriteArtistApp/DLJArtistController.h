@@ -7,18 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DLJArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class DLJArtist;
+typedef void (^DLJCompletionBlock)(DLJArtist *, NSError *);
+
+
 
 @interface DLJArtistController : NSObject
 
 -(void)fetchArtistsWithName:(NSString *)name completion:(void (^)(NSError *))completion;
 
--(void)createArtist:(NSString *)name bio:(NSString *)bio yearFound:(int)yearFounded;
+-(void)saveArtist:(DLJArtist *)artist;
 
-@property NSMutableArray *artistArray;
+
+
+@property(nonatomic, readonly) NSArray *artistArray;
 
 @end
 

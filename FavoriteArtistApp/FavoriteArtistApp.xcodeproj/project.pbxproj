@@ -83,9 +83,7 @@
 				9E189FC522E2217900EDBD30 /* ViewControllers */,
 				9E189FC922E2223400EDBD30 /* Model */,
 				9E189FD322E2344000EDBD30 /* Category */,
-				9E189FD122E22B0900EDBD30 /* DLJJSONSerialization.m */,
-				9E189FD422E2347800EDBD30 /* DLJArtistController.h */,
-				9E189FD522E2347800EDBD30 /* DLJArtistController.m */,
+				9E189FD722E2406A00EDBD30 /* Model Controller */,
 			);
 			path = FavoriteArtistApp;
 			sourceTree = "<group>";
@@ -115,9 +113,19 @@
 		9E189FD322E2344000EDBD30 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9E189FD122E22B0900EDBD30 /* DLJJSONSerialization.m */,
 				9E189FD022E22B0900EDBD30 /* DLJJSONSerialization.h */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		9E189FD722E2406A00EDBD30 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E189FD522E2347800EDBD30 /* DLJArtistController.m */,
+				9E189FD422E2347800EDBD30 /* DLJArtistController.h */,
+			);
+			name = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -12,11 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HSVArtist (NSIJsonSerialization)
 
-//from dictionary
-
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
-//to dict
 
 - (NSDictionary *)toDictionary;
 

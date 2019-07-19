@@ -39,7 +39,6 @@
 
 
 - (void)setupViews {
-	
 	if (self.artist) {
 		self.nameLabel.text = self.artist.name;
 		self.textView.text = self.artist.biography;

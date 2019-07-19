@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property HSVArtistsController *artistsController;
 
-
 @end
 
 NS_ASSUME_NONNULL_END

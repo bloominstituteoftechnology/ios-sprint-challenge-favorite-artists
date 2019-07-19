@@ -16,6 +16,9 @@
 		C4BE288122E214F900EBBF4D /* KTMArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BE288022E214F900EBBF4D /* KTMArtist.m */; };
 		C4BE288422E2155500EBBF4D /* KTMArtist+KTMNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BE288322E2155500EBBF4D /* KTMArtist+KTMNSJSONSerialization.m */; };
 		C4BE288822E215BE00EBBF4D /* KTMArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BE288722E215BE00EBBF4D /* KTMArtistController.m */; };
+		C4BE288C22E21BEC00EBBF4D /* KTMArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BE288B22E21BEC00EBBF4D /* KTMArtistTableViewController.m */; };
+		C4BE288F22E21EC800EBBF4D /* KTMArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BE288E22E21EC800EBBF4D /* KTMArtistDetailViewController.m */; };
+		C4BE289422E223B800EBBF4D /* KTMArtistSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BE289322E223B800EBBF4D /* KTMArtistSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,12 @@
 		C4BE288322E2155500EBBF4D /* KTMArtist+KTMNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "KTMArtist+KTMNSJSONSerialization.m"; sourceTree = "<group>"; };
 		C4BE288622E215BE00EBBF4D /* KTMArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTMArtistController.h; sourceTree = "<group>"; };
 		C4BE288722E215BE00EBBF4D /* KTMArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTMArtistController.m; sourceTree = "<group>"; };
+		C4BE288A22E21BEC00EBBF4D /* KTMArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTMArtistTableViewController.h; sourceTree = "<group>"; };
+		C4BE288B22E21BEC00EBBF4D /* KTMArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTMArtistTableViewController.m; sourceTree = "<group>"; };
+		C4BE288D22E21EC800EBBF4D /* KTMArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTMArtistDetailViewController.h; sourceTree = "<group>"; };
+		C4BE288E22E21EC800EBBF4D /* KTMArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTMArtistDetailViewController.m; sourceTree = "<group>"; };
+		C4BE289222E223B800EBBF4D /* KTMArtistSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTMArtistSearchViewController.h; sourceTree = "<group>"; };
+		C4BE289322E223B800EBBF4D /* KTMArtistSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTMArtistSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,11 +99,12 @@
 				C4BE285B22E214CA00EBBF4D /* AppDelegate.h */,
 				C4BE285C22E214CA00EBBF4D /* AppDelegate.m */,
 				C4BE286122E214CA00EBBF4D /* Main.storyboard */,
+				C4BE289122E2239600EBBF4D /* View Controllers */,
+				C4BE289022E2237E00EBBF4D /* TableVCs */,
 				C4BE288522E2155900EBBF4D /* Models */,
+				C4BE288922E21A9000EBBF4D /* Model Controllers */,
 				C4BE288222E2155500EBBF4D /* KTMArtist+KTMNSJSONSerialization.h */,
 				C4BE288322E2155500EBBF4D /* KTMArtist+KTMNSJSONSerialization.m */,
-				C4BE288622E215BE00EBBF4D /* KTMArtistController.h */,
-				C4BE288722E215BE00EBBF4D /* KTMArtistController.m */,
 				C4BE286422E214CB00EBBF4D /* Assets.xcassets */,
 				C4BE286622E214CB00EBBF4D /* LaunchScreen.storyboard */,
 				C4BE286922E214CB00EBBF4D /* Info.plist */,
@@ -119,6 +129,35 @@
 				C4BE288022E214F900EBBF4D /* KTMArtist.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C4BE288922E21A9000EBBF4D /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4BE288622E215BE00EBBF4D /* KTMArtistController.h */,
+				C4BE288722E215BE00EBBF4D /* KTMArtistController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		C4BE289022E2237E00EBBF4D /* TableVCs */ = {
+			isa = PBXGroup;
+			children = (
+				C4BE288A22E21BEC00EBBF4D /* KTMArtistTableViewController.h */,
+				C4BE288B22E21BEC00EBBF4D /* KTMArtistTableViewController.m */,
+			);
+			path = TableVCs;
+			sourceTree = "<group>";
+		};
+		C4BE289122E2239600EBBF4D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4BE288D22E21EC800EBBF4D /* KTMArtistDetailViewController.h */,
+				C4BE288E22E21EC800EBBF4D /* KTMArtistDetailViewController.m */,
+				C4BE289222E223B800EBBF4D /* KTMArtistSearchViewController.h */,
+				C4BE289322E223B800EBBF4D /* KTMArtistSearchViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4BE288422E2155500EBBF4D /* KTMArtist+KTMNSJSONSerialization.m in Sources */,
+				C4BE288F22E21EC800EBBF4D /* KTMArtistDetailViewController.m in Sources */,
+				C4BE289422E223B800EBBF4D /* KTMArtistSearchViewController.m in Sources */,
+				C4BE288C22E21BEC00EBBF4D /* KTMArtistTableViewController.m in Sources */,
 				C4BE288122E214F900EBBF4D /* KTMArtist.m in Sources */,
 				C4BE288822E215BE00EBBF4D /* KTMArtistController.m in Sources */,
 				C4BE286B22E214CB00EBBF4D /* main.m in Sources */,

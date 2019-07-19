@@ -22,16 +22,19 @@
 }
 
 
-- (NSDictionary *)artistDictionary {
+- (NSDictionary *)createArtistDictionary {
     
     NSMutableDictionary *artistDictionary = [NSMutableDictionary dictionary];
     [artistDictionary setObject:self.name forKey:@"strArtist"];
     [artistDictionary setObject:self.biography forKey:@"strBiographyEN"];
     
-    NSString *yearFormedSteing = @(self.yearFormed).stringValue;
-    [artistDictionary setObject:yearFormedSteing forKey:@"intFormedYear"];
+    NSString *yearFormedString = @(self.yearFormed).stringValue;
+    [artistDictionary setObject:yearFormedString forKey:@"intFormedYear"];
     
-    NSDictionary *artistDict = [NSDictionary dictionaryWithObjectsAndKeys:self.name, @"strArtist", self.biography, @"strBiographyEN", self.yearFormed, @"intFormedYear", nil];
+    //NSLog(@"name: %@, year: %d, bio: %@", self.name, self.yearFormed, self.biography);
+    
+    
+    NSDictionary *artistDict = [NSDictionary dictionaryWithObjectsAndKeys:self.name, @"strArtist", self.biography, @"strBiographyEN", yearFormedString, @"intFormedYear", nil];
     return artistDict;
     
 }

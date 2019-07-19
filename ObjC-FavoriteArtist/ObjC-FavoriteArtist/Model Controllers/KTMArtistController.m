@@ -10,7 +10,7 @@
 #import "KTMArtist.h"
 #import "KTMArtist+KTMNSJSONSerialization.h"
 
-static NSString *baseURL = @"theaudiodb.com/api/v1/json/1/search.php?s=";
+static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
 
 @interface KTMArtistController ()
 @property NSMutableArray *internalArtistsArray;
@@ -51,7 +51,7 @@ static NSString *baseURL = @"theaudiodb.com/api/v1/json/1/search.php?s=";
     NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:directory error:nil];
     
     for (NSString *artist in filePaths) {
-        NSString *filePath = [[NSString alloc]initWithFormat:@"Documents: %@", artist];
+        NSString *filePath = [[NSString alloc]initWithFormat:@"Documents/%@", artist];
         NSString *artistPath = [NSHomeDirectory()stringByAppendingPathComponent:filePath];
         
         NSURL *artistURL = [NSURL fileURLWithPath:artistPath];

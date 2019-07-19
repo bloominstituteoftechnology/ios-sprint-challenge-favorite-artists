@@ -15,7 +15,7 @@
     if (self) {
         self.artist = [dictionary objectForKey:@"strArtist"];
         self.bio = [dictionary objectForKey:@"strBiographyEN"];
-        self.year = [[dictionary objectForKey:@"intYear"] intValue];
+        self.year = [[dictionary objectForKey:@"intFormedYear"] intValue];
     }
     return self;
 }
@@ -24,8 +24,8 @@
     NSMutableDictionary *artistDictionary = [NSMutableDictionary dictionary];
     [artistDictionary setObject:self.artist forKey:@"strArtist"];
     [artistDictionary setObject:self.bio forKey:@"strBio"];
-    NSString *yearFormedSteing = @(self.year).stringValue;
-    [artistDictionary setObject:yearFormedSteing forKey:@"intYear"];
+    NSString *yearFormedString = @(self.year).stringValue;
+    [artistDictionary setObject:yearFormedString forKey:@"intFormedYear"];
     NSDictionary *convertedDictionary = [NSDictionary dictionaryWithObjectsAndKeys:self.artist, @"strArtist", self.bio, @"strBiographyEN", self.year, @"intFormedYear", nil];
     return convertedDictionary;
 }

@@ -46,7 +46,9 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
-    [_artistController createArtist:_artist];
+    if (_artist) {
+       [_artistController createArtist:_artist];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 @end

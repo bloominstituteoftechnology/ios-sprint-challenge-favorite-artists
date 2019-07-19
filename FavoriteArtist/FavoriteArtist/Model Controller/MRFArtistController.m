@@ -15,8 +15,6 @@
 @property NSMutableArray *internalArtists;
 @end
 
-
-
 @implementation MRFArtistController
 
 - (NSArray *)artists {

@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveProperties;
 
 @end
 
@@ -49,14 +50,15 @@
         
         dispatch_async(dispatch_get_main_queue(),^ {
 //            self.title = self.artist.artist;
-            self.nameLabel.text = artist.artist;
-            NSString *yearFormedString = [[NSString alloc] initWithFormat:@"%i", artist.yearFormed];
-            self.yearFormedLabel.text = yearFormedString;
-            self.textView.text = artist.bio;
-            self.searchBar.hidden = YES;
-//            [self updateViews];
-            self.title = artist.artist;
-            self.view.backgroundColor = [UIColor blueColor];
+//            self.nameLabel.text = artist.artist;
+//            NSString *yearFormedString = [[NSString alloc] initWithFormat:@"%i", artist.yearFormed];
+//            self.yearFormedLabel.text = yearFormedString;
+//            self.textView.text = artist.bio;
+//            self.searchBar.hidden = YES;
+//            self.title = artist.artist;
+//            self.view.backgroundColor = [UIColor blueColor];
+//            [self.artistContrller createArtistWithName:artist.artist yearFormed:artist.yearFormed bio:artist.bio];
+            self.artist = artist;
         });
     }];
 }
@@ -72,6 +74,7 @@
     self.yearFormedLabel.text = yearFormedString;
     self.textView.text = self.artist.bio;
     self.searchBar.hidden = YES;
+//    self.saveProperties.enabled = NO;
     
 }
 
@@ -81,12 +84,8 @@
     MRFArtist *artist = isNewArtist ? [[MRFArtist alloc]init] : self.artist;
     
     // TODO SAVE ARTIST
-    [_artistContrller createArtistWithName:self.nameLabel.text yearFormed:self.yearFormedLabel.text  bio:self.textView.text];
-    
-//     [_artistContrller createArtistWithName:artist.artist yearFormed:artist.yearFormed  bio:artist.bio];
-//
+     [_artistContrller createArtistWithName:artist.artist yearFormed:artist.yearFormed  bio:artist.bio];
+
     NSLog(@"This was the artist we just created:%@", artist.bio);
-    
-    NSLog(@"save worked");
 }
 @end

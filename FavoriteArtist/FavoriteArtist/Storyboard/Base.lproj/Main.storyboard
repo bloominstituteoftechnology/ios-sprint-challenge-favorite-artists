@@ -128,6 +128,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nameLabel" destination="cNZ-9h-dXN" id="7fN-I9-rjo"/>
+                        <outlet property="saveProperties" destination="ldd-7T-tP3" id="esx-bo-0rz"/>
                         <outlet property="searchBar" destination="ybs-pp-fOI" id="XFj-JJ-pd2"/>
                         <outlet property="textView" destination="kSY-QV-Fhb" id="Qq0-5J-5LW"/>
                         <outlet property="yearFormedLabel" destination="kLh-E7-bXx" id="04k-R8-81S"/>

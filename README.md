@@ -4,9 +4,11 @@
 
 **Please read this entire README to make sure you understand what is expected of you before you begin.**
 
-This sprint challenge is designed to ensure that you are competent with the concepts taught throughout Sprint 11, Objective-C Part 1.
+This sprint challenge is designed to ensure that you are competent with the concepts taught throughout Objective-C Part 1.
 
-Begin by forking this repository. Clone your forked repository to your machine. There is no starter project. Create a project for this challenge in this repository and commit as appropriate while you work. Push your final project to GitHub, then create a pull request back to this original repository.
+1. Begin by forking this repository. Clone your forked repository to your machine. 
+2. There is no starter project. Create a project for this challenge in this repository and commit as appropriate while you work. 
+3. Push your final project to GitHub, then create a pull request back to this original repository.
 
 **You will have 3 hours to complete this sprint challenge**
 
@@ -26,7 +28,7 @@ You will be using is [The Audio DB Website](https://theaudiodb.com) to get infor
 
 **NOTE:** In the place of an actual API key, use the number `1` instead. This is the API's demo key.
 
-A sample request for Macklemore looks like this (a request may take a few seconds to complete):
+A sample request for *Macklemore* looks like this URL and JSON response (a request may take a few seconds to complete):
 
 [https://theaudiodb.com/api/v1/json/1/searchalbum.php?s=Macklemore](https://theaudiodb.com/api/v1/json/1/searchalbum.php?s=Macklemore)
 
@@ -41,10 +43,15 @@ The requirements for this project are as follows:
 2. A category called `NSJSONSerialization`. In this category add:
     - An initializer to intialize your model object from a dictionary.
     - A function that returns your model object in dictionary form.
-3. Add the ability to save a searched artist. Implement persistence using `NSFileManager` to save your model objects to a file in the application's document directory. **Note:** As you do not have access to `Codable` use `NSJSONSerialization` to help turn your model objects into `NSData`.
+3. Add the ability to save a searched artist. 
+    - Implement persistence using `NSFileManager` to save your model objects to a file in the application's Document directory. 
+    - **Note:** As you do not have access to `Codable` use `NSJSONSerialization` to help turn your model objects into `NSData`.
 4. A table view controller that displays a list of saved artists.
 5. A detail view controller that allows the user to search for new artists, and also view saved artist information.
 
 ## Go Further
 
 * Persist your model objects using Core Data instead of saving them to a file.
+* Download album or artist artwork and present these images in the table view cell and/or the detail view.
+* Persist album/artist artwork in a [temporary directory](https://nshipster.com/temporary-files/).
+* Allow the user to remove saved artists from the table view.

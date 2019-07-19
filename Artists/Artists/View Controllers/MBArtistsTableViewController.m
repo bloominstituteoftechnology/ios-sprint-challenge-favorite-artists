@@ -42,7 +42,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     MBArtist *artist = [[_artistController artists] objectAtIndex:indexPath.row];
     cell.textLabel.text = artist.artist;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %n", (int)artist.year];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)artist.year];
     return cell;
 }
 

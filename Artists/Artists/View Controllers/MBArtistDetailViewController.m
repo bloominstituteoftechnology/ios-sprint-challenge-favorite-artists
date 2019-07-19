@@ -14,21 +14,39 @@
 
 @implementation MBArtistDetailViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.searchBar.delegate = self;
+    if (_artist) {
+        //self.searchBar.isHidden;
+        self.title = _artist.artist;
+    } else {
+        _artistLabel.text = @"";
+        _yearLabel.text = @"";
+        _bioTextView.text = @"";
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [_artistController getArtist:searchBar.text completionBlock:^(MBArtist *artist, NSError *error) {
+        if (error) {
+            NSLog(@"Error getting artist info: %@", error);
+            return;
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.artistLabel.text = self.artist.artist;
+                self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)self.artist.year];
+                self.bioTextView.text = self.artist.bio;
+            });
+        }
+    }];
 }
-*/
 
-- (IBAction)saveButtonPressed:(id)sender {
+- (IBAction)saveButtonPressed:(id)sender
+{
+    [_artistController createArtist:_artist];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

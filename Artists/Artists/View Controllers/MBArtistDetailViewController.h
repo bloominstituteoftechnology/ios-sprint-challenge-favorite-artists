@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MBArtistDetailViewController : UIViewController
+@interface MBArtistDetailViewController : UIViewController <UISearchBarDelegate>
 
 @property MBArtist *artist;
 @property MBArtistController *artistController;

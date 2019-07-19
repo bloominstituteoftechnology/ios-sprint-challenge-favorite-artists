@@ -7,6 +7,8 @@
 //
 
 #import "HSVArtistDetailViewController.h"
+#import "../Model Controller/HSVArtistsController.h"
+#import "../Models/HSVArtist.h"
 
 @interface HSVArtistDetailViewController ()
 
@@ -27,11 +29,7 @@
 	
 	NSLog(@"Search bar button clicked: %@", text);
 	
-//	[self.artistsController fetchArtistWithName:@"Morrissey" completion:^(NSError * _Nonnull error) {
-//		if (error)
-//			NSLog(@"Error fetching: %@", error);
-//	}];
-
+	
 }
 
 

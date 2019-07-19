@@ -37,6 +37,28 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 	NSString *base = [[NSString alloc] initWithFormat:@"%@%@", baseUrl, name];
 	NSURL *url = [[NSURL alloc] initWithString:base];
 	NSLog(@"%@", url);
+	
+	NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+		if (error) {
+			NSLog(@"error with url session: %@", error);
+			completion(error);
+			return;
+		}
+		
+		NSError *jsonError = nil;
+		NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+		if (jsonError){
+			NSLog(@"Error wit jsonSerialization %@", jsonError);
+			completion(jsonError);
+			return;
+		}
+
+		NSLog(@"%@", json[@"artists"][0][@"strArtist"]);
+		NSLog(@"%@", json[@"artists"][0][@"intFormedYear"]);
+		NSLog(@"%@", json[@"artists"][0][@"strBiographyEN"]);
+		
+	}];
+	[task resume];
 }
 
 

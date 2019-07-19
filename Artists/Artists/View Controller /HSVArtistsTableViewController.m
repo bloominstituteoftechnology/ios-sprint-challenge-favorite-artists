@@ -6,6 +6,7 @@
 //  Copyright © 2019 Hector Steven. All rights reserved.
 //
 
+#import "HSVArtistDetailViewController.h"
 #import "HSVArtistsTableViewController.h"
 #import "../Model Controller/HSVArtistsController.h"
 #import "../Models/HSVArtist.h"
@@ -66,11 +67,18 @@
 }
 
 
-
-
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"AddSegue"]) {
+		HSVArtistDetailViewController *destination = (HSVArtistDetailViewController *)[segue destinationViewController];
+		destination.artistController = self.artistsController;
+		
+	} else if ([segue.identifier isEqualToString:@"CellSegue"]){
+		HSVArtistDetailViewController *destination = (HSVArtistDetailViewController *)[segue destinationViewController];
+		destination.artistController = self.artistsController;
+		
+//		destination.artists
 	
+	}
 
 }
 

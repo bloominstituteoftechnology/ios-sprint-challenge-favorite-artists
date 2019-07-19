@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EC92037C22E21632001E7670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92037B22E21632001E7670 /* AppDelegate.m */; };
-		EC92037F22E21632001E7670 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92037E22E21632001E7670 /* ViewController.m */; };
 		EC92038222E21632001E7670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92038022E21632001E7670 /* Main.storyboard */; };
 		EC92038422E21633001E7670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC92038322E21633001E7670 /* Assets.xcassets */; };
 		EC92038722E21633001E7670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92038522E21633001E7670 /* LaunchScreen.storyboard */; };
@@ -19,8 +18,6 @@
 		EC92037722E21632001E7670 /* Favorite Artists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favorite Artists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC92037A22E21632001E7670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC92037B22E21632001E7670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EC92037D22E21632001E7670 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EC92037E22E21632001E7670 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC92038122E21632001E7670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC92038322E21633001E7670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC92038622E21633001E7670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,17 +55,31 @@
 		EC92037922E21632001E7670 /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				EC92039122E21670001E7670 /* Storyboards */,
+				EC92039022E21663001E7670 /* App */,
+				EC92038322E21633001E7670 /* Assets.xcassets */,
+			);
+			path = "Favorite Artists";
+			sourceTree = "<group>";
+		};
+		EC92039022E21663001E7670 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				EC92037A22E21632001E7670 /* AppDelegate.h */,
 				EC92037B22E21632001E7670 /* AppDelegate.m */,
-				EC92037D22E21632001E7670 /* ViewController.h */,
-				EC92037E22E21632001E7670 /* ViewController.m */,
-				EC92038022E21632001E7670 /* Main.storyboard */,
-				EC92038322E21633001E7670 /* Assets.xcassets */,
-				EC92038522E21633001E7670 /* LaunchScreen.storyboard */,
 				EC92038822E21633001E7670 /* Info.plist */,
 				EC92038922E21633001E7670 /* main.m */,
 			);
-			path = "Favorite Artists";
+			path = App;
+			sourceTree = "<group>";
+		};
+		EC92039122E21670001E7670 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EC92038022E21632001E7670 /* Main.storyboard */,
+				EC92038522E21633001E7670 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +152,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC92037F22E21632001E7670 /* ViewController.m in Sources */,
 				EC92038A22E21633001E7670 /* main.m in Sources */,
 				EC92037C22E21632001E7670 /* AppDelegate.m in Sources */,
 			);

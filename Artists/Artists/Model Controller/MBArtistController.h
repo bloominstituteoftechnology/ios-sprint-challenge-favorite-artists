@@ -8,14 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "MBArtist.h"
+#import "MBArtist+MBNSJSONSerialization.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^MBCompletionBlock)(MBArtist *, NSError *);
 
 @interface MBArtistController : NSObject
 
 @property NSMutableArray *artists;
 
 - (void)createArtist:(MBArtist *)artist;
+
+- (void)getArtist:(NSString *)name
+  completionBlock:(MBCompletionBlock)completionBlock;
 
 @end
 

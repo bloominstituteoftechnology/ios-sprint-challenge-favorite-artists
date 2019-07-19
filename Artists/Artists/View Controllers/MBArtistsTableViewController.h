@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBArtist.h"
+#import "MBArtistController.h"
+#import "MBArtistDetailViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MBArtistsTableViewController : UITableViewController
+
+@property MBArtistController *artistController;
 
 @end
 

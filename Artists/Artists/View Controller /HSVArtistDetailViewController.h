@@ -16,12 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HSVArtistDetailViewController : UIViewController <UISearchBarDelegate>
 
 @property (nonatomic, strong) HSVArtistsController *artistController;
-@property (nonatomic, strong) HSVArtist *artists;
+@property (nonatomic, strong) HSVArtist *artist;
 
 @property (strong, nonatomic) IBOutlet UISearchBar *serchBar;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *formedDateLabel;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
+
+
+- (void)setupViews;
+
 
 @end
 

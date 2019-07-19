@@ -63,7 +63,7 @@
 	cell.textLabel.text = artist.name;
 	
 	int yearFormed = artist.yearFormed;
-	cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%i", yearFormed];
+	cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"Formed in %i", yearFormed];
 	
     return cell;
 }
@@ -78,7 +78,7 @@
 		HSVArtistDetailViewController *destination = (HSVArtistDetailViewController *)[segue destinationViewController];
 		destination.artistController = self.artistsController;
 		
-//		destination.artists
+//		destination.artist = 
 	
 	}
 

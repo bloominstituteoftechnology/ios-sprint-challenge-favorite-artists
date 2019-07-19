@@ -19,8 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.serchBar.delegate = self;
-	self.nameLabel.text = @"Test";
-	
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -31,8 +29,21 @@
 	
 	[self.artistController fetchArtistWithName:text completion:^(HSVArtist * _Nonnull artist, NSError * _Nonnull error) {
 		
-		NSLog(@"%@",artist.name);
+		dispatch_async(dispatch_get_main_queue(), ^{
+			self.artist = artist;
+			[self setupViews];
+		});
 	}];
+}
+
+
+- (void)setupViews {
+	
+	if (self.artist) {
+		self.nameLabel.text = self.artist.name;
+		self.textView.text = self.artist.biography;
+		self.formedDateLabel.text = [[NSString alloc] initWithFormat:@"Formed in%i", self.artist.yearFormed];
+	}
 }
 
 

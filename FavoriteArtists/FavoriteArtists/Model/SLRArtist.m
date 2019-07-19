@@ -11,12 +11,12 @@
 @implementation SLRArtist
 
 
-- (instancetype)initWithArtistName: (NSString *)artistName biography: (NSString *)biography year: (int)year {
+- (instancetype)initWithArtistName: (NSString *)artistName biography: (NSString *)biography year: (NSInteger *)yearFormed {
     
     if (self = [super init]) {
         self.artistName = artistName;
         self.biography = biography;
-        self.year = year;
+        self.yearFormed = yearFormed;
     }
     
     return self;

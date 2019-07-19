@@ -14,6 +14,7 @@
 		3D34968F22E213BA00953A4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D34968E22E213BA00953A4D /* main.m */; };
 		3DA6A99B22E215280010861B /* MBArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6A99A22E215280010861B /* MBArtistsTableViewController.m */; };
 		3DA6A99F22E2154C0010861B /* MBArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6A99E22E2154C0010861B /* MBArtistDetailViewController.m */; };
+		3DA6A9A222E216110010861B /* MBArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6A9A122E216110010861B /* MBArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		3DA6A99A22E215280010861B /* MBArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBArtistsTableViewController.m; sourceTree = "<group>"; };
 		3DA6A99D22E2154C0010861B /* MBArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBArtistDetailViewController.h; sourceTree = "<group>"; };
 		3DA6A99E22E2154C0010861B /* MBArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBArtistDetailViewController.m; sourceTree = "<group>"; };
+		3DA6A9A022E216110010861B /* MBArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBArtist.h; sourceTree = "<group>"; };
+		3DA6A9A122E216110010861B /* MBArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 		3D34967E22E213B800953A4D /* Artists */ = {
 			isa = PBXGroup;
 			children = (
+				3DA6A9A322E216170010861B /* Model */,
 				3DA6A99C22E215320010861B /* View Controllers */,
 				3D34969622E2140200953A4D /* Storyboards */,
 				3D34969522E213F100953A4D /* Resources */,
@@ -98,6 +102,15 @@
 				3DA6A99E22E2154C0010861B /* MBArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3DA6A9A322E216170010861B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DA6A9A022E216110010861B /* MBArtist.h */,
+				3DA6A9A122E216110010861B /* MBArtist.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +188,7 @@
 				3DA6A99F22E2154C0010861B /* MBArtistDetailViewController.m in Sources */,
 				3DA6A99B22E215280010861B /* MBArtistsTableViewController.m in Sources */,
 				3D34968122E213B800953A4D /* AppDelegate.m in Sources */,
+				3DA6A9A222E216110010861B /* MBArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

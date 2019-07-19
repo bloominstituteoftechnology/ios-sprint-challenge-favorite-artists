@@ -43,7 +43,7 @@ The requirements for this project are as follows:
 2. A category called `NSJSONSerialization`. In this category add:
     - An initializer to create your model object from a dictionary.
         
-        `- (void)initWithDictionary:(NSDictionary *)`
+        `- (instancetype)initWithDictionary:(NSDictionary *)`
         
     - A function that returns your model object in dictionary form.
         

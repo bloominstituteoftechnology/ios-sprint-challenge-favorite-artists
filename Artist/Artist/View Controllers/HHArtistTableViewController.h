@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HHArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHArtistTableViewController : UITableViewController
+
+@property HHArtistController *artistController;
 
 @end
 

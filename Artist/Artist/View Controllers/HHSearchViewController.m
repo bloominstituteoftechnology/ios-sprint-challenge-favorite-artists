@@ -7,6 +7,9 @@
 //
 
 #import "HHSearchViewController.h"
+#import "HHArtist.h"
+#import "HHArtistController.h"
+#import "HHArtist+HHJSONSerialization.h"
 
 @interface HHSearchViewController ()
 

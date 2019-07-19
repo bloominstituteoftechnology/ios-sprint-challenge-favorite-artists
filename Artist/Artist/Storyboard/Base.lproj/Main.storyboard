@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="mbl-Eu-64Q" kind="show" identifier="toDetailVC" id="oiK-oK-8cy"/>
+                                    <segue destination="F9x-r3-GKM" kind="show" identifier="toDetailVC" id="IYg-L3-8dC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,7 +67,7 @@
         <!--Add New Artist-->
         <scene sceneID="zFs-eH-l9g">
             <objects>
-                <viewController id="mbl-Eu-64Q" customClass="HHArtistDetailViewController" sceneMemberID="viewController">
+                <viewController id="mbl-Eu-64Q" customClass="HHSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yip-bG-Kr8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,20 +77,20 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UAN-rr-0cn">
-                                <rect key="frame" x="0.0" y="282" width="414" height="580"/>
+                                <rect key="frame" x="0.0" y="269" width="414" height="593"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnk-a2-neQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnk-a2-neQ">
                                 <rect key="frame" x="8" y="196" width="398" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABI-N2-YBC">
-                                <rect key="frame" x="8" y="239" width="398" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABI-N2-YBC">
+                                <rect key="frame" x="8" y="239" width="398" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XE-0C-CQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711.5942028985507" y="168.75"/>
+            <point key="canvasLocation" x="1933" y="-201"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tPW-gY-JPI">
@@ -139,8 +139,60 @@
             </objects>
             <point key="canvasLocation" x="297" y="169"/>
         </scene>
+        <!--Add New Artist-->
+        <scene sceneID="Kik-Di-7fC">
+            <objects>
+                <viewController id="F9x-r3-GKM" customClass="HHArtistDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1d3-oa-t1h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-D9-5kh">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dqt-5Q-EaM">
+                                <rect key="frame" x="0.0" y="269" width="414" height="593"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8v-jA-UOw">
+                                <rect key="frame" x="8" y="196" width="398" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qw-ZF-rT6">
+                                <rect key="frame" x="8" y="239" width="398" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8qw-ZF-rT6" firstAttribute="top" secondItem="m8v-jA-UOw" secondAttribute="bottom" constant="8" id="4fD-hc-BXN"/>
+                            <constraint firstItem="5aa-D9-5kh" firstAttribute="leading" secondItem="V69-4d-kq5" secondAttribute="leading" id="6a4-PC-BCr"/>
+                            <constraint firstItem="V69-4d-kq5" firstAttribute="trailing" secondItem="m8v-jA-UOw" secondAttribute="trailing" constant="8" id="CnU-Gl-06X"/>
+                            <constraint firstItem="Dqt-5Q-EaM" firstAttribute="bottom" secondItem="V69-4d-kq5" secondAttribute="bottom" id="ENp-7D-NxU"/>
+                            <constraint firstItem="5aa-D9-5kh" firstAttribute="top" secondItem="V69-4d-kq5" secondAttribute="top" id="Fr9-Bf-1aB"/>
+                            <constraint firstItem="m8v-jA-UOw" firstAttribute="leading" secondItem="V69-4d-kq5" secondAttribute="leading" constant="8" id="M3o-1T-myp"/>
+                            <constraint firstItem="8qw-ZF-rT6" firstAttribute="leading" secondItem="V69-4d-kq5" secondAttribute="leading" constant="8" id="Yp3-W1-k8T"/>
+                            <constraint firstItem="Dqt-5Q-EaM" firstAttribute="leading" secondItem="V69-4d-kq5" secondAttribute="leading" id="dga-wI-eCR"/>
+                            <constraint firstItem="Dqt-5Q-EaM" firstAttribute="top" secondItem="8qw-ZF-rT6" secondAttribute="bottom" constant="8" id="g01-PP-25I"/>
+                            <constraint firstItem="m8v-jA-UOw" firstAttribute="top" secondItem="5aa-D9-5kh" secondAttribute="bottom" id="gLy-8z-w5b"/>
+                            <constraint firstItem="V69-4d-kq5" firstAttribute="trailing" secondItem="8qw-ZF-rT6" secondAttribute="trailing" constant="8" id="l3K-3P-exG"/>
+                            <constraint firstItem="Dqt-5Q-EaM" firstAttribute="trailing" secondItem="V69-4d-kq5" secondAttribute="trailing" id="wGP-Ah-hb3"/>
+                            <constraint firstItem="5aa-D9-5kh" firstAttribute="trailing" secondItem="V69-4d-kq5" secondAttribute="trailing" id="zBa-pv-JtF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V69-4d-kq5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Artist" id="fqM-Lj-MYy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIJ-UY-XDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="502"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="oiK-oK-8cy"/>
-    </inferredMetricsTieBreakers>
 </document>

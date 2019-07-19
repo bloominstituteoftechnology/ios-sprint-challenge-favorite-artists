@@ -7,6 +7,7 @@
 //
 
 #import "HHArtistDetailViewController.h"
+#import "HHArtist.h"
 
 @interface HHArtistDetailViewController ()
 

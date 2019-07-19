@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HHArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HHSearchViewController : UIViewController
+@interface HHSearchViewController : UIViewController <UISearchBarDelegate>
+
+@property HHArtist *artistToSave;
 
 @end
 

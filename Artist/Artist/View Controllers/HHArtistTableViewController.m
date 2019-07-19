@@ -59,7 +59,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"toDetailVC"]) {
+    if ([segue.identifier isEqual:@"toDetailVC"]) {
         HHArtistDetailViewController *detailVC = segue.destinationViewController;
         detailVC.artist = sender;
     }

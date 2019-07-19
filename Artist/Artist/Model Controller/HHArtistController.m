@@ -89,7 +89,7 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
     
     for (NSString *artistPath in filePathsArray) {
         
-        NSString *filePath = [[NSString alloc] initWithFormat:@"Documnets: %@", artistPath];
+        NSString *filePath = [[NSString alloc] initWithFormat:@"Documents/%@", artistPath];
         NSString *artistFilePath = [NSHomeDirectory()stringByAppendingPathComponent:filePath];
         
         NSURL *artistURL = [NSURL fileURLWithPath:artistFilePath];

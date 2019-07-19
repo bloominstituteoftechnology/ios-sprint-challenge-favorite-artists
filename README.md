@@ -45,11 +45,11 @@ The requirements for this project are as follows:
         
         `- (instancetype)initWithDictionary:(NSDictionary *)`
         
-    - A function that returns your model object in dictionary form.
+    - A function that returns your model object as a dictionary (to save artists).
         
         `- (NSDictionary *)toDictionary`
         
-3. Add the ability to save a searched artist. 
+3. Add the ability to save a searched artist (Table View and to disk). 
     - Implement persistence using `NSFileManager` to save your model objects to a file in the application's Document directory. 
     - **Note:** As you do not have access to `Codable` use `NSJSONSerialization` to help turn your model objects into `NSData`.
 4. A table view controller that displays a list of saved artists.

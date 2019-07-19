@@ -7,10 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HHArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^HHArtistControllerCompletionBlock)(HHArtist *, NSError *);
+
 @interface HHArtistController : NSObject
+
+- (void)fetchArtist:(NSString *)name
+    completionBlock:(HHArtistControllerCompletionBlock)completionBlock;
+
+// add Artist;
+- (void)addArtist:(HHArtist *)artist;
+
+- (HHArtist *)fetchSavedArtist:(HHArtist *)artist;
+- (NSMutableArray *)fetchAllSavedArtists;
 
 @end
 

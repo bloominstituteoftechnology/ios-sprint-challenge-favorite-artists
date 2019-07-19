@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HHArtist (HHJSONSerialization)
 
-
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+-(NSDictionary *)makeArtistDictionary;
 
 @end
 

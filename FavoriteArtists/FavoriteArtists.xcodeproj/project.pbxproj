@@ -12,6 +12,9 @@
 		373EC68622E213DD00570D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373EC68522E213DD00570D94 /* Assets.xcassets */; };
 		373EC68922E213DD00570D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373EC68722E213DD00570D94 /* LaunchScreen.storyboard */; };
 		373EC68C22E213DD00570D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 373EC68B22E213DD00570D94 /* main.m */; };
+		373EC69822E21BE900570D94 /* SLRArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 373EC69722E21BE900570D94 /* SLRArtist.m */; };
+		373EC69C22E21FBF00570D94 /* SLRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373EC69B22E21FBF00570D94 /* SLRTableViewController.m */; };
+		373EC69F22E2209900570D94 /* SLRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373EC69E22E2209900570D94 /* SLRDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,12 @@
 		373EC68822E213DD00570D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		373EC68A22E213DD00570D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373EC68B22E213DD00570D94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		373EC69622E21BE900570D94 /* SLRArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRArtist.h; sourceTree = "<group>"; };
+		373EC69722E21BE900570D94 /* SLRArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRArtist.m; sourceTree = "<group>"; };
+		373EC69A22E21FBF00570D94 /* SLRTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRTableViewController.h; sourceTree = "<group>"; };
+		373EC69B22E21FBF00570D94 /* SLRTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRTableViewController.m; sourceTree = "<group>"; };
+		373EC69D22E2209900570D94 /* SLRDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRDetailViewController.h; sourceTree = "<group>"; };
+		373EC69E22E2209900570D94 /* SLRDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +64,10 @@
 		373EC67B22E213DB00570D94 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				373EC69522E21BA100570D94 /* Model */,
 				373EC69322E2143900570D94 /* Startup */,
+				373EC69922E21F6A00570D94 /* View Controllers */,
+				373EC6A022E220B000570D94 /* Categories */,
 				373EC69422E2144600570D94 /* Storyboards */,
 				373EC69222E2140D00570D94 /* Resources */,
 			);
@@ -90,6 +102,41 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		373EC69522E21BA100570D94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				373EC69622E21BE900570D94 /* SLRArtist.h */,
+				373EC69722E21BE900570D94 /* SLRArtist.m */,
+				373EC6A122E220C900570D94 /* Model Controller */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		373EC69922E21F6A00570D94 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				373EC69A22E21FBF00570D94 /* SLRTableViewController.h */,
+				373EC69B22E21FBF00570D94 /* SLRTableViewController.m */,
+				373EC69D22E2209900570D94 /* SLRDetailViewController.h */,
+				373EC69E22E2209900570D94 /* SLRDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		373EC6A022E220B000570D94 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		373EC6A122E220C900570D94 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +163,7 @@
 		373EC67122E213DB00570D94 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SLR;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Sameera Roussi";
 				TargetAttributes = {
@@ -160,8 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373EC69F22E2209900570D94 /* SLRDetailViewController.m in Sources */,
+				373EC69822E21BE900570D94 /* SLRArtist.m in Sources */,
 				373EC68C22E213DD00570D94 /* main.m in Sources */,
 				373EC67E22E213DB00570D94 /* AppDelegate.m in Sources */,
+				373EC69C22E21FBF00570D94 /* SLRTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

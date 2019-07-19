@@ -17,10 +17,12 @@
         _strArtist = dictionary[@"artists"][@"strArtist"];
         _strBiographyEN = dictionary[@"artists"][@"strBiographyEN"];
         
-        long yearInInt = [dictionary[@"artists"][@"intFormedYear"] longValue];
-        _intFormedYear = (NSUInteger)yearInInt;
+        _intFormedYear = [dictionary[@"artists"][@"intFormedYear"] longValue];
+                     //= (NSUInteger)yearInInt; // not sure what they want wrt using primitive but longValue is indeed primitive. also thought i remember someone saying Model objects cannot take primitives.  guess that wasn't true after all?
     }
-    return dictionary;
+    return self;
 }
+
+
 
 @end

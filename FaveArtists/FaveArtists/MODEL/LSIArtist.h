@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSString *strArtist;
 @property NSString *strBiographyEN;
-@property NSUInteger intFormedYear;
+@property long intFormedYear;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

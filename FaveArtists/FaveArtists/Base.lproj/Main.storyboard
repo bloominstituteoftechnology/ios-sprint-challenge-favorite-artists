@@ -13,7 +13,7 @@
         <!--Favorite Artists-->
         <scene sceneID="duY-jU-25i">
             <objects>
-                <tableViewController storyboardIdentifier="TableFavoriteArtists" id="NCt-Nq-m8V" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableFavoriteArtists" id="NCt-Nq-m8V" customClass="LSIArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3U7-xH-4JB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
         <!--Add New Artist-->
         <scene sceneID="1sf-TE-n6r">
             <objects>
-                <viewController id="oJo-C9-REQ" sceneMemberID="viewController">
+                <viewController id="oJo-C9-REQ" customClass="LSIDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dua-cg-8fp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,10 +115,15 @@
                         <viewLayoutGuide key="safeArea" id="rqn-e5-LCC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="cG9-47-X1h">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="hva-oW-2mc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="hva-oW-2mc">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="6Uz-JA-NrQ" id="Uu1-Z2-MV1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sve-7o-LVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6Uz-JA-NrQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1760" y="125"/>
         </scene>

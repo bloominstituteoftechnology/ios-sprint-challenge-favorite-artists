@@ -13,6 +13,10 @@
 		FC6B9E8D22E1F01C00C0090C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6B9E8B22E1F01C00C0090C /* LaunchScreen.storyboard */; };
 		FC6B9E9022E1F01C00C0090C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B9E8F22E1F01C00C0090C /* main.m */; };
 		FC6B9E9822E1F4D100C0090C /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B9E9722E1F4D100C0090C /* LSIArtist.m */; };
+		FC6B9E9E22E22DCA00C0090C /* NSJSONSerialization+Translations.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B9E9D22E22DCA00C0090C /* NSJSONSerialization+Translations.m */; };
+		FC6B9EA222E2319200C0090C /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B9EA122E2319200C0090C /* LSIArtistController.m */; };
+		FC6B9EA622E235EA00C0090C /* LSIArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B9EA522E235EA00C0090C /* LSIArtistTableViewController.m */; };
+		FC6B9EA922E2369300C0090C /* LSIDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6B9EA822E2369300C0090C /* LSIDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		FC6B9E8F22E1F01C00C0090C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC6B9E9622E1F4D100C0090C /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
 		FC6B9E9722E1F4D100C0090C /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
+		FC6B9E9C22E22DCA00C0090C /* NSJSONSerialization+Translations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+Translations.h"; sourceTree = "<group>"; };
+		FC6B9E9D22E22DCA00C0090C /* NSJSONSerialization+Translations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+Translations.m"; sourceTree = "<group>"; };
+		FC6B9EA022E2319200C0090C /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
+		FC6B9EA122E2319200C0090C /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
+		FC6B9EA422E235EA00C0090C /* LSIArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistTableViewController.h; sourceTree = "<group>"; };
+		FC6B9EA522E235EA00C0090C /* LSIArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistTableViewController.m; sourceTree = "<group>"; };
+		FC6B9EA722E2369300C0090C /* LSIDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIDetailViewController.h; sourceTree = "<group>"; };
+		FC6B9EA822E2369300C0090C /* LSIDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +72,39 @@
 			children = (
 				FC6B9E8022E1F01B00C0090C /* AppDelegate.h */,
 				FC6B9E8122E1F01B00C0090C /* AppDelegate.m */,
+				FC6B9EA822E2369300C0090C /* LSIDetailViewController.m */,
+				FC6B9EA722E2369300C0090C /* LSIDetailViewController.h */,
+				FC6B9EA522E235EA00C0090C /* LSIArtistTableViewController.m */,
+				FC6B9EA422E235EA00C0090C /* LSIArtistTableViewController.h */,
 				FC6B9E8622E1F01B00C0090C /* Main.storyboard */,
-				FC6B9E9622E1F4D100C0090C /* LSIArtist.h */,
-				FC6B9E9722E1F4D100C0090C /* LSIArtist.m */,
+				FC6B9EA322E235B700C0090C /* MODEL */,
+				FC6B9E9F22E230C100C0090C /* HELPERS */,
 				FC6B9E8922E1F01C00C0090C /* Assets.xcassets */,
 				FC6B9E8B22E1F01C00C0090C /* LaunchScreen.storyboard */,
 				FC6B9E8E22E1F01C00C0090C /* Info.plist */,
 				FC6B9E8F22E1F01C00C0090C /* main.m */,
 			);
 			path = FaveArtists;
+			sourceTree = "<group>";
+		};
+		FC6B9E9F22E230C100C0090C /* HELPERS */ = {
+			isa = PBXGroup;
+			children = (
+				FC6B9E9D22E22DCA00C0090C /* NSJSONSerialization+Translations.m */,
+				FC6B9E9C22E22DCA00C0090C /* NSJSONSerialization+Translations.h */,
+			);
+			path = HELPERS;
+			sourceTree = "<group>";
+		};
+		FC6B9EA322E235B700C0090C /* MODEL */ = {
+			isa = PBXGroup;
+			children = (
+				FC6B9EA122E2319200C0090C /* LSIArtistController.m */,
+				FC6B9EA022E2319200C0090C /* LSIArtistController.h */,
+				FC6B9E9722E1F4D100C0090C /* LSIArtist.m */,
+				FC6B9E9622E1F4D100C0090C /* LSIArtist.h */,
+			);
+			path = MODEL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6B9EA922E2369300C0090C /* LSIDetailViewController.m in Sources */,
 				FC6B9E9822E1F4D100C0090C /* LSIArtist.m in Sources */,
 				FC6B9E9022E1F01C00C0090C /* main.m in Sources */,
 				FC6B9E8222E1F01B00C0090C /* AppDelegate.m in Sources */,
+				FC6B9EA222E2319200C0090C /* LSIArtistController.m in Sources */,
+				FC6B9E9E22E22DCA00C0090C /* NSJSONSerialization+Translations.m in Sources */,
+				FC6B9EA622E235EA00C0090C /* LSIArtistTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,8 @@
 		EC92038422E21633001E7670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC92038322E21633001E7670 /* Assets.xcassets */; };
 		EC92038722E21633001E7670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92038522E21633001E7670 /* LaunchScreen.storyboard */; };
 		EC92038A22E21633001E7670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92038922E21633001E7670 /* main.m */; };
+		EC92039522E21721001E7670 /* KRCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92039422E21721001E7670 /* KRCArtist.m */; };
+		EC92039922E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92039822E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		EC92038622E21633001E7670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC92038822E21633001E7670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC92038922E21633001E7670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC92039322E21721001E7670 /* KRCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KRCArtist.h; sourceTree = "<group>"; };
+		EC92039422E21721001E7670 /* KRCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KRCArtist.m; sourceTree = "<group>"; };
+		EC92039722E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+KRCArtistCreation.h"; sourceTree = "<group>"; };
+		EC92039822E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+KRCArtistCreation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,8 @@
 		EC92037922E21632001E7670 /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				EC92039622E21952001E7670 /* Utilities */,
+				EC92039222E216CE001E7670 /* Model */,
 				EC92039122E21670001E7670 /* Storyboards */,
 				EC92039022E21663001E7670 /* App */,
 				EC92038322E21633001E7670 /* Assets.xcassets */,
@@ -80,6 +88,24 @@
 				EC92038522E21633001E7670 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EC92039222E216CE001E7670 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC92039322E21721001E7670 /* KRCArtist.h */,
+				EC92039422E21721001E7670 /* KRCArtist.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC92039622E21952001E7670 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EC92039722E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.h */,
+				EC92039822E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +134,7 @@
 		EC92036F22E21632001E7670 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KRC;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Christopher Aronson";
 				TargetAttributes = {
@@ -153,6 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC92038A22E21633001E7670 /* main.m in Sources */,
+				EC92039522E21721001E7670 /* KRCArtist.m in Sources */,
+				EC92039922E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m in Sources */,
 				EC92037C22E21632001E7670 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66AJPZAPLQ;
-				INFOPLIST_FILE = "Favorite Artists/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Favorite Artists/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66AJPZAPLQ;
-				INFOPLIST_FILE = "Favorite Artists/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Favorite Artists/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

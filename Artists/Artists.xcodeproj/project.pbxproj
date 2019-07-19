@@ -16,6 +16,7 @@
 		3DA6A99F22E2154C0010861B /* MBArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6A99E22E2154C0010861B /* MBArtistDetailViewController.m */; };
 		3DA6A9A222E216110010861B /* MBArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6A9A122E216110010861B /* MBArtist.m */; };
 		3DA6A9A622E217830010861B /* MBArtist+MBNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6A9A522E217830010861B /* MBArtist+MBNSJSONSerialization.m */; };
+		3DA6A9AA22E2189B0010861B /* MBArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6A9A922E2189B0010861B /* MBArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		3DA6A9A122E216110010861B /* MBArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBArtist.m; sourceTree = "<group>"; };
 		3DA6A9A422E217830010861B /* MBArtist+MBNSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBArtist+MBNSJSONSerialization.h"; sourceTree = "<group>"; };
 		3DA6A9A522E217830010861B /* MBArtist+MBNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBArtist+MBNSJSONSerialization.m"; sourceTree = "<group>"; };
+		3DA6A9A822E2189B0010861B /* MBArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBArtistController.h; sourceTree = "<group>"; };
+		3DA6A9A922E2189B0010861B /* MBArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				3DA6A9A322E216170010861B /* Model */,
+				3DA6A9AB22E2189F0010861B /* Model Controller */,
 				3DA6A9A722E217880010861B /* Category */,
 				3DA6A99C22E215320010861B /* View Controllers */,
 				3D34969622E2140200953A4D /* Storyboards */,
@@ -124,6 +128,15 @@
 				3DA6A9A522E217830010861B /* MBArtist+MBNSJSONSerialization.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		3DA6A9AB22E2189F0010861B /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DA6A9A822E2189B0010861B /* MBArtistController.h */,
+				3DA6A9A922E2189B0010861B /* MBArtistController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +213,7 @@
 				3DA6A9A622E217830010861B /* MBArtist+MBNSJSONSerialization.m in Sources */,
 				3D34968F22E213BA00953A4D /* main.m in Sources */,
 				3DA6A99F22E2154C0010861B /* MBArtistDetailViewController.m in Sources */,
+				3DA6A9AA22E2189B0010861B /* MBArtistController.m in Sources */,
 				3DA6A99B22E215280010861B /* MBArtistsTableViewController.m in Sources */,
 				3D34968122E213B800953A4D /* AppDelegate.m in Sources */,
 				3DA6A9A222E216110010861B /* MBArtist.m in Sources */,

@@ -53,12 +53,19 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 			completion(jsonError);
 			return;
 		}
-
-		NSLog(@"%@", jsonDict[@"artists"][0][@"strArtist"]);
-		NSLog(@"%li", (long)[jsonDict[@"artists"][0][@"intFormedYear"] integerValue]);
-		NSLog(@"%@", jsonDict[@"artists"][0][@"strBiographyEN"]);
+		
+		
+		
+		NSString *name =  jsonDict[@"artists"][0][@"strArtist"];
+		int formedYear = (int)[jsonDict[@"artists"][0][@"intFormedYear"] integerValue];
+		NSString *bio =  jsonDict[@"artists"][0][@"strBiographyEN"];
+		
+		HSVArtist *artist = [[HSVArtist alloc] initWithName:name biography:bio yearFormed:formedYear];
+		[self.internalArtists addObject:artist];
 		
 	}];
+	
+	
 	[task resume];
 }
 

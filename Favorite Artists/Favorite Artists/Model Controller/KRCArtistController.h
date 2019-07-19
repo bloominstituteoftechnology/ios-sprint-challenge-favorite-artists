@@ -15,9 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KRCArtistController : NSObject
 
-@property (nonatomic, readonly) NSArray *artistCollection;
-
-- (NSArray *)artistCollection;
+@property (nonatomic) NSArray *artistCollection;
 
 - (void)fetchArtistNamed:(NSString *)name completion:(KRCCompletion)completion;
 
@@ -28,8 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)saveToFIle;
 
 - (void)loadFile;
-
-- (NSString *)getFileName;
 
 @end
 

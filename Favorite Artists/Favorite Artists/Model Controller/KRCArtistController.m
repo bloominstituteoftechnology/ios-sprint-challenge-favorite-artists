@@ -32,7 +32,7 @@
     return self;
 }
 
-- (NSArray *)artistnCollection {
+- (NSArray *)artistCollection {
     return [[self internalArtistCollection] copy];
 }
 
@@ -88,70 +88,40 @@
     NSDictionary *jsonDict = [NSJSONSerialization JsonFromArtists:[self internalArtistCollection]];
     
     if ([NSJSONSerialization isValidJSONObject:jsonDict]) {
-        NSLog(@"Yes");
+        
+        NSError *error = nil;
+        NSData *json = [NSJSONSerialization dataWithJSONObject:jsonDict options:NSJSONWritingPrettyPrinted error:&error];
+        
+        if (error) {
+            NSLog(@"%@", error);
+            return;
+        }
+        
+        NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString* fileName = @"artists.json";
+        NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
+        
+        if (![[NSFileManager defaultManager] fileExistsAtPath:fileAtPath]) {
+            [[NSFileManager defaultManager] createFileAtPath:fileAtPath contents:nil attributes:nil];
+        }
+        
+        [json writeToFile:fileAtPath atomically:NO];
+        
+        NSLog(@"%@", fileAtPath);
     }
-    
-//    NSMutableArray *jsonCOntainer = [[NSMutableArray alloc] init];
-//
-//    for(int i = 0; i < [[self internalPokemonCollection] count]; i++) {
-//
-//        NSNumber *experience = [NSNumber numberWithInteger:[[[self internalPokemonCollection] objectAtIndex:i] pokemonExperience]];
-//
-//        NSDictionary *data = @{@"name": [[[self internalPokemonCollection] objectAtIndex:i] pokemonName],
-//                               @"abilities": [[[self internalPokemonCollection] objectAtIndex:i] pokemonAbilities],
-//                               @"experience": experience,
-//                               @"url": [[[self internalPokemonCollection] objectAtIndex:i] pokemonImageURL]
-//                               };
-//
-//        [jsonCOntainer addObject:data];
-//    }
-//
-//    NSDictionary *jsonDict = @{@"data" : jsonCOntainer};
-//
-//    if ([NSJSONSerialization isValidJSONObject:jsonDict])
-//    {
-//        // Serialize the dictionary
-//        NSError *error = nil;
-//        NSData *json = [NSJSONSerialization dataWithJSONObject:jsonDict options:NSJSONWritingPrettyPrinted error:&error];
-//
-//        // If no errors, let's view the JSON
-//        if (json != nil && error == nil)
-//        {
-//            // Build the path, and create if needed.
-//            NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-//            NSString* fileName = @"pokemon.json";
-//            NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-//
-//            if (![[NSFileManager defaultManager] fileExistsAtPath:fileAtPath]) {
-//                [[NSFileManager defaultManager] createFileAtPath:fileAtPath contents:nil attributes:nil];
-//            }
-//
-//            // The main act...
-//            [json writeToFile:fileAtPath atomically:NO];
-//        }
-//    }
 }
 
 - (void)loadFile {
     
-//    NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-//    NSString* fileName = @"pokemon.json";
-//    NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-//    
-//    // The main act...
-//    NSString *json = [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
-//    
-//    NSLog(@"%@\n\n\n\n%@", fileAtPath, json);
+    NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* fileName = @"artists.json";
+    NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
     
-}
-
-- (NSString *)getFileName {
     
-    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentFolder = [path objectAtIndex:0];
-    NSString *filePath = [documentFolder stringByAppendingFormat:@"/pokemon.plist"];
+    NSString *json = [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
     
-    return filePath;
+    NSLog(@"%@\n\n\n\n%@", fileAtPath, json);
+    
 }
 
 @end

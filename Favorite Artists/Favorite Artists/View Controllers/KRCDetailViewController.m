@@ -70,15 +70,12 @@
         return;
     }
     
-    
-    
     [[self artistController] addArtist:[self artist]];
     
-    NSLog(@"%lu", [[[self artistController] artistCollection] count]);
-//
-//    [[self artistController] saveToFIle];
-//
-//    [[self navigationController] popToRootViewControllerAnimated:YES];
+
+    [[self artistController] saveToFIle];
+
+    [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 @end

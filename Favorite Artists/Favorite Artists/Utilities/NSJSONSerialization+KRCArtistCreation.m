@@ -30,18 +30,18 @@
     
     NSMutableArray *artistArray = [[NSMutableArray alloc] init];
     
-    for(int i = 0; [artists count]; i++) {
+    for(int i = 0; i < [artists count]; i++) {
         KRCArtist *artist = [artists objectAtIndex:i];
         
         NSString *name = [artist artistName];
         NSString *bio = [artist bio];
         NSInteger yearFormed = [artist yearFormed];
         NSNumber *year = [NSNumber numberWithInteger:yearFormed];
-        NSDictionary *artistInfo = @{@"trArtist": name, @"strBiographyEN": bio, @"strBiographyEN": year};
+        NSDictionary *artistInfo = @{@"strArtist": name, @"strBiographyEN": bio, @"intFormedYear": year};
         [artistArray addObject:artistInfo];
     }
     
-    NSDictionary *jsonDictionary = @{@"artist": artistArray};
+    NSDictionary *jsonDictionary = @{@"artists": artistArray};
     
     return jsonDictionary;
 }

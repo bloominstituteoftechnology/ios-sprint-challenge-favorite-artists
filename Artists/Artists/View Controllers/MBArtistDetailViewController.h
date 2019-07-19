@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBArtist.h"
+#import "MBArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MBArtistDetailViewController : UIViewController
+
+@property MBArtist *artist;
+@property MBArtistController *artistController;
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;

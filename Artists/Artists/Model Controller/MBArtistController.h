@@ -23,6 +23,8 @@ typedef void (^MBCompletionBlock)(MBArtist *, NSError *);
 - (void)getArtist:(NSString *)name
   completionBlock:(MBCompletionBlock)completionBlock;
 
+- (void)deleteArtist:(MBArtist *)artist;
+
 @end
 
 NS_ASSUME_NONNULL_END

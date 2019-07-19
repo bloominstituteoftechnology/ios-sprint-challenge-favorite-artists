@@ -20,7 +20,8 @@
     return self;
 }
 
-- (void)createArtist:(MBArtist *)artist {
+- (void)createArtist:(MBArtist *)artist
+{
     [self.artists addObject:artist];
 }
 
@@ -53,4 +54,10 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
     }];
     [task resume];
 }
+
+- (void)deleteArtist:(MBArtist *)artist
+{
+    [self.artists removeObject:artist];
+}
+
 @end

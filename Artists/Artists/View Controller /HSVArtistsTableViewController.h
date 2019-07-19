@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class HSVArtistsController;
+@class HSVArtis;
+
 @interface HSVArtistsTableViewController : UITableViewController
+
+@property HSVArtistsController *artistsController;
+
 
 @end
 

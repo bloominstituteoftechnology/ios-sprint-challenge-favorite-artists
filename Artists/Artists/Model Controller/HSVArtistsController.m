@@ -32,7 +32,12 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 	return self._internalArtists;
 }
 
-
+- (void)fetchArtistWithName:(NSString *)name completion:(void (^)(NSError *))completion{
+	
+	NSString *base = [[NSString alloc] initWithFormat:@"%@%@", baseUrl, name];
+	NSURL *url = [[NSURL alloc] initWithString:base];
+	NSLog(@"%@", url);
+}
 
 
 

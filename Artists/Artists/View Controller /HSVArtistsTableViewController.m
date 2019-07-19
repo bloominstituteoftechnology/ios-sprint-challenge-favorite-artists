@@ -7,12 +7,23 @@
 //
 
 #import "HSVArtistsTableViewController.h"
+#import "../Model Controller/HSVArtistsController.h"
+#import "../Models/HSVArtist.h"
 
 @interface HSVArtistsTableViewController ()
 
 @end
 
 @implementation HSVArtistsTableViewController
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+	self = [super initWithCoder:aDecoder];
+	if (self) {
+		_artistsController = [[HSVArtistsController alloc] init];
+	}
+	return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,7 +36,6 @@
 }
 
 #pragma mark - Table view data source
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;

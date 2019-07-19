@@ -17,13 +17,15 @@ typedef void (^DLJCompletionBlock)(DLJArtist *, NSError *);
 
 @interface DLJArtistController : NSObject
 
--(void)fetchArtistsWithName:(NSString *)name completion:(void (^)(NSError *))completion;
+- (void)fetchArtistsWithName:(NSString *)name completion:(DLJCompletionBlock)completion;
 
 -(void)saveArtist:(DLJArtist *)artist;
 
 
 
-@property(nonatomic, readonly) NSArray *artistArray;
+- (NSMutableArray *)artistArray;
+
+-(DLJArtist *)getSavedArtist:(DLJArtist *)artist;
 
 @end
 

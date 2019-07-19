@@ -35,8 +35,30 @@ static NSString *apiKey = @"1";
 }
 
 
+-(NSMutableArray *)artistArray {
+    NSArray *searchPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *directory = [searchPath objectAtIndex:0];
+    NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:directory error:nil];
 
+    for (NSString *artist in filePaths) {
+        NSString *filePath = [[NSString alloc]initWithFormat:@"Documents/%@", artist];
+        NSString *artistPath = [NSHomeDirectory()stringByAppendingPathComponent:filePath];
+
+        NSURL *artistURL = [NSURL fileURLWithPath:artistPath];
+        NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
+
+        if (artistData != nil) {
+            NSDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
+            DLJArtist *artist = [[DLJArtist alloc] initWithDictionary:artistDictionary];
+            [self.internalArtists addObject:artist];
+        } else {
+            NSLog(@"Artist Data returned nil");
+        }
+    }
+    return self.internalArtists;
 }
+
+
 
 - (void)fetchArtistsWithName:(NSString *)name completion:(DLJCompletionBlock)completion {
 
@@ -75,6 +97,18 @@ static NSString *apiKey = @"1";
 
     [dataTask resume];
 }
+
+-(DLJArtist *)getSavedArtist:(DLJArtist *)artist {
+
+    NSURL *documentDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+    NSURL *url = [[documentDirectory URLByAppendingPathComponent:artist.name] URLByAppendingPathExtension:@"json"];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    DLJArtist *savedArtist = [[DLJArtist alloc] initWithDictionary:dictionary];
+    return savedArtist;
+}
+
 
 
 

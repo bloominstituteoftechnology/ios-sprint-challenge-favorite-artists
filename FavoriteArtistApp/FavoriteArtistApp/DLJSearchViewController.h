@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DLJArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *formedLabel;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+
+@property DLJArtistController *artistController;
+@property DLJArtist *searchedArtist;
 
 @end
 

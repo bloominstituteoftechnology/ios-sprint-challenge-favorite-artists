@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TXCArtist : NSObject
 
+@property NSString *name;
+@property NSString *biography;
+@property NSInteger dateFormed;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

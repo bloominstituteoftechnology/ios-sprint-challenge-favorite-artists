@@ -42,28 +42,38 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return self.artistController.countOfArtists;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    LSIArtist *artist = self.artistController.bands[indexPath.row];
+    cell.textLabel.text = artist.strArtist;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld", artist.intFormedYear];
     
     return cell;
 }
 
 
-
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"ArtistDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        LSIArtist *artist = self.artistController.bands[indexPath.row];
+        LSIDetailViewController *detailVC = segue.destinationViewController;
+        
+        detailVC.artistController = self.artistController;
+        detailVC.artist = artist;
+        
+    } else if ([segue.identifier isEqualToString:@"AddArtist"]) {
+        LSIDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.artistController = self.artistController;
+    }
+    
 }
-
-
 @end

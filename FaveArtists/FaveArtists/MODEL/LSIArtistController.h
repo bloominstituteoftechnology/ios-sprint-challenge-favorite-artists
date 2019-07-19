@@ -7,19 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LSIArtist.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
-
-NSString *baseURL = @"theaudiodb.com/api/v1/json/1/search.php?s="
 
 
 @interface LSIArtistController : NSObject
 
 @property /* (nonatomic) */ NSArray *bands;     //not sure why i'd need to specify nonatomic here
 
-
+- (void)fetchArtist:(NSString *)searchTerm;
 
 @end
 

@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class LSIArtistController;
+@class LSIArtist;
+
 @interface LSIDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property LSIArtistController *artistController;
+@property (nonatomic) LSIArtist *artist;
 
 @end
 

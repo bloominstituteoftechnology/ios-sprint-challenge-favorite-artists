@@ -10,6 +10,18 @@
 
 @implementation LSIArtist
 
+
+- (instancetype)InitWithStrArtist:(NSString *)strArtist {
+    self = [super init];
+    if (self) {
+        
+        _strArtist = 
+        
+    }
+}
+
+
+
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {

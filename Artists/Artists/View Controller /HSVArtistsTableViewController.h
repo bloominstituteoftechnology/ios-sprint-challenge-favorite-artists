@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HSVArtistsTableViewController.h
 //  Artists
 //
 //  Created by Hector Steven on 7/19/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface HSVArtistsTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

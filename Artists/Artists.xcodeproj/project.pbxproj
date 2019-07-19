@@ -8,24 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		E8ED8AD822E213F800C54782 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AD722E213F800C54782 /* AppDelegate.m */; };
-		E8ED8ADB22E213F800C54782 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8ADA22E213F800C54782 /* ViewController.m */; };
 		E8ED8ADE22E213F800C54782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ED8ADC22E213F800C54782 /* Main.storyboard */; };
 		E8ED8AE022E213FB00C54782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8ED8ADF22E213FB00C54782 /* Assets.xcassets */; };
 		E8ED8AE322E213FB00C54782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ED8AE122E213FB00C54782 /* LaunchScreen.storyboard */; };
 		E8ED8AE622E213FB00C54782 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AE522E213FB00C54782 /* main.m */; };
+		E8ED8AEE22E216A800C54782 /* HSVArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AED22E216A800C54782 /* HSVArtistsTableViewController.m */; };
+		E8ED8AF222E216D500C54782 /* HSVArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ED8AF122E216D500C54782 /* HSVArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E8ED8AD322E213F800C54782 /* Artists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ED8AD622E213F800C54782 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8ED8AD722E213F800C54782 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E8ED8AD922E213F800C54782 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E8ED8ADA22E213F800C54782 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E8ED8ADD22E213F800C54782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8ED8ADF22E213FB00C54782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8ED8AE222E213FB00C54782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8ED8AE422E213FB00C54782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8ED8AE522E213FB00C54782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E8ED8AEC22E216A800C54782 /* HSVArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVArtistsTableViewController.h; sourceTree = "<group>"; };
+		E8ED8AED22E216A800C54782 /* HSVArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVArtistsTableViewController.m; sourceTree = "<group>"; };
+		E8ED8AF022E216D500C54782 /* HSVArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVArtistDetailViewController.h; sourceTree = "<group>"; };
+		E8ED8AF122E216D500C54782 /* HSVArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +63,25 @@
 			children = (
 				E8ED8AD622E213F800C54782 /* AppDelegate.h */,
 				E8ED8AD722E213F800C54782 /* AppDelegate.m */,
-				E8ED8AD922E213F800C54782 /* ViewController.h */,
-				E8ED8ADA22E213F800C54782 /* ViewController.m */,
 				E8ED8ADC22E213F800C54782 /* Main.storyboard */,
-				E8ED8ADF22E213FB00C54782 /* Assets.xcassets */,
 				E8ED8AE122E213FB00C54782 /* LaunchScreen.storyboard */,
+				E8ED8ADF22E213FB00C54782 /* Assets.xcassets */,
 				E8ED8AE422E213FB00C54782 /* Info.plist */,
 				E8ED8AE522E213FB00C54782 /* main.m */,
+				E8ED8AEF22E216AD00C54782 /* View Controller  */,
 			);
 			path = Artists;
+			sourceTree = "<group>";
+		};
+		E8ED8AEF22E216AD00C54782 /* View Controller  */ = {
+			isa = PBXGroup;
+			children = (
+				E8ED8AEC22E216A800C54782 /* HSVArtistsTableViewController.h */,
+				E8ED8AED22E216A800C54782 /* HSVArtistsTableViewController.m */,
+				E8ED8AF022E216D500C54782 /* HSVArtistDetailViewController.h */,
+				E8ED8AF122E216D500C54782 /* HSVArtistDetailViewController.m */,
+			);
+			path = "View Controller ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +110,7 @@
 		E8ED8ACB22E213F800C54782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HSV;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Hector Steven";
 				TargetAttributes = {
@@ -141,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8ED8ADB22E213F800C54782 /* ViewController.m in Sources */,
+				E8ED8AF222E216D500C54782 /* HSVArtistDetailViewController.m in Sources */,
+				E8ED8AEE22E216A800C54782 /* HSVArtistsTableViewController.m in Sources */,
 				E8ED8AE622E213FB00C54782 /* main.m in Sources */,
 				E8ED8AD822E213F800C54782 /* AppDelegate.m in Sources */,
 			);

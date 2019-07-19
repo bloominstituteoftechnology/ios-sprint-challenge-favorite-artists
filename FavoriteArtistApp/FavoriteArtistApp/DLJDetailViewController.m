@@ -16,17 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
+-(void)updateViews {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    self.artistNameLabel.text = self.artist.name;
+    self.textView.text = self.artist.bio;
+    NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %@", self.artist.yearFormed];
+
+    self.formedLabel.text = yearFormedString;
+
+    [self.navigationItem setTitle:self.artist.name];
+
+
 }
-*/
 
 @end

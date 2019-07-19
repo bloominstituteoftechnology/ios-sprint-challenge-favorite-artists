@@ -29,10 +29,9 @@
 	
 	NSLog(@"Search bar button clicked: %@", text);
 	
-	[self.artistController fetchArtistWithName:text completion:^(NSError * _Nonnull error) {
-		if (error)
-			NSLog(@"e");
-			
+	[self.artistController fetchArtistWithName:text completion:^(HSVArtist * _Nonnull artist, NSError * _Nonnull error) {
+		
+		NSLog(@"%@",artist.name);
 	}];
 }
 

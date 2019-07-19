@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 NS_ASSUME_NONNULL_BEGIN
+
+@class HSVArtist;
+
 
 @interface HSVArtistsController : NSObject
 
@@ -18,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) createArtistWithName:(NSString *)name biography:(NSString *)bio yearFormed:(int)formedYear;
 
-- (void)fetchArtistWithName:(NSString *)name completion:(void (^)(NSError *))completion;
+- (void)fetchArtistWithName:(NSString *)name completion:(void (^)(HSVArtist *,NSError *))completion;
 
 
 @end

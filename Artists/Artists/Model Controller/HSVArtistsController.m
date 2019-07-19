@@ -40,14 +40,14 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 	//save to file
 }
 
-- (void)fetchArtistWithName:(NSString *)name completion:(void (^)(NSError *))completion{
+- (void)fetchArtistWithName:(NSString *)name completion:(void (^)(HSVArtist *,NSError *))completion{
 	NSString *base = [[NSString alloc] initWithFormat:@"%@%@", baseUrl, name];
 	NSURL *url = [[NSURL alloc] initWithString:base];
 	
 	NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 		if (error) {
 			NSLog(@"error with url session: %@", error);
-			completion(error);
+			completion(nil, error);
 			return;
 		}
 		
@@ -56,18 +56,15 @@ static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 		
 		if (jsonError){
 			NSLog(@"Error wit jsonSerialization %@", jsonError);
-			completion(jsonError);
+			completion(nil, jsonError);
 			return;
 		}
+		
 		HSVArtist *artist = [[HSVArtist alloc] initWithDictionary:jsonDict];
+		completion(artist, nil);
 		
-	
-		NSString *name =  jsonDict[@"artists"][0][@"strArtist"];
-		int formedYear = (int)[jsonDict[@"artists"][0][@"intFormedYear"] integerValue];
-		NSString *bio =  jsonDict[@"artists"][0][@"strBiographyEN"];
-		
-		[self createArtistWithName:name biography:bio yearFormed:formedYear];
-		NSLog(@"%@", artist.name);
+//		[self createArtistWithName:name biography:bio yearFormed:formedYear];
+//		NSLog(@"%@", artist.name);
 	}];
 	
 	[task resume];

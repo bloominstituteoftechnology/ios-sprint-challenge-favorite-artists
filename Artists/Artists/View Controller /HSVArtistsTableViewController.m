@@ -35,10 +35,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	
-	[self.artistsController fetchArtistWithName:@"Morrissey" completion:^(NSError * _Nonnull error) {
-		if (error)
-			NSLog(@"Error fetching: %@", error);
-	}];
 	
 }
 

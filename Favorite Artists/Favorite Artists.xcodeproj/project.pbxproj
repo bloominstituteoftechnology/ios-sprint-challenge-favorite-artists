@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		EC92037C22E21632001E7670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92037B22E21632001E7670 /* AppDelegate.m */; };
-		EC92038222E21632001E7670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92038022E21632001E7670 /* Main.storyboard */; };
 		EC92038422E21633001E7670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC92038322E21633001E7670 /* Assets.xcassets */; };
 		EC92038722E21633001E7670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92038522E21633001E7670 /* LaunchScreen.storyboard */; };
 		EC92038A22E21633001E7670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92038922E21633001E7670 /* main.m */; };
 		EC92039522E21721001E7670 /* KRCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92039422E21721001E7670 /* KRCArtist.m */; };
 		EC92039922E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92039822E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m */; };
+		EC92039B22E21F40001E7670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92039A22E21F40001E7670 /* Main.storyboard */; };
+		EC92039F22E220CE001E7670 /* KRCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92039E22E220CE001E7670 /* KRCDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC92037722E21632001E7670 /* Favorite Artists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favorite Artists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC92037A22E21632001E7670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC92037B22E21632001E7670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EC92038122E21632001E7670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC92038322E21633001E7670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC92038622E21633001E7670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC92038822E21633001E7670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +29,9 @@
 		EC92039422E21721001E7670 /* KRCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KRCArtist.m; sourceTree = "<group>"; };
 		EC92039722E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+KRCArtistCreation.h"; sourceTree = "<group>"; };
 		EC92039822E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+KRCArtistCreation.m"; sourceTree = "<group>"; };
+		EC92039A22E21F40001E7670 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EC92039D22E220CE001E7670 /* KRCDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KRCDetailViewController.h; sourceTree = "<group>"; };
+		EC92039E22E220CE001E7670 /* KRCDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KRCDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 		EC92037922E21632001E7670 /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				EC92039C22E2204D001E7670 /* View Controllers */,
 				EC92039622E21952001E7670 /* Utilities */,
 				EC92039222E216CE001E7670 /* Model */,
 				EC92039122E21670001E7670 /* Storyboards */,
@@ -84,7 +88,7 @@
 		EC92039122E21670001E7670 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				EC92038022E21632001E7670 /* Main.storyboard */,
+				EC92039A22E21F40001E7670 /* Main.storyboard */,
 				EC92038522E21633001E7670 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -106,6 +110,15 @@
 				EC92039822E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EC92039C22E2204D001E7670 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC92039D22E220CE001E7670 /* KRCDetailViewController.h */,
+				EC92039E22E220CE001E7670 /* KRCDetailViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +179,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC92039B22E21F40001E7670 /* Main.storyboard in Resources */,
 				EC92038722E21633001E7670 /* LaunchScreen.storyboard in Resources */,
 				EC92038422E21633001E7670 /* Assets.xcassets in Resources */,
-				EC92038222E21632001E7670 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC92038A22E21633001E7670 /* main.m in Sources */,
+				EC92039F22E220CE001E7670 /* KRCDetailViewController.m in Sources */,
 				EC92039522E21721001E7670 /* KRCArtist.m in Sources */,
 				EC92039922E21996001E7670 /* NSJSONSerialization+KRCArtistCreation.m in Sources */,
 				EC92037C22E21632001E7670 /* AppDelegate.m in Sources */,
@@ -189,14 +203,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EC92038022E21632001E7670 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC92038122E21632001E7670 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EC92038522E21633001E7670 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

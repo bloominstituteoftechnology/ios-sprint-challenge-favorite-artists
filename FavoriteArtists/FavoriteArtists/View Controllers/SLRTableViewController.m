@@ -68,7 +68,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TheCell" forIndexPath:indexPath];
     
     SLRArtist *artist = self.tempArtistArray[indexPath.row];
-    NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+    NSString *yearFormedString = [NSString stringWithFormat:@"First appeared in %d", artist.yearFormed];
     
     cell.textLabel.text = artist.artistName;
     cell.detailTextLabel.text = yearFormedString;

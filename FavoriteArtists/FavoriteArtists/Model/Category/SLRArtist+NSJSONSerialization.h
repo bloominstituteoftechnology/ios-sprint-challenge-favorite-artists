@@ -7,15 +7,22 @@
 //
 
 #import "SLRArtist.h"
+#import "SLRArtist+NSJSONSerialization.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SLRArtist (NSJSONSerialization)
 
-- (instancetype) initFromDictionary: (NSDictionary *)dictionary;
+- (instancetype) initWithDictionary: (NSDictionary *)dictionary;
 
-- (NSDictionary *) dataDictionary;
+- (NSDictionary *) artistData;
 
 @end
 
 NS_ASSUME_NONNULL_END
+
+
+// from
+
+
+// to

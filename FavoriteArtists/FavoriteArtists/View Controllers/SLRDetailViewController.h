@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SLRDetailViewController : UIViewController
+@class SLRFetchArtist;
+@class SLRArtist;
+
+@interface SLRDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property (nonatomic) SLRFetchArtist *fetchartist;
+@property SLRArtist *fetchedArtist;
 
 @end
 

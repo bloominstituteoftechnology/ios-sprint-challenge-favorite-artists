@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SLRFetchArtist;
+@class SLRArtist;
+
 @interface SLRTableViewController : UITableViewController
+
+@property (nonatomic) SLRFetchArtist *fetchartist;
+@property SLRArtist *artist;
 
 @end
 

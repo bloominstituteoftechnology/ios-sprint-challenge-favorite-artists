@@ -7,25 +7,33 @@
 //
 
 #import "SLRArtist+NSJSONSerialization.h"
-#import "SLRArtist.h"
 
 @implementation SLRArtist (NSJSONSerialization)
 
-- (instancetype) initFromDictionary: (NSDictionary *)dictionary {
-
-    NSString *artistName = [dictionary[@"properties"][@"strArtist"]artistName];
-    NSString *biography = [dictionary[@"properties"][@"strBiographyEN"]biography];
-    NSString *yearFormed = [dictionary[@"properties"][@"intFormedYear"]yearFormed];
-    
-    return [self initWithArtistName:artistName biography:biography yearFormed:yearFormed];
-}
-    
-- (NSDictionary *) dataDictionary {
-    return @{@"artistName" : self.artistName,
-             @"biography" : self.biography,
-             @"yearFormed" : self.yearFormed
-             };
+- (instancetype) initWithDictionary: (NSDictionary *)dictionary {
+    if (self = [super init]) {
+        self.artistName = [dictionary objectForKey:@"strArtist"];
+        self.biography = [dictionary objectForKey:@"strBiographyEN"];
+        self.yearFormed = [[dictionary objectForKey:@"intFormedYear"] intValue];
+    }
+    return self;
 }
 
+
+- (NSDictionary *) artistData {
+    
+    // Create mutable dictionary to hold various artist data that will be returned
+    NSMutableDictionary *artistData = [NSMutableDictionary dictionary];
+    
+    // Cast yearFormed
+    NSString *castYearFormed = @(self.yearFormed).stringValue;
+    
+    [artistData setObject:self.artistName forKey:@"strArtist"];
+    [artistData setObject:self.biography forKey:@"strBiographyEN"];
+    [artistData setObject:castYearFormed forKey:@"intFormedYear"];
+   
+    NSDictionary *artistDataDictionary = [NSDictionary dictionaryWithObjectsAndKeys:self.artistName, @"strArtist", self.biography, @"strBiographyEN", castYearFormed, @"intFormedYear", nil];
+    return artistDataDictionary;
+}
 
 @end

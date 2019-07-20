@@ -7,24 +7,51 @@
 //
 
 #import "SLRTableViewController.h"
+#import "SLRDetailViewController.h"
+#import "SLRFetchArtist.h"
+#import "SLRArtist.h"
 
 @interface SLRTableViewController ()
+
+@property NSMutableArray *tempArtistArray;
+@property SLRFetchArtist *fetchArtist;
 
 @end
 
 @implementation SLRTableViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.fetchArtist = [[SLRFetchArtist alloc] init];
+    }
+    return self;
+}
 
 #pragma mark - View states
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[self tableView] reloadData];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (!self.fetchArtist) {
+        self.fetchArtist = [[SLRFetchArtist alloc] init];
+        self.artist = [[SLRArtist alloc] init];
+    }
+    [self.tempArtistArray removeAllObjects];
+    self.tempArtistArray = [self.fetchArtist artistArray];
+    NSLog(@"%lu", (unsigned long)self.tempArtistArray.count);
+    [self.tableView reloadData];
+    
+
+}
+
 
 
 #pragma mark - Table view data source
@@ -32,7 +59,7 @@
 // Number of rows in section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.tempArtistArray.count;
 }
 
 
@@ -40,10 +67,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TheCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    SLRArtist *artist = self.tempArtistArray[indexPath.row];
+    NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
     
-  //  cell.imageView?.image =
-  //  cell.textLabel?.text =
+    cell.textLabel.text = artist.artistName;
+    cell.detailTextLabel.text = yearFormedString;
     
     return cell;
 }
@@ -62,8 +90,14 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"SegueToAddArtist"]) {
+        SLRDetailViewController *detailVC = [segue destinationViewController];
+        detailVC.fetchartist = self.fetchArtist;
+    } else {
+        SLRDetailViewController *detailVC = [segue destinationViewController];
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+        detailVC.fetchedArtist = [self tempArtistArray][indexPath.row];
+    }
 }
 
 

@@ -12,22 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SLRArtist : NSObject
 
-// theaudiodb.com/api/v1/json/1/search.php?s=coldplay
-// name = strArtist
-// biography = strBiographyEN
-// yearFormed = intFormedYear
-// ----
-// image = strArtistThumb
-// logo = strArtistLogo
+@property (nonatomic, copy) NSString *artistName;
+@property (nonatomic, copy) NSString *biography;
+@property (nonatomic) int yearFormed;
 
-// Properties
-@property NSString *artistName;
-@property NSString *biography;
-@property NSString *yearFormed;
-
-// Initializer
-- (instancetype)initWithArtistName: (NSString *)artistName biography: (NSString *)biography yearFormed: (NSString *)yearFormed;
+- (instancetype)initWithArtistName: (NSString *)artistName biography:(NSString *)biography yearFormed: (int)yearFormed;
 
 @end
 
 NS_ASSUME_NONNULL_END
+
+
+
+

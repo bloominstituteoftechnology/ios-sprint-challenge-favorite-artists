@@ -15,8 +15,8 @@
 		373EC69822E21BE900570D94 /* SLRArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 373EC69722E21BE900570D94 /* SLRArtist.m */; };
 		373EC69C22E21FBF00570D94 /* SLRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373EC69B22E21FBF00570D94 /* SLRTableViewController.m */; };
 		373EC69F22E2209900570D94 /* SLRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373EC69E22E2209900570D94 /* SLRDetailViewController.m */; };
-		378F37A122E227760011E2C2 /* SLRNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378F37A022E227760011E2C2 /* SLRNetworkController.m */; };
 		378F37B022E2332A0011E2C2 /* SLRArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 378F37AF22E2332A0011E2C2 /* SLRArtist+NSJSONSerialization.m */; };
+		378F37BB22E2669B0011E2C2 /* SLRFetchArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 378F37BA22E2669B0011E2C2 /* SLRFetchArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +34,10 @@
 		373EC69B22E21FBF00570D94 /* SLRTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRTableViewController.m; sourceTree = "<group>"; };
 		373EC69D22E2209900570D94 /* SLRDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRDetailViewController.h; sourceTree = "<group>"; };
 		373EC69E22E2209900570D94 /* SLRDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRDetailViewController.m; sourceTree = "<group>"; };
-		378F379F22E227760011E2C2 /* SLRNetworkController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRNetworkController.h; sourceTree = "<group>"; };
-		378F37A022E227760011E2C2 /* SLRNetworkController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRNetworkController.m; sourceTree = "<group>"; };
 		378F37AE22E2332A0011E2C2 /* SLRArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SLRArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		378F37AF22E2332A0011E2C2 /* SLRArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SLRArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		378F37B922E2669B0011E2C2 /* SLRFetchArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRFetchArtist.h; sourceTree = "<group>"; };
+		378F37BA22E2669B0011E2C2 /* SLRFetchArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRFetchArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +70,8 @@
 		373EC67B22E213DB00570D94 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
-				373EC69522E21BA100570D94 /* Model */,
 				373EC69322E2143900570D94 /* Startup */,
+				373EC69522E21BA100570D94 /* Model */,
 				373EC69922E21F6A00570D94 /* View Controllers */,
 				373EC69422E2144600570D94 /* Storyboards */,
 				373EC69222E2140D00570D94 /* Resources */,
@@ -114,7 +114,6 @@
 				373EC69722E21BE900570D94 /* SLRArtist.m */,
 				373EC6A022E220B000570D94 /* Category */,
 				378F379E22E227140011E2C2 /* Networking */,
-				373EC6A122E220C900570D94 /* Model Controller */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,18 +138,11 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		373EC6A122E220C900570D94 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controller";
-			sourceTree = "<group>";
-		};
 		378F379E22E227140011E2C2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				378F379F22E227760011E2C2 /* SLRNetworkController.h */,
-				378F37A022E227760011E2C2 /* SLRNetworkController.m */,
+				378F37B922E2669B0011E2C2 /* SLRFetchArtist.h */,
+				378F37BA22E2669B0011E2C2 /* SLRFetchArtist.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -231,7 +223,7 @@
 				373EC68C22E213DD00570D94 /* main.m in Sources */,
 				378F37B022E2332A0011E2C2 /* SLRArtist+NSJSONSerialization.m in Sources */,
 				373EC67E22E213DB00570D94 /* AppDelegate.m in Sources */,
-				378F37A122E227760011E2C2 /* SLRNetworkController.m in Sources */,
+				378F37BB22E2669B0011E2C2 /* SLRFetchArtist.m in Sources */,
 				373EC69C22E21FBF00570D94 /* SLRTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

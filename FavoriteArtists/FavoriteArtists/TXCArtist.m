@@ -10,12 +10,15 @@
 
 @implementation TXCArtist
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+- (instancetype)initWithName:(NSString *)name
+                   biography:(NSString *)biography
+                  dateFormed:(int)dateFormed {
+    
     self = [super init];
     if (self) {
-        _name = dictionary[@"strArtist"];
-        _biography = dictionary[@"strBiographyEN"];
-        _dateFormed = [dictionary[@"intFormedYear"] integerValue];
+        _name = [name copy];
+        _biography = [biography copy];
+        _dateFormed = dateFormed;
     }
     return self;
 }

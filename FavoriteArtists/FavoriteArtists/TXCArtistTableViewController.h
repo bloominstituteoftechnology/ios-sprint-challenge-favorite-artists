@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TXCArtistTableViewController : UITableViewController
 
-@property TXCArtistController *artistController;
+@property (nonatomic) TXCArtistController *artistController;
 
 @end
 

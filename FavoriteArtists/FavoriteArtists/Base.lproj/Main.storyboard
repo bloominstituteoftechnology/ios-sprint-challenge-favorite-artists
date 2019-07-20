@@ -123,9 +123,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="artistDetailView" destination="VDN-Ze-emH" id="Bcy-00-NTR"/>
-                        <outlet property="artistNameLabel" destination="biN-3q-GLh" id="kfE-up-XCH"/>
-                        <outlet property="dateFormedLabel" destination="fMU-qA-5G5" id="mdS-6R-2LK"/>
+                        <outlet property="artistNameLabel" destination="biN-3q-GLh" id="4aX-Yo-84R"/>
+                        <outlet property="biographyTextView" destination="VDN-Ze-emH" id="QAE-RF-WsE"/>
+                        <outlet property="dateFormedLabel" destination="fMU-qA-5G5" id="JEw-KI-VMI"/>
+                        <outlet property="searchBar" destination="9YF-nR-odb" id="v92-2B-gMj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpR-fT-2sd" userLabel="First Responder" sceneMemberID="firstResponder"/>

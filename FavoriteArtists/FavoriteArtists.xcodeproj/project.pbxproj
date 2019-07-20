@@ -16,7 +16,7 @@
 		42D64FEC22E2155F00FDF469 /* TXCArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D64FEB22E2155F00FDF469 /* TXCArtistTableViewController.m */; };
 		42D64FEF22E2157200FDF469 /* TXCArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D64FEE22E2157200FDF469 /* TXCArtistDetailViewController.m */; };
 		42D64FF222E2158800FDF469 /* TXCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D64FF122E2158800FDF469 /* TXCArtistController.m */; };
-		42D64FF522E2385E00FDF469 /* NSObject+TXCArtist_NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D64FF422E2385E00FDF469 /* NSObject+TXCArtist_NSJSONSerialization.m */; };
+		42D64FF822E26D8500FDF469 /* TXCArtist+TXCArtist_NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D64FF722E26D8500FDF469 /* TXCArtist+TXCArtist_NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		42D64FEE22E2157200FDF469 /* TXCArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXCArtistDetailViewController.m; sourceTree = "<group>"; };
 		42D64FF022E2158800FDF469 /* TXCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXCArtistController.h; sourceTree = "<group>"; };
 		42D64FF122E2158800FDF469 /* TXCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXCArtistController.m; sourceTree = "<group>"; };
-		42D64FF322E2385E00FDF469 /* NSObject+TXCArtist_NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TXCArtist_NSJSONSerialization.h"; sourceTree = "<group>"; };
-		42D64FF422E2385E00FDF469 /* NSObject+TXCArtist_NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TXCArtist_NSJSONSerialization.m"; sourceTree = "<group>"; };
+		42D64FF622E26D8500FDF469 /* TXCArtist+TXCArtist_NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TXCArtist+TXCArtist_NSJSONSerialization.h"; sourceTree = "<group>"; };
+		42D64FF722E26D8500FDF469 /* TXCArtist+TXCArtist_NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TXCArtist+TXCArtist_NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +76,12 @@
 				42D64FE822E2154700FDF469 /* TXCArtist.m */,
 				42D64FF022E2158800FDF469 /* TXCArtistController.h */,
 				42D64FF122E2158800FDF469 /* TXCArtistController.m */,
-				42D64FF322E2385E00FDF469 /* NSObject+TXCArtist_NSJSONSerialization.h */,
-				42D64FF422E2385E00FDF469 /* NSObject+TXCArtist_NSJSONSerialization.m */,
 				42D64FEA22E2155F00FDF469 /* TXCArtistTableViewController.h */,
 				42D64FEB22E2155F00FDF469 /* TXCArtistTableViewController.m */,
 				42D64FED22E2157200FDF469 /* TXCArtistDetailViewController.h */,
 				42D64FEE22E2157200FDF469 /* TXCArtistDetailViewController.m */,
+				42D64FF622E26D8500FDF469 /* TXCArtist+TXCArtist_NSJSONSerialization.h */,
+				42D64FF722E26D8500FDF469 /* TXCArtist+TXCArtist_NSJSONSerialization.m */,
 				42D64FD722E2135700FDF469 /* Main.storyboard */,
 				42D64FDA22E2135800FDF469 /* Assets.xcassets */,
 				42D64FDC22E2135800FDF469 /* LaunchScreen.storyboard */,
@@ -166,8 +166,8 @@
 				42D64FEF22E2157200FDF469 /* TXCArtistDetailViewController.m in Sources */,
 				42D64FF222E2158800FDF469 /* TXCArtistController.m in Sources */,
 				42D64FD322E2135700FDF469 /* AppDelegate.m in Sources */,
-				42D64FF522E2385E00FDF469 /* NSObject+TXCArtist_NSJSONSerialization.m in Sources */,
 				42D64FEC22E2155F00FDF469 /* TXCArtistTableViewController.m in Sources */,
+				42D64FF822E26D8500FDF469 /* TXCArtist+TXCArtist_NSJSONSerialization.m in Sources */,
 				42D64FE922E2154700FDF469 /* TXCArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

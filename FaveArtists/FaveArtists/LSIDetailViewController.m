@@ -45,13 +45,12 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
     // call fetchArtistInfo function of ArtistController
+    _artistController = [[LSIArtistController alloc] init];
     NSError *error = nil;
     NSString *searchText = self.artistSearchBar.text;
-    NSArray *artistsArrayTemp;
-    // we may need a completionHandler to the call here so we can get back artist
-    [LSIArtistController fetchArtistWith:searchText completionBlock:^(NSArray * _Nonnull artistsArrayTemp, NSError * _Nonnull error)];
     
-    // example of closured function call [self fetchQuakesFromDateInterval:dateInterval completitionBlock:completionBlock
+    
+    [_artistController fetchArtistWith:searchText completionBlock:^(NSArray * _Nonnull artistsArrayTemp, NSError * _Nonnull error)];
     
     
     // UPDATE VIEWS NOT GOING TO WORK UNLESS WE EXTRACT THE ARTIST GRABBED FROM THE NETWORK CALL ABOVE

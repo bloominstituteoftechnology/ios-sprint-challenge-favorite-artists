@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSJSONSerialization_Translations : NSJSONSerialization
+@interface LSIArtist (NSJSONSerialization_Translations)
 
 //- (NSDictionary)translateToDictionary:(LSIArtist)artist;
 

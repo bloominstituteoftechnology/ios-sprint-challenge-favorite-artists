@@ -23,7 +23,7 @@
 }
 
 
-
+/*
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
@@ -36,7 +36,10 @@
     }
     return self;
 }
+*/
 
-
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Artist: %@\n\tBio: %@\n\tFounded: %d\n\t", self.strArtist, self.strBiographyEN, self.intFormedYear];
+}
 
 @end

@@ -17,7 +17,8 @@ typedef void (^LSIArtistFetcherCompletionBlock)(NSArray *, NSError *);
 
 @property /* (nonatomic) */ NSArray *bands;     //not sure why i'd need to specify nonatomic here
 
-- (void)fetchArtistWith:(NSString *)searchTerm;
+- (void)fetchArtistWith:(NSString *)searchTerm
+        completionBlock:(LSIArtistFetcherCompletionBlock)completionBlock;
 
 - (void)addArtist:(LSIArtist *)artist;
 

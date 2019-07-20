@@ -7,6 +7,7 @@
 //
 
 #import "LSIArtistController.h"
+#import "NSJSONSerialization+Translations.h"
 
 
 // Class Extension (Anonymous Category)
@@ -38,12 +39,18 @@
         completionBlock:(LSIArtistFetcherCompletionBlock)completionBlock {
     
     // Setup the URL
-    NSURL *baseURL = @"theaudiodb.com/api/v1/json/1/search.php?s=";
-    NSURL *searchURL = [baseURL URLByAppendingPathComponent:searchTerm];
+    NSString *baseURL = @"theaudiodb.com/api/v1/json/1/search.php?s=";
+    NSString *searchURLString = [NSString stringWithFormat:@"%@%@", baseURL,
+     searchTerm];
+    NSURL *searchURL = [NSURL URLWithString:searchURLString];
     
+    // DELETE AFTER SUCCESSFUL RUN
     NSLog(@"URL: %@", searchURL);
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:searchURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        // check to see if we have data....  DELETE AFTER RUNNING
+        NSLog(@"Data: %@", data);
         
         if (error) {
             NSLog(@"Error fetching artist: %@", error);
@@ -51,30 +58,30 @@
             return;
         }
         
-        NSError *jsonError = nil;
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        if (data) {
+            NSError *jsonError = nil;
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
-        if (jsonError) {
-            NSLog(@"JSON Error: %@", jsonError);
-            completionBlock(nil, jsonError);
-            return;
-        }
-        
-        // Parse the data which requires just one level down... "artists" in json is really only holding one artist's info, so no need for for-in loop to extract the data since we're only grabbing ONE artist's data (ex: Ween)
-        
-        //NSLog(@"JSON: %@", json);
-        NSArray *justOneArtistArray = json[@"artists"];   // array of the ONE Dictionary object
-        
-        for (NSDictionary *dict in justOneArtistArray) {
-            LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dict];
-            
-            if (artist) {
-                // ok to put self-> to get rid of caution error?
-                
-                [_internalBands addObject:artist];
+            if (jsonError) {
+                NSLog(@"JSON Error: %@", jsonError);
+                completionBlock(nil, jsonError);
+                return;
             }
-        }
+        
+            // Parse the data which requires just one level down... "artists" in json is really only holding one artist's info, so no need for for-in loop to extract the data since we're only grabbing ONE artist's data (ex: Ween)
+            NSLog(@"JSON: %@", json);
+            
+            NSDictionary *justOneArtist = json[@"artists"];   // he ONE Dictionary object
+        
+            LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:justOneArtist];
+            
+                if (artist) {
+                    // ok to put self-> to get rid of caution error?
+                
+                    [_internalBands addObject:artist];
+                }
         completionBlock(_internalBands, nil);
+        }
         
     }];
     [task resume];

@@ -34,25 +34,16 @@
     return self;
 }
 
-- (void)fetchArtist:(NSString *)searchTerm {
-    
-    // Create API request
+- (void)fetchArtistWith:(NSString *)searchTerm
+        completionBlock:(LSIArtistFetcherCompletionBlock)completionBlock {
     
     // Setup the URL
     NSURL *baseURL = @"theaudiodb.com/api/v1/json/1/search.php?s=";
     NSURL *searchURL = [baseURL URLByAppendingPathComponent:searchTerm];
     
-    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:searchURL];
+    NSLog(@"URL: %@", searchURL);
     
-    NSURL *url = urlComponents.URL;
-    NSLog(@"URL: %@", url);
-    
-    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        // Handle the responses (error vs. data)
-        
-        // Call the completion block as needed
-        // check the errors
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:searchURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (error) {
             NSLog(@"Error fetching artist: %@", error);
@@ -69,24 +60,27 @@
             return;
         }
         
-        // Parse the data
+        // Parse the data which requires just one level down... "artists" in json is really only holding one artist's info, so no need for for-in loop to extract the data since we're only grabbing ONE artist's data (ex: Ween)
         
         //NSLog(@"JSON: %@", json);
-        NSArray *Array = json[@"artists"];   // array of Dictionary objects
+        NSArray *justOneArtistArray = json[@"artists"];   // array of the ONE Dictionary object
         
-        for (NSDictionary *dict in earthquakeArray) {
+        for (NSDictionary *dict in justOneArtistArray) {
             LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dict];
             
             if (artist) {
-                // quakes.append()
+                // ok to put self-> to get rid of caution error?
+                
                 [_internalBands addObject:artist];
             }
         }
-        completionBlock(bands, nil);
+        completionBlock(_internalBands, nil);
         
     }];
     [task resume];
     
+  
+    // STILL NEEDS TO COMMIT TO COPY IMMUTABLE VERSION OF BANDS ARRAY WHEN READY TO PERSIST
     
     
 }

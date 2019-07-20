@@ -27,7 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //[self updateViews]
+    _artistSearchBar.delegate = self;
+    
+    [self updateViews];
 }
 
 - (void)updateViews {
@@ -43,26 +45,34 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
     // call fetchArtistInfo function of ArtistController
+    NSError *error = nil;
+    NSString *searchText = self.artistSearchBar.text;
+    NSArray *artistsArrayTemp;
+    // we may need a completionHandler to the call here so we can get back artist
+    [LSIArtistController fetchArtistWith:searchText completionBlock:^(NSArray * _Nonnull artistsArrayTemp, NSError * _Nonnull error)];
     
-    // we may need a completionHandler here so we can get back artist
-    [self.artistController fetchArtistWith:(NSString *)searchBar];
+    // example of closured function call [self fetchQuakesFromDateInterval:dateInterval completitionBlock:completionBlock
+    
+    
+    // UPDATE VIEWS NOT GOING TO WORK UNLESS WE EXTRACT THE ARTIST GRABBED FROM THE NETWORK CALL ABOVE
+    
     
     [self updateViews];
     
 }
 
-- (IBAction)saveButtonTapped:(id)sender {
-    
-    // initialize an Artist Model with data from 3 Outlets
-    _artist = [[LSIArtist alloc] init];   // compiler demanded _artist instedo artist
-    [self createArtistFromSearchResults:self.artist]  // is artist ok going func to func here?
-    
-    // add Artist to bands array to persist
-    [self.artistController addArtist:artist];
-    
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
+//- (IBAction)saveButtonTapped:(id)sender {
+//    
+//    // initialize an Artist Model with data from 3 Outlets
+//    _artist = [[LSIArtist alloc] init];   // compiler demanded _artist instedo artist
+//    [self createArtistFromSearchResults:self.artist]  // is artist ok going func to func here?
+//    
+//    // add Artist to bands array to persist
+//    [self.artistController addArtist:artist];
+//    
+//    
+//    [self.navigationController popViewControllerAnimated:YES];
+//}
 
 - (void)createArtistFromSearchResults:(LSIArtist *)artist {
     artist.strArtist = self.artistLabel.text;

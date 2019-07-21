@@ -9,6 +9,7 @@
 #import "TXCArtistTableViewController.h"
 #import "TXCArtistController.h"
 #import "TXCArtist.h"
+#import "TXCArtistDetailViewController.h"
 
 @interface TXCArtistTableViewController ()
 
@@ -16,29 +17,25 @@
 
 @implementation TXCArtistTableViewController
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+//    self = [super initWithCoder:aDecoder];
+//    if (self) {
+//        _artistController = [[TXCArtistController alloc] init];
+//    }
+//    return self;
+//}
+
+- (TXCArtistController *)artistController {
+    if (_artistController == nil) {
+        //Initialize it
         _artistController = [[TXCArtistController alloc] init];
     }
-    return self;
+    return _artistController;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    _artistController = [[TXCArtistController alloc] init];
-//
-//    [_artistController fetchArtistWithName:@"All time low" completionBlock:^(NSArray * _Nonnull artists, NSError * _Nonnull error) {
-//
-//        if (error) {
-//            NSLog(@"Error: %@", error);
-//            return;
-//        }
-//        for (TXCArtist *artist in artists) {
-//            NSLog(@"Artist: \n%@", artist.name);
-//        }
-//    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -68,12 +65,24 @@
 
 
 #pragma mark - Navigation
-/*
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"CellSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        TXCArtist *artist = self.artistController.artists[indexPath.row];
+        // Cast the destination segue controller to our custom type
+        TXCArtistDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.artistController = self.artistController;
+        detailVC.artist = artist;
+        
+    } else if ([segue.identifier isEqualToString:@"AddSegue"]) {
+        TXCArtistDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.artistController = self.artistController;
+    }
 }
-*/
+
 
 @end

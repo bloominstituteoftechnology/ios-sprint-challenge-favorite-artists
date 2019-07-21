@@ -9,6 +9,7 @@
 #import "TXCArtistDetailViewController.h"
 #import "TXCArtistController.h"
 #import "TXCArtist.h"
+#import "TXCArtist+TXCArtist_NSJSONSerialization.h"
 
 @interface TXCArtistDetailViewController ()
 @end
@@ -19,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _artistController = [[TXCArtistController alloc] init];
+//    _artistController = [[TXCArtistController alloc] init];
     _searchBar.delegate = self;
     [self updateViews];
 }
@@ -47,7 +48,7 @@
     
     NSLog(@"SEARCH BAR CLICKED!!");
     NSString *searchTerm = searchBar.text;
-    [_artistController fetchArtistWithName:searchTerm completionBlock:^(NSArray * _Nonnull artists, NSError * _Nonnull error) {
+    [self.artistController fetchArtistWithName:searchTerm completionBlock:^(NSArray * _Nonnull artists, NSError * _Nonnull error) {
         if (error) {
         NSLog(@"Error: %@", error);
         return;
@@ -67,8 +68,12 @@
     
     //Add artist object to artists array.
     
-    [_artistController.artists addObject:_artist];
+//    [self.artistController.artists addObject:_artist];
     //Save to persistent store
+    //converts artist to dictionary.
+//    [_artist toDictionary];
+    [self.navigationController popViewControllerAnimated:YES];
+
     //pop back to TVC.
     
 }

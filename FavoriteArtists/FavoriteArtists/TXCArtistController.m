@@ -16,6 +16,8 @@
 
 static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php?s=";
 
+
+
 - (void)fetchArtistWithName:(NSString *)name completionBlock:(TXCArtistFetcherCompletionBlock)completionBlock {
     
 //    NSURL *baseURL = [[NSURL alloc] initFileURLWithPath:baseURLString];

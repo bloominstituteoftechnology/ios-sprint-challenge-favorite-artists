@@ -15,7 +15,7 @@ typedef void (^TXCArtistFetcherCompletionBlock)(NSArray *artists, NSError *error
 @interface TXCArtistController : NSObject
 
 
-@property NSMutableArray *artists;
+@property  NSMutableArray *artists;
 - (void)fetchArtistWithName:(NSString *)name
             completionBlock:(TXCArtistFetcherCompletionBlock)completionBlock;
 

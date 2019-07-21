@@ -117,7 +117,7 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="cG9-47-X1h">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="hva-oW-2mc">
                             <connections>
-                                <action selector="saveButtonTapped:" destination="6Uz-JA-NrQ" id="Uu1-Z2-MV1"/>
+                                <action selector="saveButtonPressed:" destination="oJo-C9-REQ" id="3Gg-jW-UFi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -129,7 +129,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sve-7o-LVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="6Uz-JA-NrQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1760" y="125"/>
         </scene>

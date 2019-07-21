@@ -29,7 +29,7 @@
     [self.tableView reloadData];
 }
 
-
+// Retrieves a working copy of artistController to extract saved "bands" array for showing table
 - (LSIArtistController *)artistController {
 
     if(!_artistController) {

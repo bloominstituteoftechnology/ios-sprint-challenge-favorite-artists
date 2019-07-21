@@ -39,7 +39,7 @@
         completionBlock:(LSIArtistFetcherCompletionBlock)completionBlock {
     
     // Setup the URL
-    NSString *baseURL = @"theaudiodb.com/api/v1/json/1/search.php?s=";
+    NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php?s=";
     NSString *searchURLString = [NSString stringWithFormat:@"%@%@", baseURL,
      searchTerm];
     NSURL *searchURL = [NSURL URLWithString:searchURLString];
@@ -50,7 +50,7 @@
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:searchURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         // check to see if we have data....  DELETE AFTER RUNNING
-        NSLog(@"Data: %@", data);
+        //NSLog(@"Data: %@", data);
         
         if (error) {
             NSLog(@"Error fetching artist: %@", error);
@@ -67,29 +67,30 @@
                 completionBlock(nil, jsonError);
                 return;
             }
-        
-            // Parse the data which requires just one level down... "artists" in json is really only holding one artist's info, so no need for for-in loop to extract the data since we're only grabbing ONE artist's data (ex: Ween)
-            NSLog(@"JSON: %@", json);
             
-            NSDictionary *justOneArtist = json[@"artists"];   // he ONE Dictionary object
-        
-            LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:justOneArtist];
+            // load json "artists" indexed values into an array
+            NSArray *artistJSON = json[@"artists"];
             
-                if (artist) {
-                    // ok to put self-> to get rid of caution error?
+            // loop thru the array of artist (say Ween) features to extract the ones we want using our model's dictionary initializer
+            for (NSDictionary *artistQualitiesDictionary in artistJSON) {
                 
+                LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistQualitiesDictionary];
+                NSLog(@"Artist Dictionary %@", artist);
+                
+                if (_internalBands) {
+                    // ok to put self-> to get rid of caution error?
+                    
                     [_internalBands addObject:artist];
                 }
-        completionBlock(_internalBands, nil);
+            // "artists" is a misnomer here, it's actually an array of artist attributes for ONE artist
+        
+            
+            }
+            completionBlock(_internalBands, nil);
         }
         
     }];
     [task resume];
-    
-  
-    // STILL NEEDS TO COMMIT TO COPY IMMUTABLE VERSION OF BANDS ARRAY WHEN READY TO PERSIST
-    
-    
 }
 
 - (NSUInteger)countOfArtists {
@@ -101,6 +102,12 @@
     LSIArtist *newArtist = [[LSIArtist alloc] initWithStrArtist:artist.strArtist strBiographyEN:artist.strBiographyEN intFormedYear:artist.intFormedYear];
     
     [self.internalBands addObject:newArtist];
+}
+
+- (NSArray *)bands {
+    // We create a copy to make NSMutableArray into a
+    // NSArray (immutable, aka: a let constant from Swift)
+    return [_internalBands copy];
 }
 
 @end

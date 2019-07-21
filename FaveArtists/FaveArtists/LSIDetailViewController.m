@@ -65,17 +65,17 @@
         // best to extract from 'bands' the information for artist in this viewcontroller
         if (bands) {
             self.artist = bands[0];      // MUST FIX THIS SO IT DOESN'T just grab zeroeth element (a test)
-            [self updateViews];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self updateViews];
+            });
+            
         } else {
-            NSLog(@"No data returned from fetch call");
+            NSLog(@"No data returned; most likely improperly typed artist");
         }
-        
-        
     }];
     
     // UPDATE VIEWS NOT GOING TO WORK UNLESS WE EXTRACT THE ARTIST GRABBED FROM THE NETWORK CALL ABOVE
-    
-    
     [self updateViews];
     
 }

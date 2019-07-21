@@ -102,6 +102,8 @@
     LSIArtist *newArtist = [[LSIArtist alloc] initWithStrArtist:artist.strArtist strBiographyEN:artist.strBiographyEN intFormedYear:artist.intFormedYear];
     
     [self.internalBands addObject:newArtist];
+    
+    [self bands];
 }
 
 - (NSArray *)bands {

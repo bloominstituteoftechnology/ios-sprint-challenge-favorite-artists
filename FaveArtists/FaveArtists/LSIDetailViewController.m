@@ -42,12 +42,13 @@
 
 - (void)updateViews {
     
-   // if (!self.isViewLoaded || !self.artist) { return; }
+    // if there's no artist in table view, return so user can do first search ASAP, similar to guard-let
+   if (!self.isViewLoaded || !self.artist) { return; }
     
-    // i think you have to call the artistController for this to load, or somehow get bands to load artist.
-    //NSLog(self.artistController._internalBands[0]);
     self.artistLabel.text = self.artist.strArtist;
     self.yearFoundedLabel.text = [NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"%ld", self.artist.intFormedYear]];
+    
+    // bio isn't showing, check constraints
     self.bioTextView.text = self.artist.strBiographyEN;
     
 }
@@ -60,14 +61,15 @@
     NSString *searchText = self.artistSearchBar.text;
     
     [_artistController fetchArtistWith:searchText completionBlock:^(NSArray * _Nonnull bands, NSError * _Nonnull error) {
-        NSLog(@"error and data handling");
+
         // best to extract from 'bands' the information for artist in this viewcontroller
-        
         if (bands) {
-            self.artist = bands[0];
+            self.artist = bands[0];      // MUST FIX THIS SO IT DOESN'T just grab zeroeth element (a test)
+            [self updateViews];
         } else {
             NSLog(@"No data returned from fetch call");
         }
+        
         
     }];
     

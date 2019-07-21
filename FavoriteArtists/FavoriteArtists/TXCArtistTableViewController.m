@@ -40,6 +40,13 @@
 //        }
 //    }];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // update view with array of saved artists from persistent store?
+    [self.tableView reloadData];
+    
+}
 #pragma mark - Table view data source
 
 

@@ -19,6 +19,9 @@ typedef void (^TXCArtistFetcherCompletionBlock)(NSArray *artists, NSError *error
 - (void)fetchArtistWithName:(NSString *)name
             completionBlock:(TXCArtistFetcherCompletionBlock)completionBlock;
 
+// functions that save artists to persistent store/load from persistent store.
+//- (void)saveToPersistentStore;
+
 @end
 
 NS_ASSUME_NONNULL_END

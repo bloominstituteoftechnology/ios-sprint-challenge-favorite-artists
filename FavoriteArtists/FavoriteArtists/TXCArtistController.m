@@ -69,6 +69,15 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
 
 }
 
+//- (void)saveToPersistentStore {
+//    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//    NSString *filepath = [documentsDirectory stringByAppendingPathComponent:@"artists.plist"];
+//    
+//    
+//}
+
 
 
 

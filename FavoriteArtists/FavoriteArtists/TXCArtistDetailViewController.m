@@ -66,6 +66,8 @@
 - (IBAction)saveButtonTapped:(id)sender {
     
     //Add artist object to artists array.
+    
+    [_artistController.artists addObject:_artist];
     //Save to persistent store
     //pop back to TVC.
     

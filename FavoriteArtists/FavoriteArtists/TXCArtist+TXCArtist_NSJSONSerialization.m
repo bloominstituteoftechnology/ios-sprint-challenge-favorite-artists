@@ -30,8 +30,9 @@
 
 - (NSDictionary *)toDictionary {
     // Convert model object into a dictionary which we will turn into data to save to persistent store.
-    
-    return nil;
+    NSString *dateAsString = [NSString stringWithFormat:@"%d", self.dateFormed];
+    NSDictionary *objectAsDict = @{@"name": self.name, @"biography": self.biography, @"dateFormed": dateAsString};
+    return objectAsDict;
 }
 
 

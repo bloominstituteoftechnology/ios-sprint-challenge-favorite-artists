@@ -27,18 +27,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _artistController = [[TXCArtistController alloc] init];
-
-    [_artistController fetchArtistWithName:@"All time low" completionBlock:^(NSArray * _Nonnull artists, NSError * _Nonnull error) {
-
-        if (error) {
-            NSLog(@"Error: %@", error);
-            return;
-        }
-        for (TXCArtist *artist in artists) {
-            NSLog(@"Artist: \n%@", artist.name);
-        }
-    }];
+//    _artistController = [[TXCArtistController alloc] init];
+//
+//    [_artistController fetchArtistWithName:@"All time low" completionBlock:^(NSArray * _Nonnull artists, NSError * _Nonnull error) {
+//
+//        if (error) {
+//            NSLog(@"Error: %@", error);
+//            return;
+//        }
+//        for (TXCArtist *artist in artists) {
+//            NSLog(@"Artist: \n%@", artist.name);
+//        }
+//    }];
 }
 #pragma mark - Table view data source
 

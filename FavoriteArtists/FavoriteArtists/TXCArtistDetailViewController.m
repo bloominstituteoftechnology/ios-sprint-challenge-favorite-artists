@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _artistController = [[TXCArtistController alloc] init];
     _searchBar.delegate = self;
     [self updateViews];
 }
@@ -32,11 +32,15 @@
 }
 
 - (void)updateViews {
-    if (!self.isViewLoaded || !self.artist) { return; }
-    self.title = self.artist.name;
-    self.artistNameLabel.text = self.artist.name;
-    self.biographyTextView.text = self.artist.biography;
-    self.dateFormedLabel.text = [NSString stringWithFormat:@"%d", self.artist.dateFormed];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if (!self.isViewLoaded || !self.artist) { return; }
+        self.title = self.artist.name;
+        self.artistNameLabel.text = self.artist.name;
+        self.biographyTextView.text = self.artist.biography;
+        NSString *formedOn = [NSString stringWithFormat:@"%d", self.artist.dateFormed];
+        self.dateFormedLabel.text = formedOn;
+    });
     
 }
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -51,8 +55,11 @@
         for (TXCArtist *artist in artists) {
             NSLog(@"Artist: \n%@", artist.name);
         }
+        self.artist = [[TXCArtist alloc] init];
         self.artist = artists[0];
+        
         [self updateViews];
+        
     }];
 }
 

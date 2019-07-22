@@ -30,7 +30,7 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 - (void)getArtist:(NSString *)name completionBlock:( MBCompletionBlock)completionBlock;
 {
     NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseURL];
-    NSArray *queryItems = [NSURLQueryItem queryItemWithName:@"s" value:name];
+    NSArray *queryItems = @[[NSURLQueryItem queryItemWithName:@"s" value:name]];
     components.queryItems = queryItems;
     NSURL *url = components.URL;
    

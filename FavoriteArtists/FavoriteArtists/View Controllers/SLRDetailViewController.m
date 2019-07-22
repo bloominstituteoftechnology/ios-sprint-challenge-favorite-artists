@@ -39,7 +39,8 @@
     if([self.fetchedArtist artistName]) {
         self.searchBar.hidden = true;
         [self setTitle:[[self fetchedArtist] artistName]];
-      //  self.artistNameLabel.text = self.fetchedArtist.artistName;
+
+    
         NSString *originYear = [NSString stringWithFormat:@"First appeared in %d", self.fetchedArtist.yearFormed];
         self.artistNameLabel.text = originYear;
         self.textView.text = self.fetchedArtist.biography;
@@ -47,12 +48,13 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+   
+    // Let the user know what's going on
     self.textView.text = @"";
-    
     self.yearFormedLabel.text = [NSString stringWithFormat:@"Searching for %@...", searchBar.text];
     
     [self.fetchartist fetchArtistsByName:searchBar.text completionBlock:^(SLRArtist *artist, NSError *error) {
-        
+       
         // Check for an error
         if (error) {
             error = error;
@@ -62,14 +64,27 @@
         
         dispatch_async(dispatch_get_main_queue(), ^ {
             
+            
+            NSString *uiMessage = @"";
+            
             if([artist artistName]) {
                 self.fetchedArtist = artist;
                 self.artistNameLabel.text = artist.artistName;
-                NSString *originYear = [NSString stringWithFormat:@"First appeared in %d", artist.yearFormed];
-                self.yearFormedLabel.text = originYear;
+                
+                // Check the yearFormed value and display the value in the yearFormed textField
+                NSLog(@"\nThe artist.yearFormed vale is: %d",artist.yearFormed);
+                if(artist.yearFormed == 0) {
+                    [[self yearFormedLabel] setText:@"Year first appeared not available at this time."];
+                } else {
+                     uiMessage = [NSString stringWithFormat:@"First appeared in %d", artist.yearFormed];
+                    self.yearFormedLabel.text = uiMessage;
+                }
+                // Display the biography in the textView
                 self.textView.text = artist.biography;
+
             } else {
-                 [[self artistNameLabel] setText:@"Artist Not Found"];
+                uiMessage = @"Artist has not been added to the AudioDB yet.";
+                self.textView.text = uiMessage;
             }
             
             

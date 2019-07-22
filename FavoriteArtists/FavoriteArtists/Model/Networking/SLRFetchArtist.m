@@ -75,80 +75,26 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
         
         NSError *jsonError;
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-        
+
         if (jsonError){
             NSLog(@"JsonSerialization error: %@", jsonError);
             completionBlock(nil, jsonError);
             return;
         }
         
+        // Make sure the artist was found
         NSArray *jsonDict = json[@"artists"];
-        SLRArtist *artist = [[SLRArtist alloc] initWithDictionary: jsonDict[0]];
-        completionBlock(artist, nil);
+        if (jsonDict != (id) [NSNull null]) {
+            SLRArtist *artist = [[SLRArtist alloc] initWithDictionary: jsonDict[0]];
+            completionBlock(artist, nil);
+        } else {
+           NSLog(@"jsonDict error: %@", error);
+           completionBlock(nil, error);
+        }
     }];
-    [dataTask resume];
-}
-
-@end
-/*
-- (void)fetchArtistsByName:(NSString*)name completionBlock:(SLRCompletionBlock)completionBlock {
-
-    NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?s=";
-    NSString *urlWithArtist = [NSString stringWithFormat:@"%@%@", baseURL, name];
-    // Create the URL
-    NSURL *url = [NSURL URLWithString:urlWithArtist];
     
-//    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURL];
-//
-//    // Get the query parameters
-//    NSArray *queryItems = @[ [NSURLQueryItem queryItemWithName:@"s" value:@"tlc"] ];
-//    
-//    // Add the query components
-//    urlComponents.queryItems = queryItems;
-//    
-//    // Create the URL
-//    NSURL *url = urlComponents.URL;
-     NSLog(@"URL: %@", url);
-    // Create the session
-    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-       //  NSLog(@"URL: %@", url);
-        if (error) {
-            NSLog(@"Error fetching artist biography %@", error);
-            completionBlock(nil, error);
-            return;
-        }
-        
-        // There were no errors so parse the data
-        NSError *jsonError = nil;
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-        
-        // Parsing error!
-        if (jsonError) {
-            NSLog(@"JSON Error: %@", jsonError);
-            completionBlock(nil, jsonError);
-            return;
-        }
-        
-        // Get the artists
-        NSArray *artistsJSONData = json[@"artists"];
-        SLRArtist *artist = [[SLRArtist alloc] initWithDictionary:artistsJSONData[0]];
-        completionBlock(artist, nil);
-        
-    }];
     [dataTask resume];
 }
 
-
 @end
-*/
 
-
-/*
- - (instancetype)init
- {
- self = [super init];
- if (self) {
- self.internalArray = [[NSMutableArray alloc] init];
- }
- return self;
- } */

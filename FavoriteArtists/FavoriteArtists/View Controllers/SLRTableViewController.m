@@ -46,7 +46,6 @@
     }
     [self.tempArtistArray removeAllObjects];
     self.tempArtistArray = [self.fetchArtist artistArray];
-    NSLog(@"%lu", (unsigned long)self.tempArtistArray.count);
     [self.tableView reloadData];
     
 
@@ -58,7 +57,6 @@
 
 // Number of rows in section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return self.tempArtistArray.count;
 }
 
@@ -68,7 +66,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TheCell" forIndexPath:indexPath];
     
     SLRArtist *artist = self.tempArtistArray[indexPath.row];
-    NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+    
+    //NSString *yearFormedString = [NSString stringWithFormat:@"First appeared in %d", artist.yearFormed];
+    
+    // Get the value for the subtitle (yearFormed)
+    NSString *yearFormedString = @"";
+    if(artist.yearFormed == 0) {
+        yearFormedString =  [NSString stringWithFormat:@"Year first appeared not available at this time."];
+    } else {
+        yearFormedString = [NSString stringWithFormat:@"First appeared in %d", artist.yearFormed];
+    }
     
     cell.textLabel.text = artist.artistName;
     cell.detailTextLabel.text = yearFormedString;

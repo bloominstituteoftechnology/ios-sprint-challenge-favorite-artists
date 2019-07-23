@@ -77,16 +77,16 @@
                 LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistQualitiesDictionary];
                 NSLog(@"Artist Dictionary %@", artist);
                 
-                if (_internalBands) {
+                if (self.internalBands) {
                     // ok to put self-> to get rid of caution error?
                     
-                    [_internalBands addObject:artist];
+                    [self.internalBands addObject:artist];
                 }
             // "artists" is a misnomer here, it's actually an array of artist attributes for ONE artist
         
             
             }
-            completionBlock(_internalBands, nil);
+            completionBlock(self.internalBands, nil);
         }
         
     }];
@@ -103,13 +103,34 @@
     
     [self.internalBands addObject:newArtist];
     
-    [self bands];
+    
+    //how do i tell bands to get a copy of internal bands? don't i just call the function below?
 }
 
 - (NSArray *)bands {
     // We create a copy to make NSMutableArray into a
     // NSArray (immutable, aka: a let constant from Swift)
-    return [_internalBands copy];
+    
+    
+    return [self.internalBands copy];    // i changed _bands to _internalBands
 }
 
 @end
+//
+//
+//
+//
+//-(void)saveArtist:(LSIArtist *)artistToSave {
+//    if (artistRetrieved) {
+//        NSData *data = [NSJSONSerialization dataWithJSONObject:[artistToSave artistData] options:0 error:nil];
+//        NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+//        NSURL *url = [[directory URLByAppendingPathComponent:self.artistgotten.strArtist] URLByAppendingPathExtension:@"json"];
+//
+//        [data writeToURL:url atomically:YES];
+//    } else {
+//        NSLog(@"Error saving new artist");
+//        return;
+//    }
+//    return;
+//}
+

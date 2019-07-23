@@ -33,7 +33,7 @@
 }
 
 // custom setter for artist (set), similar to didSet
-- (void)setAask:(LSIArtist *)artist {
+- (void)setArtist:(LSIArtist *)artist {               //i had a mispelling SetAarrsk or something, run again
     if (artist != _artist) {
         _artist = artist;
         [self updateViews];
@@ -45,17 +45,22 @@
     // if there's no artist in table view, return so user can do first search ASAP, similar to guard-let
    if (!self.isViewLoaded || !self.artist) { return; }
     
-    self.artistLabel.text = self.artist.strArtist;
-    self.yearFoundedLabel.text = [NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"%ld", self.artist.intFormedYear]];
     
-    // bio isn't showing, check constraints
-    self.bioTextView.text = self.artist.strBiographyEN;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        self.artistLabel.text = self.artist.strArtist;
+        self.yearFoundedLabel.text = [NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"%ld", self.artist.intFormedYear]];
+        
+        // bio isn't showing, check constraints
+        self.bioTextView.text = self.artist.strBiographyEN;
+        
+    });
     
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
-    _artistController = [[LSIArtistController alloc] init];
+    //_artistController = [[LSIArtistController alloc] init];
     //NSError *error = nil;
     
     NSString *searchText = self.artistSearchBar.text;
@@ -64,7 +69,7 @@
 
         // best to extract from 'bands' the information for artist in this viewcontroller
         if (bands) {
-            self.artist = bands[0];      // MUST FIX THIS SO IT DOESN'T just grab zeroeth element (a test)
+            self.artist = self.artistController.bands[0];      // MUST FIX THIS SO IT DOESN'T just grab zeroeth element (a test)
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateViews];
@@ -74,35 +79,36 @@
             NSLog(@"No data returned; most likely improperly typed artist");
         }
     }];
-    
     // UPDATE VIEWS NOT GOING TO WORK UNLESS WE EXTRACT THE ARTIST GRABBED FROM THE NETWORK CALL ABOVE
     [self updateViews];
-    
 }
+
 
 
 - (IBAction)saveButtonPressed:(id)sender {
     
-    // initialize an Artist Model with data from 3 Outlets
-    _artist = [[LSIArtist alloc] init];   // compiler demanded _artist instedo artist
-    [self createArtistFromSearchResults:_artist];  // is artist ok going func to func here?
+    if (!_artist) {
+        _artist = [[LSIArtist alloc] init];
+    }
     
+    //[self createArtistFromSearchResults:_artist];  // is artist ok going func to func here?
     // add Artist to bands array to persist
     [self.artistController addArtist:_artist];
-    
-    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)createArtistFromSearchResults:(LSIArtist *)artist {
-    artist.strArtist = self.artistLabel.text;
-    artist.intFormedYear = self.yearFoundedLabel.text;
-    artist.strBiographyEN = self.bioTextView.text;
-    
-    // set Labels and textField back to default or blank
-}
+//- (void)createArtistFromSearchResults:(LSIArtist *)artist {
+//    artist.strArtist = self.artistLabel.text;
+//    artist.intFormedYear = self.yearFoundedLabel.text;
+//    artist.strBiographyEN = self.bioTextView.text;
+//
+//    // set Labels and textField back to default or blank
+//}
 
 
 
 
 @end
+
+
+

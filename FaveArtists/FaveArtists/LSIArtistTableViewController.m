@@ -19,12 +19,12 @@
 
 @implementation LSIArtistTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    // Swift artistController = artistController
+    // How do i get either internalBands or bands to not be nil?
     
     [self.tableView reloadData];
 }
@@ -33,9 +33,9 @@
 - (LSIArtistController *)artistController {
 
     if(!_artistController) {
-
         _artistController = [[LSIArtistController alloc] init];
     }
+    // This line here could be the source of the nilling, using breakpoint to see
     return _artistController;
 }
 

@@ -14,7 +14,7 @@
 
 @end
 
-static NSString * const baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
+static NSString *baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
 
 @implementation LSIArtistController
 
@@ -32,32 +32,40 @@ static NSString * const baseUrl = @"https://www.theaudiodb.com/api/v1/json/1/sea
 
 -(void)fetchArtist:(NSString *)name completionBlock:(LSIArtistControllerCompletionBlock)completionBlock {
     NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseUrl];
-    NSURL *url = components.URL;
+    NSLog(@"HERE: in fetchArtist");
 
     // Pull artist info
     NSArray *queryItems = @[[NSURLQueryItem queryItemWithName:@"s" value:name]];
     components.queryItems = queryItems;
     
+    NSURL *url = components.URL;
+
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"HERE: in data task");
+
         if (error) {
             NSLog(@"Error fetching artist: %@", error);
             return completionBlock(nil, error);
         }
         
-        NSError *jsonError;
-        NSDictionary *myDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-        if (jsonError) {
-            NSLog(@"JSON Error: %@", error);
-            return completionBlock(nil, error);
+        if (data) {
+            NSError *error = nil;
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            
+            if (error) {
+                return completionBlock(nil, error);
+            }
+            NSArray *resultDict = json[@"artists"];
+            
+            self.allArtists = [[NSMutableArray alloc] init];
+            for (NSDictionary *artistDict in resultDict) {
+                LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistDict];
+                if (artist) {
+                    [self.allArtists addObject:artist];
+                }
+            }
+            completionBlock(self.allArtists, nil);
         }
-        
-        NSArray *artistDict = myDict[@"artists"];
-        if (artistDict == nil) {
-            return NSLog(@"No artists found.");
-        }
-        
-        LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistDict[0]];
-        completionBlock(artist, nil);
     }];
     [dataTask resume];
 }

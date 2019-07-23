@@ -7,6 +7,9 @@
 //
 
 #import "LSIDetailViewController.h"
+#import "LSIArtistController.h"
+#import "LSINSObject+JSONSerialization.h"
+#import "LSIArtist.h"
 
 @interface LSIDetailViewController ()
 
@@ -15,16 +18,53 @@
 
 @implementation LSIDetailViewController
 
+- (void)myArtist:(LSIArtist *)artist {
+    if (artist != _artist) {
+        _artist = artist;
+        [self updateViews];
+    }
+}
+
+- (IBAction)saveBtnPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.searchBar.delegate = self;
-    self.nameLbl.text = @"Queen";
-    
+    [self updateViews];
     // Do any additional setup after loading the view.
 }
 
-- (void)searchBarPressed:(UISearchBar *)searchBar {
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    // Fetch Artist from artistController here
+    NSString *searchTerm = searchBar.text;
+    [self.artistController fetchArtist:searchTerm completionBlock:^(NSArray * _Nonnull allArtists, NSError * _Nonnull error) {
+        if (error) {
+            return NSLog(@"Error: fetching artist %@", error);
+        }
+        
+        self.artist = [[LSIArtist alloc] init];
+        self.artist = allArtists[0];
+        
+        [self updateViews];
+    }];
+}
+
+- (void)updateViews {
+    // needs to be completed on the main thread
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"HERE in updateViews");
+        
+        if (!self.isViewLoaded || !self.artist){return;}
+        
+        self.title = self.artist.name;
+        self.nameLbl.text = self.artist.name;
+        self.formedLbl.text = [NSString stringWithFormat:@"%d", self.artist.formed];
+        self.detailTextView.text = self.artist.bio;
+    });
     
 }
 

@@ -10,12 +10,12 @@
 
 @implementation LSIArtist
 
-- (instancetype) initWithName:(NSString *)name formed:(NSInteger)formed bio:(NSString *)bio {
+- (instancetype) initWithName:(NSString *)name formed:(int)formed bio:(NSString *)bio {
     
     if (self = [super init]) {
-        _name = name;
+        _name = [name copy];
         _formed = formed;
-        _bio = bio;
+        _bio = [bio copy];
     }
     return self;
 }

@@ -12,11 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIArtist : NSObject
 
-@property NSString *name;
-@property NSString *bio;
-@property NSInteger *formed;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *bio;
+@property (nonatomic) int formed;
 
-- (instancetype) initWithName:(NSString *)name formed:(NSInteger)formed bio:(NSString *)bio;
+- (instancetype) initWithName:(NSString *)name formed:(int)formed bio:(NSString *)bio;
 
 @end
 

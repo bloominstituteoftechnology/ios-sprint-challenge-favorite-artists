@@ -12,17 +12,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^LSIArtistControllerCompletionBlock)(LSIArtist *, NSError *);
+typedef void (^LSIArtistControllerCompletionBlock)(NSArray *allArtists, NSError *);
 
 @interface LSIArtistController : NSObject
 
 @property NSMutableArray *allArtists;
 
 //Fetch
-- (void)fetchArtist:(NSString *)name completion:(LSIArtistControllerCompletionBlock)completion;
+- (void)fetchArtist:(NSString *)name completionBlock:(LSIArtistControllerCompletionBlock)completionBlock;
 
 //Create
-- (void)createArtist:(LSIArtist *)artist;
+//- (void)createArtist:(LSIArtist *)artist;
 
 @end
 

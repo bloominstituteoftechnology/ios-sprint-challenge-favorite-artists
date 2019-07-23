@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="784.05797101449286" y="158.70535714285714"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Details-->
         <scene sceneID="l7a-x5-47Z">
             <objects>
                 <viewController id="vKF-of-NoT" customClass="LSIDetailViewController" sceneMemberID="viewController">
@@ -112,6 +112,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pRb-YZ-9BW"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="Ysb-lf-jC6">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="5DD-WH-irE">
+                            <connections>
+                                <action selector="saveBtnPressed:" destination="vKF-of-NoT" id="v4s-dB-XBg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailTextView" destination="1nD-Gk-38W" id="UH0-dX-lpH"/>
                         <outlet property="formedLbl" destination="F1Q-Oz-3EC" id="YYE-T6-obs"/>
@@ -121,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnF-5c-2z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1624.6376811594205" y="158.70535714285714"/>
+            <point key="canvasLocation" x="1609" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tfD-PY-Xja">
@@ -143,6 +150,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="t1b-7x-QYg"/>
+        <segue reference="2RX-f2-gdD"/>
     </inferredMetricsTieBreakers>
 </document>

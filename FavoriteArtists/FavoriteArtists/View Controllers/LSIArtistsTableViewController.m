@@ -7,6 +7,9 @@
 //
 
 #import "LSIArtistsTableViewController.h"
+#import "LSIDetailViewController.h"
+#import "LSIArtistController.h"
+#import "LSIArtist.h"
 
 @interface LSIArtistsTableViewController ()
 
@@ -14,9 +17,17 @@
 
 @implementation LSIArtistsTableViewController
 
+- (LSIArtistController *)artistController {
+    if (_artistController == nil) {
+        //Initialize it
+        _artistController = [[LSIArtistController alloc] init];
+    }
+    return _artistController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -24,24 +35,40 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 1;
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Detail Segue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        LSIArtist *artist = self.artistController.allArtists[indexPath.row];
+
+        LSIDetailViewController *detailVC = segue.destinationViewController;
+        
+        detailVC.artistController = self.artistController;
+        detailVC.artist = artist;
+    } else if ([segue.identifier isEqualToString:@"Artist Segue"]) {
+        LSIDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.artistController = self.artistController;
+    }
+}
+
+#pragma mark - Table view data source
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 1;
+    return self.artistController.allArtists.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = @"Queen";
-    cell.detailTextLabel.text = @"1992";
     // Configure the cell...
+    LSIArtist *artist = self.artistController.allArtists[indexPath.row];
+    
+    cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%li", (long)artist.formed];
     
     return cell;
 }

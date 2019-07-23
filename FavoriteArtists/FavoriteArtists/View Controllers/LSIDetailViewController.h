@@ -10,12 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class LSIArtist;
+@class LSIArtistController;
+
 @interface LSIDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLbl;
 @property (weak, nonatomic) IBOutlet UILabel *formedLbl;
 @property (weak, nonatomic) IBOutlet UITextView *detailTextView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+@property LSIArtistController *artistController;
+@property (nonatomic) LSIArtist *artist;
 
 
 @end

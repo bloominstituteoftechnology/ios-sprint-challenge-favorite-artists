@@ -27,3 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+
+
+
+
+// TO-DO:
+      // re-implement file-manager persistence
+      // look at updateViews in DetailVC for redundancy
+      // run tests for different devices to make sure TextField in DetailVC doesn't get cut out
+      // model-to-Dictionary conversion

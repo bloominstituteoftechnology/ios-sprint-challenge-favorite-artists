@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -73,48 +72,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-o6-lAv">
-                                <rect key="frame" x="0.0" y="140" width="414" height="32"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-ov-ZzY">
-                                <rect key="frame" x="0.0" y="188" width="414" height="642"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zAp-xt-ZCo">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY8-vD-847">
-                                        <rect key="frame" x="186.5" y="0.0" width="41.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-o6-lAv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfb-OK-1xr">
+                                        <rect key="frame" x="182" y="72" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Founded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfb-OK-1xr">
-                                        <rect key="frame" x="154" y="28.5" width="106" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY8-vD-847">
+                                        <rect key="frame" x="182" y="138" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.88821648320000002" green="0.32062744069999999" blue="0.31437832110000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" text="Bio..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBr-3h-7TE">
-                                        <rect key="frame" x="87" y="57" width="240" height="585"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBr-3h-7TE">
+                                        <rect key="frame" x="0.0" y="204" width="414" height="518"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="vBr-3h-7TE" firstAttribute="centerX" secondItem="Hxa-ov-ZzY" secondAttribute="centerX" id="3An-Rl-Zpp"/>
+                                    <constraint firstItem="vBr-3h-7TE" firstAttribute="leading" secondItem="zAp-xt-ZCo" secondAttribute="leading" id="Epc-w0-caW"/>
+                                    <constraint firstAttribute="trailing" secondItem="vBr-3h-7TE" secondAttribute="trailing" id="m1H-LJ-rR4"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tbb-o6-lAv" firstAttribute="leading" secondItem="rqn-e5-LCC" secondAttribute="leading" id="OcQ-m0-grY"/>
-                            <constraint firstItem="rqn-e5-LCC" firstAttribute="trailing" secondItem="Hxa-ov-ZzY" secondAttribute="trailing" id="RUq-3e-j8D"/>
-                            <constraint firstItem="Hxa-ov-ZzY" firstAttribute="leading" secondItem="rqn-e5-LCC" secondAttribute="leading" id="Y3n-uZ-Mjd"/>
-                            <constraint firstItem="tbb-o6-lAv" firstAttribute="top" secondItem="rqn-e5-LCC" secondAttribute="top" id="Yqb-bJ-nUs"/>
-                            <constraint firstItem="Hxa-ov-ZzY" firstAttribute="centerX" secondItem="Dua-cg-8fp" secondAttribute="centerX" id="dEN-wY-vDJ"/>
-                            <constraint firstItem="tbb-o6-lAv" firstAttribute="trailing" secondItem="rqn-e5-LCC" secondAttribute="trailing" id="dNf-4C-Zub"/>
-                            <constraint firstItem="Hxa-ov-ZzY" firstAttribute="top" secondItem="tbb-o6-lAv" secondAttribute="bottom" constant="16" id="qGZ-qf-MMw"/>
-                            <constraint firstItem="rqn-e5-LCC" firstAttribute="bottom" secondItem="Hxa-ov-ZzY" secondAttribute="bottom" constant="32" id="sWy-eq-Dli"/>
+                            <constraint firstItem="rqn-e5-LCC" firstAttribute="trailing" secondItem="zAp-xt-ZCo" secondAttribute="trailing" id="2OD-zd-3pw"/>
+                            <constraint firstItem="zAp-xt-ZCo" firstAttribute="leading" secondItem="Dua-cg-8fp" secondAttribute="leading" id="QjI-Ug-0G4"/>
+                            <constraint firstItem="rqn-e5-LCC" firstAttribute="bottom" secondItem="zAp-xt-ZCo" secondAttribute="bottom" id="SlO-Jb-es5"/>
+                            <constraint firstItem="zAp-xt-ZCo" firstAttribute="top" secondItem="rqn-e5-LCC" secondAttribute="top" id="uC3-Rc-ECT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rqn-e5-LCC"/>
                     </view>
@@ -128,13 +125,13 @@
                     <connections>
                         <outlet property="artistLabel" destination="XY8-vD-847" id="M7x-Y0-uiA"/>
                         <outlet property="artistSearchBar" destination="tbb-o6-lAv" id="0b9-fF-3Zf"/>
-                        <outlet property="bioTextView" destination="vBr-3h-7TE" id="Kvz-4w-fbI"/>
+                        <outlet property="bioTextView" destination="vBr-3h-7TE" id="luG-Hv-EHm"/>
                         <outlet property="yearFoundedLabel" destination="Wfb-OK-1xr" id="mww-5v-dj0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sve-7o-LVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760" y="125"/>
+            <point key="canvasLocation" x="1759.4202898550725" y="124.55357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WDd-Hw-1wE">

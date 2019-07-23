@@ -13,11 +13,12 @@
 // Class Extension (Anonymous Category)
 
 @interface LSIArtistController () {
-    // private variables in here
+    // Do private properties go inside this ModelController interface brackets? Or below that where i have them, and they are working?
 }
 
 // Private properties
 @property NSMutableArray *internalBands;
+@property LSIArtist *fetchedArtist;
 
 @end
 
@@ -31,12 +32,16 @@
     self = [super init];
     if (self) {
         _internalBands = [[NSMutableArray alloc] init];
+        _fetchedArtist = [[LSIArtist alloc] init];
     }
     return self;
 }
 
+
 - (void)fetchArtistWith:(NSString *)searchTerm
         completionBlock:(LSIArtistFetcherCompletionBlock)completionBlock {
+    
+    
     
     // Setup the URL
     NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php?s=";
@@ -59,6 +64,7 @@
         }
         
         if (data) {
+            
             NSError *jsonError = nil;
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
@@ -74,19 +80,18 @@
             // loop thru the array of artist (say Ween) features to extract the ones we want using our model's dictionary initializer
             for (NSDictionary *artistQualitiesDictionary in artistJSON) {
                 
-                LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistQualitiesDictionary];
-                NSLog(@"Artist Dictionary %@", artist);
+                _fetchedArtist = [[LSIArtist alloc] initWithDictionary:artistQualitiesDictionary];
+                NSLog(@"Artist Dictionary %@", _fetchedArtist);
                 
-                if (self.internalBands) {
-                    // ok to put self-> to get rid of caution error?
-                    
-                    [self.internalBands addObject:artist];
-                }
+//                if (self.internalBands) {
+//                    // ok to put self-> to get rid of caution error?
+//
+//                    [self.internalBands addObject:artist];
+//                }
             // "artists" is a misnomer here, it's actually an array of artist attributes for ONE artist
-        
-            
             }
-            completionBlock(self.internalBands, nil);
+            
+            completionBlock(_fetchedArtist, nil);    // 2. changed all _internalBands to self.internalBands
         }
         
     }];
@@ -112,7 +117,7 @@
     // NSArray (immutable, aka: a let constant from Swift)
     
     
-    return [self.internalBands copy];    // i changed _bands to _internalBands
+    return [self.internalBands copy];    //1. i changed _bands to _internalBands
 }
 
 @end

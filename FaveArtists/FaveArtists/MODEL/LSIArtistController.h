@@ -11,11 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^LSIArtistFetcherCompletionBlock)(NSArray *, NSError *);
+typedef void (^LSIArtistFetcherCompletionBlock)(LSIArtist *, NSError *);
 
 @interface LSIArtistController : NSObject
 
 @property (nonatomic) NSArray *bands;     //not sure why i'd need to specify nonatomic here
+//@property LSIArtist *fetchedArtist;
 
 - (void)fetchArtistWith:(NSString *)searchTerm
         completionBlock:(LSIArtistFetcherCompletionBlock)completionBlock;

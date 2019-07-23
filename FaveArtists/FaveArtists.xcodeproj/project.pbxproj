@@ -51,6 +51,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC35F79122E760EE00337E60 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC6B9EA822E2369300C0090C /* LSIDetailViewController.m */,
+				FC6B9EA722E2369300C0090C /* LSIDetailViewController.h */,
+				FC6B9EA522E235EA00C0090C /* LSIArtistTableViewController.m */,
+				FC6B9EA422E235EA00C0090C /* LSIArtistTableViewController.h */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		FC6B9E7422E1F01B00C0090C = {
 			isa = PBXGroup;
 			children = (
@@ -72,10 +83,7 @@
 			children = (
 				FC6B9E8022E1F01B00C0090C /* AppDelegate.h */,
 				FC6B9E8122E1F01B00C0090C /* AppDelegate.m */,
-				FC6B9EA822E2369300C0090C /* LSIDetailViewController.m */,
-				FC6B9EA722E2369300C0090C /* LSIDetailViewController.h */,
-				FC6B9EA522E235EA00C0090C /* LSIArtistTableViewController.m */,
-				FC6B9EA422E235EA00C0090C /* LSIArtistTableViewController.h */,
+				FC35F79122E760EE00337E60 /* View Controllers */,
 				FC6B9E8622E1F01B00C0090C /* Main.storyboard */,
 				FC6B9EA322E235B700C0090C /* MODEL */,
 				FC6B9E9F22E230C100C0090C /* HELPERS */,

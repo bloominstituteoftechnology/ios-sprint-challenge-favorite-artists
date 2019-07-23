@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
 
 
+
 @end
 
 @implementation LSIDetailViewController
@@ -52,7 +53,7 @@
         self.yearFoundedLabel.text = [NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"%ld", self.artist.intFormedYear]];
         
         // bio isn't showing, check constraints
-        self.bioTextView.text = self.artist.strBiographyEN;
+        self.bioTextView.text = /*@"anything bio here TEST FAIL";*/ self.artist.strBiographyEN;
         
     });
     
@@ -65,11 +66,11 @@
     
     NSString *searchText = self.artistSearchBar.text;
     
-    [_artistController fetchArtistWith:searchText completionBlock:^(NSArray * _Nonnull bands, NSError * _Nonnull error) {
+    [_artistController fetchArtistWith:searchText completionBlock:^(LSIArtist * _Nonnull fetchedArtist, NSError * _Nonnull error) {
 
         // best to extract from 'bands' the information for artist in this viewcontroller
-        if (bands) {
-            self.artist = self.artistController.bands[0];      // MUST FIX THIS SO IT DOESN'T just grab zeroeth element (a test)
+        if (fetchedArtist) {
+            self.artist = fetchedArtist;      // MUST FIX THIS SO IT DOESN'T just grab zeroeth element (a test)
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateViews];

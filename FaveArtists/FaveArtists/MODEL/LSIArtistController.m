@@ -12,7 +12,7 @@
 
 // Class Extension (Anonymous Category)
 
-@interface LSIArtistController () {
+@interface LSIArtistController () {  // EXTENSION
     // Do private properties go inside this ModelController interface brackets? Or below that where i have them, and they are working?
 }
 
@@ -121,10 +121,10 @@
 }
 
 @end
-//
-//
-//
-//
+
+
+
+// For when implementing FILE-MANAGER
 //-(void)saveArtist:(LSIArtist *)artistToSave {
 //    if (artistRetrieved) {
 //        NSData *data = [NSJSONSerialization dataWithJSONObject:[artistToSave artistData] options:0 error:nil];
@@ -133,7 +133,7 @@
 //
 //        [data writeToURL:url atomically:YES];
 //    } else {
-//        NSLog(@"Error saving new artist");
+//        NSLog(@"Error saving");
 //        return;
 //    }
 //    return;

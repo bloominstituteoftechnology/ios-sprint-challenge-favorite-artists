@@ -23,7 +23,7 @@
 }
 
 
-/*
+/*  removed bc LS wanted it contained in NSJSONSerialization 'extension'
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {

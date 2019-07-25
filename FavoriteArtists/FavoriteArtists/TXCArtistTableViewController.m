@@ -49,14 +49,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return self.artistController.artists.count;
+    return self.artistController.savedArtists.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    TXCArtist *artist = self.artistController.artists[indexPath.row];
+    TXCArtist *artist = self.artistController.savedArtists[indexPath.row];
     cell.textLabel.text = artist.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%li", (long)artist.dateFormed];
     
@@ -72,7 +72,7 @@
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"CellSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        TXCArtist *artist = self.artistController.artists[indexPath.row];
+        TXCArtist *artist = self.artistController.savedArtists[indexPath.row];
         // Cast the destination segue controller to our custom type
         TXCArtistDetailViewController *detailVC = segue.destinationViewController;
         detailVC.artistController = self.artistController;

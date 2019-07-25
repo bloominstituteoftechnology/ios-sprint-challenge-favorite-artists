@@ -67,6 +67,7 @@
 - (IBAction)saveButtonTapped:(id)sender {
     
     //Add artist object to artists array.
+    [self.artistController.savedArtists addObject:self.artist];
     
 //    [self.artistController.artists addObject:_artist];
     //Save to persistent store

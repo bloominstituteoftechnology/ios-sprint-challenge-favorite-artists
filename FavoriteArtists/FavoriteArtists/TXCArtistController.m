@@ -16,7 +16,12 @@
 
 static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php?s=";
 
-
+- (NSMutableArray *)savedArtists {
+    if (_savedArtists == nil) {
+        _savedArtists = [[NSMutableArray alloc] init];
+    }
+    return _savedArtists;
+}
 
 - (void)fetchArtistWithName:(NSString *)name completionBlock:(TXCArtistFetcherCompletionBlock)completionBlock {
     

@@ -15,8 +15,10 @@
         // Decode the artistName
         NSString *artistName = [dictionary objectForKey:@"strArtist"];
         
-        // We have an artist, but we may not have a biography or yearFormed
+        // We have an artist, check for a biography
         NSString *biography = [dictionary[@"strBiographyEN"] length] > 0 ? [dictionary objectForKey:@"strBiographyEN"] : [NSString stringWithFormat:@"No additional information about %@ in AudioDB", artistName];
+        
+        // We have an artist and biography, check for yearFormed
         int yearFormed = (dictionary[@"intFormedYear"] == (id)[NSNull null] ) ? 0 :  [[dictionary objectForKey:@"intFormedYear"] intValue];
     
         self = [self initWithArtistName:artistName biography:biography yearFormed:yearFormed];

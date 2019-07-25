@@ -77,6 +77,8 @@
         yearFormedString = [NSString stringWithFormat:@"First appeared in %d", artist.yearFormed];
     }
     
+  //  NSString *yearFormedString = [NSString stringWithFormat:@"First appeared in %d", artist.yearFormed];
+    
     cell.textLabel.text = artist.artistName;
     cell.detailTextLabel.text = yearFormedString;
     

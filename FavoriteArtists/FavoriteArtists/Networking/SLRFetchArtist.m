@@ -94,6 +94,7 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
     }];
     
     [dataTask resume];
+    
 }
 
 @end

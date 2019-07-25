@@ -72,6 +72,7 @@
 			children = (
 				373EC69322E2143900570D94 /* Startup */,
 				373EC69522E21BA100570D94 /* Model */,
+				378F379E22E227140011E2C2 /* Networking */,
 				373EC69922E21F6A00570D94 /* View Controllers */,
 				373EC69422E2144600570D94 /* Storyboards */,
 				373EC69222E2140D00570D94 /* Resources */,
@@ -112,8 +113,6 @@
 			children = (
 				373EC69622E21BE900570D94 /* SLRArtist.h */,
 				373EC69722E21BE900570D94 /* SLRArtist.m */,
-				373EC6A022E220B000570D94 /* Category */,
-				378F379E22E227140011E2C2 /* Networking */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +142,7 @@
 			children = (
 				378F37B922E2669B0011E2C2 /* SLRFetchArtist.h */,
 				378F37BA22E2669B0011E2C2 /* SLRFetchArtist.m */,
+				373EC6A022E220B000570D94 /* Category */,
 			);
 			path = Networking;
 			sourceTree = "<group>";

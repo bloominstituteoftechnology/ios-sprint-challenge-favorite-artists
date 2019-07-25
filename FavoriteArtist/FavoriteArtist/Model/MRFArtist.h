@@ -12,13 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MRFArtist : NSObject
 
-@property NSString *artist;
-@property int yearFormed;
-@property NSString *bio;
+@property (nonatomic, readonly, copy)NSString *artist;
+@property (nonatomic, readonly, copy) NSString *yearFormed;
+@property (nonatomic, readonly, copy) NSString *bio;
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 - (instancetype)initWithArtistName:(NSString *)name
-                        yearFormed:(int)yearFormed
+                        yearFormed:(NSString *)yearFormed
                                bio:(NSString *)bio;
 @end
 

@@ -8,6 +8,7 @@
 
 #import "MRFNetworking.h"
 #import "MRFArtist.h"
+#import "MRFArtist+MRFJSONSerialization.h"
 
 @implementation MRFNetworking
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";

@@ -10,21 +10,7 @@
 
 @implementation MRFArtist
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    
-    self = [super init];
-    
-    if (self){
-        _artist = dictionary[@"strArtist"];
-        _yearFormed = [dictionary[@"intFormedYear"] intValue];
-        _bio = dictionary[@"strBiographyEN"];
-        
-    }
-    return self;
-    
-}
-
-- (instancetype)initWithArtistName:(NSString *)name yearFormed:(int)yearFormed bio:(NSString *)bio{
+- (instancetype)initWithArtistName:(NSString *)name yearFormed:(NSString *)yearFormed bio:(NSString *)bio{
     self = [super init];
     if (self){
         _artist = name;

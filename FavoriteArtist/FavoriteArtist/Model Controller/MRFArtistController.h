@@ -13,13 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MRFArtistController : NSObject
 
-@property (nonatomic, readonly) NSArray *artists;
+@property (nonatomic, readonly, copy) NSArray *artists;
 @property (nonatomic) NSURL  *persistentURL;
-
-- (void)saveToPersistenceStore;
+- (void)saveToPersistenceStoreWithArtist:(MRFArtist *)artist;
+//- (void)saveToPersistenceStore;
 - (void)loadFromPersistenceStore;
 - (void)createArtistWithName:(NSString *)name
-                  yearFormed:(int)yearFormed
+                  yearFormed:(NSString *)yearFormed
                          bio:(NSString *)bio;
 
 

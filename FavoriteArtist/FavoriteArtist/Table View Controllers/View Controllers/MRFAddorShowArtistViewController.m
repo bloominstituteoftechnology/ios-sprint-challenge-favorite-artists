@@ -70,7 +70,7 @@
     //grab information out of task
     self.title = self.artist.artist;
     self.nameLabel.text = self.artist.artist;
-    NSString *yearFormedString = [[NSString alloc] initWithFormat:@"%i", self.artist.yearFormed];
+    NSString *yearFormedString = [[NSString alloc] initWithFormat:@"%@", self.artist.yearFormed];
     self.yearFormedLabel.text = yearFormedString;
     self.textView.text = self.artist.bio;
     self.searchBar.hidden = YES;
@@ -84,8 +84,9 @@
     MRFArtist *artist = isNewArtist ? [[MRFArtist alloc]init] : self.artist;
     
     // TODO SAVE ARTIST
-     [_artistContrller createArtistWithName:artist.artist yearFormed:artist.yearFormed  bio:artist.bio];
-
-    NSLog(@"This was the artist we just created:%@", artist.bio);
+//     [_artistContrller createArtistWithName:artist.artist yearFormed:artist.yearFormed  bio:artist.bio];
+    [self.artistContrller createArtistWithName:artist.artist yearFormed:artist.yearFormed  bio:artist.bio];
+    [[self navigationController] popViewControllerAnimated:YES];
+//    NSLog(@"This was the artist we just created:%@", artist.bio);
 }
 @end

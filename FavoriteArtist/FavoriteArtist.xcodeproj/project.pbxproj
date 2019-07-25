@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0098B322E94B57008F7FEF /* MRFArtist+MRFJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0098B222E94B57008F7FEF /* MRFArtist+MRFJSONSerialization.m */; };
 		1BEC87DD22E148D3005519A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC87DC22E148D3005519A1 /* AppDelegate.m */; };
 		1BEC87E322E148D3005519A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEC87E122E148D3005519A1 /* Main.storyboard */; };
 		1BEC87E522E148D4005519A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BEC87E422E148D4005519A1 /* Assets.xcassets */; };
 		1BEC87E822E148D4005519A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEC87E622E148D4005519A1 /* LaunchScreen.storyboard */; };
 		1BEC87EB22E148D4005519A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC87EA22E148D4005519A1 /* main.m */; };
 		1BEC87F422E148FD005519A1 /* MRFArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC87F322E148FD005519A1 /* MRFArtist.m */; };
-		1BEC87FC22E1EEF2005519A1 /* NSJSONSerialization+NSJSONSerialization_InitializeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC87FB22E1EEF2005519A1 /* NSJSONSerialization+NSJSONSerialization_InitializeModel.m */; };
 		1BEC880022E1F18C005519A1 /* MRFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC87FF22E1F18C005519A1 /* MRFNetworking.m */; };
 		1BEC880322E1FCD0005519A1 /* MRFArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC880222E1FCD0005519A1 /* MRFArtistController.m */; };
 		1BEC880722E21EE1005519A1 /* MRFArtistListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC880622E21EE1005519A1 /* MRFArtistListTableViewController.m */; };
@@ -21,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B0098B122E94B57008F7FEF /* MRFArtist+MRFJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MRFArtist+MRFJSONSerialization.h"; sourceTree = "<group>"; };
+		1B0098B222E94B57008F7FEF /* MRFArtist+MRFJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MRFArtist+MRFJSONSerialization.m"; sourceTree = "<group>"; };
 		1BEC87D822E148D3005519A1 /* FavoriteArtist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteArtist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEC87DB22E148D3005519A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BEC87DC22E148D3005519A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,8 +33,6 @@
 		1BEC87EA22E148D4005519A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BEC87F222E148FD005519A1 /* MRFArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRFArtist.h; sourceTree = "<group>"; };
 		1BEC87F322E148FD005519A1 /* MRFArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRFArtist.m; sourceTree = "<group>"; };
-		1BEC87FA22E1EEF2005519A1 /* NSJSONSerialization+NSJSONSerialization_InitializeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+NSJSONSerialization_InitializeModel.h"; sourceTree = "<group>"; };
-		1BEC87FB22E1EEF2005519A1 /* NSJSONSerialization+NSJSONSerialization_InitializeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+NSJSONSerialization_InitializeModel.m"; sourceTree = "<group>"; };
 		1BEC87FE22E1F18C005519A1 /* MRFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRFNetworking.h; sourceTree = "<group>"; };
 		1BEC87FF22E1F18C005519A1 /* MRFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRFNetworking.m; sourceTree = "<group>"; };
 		1BEC880122E1FCD0005519A1 /* MRFArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRFArtistController.h; sourceTree = "<group>"; };
@@ -135,8 +135,8 @@
 		1BEC87F922E1EE6D005519A1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				1BEC87FA22E1EEF2005519A1 /* NSJSONSerialization+NSJSONSerialization_InitializeModel.h */,
-				1BEC87FB22E1EEF2005519A1 /* NSJSONSerialization+NSJSONSerialization_InitializeModel.m */,
+				1B0098B122E94B57008F7FEF /* MRFArtist+MRFJSONSerialization.h */,
+				1B0098B222E94B57008F7FEF /* MRFArtist+MRFJSONSerialization.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -231,12 +231,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BEC87FC22E1EEF2005519A1 /* NSJSONSerialization+NSJSONSerialization_InitializeModel.m in Sources */,
 				1BEC87EB22E148D4005519A1 /* main.m in Sources */,
 				1BEC87F422E148FD005519A1 /* MRFArtist.m in Sources */,
 				1BEC87DD22E148D3005519A1 /* AppDelegate.m in Sources */,
 				1BEC880022E1F18C005519A1 /* MRFNetworking.m in Sources */,
 				1BEC880322E1FCD0005519A1 /* MRFArtistController.m in Sources */,
+				1B0098B322E94B57008F7FEF /* MRFArtist+MRFJSONSerialization.m in Sources */,
 				1BEC880722E21EE1005519A1 /* MRFArtistListTableViewController.m in Sources */,
 				1BEC880A22E21F46005519A1 /* MRFAddorShowArtistViewController.m in Sources */,
 			);

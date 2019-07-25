@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //CALL LOAD FROM PERSISTENCE STORE
+    [self.artistController loadFromPersistenceStore];
+    [self.tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

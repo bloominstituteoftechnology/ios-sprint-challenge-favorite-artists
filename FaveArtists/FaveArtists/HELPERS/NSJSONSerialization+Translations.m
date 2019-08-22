@@ -19,12 +19,12 @@
         
         NSString *intFormedYear = dictionary[@"intFormedYear"];
         
+        
         if (strArtist && strBiographyEN && intFormedYear) {
-
-
             self = [self initWithStrArtist:strArtist
                             strBiographyEN:strBiographyEN
                              intFormedYear:intFormedYear.longLongValue];
+            
         } else {
             NSLog(@"Invalid artist: %@ JSON object", strArtist);
             self = nil;

@@ -20,12 +20,13 @@
 @property NSMutableArray *internalBands;
 @property LSIArtist *fetchedArtist;
 
+
 @end
 
 
 
-
 @implementation LSIArtistController
+
 
 - (instancetype)init
 {
@@ -41,13 +42,12 @@
 - (void)fetchArtistWith:(NSString *)searchTerm
         completionBlock:(LSIArtistFetcherCompletionBlock)completionBlock {
     
-    
-    
     // Setup the URL
     NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php?s=";
     NSString *searchURLString = [NSString stringWithFormat:@"%@%@", baseURL,
-     searchTerm];
+                                 searchTerm];
     NSURL *searchURL = [NSURL URLWithString:searchURLString];
+    
     
     // DELETE AFTER SUCCESSFUL RUN
     NSLog(@"URL: %@", searchURL);

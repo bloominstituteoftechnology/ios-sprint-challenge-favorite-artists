@@ -55,6 +55,10 @@
 
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    // Must refactor this code to account for spaces, as blanks like between Bruce and Springsteen cause the URL call to have a gap; solution is to add a method which changes string to snake_case such that "Bruce Springsteen" string becomes "Bruce_Springsteen"
+    
+    // For multiple-word artists/bands, user can type Bruce_Springsteen or Men_at_work
 
     NSString *searchText = self.artistSearchBar.text;
     
@@ -64,9 +68,14 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateViews];
+                self.artistSearchBar.text = @"";
             });
         } else {
-            NSLog(@"No data returned; most likely improperly typed artist");
+            NSLog(@"No data returned; artists names must be one-word only, try Supertramp, Boston, Kansas etc...");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.artistSearchBar.text = @"";
+                [self updateViews];
+            });
         }
     }];
     // CONSIDER REDUNDANCY HERE... experiment with removing one or the other updateViews

@@ -14,10 +14,13 @@
 		3307A5602350D63700E5E845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3307A55E2350D63700E5E845 /* LaunchScreen.storyboard */; };
 		3307A5632350D63700E5E845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307A5622350D63700E5E845 /* main.m */; };
 		33C3B6862350D94800EC48EB /* REPArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6852350D94800EC48EB /* REPArtistDetailViewController.m */; };
-		33C3B68C2350DA3200EC48EB /* Artist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B68A2350DA3200EC48EB /* Artist.xcdatamodeld */; };
-		33C3B68F2350DAA200EC48EB /* REPArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B68E2350DAA200EC48EB /* REPArtistController.m */; };
+		33C3B68C2350DA3200EC48EB /* REPArtist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B68A2350DA3200EC48EB /* REPArtist.xcdatamodeld */; };
 		33C3B6912350DAC700EC48EB /* REPArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6902350DAC700EC48EB /* REPArtistTableViewController.m */; };
 		33C3B6992350DB0500EC48EB /* Favorite_Artists_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6982350DB0500EC48EB /* Favorite_Artists_ObjCTests.m */; };
+		33C3B6A22350DD6F00EC48EB /* ArtistResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C3B6A12350DD6F00EC48EB /* ArtistResults.json */; };
+		33C3B6A52350DDDE00EC48EB /* REPArtist+REPConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6A42350DDDE00EC48EB /* REPArtist+REPConvenience.m */; };
+		33C3B6A92350DE5500EC48EB /* REPCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6A82350DE5500EC48EB /* REPCoreDataStack.m */; };
+		33C3B6AC2350DF1700EC48EB /* REPArtistNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6AB2350DF1700EC48EB /* REPArtistNetController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,13 +48,18 @@
 		33C3B6852350D94800EC48EB /* REPArtistDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistDetailViewController.m; sourceTree = "<group>"; };
 		33C3B6872350D95C00EC48EB /* REPArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPArtistTableViewController.h; sourceTree = "<group>"; };
 		33C3B68B2350DA3200EC48EB /* Artist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Artist.xcdatamodel; sourceTree = "<group>"; };
-		33C3B68D2350DAA200EC48EB /* REPArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPArtistController.h; sourceTree = "<group>"; };
-		33C3B68E2350DAA200EC48EB /* REPArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPArtistController.m; sourceTree = "<group>"; };
 		33C3B6902350DAC700EC48EB /* REPArtistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistTableViewController.m; sourceTree = "<group>"; };
 		33C3B6962350DB0500EC48EB /* Favorite Artists ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Favorite Artists ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C3B6982350DB0500EC48EB /* Favorite_Artists_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Favorite_Artists_ObjCTests.m; sourceTree = "<group>"; };
 		33C3B69A2350DB0500EC48EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C3B6A02350DBB200EC48EB /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		33C3B6A12350DD6F00EC48EB /* ArtistResults.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ArtistResults.json; sourceTree = "<group>"; };
+		33C3B6A32350DDDE00EC48EB /* REPArtist+REPConvenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "REPArtist+REPConvenience.h"; sourceTree = "<group>"; };
+		33C3B6A42350DDDE00EC48EB /* REPArtist+REPConvenience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "REPArtist+REPConvenience.m"; sourceTree = "<group>"; };
+		33C3B6A72350DE5500EC48EB /* REPCoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPCoreDataStack.h; sourceTree = "<group>"; };
+		33C3B6A82350DE5500EC48EB /* REPCoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPCoreDataStack.m; sourceTree = "<group>"; };
+		33C3B6AA2350DF1700EC48EB /* REPArtistNetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPArtistNetController.h; sourceTree = "<group>"; };
+		33C3B6AB2350DF1700EC48EB /* REPArtistNetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistNetController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 				3307A56C2350D76B00E5E845 /* Model Controller */,
 				3307A56B2350D74300E5E845 /* Model */,
 				3307A56A2350D73F00E5E845 /* ViewControllers */,
+				33C3B6A62350DDF000EC48EB /* Helpers */,
 				3307A5692350D70900E5E845 /* Misc */,
 			);
 			path = "Favorite Artists ObjC";
@@ -131,7 +140,9 @@
 		3307A56B2350D74300E5E845 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				33C3B68A2350DA3200EC48EB /* Artist.xcdatamodeld */,
+				33C3B68A2350DA3200EC48EB /* REPArtist.xcdatamodeld */,
+				33C3B6A32350DDDE00EC48EB /* REPArtist+REPConvenience.h */,
+				33C3B6A42350DDDE00EC48EB /* REPArtist+REPConvenience.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,8 +150,8 @@
 		3307A56C2350D76B00E5E845 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				33C3B68D2350DAA200EC48EB /* REPArtistController.h */,
-				33C3B68E2350DAA200EC48EB /* REPArtistController.m */,
+				33C3B6AA2350DF1700EC48EB /* REPArtistNetController.h */,
+				33C3B6AB2350DF1700EC48EB /* REPArtistNetController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -150,9 +161,19 @@
 			children = (
 				33C3B6A02350DBB200EC48EB /* LSIFileHelper.h */,
 				33C3B6982350DB0500EC48EB /* Favorite_Artists_ObjCTests.m */,
+				33C3B6A12350DD6F00EC48EB /* ArtistResults.json */,
 				33C3B69A2350DB0500EC48EB /* Info.plist */,
 			);
 			path = "Favorite Artists ObjCTests";
+			sourceTree = "<group>";
+		};
+		33C3B6A62350DDF000EC48EB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				33C3B6A72350DE5500EC48EB /* REPCoreDataStack.h */,
+				33C3B6A82350DE5500EC48EB /* REPCoreDataStack.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C3B6A22350DD6F00EC48EB /* ArtistResults.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,11 +280,13 @@
 			files = (
 				33C3B6862350D94800EC48EB /* REPArtistDetailViewController.m in Sources */,
 				3307A5522350D63700E5E845 /* AppDelegate.m in Sources */,
+				33C3B6A92350DE5500EC48EB /* REPCoreDataStack.m in Sources */,
+				33C3B6A52350DDDE00EC48EB /* REPArtist+REPConvenience.m in Sources */,
 				3307A5632350D63700E5E845 /* main.m in Sources */,
 				3307A5552350D63700E5E845 /* SceneDelegate.m in Sources */,
-				33C3B68C2350DA3200EC48EB /* Artist.xcdatamodeld in Sources */,
+				33C3B68C2350DA3200EC48EB /* REPArtist.xcdatamodeld in Sources */,
 				33C3B6912350DAC700EC48EB /* REPArtistTableViewController.m in Sources */,
-				33C3B68F2350DAA200EC48EB /* REPArtistController.m in Sources */,
+				33C3B6AC2350DF1700EC48EB /* REPArtistNetController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,13 +543,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		33C3B68A2350DA3200EC48EB /* Artist.xcdatamodeld */ = {
+		33C3B68A2350DA3200EC48EB /* REPArtist.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				33C3B68B2350DA3200EC48EB /* Artist.xcdatamodel */,
 			);
 			currentVersion = 33C3B68B2350DA3200EC48EB /* Artist.xcdatamodel */;
-			path = Artist.xcdatamodeld;
+			path = REPArtist.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

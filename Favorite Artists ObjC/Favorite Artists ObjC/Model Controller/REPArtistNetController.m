@@ -6,9 +6,9 @@
 //  Copyright © 2019 Red_Egg Productions. All rights reserved.
 //
 
-#import "REPArtistController.h"
+#import "REPArtistNetController.h"
 
-@implementation REPArtistController
+@implementation REPArtistNetController
 
 static NSString const *baseURLString = @"https://theaudiodb.com/api/v1/json/{APIKEY}/search.php?s={Artist name}";
 static NSString const *apiKey = @"f641060b2a95d6cca0d96a5230be574b";

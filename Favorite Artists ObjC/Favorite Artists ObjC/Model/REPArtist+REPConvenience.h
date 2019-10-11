@@ -1,13 +1,15 @@
 //
-//  REPArtistController.h
+//  REPArtist+REPConvenience.h
 //  Favorite Artists ObjC
 //
 //  Created by Michael Redig on 10/11/19.
 //  Copyright © 2019 Red_Egg Productions. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "REPArtist+CoreDataClass.h"
 
-@interface REPArtistController : NSObject
+@interface REPArtist (REPConvenience)
 
 @end
+

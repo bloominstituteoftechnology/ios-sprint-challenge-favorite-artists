@@ -15,6 +15,7 @@
 		EF2793422350D2D000D9F0BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2793412350D2D000D9F0BE /* main.m */; };
 		EF27934F2350D67200D9F0BE /* LSITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27934E2350D67200D9F0BE /* LSITests.m */; };
 		EF2793582350D71000D9F0BE /* LSIArtist.json in Resources */ = {isa = PBXBuildFile; fileRef = EF2793572350D71000D9F0BE /* LSIArtist.json */; };
+		EF27935B2350D97A00D9F0BE /* LSIArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27935A2350D97A00D9F0BE /* LSIArtistTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		EF2793502350D67300D9F0BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF2793562350D68900D9F0BE /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
 		EF2793572350D71000D9F0BE /* LSIArtist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LSIArtist.json; sourceTree = "<group>"; };
+		EF2793592350D97A00D9F0BE /* LSIArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistTableViewController.h; sourceTree = "<group>"; };
+		EF27935A2350D97A00D9F0BE /* LSIArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				EF2793302350D2B600D9F0BE /* AppDelegate.m */,
 				EF2793322350D2B600D9F0BE /* SceneDelegate.h */,
 				EF2793332350D2B600D9F0BE /* SceneDelegate.m */,
+				EF2793592350D97A00D9F0BE /* LSIArtistTableViewController.h */,
+				EF27935A2350D97A00D9F0BE /* LSIArtistTableViewController.m */,
 				EF2793382350D2B600D9F0BE /* Main.storyboard */,
 				EF27933B2350D2D000D9F0BE /* Assets.xcassets */,
 				EF27933D2350D2D000D9F0BE /* LaunchScreen.storyboard */,
@@ -212,6 +217,7 @@
 				EF2793312350D2B600D9F0BE /* AppDelegate.m in Sources */,
 				EF2793422350D2D000D9F0BE /* main.m in Sources */,
 				EF2793342350D2B600D9F0BE /* SceneDelegate.m in Sources */,
+				EF27935B2350D97A00D9F0BE /* LSIArtistTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,6 +23,9 @@
 		75F2FB722350E3D0006007D8 /* BYArtist+BYNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB612350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m */; };
 		75F2FB752350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB742350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m */; };
 		75F2FB782350ECFE006007D8 /* BYArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB772350ECFE006007D8 /* BYArtistViewController.m */; };
+		75F2FB7B2350EDDE006007D8 /* BYArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB7A2350EDDE006007D8 /* BYArtistController.m */; };
+		75F2FB7C2350F371006007D8 /* BYArtistController.h in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB792350EDDE006007D8 /* BYArtistController.h */; };
+		75F2FB7D2350F371006007D8 /* BYArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB7A2350EDDE006007D8 /* BYArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,8 @@
 		75F2FB742350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
 		75F2FB762350ECFE006007D8 /* BYArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYArtistViewController.h; sourceTree = "<group>"; };
 		75F2FB772350ECFE006007D8 /* BYArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYArtistViewController.m; sourceTree = "<group>"; };
+		75F2FB792350EDDE006007D8 /* BYArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYArtistController.h; sourceTree = "<group>"; };
+		75F2FB7A2350EDDE006007D8 /* BYArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,13 +114,15 @@
 				75F2FB412350D752006007D8 /* LaunchScreen.storyboard */,
 				75F2FB442350D752006007D8 /* Info.plist */,
 				75F2FB452350D752006007D8 /* main.m */,
+				75F2FB792350EDDE006007D8 /* BYArtistController.h */,
+				75F2FB7A2350EDDE006007D8 /* BYArtistController.m */,
 				75F2FB5D2350D877006007D8 /* BYArtist.h */,
 				75F2FB5E2350D877006007D8 /* BYArtist.m */,
 				75F2FB602350D89C006007D8 /* BYArtist+BYNSJSONSerialization.h */,
 				75F2FB612350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m */,
-				75F2FB732350EB8E006007D8 /* BYFavoriteArtistsTableViewController.h */,
 				75F2FB762350ECFE006007D8 /* BYArtistViewController.h */,
 				75F2FB772350ECFE006007D8 /* BYArtistViewController.m */,
+				75F2FB732350EB8E006007D8 /* BYFavoriteArtistsTableViewController.h */,
 				75F2FB742350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m */,
 			);
 			path = "Artist-objc";
@@ -185,6 +192,7 @@
 					};
 					75F2FB522350D7C0006007D8 = {
 						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 75F2FB2F2350D74D006007D8;
 					};
 				};
 			};
@@ -238,6 +246,7 @@
 				75F2FB352350D74D006007D8 /* AppDelegate.m in Sources */,
 				75F2FB462350D752006007D8 /* main.m in Sources */,
 				75F2FB622350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m in Sources */,
+				75F2FB7B2350EDDE006007D8 /* BYArtistController.m in Sources */,
 				75F2FB382350D74D006007D8 /* SceneDelegate.m in Sources */,
 				75F2FB752350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m in Sources */,
 			);
@@ -247,6 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F2FB7C2350F371006007D8 /* BYArtistController.h in Sources */,
+				75F2FB7D2350F371006007D8 /* BYArtistController.m in Sources */,
 				75F2FB6F2350E3D0006007D8 /* BYArtist.h in Sources */,
 				75F2FB702350E3D0006007D8 /* BYArtist.m in Sources */,
 				75F2FB712350E3D0006007D8 /* BYArtist+BYNSJSONSerialization.h in Sources */,
@@ -443,6 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bradleyyin.Artist-objcTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Artist-objc.app/Artist-objc";
 			};
 			name = Debug;
 		};
@@ -460,6 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bradleyyin.Artist-objcTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Artist-objc.app/Artist-objc";
 			};
 			name = Release;
 		};

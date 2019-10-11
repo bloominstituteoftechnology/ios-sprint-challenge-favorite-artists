@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BYArtist (BYNSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithFileDictionary:(NSDictionary *)dictionary;
 - (NSDictionary *)toDictionary;
 
 @end

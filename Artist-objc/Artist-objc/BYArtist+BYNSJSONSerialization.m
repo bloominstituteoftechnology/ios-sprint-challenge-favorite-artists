@@ -25,8 +25,19 @@
     return self;
 }
 
+- (instancetype)initWithFileDictionary:(NSDictionary *)dictionary {
+    if(self = [super init]) {
+        
+        self.name = dictionary[@"name"];
+        self.biography = dictionary[@"biography"];
+        self.year = [dictionary[@"year"] intValue];
+        
+    }
+    return self;
+}
+
 - (NSDictionary *)toDictionary {
-    NSDictionary *dictionary = [[NSDictionary alloc] init];
+    NSDictionary *dictionary = [[NSMutableDictionary alloc] init];
     [dictionary setValue: self.name forKey:@"name"];
     [dictionary setValue: self.biography forKey:@"biography"];
     [dictionary setValue: [NSNumber numberWithInt:self.year] forKey:@"year"];

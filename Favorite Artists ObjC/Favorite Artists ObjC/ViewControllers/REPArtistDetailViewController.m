@@ -27,4 +27,8 @@
 }
 
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+	NSLog(@"search for %@", searchBar.text);
+}
+
 @end

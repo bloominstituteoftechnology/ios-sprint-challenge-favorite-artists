@@ -73,6 +73,9 @@
                             <searchBar contentMode="redraw" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-Gc-zkC">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SG0-BL-eAQ"/>
+                                </connections>
                             </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="P8g-XO-Bf2">
                                 <rect key="frame" x="20" y="164" width="374" height="698"/>

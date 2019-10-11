@@ -34,9 +34,12 @@
         //update
         [self.controller update:self.artist withArtistName:self.artistName.text biography:self.bioTextView.text formedYear: [self.yearFormed.text intValue]];
     } else {
-        //save with persistence
+        //save to array
+        //save the array of artists to persistence on the table view
+        [self.controller addArtistWithName:self.artistName.text artistBio:self.bioTextView.text formedYear:[self.yearFormed.text intValue]];
         
     }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

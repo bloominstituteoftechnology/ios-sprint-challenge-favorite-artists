@@ -79,9 +79,6 @@ biography:(NSString *)bio
    return [documents URLByAppendingPathComponent:@"FavoriteArtists.plist"];
 }
 
--(void)saveToPersistentStore {
-    
-}
 
 
 @end

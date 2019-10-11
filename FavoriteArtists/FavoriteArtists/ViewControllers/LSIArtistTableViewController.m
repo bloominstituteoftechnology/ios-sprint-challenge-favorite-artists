@@ -47,7 +47,7 @@
     
     LSIArtist *artist = [self.controller objectInArtistAtIndex:indexPath.row];
     cell.textLabel.text = artist.artistName;
-    cell.textLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)artist.formedYear];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)artist.formedYear];
     return cell;
 }
 

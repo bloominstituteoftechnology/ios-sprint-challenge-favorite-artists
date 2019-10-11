@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class LSIArtist;
-@interface LSIArtist : NSObject
+@interface LSIArtist : NSObject <NSCoding>
 @property NSString *artistName;
 @property NSString *artistBio;
 @property int formedYear;

@@ -29,6 +29,14 @@
 
 
 - (IBAction)saveTapped:(id)sender {
+    
+    if (self.artist) {
+        //update
+        [self.controller update:self.artist withArtistName:self.artistName.text biography:self.bioTextView.text formedYear: [self.yearFormed.text intValue]];
+    } else {
+        //save with persistence
+        
+    }
 }
 
 
@@ -37,6 +45,20 @@
     self.artistName.text = self.artist.artistName;
     self.bioTextView.text = self.artist.artistBio;
     self.yearFormed.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.artist.formedYear];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.controller fetchArtistWithName:searchBar.text completionBlock:^(LSIArtist *receivedArtist, NSError *error) {
+        if (error) {
+            NSLog(@"Unable to fetch artist");
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.artist = receivedArtist;
+                [self updateViews];
+                
+            });
+        }
+    }];
 }
 
 @end

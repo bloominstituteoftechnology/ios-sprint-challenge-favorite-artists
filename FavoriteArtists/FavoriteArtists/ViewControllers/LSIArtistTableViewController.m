@@ -7,6 +7,9 @@
 //
 
 #import "LSIArtistTableViewController.h"
+#import "LSIArtistDetailViewController.h"
+#import "LSIArtist.h"
+#import "LSIArtistController.h"
 
 @interface LSIArtistTableViewController ()
 
@@ -14,9 +17,9 @@
 
 @implementation LSIArtistTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source

@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class BYArtistController;
+@class BYArtist;
+
 @interface BYArtistViewController : UIViewController
+
+@property BYArtistController *controller;
+@property BYArtist *artist;
 
 @end
 

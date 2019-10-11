@@ -12,12 +12,15 @@
 
 @implementation BYArtistController
 
+
+static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?";
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         _artists = [[NSMutableArray alloc] initWithArray:@[]];
-        //[self loadArtists];
+        [self loadArtists];
     }
     return self;
 }
@@ -50,5 +53,60 @@
         BYArtist *artist = [[BYArtist alloc] initWithFileDictionary:dictionary];
         [self.artists addObject:artist];
     }
+}
+
+- (void)fetchArtistWithKeyword:(NSString *)keyword completitionBlock:(BYArtistCompletion)completionBlock {
+    // Create API request
+    
+    // Setup the URL
+    
+    
+    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
+    
+    // Query Parameters
+    NSArray *queryItems = @[
+                            [NSURLQueryItem queryItemWithName:@"s" value:[NSString stringWithFormat:@"%@",keyword]]
+                            ];
+    
+    urlComponents.queryItems = queryItems;
+    
+    NSURL *url = urlComponents.URL;
+    NSLog(@"URL: %@", url);
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        // Handle the responses (error vs. data)
+
+        // Call the completion block as needed
+        // check the errors
+        
+        if (error) {
+            NSLog(@"Error fetching artists: %@", error);
+            completionBlock(nil, error);
+            return;
+        }
+        
+        // parse the data
+        NSError *jsonError = nil;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        if (jsonError) {
+            NSLog(@"JSON Error: %@", jsonError);
+            completionBlock(nil, jsonError);
+            return;
+        }
+        
+        // TODO: Parse the data
+        NSLog(@"JSON: %@", json);
+        
+        BYArtist *artist = [[BYArtist alloc] initWithDictionary:json];
+        
+  
+        completionBlock(artist, nil);
+        
+    }];
+    [task resume];
+    
+    
+    
 }
 @end

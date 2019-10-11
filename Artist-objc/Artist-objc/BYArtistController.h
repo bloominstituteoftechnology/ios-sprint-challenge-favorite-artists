@@ -14,10 +14,13 @@
 
 @property NSMutableArray *artists;
 
+typedef void(^BYArtistCompletion)(BYArtist *, NSError *);
+
 - (void)addArtist:(BYArtist *)artist;
 - (void)loadArtists;
 - (void)saveArtists;
 
+- (void)fetchArtistWithKeyword:(NSString *)keyword completitionBlock:(BYArtistCompletion)completionBlock;
 
 @end
 

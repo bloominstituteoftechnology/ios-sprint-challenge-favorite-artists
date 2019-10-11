@@ -43,7 +43,6 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return [self.controller.artists count];
 }
 
@@ -52,7 +51,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     BYArtist *artist = self.controller.artists[indexPath.row];
     cell.textLabel.text = artist.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", artist.year];
+    if (artist.year == 0) {
+        cell.detailTextLabel.text = @"unknown formed year";
+    } else {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", artist.year];
+    }
+    
     
     return cell;
 }

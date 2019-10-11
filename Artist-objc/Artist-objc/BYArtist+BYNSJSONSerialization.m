@@ -19,8 +19,11 @@
         NSDictionary *artist = artists[0];
         self.name = artist[@"strArtist"];
         self.biography = artist[@"strBiographyEN"];
-        self.year = [artist[@"intFormedYear"] intValue];
-        
+        if (artist[@"intFormedYear"] == [NSNull null]) {
+            self.year = 0;
+        } else {
+            self.year = [artist[@"intFormedYear"] intValue];
+        }
     }
     return self;
 }
@@ -31,7 +34,6 @@
         self.name = dictionary[@"name"];
         self.biography = dictionary[@"biography"];
         self.year = [dictionary[@"year"] intValue];
-        
     }
     return self;
 }

@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "LSIFileHelper.h"
-#import "JSArtist.h"
+#import "Artist.h"
 
 @interface ArtistreeTests : XCTestCase
 
@@ -30,7 +30,7 @@
     NSLog(@"Error: %@", error);
     NSLog(@"JSON: %@", json);
 	
-	JSArtist *artist = [[JSArtist alloc] initWithDict: json];
+	Artist *artist = [[Artist alloc] initWithDict: json];
 	XCTAssertNotNil(artist);
 	XCTAssertEqualObjects(@"Coldplay", artist.name);	
 }

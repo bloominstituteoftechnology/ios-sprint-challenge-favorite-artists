@@ -15,11 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSArtistsController : NSObject
 
-@property (readonly) NSMutableArray *artists;
+@property (assign, nonatomic) NSArray *artists;
 
 - (void)addArtist:(JSArtist *)artist;
-- (void)removeArtistAtIndex:(NSNumber *)index;
+- (void)removeArtistAtIndex:(NSUInteger)index;
 - (void)fetchArtistByName:(NSString *)artistName completion:(myCompletion)completion;
+
 
 @end
 

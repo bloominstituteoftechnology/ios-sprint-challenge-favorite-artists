@@ -8,6 +8,8 @@
 
 #import "JSArtistsController.h"
 #import "JSArtist.h"
+#import "AppDelegate.h"
+#import <CoreData/CoreData.h>
 
 @interface JSArtistsController ()
 
@@ -15,23 +17,50 @@
 
 @implementation JSArtistsController
 
+//MARK: - Properties
+
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
-- (instancetype)init
-{
-	self = [super init];
-	if (self) {
-		_artists = [[NSMutableArray alloc] init];
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+	id delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+	if( [delegate performSelector:@selector(persistentContainer)] ){
+		context = [[delegate persistentContainer] viewContext];
 	}
-	return self;
+	return context;
 }
+
+- (NSArray *)artists {
+	NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Artist"];
+    return [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+}
+
+//MARK: - Helpers
 
 - (void)addArtist:(JSArtist *)artist {
-	[self.artists addObject:artist];
+	NSManagedObjectContext *context = [self managedObjectContext];
+	NSManagedObject *newArtist = [NSEntityDescription insertNewObjectForEntityForName:@"Artist" inManagedObjectContext:context];
+	
+	[newArtist setValue:artist.name forKey:@"name"];
+	[newArtist setValue:artist.biography forKey:@"biography"];
+	[newArtist setValue:[NSNumber numberWithInt:artist.yearFormed] forKey:@"yearFormed"];
+	
+	NSError *error = nil;
+	if (![context save:&error]) {
+		NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+	}
+    
 }
 
-- (void)removeArtistAtIndex:(NSNumber *)index {
-	[self.artists removeObject:index];
+- (void)removeArtistAtIndex:(NSUInteger)index {
+	NSManagedObjectContext *context = [self managedObjectContext];
+	[context deleteObject:[self.artists objectAtIndex:index]];
+	
+	NSError *error = nil;
+	if (![context save:&error]) {
+		NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+	}
 }
 
 - (void)fetchArtistByName:(NSString *)artistName completion:(myCompletion)completion {

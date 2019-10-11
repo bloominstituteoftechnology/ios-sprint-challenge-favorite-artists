@@ -22,6 +22,18 @@
     [self.tableView reloadData];
 }
 
+
+-(LSIArtistController *)controller {
+    if (_controller) {
+        return _controller;
+    } else {
+        _controller = [[LSIArtistController alloc] init];
+        return _controller;
+    }
+}
+
+
+
 #pragma mark - Table view data source
 
 

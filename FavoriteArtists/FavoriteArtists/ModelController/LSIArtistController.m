@@ -60,6 +60,15 @@ artistBio:(NSString *)bio
     [self.artists addObject:artist];
 }
 
+-(void)update:(LSIArtist *)artist
+withArtistName:(NSString *)name
+biography:(NSString *)bio
+   formedYear:(int)year {
+    artist.artistName = name;
+    artist.artistBio = bio;
+    artist.formedYear = year;
+}
+
 
 
 

@@ -13,7 +13,7 @@ typedef (^LSIArtistControllerCompletionBlock)(Artist *, NSError *);
 @class LSIArtist;
 
 @interface LSIArtistController : NSObject
-
+-(void)fetchArtistWithName:(NSString *)artistName completionBlock:(LSIArtistCOntrollerCompletionBlock)completionBlock;
 
 
 @end

@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSIArtistController;
+@class LSIArtist;
 
 @interface LSIArtistDetailViewController : UIViewController
+
 
 @end
 

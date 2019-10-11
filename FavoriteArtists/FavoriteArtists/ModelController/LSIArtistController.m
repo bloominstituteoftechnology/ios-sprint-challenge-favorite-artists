@@ -24,6 +24,35 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/";
     return self;
 }
 
+-(void)fetchArtistWithName:(NSString *)artistName completionBlock:(LSIArtistControllerCompletionBlock)completionBlock {
+    NSString *search = @"search.php?s=";
+    NSString *completeURL = [NSString stringWithFormat:@"%@%@%@", baseURLString, search, artistName];
+//    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
+//    urlComponents.query = [@"search.php?s=" stringByAppendingFormat:@"%@", artistName];
+    NSURL *url = [[NSURL alloc] initWithString:completeURL];
+    NSLog(@"URL: %@", url);
+     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+         if (error) {
+             NSLog(@"Error fetching artist: %@", error);
+             completionBlock(nil, error);
+             return;
+         }
+          NSError *jsonError = nil;
+         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error: &error];
+         if (jsonError) {
+             NSLog(@"JSON Error: %@", jsonError);
+             completionBlock(nil, jsonError);
+             return;
+         }
+         LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:json];
+         [self.artists  addObject:artist];
+         completionBlock(artist, nil);
+     }];
+    [task resume];
+}
+
+
+
 
 
 @end

@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mW1-D5-Tp2" kind="show" id="40F-tx-QyC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,7 +50,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0B5-IX-JOF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SKg-th-cP6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SKg-th-cP6">
+                            <connections>
+                                <segue destination="mW1-D5-Tp2" kind="show" id="bdL-pT-NHF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCU-XW-hqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -64,6 +71,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dho-1v-Hh3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WfO-0P-zEj">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="jQ4-gK-Hjg"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PU-Zp-6RW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,4 +98,7 @@
             <point key="canvasLocation" x="-436.23188405797106" y="-147.32142857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="40F-tx-QyC"/>
+    </inferredMetricsTieBreakers>
 </document>

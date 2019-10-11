@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		B5F3477A2350D6F700FCD842 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347792350D6F700FCD842 /* AppDelegate.m */; };
 		B5F3477D2350D6F700FCD842 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3477C2350D6F700FCD842 /* SceneDelegate.m */; };
-		B5F347802350D6F700FCD842 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3477F2350D6F700FCD842 /* ViewController.m */; };
 		B5F347832350D6F700FCD842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F347812350D6F700FCD842 /* Main.storyboard */; };
 		B5F347862350D6F700FCD842 /* Artistree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F347842350D6F700FCD842 /* Artistree.xcdatamodeld */; };
 		B5F347882350D6F900FCD842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5F347872350D6F900FCD842 /* Assets.xcassets */; };
 		B5F3478B2350D6F900FCD842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F347892350D6F900FCD842 /* LaunchScreen.storyboard */; };
 		B5F3478E2350D6F900FCD842 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3478D2350D6F900FCD842 /* main.m */; };
 		B5F347982350D6F900FCD842 /* ArtistreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347972350D6F900FCD842 /* ArtistreeTests.m */; };
+		B5F347AC2350DA0900FCD842 /* JSArtistListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347AB2350DA0900FCD842 /* JSArtistListVC.m */; };
+		B5F347AF2350DA3300FCD842 /* JSArtistDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347AE2350DA3300FCD842 /* JSArtistDetailsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,6 @@
 		B5F347792350D6F700FCD842 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B5F3477B2350D6F700FCD842 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		B5F3477C2350D6F700FCD842 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		B5F3477E2350D6F700FCD842 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B5F3477F2350D6F700FCD842 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B5F347822350D6F700FCD842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5F347852350D6F700FCD842 /* Artistree.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Artistree.xcdatamodel; sourceTree = "<group>"; };
 		B5F347872350D6F900FCD842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +44,10 @@
 		B5F347932350D6F900FCD842 /* ArtistreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F347972350D6F900FCD842 /* ArtistreeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistreeTests.m; sourceTree = "<group>"; };
 		B5F347992350D6F900FCD842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5F347AA2350DA0900FCD842 /* JSArtistListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSArtistListVC.h; sourceTree = "<group>"; };
+		B5F347AB2350DA0900FCD842 /* JSArtistListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSArtistListVC.m; sourceTree = "<group>"; };
+		B5F347AD2350DA3300FCD842 /* JSArtistDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSArtistDetailsVC.h; sourceTree = "<group>"; };
+		B5F347AE2350DA3300FCD842 /* JSArtistDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSArtistDetailsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +172,10 @@
 		B5F347A92350D70F00FCD842 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B5F3477E2350D6F700FCD842 /* ViewController.h */,
-				B5F3477F2350D6F700FCD842 /* ViewController.m */,
+				B5F347AA2350DA0900FCD842 /* JSArtistListVC.h */,
+				B5F347AB2350DA0900FCD842 /* JSArtistListVC.m */,
+				B5F347AD2350DA3300FCD842 /* JSArtistDetailsVC.h */,
+				B5F347AE2350DA3300FCD842 /* JSArtistDetailsVC.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 		B5F3476D2350D6F700FCD842 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JS;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = Lambda;
 				TargetAttributes = {
@@ -276,7 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F3478E2350D6F900FCD842 /* main.m in Sources */,
-				B5F347802350D6F700FCD842 /* ViewController.m in Sources */,
+				B5F347AF2350DA3300FCD842 /* JSArtistDetailsVC.m in Sources */,
+				B5F347AC2350DA0900FCD842 /* JSArtistListVC.m in Sources */,
 				B5F347862350D6F700FCD842 /* Artistree.xcdatamodeld in Sources */,
 				B5F3477A2350D6F700FCD842 /* AppDelegate.m in Sources */,
 				B5F3477D2350D6F700FCD842 /* SceneDelegate.m in Sources */,

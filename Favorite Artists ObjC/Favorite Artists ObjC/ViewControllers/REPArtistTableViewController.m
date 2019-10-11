@@ -9,6 +9,7 @@
 #import "REPArtistTableViewController.h"
 #import "REPCoreDataStack.h"
 #import "REPArtist+CoreDataClass.h"
+#import "REPArtistDetailViewController.h"
 
 @interface REPArtistTableViewController ()
 
@@ -73,7 +74,14 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	NSLog(@"navigating to %@", segue.identifier);
+	if ([segue.identifier isEqualToString:@"ArtistDetailSegue"]) {
+		REPArtistDetailViewController *detailVC = segue.destinationViewController;
+
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		REPArtist *artist = [self.fetchedResultsController objectAtIndexPath:indexPath];
+
+		detailVC.artist = artist;
+	}
 }
 
 

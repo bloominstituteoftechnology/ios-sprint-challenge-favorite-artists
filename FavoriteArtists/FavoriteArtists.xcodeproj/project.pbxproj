@@ -97,8 +97,7 @@
 				EF2793302350D2B600D9F0BE /* AppDelegate.m */,
 				EF2793322350D2B600D9F0BE /* SceneDelegate.h */,
 				EF2793332350D2B600D9F0BE /* SceneDelegate.m */,
-				EF2793602350DA9600D9F0BE /* LSIArtist.h */,
-				EF2793612350DA9600D9F0BE /* LSIArtist.m */,
+				EF2793632350DABE00D9F0BE /* Models */,
 				EF27935C2350DA0600D9F0BE /* ViewControllers */,
 				EF2793382350D2B600D9F0BE /* Main.storyboard */,
 				EF27933B2350D2D000D9F0BE /* Assets.xcassets */,
@@ -129,6 +128,15 @@
 				EF27935E2350DA4E00D9F0BE /* LSIArtistDetailViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EF2793632350DABE00D9F0BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF2793602350DA9600D9F0BE /* LSIArtist.h */,
+				EF2793612350DA9600D9F0BE /* LSIArtist.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

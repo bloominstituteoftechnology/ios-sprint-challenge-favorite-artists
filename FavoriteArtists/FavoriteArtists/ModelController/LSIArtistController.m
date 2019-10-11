@@ -10,13 +10,20 @@
 #import "LSIArtist.h"
 
 @interface LSIArtistController()
-
 @end
 
 @implementation LSIArtistController
 
-
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/";
+
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        _artists = [@[] mutableCopy];
+    }
+    return self;
+}
+
 
 
 @end

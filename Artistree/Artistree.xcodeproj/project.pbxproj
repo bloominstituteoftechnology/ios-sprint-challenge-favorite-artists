@@ -17,6 +17,7 @@
 		B5F347982350D6F900FCD842 /* ArtistreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347972350D6F900FCD842 /* ArtistreeTests.m */; };
 		B5F347AC2350DA0900FCD842 /* JSArtistListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347AB2350DA0900FCD842 /* JSArtistListVC.m */; };
 		B5F347AF2350DA3300FCD842 /* JSArtistDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347AE2350DA3300FCD842 /* JSArtistDetailsVC.m */; };
+		B5F347B22350DE3D00FCD842 /* JSArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347B12350DE3D00FCD842 /* JSArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		B5F347AB2350DA0900FCD842 /* JSArtistListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSArtistListVC.m; sourceTree = "<group>"; };
 		B5F347AD2350DA3300FCD842 /* JSArtistDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSArtistDetailsVC.h; sourceTree = "<group>"; };
 		B5F347AE2350DA3300FCD842 /* JSArtistDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSArtistDetailsVC.m; sourceTree = "<group>"; };
+		B5F347B02350DE3D00FCD842 /* JSArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSArtist.h; sourceTree = "<group>"; };
+		B5F347B12350DE3D00FCD842 /* JSArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				B5F347842350D6F700FCD842 /* Artistree.xcdatamodeld */,
+				B5F347B02350DE3D00FCD842 /* JSArtist.h */,
+				B5F347B12350DE3D00FCD842 /* JSArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F347B22350DE3D00FCD842 /* JSArtist.m in Sources */,
 				B5F3478E2350D6F900FCD842 /* main.m in Sources */,
 				B5F347AF2350DA3300FCD842 /* JSArtistDetailsVC.m in Sources */,
 				B5F347AC2350DA0900FCD842 /* JSArtistListVC.m in Sources */,

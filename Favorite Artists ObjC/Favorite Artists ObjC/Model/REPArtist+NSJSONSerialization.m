@@ -39,7 +39,14 @@ static NSString const *yearFormedKey = @"intFormedYear";
 }
 
 - (NSDictionary *)dictionary {
-	return nil;
+	NSDictionary *artistDict = @{
+		nameKey: self.name,
+		bioKey: self.bio,
+		moodKey: self.mood,
+		genreKey: self.genre,
+		yearFormedKey: [NSNumber numberWithInt:self.yearFormed]
+	};
+	return artistDict;
 }
 
 @end

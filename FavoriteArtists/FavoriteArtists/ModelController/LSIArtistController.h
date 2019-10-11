@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LSIArtist.h"
 
+typedef (^LSIArtistControllerCompletionBlock)(Artist *, NSError *);
+@class LSIArtist;
 
 @interface LSIArtistController : NSObject
+
+
 
 @end
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Artist;
+@class LSIArtist;
 @interface LSIArtist : NSObject
 @property NSString *artistName;
 @property NSString *artistBio;

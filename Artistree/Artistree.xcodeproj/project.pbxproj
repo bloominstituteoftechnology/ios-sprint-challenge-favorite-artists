@@ -18,6 +18,7 @@
 		B5F347AC2350DA0900FCD842 /* JSArtistListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347AB2350DA0900FCD842 /* JSArtistListVC.m */; };
 		B5F347AF2350DA3300FCD842 /* JSArtistDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347AE2350DA3300FCD842 /* JSArtistDetailsVC.m */; };
 		B5F347B22350DE3D00FCD842 /* JSArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347B12350DE3D00FCD842 /* JSArtist.m */; };
+		B5F347B52350E1E100FCD842 /* JSArtistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347B42350E1E100FCD842 /* JSArtistsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		B5F347AE2350DA3300FCD842 /* JSArtistDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSArtistDetailsVC.m; sourceTree = "<group>"; };
 		B5F347B02350DE3D00FCD842 /* JSArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSArtist.h; sourceTree = "<group>"; };
 		B5F347B12350DE3D00FCD842 /* JSArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSArtist.m; sourceTree = "<group>"; };
+		B5F347B32350E1E100FCD842 /* JSArtistsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSArtistsController.h; sourceTree = "<group>"; };
+		B5F347B42350E1E100FCD842 /* JSArtistsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSArtistsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,8 @@
 		B5F347A62350D70F00FCD842 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B5F347B32350E1E100FCD842 /* JSArtistsController.h */,
+				B5F347B42350E1E100FCD842 /* JSArtistsController.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				B5F347B22350DE3D00FCD842 /* JSArtist.m in Sources */,
 				B5F3478E2350D6F900FCD842 /* main.m in Sources */,
 				B5F347AF2350DA3300FCD842 /* JSArtistDetailsVC.m in Sources */,
+				B5F347B52350E1E100FCD842 /* JSArtistsController.m in Sources */,
 				B5F347AC2350DA0900FCD842 /* JSArtistListVC.m in Sources */,
 				B5F347862350D6F700FCD842 /* Artistree.xcdatamodeld in Sources */,
 				B5F3477A2350D6F700FCD842 /* AppDelegate.m in Sources */,

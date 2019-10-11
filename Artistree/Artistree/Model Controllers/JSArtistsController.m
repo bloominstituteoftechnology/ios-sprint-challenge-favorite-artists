@@ -99,10 +99,6 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 			NSArray *artists = json[@"artists"];
 			if (![artists isKindOfClass:NSNull.self]) {
 				NSDictionary *artistDict = artists.firstObject;
-							
-				//			for(NSString *key in [artistDict allKeys]) {
-				//			  NSLog(@"%@",[artistDict objectForKey:key]);
-				//			}
 				
 				JSArtist *artist = [[JSArtist alloc] initWithDict:artistDict];
 				

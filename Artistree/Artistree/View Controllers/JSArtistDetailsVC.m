@@ -32,8 +32,10 @@
 }
 
 - (IBAction)saveBtnTapped:(id)sender {
-	[self.artistController addArtist:self.artist];
-	[self.navigationController popViewControllerAnimated:true];
+	if (self.artist) {
+		[self.artistController addArtist:self.artist];
+		[self.navigationController popViewControllerAnimated:true];
+	}
 }
 
 - (void)updateViews {

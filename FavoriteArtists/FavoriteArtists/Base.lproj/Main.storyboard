@@ -68,7 +68,18 @@
                     <view key="view" contentMode="scaleToFill" id="ZIh-kO-DwF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="iIB-6G-DIy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iIB-6G-DIy" firstAttribute="trailing" secondItem="dho-1v-Hh3" secondAttribute="trailing" id="PX2-zX-89r"/>
+                            <constraint firstItem="iIB-6G-DIy" firstAttribute="top" secondItem="dho-1v-Hh3" secondAttribute="top" id="c5y-b3-ZNY"/>
+                            <constraint firstItem="iIB-6G-DIy" firstAttribute="leading" secondItem="dho-1v-Hh3" secondAttribute="leading" id="qy5-DS-uEN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dho-1v-Hh3"/>
                     </view>
                     <navigationItem key="navigationItem" id="WfO-0P-zEj">

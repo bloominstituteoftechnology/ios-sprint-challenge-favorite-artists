@@ -38,13 +38,16 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.controller.artists.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
+    LSIArtist *artist = [self.controller objectInArtistAtIndex:indexPath.row];
+    cell.textLabel.text = artist.artistName;
+    cell.textLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)artist.formedYear];
     return cell;
 }
 

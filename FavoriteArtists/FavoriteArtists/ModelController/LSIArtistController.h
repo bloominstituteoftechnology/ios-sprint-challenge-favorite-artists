@@ -14,6 +14,7 @@ typedef (^LSIArtistControllerCompletionBlock)(Artist *, NSError *);
 
 @interface LSIArtistController : NSObject
 -(void)fetchArtistWithName:(NSString *)artistName completionBlock:(LSIArtistCOntrollerCompletionBlock)completionBlock;
+@property NSMutableArray *artists;
 
 
 @end

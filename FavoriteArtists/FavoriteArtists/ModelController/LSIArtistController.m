@@ -73,6 +73,15 @@ biography:(NSString *)bio
     return [self.artists objectAtIndex: index];
 }
 
+-(NSURL *)getPerisitentFileURL {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *documents = [fileManager URLForDirectory: NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL: nil create: NO error: nil];
+   return [documents URLByAppendingPathComponent:@"FavoriteArtists.plist"];
+}
+
+-(void)saveToPersistentStore {
+    
+}
 
 
 @end

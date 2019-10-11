@@ -30,6 +30,12 @@ withArtistName:(NSString *)name
 biography:(NSString *)bio
    formedYear:(int)year;
 
+//attain persistent file url
+-(NSURL *)getPerisitentFileURL;
+
+//save to persistent store
+-(void)saveToPersistentStore;
+
 
 @end
 

@@ -19,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *infoTextView;
 
-//@property REPArtist *searchArtist;
 @property REPArtistNetController *netController;
 
 @end
@@ -91,25 +90,12 @@
 }
 
 
-- (IBAction)saveButtonPressed:(UIBarButtonItem *)sender {
-	if (self.netController.lastSearchResult) {
-		NSError *error;
-		[[REPCoreDataStack sharedInstance] saveContext:self.netController.lastSearchResult.managedObjectContext error:error];
-		if (error) {
-			NSLog(@"Error saving artist to context: %@", error);
-			return;
-		}
-		[self.navigationController popViewControllerAnimated:YES];
-	}
-}
-
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
 	NSLog(@"search for %@", searchBar.text);
 	[searchBar resignFirstResponder];
 
 	[self.netController fetchArtistNamed:searchBar.text completionBlock:^(REPArtist *artist, NSError *error) {
 		dispatch_async(dispatch_get_main_queue(), ^(void){
-//			self.searchArtist = self.netController.lastSearchResult;
 			[self updateViews];
 		});
 	}];

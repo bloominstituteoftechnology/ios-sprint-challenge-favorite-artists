@@ -116,16 +116,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="r2J-za-OUc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ulQ-GN-roy">
-                            <connections>
-                                <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="Tfy-9T-bvO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="r2J-za-OUc"/>
                     <connections>
                         <outlet property="infoTextView" destination="qZa-IV-sfq" id="Jgo-NN-GFL"/>
-                        <outlet property="saveButton" destination="ulQ-GN-roy" id="4LN-hM-kSt"/>
                         <outlet property="searchBar" destination="fx6-Gc-zkC" id="zjk-px-BWb"/>
                         <outlet property="subtitleLabel" destination="DDV-jr-CW0" id="Qll-Tp-Zuj"/>
                         <outlet property="titleLabel" destination="xAl-7p-OXH" id="Vrd-n6-sIh"/>

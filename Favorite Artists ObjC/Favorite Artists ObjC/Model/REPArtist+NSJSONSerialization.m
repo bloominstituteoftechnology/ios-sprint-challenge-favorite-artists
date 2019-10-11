@@ -14,14 +14,23 @@
 
 + (REPArtist *)artistWithDictionary:(NSDictionary *)dictionary onContext:(NSManagedObjectContext *)context {
 
-	NSString *name;
-	NSString *bio;
-	int yearFormed;
-	NSString *mood;
-	NSString *genre;
+	NSString *name = dictionary[@"strArtist"];
+	NSString *bio = dictionary[@"strBiographyEN"];
+	NSString *mood = dictionary[@"strMood"];
+	NSString *genre = dictionary[@"strGenre"];
+	NSNumber *yearFormedNumber = dictionary[@"intFormedYear"];
+
+	if (name != nil &&
+		yearFormedNumber != nil// &&
+		) {
+		int yearFormed = [yearFormedNumber intValue];
+
+		return [REPArtist artistNamed:name yearFormed:yearFormed mood:mood genre:genre bio:bio onContext:context];
+	} else {
+		return nil;
+	}
 
 
-	return [REPArtist artistNamed:name yearFormed:yearFormed mood:mood genre:genre bio:bio onContext:context];
 }
 
 - (NSDictionary *)dictionary {

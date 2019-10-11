@@ -7,6 +7,7 @@
 //
 
 #import "REPArtistTableViewController.h"
+#import "REPCoreDataStack.h"
 
 @interface REPArtistTableViewController ()
 
@@ -18,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+	NSManagedObjectContext* context = [[REPCoreDataStack sharedInstance].container newBackgroundContext];
 
 }
 

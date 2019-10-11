@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class JSArtist;
-typedef void(^myCompletion)(BOOL);
+typedef void(^myCompletion)(JSArtist * _Nullable);
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class JSArtistsController;
+@class JSArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSArtistDetailsVC : UIViewController
+@interface JSArtistDetailsVC : UIViewController <UISearchBarDelegate>
+
+@property JSArtistsController *artistController;
+@property JSArtist *artist;
+
+- (void)updateViews;
 
 @end
 

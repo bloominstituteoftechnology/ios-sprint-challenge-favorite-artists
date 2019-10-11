@@ -7,6 +7,8 @@
 //
 
 #import "JSArtistDetailsVC.h"
+#import "JSArtistsController.h"
+#import "JSArtist.h"
 
 @interface JSArtistDetailsVC ()
 
@@ -23,19 +25,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+	self.searchBar.delegate = self;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)saveBtnTapped:(id)sender {
+	[self.artistController addArtist:self.artist];
+	[self.navigationController popViewControllerAnimated:true];
 }
+
+- (void)updateViews {
+	if (self.artist) {
+		self.nameLbl.text = self.artist.name;
+		self.conceptionLbl.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+		self.biographyLbl.text = self.artist.biography;
+	}
+}
+
+// MARK: - Searchbar Delegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+	NSString *searchText = searchBar.text;
+	if (searchText || ![searchText isEqualToString:@""]) {
+		[self.artistController fetchArtistByName:searchText completion:^(JSArtist *artist) {
+			if (artist) {
+				self.artist = artist;
+				dispatch_sync(dispatch_get_main_queue(), ^{
+					[self updateViews];
+				});
+			}
+		}];
+	}
+}
+
 @end

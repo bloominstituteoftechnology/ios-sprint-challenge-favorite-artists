@@ -7,8 +7,15 @@
 //
 
 #import "JSArtistListVC.h"
+#import "JSArtistsController.h"
+#import "JSArtistDetailsVC.h"
+#import "JSArtist.h"
+
+@class JSArtist;
 
 @interface JSArtistListVC ()
+
+@property JSArtistsController *artistController;
 
 - (IBAction)addArtistBtnTapped:(id)sender;
 
@@ -18,19 +25,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+	self.artistController = [[JSArtistsController alloc] init];
 }
 
-/*
-#pragma mark - Navigation
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	
+	[self.tableView reloadData];
+}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+// MARK: - Navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+	if ([segue.destinationViewController isKindOfClass:JSArtistDetailsVC.self]) {
+		JSArtistDetailsVC *detailsVC = segue.destinationViewController;
+		detailsVC.artistController = self.artistController;
+		
+		NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+		if (indexPath) {
+			detailsVC.artist = self.artistController.artists[indexPath.row];
+		}
+	}
 }
-*/
+
+// MARK: - IBActions
 
 - (IBAction)addArtistBtnTapped:(id)sender {
+	
 }
+
+// MARK: - TableView Datasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return self.artistController.artists.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell"];
+	JSArtist *artist = self.artistController.artists[indexPath.row];
+	
+	cell.textLabel.text = artist.name;
+	cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+	
+	return cell;
+}
+
 @end

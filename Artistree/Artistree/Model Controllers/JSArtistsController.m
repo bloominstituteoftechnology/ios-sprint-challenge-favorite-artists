@@ -52,7 +52,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 			
 			if (error) {
 				NSLog(@"Error fetching forecast: %@", error);
-				completion(NO);
+				completion(nil);
 				return;
 			}
 			
@@ -61,7 +61,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 			NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 			if (jsonError) {
 				NSLog(@"JSON Error: %@", jsonError);
-				completion(NO);
+				completion(nil);
 				return;
 			}
 			
@@ -69,13 +69,14 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 			
 			NSArray *artists = json[@"artists"];
 			NSDictionary *artistDict = artists.firstObject;
+			
+//			for(NSString *key in [artistDict allKeys]) {
+//			  NSLog(@"%@",[artistDict objectForKey:key]);
+//			}
+			
 			JSArtist *artist = [[JSArtist alloc] initWithDict:artistDict];
 			
-			if (artist) {
-				[self addArtist:artist];
-			}
-			
-			completion(YES);
+			completion(artist);
 		}];
 		[task resume];
 }

@@ -8,7 +8,7 @@ This sprint challenge is designed to ensure that you are competent with the conc
 
 1. Begin by forking this repository. Clone your forked repository to your machine. 
 2. There is no starter project. Create a project for this challenge in this repository and commit as appropriate while you work. 
-3. Push your final project to GitHub, then create a pull request back to this original repository.
+3. Push your final project to GitHub, then create a pull request back to this original repository, and tag your TL.
 
 **You will have 3 hours to complete this sprint challenge**
 
@@ -37,9 +37,9 @@ A sample request for *Macklemore* looks like this URL and JSON response (a reque
 The requirements for this project are as follows:
 
 1. A model object that represents an artist. It should have the following properties:
-    - Their name.
-    - Their biography.
-    - The year that they formed. **This must be a primitive.**
+    - Artist name
+    - Artist biography.
+    - The year the Artist formed. **This must be a primitive.**
 2. A category called `NSJSONSerialization`. In this category add:
     - An initializer to create your model object from a dictionary.
         
@@ -48,12 +48,12 @@ The requirements for this project are as follows:
     - A function that returns your model object as a dictionary (to save artists).
         
         `- (NSDictionary *)toDictionary`
-        
-3. Add the ability to save a searched artist (Table View and to disk). 
+3. Use unit tests to verify you can parse a sample JSON file.        
+4. Add the ability to save a searched artist (Table View and to disk). 
     - Implement persistence using `NSFileManager` to save your model objects to a file in the application's Document directory. 
-    - **Note:** As you do not have access to `Codable` use `NSJSONSerialization` to help turn your model objects into `NSData`.
-4. A table view controller that displays a list of saved artists.
-5. A detail view controller that allows the user to search for new artists, and also view saved artist information.
+    - Note: Use `NSJSONSerialization` to help turn your model objects into `NSData` that you can write to file/URL.
+5. A table view controller that displays a list of saved artists.
+6. A detail view controller that allows the user to search for new artists, and also view saved artist information.
 
 ## Go Further
 

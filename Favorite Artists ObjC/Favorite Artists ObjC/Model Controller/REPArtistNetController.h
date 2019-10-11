@@ -14,6 +14,7 @@
 
 typedef void (^REPArtistCompletionBlock)(REPArtist *, NSError *);
 
+@property (readonly) REPArtist* lastSearchResult;
 
 - (void)fetchArtistNamed:(NSString *)name completionBlock:(REPArtistCompletionBlock)completionBlock;
 

@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class REPArtist;
+
 @interface REPArtistDetailViewController : UIViewController <UISearchBarDelegate>
 
+@property REPArtist* artist;
 
 @end
 

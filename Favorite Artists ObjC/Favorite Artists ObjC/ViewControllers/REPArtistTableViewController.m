@@ -44,8 +44,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
 
+	[[REPCoreDataStack sharedInstance].mainContext reset];
 }
 
 // MARK: - Table view data source

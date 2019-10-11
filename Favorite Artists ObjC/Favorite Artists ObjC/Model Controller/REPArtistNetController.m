@@ -18,6 +18,10 @@
 static NSString const *baseURLString = @"https://theaudiodb.com/api/v1/json/";
 static NSString const *apiKey = @"1";
 
+- (void)setLastSearchResult:(REPArtist *)lastSearchResult {
+	_lastSearchResult = lastSearchResult;
+}
+
 - (void)fetchArtistNamed:(NSString *)name completionBlock:(REPArtistCompletionBlock)completionBlock {
 
 	NSURL *baseURL = [NSURL URLWithString:baseURLString];
@@ -40,6 +44,11 @@ static NSString const *apiKey = @"1";
 		NSError* decodeError;
 		NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&decodeError];
 		NSArray *artistResults = jsonDict[@"artists"];
+		if (![artistResults isKindOfClass:[NSArray class]]) {
+			NSLog(@"No results.");
+			completionBlock(nil, nil);
+			return;
+		}
 		NSDictionary *firstArtist = [artistResults firstObject];
 
 		if (decodeError) {
@@ -48,12 +57,17 @@ static NSString const *apiKey = @"1";
 			return;
 		}
 
-		NSManagedObjectContext *newContext = [[REPCoreDataStack sharedInstance].container newBackgroundContext];
+		NSManagedObjectContext *newContext = [REPCoreDataStack sharedInstance].mainContext;
 
-		REPArtist *artist = [REPArtist artistWithDictionary:firstArtist onContext:newContext];
+		[newContext performBlock:^{
+			REPArtist *artist = [REPArtist artistWithDictionary:firstArtist onContext:newContext];
+			[self setLastSearchResult:artist];
 
-		completionBlock(artist, nil);
+			NSError *saveError;
+			[[REPCoreDataStack sharedInstance] saveContext:newContext error:saveError];
 
+			completionBlock(artist, nil);
+		}];
 	}];
 	[fetchTask resume];
 

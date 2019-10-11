@@ -23,4 +23,8 @@
 	return self;
 }
 
++ (REPArtist *)artistNamed:(NSString *)name yearFormed:(NSString *)yearFormed withID:(NSString *)artistID mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context {
+	return [[REPArtist alloc] initWithArtistNamed:name yearFormed:yearFormed withID:artistID mood:mood genre:genre bio:bio onContext:context];
+}
+
 @end

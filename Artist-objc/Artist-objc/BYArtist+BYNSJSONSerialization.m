@@ -13,4 +13,25 @@
 
 @implementation BYArtist (BYNSJSONSerialization)
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    if(self = [super init]) {
+        NSArray *artists = dictionary[@"artists"];
+        NSDictionary *artist = artists[0];
+        self.name = artist[@"strArtist"];
+        self.biography = artist[@"strBiographyEN"];
+        self.year = [artist[@"intFormedYear"] intValue];
+        
+    }
+    return self;
+}
+
+- (NSDictionary *)toDictionary {
+    NSDictionary *dictionary = [[NSDictionary alloc] init];
+    [dictionary setValue: self.name forKey:@"name"];
+    [dictionary setValue: self.biography forKey:@"biography"];
+    [dictionary setValue: [NSNumber numberWithInt:self.year] forKey:@"year"];
+    
+    return dictionary;
+}
+
 @end

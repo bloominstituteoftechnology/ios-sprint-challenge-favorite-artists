@@ -18,6 +18,7 @@
 		EF27935B2350D97A00D9F0BE /* LSIArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27935A2350D97A00D9F0BE /* LSIArtistTableViewController.m */; };
 		EF27935F2350DA4E00D9F0BE /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27935E2350DA4E00D9F0BE /* LSIArtistDetailViewController.m */; };
 		EF2793622350DA9600D9F0BE /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2793612350DA9600D9F0BE /* LSIArtist.m */; };
+		EF9D4B682350E0A800618A3C /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9D4B672350E0A800618A3C /* LSIArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		EF27935E2350DA4E00D9F0BE /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
 		EF2793602350DA9600D9F0BE /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
 		EF2793612350DA9600D9F0BE /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
+		EF9D4B662350E0A800618A3C /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
+		EF9D4B672350E0A800618A3C /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				EF27932F2350D2B600D9F0BE /* AppDelegate.h */,
 				EF2793302350D2B600D9F0BE /* AppDelegate.m */,
 				EF2793322350D2B600D9F0BE /* SceneDelegate.h */,
+				EF9D4B662350E0A800618A3C /* LSIArtistController.h */,
+				EF9D4B672350E0A800618A3C /* LSIArtistController.m */,
 				EF2793332350D2B600D9F0BE /* SceneDelegate.m */,
 				EF2793632350DABE00D9F0BE /* Models */,
 				EF27935C2350DA0600D9F0BE /* ViewControllers */,
@@ -240,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9D4B682350E0A800618A3C /* LSIArtistController.m in Sources */,
 				EF27935F2350DA4E00D9F0BE /* LSIArtistDetailViewController.m in Sources */,
 				EF2793312350D2B600D9F0BE /* AppDelegate.m in Sources */,
 				EF2793422350D2D000D9F0BE /* main.m in Sources */,

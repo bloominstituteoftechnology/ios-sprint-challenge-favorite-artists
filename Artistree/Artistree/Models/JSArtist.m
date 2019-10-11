@@ -16,6 +16,7 @@
 		_name = artistDict[@"strArtist"];
 		_biography = artistDict[@"strBiographyEN"];
 		_yearFormed = [artistDict[@"intFormedYear"] intValue];
+		_genre = artistDict[@"strGenre"];
 	}
 	return self;
 }

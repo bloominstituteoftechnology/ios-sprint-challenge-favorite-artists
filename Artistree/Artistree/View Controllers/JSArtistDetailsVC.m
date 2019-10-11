@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *nameLbl;
 @property (weak, nonatomic) IBOutlet UILabel *conceptionLbl;
-@property (weak, nonatomic) IBOutlet UILabel *biographyLbl;
+@property (weak, nonatomic) IBOutlet UITextView *biographyTextView;
 
 - (IBAction)saveBtnTapped:(id)sender;
 
@@ -29,6 +29,10 @@
 	self.searchBar.delegate = self;
 	
 	[self updateViews];
+	if (self.artist) {
+		[self setTitle:self.artist.genre];
+		[self.searchBar setHidden:true];
+	}
 }
 
 - (IBAction)saveBtnTapped:(id)sender {
@@ -42,18 +46,15 @@
 	if (self.artist) {
 		self.nameLbl.text = self.artist.name;
 		self.conceptionLbl.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
-		self.biographyLbl.text = self.artist.biography;
+		self.biographyTextView.text = self.artist.biography;
 
 		[self.nameLbl setHidden:false];
 		[self.conceptionLbl setHidden:false];
-		[self.biographyLbl setHidden:false];
-		[self.searchBar setHidden:true];
-		
-		[self.navigationItem.rightBarButtonItem setEnabled:false];
+		[self.biographyTextView setHidden:false];
 	} else {
 		[self.nameLbl setHidden:true];
 		[self.conceptionLbl setHidden:true];
-		[self.biographyLbl setHidden:true];
+		[self.biographyTextView setHidden:true];
 		
 		[self.navigationItem.rightBarButtonItem setEnabled:true];
 	}

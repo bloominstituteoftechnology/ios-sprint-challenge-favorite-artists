@@ -45,6 +45,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 	[newArtist setValue:artist.name forKey:@"name"];
 	[newArtist setValue:artist.biography forKey:@"biography"];
 	[newArtist setValue:[NSNumber numberWithInt:artist.yearFormed] forKey:@"yearFormed"];
+	[newArtist setValue:artist.genre forKey:@"genre"];
 	
 	NSError *error = nil;
 	if (![context save:&error]) {

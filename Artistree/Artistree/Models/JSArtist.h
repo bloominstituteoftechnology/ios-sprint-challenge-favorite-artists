@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *name;
 @property NSString *biography;
 @property int yearFormed;
+@property NSString *genre;
 
 - (instancetype)initWithDict:(NSDictionary *)artistDict;
 

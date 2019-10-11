@@ -59,6 +59,7 @@
 		B5F347BE2350F0D900FCD842 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		B5F347C523510EF300FCD842 /* JSArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSArtist.m; sourceTree = "<group>"; };
 		B5F347C623510EF400FCD842 /* JSArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSArtist.h; sourceTree = "<group>"; };
+		B5F347C823511CD700FCD842 /* Artistree 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Artistree 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,9 +571,10 @@
 		B5F347842350D6F700FCD842 /* Artistree.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				B5F347C823511CD700FCD842 /* Artistree 2.xcdatamodel */,
 				B5F347852350D6F700FCD842 /* Artistree.xcdatamodel */,
 			);
-			currentVersion = B5F347852350D6F700FCD842 /* Artistree.xcdatamodel */;
+			currentVersion = B5F347C823511CD700FCD842 /* Artistree 2.xcdatamodel */;
 			path = Artistree.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

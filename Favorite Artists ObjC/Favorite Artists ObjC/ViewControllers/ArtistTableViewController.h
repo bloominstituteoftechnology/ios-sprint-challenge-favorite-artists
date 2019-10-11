@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ArtistTableViewController.h
 //  Favorite Artists ObjC
 //
 //  Created by Michael Redig on 10/11/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface ArtistTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

@@ -69,6 +69,9 @@ biography:(NSString *)bio
     artist.formedYear = year;
 }
 
+-(LSIArtist *)objectInArtistAtIndex:(NSUInteger)index {
+    return [self.artists objectAtIndex: index];
+}
 
 
 

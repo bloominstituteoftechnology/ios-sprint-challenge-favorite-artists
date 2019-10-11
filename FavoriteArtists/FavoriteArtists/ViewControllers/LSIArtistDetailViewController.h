@@ -12,8 +12,7 @@
 @class LSIArtist;
 
 @interface LSIArtistDetailViewController : UIViewController <UISearchBarDelegate>
-
-
-
+@property LSIArtistController *controller;
+@property LSIArtist *artist;
 @end
 

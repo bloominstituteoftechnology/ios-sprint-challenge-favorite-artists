@@ -13,11 +13,11 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     if (self = [self init]) {
 
-        NSDictionary *artistInfo = dictionary[@"artists"];
+//        NSDictionary *artistInfo = dictionary[@"artists"];
 
-        NSString *artistName = artistInfo[@"strArtist"];
-        NSString *artistBio = artistInfo[@"strBiographyEN"];
-        NSString *yearFormedStr = artistInfo[@"intFormedYear"];
+        NSString *artistName = dictionary[@"strArtist"];
+        NSString *artistBio = dictionary[@"strBiographyEN"];
+        NSString *yearFormedStr = dictionary[@"intFormedYear"];
 
         if (artistName != nil &&
             artistBio != nil &&

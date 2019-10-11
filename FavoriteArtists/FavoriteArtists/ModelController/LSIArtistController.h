@@ -24,6 +24,12 @@ typedef void (^LSIArtistControllerCompletionBlock)(LSIArtist *, NSError *);
               artistBio:(NSString *)bio
               formedYear:(int)year;
 
+//update
+-(void)update:(LSIArtist *)artist
+withArtistName:(NSString *)name
+biography:(NSString *)bio
+   formedYear:(int)year;
+
 
 @end
 

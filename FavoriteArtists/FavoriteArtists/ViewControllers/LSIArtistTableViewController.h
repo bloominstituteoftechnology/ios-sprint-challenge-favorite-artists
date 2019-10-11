@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSIArtistController;
 
 @interface LSIArtistTableViewController : UITableViewController
+
+@property (nonatomic)LSIArtistController *controller;
 
 @end
 

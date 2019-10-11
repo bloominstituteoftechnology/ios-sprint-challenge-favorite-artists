@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BYArtistViewController.h
 //  Artist-objc
 //
 //  Created by Bradley Yin on 10/11/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface BYArtistViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

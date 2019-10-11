@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		75F2FB352350D74D006007D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB342350D74D006007D8 /* AppDelegate.m */; };
 		75F2FB382350D74D006007D8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB372350D74D006007D8 /* SceneDelegate.m */; };
-		75F2FB3B2350D74D006007D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB3A2350D74D006007D8 /* ViewController.m */; };
 		75F2FB3E2350D74D006007D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F2FB3C2350D74D006007D8 /* Main.storyboard */; };
 		75F2FB402350D752006007D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F2FB3F2350D752006007D8 /* Assets.xcassets */; };
 		75F2FB432350D752006007D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F2FB412350D752006007D8 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,8 @@
 		75F2FB702350E3D0006007D8 /* BYArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB5E2350D877006007D8 /* BYArtist.m */; };
 		75F2FB712350E3D0006007D8 /* BYArtist+BYNSJSONSerialization.h in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB602350D89C006007D8 /* BYArtist+BYNSJSONSerialization.h */; };
 		75F2FB722350E3D0006007D8 /* BYArtist+BYNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB612350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m */; };
+		75F2FB752350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB742350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m */; };
+		75F2FB782350ECFE006007D8 /* BYArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB772350ECFE006007D8 /* BYArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,6 @@
 		75F2FB342350D74D006007D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		75F2FB362350D74D006007D8 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		75F2FB372350D74D006007D8 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		75F2FB392350D74D006007D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		75F2FB3A2350D74D006007D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		75F2FB3D2350D74D006007D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75F2FB3F2350D752006007D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F2FB422350D752006007D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +55,10 @@
 		75F2FB642350DA1B006007D8 /* BYArtistTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYArtistTest.m; sourceTree = "<group>"; };
 		75F2FB692350DB1A006007D8 /* BYFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYFileHelper.h; sourceTree = "<group>"; };
 		75F2FB6B2350DEBC006007D8 /* Artists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artists.json; sourceTree = "<group>"; };
+		75F2FB732350EB8E006007D8 /* BYFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		75F2FB742350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		75F2FB762350ECFE006007D8 /* BYArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYArtistViewController.h; sourceTree = "<group>"; };
+		75F2FB772350ECFE006007D8 /* BYArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +104,6 @@
 				75F2FB342350D74D006007D8 /* AppDelegate.m */,
 				75F2FB362350D74D006007D8 /* SceneDelegate.h */,
 				75F2FB372350D74D006007D8 /* SceneDelegate.m */,
-				75F2FB392350D74D006007D8 /* ViewController.h */,
-				75F2FB3A2350D74D006007D8 /* ViewController.m */,
 				75F2FB3C2350D74D006007D8 /* Main.storyboard */,
 				75F2FB3F2350D752006007D8 /* Assets.xcassets */,
 				75F2FB412350D752006007D8 /* LaunchScreen.storyboard */,
@@ -112,6 +113,10 @@
 				75F2FB5E2350D877006007D8 /* BYArtist.m */,
 				75F2FB602350D89C006007D8 /* BYArtist+BYNSJSONSerialization.h */,
 				75F2FB612350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m */,
+				75F2FB732350EB8E006007D8 /* BYFavoriteArtistsTableViewController.h */,
+				75F2FB762350ECFE006007D8 /* BYArtistViewController.h */,
+				75F2FB772350ECFE006007D8 /* BYArtistViewController.m */,
+				75F2FB742350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m */,
 			);
 			path = "Artist-objc";
 			sourceTree = "<group>";
@@ -228,12 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F2FB3B2350D74D006007D8 /* ViewController.m in Sources */,
 				75F2FB5F2350D877006007D8 /* BYArtist.m in Sources */,
+				75F2FB782350ECFE006007D8 /* BYArtistViewController.m in Sources */,
 				75F2FB352350D74D006007D8 /* AppDelegate.m in Sources */,
 				75F2FB462350D752006007D8 /* main.m in Sources */,
 				75F2FB622350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m in Sources */,
 				75F2FB382350D74D006007D8 /* SceneDelegate.m in Sources */,
+				75F2FB752350EB8E006007D8 /* BYFavoriteArtistsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

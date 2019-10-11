@@ -11,11 +11,10 @@
 
 @implementation REPArtist (REPConvenience)
 
-- (instancetype)initWithArtistNamed:(NSString *)name yearFormed:(NSString *)yearFormed withID:(NSString *)artistID mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context {
+- (instancetype)initWithArtistNamed:(NSString *)name yearFormed:(int)yearFormed mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context {
 	if (self = [super initWithContext:context]) {
 		self.name = name;
 		self.yearFormed = yearFormed;
-		self.id = artistID;
 		self.mood = mood;
 		self.genre = genre;
 		self.bio = bio;
@@ -23,8 +22,8 @@
 	return self;
 }
 
-+ (REPArtist *)artistNamed:(NSString *)name yearFormed:(NSString *)yearFormed withID:(NSString *)artistID mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context {
-	return [[REPArtist alloc] initWithArtistNamed:name yearFormed:yearFormed withID:artistID mood:mood genre:genre bio:bio onContext:context];
++ (REPArtist *)artistNamed:(NSString *)name yearFormed:(int)yearFormed mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context {
+	return [[REPArtist alloc] initWithArtistNamed:name yearFormed:yearFormed mood:mood genre:genre bio:bio onContext:context];
 }
 
 @end

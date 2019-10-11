@@ -11,9 +11,9 @@
 
 @interface REPArtist (REPConvenience)
 
-- (instancetype)initWithArtistNamed:(NSString *)name yearFormed:(NSString *)yearFormed withID:(NSString *)artistID mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context;
+- (instancetype)initWithArtistNamed:(NSString *)name yearFormed:(int)yearFormed mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context;
 
-+ (REPArtist *)artistNamed:(NSString *)name yearFormed:(NSString *)yearFormed withID:(NSString *)artistID mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context;
++ (REPArtist *)artistNamed:(NSString *)name yearFormed:(int)yearFormed mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context;
 
 @end
 

@@ -21,6 +21,7 @@
 		33C3B6A92350DE5500EC48EB /* REPCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6A82350DE5500EC48EB /* REPCoreDataStack.m */; };
 		33C3B6AC2350DF1700EC48EB /* REPArtistNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6AB2350DF1700EC48EB /* REPArtistNetController.m */; };
 		33C3B6AE2350DF7D00EC48EB /* REPArtist.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6AD2350DF7D00EC48EB /* REPArtist.xcdatamodel */; };
+		33C3B6B12350E16500EC48EB /* REPArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6B02350E16500EC48EB /* REPArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		33C3B6AA2350DF1700EC48EB /* REPArtistNetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPArtistNetController.h; sourceTree = "<group>"; };
 		33C3B6AB2350DF1700EC48EB /* REPArtistNetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistNetController.m; sourceTree = "<group>"; };
 		33C3B6AD2350DF7D00EC48EB /* REPArtist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = REPArtist.xcdatamodel; path = REPArtist.xcdatamodeld/REPArtist.xcdatamodel; sourceTree = "<group>"; };
+		33C3B6AF2350E16500EC48EB /* REPArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "REPArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		33C3B6B02350E16500EC48EB /* REPArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "REPArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				33C3B6AD2350DF7D00EC48EB /* REPArtist.xcdatamodel */,
 				33C3B6A32350DDDE00EC48EB /* REPArtist+REPConvenience.h */,
 				33C3B6A42350DDDE00EC48EB /* REPArtist+REPConvenience.m */,
+				33C3B6AF2350E16500EC48EB /* REPArtist+NSJSONSerialization.h */,
+				33C3B6B02350E16500EC48EB /* REPArtist+NSJSONSerialization.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C3B6B12350E16500EC48EB /* REPArtist+NSJSONSerialization.m in Sources */,
 				33C3B6862350D94800EC48EB /* REPArtistDetailViewController.m in Sources */,
 				33C3B6AE2350DF7D00EC48EB /* REPArtist.xcdatamodel in Sources */,
 				3307A5522350D63700E5E845 /* AppDelegate.m in Sources */,

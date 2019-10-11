@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ArtistTableViewController : UITableViewController
+@interface REPArtistTableViewController : UITableViewController
 
 @end
 

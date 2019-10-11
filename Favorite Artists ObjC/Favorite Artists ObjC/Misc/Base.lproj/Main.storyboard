@@ -10,7 +10,7 @@
         <!--Artist Table View Controller-->
         <scene sceneID="8sC-LU-21L">
             <objects>
-                <tableViewController id="yNz-dd-0Oz" customClass="ArtistTableViewController" sceneMemberID="viewController">
+                <tableViewController id="yNz-dd-0Oz" customClass="REPArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qsM-Jw-Jgg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,7 +65,7 @@
         <!--Artist Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ArtistDetailViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="REPArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

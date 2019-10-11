@@ -6,15 +6,15 @@
 //  Copyright © 2019 Red_Egg Productions. All rights reserved.
 //
 
-#import "ArtistTableViewController.h"
+#import "REPArtistTableViewController.h"
 
-@interface ArtistTableViewController ()
+@interface REPArtistTableViewController ()
 
 - (IBAction)addButton:(UIBarButtonItem *)sender;
 
 @end
 
-@implementation ArtistTableViewController
+@implementation REPArtistTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

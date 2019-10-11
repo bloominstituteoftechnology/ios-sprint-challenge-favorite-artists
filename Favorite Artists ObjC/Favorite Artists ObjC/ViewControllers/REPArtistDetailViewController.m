@@ -6,9 +6,9 @@
 //  Copyright © 2019 Red_Egg Productions. All rights reserved.
 //
 
-#import "ArtistDetailViewController.h"
+#import "REPArtistDetailViewController.h"
 
-@interface ArtistDetailViewController ()
+@interface REPArtistDetailViewController ()
 
 
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation ArtistDetailViewController
+@implementation REPArtistDetailViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];

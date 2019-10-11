@@ -13,9 +13,22 @@
 		3307A55D2350D63700E5E845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3307A55C2350D63700E5E845 /* Assets.xcassets */; };
 		3307A5602350D63700E5E845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3307A55E2350D63700E5E845 /* LaunchScreen.storyboard */; };
 		3307A5632350D63700E5E845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307A5622350D63700E5E845 /* main.m */; };
-		33C3B6862350D94800EC48EB /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6852350D94800EC48EB /* ArtistDetailViewController.m */; };
-		33C3B6892350D95C00EC48EB /* ArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6882350D95C00EC48EB /* ArtistTableViewController.m */; };
+		33C3B6862350D94800EC48EB /* REPArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6852350D94800EC48EB /* REPArtistDetailViewController.m */; };
+		33C3B68C2350DA3200EC48EB /* Artist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B68A2350DA3200EC48EB /* Artist.xcdatamodeld */; };
+		33C3B68F2350DAA200EC48EB /* REPArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B68E2350DAA200EC48EB /* REPArtistController.m */; };
+		33C3B6912350DAC700EC48EB /* REPArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6902350DAC700EC48EB /* REPArtistTableViewController.m */; };
+		33C3B6992350DB0500EC48EB /* Favorite_Artists_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6982350DB0500EC48EB /* Favorite_Artists_ObjCTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33C3B69B2350DB0500EC48EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3307A5452350D63700E5E845 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3307A54C2350D63700E5E845;
+			remoteInfo = "Favorite Artists ObjC";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3307A54D2350D63700E5E845 /* Favorite Artists ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favorite Artists ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,19 +36,33 @@
 		3307A5512350D63700E5E845 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3307A5532350D63700E5E845 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		3307A5542350D63700E5E845 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		3307A5562350D63700E5E845 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		3307A5562350D63700E5E845 /* REPArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPArtistDetailViewController.h; sourceTree = "<group>"; };
 		3307A55A2350D63700E5E845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3307A55C2350D63700E5E845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3307A55F2350D63700E5E845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3307A5612350D63700E5E845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3307A5622350D63700E5E845 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		33C3B6852350D94800EC48EB /* ArtistDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
-		33C3B6872350D95C00EC48EB /* ArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistTableViewController.h; sourceTree = "<group>"; };
-		33C3B6882350D95C00EC48EB /* ArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableViewController.m; sourceTree = "<group>"; };
+		33C3B6852350D94800EC48EB /* REPArtistDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistDetailViewController.m; sourceTree = "<group>"; };
+		33C3B6872350D95C00EC48EB /* REPArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPArtistTableViewController.h; sourceTree = "<group>"; };
+		33C3B68B2350DA3200EC48EB /* Artist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Artist.xcdatamodel; sourceTree = "<group>"; };
+		33C3B68D2350DAA200EC48EB /* REPArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPArtistController.h; sourceTree = "<group>"; };
+		33C3B68E2350DAA200EC48EB /* REPArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPArtistController.m; sourceTree = "<group>"; };
+		33C3B6902350DAC700EC48EB /* REPArtistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistTableViewController.m; sourceTree = "<group>"; };
+		33C3B6962350DB0500EC48EB /* Favorite Artists ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Favorite Artists ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C3B6982350DB0500EC48EB /* Favorite_Artists_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Favorite_Artists_ObjCTests.m; sourceTree = "<group>"; };
+		33C3B69A2350DB0500EC48EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33C3B6A02350DBB200EC48EB /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3307A54A2350D63700E5E845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33C3B6932350DB0500EC48EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				3307A54F2350D63700E5E845 /* Favorite Artists ObjC */,
+				33C3B6972350DB0500EC48EB /* Favorite Artists ObjCTests */,
 				3307A54E2350D63700E5E845 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				3307A54D2350D63700E5E845 /* Favorite Artists ObjC.app */,
+				33C3B6962350DB0500EC48EB /* Favorite Artists ObjCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,10 +120,10 @@
 		3307A56A2350D73F00E5E845 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3307A5562350D63700E5E845 /* ArtistDetailViewController.h */,
-				33C3B6852350D94800EC48EB /* ArtistDetailViewController.m */,
-				33C3B6872350D95C00EC48EB /* ArtistTableViewController.h */,
-				33C3B6882350D95C00EC48EB /* ArtistTableViewController.m */,
+				3307A5562350D63700E5E845 /* REPArtistDetailViewController.h */,
+				33C3B6852350D94800EC48EB /* REPArtistDetailViewController.m */,
+				33C3B6872350D95C00EC48EB /* REPArtistTableViewController.h */,
+				33C3B6902350DAC700EC48EB /* REPArtistTableViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -102,6 +131,7 @@
 		3307A56B2350D74300E5E845 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33C3B68A2350DA3200EC48EB /* Artist.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,8 +139,20 @@
 		3307A56C2350D76B00E5E845 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				33C3B68D2350DAA200EC48EB /* REPArtistController.h */,
+				33C3B68E2350DAA200EC48EB /* REPArtistController.m */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		33C3B6972350DB0500EC48EB /* Favorite Artists ObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				33C3B6A02350DBB200EC48EB /* LSIFileHelper.h */,
+				33C3B6982350DB0500EC48EB /* Favorite_Artists_ObjCTests.m */,
+				33C3B69A2350DB0500EC48EB /* Info.plist */,
+			);
+			path = "Favorite Artists ObjCTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,17 +175,40 @@
 			productReference = 3307A54D2350D63700E5E845 /* Favorite Artists ObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
+		33C3B6952350DB0500EC48EB /* Favorite Artists ObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33C3B69D2350DB0500EC48EB /* Build configuration list for PBXNativeTarget "Favorite Artists ObjCTests" */;
+			buildPhases = (
+				33C3B6922350DB0500EC48EB /* Sources */,
+				33C3B6932350DB0500EC48EB /* Frameworks */,
+				33C3B6942350DB0500EC48EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33C3B69C2350DB0500EC48EB /* PBXTargetDependency */,
+			);
+			name = "Favorite Artists ObjCTests";
+			productName = "Favorite Artists ObjCTests";
+			productReference = 33C3B6962350DB0500EC48EB /* Favorite Artists ObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3307A5452350D63700E5E845 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = REP;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Red_Egg Productions";
 				TargetAttributes = {
 					3307A54C2350D63700E5E845 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					33C3B6952350DB0500EC48EB = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 3307A54C2350D63700E5E845;
 					};
 				};
 			};
@@ -161,6 +226,7 @@
 			projectRoot = "";
 			targets = (
 				3307A54C2350D63700E5E845 /* Favorite Artists ObjC */,
+				33C3B6952350DB0500EC48EB /* Favorite Artists ObjCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -176,6 +242,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33C3B6942350DB0500EC48EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -183,15 +256,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33C3B6862350D94800EC48EB /* ArtistDetailViewController.m in Sources */,
+				33C3B6862350D94800EC48EB /* REPArtistDetailViewController.m in Sources */,
 				3307A5522350D63700E5E845 /* AppDelegate.m in Sources */,
 				3307A5632350D63700E5E845 /* main.m in Sources */,
 				3307A5552350D63700E5E845 /* SceneDelegate.m in Sources */,
-				33C3B6892350D95C00EC48EB /* ArtistTableViewController.m in Sources */,
+				33C3B68C2350DA3200EC48EB /* Artist.xcdatamodeld in Sources */,
+				33C3B6912350DAC700EC48EB /* REPArtistTableViewController.m in Sources */,
+				33C3B68F2350DAA200EC48EB /* REPArtistController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33C3B6922350DB0500EC48EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C3B6992350DB0500EC48EB /* Favorite_Artists_ObjCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33C3B69C2350DB0500EC48EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3307A54C2350D63700E5E845 /* Favorite Artists ObjC */;
+			targetProxy = 33C3B69B2350DB0500EC48EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3307A5592350D63700E5E845 /* Main.storyboard */ = {
@@ -357,6 +448,44 @@
 			};
 			name = Release;
 		};
+		33C3B69E2350DB0500EC48EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = "Favorite Artists ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.redeggproductions.Favorite-Artists-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Favorite Artists ObjC.app/Favorite Artists ObjC";
+			};
+			name = Debug;
+		};
+		33C3B69F2350DB0500EC48EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = "Favorite Artists ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.redeggproductions.Favorite-Artists-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Favorite Artists ObjC.app/Favorite Artists ObjC";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -378,7 +507,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		33C3B69D2350DB0500EC48EB /* Build configuration list for PBXNativeTarget "Favorite Artists ObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33C3B69E2350DB0500EC48EB /* Debug */,
+				33C3B69F2350DB0500EC48EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		33C3B68A2350DA3200EC48EB /* Artist.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				33C3B68B2350DA3200EC48EB /* Artist.xcdatamodel */,
+			);
+			currentVersion = 33C3B68B2350DA3200EC48EB /* Artist.xcdatamodel */;
+			path = Artist.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3307A5452350D63700E5E845 /* Project object */;
 }

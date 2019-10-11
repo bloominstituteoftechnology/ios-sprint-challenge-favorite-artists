@@ -10,4 +10,20 @@
 
 @implementation LSIArtist
 
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    
+    self = [super init];
+    if (self) {
+        for (NSDictionary *element in dictionary.allValues) {
+            for (NSDictionary *value in element) {
+                _artistName = value[@"strArtist"];
+                _artistBio = value[@"strBiographyEN"];
+                _formedYear = [value[@"intFormedYear"] intValue];
+            }
+        }
+    }
+    return self;
+}
+
+
 @end

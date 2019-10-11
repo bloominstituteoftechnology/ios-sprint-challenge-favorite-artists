@@ -7,6 +7,8 @@
 //
 
 #import "LSIArtistDetailViewController.h"
+#import "LSIArtist.h"
+#import "LSIArtistController.h"
 
 @interface LSIArtistDetailViewController ()
 @property (strong, nonatomic) IBOutlet UISearchBar *artistSearchBar;
@@ -20,9 +22,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _artistSearchBar.delegate = self;
+    [self updateViews];
 }
+
+
+
 - (IBAction)saveTapped:(id)sender {
 }
 
+
+-(void)updateViews {
+    if (!self.isViewLoaded || !self.artist) {return;}
+    self.artistName.text = self.artist.artistName;
+    self.bioTextView.text = self.artist.artistBio;
+    self.yearFormed.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.artist.formedYear];
+}
 
 @end

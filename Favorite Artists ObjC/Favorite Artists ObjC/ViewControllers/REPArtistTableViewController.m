@@ -70,6 +70,19 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+		REPArtist *artist = [self.fetchedResultsController objectAtIndexPath:indexPath];
+		[[REPCoreDataStack sharedInstance].mainContext deleteObject: artist];
+
+		NSError *error;
+		[[REPCoreDataStack sharedInstance] saveContext:[REPCoreDataStack sharedInstance].mainContext error:error];
+		if (error) {
+			NSLog(@"There was an error deleting the artist: %@", error);
+		}
+	}
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -12,16 +12,23 @@
 
 @implementation REPArtist (NSJSONSerialization)
 
+static NSString const *nameKey = @"strArtist";
+static NSString const *bioKey = @"strBiographyEN";
+static NSString const *moodKey = @"strMood";
+static NSString const *genreKey = @"strGenre";
+static NSString const *yearFormedKey = @"intFormedYear";
+
 + (REPArtist *)artistWithDictionary:(NSDictionary *)dictionary onContext:(NSManagedObjectContext *)context {
 
-	NSString *name = dictionary[@"strArtist"];
-	NSString *bio = dictionary[@"strBiographyEN"];
-	NSString *mood = dictionary[@"strMood"];
-	NSString *genre = dictionary[@"strGenre"];
-	NSNumber *yearFormedNumber = dictionary[@"intFormedYear"];
+	NSString *name = dictionary[nameKey];
+	NSString *bio = dictionary[bioKey];
+	NSString *mood = dictionary[moodKey];
+	NSString *genre = dictionary[genreKey];
+	NSNumber *yearFormedNumber = dictionary[yearFormedKey];
 
 	if (name != nil &&
-		yearFormedNumber != nil// &&
+		yearFormedNumber != nil &&
+		bio != nil
 		) {
 		int yearFormed = [yearFormedNumber intValue];
 

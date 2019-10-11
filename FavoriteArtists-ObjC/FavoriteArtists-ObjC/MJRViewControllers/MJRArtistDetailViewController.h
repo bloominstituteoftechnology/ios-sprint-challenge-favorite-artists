@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class MJRArtistController;
+@class MJRArtist;
 
-@interface MJRArtistDetailViewController : UIViewController
+@interface MJRArtistDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property MJRArtistController *artistController;
+@property MJRArtist *artist;
 
 @end
-
-NS_ASSUME_NONNULL_END

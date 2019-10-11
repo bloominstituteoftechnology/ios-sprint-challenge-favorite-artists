@@ -90,7 +90,7 @@
                                     </searchBar>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="war-Hw-aoN">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="war-Hw-aoN">
                                 <rect key="frame" x="20" y="316" width="374" height="566"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -117,8 +117,18 @@
                         <viewLayoutGuide key="safeArea" id="mLh-hh-MCc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="vKw-iu-zqd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fNQ-sO-Z28"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fNQ-sO-Z28">
+                            <connections>
+                                <action selector="saveTapped:" destination="Wt5-VG-wDS" id="trO-iA-VfL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="3RA-eY-rAG" id="5zV-Gl-Wey"/>
+                        <outlet property="bioTextView" destination="war-Hw-aoN" id="FTm-sX-tqV"/>
+                        <outlet property="searchBar" destination="sgy-fG-54Q" id="IeA-ra-OnU"/>
+                        <outlet property="yearFormedLabel" destination="8dP-Ox-WcX" id="KVy-9J-09O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFQ-l1-0hd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class MJRArtist;
 
 @interface MJRArtistController : NSObject
 
-@end
+- (void)searchArtistWithName:(NSString *)artistName completion:(void (^)(MJRArtist *artist, NSError *error))completion;
 
-NS_ASSUME_NONNULL_END
+@end

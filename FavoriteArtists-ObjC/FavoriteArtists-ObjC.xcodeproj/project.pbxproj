@@ -16,8 +16,9 @@
 		37CE3A1F2350D96F00779B8F /* FavoriteArtists_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE3A1E2350D96F00779B8F /* FavoriteArtists_ObjCTests.m */; };
 		37CE3A2E2350DE5600779B8F /* MJRArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE3A2D2350DE5600779B8F /* MJRArtistsTableViewController.m */; };
 		37CE3A312350E09A00779B8F /* MJRArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE3A302350E09A00779B8F /* MJRArtistDetailViewController.m */; };
-		37CE3A332350E24900779B8F /* ArtistJson in Resources */ = {isa = PBXBuildFile; fileRef = 37CE3A322350E24900779B8F /* ArtistJson */; };
+		37CE3A332350E24900779B8F /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 37CE3A322350E24900779B8F /* Artist.json */; };
 		37CE3A372350E39900779B8F /* MJRArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE3A362350E39900779B8F /* MJRArtist.m */; };
+		37CE3A522350FE2B00779B8F /* MJRArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE3A512350FE2B00779B8F /* MJRArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +49,12 @@
 		37CE3A2D2350DE5600779B8F /* MJRArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRArtistsTableViewController.m; sourceTree = "<group>"; };
 		37CE3A2F2350E09A00779B8F /* MJRArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRArtistDetailViewController.h; sourceTree = "<group>"; };
 		37CE3A302350E09A00779B8F /* MJRArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRArtistDetailViewController.m; sourceTree = "<group>"; };
-		37CE3A322350E24900779B8F /* ArtistJson */ = {isa = PBXFileReference; lastKnownFileType = text; path = ArtistJson; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		37CE3A322350E24900779B8F /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		37CE3A352350E39900779B8F /* MJRArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRArtist.h; sourceTree = "<group>"; };
 		37CE3A362350E39900779B8F /* MJRArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRArtist.m; sourceTree = "<group>"; };
 		37CE3A4E2350F73700779B8F /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		37CE3A502350FE2B00779B8F /* MJRArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRArtistController.h; sourceTree = "<group>"; };
+		37CE3A512350FE2B00779B8F /* MJRArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 		37CE3A012350D96D00779B8F /* FavoriteArtists-ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				37CE3A4F2350FE0400779B8F /* ModelController */,
 				37CE3A342350E35D00779B8F /* MJRModel */,
 				37CE3A2B2350DE1F00779B8F /* MJRViewControllers */,
 				37CE3A292350DE0000779B8F /* Storyboards */,
@@ -109,7 +113,7 @@
 			children = (
 				37CE3A1E2350D96F00779B8F /* FavoriteArtists_ObjCTests.m */,
 				37CE3A202350D96F00779B8F /* Info.plist */,
-				37CE3A322350E24900779B8F /* ArtistJson */,
+				37CE3A322350E24900779B8F /* Artist.json */,
 				37CE3A4E2350F73700779B8F /* LSIFileHelper.h */,
 			);
 			path = "FavoriteArtists-ObjCTests";
@@ -153,6 +157,15 @@
 				37CE3A362350E39900779B8F /* MJRArtist.m */,
 			);
 			path = MJRModel;
+			sourceTree = "<group>";
+		};
+		37CE3A4F2350FE0400779B8F /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				37CE3A502350FE2B00779B8F /* MJRArtistController.h */,
+				37CE3A512350FE2B00779B8F /* MJRArtistController.m */,
+			);
+			path = ModelController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37CE3A332350E24900779B8F /* ArtistJson in Resources */,
+				37CE3A332350E24900779B8F /* Artist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +276,7 @@
 				37CE3A312350E09A00779B8F /* MJRArtistDetailViewController.m in Sources */,
 				37CE3A152350D96E00779B8F /* main.m in Sources */,
 				37CE3A072350D96D00779B8F /* SceneDelegate.m in Sources */,
+				37CE3A522350FE2B00779B8F /* MJRArtistController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

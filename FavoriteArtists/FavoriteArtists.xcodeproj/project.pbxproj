@@ -17,6 +17,7 @@
 		EF2793582350D71000D9F0BE /* LSIArtist.json in Resources */ = {isa = PBXBuildFile; fileRef = EF2793572350D71000D9F0BE /* LSIArtist.json */; };
 		EF27935B2350D97A00D9F0BE /* LSIArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27935A2350D97A00D9F0BE /* LSIArtistTableViewController.m */; };
 		EF27935F2350DA4E00D9F0BE /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27935E2350DA4E00D9F0BE /* LSIArtistDetailViewController.m */; };
+		EF2793622350DA9600D9F0BE /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2793612350DA9600D9F0BE /* LSIArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		EF27935A2350D97A00D9F0BE /* LSIArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistTableViewController.m; sourceTree = "<group>"; };
 		EF27935D2350DA4E00D9F0BE /* LSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistDetailViewController.h; sourceTree = "<group>"; };
 		EF27935E2350DA4E00D9F0BE /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
+		EF2793602350DA9600D9F0BE /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
+		EF2793612350DA9600D9F0BE /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				EF2793302350D2B600D9F0BE /* AppDelegate.m */,
 				EF2793322350D2B600D9F0BE /* SceneDelegate.h */,
 				EF2793332350D2B600D9F0BE /* SceneDelegate.m */,
+				EF2793602350DA9600D9F0BE /* LSIArtist.h */,
+				EF2793612350DA9600D9F0BE /* LSIArtist.m */,
 				EF27935C2350DA0600D9F0BE /* ViewControllers */,
 				EF2793382350D2B600D9F0BE /* Main.storyboard */,
 				EF27933B2350D2D000D9F0BE /* Assets.xcassets */,
@@ -230,6 +235,7 @@
 				EF27935F2350DA4E00D9F0BE /* LSIArtistDetailViewController.m in Sources */,
 				EF2793312350D2B600D9F0BE /* AppDelegate.m in Sources */,
 				EF2793422350D2D000D9F0BE /* main.m in Sources */,
+				EF2793622350DA9600D9F0BE /* LSIArtist.m in Sources */,
 				EF2793342350D2B600D9F0BE /* SceneDelegate.m in Sources */,
 				EF27935B2350D97A00D9F0BE /* LSIArtistTableViewController.m in Sources */,
 			);

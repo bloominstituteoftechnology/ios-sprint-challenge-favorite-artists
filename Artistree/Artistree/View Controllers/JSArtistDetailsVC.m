@@ -27,6 +27,8 @@
     [super viewDidLoad];
     
 	self.searchBar.delegate = self;
+	
+	[self updateViews];
 }
 
 - (IBAction)saveBtnTapped:(id)sender {
@@ -39,6 +41,19 @@
 		self.nameLbl.text = self.artist.name;
 		self.conceptionLbl.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
 		self.biographyLbl.text = self.artist.biography;
+
+		[self.nameLbl setHidden:false];
+		[self.conceptionLbl setHidden:false];
+		[self.biographyLbl setHidden:false];
+		[self.searchBar setHidden:true];
+		
+		[self.navigationItem.rightBarButtonItem setEnabled:false];
+	} else {
+		[self.nameLbl setHidden:true];
+		[self.conceptionLbl setHidden:true];
+		[self.biographyLbl setHidden:true];
+		
+		[self.navigationItem.rightBarButtonItem setEnabled:true];
 	}
 }
 

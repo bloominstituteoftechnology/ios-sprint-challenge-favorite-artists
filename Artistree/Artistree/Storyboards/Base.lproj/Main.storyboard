@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TLn-V8-Yhc">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="174"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Hdh-h3-pYE">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -90,7 +90,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Neb-0f-cM5">
-                                        <rect key="frame" x="0.0" y="153.5" width="414" height="568.5"/>
+                                        <rect key="frame" x="0.0" y="153.5" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -101,9 +101,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="TLn-V8-Yhc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FsI-fr-1U6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TLn-V8-Yhc" secondAttribute="bottom" id="dTj-jo-rnd"/>
                             <constraint firstItem="TLn-V8-Yhc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tT5-vd-ca1"/>
                             <constraint firstItem="TLn-V8-Yhc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tkW-VU-ErT"/>
+                            <constraint firstItem="TLn-V8-Yhc" firstAttribute="height" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="height" id="wU6-12-KSI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

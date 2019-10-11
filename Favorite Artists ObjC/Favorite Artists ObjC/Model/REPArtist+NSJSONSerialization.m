@@ -25,6 +25,9 @@ static NSString const *yearFormedKey = @"intFormedYear";
 	NSString *mood = dictionary[moodKey];
 	NSString *genre = dictionary[genreKey];
 	NSNumber *yearFormedNumber = dictionary[yearFormedKey];
+	if ([yearFormedNumber isKindOfClass:[NSNull class]]) {
+		yearFormedNumber = [NSNumber numberWithInt:NAN];
+	}
 
 	if (name != nil &&
 		yearFormedNumber != nil &&

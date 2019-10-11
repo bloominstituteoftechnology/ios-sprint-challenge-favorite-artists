@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	NSManagedObjectContext* context = [[REPCoreDataStack sharedInstance].container newBackgroundContext];
 
 }
 

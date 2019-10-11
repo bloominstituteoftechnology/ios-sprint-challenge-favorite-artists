@@ -9,18 +9,19 @@
 #import "REPArtistNetController.h"
 #import "REPArtist+NSJSONSerialization.h"
 #import "REPArtist+REPConvenience.h"
+#import "REPCoreDataStack.h"
 
 
 @implementation REPArtistNetController
 
 //static NSString const *baseURLString = @"https://theaudiodb.com/api/v1/json/{APIKEY}/search.php?s={Artist name}";
 static NSString const *baseURLString = @"https://theaudiodb.com/api/v1/json/";
-static NSString const *apiKey = @"f641060b2a95d6cca0d96a5230be574b";
+static NSString const *apiKey = @"1";
 
 - (void)fetchArtistNamed:(NSString *)name completionBlock:(REPArtistCompletionBlock)completionBlock {
 
 	NSURL *baseURL = [NSURL URLWithString:baseURLString];
-	NSURL *apiKeyURL = [baseURL URLByAppendingPathComponent:@"1"];
+	NSURL *apiKeyURL = [baseURL URLByAppendingPathComponent:apiKey];
 	NSURL *requestURL = [[apiKeyURL URLByAppendingPathComponent:@"search"] URLByAppendingPathExtension:@"php"];
 
 	NSURLQueryItem *queryItem = [NSURLQueryItem queryItemWithName:@"s" value:name];
@@ -29,7 +30,32 @@ static NSString const *apiKey = @"f641060b2a95d6cca0d96a5230be574b";
 
 	NSURL* url = components.URL;
 
-	NSLog(@"%@", url);
+	NSURLSessionDataTask *fetchTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+		if (error) {
+			NSLog(@"error fetching data: %@", error);
+			completionBlock(nil, error);
+			return;
+		}
+
+		NSError* decodeError;
+		NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&decodeError];
+		NSArray *artistResults = jsonDict[@"artists"];
+		NSDictionary *firstArtist = [artistResults firstObject];
+
+		if (decodeError) {
+			NSLog(@"error decoding data: %@", decodeError);
+			completionBlock(nil, decodeError);
+			return;
+		}
+
+		NSManagedObjectContext *newContext = [[REPCoreDataStack sharedInstance].container newBackgroundContext];
+
+		REPArtist *artist = [REPArtist artistWithDictionary:firstArtist onContext:newContext];
+
+		completionBlock(artist, nil);
+
+	}];
+	[fetchTask resume];
 
 }
 

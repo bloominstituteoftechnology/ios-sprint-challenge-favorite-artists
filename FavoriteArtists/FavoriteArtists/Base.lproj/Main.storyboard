@@ -79,14 +79,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Formed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hff-Ju-Idw">
+                                <rect key="frame" x="20" y="197" width="126" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="sQZ-eH-5TS" firstAttribute="top" secondItem="iIB-6G-DIy" secondAttribute="bottom" constant="15" id="1UG-BD-GgY"/>
+                            <constraint firstItem="dho-1v-Hh3" firstAttribute="trailing" secondItem="Hff-Ju-Idw" secondAttribute="trailing" constant="268" id="6VA-H3-gdG"/>
                             <constraint firstItem="dho-1v-Hh3" firstAttribute="trailing" secondItem="sQZ-eH-5TS" secondAttribute="trailing" constant="20" id="HN8-te-8ke"/>
+                            <constraint firstItem="Hff-Ju-Idw" firstAttribute="leading" secondItem="dho-1v-Hh3" secondAttribute="leading" constant="20" id="Hd1-dZ-ZX6"/>
                             <constraint firstItem="iIB-6G-DIy" firstAttribute="trailing" secondItem="dho-1v-Hh3" secondAttribute="trailing" id="PX2-zX-89r"/>
                             <constraint firstItem="sQZ-eH-5TS" firstAttribute="leading" secondItem="dho-1v-Hh3" secondAttribute="leading" constant="20" id="Vfo-td-txw"/>
                             <constraint firstItem="iIB-6G-DIy" firstAttribute="top" secondItem="dho-1v-Hh3" secondAttribute="top" id="c5y-b3-ZNY"/>
+                            <constraint firstItem="Hff-Ju-Idw" firstAttribute="top" secondItem="ZIh-kO-DwF" secondAttribute="topMargin" constant="109" id="fnw-52-ULM"/>
                             <constraint firstItem="iIB-6G-DIy" firstAttribute="leading" secondItem="dho-1v-Hh3" secondAttribute="leading" id="qy5-DS-uEN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dho-1v-Hh3"/>

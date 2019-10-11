@@ -11,7 +11,6 @@
 @implementation LSIArtist
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    
     self = [super init];
     if (self) {
         for (NSDictionary *element in dictionary.allValues) {

@@ -14,7 +14,7 @@
 		EF27933F2350D2D000D9F0BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF27933D2350D2D000D9F0BE /* LaunchScreen.storyboard */; };
 		EF2793422350D2D000D9F0BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2793412350D2D000D9F0BE /* main.m */; };
 		EF27934F2350D67200D9F0BE /* LSITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27934E2350D67200D9F0BE /* LSITests.m */; };
-		EF2793582350D71000D9F0BE /* LSIArtist.json in Resources */ = {isa = PBXBuildFile; fileRef = EF2793572350D71000D9F0BE /* LSIArtist.json */; };
+		EF2793582350D71000D9F0BE /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = EF2793572350D71000D9F0BE /* Artist.json */; };
 		EF27935B2350D97A00D9F0BE /* LSIArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27935A2350D97A00D9F0BE /* LSIArtistTableViewController.m */; };
 		EF27935F2350DA4E00D9F0BE /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27935E2350DA4E00D9F0BE /* LSIArtistDetailViewController.m */; };
 		EF2793622350DA9600D9F0BE /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2793612350DA9600D9F0BE /* LSIArtist.m */; };
@@ -45,7 +45,7 @@
 		EF27934E2350D67200D9F0BE /* LSITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITests.m; sourceTree = "<group>"; };
 		EF2793502350D67300D9F0BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF2793562350D68900D9F0BE /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
-		EF2793572350D71000D9F0BE /* LSIArtist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LSIArtist.json; sourceTree = "<group>"; };
+		EF2793572350D71000D9F0BE /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
 		EF2793592350D97A00D9F0BE /* LSIArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistTableViewController.h; sourceTree = "<group>"; };
 		EF27935A2350D97A00D9F0BE /* LSIArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistTableViewController.m; sourceTree = "<group>"; };
 		EF27935D2350DA4E00D9F0BE /* LSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistDetailViewController.h; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			children = (
 				EF27934E2350D67200D9F0BE /* LSITests.m */,
 				EF2793562350D68900D9F0BE /* LSIFileHelper.h */,
-				EF2793572350D71000D9F0BE /* LSIArtist.json */,
+				EF2793572350D71000D9F0BE /* Artist.json */,
 				EF2793502350D67300D9F0BE /* Info.plist */,
 			);
 			path = LSITests;
@@ -229,7 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF2793582350D71000D9F0BE /* LSIArtist.json in Resources */,
+				EF2793582350D71000D9F0BE /* Artist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

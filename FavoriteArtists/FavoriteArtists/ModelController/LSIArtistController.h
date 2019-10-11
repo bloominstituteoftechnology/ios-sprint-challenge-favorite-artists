@@ -9,13 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "LSIArtist.h"
 
-typedef (^LSIArtistControllerCompletionBlock)(Artist *, NSError *);
+typedef void (^LSIArtistControllerCompletionBlock)(LSIArtist *, NSError *);
 @class LSIArtist;
 
 @interface LSIArtistController : NSObject
--(void)fetchArtistWithName:(NSString *)artistName completionBlock:(LSIArtistCOntrollerCompletionBlock)completionBlock;
+//fetch artist from API
+-(void)fetchArtistWithName:(NSString *)artistName completionBlock:(LSIArtistControllerCompletionBlock)completionBlock;
+//artists array
 @property NSMutableArray *artists;
+//object at index
 -(LSIArtist *)objectInArtistAtIndex:(NSUInteger)index;
+//create
+-(void)addArtistWithName:(NSString *)name
+              artistBio:(NSString *)bio
+              formedYear:(int)year;
 
 
 @end

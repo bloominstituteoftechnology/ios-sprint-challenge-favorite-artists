@@ -52,7 +52,6 @@
                     <navigationItem key="navigationItem" id="K5w-dI-swi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="b5F-r3-JbF">
                             <connections>
-                                <action selector="addArtistPressed:" destination="yNz-dd-0Oz" id="HAG-u4-TAT"/>
                                 <segue destination="BYZ-38-t0r" kind="show" id="KTd-lu-xz1"/>
                             </connections>
                         </barButtonItem>

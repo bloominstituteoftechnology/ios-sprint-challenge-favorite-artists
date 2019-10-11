@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface REPArtistTableViewController : UITableViewController
+@interface REPArtistTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @end
 
-NS_ASSUME_NONNULL_END

@@ -7,7 +7,16 @@
 //
 
 #import "LSIArtistController.h"
+#import "LSIArtist.h"
+
+@interface LSIArtistController()
+
+@end
 
 @implementation LSIArtistController
+
+
+static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/";
+
 
 @end

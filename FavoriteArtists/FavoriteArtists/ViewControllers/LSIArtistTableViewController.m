@@ -52,9 +52,23 @@
 }
 
 
-
+//AddArtist
+//ShowArtist
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  
+    if ([segue.identifier isEqualToString:@"ShowArtist"]) {
+           NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+           LSIArtistDetailViewController *detailVC = segue.destinationViewController;
+           detailVC.controller = self.controller;
+          detailVC.artist = [self.controller objectInArtistAtIndex:indexPath.row];
+       }
+       
+       if ([segue.identifier isEqualToString:@"AddArtist"]) {
+           LSIArtistDetailViewController *detailVC = segue.destinationViewController;
+           detailVC.controller = self.controller;
+       }
+    
+    
 }
 
 

@@ -17,8 +17,11 @@
 		75F2FB5F2350D877006007D8 /* BYArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB5E2350D877006007D8 /* BYArtist.m */; };
 		75F2FB622350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB612350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m */; };
 		75F2FB652350DA1B006007D8 /* BYArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB642350DA1B006007D8 /* BYArtistTest.m */; };
-		75F2FB682350DAA1006007D8 /* BYArtist.h in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB5D2350D877006007D8 /* BYArtist.h */; };
-		75F2FB6A2350DB81006007D8 /* BYArtist+BYNSJSONSerialization.h in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB602350D89C006007D8 /* BYArtist+BYNSJSONSerialization.h */; };
+		75F2FB6C2350DEBC006007D8 /* Artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 75F2FB6B2350DEBC006007D8 /* Artists.json */; };
+		75F2FB6F2350E3D0006007D8 /* BYArtist.h in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB5D2350D877006007D8 /* BYArtist.h */; };
+		75F2FB702350E3D0006007D8 /* BYArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB5E2350D877006007D8 /* BYArtist.m */; };
+		75F2FB712350E3D0006007D8 /* BYArtist+BYNSJSONSerialization.h in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB602350D89C006007D8 /* BYArtist+BYNSJSONSerialization.h */; };
+		75F2FB722350E3D0006007D8 /* BYArtist+BYNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB612350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,7 @@
 		75F2FB612350D89C006007D8 /* BYArtist+BYNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BYArtist+BYNSJSONSerialization.m"; sourceTree = "<group>"; };
 		75F2FB642350DA1B006007D8 /* BYArtistTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYArtistTest.m; sourceTree = "<group>"; };
 		75F2FB692350DB1A006007D8 /* BYFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYFileHelper.h; sourceTree = "<group>"; };
+		75F2FB6B2350DEBC006007D8 /* Artists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artists.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 				75F2FB572350D7C0006007D8 /* Info.plist */,
 				75F2FB642350DA1B006007D8 /* BYArtistTest.m */,
 				75F2FB692350DB1A006007D8 /* BYFileHelper.h */,
+				75F2FB6B2350DEBC006007D8 /* Artists.json */,
 			);
 			path = "Artist-objcTests";
 			sourceTree = "<group>";
@@ -175,7 +180,6 @@
 					};
 					75F2FB522350D7C0006007D8 = {
 						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 75F2FB2F2350D74D006007D8;
 					};
 				};
 			};
@@ -213,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F2FB6C2350DEBC006007D8 /* Artists.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,8 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F2FB6A2350DB81006007D8 /* BYArtist+BYNSJSONSerialization.h in Sources */,
-				75F2FB682350DAA1006007D8 /* BYArtist.h in Sources */,
+				75F2FB6F2350E3D0006007D8 /* BYArtist.h in Sources */,
+				75F2FB702350E3D0006007D8 /* BYArtist.m in Sources */,
+				75F2FB712350E3D0006007D8 /* BYArtist+BYNSJSONSerialization.h in Sources */,
+				75F2FB722350E3D0006007D8 /* BYArtist+BYNSJSONSerialization.m in Sources */,
 				75F2FB652350DA1B006007D8 /* BYArtistTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +426,6 @@
 		75F2FB5B2350D7C0006007D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8367QTYVY6;
 				INFOPLIST_FILE = "Artist-objcTests/Info.plist";
@@ -431,14 +437,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bradleyyin.Artist-objcTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Artist-objc.app/Artist-objc";
 			};
 			name = Debug;
 		};
 		75F2FB5C2350D7C0006007D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8367QTYVY6;
 				INFOPLIST_FILE = "Artist-objcTests/Info.plist";
@@ -450,7 +454,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bradleyyin.Artist-objcTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Artist-objc.app/Artist-objc";
 			};
 			name = Release;
 		};

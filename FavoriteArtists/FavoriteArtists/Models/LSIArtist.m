@@ -10,6 +10,17 @@
 
 @implementation LSIArtist
 
+-(instancetype)initWithArtistName:(NSString *)name biography:(NSString *)bio andFormedYear:(int)year {
+    if (self = [super init]) {
+        _artistName = name;
+        _artistBio = bio;
+        _formedYear = year;
+    }
+    return self;
+}
+
+
+
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {

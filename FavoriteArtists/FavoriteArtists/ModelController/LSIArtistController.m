@@ -52,6 +52,11 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/";
 }
 
 
+-(void)addArtistWithName:(NSString *)name
+artistBio:(NSString *)bio
+              formedYear:(int)year {
+}
+
 
 
 

@@ -14,7 +14,9 @@
 @property NSString *artistBio;
 @property int formedYear;
 -(instancetype)initWithDictionary: (NSDictionary*)dictionary;
-
+-(instancetype)initWithArtistName:(NSString *)name
+biography:(NSString *)bio
+                    andFormedYear:(int)year;
 @end
 
 

@@ -13,6 +13,10 @@
 		3307A55D2350D63700E5E845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3307A55C2350D63700E5E845 /* Assets.xcassets */; };
 		3307A5602350D63700E5E845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3307A55E2350D63700E5E845 /* LaunchScreen.storyboard */; };
 		3307A5632350D63700E5E845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307A5622350D63700E5E845 /* main.m */; };
+		332DCC342350ED6F00726848 /* REPArtist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 332DCC322350ED6F00726848 /* REPArtist.xcdatamodeld */; };
+		332DCC392350F2CE00726848 /* REPArtist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 332DCC322350ED6F00726848 /* REPArtist.xcdatamodeld */; };
+		332DCC3A2350F35600726848 /* REPArtist+REPConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6A42350DDDE00EC48EB /* REPArtist+REPConvenience.m */; };
+		332DCC3B2350F35A00726848 /* REPArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6B02350E16500EC48EB /* REPArtist+NSJSONSerialization.m */; };
 		33C3B6862350D94800EC48EB /* REPArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6852350D94800EC48EB /* REPArtistDetailViewController.m */; };
 		33C3B6912350DAC700EC48EB /* REPArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6902350DAC700EC48EB /* REPArtistTableViewController.m */; };
 		33C3B6992350DB0500EC48EB /* Favorite_Artists_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6982350DB0500EC48EB /* Favorite_Artists_ObjCTests.m */; };
@@ -20,7 +24,6 @@
 		33C3B6A52350DDDE00EC48EB /* REPArtist+REPConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6A42350DDDE00EC48EB /* REPArtist+REPConvenience.m */; };
 		33C3B6A92350DE5500EC48EB /* REPCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6A82350DE5500EC48EB /* REPCoreDataStack.m */; };
 		33C3B6AC2350DF1700EC48EB /* REPArtistNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6AB2350DF1700EC48EB /* REPArtistNetController.m */; };
-		33C3B6AE2350DF7D00EC48EB /* REPArtist.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6AD2350DF7D00EC48EB /* REPArtist.xcdatamodel */; };
 		33C3B6B12350E16500EC48EB /* REPArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6B02350E16500EC48EB /* REPArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,7 @@
 		3307A55F2350D63700E5E845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3307A5612350D63700E5E845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3307A5622350D63700E5E845 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		332DCC332350ED6F00726848 /* REPArtist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = REPArtist.xcdatamodel; sourceTree = "<group>"; };
 		33C3B6852350D94800EC48EB /* REPArtistDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistDetailViewController.m; sourceTree = "<group>"; };
 		33C3B6872350D95C00EC48EB /* REPArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPArtistTableViewController.h; sourceTree = "<group>"; };
 		33C3B6902350DAC700EC48EB /* REPArtistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistTableViewController.m; sourceTree = "<group>"; };
@@ -60,7 +64,6 @@
 		33C3B6A82350DE5500EC48EB /* REPCoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPCoreDataStack.m; sourceTree = "<group>"; };
 		33C3B6AA2350DF1700EC48EB /* REPArtistNetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REPArtistNetController.h; sourceTree = "<group>"; };
 		33C3B6AB2350DF1700EC48EB /* REPArtistNetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistNetController.m; sourceTree = "<group>"; };
-		33C3B6AD2350DF7D00EC48EB /* REPArtist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = REPArtist.xcdatamodel; path = REPArtist.xcdatamodeld/REPArtist.xcdatamodel; sourceTree = "<group>"; };
 		33C3B6AF2350E16500EC48EB /* REPArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "REPArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		33C3B6B02350E16500EC48EB /* REPArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "REPArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,7 +146,7 @@
 		3307A56B2350D74300E5E845 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				33C3B6AD2350DF7D00EC48EB /* REPArtist.xcdatamodel */,
+				332DCC322350ED6F00726848 /* REPArtist.xcdatamodeld */,
 				33C3B6A32350DDDE00EC48EB /* REPArtist+REPConvenience.h */,
 				33C3B6A42350DDDE00EC48EB /* REPArtist+REPConvenience.m */,
 				33C3B6AF2350E16500EC48EB /* REPArtist+NSJSONSerialization.h */,
@@ -283,9 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				332DCC342350ED6F00726848 /* REPArtist.xcdatamodeld in Sources */,
 				33C3B6B12350E16500EC48EB /* REPArtist+NSJSONSerialization.m in Sources */,
 				33C3B6862350D94800EC48EB /* REPArtistDetailViewController.m in Sources */,
-				33C3B6AE2350DF7D00EC48EB /* REPArtist.xcdatamodel in Sources */,
 				3307A5522350D63700E5E845 /* AppDelegate.m in Sources */,
 				33C3B6A92350DE5500EC48EB /* REPCoreDataStack.m in Sources */,
 				33C3B6A52350DDDE00EC48EB /* REPArtist+REPConvenience.m in Sources */,
@@ -300,7 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				332DCC3B2350F35A00726848 /* REPArtist+NSJSONSerialization.m in Sources */,
+				332DCC3A2350F35600726848 /* REPArtist+REPConvenience.m in Sources */,
 				33C3B6992350DB0500EC48EB /* Favorite_Artists_ObjCTests.m in Sources */,
+				332DCC392350F2CE00726848 /* REPArtist.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +553,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		332DCC322350ED6F00726848 /* REPArtist.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				332DCC332350ED6F00726848 /* REPArtist.xcdatamodel */,
+			);
+			currentVersion = 332DCC332350ED6F00726848 /* REPArtist.xcdatamodel */;
+			path = REPArtist.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3307A5452350D63700E5E845 /* Project object */;
 }

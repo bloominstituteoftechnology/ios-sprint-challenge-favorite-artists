@@ -12,7 +12,7 @@
 
 @implementation REPArtist (NSJSONSerialization)
 
-- (REPArtist *)artistWithDictionary:(NSDictionary *)dictionary onContext:(NSManagedObjectContext *)context {
++ (REPArtist *)artistWithDictionary:(NSDictionary *)dictionary onContext:(NSManagedObjectContext *)context {
 
 	NSString *name;
 	NSString *bio;

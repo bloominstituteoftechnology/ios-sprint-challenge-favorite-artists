@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class REPArtist;
+
 @interface REPArtistNetController : NSObject
+
+typedef void (^REPArtistCompletionBlock)(REPArtist *, NSError *);
+
+
+- (void)fetchArtistNamed:(NSString *)name completionBlock:(REPArtistCompletionBlock)completionBlock;
 
 @end

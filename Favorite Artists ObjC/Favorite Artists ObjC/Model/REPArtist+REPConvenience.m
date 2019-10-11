@@ -8,7 +8,6 @@
 
 #import "REPArtist+REPConvenience.h"
 
-
 @implementation REPArtist (REPConvenience)
 
 - (instancetype)initWithArtistNamed:(NSString *)name yearFormed:(int)yearFormed mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context {

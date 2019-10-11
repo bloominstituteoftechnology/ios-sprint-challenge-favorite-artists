@@ -7,6 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "LSIFileHelper.h"
+#import "REPArtistNetController.h"
+#import "REPArtist+NSJSONSerialization.h"
+#import "REPArtist+REPConvenience.h"
+#import "REPCoreDataStack.h"
 
 @interface Favorite_Artists_ObjCTests : XCTestCase
 
@@ -22,8 +27,34 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testArtistDecode {
+- (NSData *)getGoodData {
+	NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+	NSData *data = loadFile(@"ArtistResults.json", bundle);
 
+	return data;
+}
+
+- (void)testData {
+	NSData* data = [self getGoodData];
+
+	XCTAssertNotNil(data);
+}
+
+- (void)testArtistDecode {
+	NSData* data = [self getGoodData];
+
+//	REPArtistNetController* netController = [[REPArtistNetController alloc] init];
+//	[netController fetchArtistNamed:@"weezer" completionBlock:^(REPArtist *artist, NSError *error) {
+//
+//	}];
+
+	NSError* error;
+	NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+	NSManagedObjectContext* context = [[REPCoreDataStack sharedInstance].container newBackgroundContext];
+
+	REPArtist *artist = [REPArtist artistWithDictionary:jsonDict onContext: context];
+
+	XCTAssertEqualObjects(@"Weezer", artist.name);
 }
 
 @end

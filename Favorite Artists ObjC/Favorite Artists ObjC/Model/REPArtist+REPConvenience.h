@@ -6,14 +6,14 @@
 //  Copyright © 2019 Red_Egg Productions. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "REPArtist+CoreDataClass.h"
 
+
 @interface REPArtist (REPConvenience)
++ (REPArtist *)artistNamed:(NSString *)name yearFormed:(int)yearFormed mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context;
 
 - (instancetype)initWithArtistNamed:(NSString *)name yearFormed:(int)yearFormed mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context;
 
-+ (REPArtist *)artistNamed:(NSString *)name yearFormed:(int)yearFormed mood:(NSString *)mood genre:(NSString *)genre bio:(NSString *)bio onContext:(NSManagedObjectContext *)context;
 
 @end
 

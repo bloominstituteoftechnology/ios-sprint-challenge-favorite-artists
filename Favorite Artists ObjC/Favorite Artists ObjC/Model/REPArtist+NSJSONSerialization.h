@@ -13,7 +13,7 @@
 
 @property (readonly) NSDictionary* dictionary;
 
-- (REPArtist *)artistWithDictionary:(NSDictionary *)dictionary onContext:(NSManagedObjectContext *)context;
++ (REPArtist *)artistWithDictionary:(NSDictionary *)dictionary onContext:(NSManagedObjectContext *)context;
 
 @end
 

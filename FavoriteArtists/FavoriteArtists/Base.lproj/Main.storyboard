@@ -73,10 +73,19 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQZ-eH-5TS">
+                                <rect key="frame" x="20" y="159" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="sQZ-eH-5TS" firstAttribute="top" secondItem="iIB-6G-DIy" secondAttribute="bottom" constant="15" id="1UG-BD-GgY"/>
+                            <constraint firstItem="dho-1v-Hh3" firstAttribute="trailing" secondItem="sQZ-eH-5TS" secondAttribute="trailing" constant="20" id="HN8-te-8ke"/>
                             <constraint firstItem="iIB-6G-DIy" firstAttribute="trailing" secondItem="dho-1v-Hh3" secondAttribute="trailing" id="PX2-zX-89r"/>
+                            <constraint firstItem="sQZ-eH-5TS" firstAttribute="leading" secondItem="dho-1v-Hh3" secondAttribute="leading" constant="20" id="Vfo-td-txw"/>
                             <constraint firstItem="iIB-6G-DIy" firstAttribute="top" secondItem="dho-1v-Hh3" secondAttribute="top" id="c5y-b3-ZNY"/>
                             <constraint firstItem="iIB-6G-DIy" firstAttribute="leading" secondItem="dho-1v-Hh3" secondAttribute="leading" id="qy5-DS-uEN"/>
                         </constraints>
@@ -88,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PU-Zp-6RW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="-145"/>
+            <point key="canvasLocation" x="1295.6521739130435" y="-145.3125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IoP-Ty-zN9">

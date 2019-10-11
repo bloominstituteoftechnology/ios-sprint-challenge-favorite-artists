@@ -98,6 +98,11 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
         // TODO: Parse the data
         NSLog(@"JSON: %@", json);
         
+        if (json[@"artists"] == [NSNull null]) {
+            completionBlock(nil, jsonError);
+            return;
+        }
+        
         BYArtist *artist = [[BYArtist alloc] initWithDictionary:json];
         
   

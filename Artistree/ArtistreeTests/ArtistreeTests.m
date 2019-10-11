@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "LSIFileHelper.h"
+#import "JSArtist.h"
 
 @interface ArtistreeTests : XCTestCase
 
@@ -14,24 +16,23 @@
 
 @implementation ArtistreeTests
 
-- (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+- (void)testParseArtistJSON {
+    
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSData *data = loadFile(@"Artist.json",bundle);
+    
+    XCTAssertNotNil(data);
+    NSLog(@"Data; %@", data);
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+    NSError *error = nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    
+    NSLog(@"Error: %@", error);
+    NSLog(@"JSON: %@", json);
+	
+	JSArtist *artist = [[JSArtist alloc] initWithDict: json];
+	XCTAssertNotNil(artist);
+	XCTAssertEqualObjects(@"Coldplay", artist.name);	
 }
 
 @end

@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Artist Table View Controller-->
         <scene sceneID="MDS-RB-0YW">
             <objects>
-                <tableViewController id="skX-FJ-E9v" sceneMemberID="viewController">
+                <tableViewController id="skX-FJ-E9v" customClass="LSIArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lfr-1R-5MC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="473.91304347826093" y="-147.32142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="JSp-Mw-rOV">
             <objects>
-                <viewController id="mW1-D5-Tp2" sceneMemberID="viewController">
+                <viewController id="mW1-D5-Tp2" customClass="LSIArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZIh-kO-DwF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,8 +112,18 @@
                         <viewLayoutGuide key="safeArea" id="dho-1v-Hh3"/>
                     </view>
                     <navigationItem key="navigationItem" id="WfO-0P-zEj">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="jQ4-gK-Hjg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="jQ4-gK-Hjg">
+                            <connections>
+                                <action selector="saveTapped:" destination="mW1-D5-Tp2" id="09c-jm-75z"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistName" destination="sQZ-eH-5TS" id="ia8-fZ-xkW"/>
+                        <outlet property="artistSearchBar" destination="iIB-6G-DIy" id="8sQ-3C-grm"/>
+                        <outlet property="bioTextView" destination="oYa-lm-18y" id="vnD-LS-Afn"/>
+                        <outlet property="yearFormed" destination="Hff-Ju-Idw" id="1Po-Gt-ATB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PU-Zp-6RW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

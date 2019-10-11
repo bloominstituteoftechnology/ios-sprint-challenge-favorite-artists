@@ -9,6 +9,10 @@
 #import "LSIArtistDetailViewController.h"
 
 @interface LSIArtistDetailViewController ()
+@property (strong, nonatomic) IBOutlet UISearchBar *artistSearchBar;
+@property (strong, nonatomic) IBOutlet UILabel *artistName;
+@property (strong, nonatomic) IBOutlet UILabel *yearFormed;
+@property (strong, nonatomic) IBOutlet UITextView *bioTextView;
 
 @end
 
@@ -16,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+- (IBAction)saveTapped:(id)sender {
 }
 
 

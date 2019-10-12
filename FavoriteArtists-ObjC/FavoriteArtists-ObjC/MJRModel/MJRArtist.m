@@ -10,32 +10,14 @@
 
 @implementation MJRArtist
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+
+- (instancetype)initWithArtistName:(NSString *)artistName bio:(NSString *)bio yearFormed:(int)yearFormed {
     if (self = [self init]) {
-
-//        NSDictionary *artistInfo = dictionary[@"artists"];
-
-        NSString *artistName = dictionary[@"strArtist"];
-        NSString *artistBio = dictionary[@"strBiographyEN"];
-        NSString *yearFormedStr = dictionary[@"intFormedYear"];
-
-        if (artistName != nil &&
-            artistBio != nil &&
-            yearFormedStr != nil) {
-            _artistName = artistName;
-            _bio = artistBio;
-            _yearFormed = [yearFormedStr intValue];
-        } else {
-            NSLog(@"Error: unable to parse artist: %@", dictionary);
-            return nil;
-        }
-
+        _artistName = artistName;
+        _bio = bio;
+        _yearFormed = yearFormed;
     }
     return self;
-}
-
-- (NSString *)formedInYearDesc {
-    return [NSString stringWithFormat:@"Formed in %d", self.yearFormed];
 }
 
 @end

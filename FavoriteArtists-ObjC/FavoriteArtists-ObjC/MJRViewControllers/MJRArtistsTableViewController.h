@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class MJRArtistController;
+@class MJRArtist;
 
 @interface MJRArtistsTableViewController : UITableViewController
 
-@end
+//@property (nonatomic) MJRArtistController *artistController;
+@property MJRArtist *artist;
 
-NS_ASSUME_NONNULL_END
+@end

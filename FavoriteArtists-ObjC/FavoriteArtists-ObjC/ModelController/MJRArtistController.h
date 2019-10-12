@@ -13,5 +13,6 @@
 @interface MJRArtistController : NSObject
 
 - (void)searchArtistWithName:(NSString *)artistName completion:(void (^)(MJRArtist *artist, NSError *error))completion;
+- (NSMutableArray *)favoriteArtists;
 
 @end

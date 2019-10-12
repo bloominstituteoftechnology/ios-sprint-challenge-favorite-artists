@@ -6,10 +6,48 @@
 //  Copyright © 2019 Marlon Raskin. All rights reserved.
 //
 
+#import "MJRArtist+MJRNSJSONSerialization.h"
 #import "MJRArtistController.h"
 #import "MJRArtist.h"
 
+@interface MJRArtistController()
+
+@property (nonatomic) NSMutableArray *internalArtistArray;
+
+@end
+
 @implementation MJRArtistController
+
+- (instancetype)init {
+    if (self = [super init]) {
+        _internalArtistArray = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+-(NSMutableArray *)favoriteArtists {
+    NSArray *searchPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *directory = [searchPath objectAtIndex:0];
+    NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:directory error:nil];
+
+    for (NSString *artist in filePaths) {
+        NSString *filePath = [[NSString alloc]initWithFormat:@"Documents/%@", artist];
+        NSString *artistPath = [NSHomeDirectory()stringByAppendingPathComponent:filePath];
+
+        NSURL *artistURL = [NSURL fileURLWithPath:artistPath];
+        NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
+
+        if (artistData != nil) {
+            NSDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
+            MJRArtist *artist = [[MJRArtist alloc] initWithDictionary:artistDictionary];
+            [self.internalArtistArray addObject:artist];
+        } else {
+            NSLog(@"Artist Data returned nil");
+        }
+    }
+    return self.internalArtistArray;
+}
+
 
 static NSString * const baseURLStr = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 

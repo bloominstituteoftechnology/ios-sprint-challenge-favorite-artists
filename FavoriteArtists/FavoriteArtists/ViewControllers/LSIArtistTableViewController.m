@@ -73,8 +73,8 @@
     if ([segue.identifier isEqualToString:@"ShowArtist"]) {
            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
            LSIArtistDetailViewController *detailVC = segue.destinationViewController;
-           detailVC.controller = self.controller;
-          detailVC.artist = [self.controller objectInArtistAtIndex:indexPath.row];
+        detailVC.controller = self.artistController;
+          detailVC.artist = [self tempArtists][indexPath.row];
        }
        
        if ([segue.identifier isEqualToString:@"AddArtist"]) {

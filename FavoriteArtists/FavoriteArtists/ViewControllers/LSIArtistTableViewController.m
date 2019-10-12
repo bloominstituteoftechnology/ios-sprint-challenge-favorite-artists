@@ -13,24 +13,39 @@
 
 @interface LSIArtistTableViewController ()
 
+@property NSMutableArray *tempArtists;
+@property LSIArtistController *artistController;
+
 @end
 
 @implementation LSIArtistTableViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.artistController = [[LSIArtistController alloc] init];
+    }
+    return self;
+}
+
+- (void)viewDidLoad:(BOOL)animated {
+    [super viewDidLoad];
+     [self.tableView reloadData];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    if (!self.artistController) {
+        self.artistController = [[LSIArtistController alloc] init];
+      self.artist = [[LSIArtist alloc] init];
+    }
+    [self.tempArtists removeAllObjects];
+    self.tempArtists = [self.artistController artistArray];
     [self.tableView reloadData];
 }
 
-
--(LSIArtistController *)controller {
-    if (_controller) {
-        return _controller;
-    } else {
-        _controller = [[LSIArtistController alloc] init];
-        return _controller;
-    }
-}
 
 
 
@@ -38,14 +53,13 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.controller.artists.count;
+    return self.tempArtists.count;
+
 }
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    LSIArtist *artist = [self.controller objectInArtistAtIndex:indexPath.row];
+    LSIArtist *artist = self.tempArtists[indexPath.row];
     cell.textLabel.text = artist.artistName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)artist.formedYear];
     return cell;
@@ -65,7 +79,7 @@
        
        if ([segue.identifier isEqualToString:@"AddArtist"]) {
            LSIArtistDetailViewController *detailVC = segue.destinationViewController;
-           detailVC.controller = self.controller;
+           detailVC.controller = self.artistController;
        }
     
     

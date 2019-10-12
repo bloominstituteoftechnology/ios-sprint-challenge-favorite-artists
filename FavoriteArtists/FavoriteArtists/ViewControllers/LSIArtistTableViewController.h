@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @class LSIArtistController;
-
+@class LSIArtist;
 @interface LSIArtistTableViewController : UITableViewController
-
+@property LSIArtist *artist;
 @property (nonatomic)LSIArtistController *controller;
 
 @end

@@ -9,6 +9,7 @@
 #import "LSIArtistDetailViewController.h"
 #import "LSIArtist.h"
 #import "LSIArtistController.h"
+#import "LSIArtist+NSJSONSerialization.h"
 
 @interface LSIArtistDetailViewController ()
 @property (strong, nonatomic) IBOutlet UISearchBar *artistSearchBar;
@@ -28,18 +29,28 @@
 
 
 
-- (IBAction)saveTapped:(id)sender {
-    
-    if (self.artist) {
-        //update
-        [self.controller update:self.artist withArtistName:self.artistName.text biography:self.bioTextView.text formedYear: [self.yearFormed.text intValue]];
+-(void)saveArtist:(LSIArtist *)artistRetrieved {
+    if (artistRetrieved) {
+        NSData *data = [NSJSONSerialization dataWithJSONObject:[artistRetrieved artistData] options:0 error:nil];
+        NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+        NSURL *url = [[directory URLByAppendingPathComponent:self.artist.artistName] URLByAppendingPathExtension:@"json"];
+        [data writeToURL:url atomically:YES];
     } else {
-        //save to array
-        //save the array of artists to persistence on the table view
-        [self.controller addArtistWithName:self.artistName.text artistBio:self.bioTextView.text formedYear:[self.yearFormed.text intValue]];
-        
+        NSLog(@"Error saving new artist");
+        return;
     }
-    [self.navigationController popViewControllerAnimated:YES];
+    return;
+}
+
+
+
+- (IBAction)saveTapped:(id)sender {
+  if (self.artist) {
+        [self saveArtist:self.artist];
+        [self.navigationController popToRootViewControllerAnimated:true];
+    } else {
+        NSLog(@"Invalid Arist");
+    }
 }
 
 
@@ -51,7 +62,7 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [self.controller fetchArtistWithName:searchBar.text completionBlock:^(LSIArtist *receivedArtist, NSError *error) {
+  [self.controller fetchArtistWithName:searchBar.text completionBlock:^(LSIArtist *receivedArtist, NSError *error) {
         if (error) {
             NSLog(@"Unable to fetch artist");
         } else {

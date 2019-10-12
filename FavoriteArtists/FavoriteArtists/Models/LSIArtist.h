@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @class LSIArtist;
-@interface LSIArtist : NSObject <NSCoding>
+@interface LSIArtist : NSObject
 @property NSString *artistName;
 @property NSString *artistBio;
 @property int formedYear;
--(instancetype)initWithDictionary: (NSDictionary*)dictionary;
+//-(instancetype)initWithDictionary: (NSDictionary*)dictionary;
 -(instancetype)initWithArtistName:(NSString *)name
 biography:(NSString *)bio
                     andFormedYear:(int)year;

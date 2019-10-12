@@ -18,6 +18,7 @@
 		EF27935B2350D97A00D9F0BE /* LSIArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27935A2350D97A00D9F0BE /* LSIArtistTableViewController.m */; };
 		EF27935F2350DA4E00D9F0BE /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27935E2350DA4E00D9F0BE /* LSIArtistDetailViewController.m */; };
 		EF2793622350DA9600D9F0BE /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2793612350DA9600D9F0BE /* LSIArtist.m */; };
+		EF5A0143235181E300D9E4BD /* LSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5A0142235181E300D9E4BD /* LSIArtist+NSJSONSerialization.m */; };
 		EF9D4B682350E0A800618A3C /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9D4B672350E0A800618A3C /* LSIArtistController.m */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,8 @@
 		EF27935E2350DA4E00D9F0BE /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
 		EF2793602350DA9600D9F0BE /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
 		EF2793612350DA9600D9F0BE /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
+		EF5A0141235181E300D9E4BD /* LSIArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSIArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		EF5A0142235181E300D9E4BD /* LSIArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LSIArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		EF9D4B662350E0A800618A3C /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
 		EF9D4B672350E0A800618A3C /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +142,8 @@
 			children = (
 				EF2793602350DA9600D9F0BE /* LSIArtist.h */,
 				EF2793612350DA9600D9F0BE /* LSIArtist.m */,
+				EF5A0141235181E300D9E4BD /* LSIArtist+NSJSONSerialization.h */,
+				EF5A0142235181E300D9E4BD /* LSIArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				EF2793312350D2B600D9F0BE /* AppDelegate.m in Sources */,
 				EF2793422350D2D000D9F0BE /* main.m in Sources */,
 				EF2793622350DA9600D9F0BE /* LSIArtist.m in Sources */,
+				EF5A0143235181E300D9E4BD /* LSIArtist+NSJSONSerialization.m in Sources */,
 				EF2793342350D2B600D9F0BE /* SceneDelegate.m in Sources */,
 				EF27935B2350D97A00D9F0BE /* LSIArtistTableViewController.m in Sources */,
 			);

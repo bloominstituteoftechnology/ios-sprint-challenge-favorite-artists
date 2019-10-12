@@ -8,6 +8,7 @@
 
 #import "LSIArtistController.h"
 #import "LSIArtist.h"
+#import "LSIArtist+NSJSONSerialization.h"
 
 @interface LSIArtistController()
 @end
@@ -19,10 +20,13 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/";
 -(instancetype)init {
     self = [super init];
     if (self) {
+       // _artists = [[NSMutableArray alloc] init];
         _artists = [@[] mutableCopy];
     }
     return self;
 }
+
+
 
 -(void)fetchArtistWithName:(NSString *)artistName completionBlock:(LSIArtistControllerCompletionBlock)completionBlock {
     NSString *search = @"search.php?s=";
@@ -58,6 +62,7 @@ artistBio:(NSString *)bio
     LSIArtist *artist = [[LSIArtist alloc] initWithArtistName:name
                                                     biography:bio andFormedYear:year];
     [self.artists addObject:artist];
+  //  [self saveToPersistentStore];
 }
 
 -(void)update:(LSIArtist *)artist
@@ -73,11 +78,59 @@ biography:(NSString *)bio
     return [self.artists objectAtIndex: index];
 }
 
--(NSURL *)getPerisitentFileURL {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSURL *documents = [fileManager URLForDirectory: NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL: nil create: NO error: nil];
-   return [documents URLByAppendingPathComponent:@"FavoriteArtists.plist"];
+
+-(NSMutableArray *)artistArray {
+    NSArray *searchPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *directory = [searchPath objectAtIndex:0];
+    NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:directory error:nil];
+    
+    for (NSString *artist in filePaths) {
+        NSString *filePath = [[NSString alloc]initWithFormat:@"Documents/%@", artist];
+        NSString *artistPath = [NSHomeDirectory()stringByAppendingPathComponent:filePath];
+        
+        NSURL *artistURL = [NSURL fileURLWithPath:artistPath];
+        NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
+        
+        if (artistData != nil) {
+            NSDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
+            LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistDictionary];
+            [self.artists addObject:artist];
+        } else {
+            NSLog(@"Artist Data returned nil");
+        }
+        
+    }
+    return self.artists;
 }
+
+
+
+
+
+//-(NSURL *)getPerisitentFileURL {
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    NSURL *documents = [fileManager URLForDirectory: NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL: nil create: YES error: nil];
+//   return [documents URLByAppendingPathComponent:@"FavoriteArtists.plist"];
+//}
+
+
+//-(void)loadFromPersistentStore {
+//NSURL *url =  [self getPerisitentFileURL];
+//    NSLog(@"%@", url);
+//NSData *data = [[NSData alloc] initWithContentsOfURL: url];
+//    NSError *error = nil;
+////
+////    NSArray *plistArray = (NSArray *)[NSPropertyListSerialization propertyListWithData:data
+////    options:NSPropertyListImmutable
+////     format:nil
+////      error:&error];
+//
+//    NSDictionary *artistDictionary = [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListImmutable format: nil error:&error];
+//    LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistDictionary];
+//
+//
+//}
+
 
 
 

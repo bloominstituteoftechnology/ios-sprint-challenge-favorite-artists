@@ -48,7 +48,8 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/";
              completionBlock(nil, jsonError);
              return;
          }
-         LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:json];
+         NSArray *jsonDictionary = json[@"artists"];
+         LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:jsonDictionary[0]];
          [self.artists  addObject:artist];
          completionBlock(artist, nil);
      }];

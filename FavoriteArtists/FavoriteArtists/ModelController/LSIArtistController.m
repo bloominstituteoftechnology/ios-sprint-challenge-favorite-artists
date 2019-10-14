@@ -15,7 +15,7 @@
 
 @implementation LSIArtistController
 
-static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/";
+static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?=";
 
 -(instancetype)init {
     self = [super init];
@@ -29,12 +29,11 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/";
 
 
 -(void)fetchArtistWithName:(NSString *)artistName completionBlock:(LSIArtistControllerCompletionBlock)completionBlock {
-    NSString *search = @"search.php?s=";
-    NSString *completeURL = [NSString stringWithFormat:@"%@%@%@", baseURLString, search, artistName];
-//    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
-//    urlComponents.query = [@"search.php?s=" stringByAppendingFormat:@"%@", artistName];
-    NSURL *url = [[NSURL alloc] initWithString:completeURL];
-    NSLog(@"URL: %@", url);
+    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
+       NSArray *queryItems = @[ [NSURLQueryItem queryItemWithName:@"s" value:artistName] ];
+       urlComponents.queryItems = queryItems;
+       NSURL *url = urlComponents.URL;
+    
      NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
          if (error) {
              NSLog(@"Error fetching artist: %@", error);

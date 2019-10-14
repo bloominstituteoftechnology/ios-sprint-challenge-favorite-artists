@@ -62,6 +62,9 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    
+    
   [self.controller fetchArtistWithName:searchBar.text completionBlock:^(LSIArtist *receivedArtist, NSError *error) {
         if (error) {
             NSLog(@"Unable to fetch artist");

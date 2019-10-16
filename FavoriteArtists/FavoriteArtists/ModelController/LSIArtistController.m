@@ -48,9 +48,14 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
              return;
          }
          NSArray *jsonDictionary = json[@"artists"];
+         
+         if (jsonDictionary != (id) [NSNull null]){
          LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:jsonDictionary[0]];
          [self.artists  addObject:artist];
          completionBlock(artist, nil);
+         }
+         NSLog(@"error: %@", error);
+         completionBlock(nil, error);
      }];
     [task resume];
 }

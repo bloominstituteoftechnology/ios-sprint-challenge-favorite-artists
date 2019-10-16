@@ -62,12 +62,15 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    
-    
+    self.artistName.text = [NSString stringWithFormat:@" Waiting for %@", searchBar.text];
     
   [self.controller fetchArtistWithName:searchBar.text completionBlock:^(LSIArtist *receivedArtist, NSError *error) {
         if (error) {
             NSLog(@"Unable to fetch artist");
+             dispatch_async(dispatch_get_main_queue(), ^{
+            self.artistName.text = @"The artist you entered is not available at this time, try another artist.";
+             });
+            return;
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.artist = receivedArtist;

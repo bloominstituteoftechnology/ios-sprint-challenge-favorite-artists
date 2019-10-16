@@ -14,7 +14,6 @@
 		3307A5602350D63700E5E845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3307A55E2350D63700E5E845 /* LaunchScreen.storyboard */; };
 		3307A5632350D63700E5E845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307A5622350D63700E5E845 /* main.m */; };
 		332DCC342350ED6F00726848 /* REPArtist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 332DCC322350ED6F00726848 /* REPArtist.xcdatamodeld */; };
-		332DCC392350F2CE00726848 /* REPArtist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 332DCC322350ED6F00726848 /* REPArtist.xcdatamodeld */; };
 		332DCC3A2350F35600726848 /* REPArtist+REPConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6A42350DDDE00EC48EB /* REPArtist+REPConvenience.m */; };
 		332DCC3B2350F35A00726848 /* REPArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6B02350E16500EC48EB /* REPArtist+NSJSONSerialization.m */; };
 		33C3B6862350D94800EC48EB /* REPArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6852350D94800EC48EB /* REPArtistDetailViewController.m */; };
@@ -25,6 +24,8 @@
 		33C3B6A92350DE5500EC48EB /* REPCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6A82350DE5500EC48EB /* REPCoreDataStack.m */; };
 		33C3B6AC2350DF1700EC48EB /* REPArtistNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6AB2350DF1700EC48EB /* REPArtistNetController.m */; };
 		33C3B6B12350E16500EC48EB /* REPArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B6B02350E16500EC48EB /* REPArtist+NSJSONSerialization.m */; };
+		33C92DE02357D4730061B0F8 /* BadArtistResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C92DDF2357D4730061B0F8 /* BadArtistResults.json */; };
+		33C92DE12357DCBB0061B0F8 /* REPArtist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 332DCC322350ED6F00726848 /* REPArtist.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		33C3B6AB2350DF1700EC48EB /* REPArtistNetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REPArtistNetController.m; sourceTree = "<group>"; };
 		33C3B6AF2350E16500EC48EB /* REPArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "REPArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		33C3B6B02350E16500EC48EB /* REPArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "REPArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		33C92DDF2357D4730061B0F8 /* BadArtistResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BadArtistResults.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				33C3B6A02350DBB200EC48EB /* LSIFileHelper.h */,
 				33C3B6982350DB0500EC48EB /* Favorite_Artists_ObjCTests.m */,
 				33C3B6A12350DD6F00EC48EB /* ArtistResults.json */,
+				33C92DDF2357D4730061B0F8 /* BadArtistResults.json */,
 				33C3B69A2350DB0500EC48EB /* Info.plist */,
 			);
 			path = "Favorite Artists ObjCTests";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C3B6A22350DD6F00EC48EB /* ArtistResults.json in Resources */,
+				33C92DE02357D4730061B0F8 /* BadArtistResults.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,10 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C92DE12357DCBB0061B0F8 /* REPArtist.xcdatamodeld in Sources */,
 				332DCC3B2350F35A00726848 /* REPArtist+NSJSONSerialization.m in Sources */,
 				332DCC3A2350F35600726848 /* REPArtist+REPConvenience.m in Sources */,
 				33C3B6992350DB0500EC48EB /* Favorite_Artists_ObjCTests.m in Sources */,
-				332DCC392350F2CE00726848 /* REPArtist.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

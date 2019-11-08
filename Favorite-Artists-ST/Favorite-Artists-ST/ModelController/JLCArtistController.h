@@ -11,7 +11,6 @@
 
 @interface JLCArtistController : NSObject
 
-
 @property (nonatomic, readonly) NSArray *favoriteArtist;
 
 -(void)searchForArtistWithArtistName:(NSString *)artistName

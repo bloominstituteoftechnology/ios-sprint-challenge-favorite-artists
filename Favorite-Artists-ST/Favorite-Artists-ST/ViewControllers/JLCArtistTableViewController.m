@@ -68,16 +68,18 @@
 }
 */
 
-
-
 // MARK: - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqual:@"AddArtistSegue"]) {
         JLCAddArtistViewController *addArtistVC = segue.destinationViewController;
         addArtistVC.artistController = self.artistController;
+    } else if ([[segue identifier] isEqual:@"ShowArtistSegue"]) {
+        JLCAddArtistViewController *showArtistVC = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        showArtistVC.artistController = self.artistController;
+        showArtistVC.artist = self.artistController.favoriteArtist[indexPath.row];
     }
-    
 }
 
 

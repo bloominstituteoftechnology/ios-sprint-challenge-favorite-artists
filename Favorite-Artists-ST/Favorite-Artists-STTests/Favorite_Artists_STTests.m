@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "JLCArtist.h"
+#import "JLCFileLoader.h"
 
 @interface Favorite_Artists_STTests : XCTestCase
 
@@ -14,24 +16,32 @@
 
 @implementation Favorite_Artists_STTests
 
-- (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+
+- (void)testParsingJson {
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSData *data = loadFile(@"Artist.json", bundle);
+    
+    XCTAssertNotNil(data);
+    
+    NSError *error = nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    
+    if (error) {
+        XCTFail(@"Error: %@", error);
+    }
+    
+    NSLog(@"Artist: %@", json);
+    
+    JLCArtist *bush = [[JLCArtist alloc] InitWithDictionary:json];
+    
+    XCTAssertEqualObjects(@"Bush", bush.artistName);
+    XCTAssertEqualObjects(@"1991", bush.yearFormed);
+    
+    NSString *bio = @"Bush are an alternative rock band formed in London in 1992 shortly after vocalist/guitarist Gavin Rossdale and guitarist Nigel Pulsford met. It was not long before they recruited bassist Dave Parsons, and later drummer Robin Goodridge, and started writing. Dave Parsons joined Bush shortly after leaving the band Transvision Vamp. Drummers such as Sacha Gervasi, Amir, and Spencer Cobrin had all filled in as Bush drummers before Robin Goodridge was made the permanent fit and thus completing the Bush lineup.\n\nThe band found immediate success with the release of their debut album Sixteen Stone in 1994, which is certified 6Ã— multi-platinum by the RIAA. Bush went on to become one of the most commercially successful rock bands of the 1990s, selling over 10 million records in the United States. Despite their success in the United States, the band was less well known in their home country and enjoyed only marginal success there. Bush have had numerous top ten singles on the Billboard rock charts, and one No. 1 album for Razorblade Suitcase in 1996. The band separated in 2002 but the name was revived in 2010 and they began work on a new album, The Sea of Memories, which was released in September 2011.\n\nThe group chose the name \"Bush\" because they used to live in Shepherd's Bush, London.\n\nIn Canada, they were once known as Bushx, because the 1970s band Bush, led by Domenic Troiano, owned the Canadian rights to the name. In April 1997, it was announced that Troiano had agreed to let them use the name Bush in Canada without the exponent x, in exchange for donating $20,000 each to the Starlight Children's Foundation and the Canadian Music Therapy Trust Fund.";
+    
+    XCTAssertEqualObjects(bio, bush.biography);
+    
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
 
 @end

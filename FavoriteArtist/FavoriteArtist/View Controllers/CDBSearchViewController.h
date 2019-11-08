@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CDBFavArtistController.h"
+#import "CDBFavArtist.h"
 
 @interface CDBSearchViewController : UIViewController <UISearchBarDelegate>
 
 @property (nonatomic) CDBFavArtistController *favArtistController;
+@property (nonatomic) CDBFavArtist *favArtist;
 
 @end
 

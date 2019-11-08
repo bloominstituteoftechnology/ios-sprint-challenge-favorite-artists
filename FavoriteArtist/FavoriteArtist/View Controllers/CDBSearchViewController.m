@@ -7,7 +7,6 @@
 //
 
 #import "CDBSearchViewController.h"
-#import "CDBFavArtist.h"
 
 @interface CDBSearchViewController ()
 
@@ -21,6 +20,11 @@
 
 @implementation CDBSearchViewController
 
+- (void)setFavArtist:(CDBFavArtist *)favArtist {
+    _favArtist = favArtist;
+    [self updateViews];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.searchBar setDelegate:self];
@@ -33,10 +37,17 @@
             return;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.favArtists = favArtists;
+            self.favArtists = _favArtists;
         });
-        NSLog(@"Search result: %@", favArtists);
+        NSLog(@"Search result: %@", _favArtists);
     }];
+}
+
+- (void)updateViews {
+    if (!self.favArtist) { return; }
+    self.nameLabel.text = self.favArtist.name;
+    self.yearLabel.text = self.favArtist.year;
+    self.bioLabel.text = self.favArtist.biography;
 }
     
 @end

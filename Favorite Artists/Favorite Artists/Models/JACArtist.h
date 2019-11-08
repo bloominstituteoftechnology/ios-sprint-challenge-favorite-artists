@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface JACArtist : NSObject
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *yearFormed;
+@property (nonatomic, copy) NSString *desc;
 
 @end

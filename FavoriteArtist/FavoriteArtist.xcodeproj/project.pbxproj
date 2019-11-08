@@ -16,6 +16,8 @@
 		7741E38E2375CB56009BA75A /* CDBFavArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7741E38D2375CB56009BA75A /* CDBFavArtistTableViewController.m */; };
 		7741E3912375CB77009BA75A /* CDBSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7741E3902375CB77009BA75A /* CDBSearchViewController.m */; };
 		7741E3942375CBC7009BA75A /* CDBFavArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7741E3932375CBC7009BA75A /* CDBFavArtistDetailViewController.m */; };
+		7741E3972375CFC8009BA75A /* CDBFavArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 7741E3962375CFC8009BA75A /* CDBFavArtist.m */; };
+		7741E39A2375D355009BA75A /* CDBFavArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7741E3992375D355009BA75A /* CDBFavArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		7741E3902375CB77009BA75A /* CDBSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBSearchViewController.m; sourceTree = "<group>"; };
 		7741E3922375CBC7009BA75A /* CDBFavArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBFavArtistDetailViewController.h; sourceTree = "<group>"; };
 		7741E3932375CBC7009BA75A /* CDBFavArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBFavArtistDetailViewController.m; sourceTree = "<group>"; };
+		7741E3952375CFC8009BA75A /* CDBFavArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBFavArtist.h; sourceTree = "<group>"; };
+		7741E3962375CFC8009BA75A /* CDBFavArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBFavArtist.m; sourceTree = "<group>"; };
+		7741E3982375D355009BA75A /* CDBFavArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBFavArtistController.h; sourceTree = "<group>"; };
+		7741E3992375D355009BA75A /* CDBFavArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBFavArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,8 @@
 		7741E3892375CAA8009BA75A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7741E3952375CFC8009BA75A /* CDBFavArtist.h */,
+				7741E3962375CFC8009BA75A /* CDBFavArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +117,8 @@
 		7741E38A2375CAAF009BA75A /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7741E3982375D355009BA75A /* CDBFavArtistController.h */,
+				7741E3992375D355009BA75A /* CDBFavArtistController.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -201,8 +211,10 @@
 				7741E3912375CB77009BA75A /* CDBSearchViewController.m in Sources */,
 				7741E38E2375CB56009BA75A /* CDBFavArtistTableViewController.m in Sources */,
 				7741E3702375CA8B009BA75A /* AppDelegate.m in Sources */,
+				7741E39A2375D355009BA75A /* CDBFavArtistController.m in Sources */,
 				7741E3812375CA8C009BA75A /* main.m in Sources */,
 				7741E3732375CA8B009BA75A /* SceneDelegate.m in Sources */,
+				7741E3972375CFC8009BA75A /* CDBFavArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

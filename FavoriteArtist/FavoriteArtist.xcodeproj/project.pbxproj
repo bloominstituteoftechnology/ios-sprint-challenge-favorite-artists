@@ -15,6 +15,9 @@
 		FB14DB442375CC7C00ED67E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB432375CC7C00ED67E2 /* main.m */; };
 		FB14DB532375CDC400ED67E2 /* LSIArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB522375CDC400ED67E2 /* LSIArtistTableViewController.m */; };
 		FB14DB562375CDF600ED67E2 /* LSIAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB552375CDF600ED67E2 /* LSIAddArtistViewController.m */; };
+		FB14DB592375D39700ED67E2 /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB582375D39700ED67E2 /* LSIArtist.m */; };
+		FB14DB5C2375D3A900ED67E2 /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB5B2375D3A900ED67E2 /* LSIArtistController.m */; };
+		FB14DB5F2375E47000ED67E2 /* LSItest.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB5E2375E47000ED67E2 /* LSItest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,12 @@
 		FB14DB522375CDC400ED67E2 /* LSIArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistTableViewController.m; sourceTree = "<group>"; };
 		FB14DB542375CDF600ED67E2 /* LSIAddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIAddArtistViewController.h; sourceTree = "<group>"; };
 		FB14DB552375CDF600ED67E2 /* LSIAddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIAddArtistViewController.m; sourceTree = "<group>"; };
+		FB14DB572375D39700ED67E2 /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
+		FB14DB582375D39700ED67E2 /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
+		FB14DB5A2375D3A800ED67E2 /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
+		FB14DB5B2375D3A900ED67E2 /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
+		FB14DB5D2375E47000ED67E2 /* LSItest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSItest.h; sourceTree = "<group>"; };
+		FB14DB5E2375E47000ED67E2 /* LSItest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSItest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +88,8 @@
 		FB14DB4B2375CCF900ED67E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FB14DB572375D39700ED67E2 /* LSIArtist.h */,
+				FB14DB582375D39700ED67E2 /* LSIArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -86,6 +97,10 @@
 		FB14DB4C2375CD0200ED67E2 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB14DB5A2375D3A800ED67E2 /* LSIArtistController.h */,
+				FB14DB5B2375D3A900ED67E2 /* LSIArtistController.m */,
+				FB14DB5D2375E47000ED67E2 /* LSItest.h */,
+				FB14DB5E2375E47000ED67E2 /* LSItest.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -157,6 +172,7 @@
 		FB14DB262375CC7500ED67E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LSI;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -201,9 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB14DB5C2375D3A900ED67E2 /* LSIArtistController.m in Sources */,
 				FB14DB332375CC7500ED67E2 /* AppDelegate.m in Sources */,
 				FB14DB442375CC7C00ED67E2 /* main.m in Sources */,
 				FB14DB362375CC7500ED67E2 /* SceneDelegate.m in Sources */,
+				FB14DB5F2375E47000ED67E2 /* LSItest.m in Sources */,
+				FB14DB592375D39700ED67E2 /* LSIArtist.m in Sources */,
 				FB14DB562375CDF600ED67E2 /* LSIAddArtistViewController.m in Sources */,
 				FB14DB532375CDC400ED67E2 /* LSIArtistTableViewController.m in Sources */,
 			);

@@ -23,10 +23,10 @@ JACArtistController *controller;
     [super viewDidLoad];
 }
 
-- (void)viewWillApper {
-    [super viewWillAppear:YES];
-    
-    [self.tableView reloadData];
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  NSLog(@"view will Appear");
+  [self.tableView reloadData];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder

@@ -29,6 +29,8 @@
     if (_artist) {
         self.artistSearchBar.hidden = YES;
         self.artistNameLabel.text = self.artist.name;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed %d", self.artist.yearFormed];
+        self.descriptionLabel.text = self.artist.desc;
     } else {
         self.artistSearchBar.hidden = NO;
     }
@@ -43,7 +45,7 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.artist = artist;
                     self.artistNameLabel.text = artist.name;
-                    self.yearFormedLabel.text = [NSString stringWithFormat:@"%d", artist.yearFormed];
+                    self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed %d", artist.yearFormed];
                     self.descriptionLabel.text = artist.desc;
                 });
                 

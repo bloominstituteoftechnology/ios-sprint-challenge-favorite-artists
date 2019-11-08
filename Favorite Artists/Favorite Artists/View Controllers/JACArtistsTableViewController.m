@@ -21,8 +21,12 @@ JACArtistController *controller;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillApper {
+    [super viewWillAppear:YES];
     
-    
+    [self.tableView reloadData];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -58,11 +62,9 @@ JACArtistController *controller;
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        [controller deleteFavoriteArtist:[indexPath row]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
 #pragma mark - Navigation
@@ -71,7 +73,7 @@ JACArtistController *controller;
     JACArtistViewController *destinationVC = segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"ShowAddNewArtistSegue"]) {
         destinationVC.controller = controller;
-    } else if ([segue.identifier isEqualToString:@"ShowAddNewArtistSegue"]) {
+    } else if ([segue.identifier isEqualToString:@"ShowArtistFromCellSegue"]) {
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         destinationVC.artist = controller.favoriteArtists[indexPath.row];
         destinationVC.controller = controller;

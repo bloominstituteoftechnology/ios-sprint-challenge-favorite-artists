@@ -41,7 +41,7 @@
                 NSLog(@"%@", error);
             } else {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    self.artist = [artist copy];
+                    self.artist = artist;
                     self.artistNameLabel.text = artist.name;
                     self.yearFormedLabel.text = [NSString stringWithFormat:@"%d", artist.yearFormed];
                     self.descriptionLabel.text = artist.desc;
@@ -55,7 +55,10 @@
 }
 
 - (IBAction)saveTapped:(id)sender {
-    
+    if (self.artist) {
+        [_controller addFavoriteArtist: self.artist];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

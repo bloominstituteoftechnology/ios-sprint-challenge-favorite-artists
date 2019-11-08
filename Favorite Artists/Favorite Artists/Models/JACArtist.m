@@ -28,11 +28,15 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     if (self = [super init]) {
-        NSString *name = [dictionary valueForKeyPath:@""];
-        NSString *yearFormed = [dictionary valueForKeyPath:@""];
-        NSString *desc = [dictionary valueForKeyPath:@""];
+        NSArray *list = dictionary[@"artists"];
         
-        return [self initWithName:name yearFormed:yearFormed desc:desc];
+        if ([list objectAtIndex:0]) {
+            NSString *name = [[list objectAtIndex:0] valueForKeyPath:@"strArtist"];
+            NSString *yearFormed = [[list objectAtIndex:0] valueForKeyPath:@"intFormedYear"];
+            NSString *desc = [[list objectAtIndex:0] valueForKeyPath:@"strBiographyEN"];
+            
+            return [self initWithName:name yearFormed:yearFormed desc:desc];
+        }
     }
     return nil;
 }

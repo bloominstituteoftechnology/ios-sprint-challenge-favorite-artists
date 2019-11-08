@@ -59,6 +59,14 @@ NSString *apiKey = @"1";
     [task resume];
 }
 
+- (void)addFavoriteArtist:(JACArtist *)artist {
+    [_favoriteArtists addObject:artist];
+}
+
+- (void)deleteFavoriteArtist:(long)index {
+    [_favoriteArtists removeObjectAtIndex:index];
+}
+
 - (instancetype)init
 {
     self = [super init];

@@ -12,6 +12,10 @@
 @interface JACArtistController : NSObject
 @property NSMutableArray *favoriteArtists;
 
+- (void)addFavoriteArtist:(JACArtist *)artist;
+
+- (void)deleteFavoriteArtist:(long)index;
+
 - (void)fetchArtistByName:(NSString *)name
                completion:(void (^)(JACArtist *artist, NSError *error))completion;
 @end

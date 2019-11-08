@@ -12,6 +12,6 @@
 
 @property (nonatomic) NSArray *favArtists;
 
-- (void)searchForFavArtists:(NSString *)searchTerm completion:(void (^)(NSError *error))completion;
+- (void)searchForFavArtists:(NSString *)searchTerm completion:(void (^)(NSArray *favArtists, NSError *error))completion;
 
 @end

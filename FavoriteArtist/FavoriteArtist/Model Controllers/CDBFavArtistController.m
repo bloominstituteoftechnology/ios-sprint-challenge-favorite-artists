@@ -32,7 +32,7 @@
 
 static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php?s=";
 
-- (void)searchForFavArtists:(NSString *)searchTerm completion:(void (^)(NSError *error))completion {
+- (void)searchForFavArtists:(NSString *)searchTerm completion:(void (^)(NSArray *favArtists, NSError *error))completion {
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
@@ -48,7 +48,13 @@ static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/se
         NSLog(@"Search results");
 
         if (error) {
-            completion(error);
+            completion(nil, error);
+            return;
+        }
+        
+        if (data == nil) {
+            NSLog(@"Data was nil");
+            completion(nil, [[NSError alloc] init]);
             return;
         }
         
@@ -57,25 +63,26 @@ static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/se
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
         if (jsonError) {
-            completion(nil);
+            completion(nil, error);
             return;
         }
         
         if (![json isKindOfClass:[NSDictionary class]]) {
             NSLog(@"JSON was not a dictionary as expected.");
-            completion([[NSError alloc] init]);
+            completion(nil, [[NSError alloc] init]);
+            return;
         }
         
-        NSArray *fetchedData = json[@"artists"];
+        NSArray *artists = json[@"artists"];
         NSMutableArray *fetchedArtists = [[NSMutableArray alloc] init];
         
-        for (NSDictionary *artistDictionary in fetchedData) {
+        for (NSDictionary *artistDictionary in artists) {
             CDBFavArtist *favArtist = [[CDBFavArtist alloc] initWithDictionary:artistDictionary];
             [fetchedArtists addObject:favArtist];
         }
         
         self.internalFavArtists = fetchedArtists;
-        completion(nil);
+        completion(fetchedArtists, nil);
         
     }];
     [dataTask resume];

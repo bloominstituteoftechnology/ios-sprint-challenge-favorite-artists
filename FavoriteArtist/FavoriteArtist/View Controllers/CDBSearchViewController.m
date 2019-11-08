@@ -31,15 +31,15 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [self.favArtistController searchForFavArtists:searchBar.text completion:^(NSError *error) {
+    [self.favArtistController searchForFavArtists:searchBar.text completion:^(NSArray *favArtists, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", error);
             return;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.favArtists = _favArtists;
+            self.favArtists = favArtists;
         });
-        NSLog(@"Search result: %@", _favArtists);
+        NSLog(@"Search result: %@", favArtists);
     }];
 }
 

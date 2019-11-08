@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CDBFavArtist.h"
 
 @interface CDBFavArtistController : NSObject
 
 @property (nonatomic) NSArray *favArtists;
 
-- (void)searchForFavArtists:(NSString *)searchTerm completion:(void (^)(NSArray *favArtists, NSError *error))completion;
+- (void)searchForFavArtist:(NSString *)searchTerm completion:(void (^)(CDBFavArtist *favArtist, NSError *error))completion;
+
+- (void)saveFavArtist:(CDBFavArtist *)favArtist;
 
 @end

@@ -20,10 +20,11 @@
 }
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    NSString *name = dictionary[@"strArtist"];
-    NSString *year = dictionary[@"intFormedYear"];
-    NSString *biography = dictionary[@"strBiographyEN"];
-
+    NSArray *artistArray = dictionary[@"artists"];
+    NSDictionary *artistDict = [artistArray firstObject];
+    NSString *name = artistDict[@"strArtist"];
+    NSString *year = artistDict[@"intFormedYear"];
+    NSString *biography = artistDict[@"strBiographyEN"];
     return [self initWithName:name yearFormed:year biography:biography];
 }
 

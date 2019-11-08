@@ -11,7 +11,7 @@
 
 @interface CDBFavArtistController ()
 
-@property NSMutableArray *internalFavArtists;
+@property (nonatomic) NSMutableArray *internalFavArtists;
 
 @end
 
@@ -30,13 +30,13 @@
     return self;
 }
 
-static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php?s=";
+static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
-- (void)searchForFavArtists:(NSString *)searchTerm completion:(void (^)(NSArray *favArtists, NSError *error))completion {
+- (void)searchForFavArtist:(NSString *)searchTerm completion:(void (^)(CDBFavArtist *favArtist, NSError *error))completion {
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
-    NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName:@"search" value:searchTerm];
+    NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName:@"s" value:searchTerm];
     [components setQueryItems: @[searchItem]];
     
     NSURL *url = [components URL];
@@ -63,7 +63,7 @@ static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/se
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
         if (jsonError) {
-            completion(nil, error);
+            completion(nil, jsonError);
             return;
         }
         
@@ -73,19 +73,14 @@ static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/se
             return;
         }
         
-        NSArray *artists = json[@"artists"];
-        NSMutableArray *fetchedArtists = [[NSMutableArray alloc] init];
-        
-        for (NSDictionary *artistDictionary in artists) {
-            CDBFavArtist *favArtist = [[CDBFavArtist alloc] initWithDictionary:artistDictionary];
-            [fetchedArtists addObject:favArtist];
-        }
-        
-        self.internalFavArtists = fetchedArtists;
-        completion(fetchedArtists, nil);
-        
+        CDBFavArtist *artist = [[CDBFavArtist alloc] initWithDictionary:json];
+        completion(artist, nil);
     }];
     [dataTask resume];
+}
+
+- (void)saveFavArtist:(CDBFavArtist *) favArtist {
+    [self.internalFavArtists addObject:favArtist];
 }
 
 @end

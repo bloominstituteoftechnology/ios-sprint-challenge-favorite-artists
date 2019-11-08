@@ -10,9 +10,9 @@
 
 @interface CDBFavArtist : NSObject
 
-@property NSString *name;
-@property NSString *year;
-@property NSString *biography;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *year;
+@property (nonatomic) NSString *biography;
 
 - (instancetype) initWithName:(NSString *)name yearFormed:(NSString *)year biography:(NSString *)biography;
 

@@ -7,6 +7,7 @@
 //
 
 #import "CDBSearchViewController.h"
+#import "CDBFavArtistController.h"
 
 @interface CDBSearchViewController ()
 
@@ -20,6 +21,13 @@
 
 @implementation CDBSearchViewController
 
+- (IBAction)saveButtonTapped:(id)sender {
+    if (self.favArtist) {
+        [self.favArtistController saveFavArtist:self.favArtist];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 - (void)setFavArtist:(CDBFavArtist *)favArtist {
     _favArtist = favArtist;
     [self updateViews];
@@ -31,15 +39,15 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [self.favArtistController searchForFavArtists:searchBar.text completion:^(NSArray *favArtists, NSError *error) {
+    [self.favArtistController searchForFavArtist:searchBar.text completion:^(CDBFavArtist *favArtist, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", error);
             return;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.favArtists = favArtists;
+            self.favArtist = favArtist;
         });
-        NSLog(@"Search result: %@", favArtists);
+        NSLog(@"Search result: %@", favArtist);
     }];
 }
 

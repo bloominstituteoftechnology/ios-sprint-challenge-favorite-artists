@@ -14,5 +14,5 @@
 @property (nonatomic, copy) NSString *desc;
 
 - (instancetype)initWithName:(NSString *)name yearFormed:(NSString *)yearFormed desc:(NSString *)desc;
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

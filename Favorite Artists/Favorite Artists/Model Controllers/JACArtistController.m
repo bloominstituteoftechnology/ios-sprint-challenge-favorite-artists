@@ -8,6 +8,7 @@
 
 #import "JACArtistController.h"
 #import "JACArtist.h"
+#import "JACArtist+NSJSONSerialization.h"
 
 @implementation JACArtistController
 NSString *baseURLString = @"https://theaudiodb.com/api/v1/json";

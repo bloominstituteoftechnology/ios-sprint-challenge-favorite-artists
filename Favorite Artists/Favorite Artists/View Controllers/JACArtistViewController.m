@@ -28,11 +28,17 @@
 - (void)updateViews {
     if (_artist) {
         self.artistSearchBar.hidden = YES;
+        self.artistNameLabel.hidden = NO;
+        self.yearFormedLabel.hidden = NO;
+        self.descriptionLabel.hidden = NO;
         self.artistNameLabel.text = self.artist.name;
         self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed %d", self.artist.yearFormed];
         self.descriptionLabel.text = self.artist.desc;
     } else {
         self.artistSearchBar.hidden = NO;
+        self.artistNameLabel.hidden = YES;
+        self.yearFormedLabel.hidden = YES;
+        self.descriptionLabel.hidden = YES;
     }
 }
 
@@ -47,6 +53,7 @@
                     self.artistNameLabel.text = artist.name;
                     self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed %d", artist.yearFormed];
                     self.descriptionLabel.text = artist.desc;
+                    [self updateViews];
                 });
                 
             }

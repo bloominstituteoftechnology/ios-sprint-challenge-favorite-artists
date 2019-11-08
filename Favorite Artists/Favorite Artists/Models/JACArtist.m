@@ -26,19 +26,4 @@
     return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    if (self = [super init]) {
-        NSArray *list = dictionary[@"artists"];
-        
-        if ([list objectAtIndex:0]) {
-            NSString *name = [[list objectAtIndex:0] valueForKeyPath:@"strArtist"];
-            NSString *yearFormed = [[list objectAtIndex:0] valueForKeyPath:@"intFormedYear"];
-            NSString *desc = [[list objectAtIndex:0] valueForKeyPath:@"strBiographyEN"];
-            
-            return [self initWithName:name yearFormed:yearFormed desc:desc];
-        }
-    }
-    return nil;
-}
-
 @end

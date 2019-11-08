@@ -17,6 +17,7 @@
 		0E56C9D52375D439000BE24A /* JACArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9D42375D439000BE24A /* JACArtistsTableViewController.m */; };
 		0E56C9DC2375D820000BE24A /* JACArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9DB2375D820000BE24A /* JACArtist.m */; };
 		0E56C9E02375D839000BE24A /* JACArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9DF2375D839000BE24A /* JACArtistController.m */; };
+		0EA0D6DB23760AE800C596D5 /* JACArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0D6DA23760AE800C596D5 /* JACArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		0E56C9DB2375D820000BE24A /* JACArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACArtist.m; sourceTree = "<group>"; };
 		0E56C9DE2375D839000BE24A /* JACArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACArtistController.h; sourceTree = "<group>"; };
 		0E56C9DF2375D839000BE24A /* JACArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACArtistController.m; sourceTree = "<group>"; };
+		0EA0D6D923760AE800C596D5 /* JACArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JACArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		0EA0D6DA23760AE800C596D5 /* JACArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JACArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 			children = (
 				0E56C9DA2375D820000BE24A /* JACArtist.h */,
 				0E56C9DB2375D820000BE24A /* JACArtist.m */,
+				0EA0D6D923760AE800C596D5 /* JACArtist+NSJSONSerialization.h */,
+				0EA0D6DA23760AE800C596D5 /* JACArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				0E56C9C22375D16F000BE24A /* JACArtistViewController.m in Sources */,
 				0E56C9BC2375D16F000BE24A /* AppDelegate.m in Sources */,
 				0E56C9D52375D439000BE24A /* JACArtistsTableViewController.m in Sources */,
+				0EA0D6DB23760AE800C596D5 /* JACArtist+NSJSONSerialization.m in Sources */,
 				0E56C9CD2375D175000BE24A /* main.m in Sources */,
 				0E56C9E02375D839000BE24A /* JACArtistController.m in Sources */,
 				0E56C9BF2375D16F000BE24A /* SceneDelegate.m in Sources */,

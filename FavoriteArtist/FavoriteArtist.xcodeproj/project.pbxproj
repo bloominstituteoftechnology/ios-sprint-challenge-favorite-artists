@@ -58,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				7741E36D2375CA8B009BA75A /* FavoriteArtist */,
-				7741E37F2375CA8C009BA75A /* Info.plist */,
 				7741E36C2375CA8B009BA75A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +78,7 @@
 				7741E38A2375CAAF009BA75A /* Model Controllers */,
 				7741E3892375CAA8009BA75A /* Models */,
 				7741E38B2375CACF009BA75A /* Resources */,
+				7741E37F2375CA8C009BA75A /* Info.plist */,
 			);
 			path = FavoriteArtist;
 			sourceTree = "<group>";

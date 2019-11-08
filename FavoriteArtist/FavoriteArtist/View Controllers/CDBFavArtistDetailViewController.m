@@ -10,23 +10,31 @@
 
 @interface CDBFavArtistDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioLabel;
+
 @end
 
 @implementation CDBFavArtistDetailViewController
 
+- (void)setFavArtist:(CDBFavArtist *)favArtist {
+    if (favArtist != _favArtist) {
+        favArtist = favArtist;
+        [self updateViews];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews {
+    self.title = self.favArtist.name;
+    self.nameLabel.text = self.favArtist.name;
+    self.yearLabel.text = self.favArtist.year;
+    self.bioLabel.text = self.favArtist.biography;
 }
-*/
 
 @end

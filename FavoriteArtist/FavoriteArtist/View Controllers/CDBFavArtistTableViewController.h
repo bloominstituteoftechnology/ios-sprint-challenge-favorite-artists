@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "CDBFavArtistController.h"
 
 @interface CDBFavArtistTableViewController : UITableViewController
 
-@end
+@property (nonatomic) CDBFavArtistController *favArtistController;
 
-NS_ASSUME_NONNULL_END
+@end

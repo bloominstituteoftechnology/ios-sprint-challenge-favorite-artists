@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		FB14DB332375CC7500ED67E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB322375CC7500ED67E2 /* AppDelegate.m */; };
 		FB14DB362375CC7500ED67E2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB352375CC7500ED67E2 /* SceneDelegate.m */; };
-		FB14DB392375CC7500ED67E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB382375CC7500ED67E2 /* ViewController.m */; };
 		FB14DB3C2375CC7500ED67E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB14DB3A2375CC7500ED67E2 /* Main.storyboard */; };
 		FB14DB3E2375CC7C00ED67E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB14DB3D2375CC7C00ED67E2 /* Assets.xcassets */; };
 		FB14DB412375CC7C00ED67E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB14DB3F2375CC7C00ED67E2 /* LaunchScreen.storyboard */; };
 		FB14DB442375CC7C00ED67E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB432375CC7C00ED67E2 /* main.m */; };
+		FB14DB532375CDC400ED67E2 /* LSIArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB522375CDC400ED67E2 /* LSIArtistTableViewController.m */; };
+		FB14DB562375CDF600ED67E2 /* LSIAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB552375CDF600ED67E2 /* LSIAddArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,16 @@
 		FB14DB322375CC7500ED67E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB14DB342375CC7500ED67E2 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		FB14DB352375CC7500ED67E2 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		FB14DB372375CC7500ED67E2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB14DB382375CC7500ED67E2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB14DB3B2375CC7500ED67E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB14DB3D2375CC7C00ED67E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB14DB402375CC7C00ED67E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB14DB422375CC7C00ED67E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB14DB432375CC7C00ED67E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB14DB4A2375CCD200ED67E2 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		FB14DB512375CDC400ED67E2 /* LSIArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistTableViewController.h; sourceTree = "<group>"; };
+		FB14DB522375CDC400ED67E2 /* LSIArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistTableViewController.m; sourceTree = "<group>"; };
+		FB14DB542375CDF600ED67E2 /* LSIAddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIAddArtistViewController.h; sourceTree = "<group>"; };
+		FB14DB552375CDF600ED67E2 /* LSIAddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIAddArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +65,70 @@
 		FB14DB302375CC7500ED67E2 /* FavoriteArtist */ = {
 			isa = PBXGroup;
 			children = (
+				FB14DB4F2375CD2C00ED67E2 /* Helpers */,
+				FB14DB422375CC7C00ED67E2 /* Info.plist */,
+				FB14DB4C2375CD0200ED67E2 /* Model Controllers */,
+				FB14DB4B2375CCF900ED67E2 /* Models */,
+				FB14DB4E2375CD2400ED67E2 /* Resources */,
+				FB14DB502375CD4800ED67E2 /* Storyboards */,
+				FB14DB4D2375CD1500ED67E2 /* View Controllers */,
+			);
+			path = FavoriteArtist;
+			sourceTree = "<group>";
+		};
+		FB14DB4B2375CCF900ED67E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB14DB4C2375CD0200ED67E2 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		FB14DB4D2375CD1500ED67E2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB14DB512375CDC400ED67E2 /* LSIArtistTableViewController.h */,
+				FB14DB522375CDC400ED67E2 /* LSIArtistTableViewController.m */,
+				FB14DB542375CDF600ED67E2 /* LSIAddArtistViewController.h */,
+				FB14DB552375CDF600ED67E2 /* LSIAddArtistViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FB14DB4E2375CD2400ED67E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB14DB432375CC7C00ED67E2 /* main.m */,
+				FB14DB3D2375CC7C00ED67E2 /* Assets.xcassets */,
 				FB14DB312375CC7500ED67E2 /* AppDelegate.h */,
 				FB14DB322375CC7500ED67E2 /* AppDelegate.m */,
 				FB14DB342375CC7500ED67E2 /* SceneDelegate.h */,
 				FB14DB352375CC7500ED67E2 /* SceneDelegate.m */,
-				FB14DB372375CC7500ED67E2 /* ViewController.h */,
-				FB14DB382375CC7500ED67E2 /* ViewController.m */,
-				FB14DB3A2375CC7500ED67E2 /* Main.storyboard */,
-				FB14DB3D2375CC7C00ED67E2 /* Assets.xcassets */,
-				FB14DB3F2375CC7C00ED67E2 /* LaunchScreen.storyboard */,
-				FB14DB422375CC7C00ED67E2 /* Info.plist */,
-				FB14DB432375CC7C00ED67E2 /* main.m */,
 			);
-			path = FavoriteArtist;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FB14DB4F2375CD2C00ED67E2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB14DB4A2375CCD200ED67E2 /* LSIFileHelper.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FB14DB502375CD4800ED67E2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FB14DB3A2375CC7500ED67E2 /* Main.storyboard */,
+				FB14DB3F2375CC7C00ED67E2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,10 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB14DB392375CC7500ED67E2 /* ViewController.m in Sources */,
 				FB14DB332375CC7500ED67E2 /* AppDelegate.m in Sources */,
 				FB14DB442375CC7C00ED67E2 /* main.m in Sources */,
 				FB14DB362375CC7500ED67E2 /* SceneDelegate.m in Sources */,
+				FB14DB562375CDF600ED67E2 /* LSIAddArtistViewController.m in Sources */,
+				FB14DB532375CDC400ED67E2 /* LSIArtistTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

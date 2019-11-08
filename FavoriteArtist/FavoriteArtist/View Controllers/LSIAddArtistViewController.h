@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LSIAddArtistViewController.h
 //  FavoriteArtist
 //
 //  Created by Lambda_School_Loaner_214 on 11/8/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface LSIAddArtistViewController : UIViewController <UISearchBarDelegate>
 
 @end
 
+NS_ASSUME_NONNULL_END

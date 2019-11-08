@@ -18,6 +18,7 @@
 		322798392375C6160049B19D /* JLCAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322798382375C6160049B19D /* JLCAddArtistViewController.m */; };
 		3227983C2375C8590049B19D /* JLCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3227983B2375C8590049B19D /* JLCArtist.m */; };
 		3227983F2375C95C0049B19D /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 3227983E2375C95B0049B19D /* Artist.json */; };
+		322F97872375D15C00112AF4 /* JLCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322F97862375D15C00112AF4 /* JLCArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		3227983B2375C8590049B19D /* JLCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLCArtist.m; sourceTree = "<group>"; };
 		3227983E2375C95B0049B19D /* Artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Artist.json; path = ../../Artist.json; sourceTree = "<group>"; };
 		322798402375CAFC0049B19D /* JLCFileLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCFileLoader.h; sourceTree = "<group>"; };
+		322F97852375D15C00112AF4 /* JLCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCArtistController.h; sourceTree = "<group>"; };
+		322F97862375D15C00112AF4 /* JLCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLCArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3227983D2375C85D0049B19D /* Models */,
+				322F97842375D13F00112AF4 /* ModelController */,
 				322798322375C4C80049B19D /* ViewControllers */,
 				322798332375C4D40049B19D /* Storyboards */,
 				3227981B2375C4A40049B19D /* Info.plist */,
@@ -153,6 +157,15 @@
 				3227983B2375C8590049B19D /* JLCArtist.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		322F97842375D13F00112AF4 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				322F97852375D15C00112AF4 /* JLCArtistController.h */,
+				322F97862375D15C00112AF4 /* JLCArtistController.m */,
+			);
+			path = ModelController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3227983C2375C8590049B19D /* JLCArtist.m in Sources */,
+				322F97872375D15C00112AF4 /* JLCArtistController.m in Sources */,
 				322798362375C5FD0049B19D /* JLCArtistTableViewController.m in Sources */,
 				3227980C2375C4A20049B19D /* AppDelegate.m in Sources */,
 				322798392375C6160049B19D /* JLCAddArtistViewController.m in Sources */,

@@ -12,6 +12,9 @@
 
 @interface Favorite_Artists_STTests : XCTestCase
 
+- (void)searchForArtistWithArtistName:(NSString *)artistName
+                           completion:(void (^)(NSURL *artistURL, NSError *error))completion;
+
 @end
 
 @implementation Favorite_Artists_STTests
@@ -41,6 +44,36 @@
     
     XCTAssertEqualObjects(bio, bush.biography);
     
+}
+
+static NSString *const baseURLString = @"theaudiodb.com/api/v1/json/1/search.php";
+
+- (void)searchForArtistWithArtistName:(NSString *)artistName completion:(void (^)(NSURL *artistURL, NSError *error))completion {
+        NSURL *baseURL = [NSURL URLWithString:baseURLString];
+        NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
+        
+        NSURLQueryItem *artistToSearch = [NSURLQueryItem queryItemWithName:@"s" value:artistName];
+        [components setQueryItems:@[artistToSearch]];
+        
+        NSURL *url = [components URL];
+        NSLog(@"url: %@", url);
+    
+    completion(url, nil);
+}
+
+-(void)testURLFormation {
+    
+    NSURL *expectedURL = [NSURL URLWithString:@"theaudiodb.com/api/v1/json/1/search.php?s=Bush"];
+    
+    [self searchForArtistWithArtistName:@"Bush" completion:^(NSURL *artistURL, NSError *error) {
+        if (error) {
+            XCTFail(@"Error: %@", error);
+        }
+        
+        NSLog(@"EXPECTED URL: %@\n", expectedURL);
+        NSLog(@"Artist URL: %@", artistURL);
+        XCTAssertEqualObjects(expectedURL, artistURL);
+    }];
 }
 
 

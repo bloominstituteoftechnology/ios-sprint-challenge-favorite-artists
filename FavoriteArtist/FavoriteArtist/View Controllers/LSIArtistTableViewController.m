@@ -17,9 +17,10 @@
 
 @implementation LSIArtistTableViewController
 
-- (instancetype)init
+
+- (instancetype)initWithCoder:(NSCoder *)coder
 {
-    self = [super init];
+    self = [super initWithCoder:coder];
     if (self) {
         _artistController = [[LSIArtistController alloc] init];
     }

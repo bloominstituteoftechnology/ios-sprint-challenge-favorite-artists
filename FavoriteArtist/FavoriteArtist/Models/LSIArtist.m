@@ -20,7 +20,7 @@
 }
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary{
-    NSDictionary *artistTopDictionary = dictionary[@"artist"];
+    NSDictionary *artistTopDictionary = dictionary[@"artists"];
     NSArray *artistArray = [artistTopDictionary allValues];
     NSDictionary *artistDictionary = [artistArray firstObject];
     NSString *name = artistDictionary[@"strArtist"];

@@ -39,6 +39,7 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    //NSLog(@"Searchbar: %@", searchBar);
     [self.artistController searchForArtist:searchBar.text completion:^(LSIArtist * _Nullable artist, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error searching artist: %@", error);

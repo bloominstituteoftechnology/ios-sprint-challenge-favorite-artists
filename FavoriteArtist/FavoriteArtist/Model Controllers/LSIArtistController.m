@@ -17,6 +17,15 @@
 
 static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _internalArtists = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 - (NSArray *)artists {
     return [self.internalArtists copy];
 }

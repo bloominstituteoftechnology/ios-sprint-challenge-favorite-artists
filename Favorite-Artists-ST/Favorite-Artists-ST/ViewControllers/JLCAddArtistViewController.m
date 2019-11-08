@@ -17,8 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bioTextField;
 
-
-
 @end
 
 @implementation JLCAddArtistViewController
@@ -61,6 +59,14 @@
     }];
 }
 
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    
+    if (self.artist) {
+        [self.artistController addFavoriteArtist:self.artist];
+    }
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 
 @end

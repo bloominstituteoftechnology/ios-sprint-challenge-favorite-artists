@@ -119,7 +119,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Artist" id="bcR-g4-v1K"/>
+                    <navigationItem key="navigationItem" title="Add New Artist" id="bcR-g4-v1K">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="P9c-VC-PHC">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="BYZ-38-t0r" id="RDx-05-sM1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="artistNameLabel" destination="Gfa-Ku-Gr0" id="sue-Sw-6Gv"/>
                         <outlet property="bioTextField" destination="r9U-H7-ebj" id="M6D-D5-ee0"/>

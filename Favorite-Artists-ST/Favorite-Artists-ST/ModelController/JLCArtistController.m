@@ -36,6 +36,8 @@
 
 static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
+// MARK: - Search For Artists
+
 - (void)searchForArtistWithArtistName:(NSString *)artistName
                            completion:(void (^)(JLCArtist *artist, NSError *error))completion {
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
@@ -81,5 +83,9 @@ static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/se
     }];
     [task resume];
 }
+
+// MARK: - Save Artists
+
+
 
 @end

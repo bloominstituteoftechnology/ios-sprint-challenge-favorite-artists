@@ -36,6 +36,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.searchBar setDelegate:self];
+    [_nameLabel setHidden:YES];
+    [_yearLabel setHidden:YES];
+    [_bioLabel setHidden:YES];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -53,6 +56,9 @@
 
 - (void)updateViews {
     if (!self.favArtist) { return; }
+    [_nameLabel setHidden:NO];
+    [_yearLabel setHidden:NO];
+    [_bioLabel setHidden:NO];
     self.nameLabel.text = self.favArtist.name;
     self.yearLabel.text = self.favArtist.year;
     self.bioLabel.text = self.favArtist.biography;

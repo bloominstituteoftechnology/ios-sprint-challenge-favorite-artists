@@ -34,7 +34,7 @@
     return [self.internalArtists copy];
 }
 
-static NSString *const baseURLString = @"theaudiodb.com/api/v1/json/1/search.php";
+static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
 - (void)searchForArtistWithArtistName:(NSString *)artistName
                            completion:(void (^)(JLCArtist *artist, NSError *error))completion {
@@ -74,8 +74,8 @@ static NSString *const baseURLString = @"theaudiodb.com/api/v1/json/1/search.php
         }
         
         NSArray *artistsResults = json[@"artists"];
-        NSDictionary *artistDictionary = artistsResults[0];
-        JLCArtist *artist = [[JLCArtist alloc] InitWithDictionary:artistDictionary];
+        NSDictionary *artistDictionary = [artistsResults firstObject];
+        JLCArtist *artist = [[JLCArtist alloc] initWithDictionary:artistDictionary];
         
         completion(artist, nil);
     }];

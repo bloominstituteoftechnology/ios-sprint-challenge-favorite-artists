@@ -69,9 +69,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hK9-Oo-LT2">
+                            <searchBar contentMode="redraw" placeholder="Artist Name:" translatesAutoresizingMaskIntoConstraints="NO" id="hK9-Oo-LT2">
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Gd0-ND-r8Y"/>
+                                </connections>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfa-Ku-Gr0">
                                 <rect key="frame" x="20" y="216" width="374" height="36"/>
@@ -117,6 +120,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="bcR-g4-v1K"/>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="Gfa-Ku-Gr0" id="sue-Sw-6Gv"/>
+                        <outlet property="bioTextField" destination="r9U-H7-ebj" id="M6D-D5-ee0"/>
+                        <outlet property="searchBar" destination="hK9-Oo-LT2" id="nUl-6c-nQo"/>
+                        <outlet property="yearFormedLabel" destination="5kl-dF-qWf" id="Rcx-Zl-Jmb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "JLCArtistController.h"
 
-@interface JLCArtistTableViewController : UITableViewController <UISearchBarDelegate>
+@interface JLCArtistTableViewController : UITableViewController 
 
 @end

@@ -10,13 +10,10 @@
 #import "JLCArtistController.h"
 #import "JLCArtist.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface JLCAddArtistViewController : UIViewController
+@interface JLCAddArtistViewController : UIViewController <UISearchBarDelegate>
 
 @property (nonatomic) JLCArtistController *artistController;
 @property (nonatomic) JLCArtist *artist;
 
 @end
 
-NS_ASSUME_NONNULL_END

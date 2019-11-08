@@ -18,6 +18,6 @@
                   yearFormed:(NSString *)yearFormed
                    biography:(NSString *)biography;
 
-- (instancetype)InitWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 @end
 

@@ -10,23 +10,57 @@
 
 @interface JLCAddArtistViewController ()
 
+// MARK: - IBOutlets and Properties
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextField;
+
+
+
 @end
 
 @implementation JLCAddArtistViewController
 
+// MARK: - View LifeCycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.searchBar.delegate = self;
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
+// MARK: - Methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)updateViews {
+    if (self.artist) {
+        self.artistNameLabel.text = self.artist.artistName;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %@.", self.artist.yearFormed];
+        self.bioTextField.text = self.artist.biography;
+    } else {
+        self.artistNameLabel.text = @"Artist Name";
+        self.yearFormedLabel.text = @"Formed In:";
+        self.bioTextField.text = @"Artist Bio";
+    }
 }
-*/
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    [self.artistController searchForArtistWithArtistName:searchBar.text completion:^(JLCArtist *artist, NSError *error) {
+        
+        if (error) {
+            NSLog(@"Error: %@", error);
+            return;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.artist = artist;
+            [self updateViews];
+        });
+    }];
+}
+
+
 
 @end

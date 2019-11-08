@@ -13,4 +13,5 @@
 @property (nonatomic) int yearFormed;
 @property (nonatomic, copy) NSString *desc;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 @end

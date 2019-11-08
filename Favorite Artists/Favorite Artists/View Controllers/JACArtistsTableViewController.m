@@ -8,6 +8,8 @@
 
 #import "JACArtistsTableViewController.h"
 #import "JACArtistViewController.h"
+#import "JACArtistController.h"
+#import "JACArtist.h"
 
 @interface JACArtistsTableViewController ()
 
@@ -15,23 +17,34 @@
 
 @implementation JACArtistsTableViewController
 
+JACArtistController *controller;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        controller = [[JACArtistController alloc] init];
+    }
+    return self;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return controller.favoriteArtists.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
-    
-    [cell.textLabel setText:@"Just a test"];
-    [cell.detailTextLabel setText:@"Just a test as well"];
+    JACArtist *artist = [controller.favoriteArtists objectAtIndex:indexPath.row];
+    [cell.textLabel setText:artist.name];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"Formed in %d", artist.yearFormed]];
     
     return cell;
 }
@@ -55,6 +68,14 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    JACArtistViewController *destinationVC = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"ShowAddNewArtistSegue"]) {
+        destinationVC.controller = controller;
+    } else if ([segue.identifier isEqualToString:@"ShowAddNewArtistSegue"]) {
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        destinationVC.artist = controller.favoriteArtists[indexPath.row];
+        destinationVC.controller = controller;
+    }
 }
 
 @end

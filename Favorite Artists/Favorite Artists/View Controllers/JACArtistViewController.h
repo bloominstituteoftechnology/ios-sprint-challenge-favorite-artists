@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class JACArtistController;
+@class JACArtist;
 @interface JACArtistViewController : UIViewController
-
+@property JACArtistController *controller;
+@property JACArtist *artist;
 
 @end
 

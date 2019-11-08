@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
+@class JACArtistController;
 @interface JACArtistsTableViewController : UITableViewController
-
 @end

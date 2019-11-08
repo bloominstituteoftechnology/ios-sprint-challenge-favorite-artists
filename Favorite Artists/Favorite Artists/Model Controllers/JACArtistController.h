@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class JACArtist;
 @interface JACArtistController : NSObject
+@property NSMutableArray *favoriteArtists;
 
+- (void)fetchArtistByName:(NSString *)name
+               completion:(void (^)(JACArtist *artist, NSError *error))completion;
 @end

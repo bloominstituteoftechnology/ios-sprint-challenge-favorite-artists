@@ -20,7 +20,7 @@
 
 - (void)setFavArtist:(CDBFavArtist *)favArtist {
     if (favArtist != _favArtist) {
-        favArtist = favArtist;
+        _favArtist = favArtist;
         [self updateViews];
     }
 }

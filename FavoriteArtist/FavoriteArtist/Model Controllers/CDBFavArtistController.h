@@ -17,4 +17,6 @@
 
 - (void)saveFavArtist:(CDBFavArtist *)favArtist;
 
+- (void)removeTask:(CDBFavArtist *)favArtist;
+
 @end

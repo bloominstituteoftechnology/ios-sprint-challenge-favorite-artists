@@ -15,6 +15,8 @@
 		0E56C9CA2375D175000BE24A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E56C9C82375D175000BE24A /* LaunchScreen.storyboard */; };
 		0E56C9CD2375D175000BE24A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9CC2375D175000BE24A /* main.m */; };
 		0E56C9D52375D439000BE24A /* JACArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9D42375D439000BE24A /* JACArtistsTableViewController.m */; };
+		0E56C9DC2375D820000BE24A /* JACArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9DB2375D820000BE24A /* JACArtist.m */; };
+		0E56C9E02375D839000BE24A /* JACArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9DF2375D839000BE24A /* JACArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		0E56C9CC2375D175000BE24A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0E56C9D32375D439000BE24A /* JACArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACArtistsTableViewController.h; sourceTree = "<group>"; };
 		0E56C9D42375D439000BE24A /* JACArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACArtistsTableViewController.m; sourceTree = "<group>"; };
+		0E56C9DA2375D820000BE24A /* JACArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACArtist.h; sourceTree = "<group>"; };
+		0E56C9DB2375D820000BE24A /* JACArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACArtist.m; sourceTree = "<group>"; };
+		0E56C9DE2375D839000BE24A /* JACArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACArtistController.h; sourceTree = "<group>"; };
+		0E56C9DF2375D839000BE24A /* JACArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,21 +70,65 @@
 		0E56C9B92375D16F000BE24A /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				0E56C9D72375D7BD000BE24A /* View Controllers */,
+				0E56C9E12375D83D000BE24A /* Model Controllers */,
+				0E56C9DD2375D827000BE24A /* Models */,
+				0E56C9D92375D7D9000BE24A /* Storyboards */,
+				0E56C9D82375D7CF000BE24A /* Resources */,
+			);
+			path = "Favorite Artists";
+			sourceTree = "<group>";
+		};
+		0E56C9D72375D7BD000BE24A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E56C9C02375D16F000BE24A /* JACArtistViewController.h */,
+				0E56C9C12375D16F000BE24A /* JACArtistViewController.m */,
+				0E56C9D32375D439000BE24A /* JACArtistsTableViewController.h */,
+				0E56C9D42375D439000BE24A /* JACArtistsTableViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0E56C9D82375D7CF000BE24A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				0E56C9BA2375D16F000BE24A /* AppDelegate.h */,
 				0E56C9BB2375D16F000BE24A /* AppDelegate.m */,
 				0E56C9BD2375D16F000BE24A /* SceneDelegate.h */,
 				0E56C9BE2375D16F000BE24A /* SceneDelegate.m */,
-				0E56C9C02375D16F000BE24A /* JACArtistViewController.h */,
-				0E56C9C12375D16F000BE24A /* JACArtistViewController.m */,
-				0E56C9C32375D16F000BE24A /* Main.storyboard */,
 				0E56C9C62375D175000BE24A /* Assets.xcassets */,
-				0E56C9C82375D175000BE24A /* LaunchScreen.storyboard */,
 				0E56C9CB2375D175000BE24A /* Info.plist */,
 				0E56C9CC2375D175000BE24A /* main.m */,
-				0E56C9D32375D439000BE24A /* JACArtistsTableViewController.h */,
-				0E56C9D42375D439000BE24A /* JACArtistsTableViewController.m */,
 			);
-			path = "Favorite Artists";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0E56C9D92375D7D9000BE24A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0E56C9C32375D16F000BE24A /* Main.storyboard */,
+				0E56C9C82375D175000BE24A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0E56C9DD2375D827000BE24A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E56C9DA2375D820000BE24A /* JACArtist.h */,
+				0E56C9DB2375D820000BE24A /* JACArtist.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0E56C9E12375D83D000BE24A /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E56C9DE2375D839000BE24A /* JACArtistController.h */,
+				0E56C9DF2375D839000BE24A /* JACArtistController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +206,9 @@
 				0E56C9BC2375D16F000BE24A /* AppDelegate.m in Sources */,
 				0E56C9D52375D439000BE24A /* JACArtistsTableViewController.m in Sources */,
 				0E56C9CD2375D175000BE24A /* main.m in Sources */,
+				0E56C9E02375D839000BE24A /* JACArtistController.m in Sources */,
 				0E56C9BF2375D16F000BE24A /* SceneDelegate.m in Sources */,
+				0E56C9DC2375D820000BE24A /* JACArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Favorite Artists/Info.plist";
+				INFOPLIST_FILE = "Favorite Artists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Favorite Artists/Info.plist";
+				INFOPLIST_FILE = "Favorite Artists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

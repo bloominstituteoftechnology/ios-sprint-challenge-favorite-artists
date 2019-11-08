@@ -14,6 +14,8 @@
 		3227981A2375C4A40049B19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322798182375C4A40049B19D /* LaunchScreen.storyboard */; };
 		3227981D2375C4A40049B19D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3227981C2375C4A40049B19D /* main.m */; };
 		322798272375C4A40049B19D /* Favorite_Artists_STTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 322798262375C4A40049B19D /* Favorite_Artists_STTests.m */; };
+		322798362375C5FD0049B19D /* JLCArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322798352375C5FD0049B19D /* JLCArtistTableViewController.m */; };
+		322798392375C6160049B19D /* JLCAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322798382375C6160049B19D /* JLCAddArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		322798222375C4A40049B19D /* Favorite-Artists-STTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Favorite-Artists-STTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		322798262375C4A40049B19D /* Favorite_Artists_STTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Favorite_Artists_STTests.m; sourceTree = "<group>"; };
 		322798282375C4A40049B19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		322798342375C5FD0049B19D /* JLCArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCArtistTableViewController.h; sourceTree = "<group>"; };
+		322798352375C5FD0049B19D /* JLCArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLCArtistTableViewController.m; sourceTree = "<group>"; };
+		322798372375C6160049B19D /* JLCAddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCAddArtistViewController.h; sourceTree = "<group>"; };
+		322798382375C6160049B19D /* JLCAddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLCAddArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,10 @@
 		322798322375C4C80049B19D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				322798342375C5FD0049B19D /* JLCArtistTableViewController.h */,
+				322798352375C5FD0049B19D /* JLCArtistTableViewController.m */,
+				322798372375C6160049B19D /* JLCAddArtistViewController.h */,
+				322798382375C6160049B19D /* JLCAddArtistViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -228,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322798362375C5FD0049B19D /* JLCArtistTableViewController.m in Sources */,
 				3227980C2375C4A20049B19D /* AppDelegate.m in Sources */,
+				322798392375C6160049B19D /* JLCAddArtistViewController.m in Sources */,
 				3227981D2375C4A40049B19D /* main.m in Sources */,
 				3227980F2375C4A20049B19D /* SceneDelegate.m in Sources */,
 			);

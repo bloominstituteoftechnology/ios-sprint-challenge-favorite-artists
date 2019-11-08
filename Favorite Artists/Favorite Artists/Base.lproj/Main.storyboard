@@ -59,7 +59,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feG-gu-e0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="130"/>
+            <point key="canvasLocation" x="675" y="130"/>
         </scene>
         <!--Add New Artist-->
         <scene sceneID="3r1-iI-HRQ">
@@ -70,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TSN-Jb-xrW">
-                                <rect key="frame" x="20" y="208" width="374" height="94.5"/>
+                                <rect key="frame" x="20" y="208" width="374" height="92"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZF-3D-7U6">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="31.5"/>
@@ -85,8 +85,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvC-Zm-dFj">
-                                        <rect key="frame" x="0.0" y="74" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="74" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -95,6 +95,9 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5SG-aP-jBV">
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="db3-Kb-Nro" id="cey-od-IjB"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -109,7 +112,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qbe-4J-XVt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Artist" id="jVX-IW-Rnu"/>
+                    <navigationItem key="navigationItem" title="Add New Artist" id="jVX-IW-Rnu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="viS-cI-k3A">
+                            <connections>
+                                <action selector="saveTapped:" destination="db3-Kb-Nro" id="JF1-hC-YAn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="TZF-3D-7U6" id="cjN-yi-KQI"/>
+                        <outlet property="artistSearchBar" destination="5SG-aP-jBV" id="izp-yk-HWY"/>
+                        <outlet property="descriptionLabel" destination="MvC-Zm-dFj" id="y3n-4f-5Z1"/>
+                        <outlet property="yearFormedLabel" destination="WYi-tn-bR7" id="Xmz-il-0z5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTT-bK-kzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

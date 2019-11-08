@@ -9,6 +9,10 @@
 #import "JACArtistViewController.h"
 
 @interface JACArtistViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UISearchBar *artistSearchBar;
 
 @end
 
@@ -16,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
+- (IBAction)saveTapped:(id)sender {
+    
+}
 
 @end

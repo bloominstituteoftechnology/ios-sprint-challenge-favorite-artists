@@ -11,8 +11,16 @@
 @implementation JACArtist
 - (instancetype)initWithName:(NSString *)name yearFormed:(NSString *)yearFormed desc:(NSString *)desc {
     if (self = [super init]) {
+        NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+        f.numberStyle = NSNumberFormatterDecimalStyle;
+        NSNumber *myNumber = [f numberFromString:yearFormed];
+        if (yearFormed != nil) {
+            _yearFormed = myNumber.intValue;
+        } else {
+            _yearFormed = 0;
+        }
+        
         _name = [name copy];
-        _yearFormed = [yearFormed copy];
         _desc = [desc copy];
     }
     return self;

@@ -11,8 +11,13 @@
 
 @interface JLCArtistController : NSObject
 
+
+@property (nonatomic, readonly) NSArray *favoriteArtist;
+
 -(void)searchForArtistWithArtistName:(NSString *)artistName
 completion:(void (^)(JLCArtist *artist, NSError *error))completion;
+
+-(void)addFavoriteArtist:(JLCArtist *)artist;
 
 @end
 

@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JLCArtistController.h"
+#import "JLCArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JLCAddArtistViewController : UIViewController
+
+@property (nonatomic) JLCArtistController *artistController;
+@property (nonatomic) JLCArtist *artist;
 
 @end
 

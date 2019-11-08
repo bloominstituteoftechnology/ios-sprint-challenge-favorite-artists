@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JLCArtistController.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface JLCArtistTableViewController : UITableViewController
+@interface JLCArtistTableViewController : UITableViewController <UISearchBarDelegate>
 
 @end
-
-NS_ASSUME_NONNULL_END

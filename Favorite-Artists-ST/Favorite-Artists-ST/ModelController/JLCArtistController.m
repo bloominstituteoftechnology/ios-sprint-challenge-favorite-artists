@@ -9,7 +9,30 @@
 #import "JLCArtistController.h"
 #import "JLCArtist.h"
 
+@interface JLCArtistController ()
+
+@property (nonatomic, readwrite) NSMutableArray *internalArtists;
+
+@end
+
 @implementation JLCArtistController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _internalArtists = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (void)addFavoriteArtist:(JLCArtist *)artist {
+    [self.internalArtists addObject:artist];
+}
+
+- (NSArray *)favoriteArtist {
+    return [self.internalArtists copy];
+}
 
 static NSString *const baseURLString = @"theaudiodb.com/api/v1/json/1/search.php";
 
@@ -57,7 +80,6 @@ static NSString *const baseURLString = @"theaudiodb.com/api/v1/json/1/search.php
         completion(artist, nil);
     }];
     [task resume];
-    
 }
 
 @end

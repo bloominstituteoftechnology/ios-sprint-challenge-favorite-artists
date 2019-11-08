@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Artist Table View Controller-->
+        <!--Favorite Artist-->
         <scene sceneID="3Jo-mc-zbG">
             <objects>
                 <tableViewController id="zSR-Gd-Brf" customClass="JLCArtistTableViewController" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                             <outlet property="delegate" destination="zSR-Gd-Brf" id="qhn-yx-tH8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xAX-FL-1Px">
+                    <navigationItem key="navigationItem" title="Favorite Artist" id="xAX-FL-1Px">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bod-lm-ag2">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="AddArtistSegue" id="3Tz-qy-bWi"/>

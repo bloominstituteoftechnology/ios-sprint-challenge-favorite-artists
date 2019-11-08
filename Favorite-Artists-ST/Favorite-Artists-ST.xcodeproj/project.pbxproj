@@ -16,6 +16,8 @@
 		322798272375C4A40049B19D /* Favorite_Artists_STTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 322798262375C4A40049B19D /* Favorite_Artists_STTests.m */; };
 		322798362375C5FD0049B19D /* JLCArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322798352375C5FD0049B19D /* JLCArtistTableViewController.m */; };
 		322798392375C6160049B19D /* JLCAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322798382375C6160049B19D /* JLCAddArtistViewController.m */; };
+		3227983C2375C8590049B19D /* JLCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3227983B2375C8590049B19D /* JLCArtist.m */; };
+		3227983F2375C95C0049B19D /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 3227983E2375C95B0049B19D /* Artist.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		322798352375C5FD0049B19D /* JLCArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLCArtistTableViewController.m; sourceTree = "<group>"; };
 		322798372375C6160049B19D /* JLCAddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCAddArtistViewController.h; sourceTree = "<group>"; };
 		322798382375C6160049B19D /* JLCAddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLCAddArtistViewController.m; sourceTree = "<group>"; };
+		3227983A2375C8590049B19D /* JLCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCArtist.h; sourceTree = "<group>"; };
+		3227983B2375C8590049B19D /* JLCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLCArtist.m; sourceTree = "<group>"; };
+		3227983E2375C95B0049B19D /* Artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Artist.json; path = ../../Artist.json; sourceTree = "<group>"; };
+		322798402375CAFC0049B19D /* JLCFileLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCFileLoader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 		322798092375C4A20049B19D /* Favorite-Artists-ST */ = {
 			isa = PBXGroup;
 			children = (
+				3227983D2375C85D0049B19D /* Models */,
 				322798322375C4C80049B19D /* ViewControllers */,
 				322798332375C4D40049B19D /* Storyboards */,
 				3227981B2375C4A40049B19D /* Info.plist */,
@@ -99,6 +106,8 @@
 		322798252375C4A40049B19D /* Favorite-Artists-STTests */ = {
 			isa = PBXGroup;
 			children = (
+				322798402375CAFC0049B19D /* JLCFileLoader.h */,
+				3227983E2375C95B0049B19D /* Artist.json */,
 				322798262375C4A40049B19D /* Favorite_Artists_STTests.m */,
 				322798282375C4A40049B19D /* Info.plist */,
 			);
@@ -135,6 +144,15 @@
 				322798182375C4A40049B19D /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3227983D2375C85D0049B19D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3227983A2375C8590049B19D /* JLCArtist.h */,
+				3227983B2375C8590049B19D /* JLCArtist.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3227983F2375C95C0049B19D /* Artist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3227983C2375C8590049B19D /* JLCArtist.m in Sources */,
 				322798362375C5FD0049B19D /* JLCArtistTableViewController.m in Sources */,
 				3227980C2375C4A20049B19D /* AppDelegate.m in Sources */,
 				322798392375C6160049B19D /* JLCAddArtistViewController.m in Sources */,

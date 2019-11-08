@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		0E56C9BC2375D16F000BE24A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9BB2375D16F000BE24A /* AppDelegate.m */; };
 		0E56C9BF2375D16F000BE24A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9BE2375D16F000BE24A /* SceneDelegate.m */; };
-		0E56C9C22375D16F000BE24A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9C12375D16F000BE24A /* ViewController.m */; };
+		0E56C9C22375D16F000BE24A /* JACArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9C12375D16F000BE24A /* JACArtistViewController.m */; };
 		0E56C9C52375D16F000BE24A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E56C9C32375D16F000BE24A /* Main.storyboard */; };
 		0E56C9C72375D175000BE24A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E56C9C62375D175000BE24A /* Assets.xcassets */; };
 		0E56C9CA2375D175000BE24A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E56C9C82375D175000BE24A /* LaunchScreen.storyboard */; };
 		0E56C9CD2375D175000BE24A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9CC2375D175000BE24A /* main.m */; };
+		0E56C9D52375D439000BE24A /* JACArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56C9D42375D439000BE24A /* JACArtistsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		0E56C9BB2375D16F000BE24A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0E56C9BD2375D16F000BE24A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		0E56C9BE2375D16F000BE24A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		0E56C9C02375D16F000BE24A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0E56C9C12375D16F000BE24A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0E56C9C02375D16F000BE24A /* JACArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACArtistViewController.h; sourceTree = "<group>"; };
+		0E56C9C12375D16F000BE24A /* JACArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACArtistViewController.m; sourceTree = "<group>"; };
 		0E56C9C42375D16F000BE24A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E56C9C62375D175000BE24A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E56C9C92375D175000BE24A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E56C9CB2375D175000BE24A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E56C9CC2375D175000BE24A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0E56C9D32375D439000BE24A /* JACArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JACArtistsTableViewController.h; sourceTree = "<group>"; };
+		0E56C9D42375D439000BE24A /* JACArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JACArtistsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +68,15 @@
 				0E56C9BB2375D16F000BE24A /* AppDelegate.m */,
 				0E56C9BD2375D16F000BE24A /* SceneDelegate.h */,
 				0E56C9BE2375D16F000BE24A /* SceneDelegate.m */,
-				0E56C9C02375D16F000BE24A /* ViewController.h */,
-				0E56C9C12375D16F000BE24A /* ViewController.m */,
+				0E56C9C02375D16F000BE24A /* JACArtistViewController.h */,
+				0E56C9C12375D16F000BE24A /* JACArtistViewController.m */,
 				0E56C9C32375D16F000BE24A /* Main.storyboard */,
 				0E56C9C62375D175000BE24A /* Assets.xcassets */,
 				0E56C9C82375D175000BE24A /* LaunchScreen.storyboard */,
 				0E56C9CB2375D175000BE24A /* Info.plist */,
 				0E56C9CC2375D175000BE24A /* main.m */,
+				0E56C9D32375D439000BE24A /* JACArtistsTableViewController.h */,
+				0E56C9D42375D439000BE24A /* JACArtistsTableViewController.m */,
 			);
 			path = "Favorite Artists";
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 		0E56C9AF2375D16E000BE24A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JAC;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Mazjap Co";
 				TargetAttributes = {
@@ -146,8 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E56C9C22375D16F000BE24A /* ViewController.m in Sources */,
+				0E56C9C22375D16F000BE24A /* JACArtistViewController.m in Sources */,
 				0E56C9BC2375D16F000BE24A /* AppDelegate.m in Sources */,
+				0E56C9D52375D439000BE24A /* JACArtistsTableViewController.m in Sources */,
 				0E56C9CD2375D175000BE24A /* main.m in Sources */,
 				0E56C9BF2375D16F000BE24A /* SceneDelegate.m in Sources */,
 			);

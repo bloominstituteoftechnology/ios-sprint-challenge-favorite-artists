@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JACArtistViewController.h
 //  Favorite Artists
 //
 //  Created by Jordan Christensen on 11/9/19.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface JACArtistViewController : UIViewController
 
 
 @end

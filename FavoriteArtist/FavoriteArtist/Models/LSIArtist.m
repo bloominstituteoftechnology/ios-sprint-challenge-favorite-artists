@@ -14,14 +14,13 @@
     if (self = [super init]) {
         _name = name;
         _bio = bio;
-        _formedDate = &formedDate;
+        _formedDate = formedDate;
     }
     return self;
 }
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary{
-    NSDictionary *artistTopDictionary = dictionary[@"artists"];
-    NSArray *artistArray = [artistTopDictionary allValues];
+    NSArray *artistArray = dictionary[@"artists"];
     NSDictionary *artistDictionary = [artistArray firstObject];
     NSString *name = artistDictionary[@"strArtist"];
     NSString *bio = artistDictionary[@"strBiographyEN"];

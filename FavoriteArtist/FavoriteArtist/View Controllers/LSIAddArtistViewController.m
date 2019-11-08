@@ -27,15 +27,18 @@
 - (IBAction)saveTapped:(id)sender {
     if (self.artist) {
         [self.artistController saveArtist:self.artist];
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
 -(void)updateViews{
-    if (self.artist && self.viewLoaded) {
-        self.artistNameTF.text = self.artist.name;
-        self.bioTV.text = self.artist.bio;
-        self.formedInTF.text = [NSString stringWithFormat:@"Formed in %i", *self.artist.formedDate];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.artist && self.viewLoaded) {
+            self.artistNameTF.text = self.artist.name;
+            self.bioTV.text = self.artist.bio;
+            self.formedInTF.text = [NSString stringWithFormat:@"Formed in %i", self.artist.formedDate];
+        }
+    });
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{

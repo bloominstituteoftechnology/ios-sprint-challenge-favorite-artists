@@ -50,7 +50,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     LSIArtist *artist = self.artistController.artists[indexPath.row];
     cell.textLabel.text = artist.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", *artist.formedDate];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", artist.formedDate];
     return cell;
 }
 /*

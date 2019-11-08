@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIArtistController : NSObject
 
-@property (nonatomic) NSArray *artists;
+@property (nonatomic, readonly) NSArray *artists;
 
 -(void)searchForArtist:(NSString *)name completion:(void (^)(LSIArtist *__nullable artist, NSError *__nullable error))completion;
 -(void)saveArtist:(LSIArtist *)artist;

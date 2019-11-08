@@ -17,7 +17,6 @@
 		FB14DB562375CDF600ED67E2 /* LSIAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB552375CDF600ED67E2 /* LSIAddArtistViewController.m */; };
 		FB14DB592375D39700ED67E2 /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB582375D39700ED67E2 /* LSIArtist.m */; };
 		FB14DB5C2375D3A900ED67E2 /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB5B2375D3A900ED67E2 /* LSIArtistController.m */; };
-		FB14DB5F2375E47000ED67E2 /* LSItest.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14DB5E2375E47000ED67E2 /* LSItest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +39,6 @@
 		FB14DB582375D39700ED67E2 /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 		FB14DB5A2375D3A800ED67E2 /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
 		FB14DB5B2375D3A900ED67E2 /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
-		FB14DB5D2375E47000ED67E2 /* LSItest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSItest.h; sourceTree = "<group>"; };
-		FB14DB5E2375E47000ED67E2 /* LSItest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSItest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +96,6 @@
 			children = (
 				FB14DB5A2375D3A800ED67E2 /* LSIArtistController.h */,
 				FB14DB5B2375D3A900ED67E2 /* LSIArtistController.m */,
-				FB14DB5D2375E47000ED67E2 /* LSItest.h */,
-				FB14DB5E2375E47000ED67E2 /* LSItest.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -221,7 +216,6 @@
 				FB14DB332375CC7500ED67E2 /* AppDelegate.m in Sources */,
 				FB14DB442375CC7C00ED67E2 /* main.m in Sources */,
 				FB14DB362375CC7500ED67E2 /* SceneDelegate.m in Sources */,
-				FB14DB5F2375E47000ED67E2 /* LSItest.m in Sources */,
 				FB14DB592375D39700ED67E2 /* LSIArtist.m in Sources */,
 				FB14DB562375CDF600ED67E2 /* LSIAddArtistViewController.m in Sources */,
 				FB14DB532375CDC400ED67E2 /* LSIArtistTableViewController.m in Sources */,

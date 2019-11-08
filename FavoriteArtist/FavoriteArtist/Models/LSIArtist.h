@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LSIArtist : NSObject
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *bio;
-@property (nonatomic) int *formedDate;
+@property (nonatomic) int formedDate;
 
 -(instancetype)initWithName:(NSString *)name bio:(NSString *)bio formedDate:(int)formedDate;
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;

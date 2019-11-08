@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSIArtist.h"
+#import "LSIArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIAddArtistViewController : UIViewController <UISearchBarDelegate>
-
+@property (nonatomic) LSIArtist *artist;
+@property (nonatomic) LSIArtistController *artistController;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,7 @@
 //
 
 #import "LSIAddArtistViewController.h"
+#import "LSIArtistController.h"
 
 @interface LSIAddArtistViewController ()
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -24,5 +25,30 @@
 }
 
 - (IBAction)saveTapped:(id)sender {
+    if (self.artist) {
+        [self.artistController saveArtist:self.artist];
+    }
 }
+
+-(void)updateViews{
+    if (self.artist && self.viewLoaded) {
+        self.artistNameTF.text = self.artist.name;
+        self.bioTV.text = self.artist.bio;
+        self.formedInTF.text = [NSString stringWithFormat:@"Formed in %i", *self.artist.formedDate];
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [self.artistController searchForArtist:searchBar.text completion:^(LSIArtist * _Nullable artist, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error searching artist: %@", error);
+            return;
+        }
+        if (artist) {
+            self.artist = artist;
+            [self updateViews];
+        }
+    }];
+}
+
 @end

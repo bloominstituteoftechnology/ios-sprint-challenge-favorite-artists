@@ -7,8 +7,15 @@
 //
 
 #import "CDBSearchViewController.h"
+#import "CDBFavArtist.h"
 
 @interface CDBSearchViewController ()
+
+@property NSArray *favArtists;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioLabel;
 
 @end
 
@@ -16,17 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.searchBar setDelegate:self];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.favArtistController searchForFavArtists:searchBar.text completion:^(NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.favArtists = favArtists;
+        });
+        NSLog(@"Search result: %@", favArtists);
+    }];
 }
-*/
-
+    
 @end

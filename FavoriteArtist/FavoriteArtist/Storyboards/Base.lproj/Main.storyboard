@@ -115,6 +115,12 @@
                     <navigationItem key="navigationItem" id="aFl-at-SwX">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="8bV-Cu-C2q"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bioLabel" destination="N22-0c-6mn" id="Ex2-t1-pKM"/>
+                        <outlet property="nameLabel" destination="Vd9-tX-kF1" id="HUs-v1-mvL"/>
+                        <outlet property="searchBar" destination="2Ck-Bu-QNr" id="Ooz-RX-8DZ"/>
+                        <outlet property="yearLabel" destination="S7a-ja-h7d" id="0Az-fI-09j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WfO-ZY-yIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

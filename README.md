@@ -43,9 +43,7 @@ A sample request for *Macklemore* looks like this URL and JSON response (a reque
 7. Users should be able to tap on saved artists from the "Favorite Artists" screen and see the details of the artist on a detail screen.
 8. The app should not crash when searching for artists who are missing data. Present a resonable message if a field is missing from the database instead of crashing.
 
-## Development Requirements
-
-The technical requirements for this project are as follows:
+## Technical Requirements
 
 1. A model object that represents an artist. It should have the following properties:
     - Artist name

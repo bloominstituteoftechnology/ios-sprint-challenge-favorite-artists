@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.searchBar.delegate = self;
+    [self updateViews];
 }
 
 - (IBAction)saveTapped:(id)sender {

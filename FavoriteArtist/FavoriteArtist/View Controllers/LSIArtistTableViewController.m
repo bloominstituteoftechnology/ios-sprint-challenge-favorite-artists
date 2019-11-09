@@ -73,6 +73,11 @@
     if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
         LSIAddArtistViewController *destinationVC = segue.destinationViewController;
         destinationVC.artistController = self.artistController;
+    } else if ([segue.identifier isEqualToString:@"ViewArtistSegue"]) {
+        LSIAddArtistViewController *destinationVC = segue.destinationViewController;
+        destinationVC.artistController = self.artistController;
+        NSIndexPath *indexPath  = [self.tableView indexPathForSelectedRow];
+        destinationVC.artist = self.artistController.artists[indexPath.row];
     }
 }
 

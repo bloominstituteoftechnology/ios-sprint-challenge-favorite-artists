@@ -24,7 +24,10 @@
     NSDictionary *artistDictionary = [artistArray firstObject];
     NSString *name = artistDictionary[@"strArtist"];
     NSString *bio = artistDictionary[@"strBiographyEN"];
+   // int formedDate = 0;
+    //if (!(artistDictionary[@"intFormedYear"] == nil)) {
     int formedDate = [artistDictionary[@"intFormedYear"] intValue];
+    //}
     return [self initWithName:name bio:bio formedDate:formedDate];
 }
 

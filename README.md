@@ -59,8 +59,8 @@ A sample request for *Macklemore* looks like this URL and JSON response (a reque
         
         `- (NSDictionary *)toDictionary`
        
-3. Implement persistence using `NSFileManager` to save your model objects to a file in the application's Document directory. 
-    - Tip: Use `NSJSONSerialization` to help turn your model objects into `NSData` that you can read/write to and from a  file/URL.
+3. Implement persistence using `NSDictionary` to save your model objects to a file in the application's Document directory. 
+    - Tip: Search the `NSDictionary` documentation for `writeToURL` and `initWithContentsOfURL` methods.
     - Tip: Print out the URL and go to that folder in `Finder > Go > Go to Folder` to verify save works as you expect
 4. The detail view controller can allow the user to search for new artists, and also view saved artist information.
 6. Verify that searching for Macklemore, John Williams, and Pink Floyd all work without crashing your app.

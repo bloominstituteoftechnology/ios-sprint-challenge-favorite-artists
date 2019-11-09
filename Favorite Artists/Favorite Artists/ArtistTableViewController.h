@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ArtistTableViewController.h
 //  Favorite Artists
 //
 //  Created by Michael Stoffer on 11/9/19.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ArtistTableViewController : UITableViewController
 
 @end
-

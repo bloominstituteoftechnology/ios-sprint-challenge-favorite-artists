@@ -30,7 +30,7 @@ You will be using is [The Audio DB Website](https://theaudiodb.com) to get infor
 
 A sample request for *Macklemore* looks like this URL and JSON response (a request may take a few seconds to complete):
 
-[https://theaudiodb.com/api/v1/json/1/searchalbum.php?s=Macklemore](https://theaudiodb.com/api/v1/json/1/searchalbum.php?s=Macklemore)
+[https://www.theaudiodb.com/api/v1/json/1/search.php?s=macklemore](https://www.theaudiodb.com/api/v1/json/1/search.php?s=macklemore)
 
 
 ## Customer Requirements

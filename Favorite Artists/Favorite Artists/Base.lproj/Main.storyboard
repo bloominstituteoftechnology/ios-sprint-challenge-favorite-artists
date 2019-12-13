@@ -113,7 +113,11 @@
                         <viewLayoutGuide key="safeArea" id="fFN-rl-LH1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add new artist" id="hvd-OC-bdw">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="r0q-UP-jak"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="r0q-UP-jak">
+                            <connections>
+                                <action selector="save:" destination="AVc-da-yMq" id="Vnr-rA-XoT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="biographyTextView" destination="elS-Yi-gsu" id="ahc-Wu-qaQ"/>

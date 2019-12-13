@@ -12,7 +12,7 @@
 
 @interface LSIArtistController : NSObject
 
-@property NSArray *artists;
+@property NSMutableArray *artists;
 
 - (void)getArtistsFromSearchTerm:(NSString *)searchTerm
                       completion:(void (^)(NSError *error, LSIArtist *artist))completion;

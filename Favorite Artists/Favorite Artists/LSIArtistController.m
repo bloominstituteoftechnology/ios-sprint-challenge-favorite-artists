@@ -18,7 +18,7 @@ static NSString *const apiKey = @"1";
 {
     self = [super init];
     if (self) {
-        _artists = @[];
+        _artists = [[NSMutableArray alloc] initWithArray:@[]];
     }
     return self;
 }
@@ -66,7 +66,7 @@ static NSString *const apiKey = @"1";
                         return;
                     } else {
                         NSLog(@"Could not create artist from dictionary.");
-                        completion([[NSError alloc] init], nil);
+                        completion(nil, nil);
                         return;
                     }
                 }

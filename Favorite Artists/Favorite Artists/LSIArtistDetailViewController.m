@@ -54,6 +54,13 @@
     }
 }
 
+- (IBAction)save:(UIBarButtonItem *)sender {
+    if (self.artist) {
+        [[self.controller artists] addObject:self.artist];
+        [self.navigationController popViewControllerAnimated:true];
+    }
+}
+
 #pragma mark - Search bar delegate
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {

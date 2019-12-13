@@ -17,4 +17,6 @@
 - (void)getArtistsFromSearchTerm:(NSString *)searchTerm
                       completion:(void (^)(NSError *error, LSIArtist *artist))completion;
 
+- (void)saveToDocuments;
+
 @end

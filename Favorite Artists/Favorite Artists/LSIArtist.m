@@ -34,7 +34,7 @@
 }
 
 - (NSDictionary *)toDictionary {
-    NSDictionary *dictionary = [[NSDictionary alloc] init];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
     
     [dictionary setValue:self.name forKey:@"strArtist"];
     [dictionary setValue:self.biography forKey:@"strBiographyEN"];

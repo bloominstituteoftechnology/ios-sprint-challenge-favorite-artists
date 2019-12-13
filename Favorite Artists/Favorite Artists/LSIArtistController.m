@@ -80,4 +80,19 @@ static NSString *const apiKey = @"1";
     [task resume];
 }
 
+- (void)saveToDocuments {
+    NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    
+    NSURL *outputFileURL = [documentsURL URLByAppendingPathComponent:@"artists"];
+    
+    NSLog(@"URL: %@", outputFileURL.description);
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (LSIArtist *artist in self.artists) {
+        [array addObject:[artist toDictionary]];
+    }
+    
+    [array writeToURL:outputFileURL atomically:YES];
+}
+
 @end

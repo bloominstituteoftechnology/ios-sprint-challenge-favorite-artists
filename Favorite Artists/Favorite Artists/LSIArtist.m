@@ -20,7 +20,7 @@
         _biography = biography;
         _year = 0;
         
-        if (yearString) {
+        if (yearString && ![yearString isKindOfClass:[NSNull class]]) {
             NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
             [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
             

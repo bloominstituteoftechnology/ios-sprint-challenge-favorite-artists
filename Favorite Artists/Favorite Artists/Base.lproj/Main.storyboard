@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="UQT-5b-dPa" detailTextLabel="m0t-9b-q8P" style="IBUITableViewCellStyleSubtitle" id="fEM-MU-r3i">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="UQT-5b-dPa" detailTextLabel="m0t-9b-q8P" style="IBUITableViewCellStyleSubtitle" id="fEM-MU-r3i">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fEM-MU-r3i" id="R42-I1-Cgs">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UQT-5b-dPa">
@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="AVc-da-yMq" kind="show" trigger="accessoryAction" id="ToO-N0-Q2e"/>
+                                    <segue destination="AVc-da-yMq" kind="show" identifier="ShowArtistDetail" id="3oa-Y3-9lR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Artists" id="Vgm-ZX-ifD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WsS-So-Nas">
                             <connections>
-                                <segue destination="AVc-da-yMq" kind="show" id="ha0-we-4jG"/>
+                                <segue destination="AVc-da-yMq" kind="show" identifier="AddArtist" id="ha0-we-4jG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -85,7 +85,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="elS-Yi-gsu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="elS-Yi-gsu">
                                 <rect key="frame" x="20" y="292" width="374" height="550"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -103,6 +103,7 @@
                             <constraint firstItem="elS-Yi-gsu" firstAttribute="top" secondItem="Gz0-H4-GdF" secondAttribute="bottom" constant="8" id="L7a-hw-7Cn"/>
                             <constraint firstItem="fFN-rl-LH1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gz0-H4-GdF" secondAttribute="trailing" constant="8" id="Oyh-Ms-5aW"/>
                             <constraint firstItem="elS-Yi-gsu" firstAttribute="leading" secondItem="fFN-rl-LH1" secondAttribute="leading" constant="20" id="PoL-0c-tYe"/>
+                            <constraint firstItem="hFS-Gw-MJM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fFN-rl-LH1" secondAttribute="top" constant="20" id="RJo-R9-eFw"/>
                             <constraint firstItem="fFN-rl-LH1" firstAttribute="trailing" secondItem="elS-Yi-gsu" secondAttribute="trailing" constant="20" id="ZmW-GS-FlE"/>
                             <constraint firstItem="fFN-rl-LH1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hFS-Gw-MJM" secondAttribute="trailing" constant="20" id="cZR-m6-dky"/>
                             <constraint firstItem="hFS-Gw-MJM" firstAttribute="top" secondItem="rTg-Yy-CsE" secondAttribute="bottom" constant="20" id="h1j-uj-cJy"/>
@@ -122,6 +123,7 @@
                     <connections>
                         <outlet property="biographyTextView" destination="elS-Yi-gsu" id="ahc-Wu-qaQ"/>
                         <outlet property="nameLabel" destination="hFS-Gw-MJM" id="4vc-gg-ox7"/>
+                        <outlet property="nameToSearchBarConstraint" destination="h1j-uj-cJy" id="ENU-d9-7V0"/>
                         <outlet property="saveButton" destination="r0q-UP-jak" id="6Gf-0c-ifR"/>
                         <outlet property="searchBar" destination="rTg-Yy-CsE" id="GAU-zR-eIc"/>
                         <outlet property="yearLabel" destination="Gz0-H4-GdF" id="L46-pS-O1P"/>
@@ -151,6 +153,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ha0-we-4jG"/>
+        <segue reference="3oa-Y3-9lR"/>
     </inferredMetricsTieBreakers>
 </document>

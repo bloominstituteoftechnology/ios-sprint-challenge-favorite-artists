@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UITextView *biographyTextView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *nameToSearchBarConstraint;
 
 @end
 
@@ -32,7 +33,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.searchBar setDelegate:self];
+    if (self.artist) {
+        [self.searchBar setHidden:true];
+        [self.nameToSearchBarConstraint setPriority:999];
+        [self.nameToSearchBarConstraint setConstant:-60];
+        [self.navigationItem setRightBarButtonItem:nil];
+        [self setTitle:[self.artist name]];
+    } else {
+        [self.searchBar setDelegate:self];
+    }
     
     [self updateViews];
 }
@@ -64,6 +73,7 @@
 #pragma mark - Search bar delegate
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
     [self.controller getArtistsFromSearchTerm:[searchBar text] completion:^(NSError *error, LSIArtist *artist) {
         if (error) {
             NSLog(@"Error: %@", error);

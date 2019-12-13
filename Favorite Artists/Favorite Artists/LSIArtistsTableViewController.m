@@ -107,6 +107,12 @@
     LSIArtistDetailViewController *detailVC = segue.destinationViewController;
     if (detailVC) {
         detailVC.controller = self.controller;
+        
+        if ([[segue identifier]  isEqual: @"ShowArtistDetail"]) {
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            LSIArtist *artist = self.controller.artists[indexPath.row];
+            [detailVC setArtist:artist];
+        }
     }
 }
 

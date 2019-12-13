@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="nbN-ck-kFw">
             <objects>
-                <tableViewController id="otX-dC-0sk" sceneMemberID="viewController">
+                <tableViewController id="otX-dC-0sk" customClass="GIPArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2gG-S8-aXZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="405.79710144927537" y="-82.366071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="NiD-7n-y90">
             <objects>
-                <viewController id="S7i-mv-uyM" sceneMemberID="viewController">
+                <viewController id="S7i-mv-uyM" customClass="GIPSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d4j-VS-Iw0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="1360.8695652173915" y="-421.20535714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="hqX-zJ-irb">
             <objects>
-                <viewController id="WPz-2C-x6L" sceneMemberID="viewController">
+                <viewController id="WPz-2C-x6L" customClass="GIPDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hcy-KF-Zci">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

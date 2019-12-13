@@ -21,6 +21,8 @@
 		A6CC35C623A3FF4A008EA141 /* GIPArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35A423A3F347008EA141 /* GIPArtist.m */; };
 		A6CC35C923A4039F008EA141 /* GIPArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35C823A4039F008EA141 /* GIPArtistController.m */; };
 		A6CC35CD23A40B8C008EA141 /* GIPArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35CC23A40B8C008EA141 /* GIPArtistTableViewController.m */; };
+		A6CC35D123A40C29008EA141 /* GIPSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35D023A40C29008EA141 /* GIPSearchViewController.m */; };
+		A6CC35D423A40C31008EA141 /* GIPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35D323A40C31008EA141 /* GIPDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		A6CC35C823A4039F008EA141 /* GIPArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPArtistController.m; sourceTree = "<group>"; };
 		A6CC35CB23A40B8C008EA141 /* GIPArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPArtistTableViewController.h; sourceTree = "<group>"; };
 		A6CC35CC23A40B8C008EA141 /* GIPArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPArtistTableViewController.m; sourceTree = "<group>"; };
+		A6CC35CF23A40C29008EA141 /* GIPSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPSearchViewController.h; sourceTree = "<group>"; };
+		A6CC35D023A40C29008EA141 /* GIPSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPSearchViewController.m; sourceTree = "<group>"; };
+		A6CC35D223A40C31008EA141 /* GIPDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPDetailViewController.h; sourceTree = "<group>"; };
+		A6CC35D323A40C31008EA141 /* GIPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,10 @@
 			children = (
 				A6CC35CB23A40B8C008EA141 /* GIPArtistTableViewController.h */,
 				A6CC35CC23A40B8C008EA141 /* GIPArtistTableViewController.m */,
+				A6CC35CF23A40C29008EA141 /* GIPSearchViewController.h */,
+				A6CC35D023A40C29008EA141 /* GIPSearchViewController.m */,
+				A6CC35D223A40C31008EA141 /* GIPDetailViewController.h */,
+				A6CC35D323A40C31008EA141 /* GIPDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -267,10 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6CC35CD23A40B8C008EA141 /* GIPArtistTableViewController.m in Sources */,
+				A6CC35D123A40C29008EA141 /* GIPSearchViewController.m in Sources */,
 				A6CC35B223A3F8AE008EA141 /* GIPArtist+NSJSONSerialization.m in Sources */,
 				A6CC358B23A3EEE7008EA141 /* AppDelegate.m in Sources */,
 				A6CC35A523A3F347008EA141 /* GIPArtist.m in Sources */,
 				A6CC359C23A3EEE8008EA141 /* main.m in Sources */,
+				A6CC35D423A40C31008EA141 /* GIPDetailViewController.m in Sources */,
 				A6CC358E23A3EEE7008EA141 /* SceneDelegate.m in Sources */,
 				A6CC35C923A4039F008EA141 /* GIPArtistController.m in Sources */,
 			);

@@ -19,6 +19,8 @@
 		A6CC35C223A3FE74008EA141 /* MacklemoreTest.json in Resources */ = {isa = PBXBuildFile; fileRef = A6CC35C123A3FE74008EA141 /* MacklemoreTest.json */; };
 		A6CC35C423A3FEC1008EA141 /* GIPArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35C323A3FEC1008EA141 /* GIPArtistTest.m */; };
 		A6CC35C623A3FF4A008EA141 /* GIPArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35A423A3F347008EA141 /* GIPArtist.m */; };
+		A6CC35C923A4039F008EA141 /* GIPArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35C823A4039F008EA141 /* GIPArtistController.m */; };
+		A6CC35CD23A40B8C008EA141 /* GIPArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35CC23A40B8C008EA141 /* GIPArtistTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,10 @@
 		A6CC35C123A3FE74008EA141 /* MacklemoreTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MacklemoreTest.json; sourceTree = "<group>"; };
 		A6CC35C323A3FEC1008EA141 /* GIPArtistTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPArtistTest.m; sourceTree = "<group>"; };
 		A6CC35C523A3FF17008EA141 /* GIPFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPFileHelper.h; sourceTree = "<group>"; };
+		A6CC35C723A4039F008EA141 /* GIPArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPArtistController.h; sourceTree = "<group>"; };
+		A6CC35C823A4039F008EA141 /* GIPArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPArtistController.m; sourceTree = "<group>"; };
+		A6CC35CB23A40B8C008EA141 /* GIPArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPArtistTableViewController.h; sourceTree = "<group>"; };
+		A6CC35CC23A40B8C008EA141 /* GIPArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPArtistTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				A6CC35A623A3F34B008EA141 /* Models */,
+				A6CC35CA23A403A4008EA141 /* Model Controllers */,
+				A6CC35CE23A40B91008EA141 /* ViewControllers */,
 				A6CC35A223A3F30E008EA141 /* Storyboards */,
 				A6CC358923A3EEE7008EA141 /* AppDelegate.h */,
 				A6CC358A23A3EEE7008EA141 /* AppDelegate.m */,
@@ -136,6 +144,24 @@
 				A6CC35C523A3FF17008EA141 /* GIPFileHelper.h */,
 			);
 			path = "Favorite-ArtistsTests";
+			sourceTree = "<group>";
+		};
+		A6CC35CA23A403A4008EA141 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC35C723A4039F008EA141 /* GIPArtistController.h */,
+				A6CC35C823A4039F008EA141 /* GIPArtistController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		A6CC35CE23A40B91008EA141 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC35CB23A40B8C008EA141 /* GIPArtistTableViewController.h */,
+				A6CC35CC23A40B8C008EA141 /* GIPArtistTableViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,11 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6CC35CD23A40B8C008EA141 /* GIPArtistTableViewController.m in Sources */,
 				A6CC35B223A3F8AE008EA141 /* GIPArtist+NSJSONSerialization.m in Sources */,
 				A6CC358B23A3EEE7008EA141 /* AppDelegate.m in Sources */,
 				A6CC35A523A3F347008EA141 /* GIPArtist.m in Sources */,
 				A6CC359C23A3EEE8008EA141 /* main.m in Sources */,
 				A6CC358E23A3EEE7008EA141 /* SceneDelegate.m in Sources */,
+				A6CC35C923A4039F008EA141 /* GIPArtistController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

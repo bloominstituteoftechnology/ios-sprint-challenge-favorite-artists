@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JLRFavoriteArtist2Controller.h"
+#import "Artist+CoreDataClass.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) JLRFavoriteArtist2Controller *artistController;
+@property (nonatomic, strong) Artist *artist;
+
+
+
+@end
+
+@interface ViewController (UITex)
 
 @end
 

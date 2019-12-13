@@ -18,6 +18,7 @@
 		8005E22623A405B400950329 /* JLRCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005E22523A405B400950329 /* JLRCoreDataStack.m */; };
 		8005E22923A4075300950329 /* JLRFavoriteArtists2+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005E22823A4075300950329 /* JLRFavoriteArtists2+Convenience.m */; };
 		8005E22F23A40BD400950329 /* JLRFavoriteArtist2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005E22E23A40BD400950329 /* JLRFavoriteArtist2Controller.m */; };
+		8005E23323A427C100950329 /* JLRArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005E23223A427C100950329 /* JLRArtistTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		8005E22823A4075300950329 /* JLRFavoriteArtists2+Convenience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JLRFavoriteArtists2+Convenience.m"; sourceTree = "<group>"; };
 		8005E22D23A40BD400950329 /* JLRFavoriteArtist2Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLRFavoriteArtist2Controller.h; sourceTree = "<group>"; };
 		8005E22E23A40BD400950329 /* JLRFavoriteArtist2Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLRFavoriteArtist2Controller.m; sourceTree = "<group>"; };
+		8005E23123A427C100950329 /* JLRArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLRArtistTableViewController.h; sourceTree = "<group>"; };
+		8005E23223A427C100950329 /* JLRArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLRArtistTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 			children = (
 				8005E20D23A4042900950329 /* ViewController.h */,
 				8005E20E23A4042900950329 /* ViewController.m */,
+				8005E23123A427C100950329 /* JLRArtistTableViewController.h */,
+				8005E23223A427C100950329 /* JLRArtistTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8005E21D23A4042C00950329 /* main.m in Sources */,
+				8005E23323A427C100950329 /* JLRArtistTableViewController.m in Sources */,
 				8005E20F23A4042900950329 /* ViewController.m in Sources */,
 				8005E22623A405B400950329 /* JLRCoreDataStack.m in Sources */,
 				8005E21523A4042900950329 /* FavoriteArtists2.xcdatamodeld in Sources */,

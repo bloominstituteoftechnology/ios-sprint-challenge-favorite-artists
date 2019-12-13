@@ -8,11 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@class JLRArtist;
+@class Artist;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JLRFavoriteArtist2Controller : NSObject
+
+- (void)searchForArtistsWithSearchTerm:(NSString *)searchTerm completion:(void (^)(NSArray *artists, NSError *error))completion;
+
+- (Artist *)createFavoriteArtistWithName:(NSString *)name bio:(NSString *)bio formed:(NSDate *)formed;
+- (void)deleteArtist:(Artist *)artist;
+
+@property (nonatomic, copy, readonly) NSArray *artists;
 
 @end
 

@@ -26,7 +26,7 @@
     NSString *yearString = [NSString stringWithFormat:@"%d", (self.yearFormed)];
 //    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys: self.name: @"strArtist", yearString: @"intFormedYear", self.biography: @"strBiographyEN", nil];
     
-    return @{@"strArtist" : self.name, @"intFormedYear" : yearString, @"strBiographyEN": self.biography};
+    return @{@"strArtist" : self.name, @"strBiographyEN": self.biography, @"intFormedYear" : yearString};
     
 }
 

@@ -11,9 +11,14 @@
 
 @interface GIPArtistController : NSObject
 
-//@property NSMutableArray *artists;
+@property NSMutableArray *artists;
 
 - (void)searchArtistWithName:(NSString *)name completion:(void (^)(GIPArtist *artist, NSError *error))completion;
+
+- (void)addArtist:(GIPArtist *)artist;
+- (void)removeArtist:(GIPArtist *)artist;
+
+
 
 @end
 

@@ -10,19 +10,25 @@
 #import "GIPArtist+NSJSONSerialization.h"
 #import "GIPArtist.h"
 
+@interface GIPArtistController()
+
+- (void)save;
+
+@end
+
 @implementation GIPArtistController
 
 static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json";
 static NSString *const testApiKey = @"1";
 
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self) {
-//        _artists = [[NSMutableArray alloc] init];
-//    }
-//    return self;
-//}
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _artists = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 
 - (void)searchArtistWithName:(NSString *)name completion:(void (^)(GIPArtist *artist, NSError *error))completion {
     
@@ -75,6 +81,22 @@ static NSString *const testApiKey = @"1";
      
 }
 
+- (void)addArtist:(GIPArtist *)artist {
+    [self.artists addObject:[artist toDictionary]];
+    [self save];
+}
 
+- (void)removeArtist:(GIPArtist *)artist {
+    [self.artists removeObject:[artist toDictionary]];
+    [self save];
+}
+
+- (void)save {
+    NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = [searchPaths objectAtIndex:0];
+    NSURL *url = [NSURL URLWithString:documentPath];
+    
+    [self.artists writeToURL:url atomically:YES];
+}
 
 @end

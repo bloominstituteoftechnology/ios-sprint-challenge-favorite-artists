@@ -47,6 +47,10 @@
         } else {
             [self.yearLabel setText:nil];
         }
+    } else {
+        [self.nameLabel setText:nil];
+        [self.yearLabel setText:nil];
+        [self.biographyTextView setText:nil];
     }
 }
 

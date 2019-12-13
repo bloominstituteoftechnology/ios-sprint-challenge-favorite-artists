@@ -43,7 +43,7 @@ static NSString *const apiKey = @"1";
         
         if (data == nil) {
             NSLog(@"Data was nil");
-            completion([[NSError alloc] init], nil);
+            completion(nil, nil);
             return;
         }
         
@@ -56,23 +56,25 @@ static NSString *const apiKey = @"1";
         
         NSArray *artists = json[@"artists"];
         
-        if (artists) {
-            NSDictionary *dictionary = artists[0];
-            if (dictionary) {
-                LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dictionary];
-                if (artist) {
-                    completion(nil, artist);
-                    return;
-                } else {
-                    NSLog(@"Could not create artist from dictionary.");
-                    completion([[NSError alloc] init], nil);
-                    return;
+        if (artists && ![artists isKindOfClass:[NSNull class]]) {
+            if ([artists count] > 0) {
+                NSDictionary *dictionary = artists[0];
+                if (dictionary) {
+                    LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dictionary];
+                    if (artist) {
+                        completion(nil, artist);
+                        return;
+                    } else {
+                        NSLog(@"Could not create artist from dictionary.");
+                        completion([[NSError alloc] init], nil);
+                        return;
+                    }
                 }
             }
         }
         
         NSLog(@"Could not parse returned dictionary.");
-        completion([[NSError alloc] init], nil);
+        completion(nil, nil);
     }];
     
     [task resume];

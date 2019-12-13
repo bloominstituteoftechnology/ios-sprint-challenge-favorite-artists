@@ -13,6 +13,8 @@
 		59002FC823A3F27B009B34AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59002FC723A3F27B009B34AE /* Assets.xcassets */; };
 		59002FCB23A3F27B009B34AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59002FC923A3F27B009B34AE /* LaunchScreen.storyboard */; };
 		59002FCE23A3F27B009B34AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59002FCD23A3F27B009B34AE /* main.m */; };
+		59002FD623A3F31A009B34AE /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 59002FD523A3F31A009B34AE /* LSIArtist.m */; };
+		59002FD923A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 59002FD823A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		59002FCA23A3F27B009B34AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59002FCC23A3F27B009B34AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59002FCD23A3F27B009B34AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		59002FD423A3F31A009B34AE /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
+		59002FD523A3F31A009B34AE /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
+		59002FD723A3F39C009B34AE /* LSIArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSIArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		59002FD823A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LSIArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				59002FBC23A3F279009B34AE /* AppDelegate.m */,
 				59002FBE23A3F279009B34AE /* SceneDelegate.h */,
 				59002FBF23A3F279009B34AE /* SceneDelegate.m */,
+				59002FD423A3F31A009B34AE /* LSIArtist.h */,
+				59002FD523A3F31A009B34AE /* LSIArtist.m */,
+				59002FD723A3F39C009B34AE /* LSIArtist+NSJSONSerialization.h */,
+				59002FD823A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m */,
 				59002FC423A3F279009B34AE /* Main.storyboard */,
 				59002FC723A3F27B009B34AE /* Assets.xcassets */,
 				59002FC923A3F27B009B34AE /* LaunchScreen.storyboard */,
@@ -143,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59002FBD23A3F279009B34AE /* AppDelegate.m in Sources */,
+				59002FD623A3F31A009B34AE /* LSIArtist.m in Sources */,
 				59002FCE23A3F27B009B34AE /* main.m in Sources */,
+				59002FD923A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m in Sources */,
 				59002FC023A3F279009B34AE /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

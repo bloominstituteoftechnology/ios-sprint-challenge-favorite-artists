@@ -7,8 +7,16 @@
 //
 
 #import "GIPDetailViewController.h"
+#import "GIPArtist.h"
 
 @interface GIPDetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *biographyLabel;
+
+
+- (void)updateViews;
 
 @end
 
@@ -16,17 +24,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.artist != Nil) {
+            self.nameLabel.text = self.artist.name;
+            self.yearLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+            self.biographyLabel.text = self.artist.biography;
+        } else {
+            self.nameLabel.text = @"";
+            self.yearLabel.text = @"";
+            self.biographyLabel.text = @"";
+        }
+    });
 }
-*/
 
 @end

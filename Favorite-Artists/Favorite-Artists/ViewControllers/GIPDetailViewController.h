@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
+@class GIPArtist;
 
 @interface GIPDetailViewController : UIViewController
 
-@end
+@property GIPArtist *artist;
 
-NS_ASSUME_NONNULL_END
+
+@end

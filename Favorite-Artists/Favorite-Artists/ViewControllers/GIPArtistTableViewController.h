@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class GIPArtistController;
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface GIPArtistTableViewController : UITableViewController
 
+@property GIPArtistController *controller;
+
 @end
 
-NS_ASSUME_NONNULL_END

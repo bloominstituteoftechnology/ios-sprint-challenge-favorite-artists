@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="NTa-JH-EAM" detailTextLabel="dDx-0r-oOQ" style="IBUITableViewCellStyleSubtitle" id="MfL-62-obd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="NTa-JH-EAM" detailTextLabel="dDx-0r-oOQ" style="IBUITableViewCellStyleSubtitle" id="MfL-62-obd">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MfL-62-obd" id="DfD-Hq-ycj">
@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="WPz-2C-x6L" kind="show" id="ciV-gG-smg"/>
+                                    <segue destination="WPz-2C-x6L" kind="show" identifier="DetailViewSegue" id="ciV-gG-smg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,8 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" largeTitleDisplayMode="always" id="N04-hn-Ccx">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="i5T-3k-9Xg">
                             <connections>
-                                <segue destination="S7i-mv-uyM" kind="show" id="13X-l6-0Qe"/>
+                                <action selector="searchNewArtist:" destination="otX-dC-0sk" id="9Fa-bR-sW5"/>
+                                <segue destination="S7i-mv-uyM" kind="show" identifier="SearchNewArtistSegue" id="13X-l6-0Qe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -111,8 +112,18 @@
                         <viewLayoutGuide key="safeArea" id="OMZ-ay-1rn"/>
                     </view>
                     <navigationItem key="navigationItem" id="kYs-g9-mFq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zV9-0w-6JY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zV9-0w-6JY">
+                            <connections>
+                                <action selector="saveArtist:" destination="S7i-mv-uyM" id="Ifl-zl-13d"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="biographyLabel" destination="fA0-7L-GvY" id="dyN-7J-GQN"/>
+                        <outlet property="nameLabel" destination="RDA-Pe-bxg" id="KWw-ht-zHr"/>
+                        <outlet property="searchBar" destination="YDa-1a-N0K" id="9B2-d7-tsM"/>
+                        <outlet property="yearLabel" destination="8Bc-ix-CkB" id="IQB-mq-muf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIZ-L5-4Ey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,6 +171,11 @@
                         <viewLayoutGuide key="safeArea" id="VkX-iT-6ZN"/>
                     </view>
                     <navigationItem key="navigationItem" id="8SQ-v3-xKF"/>
+                    <connections>
+                        <outlet property="biographyLabel" destination="aDU-3K-ikp" id="zqY-pw-GkA"/>
+                        <outlet property="nameLabel" destination="fHK-Dh-Oem" id="baf-fj-RaF"/>
+                        <outlet property="yearLabel" destination="J3G-hr-D1E" id="XZv-bz-p5N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zh4-FF-0k9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

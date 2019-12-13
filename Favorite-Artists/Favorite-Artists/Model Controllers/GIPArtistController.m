@@ -33,10 +33,11 @@ static NSString *const testApiKey = @"1";
 - (void)searchArtistWithName:(NSString *)name completion:(void (^)(GIPArtist *artist, NSError *error))completion {
     
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
-    [baseURL URLByAppendingPathComponent:testApiKey];
+    baseURL = [baseURL URLByAppendingPathComponent:testApiKey];
+    baseURL = [baseURL URLByAppendingPathComponent:@"search.php"];
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
     
-    NSURLQueryItem *searchName = [NSURLQueryItem queryItemWithName:@"search.php?s" value:name];
+    NSURLQueryItem *searchName = [NSURLQueryItem queryItemWithName:@"s" value:name];
     [components setQueryItems:@[searchName]];
      
     NSURL *url = [components URL];
@@ -95,8 +96,9 @@ static NSString *const testApiKey = @"1";
     NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentPath = [searchPaths objectAtIndex:0];
     NSURL *url = [NSURL URLWithString:documentPath];
-    
-    [self.artists writeToURL:url atomically:YES];
+    NSLog(@"Saved URL: %@", url.absoluteString);
+    bool saved = [self.artists writeToURL:url atomically:YES];
+    NSLog(@"Saved: %d", saved);
 }
 
 @end

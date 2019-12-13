@@ -1,4 +1,4 @@
-V//
+//
 //  GIPArtistTableViewController.m
 //  Favorite-Artists
 //
@@ -7,54 +7,64 @@ V//
 //
 
 #import "GIPArtistTableViewController.h"
+#import "GIPArtistController.h"
+#import "GIPArtist.h"
+#import "GIPArtist+NSJSONSerialization.h"
+#import "GIPSearchViewController.h"
+#import "GIPDetailViewController.h"
 
 @interface GIPArtistTableViewController ()
+
+- (IBAction)searchNewArtist:(id)sender;
+
 
 @end
 
 @implementation GIPArtistTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _controller = [[GIPArtistController alloc] init];
+    }
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _controller = [[GIPArtistController alloc] init];
+    }
+    return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.controller.artists.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSDictionary *artistDict = [self.controller.artists objectAtIndex:indexPath.row];
+    GIPArtist *artist = [[GIPArtist alloc] initWithDictionary:artistDict];
+
+    cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed Year: %d", (artist.yearFormed)];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -64,30 +74,27 @@ V//
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"SearchNewArtistSegue"]) {
+        GIPSearchViewController *searchVC = segue.destinationViewController;
+        searchVC.controller = self.controller;
+    } else if ([segue.identifier isEqualToString:@"DetailViewSegue"]) {
+        GIPDetailViewController *detailVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSDictionary *artistDict = self.controller.artists[indexPath.row];
+        detailVC.artist = [[GIPArtist alloc] initWithDictionary:artistDict];
+    }
 }
-*/
 
+
+- (IBAction)searchNewArtist:(id)sender {
+    [self performSegueWithIdentifier:@"SearchNewArtistSegue" sender:self];
+}
 @end

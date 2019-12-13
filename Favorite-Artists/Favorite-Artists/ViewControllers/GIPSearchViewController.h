@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class GIPArtistController;
 
-NS_ASSUME_NONNULL_BEGIN
+@interface GIPSearchViewController : UIViewController <UISearchBarDelegate>
 
-@interface GIPSearchViewController : UIViewController
+@property GIPArtistController *controller;
 
 @end
-
-NS_ASSUME_NONNULL_END

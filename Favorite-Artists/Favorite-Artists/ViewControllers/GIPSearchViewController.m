@@ -7,8 +7,21 @@
 //
 
 #import "GIPSearchViewController.h"
+#import "GIPArtistController.h"
+#import "GIPArtist.h"
 
 @interface GIPSearchViewController ()
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *biographyLabel;
+- (IBAction)saveArtist:(id)sender;
+
+@property GIPArtist *artist;
+
+- (void)updateViews;
+
 
 @end
 
@@ -16,17 +29,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self.searchBar setDelegate:self];
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.controller searchArtistWithName:searchBar.text completion:^(GIPArtist *artist, NSError *error) {
+        if (error) {
+            NSLog(@"Search Error: %@", error);
+            self.artist = Nil;
+            return;
+        }
+        
+        self.artist = artist;
+        [self updateViews];
+    }];
+    [self.searchBar resignFirstResponder];
 }
-*/
 
+- (void)updateViews {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.artist != Nil) {
+            self.nameLabel.text = self.artist.name;
+            self.yearLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+            self.biographyLabel.text = self.artist.biography;
+        } else {
+            self.nameLabel.text = @"";
+            self.yearLabel.text = @"";
+            self.biographyLabel.text = @"";
+        }
+    });
+}
+
+- (IBAction)saveArtist:(id)sender {
+    if (self.artist != Nil) {
+        [self.controller addArtist:self.artist];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        NSLog(@"Error saving artist: %@", self.searchBar.text);
+    }
+}
 @end

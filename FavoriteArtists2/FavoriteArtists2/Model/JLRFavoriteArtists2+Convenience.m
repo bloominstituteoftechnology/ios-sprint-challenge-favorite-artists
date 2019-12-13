@@ -11,7 +11,7 @@
 
 @implementation Artist (Convenience)
 
-- (instancetype)initWithName:(NSString *)name bio:(NSString *)bio formed:(NSDate *)formed context:(NSManagedObjectContext *)context
+- (instancetype)initWithName:(NSString *)name bio:(NSString *)bio formed:(NSString *)formed context:(NSManagedObjectContext *)context
 {
     self = [self initWithContext:context];
     if (self) {

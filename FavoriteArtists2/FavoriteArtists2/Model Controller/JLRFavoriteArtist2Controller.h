@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JLRFavoriteArtist2Controller : NSObject
 
-- (void)searchForArtistsWithSearchTerm:(NSString *)searchTerm completion:(void (^)(NSArray *artists, NSError *error))completion;
+- (void)searchForArtistsWithSearchTerm:(NSString *)searchTerm completion:(void (^)(Artist *artists, NSError *error))completion;
 
-- (Artist *)createFavoriteArtistWithName:(NSString *)name bio:(NSString *)bio formed:(NSDate *)formed;
+- (Artist *)createFavoriteArtistWithName:(NSString *)name bio:(NSString *)bio formed:(NSString *)formed;
 - (void)deleteArtist:(Artist *)artist;
 
 @property (nonatomic, copy, readonly) NSArray *artists;

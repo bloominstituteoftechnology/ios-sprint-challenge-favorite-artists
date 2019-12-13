@@ -12,16 +12,15 @@
 
 @implementation JLRFavoriteArtist2Controller
 
-static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1";
+static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
-- (void)searchForArtistsWithSearchTerm:(NSString *)searchTerm completion:(void (^)(NSArray *artists, NSError *error))completion
+- (void)searchForArtistsWithSearchTerm:(NSString *)searchTerm completion:(void (^)(Artist *artists, NSError *error))completion
 {
-    NSURL *baseURL = [NSURL URLWithString:baseURLString];
     
-    NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
-    NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName:@"search" value:searchTerm];
-    [components setQueryItems:@[searchItem]];
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseURLString];
+    NSMutableArray *queryItems = [NSMutableArray arrayWithObjects:[NSURLQueryItem queryItemWithName:@"s" value:searchTerm], nil];
     
+    components.queryItems = queryItems;
     NSURL *url = [components URL];
     NSLog(@"URL: %@", url);
     
@@ -57,7 +56,7 @@ static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json/
         NSDictionary *artistDictionary = artistsArray[0];
 
         NSString *artistName = artistDictionary[@"strArtist"];
-        NSDate *yearFormed = artistDictionary[@"intFormedYear"];
+        NSString *yearFormed = artistDictionary[@"intFormedYear"];
         NSString *artistBio = artistDictionary[@"strBiographyEN"];
         NSManagedObjectContext *moc = [[JLRCoreDataStack sharedStack] mainContext];
 
@@ -68,10 +67,10 @@ static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json/
     [task resume];
 }
 
-- (Artist *)createFavoriteArtistWithName:(NSString *)name bio:(NSString *)bio formed:(NSDate *)formed
+- (Artist *)createFavoriteArtistWithName:(NSString *)name bio:(NSString *)bio formed:(NSString *)formed
 {
     NSManagedObjectContext *moc = [[JLRCoreDataStack sharedStack] mainContext];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FavoriteArtist" inManagedObjectContext:moc];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Artist" inManagedObjectContext:moc];
     Artist *artist = [[Artist alloc] initWithEntity:entity insertIntoManagedObjectContext:moc];
     artist.name = name;
     artist.bio = bio;
@@ -100,7 +99,7 @@ static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json/
 #pragma mark - Properties
 - (NSArray *)artists
 {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"FavoriteArtist"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Artist"];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:false];
     
     fetchRequest.sortDescriptors = @[sortDescriptor];

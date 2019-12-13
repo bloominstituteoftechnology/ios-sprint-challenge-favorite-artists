@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Artist (Convenience)
 
-- (instancetype)initWithName:(NSString *)name bio:(NSString *)bio formed:(NSDate *)formed context:(NSManagedObjectContext *)context;
+- (instancetype)initWithName:(NSString *)name bio:(NSString *)bio formed:(NSString *)formed context:(NSManagedObjectContext *)context;
 
 @end
 

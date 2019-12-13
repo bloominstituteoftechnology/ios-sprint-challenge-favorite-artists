@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UISearchBarDelegate>
 
 @property (nonatomic, strong) JLRFavoriteArtist2Controller *artistController;
 @property (nonatomic, strong) Artist *artist;

@@ -18,6 +18,7 @@
     [super viewDidLoad];
     [self setupViews];
     [self updateViews];
+    self.searchBar.delegate = self;
     self.textView.delegate = self;
 }
 
@@ -43,7 +44,8 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     
-    [self.artistController searchForArtistsWithSearchTerm:searchBar.text completion:^(NSArray * _Nonnull artists, NSError * _Nonnull error) {
+    [self.artistController searchForArtistsWithSearchTerm:searchBar.text completion:^(Artist *artists, NSError *error) {
+        
         if (error) {
             NSLog(@"Error: %@", error);
             return;
@@ -61,11 +63,9 @@
 - (IBAction)saveArtist:(UIBarButtonItem *)sender {
     NSString *name = self.artistTitle.text;
     NSString *bio = self.textView.text;
+    NSString *formed = self.artistDateFormed.text;
     
-    if (self.artist) {
-        NSDate *dateFormed = [[NSDate alloc] init];
-        [self.artistController createFavoriteArtistWithName:name bio:bio formed:dateFormed];
-    }
+    [self.artistController createFavoriteArtistWithName:name bio:bio formed:formed];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

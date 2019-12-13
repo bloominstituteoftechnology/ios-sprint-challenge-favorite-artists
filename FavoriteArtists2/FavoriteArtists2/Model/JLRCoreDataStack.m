@@ -38,4 +38,9 @@
     return self;
 }
 
+- (NSManagedObjectContext *)mainContext
+{
+    return self.container.viewContext;
+}
+
 @end

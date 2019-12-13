@@ -16,6 +16,7 @@
 		8005E1EB23A3FDEB00950329 /* JLRArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005E1EA23A3FDEB00950329 /* JLRArtistsTableViewController.m */; };
 		8005E1EF23A3FE0400950329 /* JLRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005E1EE23A3FE0400950329 /* JLRDetailViewController.m */; };
 		8005E1F423A3FE8900950329 /* JLRArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005E1F323A3FE8900950329 /* JLRArtist.m */; };
+		8005E1F923A4031E00950329 /* NSJSONSerialization+JLRArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005E1F823A4031E00950329 /* NSJSONSerialization+JLRArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		8005E1EE23A3FE0400950329 /* JLRDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLRDetailViewController.m; sourceTree = "<group>"; };
 		8005E1F223A3FE8900950329 /* JLRArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLRArtist.h; sourceTree = "<group>"; };
 		8005E1F323A3FE8900950329 /* JLRArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLRArtist.m; sourceTree = "<group>"; };
+		8005E1F723A4031E00950329 /* NSJSONSerialization+JLRArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+JLRArtist.h"; sourceTree = "<group>"; };
+		8005E1F823A4031E00950329 /* NSJSONSerialization+JLRArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+JLRArtist.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 			children = (
 				8005E1F523A3FE8E00950329 /* Models */,
 				8005E1EC23A3FDEF00950329 /* View Controllers */,
+				8005E1FA23A4035900950329 /* Category */,
 				8005E1F123A3FE5300950329 /* Storyboards */,
 				8005E1F023A3FE3C00950329 /* Resources */,
 			);
@@ -116,6 +120,15 @@
 				8005E1F323A3FE8900950329 /* JLRArtist.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8005E1FA23A4035900950329 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8005E1F723A4031E00950329 /* NSJSONSerialization+JLRArtist.h */,
+				8005E1F823A4031E00950329 /* NSJSONSerialization+JLRArtist.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8005E1F923A4031E00950329 /* NSJSONSerialization+JLRArtist.m in Sources */,
 				8005E1EF23A3FE0400950329 /* JLRDetailViewController.m in Sources */,
 				8005E1F423A3FE8900950329 /* JLRArtist.m in Sources */,
 				8005E1D223A3FB7600950329 /* AppDelegate.m in Sources */,

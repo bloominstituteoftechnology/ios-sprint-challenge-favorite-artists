@@ -16,7 +16,58 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupViews];
+    [self updateViews];
+    self.textView.delegate = self;
+}
+
+- (void)setupViews
+{
+    self.textView.layer.cornerRadius = 6;
+    self.textView.layer.borderColor = UIColor.blackColor.CGColor;
+    self.textView.layer.borderWidth = 0.2;
+}
+
+- (void)updateViews
+{
+    if (self.artist) {
+        self.title = self.artist.name;
+        self.artistTitle.text = self.artist.name;
+        self.artistDateFormed.text = [NSString stringWithFormat:@"Formed in %@", self.artist.formed];
+        self.textView.text = self.artist.bio;
+    } else {
+        self.title = @"Add New Artist";
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    
+    [self.artistController searchForArtistsWithSearchTerm:searchBar.text completion:^(NSArray * _Nonnull artists, NSError * _Nonnull error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+            return;
+        }
+        
+        if (artists) {
+            self.artist = artists;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self updateViews];
+            });
+        }
+    }];
+}
+
+- (IBAction)saveArtist:(UIBarButtonItem *)sender {
+    NSString *name = self.artistTitle.text;
+    NSString *bio = self.textView.text;
+    
+    if (self.artist) {
+        NSDate *dateFormed = [[NSDate alloc] init];
+        [self.artistController createFavoriteArtistWithName:name bio:bio formed:dateFormed];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

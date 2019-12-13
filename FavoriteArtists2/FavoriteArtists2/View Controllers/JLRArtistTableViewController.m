@@ -79,11 +79,11 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Artist *artist = self.artistController.artists[indexPath.row];
         
-//        destinationVC.artist = artist;
-//        destinationVC.artistController = self.artistController;
+        destinationVC.artist = artist;
+        destinationVC.artistController = self.artistController;
     } else if ([segue.identifier isEqualToString:@"AddArtist"]) {
         ViewController *destinationVC = (ViewController *)[segue destinationViewController];
-//        destinationVC.artistController = self.artistController;
+        destinationVC.artistController = self.artistController;
     }
 }
 

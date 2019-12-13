@@ -15,6 +15,8 @@
 		59002FCE23A3F27B009B34AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59002FCD23A3F27B009B34AE /* main.m */; };
 		59002FD623A3F31A009B34AE /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 59002FD523A3F31A009B34AE /* LSIArtist.m */; };
 		59002FD923A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 59002FD823A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m */; };
+		59002FDC23A3F89A009B34AE /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59002FDB23A3F89A009B34AE /* LSIArtistsTableViewController.m */; };
+		59002FDF23A3F8F1009B34AE /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59002FDE23A3F8F1009B34AE /* LSIArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		59002FD523A3F31A009B34AE /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 		59002FD723A3F39C009B34AE /* LSIArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSIArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		59002FD823A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LSIArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		59002FDA23A3F89A009B34AE /* LSIArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistsTableViewController.h; sourceTree = "<group>"; };
+		59002FDB23A3F89A009B34AE /* LSIArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistsTableViewController.m; sourceTree = "<group>"; };
+		59002FDD23A3F8F1009B34AE /* LSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistDetailViewController.h; sourceTree = "<group>"; };
+		59002FDE23A3F8F1009B34AE /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,10 @@
 				59002FD523A3F31A009B34AE /* LSIArtist.m */,
 				59002FD723A3F39C009B34AE /* LSIArtist+NSJSONSerialization.h */,
 				59002FD823A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m */,
+				59002FDA23A3F89A009B34AE /* LSIArtistsTableViewController.h */,
+				59002FDB23A3F89A009B34AE /* LSIArtistsTableViewController.m */,
+				59002FDD23A3F8F1009B34AE /* LSIArtistDetailViewController.h */,
+				59002FDE23A3F8F1009B34AE /* LSIArtistDetailViewController.m */,
 				59002FC423A3F279009B34AE /* Main.storyboard */,
 				59002FC723A3F27B009B34AE /* Assets.xcassets */,
 				59002FC923A3F27B009B34AE /* LaunchScreen.storyboard */,
@@ -152,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59002FDF23A3F8F1009B34AE /* LSIArtistDetailViewController.m in Sources */,
 				59002FBD23A3F279009B34AE /* AppDelegate.m in Sources */,
+				59002FDC23A3F89A009B34AE /* LSIArtistsTableViewController.m in Sources */,
 				59002FD623A3F31A009B34AE /* LSIArtist.m in Sources */,
 				59002FCE23A3F27B009B34AE /* main.m in Sources */,
 				59002FD923A3F39C009B34AE /* LSIArtist+NSJSONSerialization.m in Sources */,

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LSIArtistDetailViewController : UIViewController
+@class LSIArtistController;
+@class LSIArtist;
+
+@interface LSIArtistDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property LSIArtistController *controller;
+@property LSIArtist *artist;
 
 @end

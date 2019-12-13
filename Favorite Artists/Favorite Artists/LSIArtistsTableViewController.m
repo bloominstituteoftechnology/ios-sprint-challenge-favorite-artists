@@ -7,12 +7,26 @@
 //
 
 #import "LSIArtistsTableViewController.h"
+#import "LSIArtist.h"
+#import "LSIArtistController.h"
+#import "LSIArtistDetailViewController.h"
 
 @interface LSIArtistsTableViewController ()
+
+@property LSIArtistController *controller;
 
 @end
 
 @implementation LSIArtistsTableViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _controller = [[LSIArtistController alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,14 +41,21 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [[self.controller artists] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    LSIArtist *artist = self.controller.artists[indexPath.row];
+    
+    [[cell textLabel] setText:[artist name]];
+    
+    if ([artist year] > 0) {
+        [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d", [artist year]]];
+    } else {
+        [[cell detailTextLabel] setText:nil];
+    }
     
     return cell;
 }
@@ -73,14 +94,14 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    LSIArtistDetailViewController *detailVC = segue.destinationViewController;
+    if (detailVC) {
+        detailVC.controller = self.controller;
+    }
 }
-*/
 
 @end

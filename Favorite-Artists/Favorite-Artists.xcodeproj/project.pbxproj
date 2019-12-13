@@ -14,8 +14,22 @@
 		A6CC359923A3EEE8008EA141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC359723A3EEE8008EA141 /* LaunchScreen.storyboard */; };
 		A6CC359C23A3EEE8008EA141 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC359B23A3EEE8008EA141 /* main.m */; };
 		A6CC35A523A3F347008EA141 /* GIPArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35A423A3F347008EA141 /* GIPArtist.m */; };
-		A6CC35AF23A3F533008EA141 /* NSJSONSerialization+GIPArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35AE23A3F533008EA141 /* NSJSONSerialization+GIPArtist.m */; };
+		A6CC35B223A3F8AE008EA141 /* GIPArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35B123A3F8AE008EA141 /* GIPArtist+NSJSONSerialization.m */; };
+		A6CC35BA23A3FE68008EA141 /* Favorite_ArtistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35B923A3FE68008EA141 /* Favorite_ArtistsTests.m */; };
+		A6CC35C223A3FE74008EA141 /* MacklemoreTest.json in Resources */ = {isa = PBXBuildFile; fileRef = A6CC35C123A3FE74008EA141 /* MacklemoreTest.json */; };
+		A6CC35C423A3FEC1008EA141 /* GIPArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35C323A3FEC1008EA141 /* GIPArtistTest.m */; };
+		A6CC35C623A3FF4A008EA141 /* GIPArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC35A423A3F347008EA141 /* GIPArtist.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6CC35BC23A3FE68008EA141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CC357E23A3EEE7008EA141 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6CC358523A3EEE7008EA141;
+			remoteInfo = "Favorite-Artists";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A6CC358623A3EEE7008EA141 /* Favorite-Artists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favorite-Artists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,12 +44,25 @@
 		A6CC359B23A3EEE8008EA141 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6CC35A323A3F347008EA141 /* GIPArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPArtist.h; sourceTree = "<group>"; };
 		A6CC35A423A3F347008EA141 /* GIPArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPArtist.m; sourceTree = "<group>"; };
-		A6CC35AD23A3F533008EA141 /* NSJSONSerialization+GIPArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+GIPArtist.h"; sourceTree = "<group>"; };
-		A6CC35AE23A3F533008EA141 /* NSJSONSerialization+GIPArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+GIPArtist.m"; sourceTree = "<group>"; };
+		A6CC35B023A3F8AE008EA141 /* GIPArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GIPArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		A6CC35B123A3F8AE008EA141 /* GIPArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GIPArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		A6CC35B723A3FE68008EA141 /* Favorite-ArtistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Favorite-ArtistsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6CC35B923A3FE68008EA141 /* Favorite_ArtistsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Favorite_ArtistsTests.m; sourceTree = "<group>"; };
+		A6CC35BB23A3FE68008EA141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6CC35C123A3FE74008EA141 /* MacklemoreTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MacklemoreTest.json; sourceTree = "<group>"; };
+		A6CC35C323A3FEC1008EA141 /* GIPArtistTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIPArtistTest.m; sourceTree = "<group>"; };
+		A6CC35C523A3FF17008EA141 /* GIPFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIPFileHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A6CC358323A3EEE7008EA141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6CC35B423A3FE68008EA141 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				A6CC358823A3EEE7008EA141 /* Favorite-Artists */,
+				A6CC35B823A3FE68008EA141 /* Favorite-ArtistsTests */,
 				A6CC358723A3EEE7008EA141 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				A6CC358623A3EEE7008EA141 /* Favorite-Artists.app */,
+				A6CC35B723A3FE68008EA141 /* Favorite-ArtistsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,10 +120,22 @@
 			children = (
 				A6CC35A323A3F347008EA141 /* GIPArtist.h */,
 				A6CC35A423A3F347008EA141 /* GIPArtist.m */,
-				A6CC35AD23A3F533008EA141 /* NSJSONSerialization+GIPArtist.h */,
-				A6CC35AE23A3F533008EA141 /* NSJSONSerialization+GIPArtist.m */,
+				A6CC35B023A3F8AE008EA141 /* GIPArtist+NSJSONSerialization.h */,
+				A6CC35B123A3F8AE008EA141 /* GIPArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A6CC35B823A3FE68008EA141 /* Favorite-ArtistsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC35B923A3FE68008EA141 /* Favorite_ArtistsTests.m */,
+				A6CC35C323A3FEC1008EA141 /* GIPArtistTest.m */,
+				A6CC35C123A3FE74008EA141 /* MacklemoreTest.json */,
+				A6CC35BB23A3FE68008EA141 /* Info.plist */,
+				A6CC35C523A3FF17008EA141 /* GIPFileHelper.h */,
+			);
+			path = "Favorite-ArtistsTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +158,24 @@
 			productReference = A6CC358623A3EEE7008EA141 /* Favorite-Artists.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A6CC35B623A3FE68008EA141 /* Favorite-ArtistsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6CC35BE23A3FE68008EA141 /* Build configuration list for PBXNativeTarget "Favorite-ArtistsTests" */;
+			buildPhases = (
+				A6CC35B323A3FE68008EA141 /* Sources */,
+				A6CC35B423A3FE68008EA141 /* Frameworks */,
+				A6CC35B523A3FE68008EA141 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6CC35BD23A3FE68008EA141 /* PBXTargetDependency */,
+			);
+			name = "Favorite-ArtistsTests";
+			productName = "Favorite-ArtistsTests";
+			productReference = A6CC35B723A3FE68008EA141 /* Favorite-ArtistsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -129,6 +188,10 @@
 				TargetAttributes = {
 					A6CC358523A3EEE7008EA141 = {
 						CreatedOnToolsVersion = 11.3;
+					};
+					A6CC35B623A3FE68008EA141 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = A6CC358523A3EEE7008EA141;
 					};
 				};
 			};
@@ -146,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				A6CC358523A3EEE7008EA141 /* Favorite-Artists */,
+				A6CC35B623A3FE68008EA141 /* Favorite-ArtistsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -161,6 +225,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6CC35B523A3FE68008EA141 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6CC35C223A3FE74008EA141 /* MacklemoreTest.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -168,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6CC35AF23A3F533008EA141 /* NSJSONSerialization+GIPArtist.m in Sources */,
+				A6CC35B223A3F8AE008EA141 /* GIPArtist+NSJSONSerialization.m in Sources */,
 				A6CC358B23A3EEE7008EA141 /* AppDelegate.m in Sources */,
 				A6CC35A523A3F347008EA141 /* GIPArtist.m in Sources */,
 				A6CC359C23A3EEE8008EA141 /* main.m in Sources */,
@@ -176,7 +248,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6CC35B323A3FE68008EA141 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6CC35C623A3FF4A008EA141 /* GIPArtist.m in Sources */,
+				A6CC35BA23A3FE68008EA141 /* Favorite_ArtistsTests.m in Sources */,
+				A6CC35C423A3FEC1008EA141 /* GIPArtistTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6CC35BD23A3FE68008EA141 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6CC358523A3EEE7008EA141 /* Favorite-Artists */;
+			targetProxy = A6CC35BC23A3FE68008EA141 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A6CC359223A3EEE7008EA141 /* Main.storyboard */ = {
@@ -342,6 +432,44 @@
 			};
 			name = Release;
 		};
+		A6CC35BF23A3FE68008EA141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FLZ8CLXX64;
+				INFOPLIST_FILE = "Favorite-ArtistsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GIPGIP.Favorite-ArtistsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Favorite-Artists.app/Favorite-Artists";
+			};
+			name = Debug;
+		};
+		A6CC35C023A3FE68008EA141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FLZ8CLXX64;
+				INFOPLIST_FILE = "Favorite-ArtistsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GIPGIP.Favorite-ArtistsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Favorite-Artists.app/Favorite-Artists";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +487,15 @@
 			buildConfigurations = (
 				A6CC35A023A3EEE8008EA141 /* Debug */,
 				A6CC35A123A3EEE8008EA141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6CC35BE23A3FE68008EA141 /* Build configuration list for PBXNativeTarget "Favorite-ArtistsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6CC35BF23A3FE68008EA141 /* Debug */,
+				A6CC35C023A3FE68008EA141 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

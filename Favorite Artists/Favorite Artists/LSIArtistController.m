@@ -19,6 +19,7 @@ static NSString *const apiKey = @"1";
     self = [super init];
     if (self) {
         _artists = [[NSMutableArray alloc] initWithArray:@[]];
+        [self loadFromDocuments];
     }
     return self;
 }
@@ -93,6 +94,18 @@ static NSString *const apiKey = @"1";
     }
     
     [array writeToURL:outputFileURL atomically:YES];
+}
+
+- (void)loadFromDocuments {
+    NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    
+    NSURL *inputFileURL = [documentsURL URLByAppendingPathComponent:@"artists"];
+    
+    NSArray *array = [[NSArray alloc] initWithContentsOfURL:inputFileURL];
+    for (NSDictionary *dictionary in array) {
+        LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dictionary];
+        [self.artists addObject:artist];
+    }
 }
 
 @end

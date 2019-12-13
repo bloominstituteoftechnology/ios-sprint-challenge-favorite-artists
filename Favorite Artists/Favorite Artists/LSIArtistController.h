@@ -18,5 +18,6 @@
                       completion:(void (^)(NSError *error, LSIArtist *artist))completion;
 
 - (void)saveToDocuments;
+- (void)loadFromDocuments;
 
 @end

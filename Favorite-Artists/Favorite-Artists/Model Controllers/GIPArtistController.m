@@ -102,11 +102,10 @@ static NSString *const testApiKey = @"1";
 }
 
 - (void)save {
-    NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath = [searchPaths objectAtIndex:0];
-    NSURL *url = [NSURL URLWithString:documentPath];
-    NSLog(@"Saved URL: %@", url.absoluteString);
-    bool saved = [self.artists writeToURL:url atomically:NO];
+    NSURL *docURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *saveURL = [docURL URLByAppendingPathComponent:@"Favorite-Artists"];
+    NSLog(@"Saved URL: %@", saveURL.absoluteString);
+    bool saved = [self.artists writeToURL:saveURL atomically:YES];
     NSLog(@"Saved: %d", saved);
 }
 

@@ -69,19 +69,21 @@ static NSString *const testApiKey = @"1";
             completion(nil, [[NSError alloc] init]);
             return;
         }
-
-        NSArray *results = json[@"artists"];
-        if (results == NULL) {
-            NSLog(@"No artist was found.");
-            completion(nil, [[NSError alloc] init]);
+        
+        NSNull *errorCheck = json[@"artists"];
+        if (errorCheck != [NSNull null]) {
+            NSArray *results = json[@"artists"];
+            NSDictionary *result = results[0];
+            
+            GIPArtist *artist = [[GIPArtist alloc] initWithDictionary:result];
+            
+            completion(artist, nil);
             return;
         }
         
-        NSDictionary *result = results[0];
-                
-        GIPArtist *artist = [[GIPArtist alloc] initWithDictionary:result];
+        NSLog(@"No artist was found.");
+        completion(nil, nil);
         
-        completion(artist, nil);
             
 
     }];

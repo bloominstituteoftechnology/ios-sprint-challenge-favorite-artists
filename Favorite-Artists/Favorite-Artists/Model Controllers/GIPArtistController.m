@@ -13,6 +13,7 @@
 @interface GIPArtistController()
 
 - (void)save;
+- (void)load;
 
 @end
 
@@ -25,7 +26,10 @@ static NSString *const testApiKey = @"1";
 {
     self = [super init];
     if (self) {
-        _artists = [[NSMutableArray alloc] init];
+        NSURL *docURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        NSURL *saveURL = [docURL URLByAppendingPathComponent:@"Favorite-Artists"];
+        
+        _artists = [[NSMutableArray alloc] initWithContentsOfURL:saveURL];
     }
     return self;
 }
@@ -108,5 +112,6 @@ static NSString *const testApiKey = @"1";
     bool saved = [self.artists writeToURL:saveURL atomically:YES];
     NSLog(@"Saved: %d", saved);
 }
+
 
 @end

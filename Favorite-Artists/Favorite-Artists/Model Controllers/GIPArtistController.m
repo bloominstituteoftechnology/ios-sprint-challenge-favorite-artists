@@ -71,11 +71,18 @@ static NSString *const testApiKey = @"1";
         }
 
         NSArray *results = json[@"artists"];
+        if (results == NULL) {
+            NSLog(@"No artist was found.");
+            completion(nil, [[NSError alloc] init]);
+            return;
+        }
+        
         NSDictionary *result = results[0];
                 
         GIPArtist *artist = [[GIPArtist alloc] initWithDictionary:result];
         
         completion(artist, nil);
+            
 
     }];
     [task resume];
@@ -97,7 +104,7 @@ static NSString *const testApiKey = @"1";
     NSString *documentPath = [searchPaths objectAtIndex:0];
     NSURL *url = [NSURL URLWithString:documentPath];
     NSLog(@"Saved URL: %@", url.absoluteString);
-    bool saved = [self.artists writeToURL:url atomically:YES];
+    bool saved = [self.artists writeToURL:url atomically:NO];
     NSLog(@"Saved: %d", saved);
 }
 

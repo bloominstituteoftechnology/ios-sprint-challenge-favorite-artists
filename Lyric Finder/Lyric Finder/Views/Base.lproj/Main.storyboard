@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HxB-jw-7HE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lyric Finder-->
+        <scene sceneID="h5M-VA-NS2">
+            <objects>
+                <tableViewController id="sof-q9-FFW" customClass="LyricFinderTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="63c-o8-R72">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LyricCell" rowHeight="80" id="boc-D9-5cO">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="boc-D9-5cO" id="ho9-8s-eyj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gjs-JZ-2l5" kind="show" id="AIC-Nj-DPA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sof-q9-FFW" id="zIb-Kq-3OC"/>
+                            <outlet property="delegate" destination="sof-q9-FFW" id="o0y-S4-evj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lyric Finder" id="Vfa-3d-ec0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="22y-sa-bpM">
+                            <connections>
+                                <segue destination="3h7-Qw-ccB" kind="show" id="dbH-KI-z9l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ue5-Yf-Gvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333.60000000000002" y="118.29085457271366"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="ZCm-tO-fAh">
+            <objects>
+                <viewController id="gjs-JZ-2l5" customClass="LyricFinderDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h1Z-m5-BLZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t8K-Y4-L1B">
+                                <rect key="frame" x="28" y="132" width="319" height="96.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXo-fq-UpH">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3su-Cp-uuR">
+                                        <rect key="frame" x="0.0" y="28.5" width="319" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Artist" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="auY-Xt-zZ2">
+                                        <rect key="frame" x="0.0" y="66.5" width="319" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GKO-xT-8n3">
+                                <rect key="frame" x="28" y="236.5" width="319" height="414.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GKO-xT-8n3" firstAttribute="top" secondItem="t8K-Y4-L1B" secondAttribute="bottom" constant="8" id="1fq-Aw-NRs"/>
+                            <constraint firstItem="ug6-NY-Lsm" firstAttribute="trailing" secondItem="GKO-xT-8n3" secondAttribute="trailing" constant="28" id="4fB-Ea-M9h"/>
+                            <constraint firstItem="ug6-NY-Lsm" firstAttribute="bottom" secondItem="GKO-xT-8n3" secondAttribute="bottom" constant="16" id="Kcn-mM-xn0"/>
+                            <constraint firstItem="t8K-Y4-L1B" firstAttribute="leading" secondItem="ug6-NY-Lsm" secondAttribute="leading" constant="28" id="OF8-dB-L68"/>
+                            <constraint firstItem="GKO-xT-8n3" firstAttribute="leading" secondItem="ug6-NY-Lsm" secondAttribute="leading" constant="28" id="Ood-PO-wpb"/>
+                            <constraint firstItem="ug6-NY-Lsm" firstAttribute="trailing" secondItem="t8K-Y4-L1B" secondAttribute="trailing" constant="28" id="QF1-7C-gsU"/>
+                            <constraint firstItem="t8K-Y4-L1B" firstAttribute="top" secondItem="ug6-NY-Lsm" secondAttribute="top" constant="16" id="Zyp-3r-DoU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ug6-NY-Lsm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="75C-8z-FLB"/>
+                    <connections>
+                        <outlet property="artistTextField" destination="auY-Xt-zZ2" id="73c-91-A4D"/>
+                        <outlet property="lyricsTextView" destination="GKO-xT-8n3" id="nZ9-H4-1ki"/>
+                        <outlet property="ratingLabel" destination="PXo-fq-UpH" id="mVK-jM-8H0"/>
+                        <outlet property="titleTextField" destination="3su-Cp-uuR" id="fFm-Vz-ECF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STA-Vx-fPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="416"/>
+        </scene>
+        <!--New Song Lyrics-->
+        <scene sceneID="OTc-1C-nC8">
+            <objects>
+                <viewController id="3h7-Qw-ccB" customClass="LyricFinderSearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UBe-U5-vCU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Avz-KL-OL6">
+                                <rect key="frame" x="20" y="132" width="335" height="143"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="111" translatesAutoresizingMaskIntoConstraints="NO" id="PoI-bS-Iey">
+                                        <rect key="frame" x="8" y="0.0" width="319" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFo-cM-pBO">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1YE-E0-5h6">
+                                                <rect key="frame" x="225" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="addButtonTapped:" destination="3h7-Qw-ccB" eventType="valueChanged" id="YSr-6w-2Eq"/>
+                                                    <action selector="minusButtonTapped:" destination="3h7-Qw-ccB" eventType="valueChanged" id="yYI-hq-krl"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2X5-r3-baj">
+                                        <rect key="frame" x="8" y="37" width="319" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TgK-FL-Unv">
+                                        <rect key="frame" x="8" y="75" width="319" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-ES-xyD">
+                                        <rect key="frame" x="8" y="113" width="319" height="30"/>
+                                        <state key="normal" title="Search For Lyrics"/>
+                                        <connections>
+                                            <action selector="searchButtonTapped:" destination="3h7-Qw-ccB" eventType="touchUpInside" id="aZe-Tm-Jts"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5b3-ES-xyD" firstAttribute="leading" secondItem="Avz-KL-OL6" secondAttribute="leading" constant="8" id="1H2-F7-Vgm"/>
+                                    <constraint firstItem="PoI-bS-Iey" firstAttribute="leading" secondItem="Avz-KL-OL6" secondAttribute="leading" constant="8" id="6i2-Bi-9tQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="TgK-FL-Unv" secondAttribute="trailing" constant="8" id="J1k-DW-IaC"/>
+                                    <constraint firstAttribute="trailing" secondItem="PoI-bS-Iey" secondAttribute="trailing" constant="8" id="NVM-DS-vnl"/>
+                                    <constraint firstItem="2X5-r3-baj" firstAttribute="leading" secondItem="Avz-KL-OL6" secondAttribute="leading" constant="8" id="VBQ-DA-KzK"/>
+                                    <constraint firstAttribute="trailing" secondItem="5b3-ES-xyD" secondAttribute="trailing" constant="8" id="dn5-hf-QOJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="2X5-r3-baj" secondAttribute="trailing" constant="8" id="pE4-ck-Mf2"/>
+                                    <constraint firstItem="TgK-FL-Unv" firstAttribute="leading" secondItem="Avz-KL-OL6" secondAttribute="leading" constant="8" id="wcC-Xo-kll"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JhD-iG-gyu">
+                                <rect key="frame" x="28" y="283" width="319" height="364"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xu2-Ni-DJn" firstAttribute="trailing" secondItem="Avz-KL-OL6" secondAttribute="trailing" constant="20" id="3ab-DC-FAr"/>
+                            <constraint firstItem="Avz-KL-OL6" firstAttribute="top" secondItem="Xu2-Ni-DJn" secondAttribute="top" constant="16" id="P5j-qo-TRY"/>
+                            <constraint firstItem="Avz-KL-OL6" firstAttribute="leading" secondItem="Xu2-Ni-DJn" secondAttribute="leading" constant="20" id="RRv-zO-lJW"/>
+                            <constraint firstItem="Avz-KL-OL6" firstAttribute="centerX" secondItem="UBe-U5-vCU" secondAttribute="centerX" id="gbg-Ug-pBQ"/>
+                            <constraint firstItem="JhD-iG-gyu" firstAttribute="leading" secondItem="Xu2-Ni-DJn" secondAttribute="leading" constant="28" id="qZU-ir-Uyz"/>
+                            <constraint firstItem="JhD-iG-gyu" firstAttribute="top" secondItem="Avz-KL-OL6" secondAttribute="bottom" constant="8" id="qib-Bw-j1z"/>
+                            <constraint firstItem="Xu2-Ni-DJn" firstAttribute="bottom" secondItem="JhD-iG-gyu" secondAttribute="bottom" constant="20" id="xHO-sk-3g6"/>
+                            <constraint firstItem="Xu2-Ni-DJn" firstAttribute="trailing" secondItem="JhD-iG-gyu" secondAttribute="trailing" constant="28" id="yls-Xk-Xq2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xu2-Ni-DJn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Song Lyrics" id="deC-gO-Jvd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6HY-Zh-sND">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="3h7-Qw-ccB" id="OTe-ZD-7s2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="TgK-FL-Unv" id="ajU-nD-ycM"/>
+                        <outlet property="lyricsTextView" destination="JhD-iG-gyu" id="XgK-yu-3He"/>
+                        <outlet property="ratingLabel" destination="rFo-cM-pBO" id="cRF-4e-LxH"/>
+                        <outlet property="titleTextField" destination="2X5-r3-baj" id="Gon-JY-wzo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQi-rv-jYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="-273"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="425-Su-d06">
+            <objects>
+                <navigationController id="HxB-jw-7HE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="I6w-ec-vw9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sof-q9-FFW" kind="relationship" relationship="rootViewController" id="acc-k2-Eyv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKY-lJ-UbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-348" y="119"/>
+        </scene>
+    </scenes>
+</document>

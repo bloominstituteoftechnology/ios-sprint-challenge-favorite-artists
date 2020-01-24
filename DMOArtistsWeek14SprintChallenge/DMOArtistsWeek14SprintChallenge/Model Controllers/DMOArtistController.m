@@ -42,7 +42,7 @@
 }
 
 - (NSURL *)persistentFileURL {
-
+    
     NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
     NSString *fileName = @"artists.json";
     return [documentDirectory URLByAppendingPathComponent:fileName];

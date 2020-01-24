@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class JPHArtist;
 
 @interface JPHArtistController : NSObject
 
+- (void)searchArtistWithName:(NSString *)artistName completion:(void(^)(JPHArtist *artist, NSError *error))completion;
+
+- (NSMutableArray *)favoriteArtists;
+
 @end
 
-NS_ASSUME_NONNULL_END

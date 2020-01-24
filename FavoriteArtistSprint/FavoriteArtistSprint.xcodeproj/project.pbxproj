@@ -17,6 +17,7 @@
 		1C3EAFAF23DB55C800E78F7F /* JPHArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EAFAE23DB55C800E78F7F /* JPHArtistDetailViewController.m */; };
 		1C3EAFB223DB5E0800E78F7F /* JPHArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EAFB123DB5E0800E78F7F /* JPHArtist.m */; };
 		1C3EAFB623DB5E8700E78F7F /* JPHArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EAFB523DB5E8700E78F7F /* JPHArtistController.m */; };
+		1C3EAFBD23DB644700E78F7F /* JPHArtist+JSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EAFBC23DB644700E78F7F /* JPHArtist+JSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		1C3EAFB123DB5E0800E78F7F /* JPHArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPHArtist.m; sourceTree = "<group>"; };
 		1C3EAFB423DB5E8700E78F7F /* JPHArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPHArtistController.h; sourceTree = "<group>"; };
 		1C3EAFB523DB5E8700E78F7F /* JPHArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPHArtistController.m; sourceTree = "<group>"; };
+		1C3EAFBB23DB644600E78F7F /* JPHArtist+JSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPHArtist+JSONSerialization.h"; sourceTree = "<group>"; };
+		1C3EAFBC23DB644700E78F7F /* JPHArtist+JSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JPHArtist+JSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				1C3EAF9123DB4DB500E78F7F /* AppDelegate.m */,
 				1C3EAF9323DB4DB500E78F7F /* SceneDelegate.h */,
 				1C3EAF9423DB4DB500E78F7F /* SceneDelegate.m */,
+				1C3EAFBB23DB644600E78F7F /* JPHArtist+JSONSerialization.h */,
+				1C3EAFBC23DB644700E78F7F /* JPHArtist+JSONSerialization.m */,
 				1C3EAFB723DB5E9100E78F7F /* ModelController */,
 				1C3EAFB323DB5E5A00E78F7F /* JPHModel */,
 				1C3EAFAC23DB551A00E78F7F /* ViewControllers */,
@@ -189,6 +194,7 @@
 				1C3EAFB623DB5E8700E78F7F /* JPHArtistController.m in Sources */,
 				1C3EAFAF23DB55C800E78F7F /* JPHArtistDetailViewController.m in Sources */,
 				1C3EAFAB23DB551000E78F7F /* JPHArtistTableViewController.m in Sources */,
+				1C3EAFBD23DB644700E78F7F /* JPHArtist+JSONSerialization.m in Sources */,
 				1C3EAFB223DB5E0800E78F7F /* JPHArtist.m in Sources */,
 				1C3EAFA323DB4DB700E78F7F /* main.m in Sources */,
 				1C3EAF9523DB4DB500E78F7F /* SceneDelegate.m in Sources */,

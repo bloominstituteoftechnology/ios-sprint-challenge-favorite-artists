@@ -23,6 +23,7 @@
     [super viewDidLoad];
     [self updateViews];
 }
+
 - (void)updateViews {
     if (self.artist) {
         self.nameLabel.text = self.artist.name;

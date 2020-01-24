@@ -28,6 +28,7 @@
     [components setQueryItems:@[searchItem]];
     
     NSURL *url = components.URL;
+    NSLog(@"URL: %@", url);
     
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
@@ -68,11 +69,23 @@
 - (void)saveArtists {
     NSURL *documentURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     NSURL *artistURL = [documentURL URLByAppendingPathComponent:@"myArtists"];
-    
+    NSMutableArray *saveArray = [[NSMutableArray alloc] init];
+    for (DPRArtist *artist in self.artists) {
+        [saveArray addObject:[artist toDictionary]];
+    }
+    [saveArray writeToURL:artistURL atomically:YES];
 }
 
 - (void)loadArtists {
+    NSURL *documentURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     
+    NSURL *artistURL = [documentURL URLByAppendingPathComponent:@"myArtists"];
+    
+    NSArray *array = [[NSArray alloc] initWithContentsOfURL:artistURL];
+    for (NSDictionary *artistDictionary in array) {
+        DPRArtist *artist = [[DPRArtist alloc] initWithDictionary:artistDictionary];
+        [self.artists addObject:artist];
+    }
 }
 
 @end

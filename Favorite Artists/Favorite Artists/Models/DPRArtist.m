@@ -33,4 +33,14 @@
     return self;
 }
 
+- (NSDictionary *)toDictionary {
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    
+    [dictionary setValue:self.name forKey:@"strArtist"];
+    [dictionary setValue:self.bio forKey:@"strBiographyEN"];
+    [dictionary setValue:[NSString stringWithFormat:@"%ld", (long)self.yearFormed] forKey:@"intFormedYear"];
+    
+    return dictionary;
+}
+
 @end

@@ -49,7 +49,27 @@ static NSString *artistsKey = @"artists";
 - (void)addArtist:(JBArtist *)artist
 {
     [self.mutableArtists addObject:artist];
-    [self saveArtistsToPersistence];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self saveArtistsToPersistence];
+    });
+}
+
+- (void)removeArtist:(JBArtist *)artist
+{
+    [self.mutableArtists removeObject:artist];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self saveArtistsToPersistence];
+    });
+}
+
+- (void)moveArtistFromOldIndex:(NSUInteger)oldIndex toNewIndex:(NSUInteger)newIndex
+{
+    JBArtist *artist = self.mutableArtists[oldIndex];
+    [self.mutableArtists removeObjectAtIndex:oldIndex];
+    [self.mutableArtists insertObject:artist atIndex:newIndex];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self saveArtistsToPersistence];
+    });
 }
 
 - (void)fetchArtistWithName:(NSString *)name
@@ -77,7 +97,7 @@ static NSString *artistsKey = @"artists";
             return;
         }
         NSArray *artists = dictionary[artistsKey];
-        if (artists == NSNull.null)
+        if ([artists isKindOfClass:[NSNull class]])
         {
             completion(nil, nil);
         }

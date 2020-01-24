@@ -18,7 +18,12 @@
 - (instancetype)init;
 - (void)addArtist:(JBArtist *)artist;
 - (void)fetchArtistWithName:(NSString *)name
-                       completion:(void (^)(JBArtist *artist, NSError *error))completion;
+                       completion:(void (^)(JBArtist *artist,
+                                            NSError *error)
+                                   )completion;
+- (void)removeArtist:(JBArtist *)artist;
+- (void)moveArtistFromOldIndex:(NSUInteger)oldIndex
+                    toNewIndex:(NSUInteger)newIndex;
 
 @end
 

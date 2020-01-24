@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DMOArtistDetailViewController : UIViewController
+@class DMOArtistController;
+@class DMOArtist;
+
+@interface DMOArtistDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property DMOArtistController *artistController;
+@property DMOArtist *artist;
 
 @end

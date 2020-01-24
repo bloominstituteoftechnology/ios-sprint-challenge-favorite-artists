@@ -36,6 +36,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -95,7 +101,8 @@
     detailVC.artistController = self.artistController;
     if ([segue.identifier isEqualToString:@"ArtistDetailSegue"]) {
         detailVC.artist = self.artistController.artists[self.tableView.indexPathForSelectedRow.row];
-    }
+        detailVC.willSearch = NO;
+    } else { detailVC.willSearch = YES; }
 }
 
 @end

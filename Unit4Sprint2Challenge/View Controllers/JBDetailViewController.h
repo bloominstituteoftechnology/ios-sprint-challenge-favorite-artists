@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
-@interface JBDetailViewController : UIViewController
+@class JBArtistController;
+@class JBArtist;
+
+
+@interface JBDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property (nonatomic) JBArtistController *artistController;
+@property (nonatomic) JBArtist *artist;
+@property (nonatomic) BOOL willSearch;
 
 @end
-
-NS_ASSUME_NONNULL_END

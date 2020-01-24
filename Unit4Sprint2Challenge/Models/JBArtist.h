@@ -14,6 +14,7 @@
 @property (nonatomic, readonly) NSString *biography;
 @property (nonatomic, readonly) int originYear;
 
+@property (nonatomic, readonly) NSString *originYearText;
 @property (nonatomic, readonly) BOOL wasBorn;
 
 - (instancetype) initWithName:(NSString *)name

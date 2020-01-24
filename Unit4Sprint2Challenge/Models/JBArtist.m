@@ -47,6 +47,12 @@
     return originAsNum.intValue;
 }
 
+- (NSString *)originYearText
+{
+    NSString *prefix = self.wasBorn ? @"born" : @"formed";
+    return [NSString stringWithFormat:@"%@ %i", prefix, self.originYear];
+}
+
 - (BOOL)wasBorn
 {
     return (self.yearFormed == nil);

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class SKSArtistController, SKSArtist;
 
 @interface SKSArtistDetailViewController : UIViewController <UISearchBarDelegate>
 
+@property (nonatomic) SKSArtistController *artistController;
+@property (nonatomic) SKSArtist *artist;
 
 @end
 

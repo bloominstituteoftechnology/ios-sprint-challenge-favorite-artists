@@ -7,12 +7,26 @@
 //
 
 #import "SKSArtistTableViewController.h"
+#import "SKSArtistController.h"
+#import "SKSArtist.h"
+#import "SKSArtistDetailViewController.h"
 
 @interface SKSArtistTableViewController ()
+
+@property (nonatomic, readonly) SKSArtistController *artistController;
 
 @end
 
 @implementation SKSArtistTableViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _artistController = [[SKSArtistController alloc] init];
+    }
+    return self;
+}
 
 static NSString * const reuseIdentifier = @"ArtistCell";
 
@@ -27,15 +41,16 @@ static NSString * const reuseIdentifier = @"ArtistCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 0;
+    return self.artistController.artists.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
+
+    SKSArtist *artist = self.artistController.artists[indexPath.row];
+    cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = [[NSNumber numberWithInt:artist.formedYear] stringValue];
     
     return cell;
 }
@@ -56,8 +71,14 @@ static NSString * const reuseIdentifier = @"ArtistCell";
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    SKSArtistDetailViewController *destinationVC = [segue destinationViewController];
+
+    destinationVC.artistController = self.artistController;
+
+    if ([[segue identifier] isEqual:@"ShowDetailArtistSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        destinationVC.artist = self.artistController.artists[indexPath.row];
+    }
 }
 
 

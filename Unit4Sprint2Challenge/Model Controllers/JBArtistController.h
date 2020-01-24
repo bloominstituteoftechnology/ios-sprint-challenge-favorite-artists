@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+
+@class JBArtist;
+
 
 @interface JBArtistController : NSObject
 
+@property (nonatomic, readonly) NSArray *artists;
+- (instancetype)init;
+- (void)addArtist:(JBArtist *)artist;
+- (void)fetchArtistWithName:(NSString *)name
+                       completion:(void (^)(JBArtist *artist, NSError *error))completion;
+
 @end
 
-NS_ASSUME_NONNULL_END

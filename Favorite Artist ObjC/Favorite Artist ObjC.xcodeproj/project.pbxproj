@@ -15,6 +15,11 @@
 		4B97DA4023DB54B700A3A4B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97DA3F23DB54B700A3A4B8 /* main.m */; };
 		4B97DA4A23DB54B800A3A4B8 /* Favorite_Artist_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97DA4923DB54B800A3A4B8 /* Favorite_Artist_ObjCTests.m */; };
 		4B97DA5523DB54B800A3A4B8 /* Favorite_Artist_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97DA5423DB54B800A3A4B8 /* Favorite_Artist_ObjCUITests.m */; };
+		4B97DA6723DB5AD700A3A4B8 /* NMKArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97DA6623DB5AD700A3A4B8 /* NMKArtist.m */; };
+		4B97DA6F23DB5B2F00A3A4B8 /* NMKArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97DA6E23DB5B2F00A3A4B8 /* NMKArtistController.m */; };
+		4B97DA7823DB5B9600A3A4B8 /* NSJSONSerialization+NMKArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97DA7723DB5B9600A3A4B8 /* NSJSONSerialization+NMKArtist.m */; };
+		4B97DA7D23DB5BF600A3A4B8 /* NMKArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97DA7C23DB5BF600A3A4B8 /* NMKArtistTableViewController.m */; };
+		4B97DA8123DB5C2900A3A4B8 /* NMKArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97DA8023DB5C2900A3A4B8 /* NMKArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		4B97DA5023DB54B800A3A4B8 /* Favorite Artist ObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Favorite Artist ObjCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B97DA5423DB54B800A3A4B8 /* Favorite_Artist_ObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Favorite_Artist_ObjCUITests.m; sourceTree = "<group>"; };
 		4B97DA5623DB54B800A3A4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B97DA6523DB5AD700A3A4B8 /* NMKArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMKArtist.h; sourceTree = "<group>"; };
+		4B97DA6623DB5AD700A3A4B8 /* NMKArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMKArtist.m; sourceTree = "<group>"; };
+		4B97DA6D23DB5B2F00A3A4B8 /* NMKArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMKArtistController.h; sourceTree = "<group>"; };
+		4B97DA6E23DB5B2F00A3A4B8 /* NMKArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMKArtistController.m; sourceTree = "<group>"; };
+		4B97DA7623DB5B9600A3A4B8 /* NSJSONSerialization+NMKArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+NMKArtist.h"; sourceTree = "<group>"; };
+		4B97DA7723DB5B9600A3A4B8 /* NSJSONSerialization+NMKArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+NMKArtist.m"; sourceTree = "<group>"; };
+		4B97DA7B23DB5BF600A3A4B8 /* NMKArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMKArtistTableViewController.h; sourceTree = "<group>"; };
+		4B97DA7C23DB5BF600A3A4B8 /* NMKArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMKArtistTableViewController.m; sourceTree = "<group>"; };
+		4B97DA7F23DB5C2900A3A4B8 /* NMKArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMKArtistDetailViewController.h; sourceTree = "<group>"; };
+		4B97DA8023DB5C2900A3A4B8 /* NMKArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMKArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +116,13 @@
 		4B97DA2C23DB54B600A3A4B8 /* Favorite Artist ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				4B97DA6423DB54F200A3A4B8 /* Other */,
+				4B97DA7923DB5BAA00A3A4B8 /* Category */,
+				4B97DA6823DB5ADD00A3A4B8 /* Model */,
+				4B97DA7A23DB5BB100A3A4B8 /* Model Controller */,
+				4B97DA7E23DB5C0B00A3A4B8 /* TableView Controller */,
+				4B97DA8223DB5C2E00A3A4B8 /* View Controller */,
 				4B97DA6323DB54E500A3A4B8 /* Resources */,
+				4B97DA6423DB54F200A3A4B8 /* Other */,
 			);
 			path = "Favorite Artist ObjC";
 			sourceTree = "<group>";
@@ -146,6 +166,51 @@
 				4B97DA3123DB54B600A3A4B8 /* SceneDelegate.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		4B97DA6823DB5ADD00A3A4B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B97DA6523DB5AD700A3A4B8 /* NMKArtist.h */,
+				4B97DA6623DB5AD700A3A4B8 /* NMKArtist.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B97DA7923DB5BAA00A3A4B8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4B97DA7623DB5B9600A3A4B8 /* NSJSONSerialization+NMKArtist.h */,
+				4B97DA7723DB5B9600A3A4B8 /* NSJSONSerialization+NMKArtist.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		4B97DA7A23DB5BB100A3A4B8 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B97DA6D23DB5B2F00A3A4B8 /* NMKArtistController.h */,
+				4B97DA6E23DB5B2F00A3A4B8 /* NMKArtistController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		4B97DA7E23DB5C0B00A3A4B8 /* TableView Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B97DA7B23DB5BF600A3A4B8 /* NMKArtistTableViewController.h */,
+				4B97DA7C23DB5BF600A3A4B8 /* NMKArtistTableViewController.m */,
+			);
+			path = "TableView Controller";
+			sourceTree = "<group>";
+		};
+		4B97DA8223DB5C2E00A3A4B8 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B97DA7F23DB5C2900A3A4B8 /* NMKArtistDetailViewController.h */,
+				4B97DA8023DB5C2900A3A4B8 /* NMKArtistDetailViewController.m */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +275,7 @@
 		4B97DA2223DB54B600A3A4B8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = NMK;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Nar Kumar";
 				TargetAttributes = {
@@ -279,8 +345,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B97DA2F23DB54B600A3A4B8 /* AppDelegate.m in Sources */,
+				4B97DA8123DB5C2900A3A4B8 /* NMKArtistDetailViewController.m in Sources */,
 				4B97DA4023DB54B700A3A4B8 /* main.m in Sources */,
+				4B97DA6F23DB5B2F00A3A4B8 /* NMKArtistController.m in Sources */,
+				4B97DA7823DB5B9600A3A4B8 /* NSJSONSerialization+NMKArtist.m in Sources */,
 				4B97DA3223DB54B600A3A4B8 /* SceneDelegate.m in Sources */,
+				4B97DA6723DB5AD700A3A4B8 /* NMKArtist.m in Sources */,
+				4B97DA7D23DB5BF600A3A4B8 /* NMKArtistTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

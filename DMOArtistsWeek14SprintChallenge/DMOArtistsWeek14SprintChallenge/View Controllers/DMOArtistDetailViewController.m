@@ -6,13 +6,13 @@
 //  Copyright © 2020 morse. All rights reserved.
 //
 
-#import "ArtistDetailViewController.h"
+#import "DMOArtistDetailViewController.h"
 
-@interface ArtistDetailViewController ()
+@interface DMOArtistDetailViewController ()
 
 @end
 
-@implementation ArtistDetailViewController
+@implementation DMOArtistDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

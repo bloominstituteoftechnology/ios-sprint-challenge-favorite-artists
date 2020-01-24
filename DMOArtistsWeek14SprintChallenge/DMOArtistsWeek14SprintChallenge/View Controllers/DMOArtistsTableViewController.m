@@ -6,13 +6,13 @@
 //  Copyright © 2020 morse. All rights reserved.
 //
 
-#import "ArtistsTableViewController.h"
+#import "DMOArtistsTableViewController.h"
 
-@interface ArtistsTableViewController ()
+@interface DMOArtistsTableViewController ()
 
 @end
 
-@implementation ArtistsTableViewController
+@implementation DMOArtistsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -9,6 +9,8 @@
 #import "DPRArtistTableViewController.h"
 #import "DPRSearchViewController.h"
 #import "DPRArtistController.h"
+#import "DPRDetailViewController.h"
+
 
 @interface DPRArtistTableViewController ()
 
@@ -57,9 +59,11 @@
         DPRSearchViewController *searchVC = segue.destinationViewController;
         searchVC.artistController = self.artistController;
     } else if ([segue.identifier isEqualToString:@"DetailSegue"]) {
+        DPRDetailViewController *detailVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
+        detailVC.artist = [self.artistController.artists objectAtIndex:indexPath.row];
     }
 }
-
 
 @end

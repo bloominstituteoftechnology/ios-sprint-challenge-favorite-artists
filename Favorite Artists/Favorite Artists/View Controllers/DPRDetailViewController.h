@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DPRArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DPRDetailViewController : UIViewController
+
+@property DPRArtist *artist;
 
 @end
 

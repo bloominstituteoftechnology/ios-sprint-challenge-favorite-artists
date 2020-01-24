@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lSl-a4-URN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -23,15 +23,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xUa-cK-3Pu">
-                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Artist Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xUa-cK-3Pu">
+                                            <rect key="frame" x="20" y="10" width="95.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jta-KU-oBD">
-                                            <rect key="frame" x="20" y="31.5" width="33" height="14.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Formed in Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jta-KU-oBD">
+                                            <rect key="frame" x="20" y="31.5" width="89" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="1126" y="-81"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="1vN-sg-iML">
             <objects>
-                <viewController id="Edn-aH-EhZ" sceneMemberID="viewController">
+                <viewController id="Edn-aH-EhZ" customClass="LSIArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qae-yW-hJa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,22 +70,58 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62J-j3-KKh">
+                                <rect key="frame" x="20" y="196" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQH-NF-AQI">
+                                <rect key="frame" x="20" y="252" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uev-fn-R3L">
+                                <rect key="frame" x="20" y="296" width="374" height="566"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Uev-fn-R3L" firstAttribute="top" secondItem="KQH-NF-AQI" secondAttribute="bottom" constant="8" id="3ML-CG-lRb"/>
+                            <constraint firstItem="0Uq-L0-MiG" firstAttribute="bottom" secondItem="Uev-fn-R3L" secondAttribute="bottom" id="3oN-NT-0zQ"/>
+                            <constraint firstItem="0Uq-L0-MiG" firstAttribute="trailing" secondItem="Uev-fn-R3L" secondAttribute="trailing" constant="20" id="3rl-NT-fWI"/>
                             <constraint firstItem="1QC-We-Qmm" firstAttribute="leading" secondItem="0Uq-L0-MiG" secondAttribute="leading" id="9o8-9w-fcU"/>
+                            <constraint firstItem="0Uq-L0-MiG" firstAttribute="trailing" secondItem="62J-j3-KKh" secondAttribute="trailing" constant="20" id="Ei4-9W-Crg"/>
+                            <constraint firstItem="KQH-NF-AQI" firstAttribute="leading" secondItem="0Uq-L0-MiG" secondAttribute="leading" constant="20" id="NTI-o5-nIP"/>
+                            <constraint firstItem="0Uq-L0-MiG" firstAttribute="trailing" secondItem="KQH-NF-AQI" secondAttribute="trailing" constant="20" id="NbD-PL-quz"/>
+                            <constraint firstItem="Uev-fn-R3L" firstAttribute="leading" secondItem="0Uq-L0-MiG" secondAttribute="leading" constant="20" id="UHI-Wu-4dw"/>
+                            <constraint firstItem="KQH-NF-AQI" firstAttribute="top" secondItem="62J-j3-KKh" secondAttribute="bottom" constant="8" id="Ymx-KB-mKA"/>
+                            <constraint firstItem="62J-j3-KKh" firstAttribute="leading" secondItem="0Uq-L0-MiG" secondAttribute="leading" constant="20" id="g9z-av-Dwv"/>
                             <constraint firstItem="1QC-We-Qmm" firstAttribute="trailing" secondItem="0Uq-L0-MiG" secondAttribute="trailing" id="lQ3-Re-cxE"/>
                             <constraint firstItem="1QC-We-Qmm" firstAttribute="top" secondItem="0Uq-L0-MiG" secondAttribute="top" id="wgt-UM-9Hg"/>
+                            <constraint firstItem="62J-j3-KKh" firstAttribute="top" secondItem="1QC-We-Qmm" secondAttribute="bottom" id="y7H-57-x3G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Uq-L0-MiG"/>
                     </view>
                     <navigationItem key="navigationItem" id="yc6-ps-Y0p">
                         <barButtonItem key="rightBarButtonItem" title="Add Artist" id="bT3-dl-qVi"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameLabel" destination="62J-j3-KKh" id="7vd-Rc-FVM"/>
+                        <outlet property="saveButton" destination="bT3-dl-qVi" id="fBQ-Dq-gje"/>
+                        <outlet property="searchBar" destination="1QC-We-Qmm" id="wyj-f0-mQQ"/>
+                        <outlet property="textView" destination="Uev-fn-R3L" id="E9j-n1-nqr"/>
+                        <outlet property="yearLabel" destination="KQH-NF-AQI" id="bnG-Ps-P42"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpx-1G-z3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1981" y="-81"/>
+            <point key="canvasLocation" x="1979.7101449275365" y="-81.026785714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vgG-Mo-UNF">

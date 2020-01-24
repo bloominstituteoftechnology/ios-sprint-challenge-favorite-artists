@@ -20,6 +20,10 @@
 		DD882DA823DB605600DFDD8C /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DA623DB605600DFDD8C /* LSIArtist.m */; };
 		DD882DAB23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAA23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m */; };
 		DD882DAC23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAA23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m */; };
+		DD882DAF23DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAE23DB6AE600DFDD8C /* LSIArtistsTableViewController.m */; };
+		DD882DB023DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAE23DB6AE600DFDD8C /* LSIArtistsTableViewController.m */; };
+		DD882DB323DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */; };
+		DD882DB423DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		DD882DA623DB605600DFDD8C /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 		DD882DA923DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSIArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		DD882DAA23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LSIArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		DD882DAD23DB6AE600DFDD8C /* LSIArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistsTableViewController.h; sourceTree = "<group>"; };
+		DD882DAE23DB6AE600DFDD8C /* LSIArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistsTableViewController.m; sourceTree = "<group>"; };
+		DD882DB123DB6B0B00DFDD8C /* LSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistDetailViewController.h; sourceTree = "<group>"; };
+		DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,10 @@
 			children = (
 				DD882D7F23DB5E8C00DFDD8C /* ViewController.h */,
 				DD882D8023DB5E8C00DFDD8C /* ViewController.m */,
+				DD882DAD23DB6AE600DFDD8C /* LSIArtistsTableViewController.h */,
+				DD882DAE23DB6AE600DFDD8C /* LSIArtistsTableViewController.m */,
+				DD882DB123DB6B0B00DFDD8C /* LSIArtistDetailViewController.h */,
+				DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -250,6 +262,8 @@
 			files = (
 				DD882D8123DB5E8C00DFDD8C /* ViewController.m in Sources */,
 				DD882D7B23DB5E8C00DFDD8C /* AppDelegate.m in Sources */,
+				DD882DAF23DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */,
+				DD882DB323DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */,
 				DD882D8C23DB5E8F00DFDD8C /* main.m in Sources */,
 				DD882D7E23DB5E8C00DFDD8C /* SceneDelegate.m in Sources */,
 				DD882DA723DB605600DFDD8C /* LSIArtist.m in Sources */,
@@ -261,9 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD882DB423DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */,
 				DD882D9623DB5E9000DFDD8C /* Favorite_ArtistsTests.m in Sources */,
 				DD882DA823DB605600DFDD8C /* LSIArtist.m in Sources */,
 				DD882DAC23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m in Sources */,
+				DD882DB023DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,9 @@
 //
 
 #import "JBArtistController.h"
+#import "JBArtist.h"
 #import "JBArtist+NSJSONSerialization.h"
+#import "JBFileHelper.h"
 
 
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
@@ -16,8 +18,11 @@ static NSString *artistsKey = @"artists";
 @interface JBArtistController ()
 
 @property (nonatomic) NSMutableArray *mutableArtists;
+@property (nonatomic, readonly) NSURL *documentDirectory;
+@property (nonatomic, readonly) NSURL *persistenceFilePath;
 - (void)saveArtistsToPersistence;
-- (NSArray *)loadArtistsFromPersistence;
+- (void)saveArtistToPersistence:(JBArtist *)artist;
+- (NSArray *)artistsOnDisk;
 
 @end
 
@@ -33,8 +38,8 @@ static NSString *artistsKey = @"artists";
 {
     self = [super init];
     if (self) {
-        _mutableArtists = [@[] mutableCopy];
-        // TODO: - Load artists from file if they exist
+        NSArray *artists = self.artistsOnDisk;
+        _mutableArtists = [((artists) ? artists : @[]) mutableCopy];
     }
     return self;
 }
@@ -88,12 +93,41 @@ static NSString *artistsKey = @"artists";
 
 - (void)saveArtistsToPersistence
 {
+    NSMutableArray *artistDicts = [@[] mutableCopy];
+    for (JBArtist *artist in self.artists)
+    {
+        [artistDicts addObject:artist.toDictionary];
+    }
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    dictionary[artistsKey] = artistDicts;
 
+    [dictionary writeToURL:self.persistenceFilePath atomically:YES];
 }
 
-- (NSArray *)loadArtistsFromPersistence
+- (void)saveArtistToPersistence:(JBArtist *)artist
 {
-    return @[];
+    [artist.toDictionary
+     writeToURL:[NSURL fileURLWithPath:[NSString stringWithFormat:@"artist_%@", artist.name]
+                         relativeToURL:self.documentDirectory] atomically:YES];
+}
+
+- (NSArray *)artistsOnDisk
+{
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:self.persistenceFilePath];
+    return dictionary[artistsKey];
+}
+
+- (NSURL *)persistenceFilePath
+{
+    return [NSURL URLWithString:[self.documentDirectory.path
+                                 stringByAppendingPathComponent:@"favoriteArtists.json"]];
+}
+
+- (NSURL *)documentDirectory
+{
+    return [[[NSFileManager defaultManager]
+             URLsForDirectory:NSDocumentDirectory
+             inDomains:NSUserDomainMask] lastObject];
 }
 
 @end

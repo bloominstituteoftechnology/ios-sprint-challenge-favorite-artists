@@ -32,7 +32,13 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     return [self.tempArtists copy];
 }
 
-- (void)searchForArtistsByName:(NSString *)name completion:(void (^)(NSError *error))completion {
+- (NSURL *)artistsFileURL {
+    NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSString *fileName = @"artists.json";
+    return [documentDirectory URLByAppendingPathComponent:fileName];
+}
+
+- (void)searchForArtistsByName:(NSString *)name completion:(void (^)(SKSArtist *artist, NSError *error))completion {
 
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
@@ -45,7 +51,7 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 
         if (error) {
-            completion(error);
+            completion(nil, error);
             return;
         }
 
@@ -53,22 +59,27 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 
         if (jsonError) {
-            completion(jsonError);
+            completion(nil, jsonError);
             return;
         }
 
         if (![dictionary isKindOfClass:[NSDictionary class]]) {
             NSError *dictionaryError = [[NSError alloc] init];
-            completion(dictionaryError);
+            completion(nil, dictionaryError);
         }
 
         NSArray *artistsDictionaries = dictionary[@"artists"];
 
-        for (NSDictionary *artistDictionary in artistsDictionaries) {
-            SKSArtist *artist = [[SKSArtist alloc] initWithDictionary:artistDictionary];
-            [self.tempArtists addObject:artist];
-        }
-        completion(nil);
+        // Only one element in the array, so return the first!
+        SKSArtist *artist = [[SKSArtist alloc] initWithDictionary:artistsDictionaries[0]];
+
+
+        // for multiple artists if they exist!
+//        for (NSDictionary *artistDictionary in artistsDictionaries) {
+//            SKSArtist *artist = [[SKSArtist alloc] initWithDictionary:artistDictionary];
+//            [self.tempArtists addObject:artist];
+//        }
+        completion(artist, nil);
 
     }] resume];
 

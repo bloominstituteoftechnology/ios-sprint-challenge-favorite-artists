@@ -22,7 +22,14 @@
 }
 
 - (NSDictionary *)toDictionary {
-    return [[NSDictionary alloc] init];
+
+    NSDictionary *artistDictionary = @{
+        @"artistName" : self.name,
+        @"yearFormed" : [self formedYearString],
+        @"biography" : self.biography
+    };
+
+    return artistDictionary;
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "SKSArtistDetailViewController.h"
 #import "SKSArtist.h"
+#import "SKSArtist+NSJSONSerialization.h"
 #import "SKSArtistController.h"
 
 @interface SKSArtistDetailViewController ()
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *biographyTextView;
 
 - (void)updateViews;
+- (void)saveArtistToDictionary;
 
 @end
 
@@ -43,20 +45,34 @@
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
-    [self.navigationController popViewControllerAnimated:TRUE];
+    [self saveArtistToDictionary];
 }
 
+- (void)saveArtistToDictionary {
+
+    NSURL *fileURL = [self.artistController artistsFileURL];
+    NSLog(@"FileURL %@", fileURL);
+    NSError *writeToURLError = nil;
+    if([[self.artist toDictionary] writeToURL:fileURL error:&writeToURLError]) {
+        [self.navigationController popViewControllerAnimated:TRUE];
+    }
+    if (writeToURLError) {
+        NSLog(@"Error writing to url %@", writeToURLError);
+        return;
+    }
+}
 
 #pragma mark UISearchBarDelegate Methods
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
 
-    [self.artistController searchForArtistsByName:searchBar.text completion:^(NSError *error) {
+    [self.artistController searchForArtistsByName:searchBar.text completion:^(SKSArtist *artist, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (error) {
                 NSLog(@"Error: %@", error);
                 return;
             }
+            self.artist = artist;
             [self updateViews];
         });
 

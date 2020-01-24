@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class SKSArtist;
+
 @interface SKSArtistController : NSObject
 
 @property (nonatomic, readonly) NSArray *artists;
 
-- (void)searchForArtistsByName:(NSString *)name completion:(void (^)(NSError *error))completion;
+- (void)searchForArtistsByName:(NSString *)name completion:(void (^)(SKSArtist *artist, NSError *error))completion;
+
+- (NSURL *)artistsFileURL;
 
 @end
 

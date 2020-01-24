@@ -42,6 +42,7 @@ static NSString *const apiKey = @"1";
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
+            NSLog(@"Error fetching forecasts: %@", error);
             completion(nil, error);
             return;
         }
@@ -53,33 +54,19 @@ static NSString *const apiKey = @"1";
         }
         
         NSError *jsonError = nil;
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         if (jsonError) {
+            NSLog(@"Error decoding json: %@", jsonError);
             completion(nil, error);
             return;
         }
         
-        NSArray *artists = json[@"artists"];
+        NSLog(@"%@", results);
         
-        if (artists && ![artists isKindOfClass:[NSNull class]]) {
-            if ([artists count] > 0) {
-                NSDictionary *dictionary = artists[0];
-                if (dictionary) {
-                    NMKArtist *artist = [[NMKArtist alloc] initWithDictionary:dictionary];
-                    if (artist) {
-                        completion(nil, error);
-                        return;
-                    } else {
-                        NSLog(@"Could not create artist from dictionary.");
-                        completion(nil, nil);
-                        return;
-                    }
-                }
-            }
-        }
+        NSDictionary *resultArtist = [results objectForKey:@"artists"][0];
         
-        NSLog(@"Could not parse returned dictionary.");
-        completion(nil, nil);
+        NMKArtist *newArtist = [[NMKArtist alloc] initWithDictionary:resultArtist];
+        completion(newArtist, nil);
     }];
     
     [task resume];

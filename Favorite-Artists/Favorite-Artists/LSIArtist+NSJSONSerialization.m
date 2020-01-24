@@ -8,7 +8,6 @@
 
 #import "LSIArtist+NSJSONSerialization.h"
 
-#import <AppKit/AppKit.h>
 
 
 @implementation LSIArtist (NSJSONSerialization)

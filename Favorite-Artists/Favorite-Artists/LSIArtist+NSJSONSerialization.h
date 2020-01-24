@@ -6,15 +6,15 @@
 //  Copyright © 2020 Lamdba School. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
+
 
 
 #import "LSIArtist.h"
 
-NS_ASSUME_NONNULL_BEGIN
+
 
 @interface LSIArtist (NSJSONSerialization)
 
 @end
 
-NS_ASSUME_NONNULL_END
+

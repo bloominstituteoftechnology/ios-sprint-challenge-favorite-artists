@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface LSIArtist : NSObject
+
+@property NSString *name;
+@property NSString *biography;
+@property int year;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+- (NSDictionary *)toDictionary;
+
+
 
 @end
 
-NS_ASSUME_NONNULL_END
+

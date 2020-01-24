@@ -16,8 +16,9 @@
 		BBBCECB523DB4C4200506CAF /* SKSArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECB423DB4C4200506CAF /* SKSArtist.m */; };
 		BBBCECB823DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECB723DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m */; };
 		BBBCECBB23DB50EC00506CAF /* SKSArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */; };
-		BBBCECBF23DB522300506CAF /* SKSArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECBE23DB522300506CAF /* SKSArtistDetailViewController.m */; };
+		BBBCECBF23DB522300506CAF /* SKSArtistSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECBE23DB522300506CAF /* SKSArtistSearchViewController.m */; };
 		BBBCECC223DB56AA00506CAF /* SKSArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECC123DB56AA00506CAF /* SKSArtistController.m */; };
+		BBBCECC823DB8FE400506CAF /* SKSArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECC723DB8FE400506CAF /* SKSArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +38,12 @@
 		BBBCECB723DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKSArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		BBBCECB923DB50EC00506CAF /* SKSArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSArtistTableViewController.h; sourceTree = "<group>"; };
 		BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSArtistTableViewController.m; sourceTree = "<group>"; };
-		BBBCECBD23DB522300506CAF /* SKSArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSArtistDetailViewController.h; sourceTree = "<group>"; };
-		BBBCECBE23DB522300506CAF /* SKSArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSArtistDetailViewController.m; sourceTree = "<group>"; };
+		BBBCECBD23DB522300506CAF /* SKSArtistSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSArtistSearchViewController.h; sourceTree = "<group>"; };
+		BBBCECBE23DB522300506CAF /* SKSArtistSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSArtistSearchViewController.m; sourceTree = "<group>"; };
 		BBBCECC023DB56AA00506CAF /* SKSArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSArtistController.h; sourceTree = "<group>"; };
 		BBBCECC123DB56AA00506CAF /* SKSArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSArtistController.m; sourceTree = "<group>"; };
+		BBBCECC623DB8FE400506CAF /* SKSArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSArtistDetailViewController.h; sourceTree = "<group>"; };
+		BBBCECC723DB8FE400506CAF /* SKSArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +98,10 @@
 			children = (
 				BBBCECB923DB50EC00506CAF /* SKSArtistTableViewController.h */,
 				BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */,
-				BBBCECBD23DB522300506CAF /* SKSArtistDetailViewController.h */,
-				BBBCECBE23DB522300506CAF /* SKSArtistDetailViewController.m */,
+				BBBCECBD23DB522300506CAF /* SKSArtistSearchViewController.h */,
+				BBBCECBE23DB522300506CAF /* SKSArtistSearchViewController.m */,
+				BBBCECC623DB8FE400506CAF /* SKSArtistDetailViewController.h */,
+				BBBCECC723DB8FE400506CAF /* SKSArtistDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,11 +207,12 @@
 				BBBCEC9C23DB4A2800506CAF /* AppDelegate.m in Sources */,
 				BBBCECAD23DB4A2C00506CAF /* main.m in Sources */,
 				BBBCECBB23DB50EC00506CAF /* SKSArtistTableViewController.m in Sources */,
+				BBBCECC823DB8FE400506CAF /* SKSArtistDetailViewController.m in Sources */,
 				BBBCECB823DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m in Sources */,
 				BBBCECC223DB56AA00506CAF /* SKSArtistController.m in Sources */,
 				BBBCECB523DB4C4200506CAF /* SKSArtist.m in Sources */,
 				BBBCEC9F23DB4A2800506CAF /* SceneDelegate.m in Sources */,
-				BBBCECBF23DB522300506CAF /* SKSArtistDetailViewController.m in Sources */,
+				BBBCECBF23DB522300506CAF /* SKSArtistSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "SKSArtistTableViewController.h"
 #import "SKSArtistController.h"
 #import "SKSArtist.h"
+#import "SKSArtistSearchViewController.h"
 #import "SKSArtistDetailViewController.h"
 
 @interface SKSArtistTableViewController ()
@@ -76,15 +77,14 @@ static NSString * const reuseIdentifier = @"ArtistCell";
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    SKSArtistDetailViewController *destinationVC = [segue destinationViewController];
-
-    destinationVC.artistController = self.artistController;
-
     if ([[segue identifier] isEqual:@"ShowDetailArtistSegue"]) {
+        SKSArtistDetailViewController *destinationVC = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         destinationVC.artist = self.artistController.artists[indexPath.row];
+    } else if ([[segue identifier] isEqual:@"ShowAddArtistSegue"]){
+        SKSArtistSearchViewController *destinationVC = [segue destinationViewController];
+        destinationVC.artistController = self.artistController;
     }
 }
-
 
 @end

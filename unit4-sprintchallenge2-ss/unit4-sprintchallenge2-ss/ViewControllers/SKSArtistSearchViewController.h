@@ -1,5 +1,5 @@
 //
-//  SKSArtistDetailViewController.h
+//  SKSArtistSearchViewController.h
 //  unit4-sprintchallenge2-ss
 //
 //  Created by Lambda_School_Loaner_204 on 1/24/20.
@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class SKSArtist;
+@class SKSArtistController, SKSArtist;
 
-@interface SKSArtistDetailViewController : UIViewController
+@interface SKSArtistSearchViewController : UIViewController <UISearchBarDelegate>
 
+@property (nonatomic) SKSArtistController *artistController;
 @property (nonatomic) SKSArtist *artist;
 
 @end

@@ -41,7 +41,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="qJQ-B3-9qL" kind="show" identifier="ShowDetailArtistSegue" id="ZAF-Vt-S85"/>
+                                    <segue destination="IbX-yt-Uoa" kind="show" identifier="ShowDetailArtistSegue" id="mie-N9-QNT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,10 +62,60 @@
             </objects>
             <point key="canvasLocation" x="879.71014492753625" y="41.517857142857139"/>
         </scene>
+        <!--Name-->
+        <scene sceneID="JU0-p1-PNg">
+            <objects>
+                <viewController id="IbX-yt-Uoa" customClass="SKSArtistDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uJ9-Zb-4iH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z6N-ei-akS">
+                                <rect key="frame" x="20" y="160" width="374" height="682"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIT-fC-phf">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ou1-rw-0yU">
+                                        <rect key="frame" x="0.0" y="34.5" width="354" height="647.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ou1-rw-0yU" secondAttribute="trailing" constant="20" symbolic="YES" id="rKJ-LI-ksA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="L6f-1E-WOp" firstAttribute="trailing" secondItem="z6N-ei-akS" secondAttribute="trailing" constant="20" id="1CI-87-cPp"/>
+                            <constraint firstItem="z6N-ei-akS" firstAttribute="leading" secondItem="L6f-1E-WOp" secondAttribute="leading" constant="20" id="6oF-P3-Ode"/>
+                            <constraint firstItem="z6N-ei-akS" firstAttribute="top" secondItem="L6f-1E-WOp" secondAttribute="top" constant="20" id="Def-oJ-M5Z"/>
+                            <constraint firstItem="L6f-1E-WOp" firstAttribute="bottom" secondItem="z6N-ei-akS" secondAttribute="bottom" constant="20" id="sdZ-vb-hGz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L6f-1E-WOp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Name" id="xEw-CK-cbw"/>
+                    <connections>
+                        <outlet property="biographyTextView" destination="ou1-rw-0yU" id="Osu-JU-gvi"/>
+                        <outlet property="formedYearLabel" destination="sIT-fC-phf" id="GHS-le-uxw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doz-Ck-J56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="400"/>
+        </scene>
         <!--Add New Artist-->
         <scene sceneID="bX3-Xb-Ee9">
             <objects>
-                <viewController id="qJQ-B3-9qL" customClass="SKSArtistDetailViewController" sceneMemberID="viewController">
+                <viewController id="qJQ-B3-9qL" customClass="SKSArtistSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Skn-44-JdT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7l-Sa-SNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="42"/>
+            <point key="canvasLocation" x="1901" y="-281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6sT-jo-aFO">
@@ -152,7 +202,4 @@
             <point key="canvasLocation" x="-30.434782608695656" y="41.517857142857139"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ZAF-Vt-S85"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -15,6 +15,8 @@
 @property (nonatomic) NSString *biography;
 @property (nonatomic) int yearFormed;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 - (instancetype)initWithName:(NSString *)name
                    biography:(NSString *)biography
                   yearFormed:(int)yearFormed;

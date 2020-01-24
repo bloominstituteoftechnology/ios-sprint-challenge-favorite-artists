@@ -10,6 +10,11 @@
 
 @interface JBDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioView;
+
 @end
 
 @implementation JBDetailViewController

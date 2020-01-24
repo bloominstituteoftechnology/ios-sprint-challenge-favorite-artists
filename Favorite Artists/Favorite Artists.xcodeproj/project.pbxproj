@@ -13,6 +13,8 @@
 		FA69AD9723DB4E7800798F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA69AD9623DB4E7800798F67 /* Assets.xcassets */; };
 		FA69AD9A23DB4E7900798F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA69AD9823DB4E7900798F67 /* LaunchScreen.storyboard */; };
 		FA69AD9D23DB4E7900798F67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69AD9C23DB4E7900798F67 /* main.m */; };
+		FA69ADAA23DB511900798F67 /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADA923DB511900798F67 /* LSIArtistsTableViewController.m */; };
+		FA69ADAD23DB514100798F67 /* LSISearchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADAC23DB514100798F67 /* LSISearchArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		FA69AD9923DB4E7900798F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA69AD9B23DB4E7900798F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA69AD9C23DB4E7900798F67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA69ADA823DB511900798F67 /* LSIArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistsTableViewController.h; sourceTree = "<group>"; };
+		FA69ADA923DB511900798F67 /* LSIArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistsTableViewController.m; sourceTree = "<group>"; };
+		FA69ADAB23DB514100798F67 /* LSISearchArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSISearchArtistViewController.h; sourceTree = "<group>"; };
+		FA69ADAC23DB514100798F67 /* LSISearchArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSISearchArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,10 @@
 		FA69ADA623DB4E9C00798F67 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA69ADA823DB511900798F67 /* LSIArtistsTableViewController.h */,
+				FA69ADA923DB511900798F67 /* LSIArtistsTableViewController.m */,
+				FA69ADAB23DB514100798F67 /* LSISearchArtistViewController.h */,
+				FA69ADAC23DB514100798F67 /* LSISearchArtistViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 		FA69AD7F23DB4E7600798F67 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LSI;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -183,7 +194,9 @@
 			files = (
 				FA69AD8C23DB4E7600798F67 /* AppDelegate.m in Sources */,
 				FA69AD9D23DB4E7900798F67 /* main.m in Sources */,
+				FA69ADAD23DB514100798F67 /* LSISearchArtistViewController.m in Sources */,
 				FA69AD8F23DB4E7600798F67 /* SceneDelegate.m in Sources */,
+				FA69ADAA23DB511900798F67 /* LSIArtistsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

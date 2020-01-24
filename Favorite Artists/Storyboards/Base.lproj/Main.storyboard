@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T6x-Vr-ujS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -64,7 +64,7 @@
         <!--Add New Artist-->
         <scene sceneID="yNW-IR-fla">
             <objects>
-                <viewController id="l3i-UT-QZA" sceneMemberID="viewController">
+                <viewController id="l3i-UT-QZA" customClass="LSISearchArtistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oDi-i4-rZO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,13 +82,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bZd-l7-OxY">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="66"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3h-P8-1tt">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3h-P8-1tt">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXa-Gm-Hn2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed in 0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXa-Gm-Hn2">
                                                 <rect key="frame" x="0.0" y="36" width="354" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
@@ -122,8 +122,17 @@
                         <viewLayoutGuide key="safeArea" id="fKh-Bf-ABZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="faN-vl-TtT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oZS-aZ-mh5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oZS-aZ-mh5">
+                            <connections>
+                                <action selector="saveBarButtonTapped:" destination="l3i-UT-QZA" id="4jE-jo-wK2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistSearchBar" destination="vIP-qF-k1w" id="JBV-Lf-HEg"/>
+                        <outlet property="nameLabel" destination="t3h-P8-1tt" id="tJC-yu-t49"/>
+                        <outlet property="yearFormedLabel" destination="eXa-Gm-Hn2" id="blM-Hn-lz6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cok-jI-4zB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

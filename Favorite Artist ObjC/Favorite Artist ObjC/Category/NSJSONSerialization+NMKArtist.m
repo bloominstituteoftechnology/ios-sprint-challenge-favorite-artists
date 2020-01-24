@@ -17,8 +17,8 @@
     
     int yearData = [[dictionary objectForKey:@"intFormedYear"] intValue];
     
-//    int yearFormed = yearData;
-    return [ self initWithArtistName:name biography:biography yearFormed:yearData ];
+    int yearFormed = yearData; 
+    return [ self initWithArtistName:name biography:biography yearFormed:yearFormed ];
     
 }
 

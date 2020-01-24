@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class NMKArtistController;
+@class NMKArtist;
 
-@interface NMKArtistDetailViewController : UIViewController
+@interface NMKArtistDetailViewController : UIViewController <UISearchBarDelegate>
 
-@property (nonatomic, readonly) NMKArtistController *artistController;
-
+@property (nonatomic) NMKArtistController *artistController;
+@property (nonatomic) NMKArtist *artist;
+ 
 @end
 

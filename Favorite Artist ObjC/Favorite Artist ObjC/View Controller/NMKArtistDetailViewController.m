@@ -7,8 +7,16 @@
 //
 
 #import "NMKArtistDetailViewController.h"
+#import "NMKArtist.h"
+#import "NMKArtistController.h"
+#import "NSJSONSerialization+NMKArtist.h"
 
 @interface NMKArtistDetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *biographyTextView;
 
 @end
 
@@ -16,17 +24,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.searchBar setDelegate:self];
+    [self updateViews];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)save:(UIBarButtonItem *)sender {
+    NMKArtist *artist = [[NMKArtist alloc] initWithArtistName:self.artistLabel.text biography:self.biographyTextView.text yearFormed:self.artist.yearFormed];
+    [self.artistController addArtist:artist];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+
+- (void)updateViews {
+    if (self.artist) {
+        //    self.title = self.artist.artist;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.artistLabel.text = self.artist.artist;
+            self.yearFormedLabel.text =  [NSString stringWithFormat:@"Formed in %i", self.artist.yearFormed];
+            self.biographyTextView.text = self.artist.biography;
+        });
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSString *searchTerm = searchBar.text;
+    [_artistController fetchArtist:searchTerm completion:^(NMKArtist *artist, NSError *error) {
+        self.artist = artist;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (artist) {
+                [self updateViews];
+            }
+        });
+    }];
+}
+
+- (void)setArtist:(NMKArtist *)artist{
+    if (_artist != artist) {
+        _artist = artist;
+        [self updateViews];
+    }
+}
+
 
 @end

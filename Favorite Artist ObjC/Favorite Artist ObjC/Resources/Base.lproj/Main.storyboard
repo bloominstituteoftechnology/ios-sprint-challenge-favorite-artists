@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="hXr-Ex-zRe">
             <objects>
-                <tableViewController id="IgP-hC-Hi4" sceneMemberID="viewController">
+                <tableViewController id="IgP-hC-Hi4" customClass="NMKArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gwJ-TU-dAy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
         <!--Add New Artist-->
         <scene sceneID="bRf-lW-pDJ">
             <objects>
-                <viewController id="MwY-ut-AC5" sceneMemberID="viewController">
+                <viewController id="MwY-ut-AC5" customClass="NMKArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kt1-c9-viU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,8 +123,18 @@
                         <viewLayoutGuide key="safeArea" id="jqn-R1-fOe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="pfw-Nl-ZFU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EX9-m7-G2K"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EX9-m7-G2K">
+                            <connections>
+                                <action selector="save:" destination="MwY-ut-AC5" id="eIb-vB-RGP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistLabel" destination="vMN-zg-y4N" id="swB-hN-cSj"/>
+                        <outlet property="biographyTextView" destination="zO4-w3-lmX" id="huD-vu-HSc"/>
+                        <outlet property="searchBar" destination="rkp-Xh-KFL" id="40x-RN-2bQ"/>
+                        <outlet property="yearFormedLabel" destination="u06-j4-eP8" id="Jvd-cW-KTP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozp-bH-EU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

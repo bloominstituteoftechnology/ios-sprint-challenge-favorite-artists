@@ -13,7 +13,7 @@
 
 @property (nonatomic, readonly) NSArray<NMKArtist *> *artists; // TODO: see if NSArray can only be used without declaring NMKArtist as the type (star wars project reference)
 
-- (void)addArtist;
+- (void)addArtist:(NMKArtist *)anArtist;
 - (void)loadArtist; 
 - (void)saveArtist;
 - (void)fetchArtist:(NSString *)searchTerm

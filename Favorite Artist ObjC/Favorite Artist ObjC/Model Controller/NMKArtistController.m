@@ -16,10 +16,13 @@
 
 @end
 
-@implementation NMKArtistController 
+@implementation NMKArtistController
 
 static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/";
 static NSString *const apiKey = @"1";
+
+static NSString *const fullBaseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php"; // solved error
+
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -29,49 +32,47 @@ static NSString *const apiKey = @"1";
 }
 
 - (void)fetchArtist:(NSString *)searchTerm completion:(void (^)(NMKArtist *, NSError *))completion {
-    NSURL *baseURL = [NSURL URLWithString:baseURLString];
-    NSURL *fullURL = [[baseURL URLByAppendingPathComponent:apiKey] URLByAppendingPathComponent:@"search.php"];
+//    NSURL *baseURL = [NSURL URLWithString:baseURLString];
+//    NSURL *fullURL = [[baseURL URLByAppendingPathComponent:apiKey] URLByAppendingPathComponent:@"search.php"];
+//
+//    NSURLComponents *components = [NSURLComponents componentsWithURL:fullURL resolvingAgainstBaseURL:YES];
+//    NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName:@"s" value:searchTerm];
+//    [components setQueryItems:@[searchItem]];
     
-    NSURLComponents *components = [NSURLComponents componentsWithURL:fullURL resolvingAgainstBaseURL:YES];
-    NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName:@"s" value:searchTerm];
-    [components setQueryItems:@[searchItem]];
+    NSURLComponents *fullURLComponent = [[NSURLComponents alloc] initWithString:fullBaseURLString];
+       
+    NSMutableArray *queryItems = [NSMutableArray arrayWithObjects:
+                                     [NSURLQueryItem queryItemWithName:@"s" value:searchTerm], nil];
     
-    NSURL *searchURL = [components URL];
-    NSLog(@"URL: %@", searchURL);
-    NSURLRequest *request = [NSURLRequest requestWithURL:searchURL];
+    fullURLComponent.queryItems = queryItems;
+    NSURL *url = fullURLComponent.URL;
     
-    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error fetching forecasts: %@", error);
-            completion(nil, error);
-            return;
-        }
-        
-        if (data == nil) {
-            NSLog(@"Data was nil");
-            completion(nil, nil);
-            return;
-        }
-        
-        NSError *jsonError = nil;
-        NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-        
-        if (jsonError) {
-            NSLog(@"Error decoding json: %@", jsonError);
-            completion(nil, error);
-            return;
-        }
-        
-        NSLog(@"JSON: %@", results);
-        
-        NSDictionary *resultArtist = [results objectForKey:@"artists"][0];
-        
-        NMKArtist *newArtist = [[NMKArtist alloc] initWithDictionary:resultArtist];
-        completion(newArtist, nil);
-    }];
+//    NSLog(@"URL: %@", searchURL);
+//    NSURLRequest *request = [NSURLRequest requestWithURL:searchURL];
     
-    [task resume];
-}
+        [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"Error fetching artist: %@", error);
+                completion(nil, error);
+                return;
+            }
+            
+            NSError *jsonError = nil;
+            NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+            
+            if (!results) {
+                NSLog(@"Error decoding json: %@", jsonError);
+                completion(nil, jsonError);
+                return;
+            }
+            
+            NSLog(@"%@", results);
+            NSDictionary *resultArtist = [results objectForKey:@"artists"][0];
+            
+            NMKArtist *newArtist = [[NMKArtist alloc] initWithDictionary:resultArtist];
+            completion(newArtist, nil);
+        }] resume];
+    }
 
 - (void)saveArtist {
     {
@@ -107,6 +108,9 @@ static NSString *const apiKey = @"1";
     [self saveArtist];
 }
 
-
+- (NSArray<NMKArtist *> *)artists
+{
+    return [self.internalArtists copy];
+}
 
 @end

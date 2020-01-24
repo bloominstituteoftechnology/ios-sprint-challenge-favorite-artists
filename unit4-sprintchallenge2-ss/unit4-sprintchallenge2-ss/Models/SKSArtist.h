@@ -12,9 +12,9 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *biography;
-@property (nonatomic) int birthYear;
+@property (nonatomic) int formedYear;
 
-- (instancetype)initWithName:(NSString *)name biography:(NSString *)biography birthYear:(int)birthYear;
+- (instancetype)initWithName:(NSString *)name biography:(NSString *)biography formedYear:(int)formedYear;
 
 @end
 

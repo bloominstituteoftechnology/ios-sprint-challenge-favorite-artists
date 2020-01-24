@@ -11,11 +11,14 @@
 @implementation SKSArtist (NSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self = [self init];
-    if (self) {
 
-    }
-    return self;
+    NSString *name = dictionary[@"strArtist"];
+    NSString *strFormedYear = dictionary[@"intFormedYear"];
+    int formedYear = [strFormedYear intValue];
+    NSString *biography = dictionary[@"strBiographyEN"];
+
+    return [self initWithName:name biography:biography formedYear:formedYear];
+
 }
 
 - (NSDictionary *)toDictionary {

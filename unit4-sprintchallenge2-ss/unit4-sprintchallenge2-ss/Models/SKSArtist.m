@@ -10,12 +10,12 @@
 
 @implementation SKSArtist
 
-- (instancetype)initWithName:(NSString *)name biography:(NSString *)biography birthYear:(int)birthYear {
+- (instancetype)initWithName:(NSString *)name biography:(NSString *)biography formedYear:(int)formedYear {
     self = [self init];
     if (self) {
         _name = name;
         _biography = biography;
-        _birthYear = birthYear;
+        _formedYear = formedYear;
     }
     return self;
 }

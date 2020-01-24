@@ -13,6 +13,8 @@
 		996773DE23DB4A8A00C4BCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996773DD23DB4A8A00C4BCE6 /* Assets.xcassets */; };
 		996773E123DB4A8A00C4BCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996773DF23DB4A8A00C4BCE6 /* LaunchScreen.storyboard */; };
 		996773E423DB4A8A00C4BCE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773E323DB4A8A00C4BCE6 /* main.m */; };
+		996773F223DB4DFF00C4BCE6 /* JBFavsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773F123DB4DFF00C4BCE6 /* JBFavsViewController.m */; };
+		996773F523DB4E1000C4BCE6 /* JBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773F423DB4E1000C4BCE6 /* JBDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		996773E023DB4A8A00C4BCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		996773E223DB4A8A00C4BCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		996773E323DB4A8A00C4BCE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		996773F023DB4DFF00C4BCE6 /* JBFavsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBFavsViewController.h; sourceTree = "<group>"; };
+		996773F123DB4DFF00C4BCE6 /* JBFavsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBFavsViewController.m; sourceTree = "<group>"; };
+		996773F323DB4E1000C4BCE6 /* JBDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBDetailViewController.h; sourceTree = "<group>"; };
+		996773F423DB4E1000C4BCE6 /* JBDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,10 @@
 		996773ED23DB4B3000C4BCE6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				996773F023DB4DFF00C4BCE6 /* JBFavsViewController.h */,
+				996773F123DB4DFF00C4BCE6 /* JBFavsViewController.m */,
+				996773F323DB4E1000C4BCE6 /* JBDetailViewController.h */,
+				996773F423DB4E1000C4BCE6 /* JBDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -190,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996773F223DB4DFF00C4BCE6 /* JBFavsViewController.m in Sources */,
+				996773F523DB4E1000C4BCE6 /* JBDetailViewController.m in Sources */,
 				996773D323DB4A8700C4BCE6 /* AppDelegate.m in Sources */,
 				996773E423DB4A8A00C4BCE6 /* main.m in Sources */,
 				996773D623DB4A8700C4BCE6 /* SceneDelegate.m in Sources */,

@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSMutableArray *artists;
 
 - (void)searchArtistByName:(NSString *)name completion:(void (^)(DPRArtist *artist, NSError *error))completion;
-- (void)saveArtist:(DPRArtist *)artist;
+- (void)saveArtists;
 - (void)loadArtists;
 
 @end

@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        // load in artists from saved data
+        _artists = [[NSMutableArray alloc] initWithArray:@[]];
     }
     return self;
 }
@@ -65,7 +65,9 @@
     }] resume];
 }
 
-- (void)saveArtist:(DPRArtist *)artist {
+- (void)saveArtists {
+    NSURL *documentURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *artistURL = [documentURL URLByAppendingPathComponent:@"myArtists"];
     
 }
 

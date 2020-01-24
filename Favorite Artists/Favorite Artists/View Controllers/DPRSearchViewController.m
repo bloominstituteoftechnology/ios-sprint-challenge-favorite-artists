@@ -44,18 +44,15 @@
         }
     }];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)saveButton:(UIBarButtonItem *)sender {
-    
+    if (self.artist) {
+        [self.artistController.artists addObject:self.artist];
+        [self.artistController saveArtists];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        NSLog(@"Error saving artist named %@", self.searchBar.text);
+    }
 }
 
 - (void)updateViews {

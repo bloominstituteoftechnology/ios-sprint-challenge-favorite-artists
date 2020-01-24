@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class NMKArtistController;
+
 @interface NMKArtistDetailViewController : UIViewController
+
+@property (nonatomic, readonly) NMKArtistController *artistController;
 
 @end
 

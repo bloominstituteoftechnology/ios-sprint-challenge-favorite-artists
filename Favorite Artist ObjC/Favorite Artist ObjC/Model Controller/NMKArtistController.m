@@ -16,7 +16,7 @@
 
 @end
 
-@implementation NMKArtistController
+@implementation NMKArtistController 
 
 static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/";
 static NSString *const apiKey = @"1";
@@ -55,13 +55,14 @@ static NSString *const apiKey = @"1";
         
         NSError *jsonError = nil;
         NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        
         if (jsonError) {
             NSLog(@"Error decoding json: %@", jsonError);
             completion(nil, error);
             return;
         }
         
-        NSLog(@"%@", results);
+        NSLog(@"JSON: %@", results);
         
         NSDictionary *resultArtist = [results objectForKey:@"artists"][0];
         
@@ -72,7 +73,39 @@ static NSString *const apiKey = @"1";
     [task resume];
 }
 
+- (void)saveArtist {
+    {
+        NSURL *documentDirectory = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:@"artists.plist"];
+        
+        NSMutableArray *artistDictionaries = [[NSMutableArray alloc] init];
+        
+        for (NMKArtist *artist in self.internalArtists) {
+            [artistDictionaries addObject:[artist toDictionary]];
+        }
+        
+        NSDictionary *dictionary = @{@"artists":artistDictionaries};
+        
+        [dictionary writeToURL:documentDirectory atomically:YES];
+    }
+}
 
+- (void)loadArtist {
+    {
+        NSURL *documentDirectory = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:@"artists.plist"];
+        
+        NSMutableArray *artistDictionaries = [[NSDictionary alloc] initWithContentsOfURL:documentDirectory][@"artists"];
+        
+        for (NSDictionary *dictionary in artistDictionaries) {
+            NMKArtist *artist = [[NMKArtist alloc] initWithDictionary:dictionary];
+            [self.internalArtists addObject:artist];
+        }
+    }
+}
+
+- (void)addArtist:(NMKArtist *)anArtist {
+    [self.internalArtists addObject:anArtist];
+    [self saveArtist];
+}
 
 
 

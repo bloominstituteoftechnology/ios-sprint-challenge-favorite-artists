@@ -7,6 +7,9 @@
 //
 
 #import "NMKArtistTableViewController.h"
+#import "NMKArtist.h"
+#import "NMKArtistController.h"
+#import "NMKArtistDetailViewController.h"
 
 @interface NMKArtistTableViewController ()
 

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class NMKArtistController;
 
 @interface NMKArtistTableViewController : UITableViewController
+
+@property (nonatomic, readonly) NMKArtistController *artistController;
 
 @end

@@ -7,12 +7,24 @@
 //
 
 #import "JBFavsViewController.h"
+#import "JBArtistController.h"
+#import "JBArtist.h"
+#import "JBDetailViewController.h"
 
 @interface JBFavsViewController ()
 
 @end
 
 @implementation JBFavsViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _artistController = [[JBArtistController alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,25 +38,20 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.artistController.artists.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell"
+                                                            forIndexPath:indexPath];
+    JBArtist *artist = self.artistController.artists[indexPath.row];
+
+    cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = artist.originYearText;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -80,14 +87,15 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    JBDetailViewController *detailVC = segue.destinationViewController;
+    detailVC.artistController = self.artistController;
+    if ([segue.identifier isEqualToString:@"ArtistDetailSegue"]) {
+        detailVC.artist = self.artistController.artists[self.tableView.indexPathForSelectedRow.row];
+    }
 }
-*/
 
 @end

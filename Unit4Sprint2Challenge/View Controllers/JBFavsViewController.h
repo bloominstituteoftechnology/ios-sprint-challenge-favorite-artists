@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+
+@class JBArtistController;
+
 
 @interface JBFavsViewController : UITableViewController
 
+@property JBArtistController *artistController;
+
 @end
 
-NS_ASSUME_NONNULL_END

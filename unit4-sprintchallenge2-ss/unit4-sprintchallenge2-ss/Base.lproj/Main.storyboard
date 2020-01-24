@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1mr-pz-M1a">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="GOk-to-uX2">
+            <objects>
+                <tableViewController id="y5B-2X-gO8" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S7T-HH-KA2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mDC-p2-grO">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mDC-p2-grO" id="uQS-u2-0Fz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qJQ-B3-9qL" kind="show" identifier="ShowDetailArtistSegue" id="ZAF-Vt-S85"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="y5B-2X-gO8" id="6eG-dt-wy8"/>
+                            <outlet property="delegate" destination="y5B-2X-gO8" id="bya-hA-382"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Uad-Bc-0Cb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WQf-mC-9bl">
+                            <connections>
+                                <segue destination="qJQ-B3-9qL" kind="show" identifier="ShowAddArtistSegue" id="iGv-1q-MHk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHd-7c-rEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.71014492753625" y="41.517857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bX3-Xb-Ee9">
+            <objects>
+                <viewController id="qJQ-B3-9qL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Skn-44-JdT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CmC-Hd-Saq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eh4-lM-sKi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7l-Sa-SNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800" y="42"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6sT-jo-aFO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1mr-pz-M1a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nHf-UY-04W">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y5B-2X-gO8" kind="relationship" relationship="rootViewController" id="pTc-jh-p1F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqC-WI-F5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="41.517857142857139"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZAF-Vt-S85"/>
+    </inferredMetricsTieBreakers>
+</document>

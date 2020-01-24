@@ -7,10 +7,13 @@
 //
 
 #import "LSIArtistDetailViewController.h"
+#import "LSIArtist.h"
+#import "LSIArtistController.h"
 
 @interface LSIArtistDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *nameToSearchBarConstraint;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
@@ -21,19 +24,73 @@
 
 @implementation LSIArtistDetailViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder {
+
+	self = [super initWithCoder:coder];
+
+	return self;
+}
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+	[super viewDidLoad];
+
+	if (self.artist) {
+		[self.searchBar setHidden:true];
+		[self.nameToSearchBarConstraint setPriority:999];
+		[self.nameToSearchBarConstraint setConstant:-60];
+		[self.navigationItem setRightBarButtonItem:nil];
+		[self setTitle:[self.artist name]];
+	} else {
+		[self.searchBar setDelegate:self];
+	}
+
+	[self updateViews];
 }
 
-/*
-#pragma mark - Navigation
+- (void)updateViews {
+	if (self.artist) {
+		[self.nameLabel setText:[self.artist name]];
+		[self.textView setText:[self.artist biography]];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+		if ([self.artist year] > 0) {
+			[self.yearLabel setText:[NSString stringWithFormat:@"Formed in %d", [self.artist year]]];
+		} else {
+			[self.yearLabel setText:nil];
+		}
+	} else {
+		[self.nameLabel setText:nil];
+		[self.yearLabel setText:nil];
+		[self.textView setText:nil];
+	}
 }
-*/
+
+- (IBAction)save:(UIBarButtonItem *)sender {
+	if (self.artist) {
+		[[self.controller artists] addObject:self.artist];
+		[self.navigationController popViewControllerAnimated:true];
+	}
+}
+
+#pragma mark - Search bar delegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+
+	[searchBar resignFirstResponder];
+	[self.controller getArtistsFromSearchTerm:[searchBar text] completion:^(NSError *error, LSIArtist *artist) {
+		if (error) {
+			NSLog(@"Error: %@", error);
+			return;
+		}
+
+		if (artist) {
+			self.artist = artist;
+
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[self updateViews];
+			});
+		}
+	}];
+}
 
 @end

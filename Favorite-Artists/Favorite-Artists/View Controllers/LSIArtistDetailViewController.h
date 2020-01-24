@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class LSIArtistController;
+@class LSIArtist;
 
-@interface LSIArtistDetailViewController : UIViewController
+@interface LSIArtistDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property LSIArtistController *controller;
+@property LSIArtist *artist;
 
 @end
 
-NS_ASSUME_NONNULL_END
+

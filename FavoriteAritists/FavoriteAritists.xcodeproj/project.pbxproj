@@ -13,6 +13,9 @@
 		DD1ADE4023DB4DE600DC51FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1ADE3F23DB4DE600DC51FF /* Assets.xcassets */; };
 		DD1ADE4323DB4DE600DC51FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1ADE4123DB4DE600DC51FF /* LaunchScreen.storyboard */; };
 		DD1ADE4623DB4DE600DC51FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE4523DB4DE600DC51FF /* main.m */; };
+		DD1ADE5223DB509A00DC51FF /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE5123DB509A00DC51FF /* ArtistsTableViewController.m */; };
+		DD1ADE5523DB50AE00DC51FF /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE5423DB50AE00DC51FF /* AddArtistViewController.m */; };
+		DD1ADE5823DB50BA00DC51FF /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE5723DB50BA00DC51FF /* ArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		DD1ADE4223DB4DE600DC51FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD1ADE4423DB4DE600DC51FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD1ADE4523DB4DE600DC51FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD1ADE5023DB509A00DC51FF /* ArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistsTableViewController.h; sourceTree = "<group>"; };
+		DD1ADE5123DB509A00DC51FF /* ArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsTableViewController.m; sourceTree = "<group>"; };
+		DD1ADE5323DB50AE00DC51FF /* AddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddArtistViewController.h; sourceTree = "<group>"; };
+		DD1ADE5423DB50AE00DC51FF /* AddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistViewController.m; sourceTree = "<group>"; };
+		DD1ADE5623DB50BA00DC51FF /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		DD1ADE5723DB50BA00DC51FF /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +92,12 @@
 		DD1ADE4D23DB4E1600DC51FF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DD1ADE5023DB509A00DC51FF /* ArtistsTableViewController.h */,
+				DD1ADE5123DB509A00DC51FF /* ArtistsTableViewController.m */,
+				DD1ADE5323DB50AE00DC51FF /* AddArtistViewController.h */,
+				DD1ADE5423DB50AE00DC51FF /* AddArtistViewController.m */,
+				DD1ADE5623DB50BA00DC51FF /* ArtistDetailViewController.h */,
+				DD1ADE5723DB50BA00DC51FF /* ArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -173,7 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1ADE5223DB509A00DC51FF /* ArtistsTableViewController.m in Sources */,
 				DD1ADE3523DB4DE500DC51FF /* AppDelegate.m in Sources */,
+				DD1ADE5823DB50BA00DC51FF /* ArtistDetailViewController.m in Sources */,
+				DD1ADE5523DB50AE00DC51FF /* AddArtistViewController.m in Sources */,
 				DD1ADE4623DB4DE600DC51FF /* main.m in Sources */,
 				DD1ADE3823DB4DE500DC51FF /* SceneDelegate.m in Sources */,
 			);

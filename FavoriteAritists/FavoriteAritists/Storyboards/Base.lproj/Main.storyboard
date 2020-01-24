@@ -10,7 +10,7 @@
         <!--Artists-->
         <scene sceneID="G34-lJ-fwr">
             <objects>
-                <tableViewController id="W7H-vQ-bFk" sceneMemberID="viewController">
+                <tableViewController id="W7H-vQ-bFk" customClass="ArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KEj-kh-JLf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
         <!--Add new artist-->
         <scene sceneID="cdh-hU-fgo">
             <objects>
-                <viewController id="9Hy-Ai-g73" sceneMemberID="viewController">
+                <viewController id="9Hy-Ai-g73" customClass="AddArtistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dW8-x5-BK9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
         <!--Add new artist-->
         <scene sceneID="WTz-TE-3Yu">
             <objects>
-                <viewController id="zUo-ob-c6t" sceneMemberID="viewController">
+                <viewController id="zUo-ob-c6t" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gto-SI-UVj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

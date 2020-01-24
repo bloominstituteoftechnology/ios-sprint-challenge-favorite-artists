@@ -44,8 +44,6 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     return [artistArray copy];
 }
 
-
-
 - (void)writeDictionaryToFile:(NSDictionary *)dictionary {
 
     NSURL *fileURL = [self artistsFileURL];
@@ -110,12 +108,6 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
         // Only one element in the array, so return the first!
         SKSArtist *artist = [[SKSArtist alloc] initWithDictionary:artistsDictionaries[0]];
 
-
-        // for multiple artists if they exist!
-//        for (NSDictionary *artistDictionary in artistsDictionaries) {
-//            SKSArtist *artist = [[SKSArtist alloc] initWithDictionary:artistDictionary];
-//            [self.tempArtists addObject:artist];
-//        }
         completion(artist, nil);
 
     }] resume];

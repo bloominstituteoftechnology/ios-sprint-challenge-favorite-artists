@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Artist Table View Controller-->
+        <!--Favorite Artists-->
         <scene sceneID="GOk-to-uX2">
             <objects>
                 <tableViewController id="y5B-2X-gO8" customClass="SKSArtistTableViewController" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                             <outlet property="delegate" destination="y5B-2X-gO8" id="bya-hA-382"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Uad-Bc-0Cb">
+                    <navigationItem key="navigationItem" title="Favorite Artists" id="Uad-Bc-0Cb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WQf-mC-9bl">
                             <connections>
                                 <segue destination="qJQ-B3-9qL" kind="show" identifier="ShowAddArtistSegue" id="iGv-1q-MHk"/>

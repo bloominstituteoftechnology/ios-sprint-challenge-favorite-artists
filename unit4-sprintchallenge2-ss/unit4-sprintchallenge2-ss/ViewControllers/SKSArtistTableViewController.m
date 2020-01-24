@@ -30,6 +30,11 @@
 
 static NSString * const reuseIdentifier = @"ArtistCell";
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
@@ -50,7 +55,7 @@ static NSString * const reuseIdentifier = @"ArtistCell";
 
     SKSArtist *artist = self.artistController.artists[indexPath.row];
     cell.textLabel.text = artist.name;
-    cell.detailTextLabel.text = [[NSNumber numberWithInt:artist.formedYear] stringValue];
+    cell.detailTextLabel.text = [artist formedYearString];
     
     return cell;
 }

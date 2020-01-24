@@ -20,4 +20,8 @@
     return self;
 }
 
+- (NSString *)formedYearString {
+    return [[NSNumber numberWithInt:self.formedYear] stringValue];
+}
+
 @end

@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
+@class NMKArtist;
 @interface NMKArtistController : NSObject
+
+@property (nonatomic, readonly) NSArray<NMKArtist *> *artists; // TODO: see if NSArray can only be used without declaring NMKArtist as the type (star wars project reference)
+
+- (void)addArtist;
+- (void)loadAritst;
+- (void)saveArtist;
+- (void)fetchArtist:(NSString *)searchTerm
+         completion:(void (^)(NMKArtist *artist, NSError *error))completion;
+
 
 @end
 
-NS_ASSUME_NONNULL_END

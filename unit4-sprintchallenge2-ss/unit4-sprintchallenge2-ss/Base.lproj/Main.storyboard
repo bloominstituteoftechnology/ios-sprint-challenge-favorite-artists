@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,16 +65,69 @@
         <!--Add New Artist-->
         <scene sceneID="bX3-Xb-Ee9">
             <objects>
-                <viewController id="qJQ-B3-9qL" sceneMemberID="viewController">
+                <viewController id="qJQ-B3-9qL" customClass="SKSArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Skn-44-JdT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Artist Name:" translatesAutoresizingMaskIntoConstraints="NO" id="Mg7-Ii-GZH">
+                                <rect key="frame" x="0.0" y="140" width="414" height="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f6N-kv-R9V">
+                                <rect key="frame" x="20" y="200" width="374" height="642"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1Q-24-qbU">
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="41"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbS-Of-EXO">
+                                        <rect key="frame" x="0.0" y="49" width="92" height="26.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iuu-rR-FdT">
+                                        <rect key="frame" x="0.0" y="83.5" width="354" height="558.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Iuu-rR-FdT" secondAttribute="trailing" constant="20" symbolic="YES" id="P4k-ju-8Fr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f6N-kv-R9V" firstAttribute="top" secondItem="Mg7-Ii-GZH" secondAttribute="bottom" constant="10" id="4AU-lK-j4w"/>
+                            <constraint firstItem="Mg7-Ii-GZH" firstAttribute="top" secondItem="CmC-Hd-Saq" secondAttribute="top" id="7LP-Ow-sO0"/>
+                            <constraint firstItem="CmC-Hd-Saq" firstAttribute="bottom" secondItem="f6N-kv-R9V" secondAttribute="bottom" constant="20" id="EHe-Tb-OBB"/>
+                            <constraint firstItem="CmC-Hd-Saq" firstAttribute="trailing" secondItem="f6N-kv-R9V" secondAttribute="trailing" constant="20" id="POx-Xg-VZD"/>
+                            <constraint firstItem="Mg7-Ii-GZH" firstAttribute="leading" secondItem="CmC-Hd-Saq" secondAttribute="leading" id="cFL-s0-vNQ"/>
+                            <constraint firstItem="f6N-kv-R9V" firstAttribute="leading" secondItem="CmC-Hd-Saq" secondAttribute="leading" constant="20" id="cLN-rQ-qHm"/>
+                            <constraint firstItem="Mg7-Ii-GZH" firstAttribute="trailing" secondItem="CmC-Hd-Saq" secondAttribute="trailing" id="hcg-Sc-zDb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CmC-Hd-Saq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="eh4-lM-sKi">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FHs-PA-ggF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FHs-PA-ggF">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="qJQ-B3-9qL" id="QwB-ue-HiL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="biographyTextView" destination="Iuu-rR-FdT" id="e76-fa-bjf"/>
+                        <outlet property="birthYearLabel" destination="kbS-Of-EXO" id="Bfu-fQ-hWN"/>
+                        <outlet property="nameLabel" destination="f1Q-24-qbU" id="in7-JK-SIa"/>
+                        <outlet property="searchBar" destination="Mg7-Ii-GZH" id="FVK-Tk-vv5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7l-Sa-SNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

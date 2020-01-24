@@ -16,6 +16,7 @@
 		BBBCECB523DB4C4200506CAF /* SKSArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECB423DB4C4200506CAF /* SKSArtist.m */; };
 		BBBCECB823DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECB723DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m */; };
 		BBBCECBB23DB50EC00506CAF /* SKSArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */; };
+		BBBCECBF23DB522300506CAF /* SKSArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECBE23DB522300506CAF /* SKSArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		BBBCECB723DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKSArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		BBBCECB923DB50EC00506CAF /* SKSArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSArtistTableViewController.h; sourceTree = "<group>"; };
 		BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSArtistTableViewController.m; sourceTree = "<group>"; };
+		BBBCECBD23DB522300506CAF /* SKSArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSArtistDetailViewController.h; sourceTree = "<group>"; };
+		BBBCECBE23DB522300506CAF /* SKSArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 		BBBCEC9923DB4A2800506CAF /* unit4-sprintchallenge2-ss */ = {
 			isa = PBXGroup;
 			children = (
+				BBBCECBC23DB51FD00506CAF /* ViewControllers */,
 				BBBCEC9A23DB4A2800506CAF /* AppDelegate.h */,
 				BBBCEC9B23DB4A2800506CAF /* AppDelegate.m */,
 				BBBCEC9D23DB4A2800506CAF /* SceneDelegate.h */,
@@ -80,10 +84,19 @@
 				BBBCECA823DB4A2C00506CAF /* LaunchScreen.storyboard */,
 				BBBCECAB23DB4A2C00506CAF /* Info.plist */,
 				BBBCECAC23DB4A2C00506CAF /* main.m */,
-				BBBCECB923DB50EC00506CAF /* SKSArtistTableViewController.h */,
-				BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */,
 			);
 			path = "unit4-sprintchallenge2-ss";
+			sourceTree = "<group>";
+		};
+		BBBCECBC23DB51FD00506CAF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBBCECB923DB50EC00506CAF /* SKSArtistTableViewController.h */,
+				BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */,
+				BBBCECBD23DB522300506CAF /* SKSArtistDetailViewController.h */,
+				BBBCECBE23DB522300506CAF /* SKSArtistDetailViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +176,7 @@
 				BBBCECB823DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m in Sources */,
 				BBBCECB523DB4C4200506CAF /* SKSArtist.m in Sources */,
 				BBBCEC9F23DB4A2800506CAF /* SceneDelegate.m in Sources */,
+				BBBCECBF23DB522300506CAF /* SKSArtistDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="bxe-Tj-2sU" detailTextLabel="KOT-cN-O1N" style="IBUITableViewCellStyleSubtitle" id="Ed3-08-bfb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ArtistCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="bxe-Tj-2sU" detailTextLabel="KOT-cN-O1N" style="IBUITableViewCellStyleSubtitle" id="Ed3-08-bfb">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ed3-08-bfb" id="Vow-Gd-ZHH">
@@ -130,6 +130,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="artistSearchBar" destination="vIP-qF-k1w" id="JBV-Lf-HEg"/>
+                        <outlet property="bioTextView" destination="Mof-pw-gT5" id="sdw-8e-8kk"/>
                         <outlet property="nameLabel" destination="t3h-P8-1tt" id="tJC-yu-t49"/>
                         <outlet property="yearFormedLabel" destination="eXa-Gm-Hn2" id="blM-Hn-lz6"/>
                     </connections>

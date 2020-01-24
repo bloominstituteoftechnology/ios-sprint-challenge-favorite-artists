@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSIArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIArtistsTableViewController : UITableViewController
+
+@property (nonatomic, copy) LSIArtistController *artistController;
 
 @end
 

@@ -7,6 +7,8 @@
 //
 
 #import "LSISearchArtistViewController.h"
+#import "LSIArtist.h"
+#import "LSIArtistController.h"
 
 @interface LSISearchArtistViewController ()
 
@@ -14,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
 
 @end
 

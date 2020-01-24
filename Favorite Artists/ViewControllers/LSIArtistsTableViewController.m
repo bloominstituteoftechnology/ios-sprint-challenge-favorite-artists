@@ -7,12 +7,25 @@
 //
 
 #import "LSIArtistsTableViewController.h"
+#import "LSISearchArtistViewController.h"
+#import "LSIArtistController.h"
+#import "LSIArtist.h"
 
 @interface LSIArtistsTableViewController ()
 
 @end
 
 @implementation LSIArtistsTableViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    
+    self = [super initWithCoder:coder];
+    if (self) {
+        
+        _artistController = [[LSIArtistController alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,27 +37,37 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.artistController.favoriteArtists.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
+    
+    LSIArtist *artist = self.artistController.favoriteArtists[indexPath.row];
+    NSNumber *yearNumber = [NSNumber numberWithInt:artist.yearFormed];
+    
+    cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = [yearNumber stringValue];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -80,14 +103,25 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"SearchNewArtistSegue"]) {
+        
+        LSISearchArtistViewController *searchArtistVC = (LSISearchArtistViewController *)[segue destinationViewController];
+        
+        searchArtistVC.artistController = self.artistController;
+        
+    } else if ([segue.identifier isEqualToString:@"ShowArtistDetailSegue"]) {
+        
+        LSISearchArtistViewController *artistDetailVC = (LSISearchArtistViewController *)[segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        LSIArtist *artist = self.artistController.favoriteArtists[indexPath.row];
+        
+        artistDetailVC.artistController = self.artistController;
+        artistDetailVC.artist = artist;
+    }
 }
-*/
 
 @end

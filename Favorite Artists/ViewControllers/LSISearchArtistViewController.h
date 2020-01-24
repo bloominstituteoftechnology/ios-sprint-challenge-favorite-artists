@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSIArtist;
+@class LSIArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSISearchArtistViewController : UIViewController
+
+@property (nonatomic, strong) LSIArtist *artist;
+@property (nonatomic, strong) LSIArtistController *artistController;
 
 @end
 

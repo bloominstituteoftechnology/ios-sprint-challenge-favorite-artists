@@ -16,6 +16,7 @@
 		FA69ADAA23DB511900798F67 /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADA923DB511900798F67 /* LSIArtistsTableViewController.m */; };
 		FA69ADAD23DB514100798F67 /* LSISearchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADAC23DB514100798F67 /* LSISearchArtistViewController.m */; };
 		FA69ADB023DB522800798F67 /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADAF23DB522800798F67 /* LSIArtist.m */; };
+		FA69ADB323DB528400798F67 /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADB223DB528400798F67 /* LSIArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		FA69ADAC23DB514100798F67 /* LSISearchArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSISearchArtistViewController.m; sourceTree = "<group>"; };
 		FA69ADAE23DB522800798F67 /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
 		FA69ADAF23DB522800798F67 /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
+		FA69ADB123DB528400798F67 /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
+		FA69ADB223DB528400798F67 /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 		FA69ADA523DB4E9600798F67 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA69ADB123DB528400798F67 /* LSIArtistController.h */,
+				FA69ADB223DB528400798F67 /* LSIArtistController.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA69ADB323DB528400798F67 /* LSIArtistController.m in Sources */,
 				FA69AD8C23DB4E7600798F67 /* AppDelegate.m in Sources */,
 				FA69AD9D23DB4E7900798F67 /* main.m in Sources */,
 				FA69ADAD23DB514100798F67 /* LSISearchArtistViewController.m in Sources */,

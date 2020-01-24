@@ -150,7 +150,7 @@
                     <navigationItem key="navigationItem" id="bdO-ab-SfP">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="DYM-Ve-PcZ">
                             <connections>
-                                <action selector="saveButton:" destination="amF-ce-Wgn" id="rXr-59-9VB"/>
+                                <action selector="saveButton" destination="amF-ce-Wgn" id="mX9-Wf-sTO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

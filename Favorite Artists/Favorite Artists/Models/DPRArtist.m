@@ -14,7 +14,7 @@
     
     NSString *name = dictionary[@"strArtist"];
     NSString *bio = dictionary[@"strBiographyEN"];
-    NSString *yearFormedString = dictionary[@"intFormedYear"];
+    NSString *yearFormedString = (dictionary[@"intFormedYear"] == (id)[NSNull null] ) ? 0 :  [dictionary objectForKey:@"intFormedYear"];
     
     NSInteger yearFormed = [yearFormedString integerValue];
     

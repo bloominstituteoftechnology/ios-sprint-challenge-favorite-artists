@@ -27,7 +27,12 @@
 - (void)updateViews {
     if (self.artist) {
         self.nameLabel.text = self.artist.name;
-        self.yearLabel.text = [NSString stringWithFormat:@"Formed in %li", (long)self.artist.yearFormed];
+        NSInteger valid = self.artist.yearFormed;
+        if (valid == 0) {
+            self.yearLabel.text = @"Formed in: ?";
+        } else {
+            self.yearLabel.text = [NSString stringWithFormat:@"Formed in %li", (long)self.artist.yearFormed];
+        }
         self.bioTextView.text = self.artist.bio;
     }
 }

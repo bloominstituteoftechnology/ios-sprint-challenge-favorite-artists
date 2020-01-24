@@ -45,7 +45,12 @@
     DPRArtist *artist = [self.artistController.artists objectAtIndex:indexPath.row];
     
     cell.textLabel.text = artist.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %ld", (long)(artist.yearFormed)];
+    NSInteger valid = artist.yearFormed;
+    if (valid == 0) {
+        cell.detailTextLabel.text = @"Formed in: ?";
+    } else {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %li", (long)artist.yearFormed];
+    }
     
     return cell;
 }

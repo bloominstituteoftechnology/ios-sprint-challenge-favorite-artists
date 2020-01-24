@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
 @property DPRArtist *artist;
 
-- (IBAction)saveButton:(UIBarButtonItem *)sender;
+- (IBAction)saveButton;
 - (void)updateViews;
 
 @end
@@ -45,7 +45,7 @@
     }];
 }
 
-- (IBAction)saveButton:(UIBarButtonItem *)sender {
+- (IBAction)saveButton {
     if (self.artist) {
         [self.artistController.artists addObject:self.artist];
         [self.artistController saveArtists];
@@ -58,7 +58,12 @@
 - (void)updateViews {
     if (self.artist) {
         self.nameLabel.text = self.artist.name;
-        self.yearLabel.text = [NSString stringWithFormat:@"Formed in %li", (long)self.artist.yearFormed];
+        NSInteger valid = self.artist.yearFormed;
+        if (valid == 0) {
+            self.yearLabel.text = @"Formed in: ?";
+        } else {
+            self.yearLabel.text = [NSString stringWithFormat:@"Formed in %li", (long)self.artist.yearFormed];
+        }
         self.bioTextView.text = self.artist.bio;
     } else {
         self.nameLabel.text = @"";

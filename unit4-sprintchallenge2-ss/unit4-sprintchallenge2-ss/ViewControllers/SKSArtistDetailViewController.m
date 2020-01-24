@@ -28,7 +28,7 @@
 - (void)updateViews {
     if (self.artist) {
         self.title = self.artist.name;
-        self.formedYearLabel.text = [self.artist formedYearString];
+        self.formedYearLabel.text = [NSString stringWithFormat:@"Formed in: %@", [self.artist formedYearString]];
         self.biographyTextView.text = self.artist.biography;
     }
 }

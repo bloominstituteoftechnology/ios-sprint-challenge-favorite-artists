@@ -56,7 +56,7 @@ static NSString * const reuseIdentifier = @"ArtistCell";
 
     SKSArtist *artist = self.artistController.artists[indexPath.row];
     cell.textLabel.text = artist.name;
-    cell.detailTextLabel.text = [artist formedYearString];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in: %@", [artist formedYearString]];
     
     return cell;
 }

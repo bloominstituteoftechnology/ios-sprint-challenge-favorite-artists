@@ -34,7 +34,7 @@
 - (void)updateViews {
     if (self.artist) {
         self.nameLabel.text = self.artist.name;
-        self.formedYearLabel.text = [self.artist formedYearString];
+        self.formedYearLabel.text = [NSString stringWithFormat:@"Formed in: %@", [self.artist formedYearString]];
         self.biographyTextView.text = self.artist.biography;
     } else {
         self.nameLabel.text = @"";
@@ -52,26 +52,6 @@
     [self.artistController writeDictionaryToFile:[self.artist toDictionary]];
 
     [self.navigationController popViewControllerAnimated:TRUE];
-//    NSURL *fileURL = [self.artistController artistsFileURL];
-//    NSLog(@"FileURL %@", fileURL);
-//    NSError *writeToURLError = nil;
-//
-//    NSDictionary *artists = @{
-//        @"artists" : [[NSMutableArray alloc] init]
-//    };
-//
-//    [artists[@"artists"] addObject:[self.artist toDictionary]];
-//    NSLog(@"Dictionary: %@", artists);
-//
-//    if([artists writeToURL:fileURL error:&writeToURLError]) {
-//
-//    }
-//
-//
-//    if (writeToURLError) {
-//        NSLog(@"Error writing to url %@", writeToURLError);
-//        return;
-//    }
 }
 
 #pragma mark UISearchBarDelegate Methods

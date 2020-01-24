@@ -15,6 +15,8 @@
 		996773E423DB4A8A00C4BCE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773E323DB4A8A00C4BCE6 /* main.m */; };
 		996773F223DB4DFF00C4BCE6 /* JBFavsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773F123DB4DFF00C4BCE6 /* JBFavsViewController.m */; };
 		996773F523DB4E1000C4BCE6 /* JBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773F423DB4E1000C4BCE6 /* JBDetailViewController.m */; };
+		996773F823DB503000C4BCE6 /* JBArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773F723DB503000C4BCE6 /* JBArtist.m */; };
+		996773FB23DB503900C4BCE6 /* JBArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773FA23DB503900C4BCE6 /* JBArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,11 @@
 		996773F123DB4DFF00C4BCE6 /* JBFavsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBFavsViewController.m; sourceTree = "<group>"; };
 		996773F323DB4E1000C4BCE6 /* JBDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBDetailViewController.h; sourceTree = "<group>"; };
 		996773F423DB4E1000C4BCE6 /* JBDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBDetailViewController.m; sourceTree = "<group>"; };
+		996773F623DB503000C4BCE6 /* JBArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBArtist.h; sourceTree = "<group>"; };
+		996773F723DB503000C4BCE6 /* JBArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBArtist.m; sourceTree = "<group>"; };
+		996773F923DB503900C4BCE6 /* JBArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBArtistController.h; sourceTree = "<group>"; };
+		996773FA23DB503900C4BCE6 /* JBArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBArtistController.m; sourceTree = "<group>"; };
+		996773FE23DB511200C4BCE6 /* JBFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBFileHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +76,7 @@
 				996773ED23DB4B3000C4BCE6 /* View Controllers */,
 				996773EC23DB4B2A00C4BCE6 /* Model Controllers */,
 				996773EB23DB4B2500C4BCE6 /* Models */,
+				996773FC23DB504200C4BCE6 /* Helpers */,
 				996773EA23DB4A9A00C4BCE6 /* Application */,
 			);
 			path = Unit4Sprint2Challenge;
@@ -91,6 +99,8 @@
 		996773EB23DB4B2500C4BCE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				996773F623DB503000C4BCE6 /* JBArtist.h */,
+				996773F723DB503000C4BCE6 /* JBArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,6 +108,8 @@
 		996773EC23DB4B2A00C4BCE6 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				996773F923DB503900C4BCE6 /* JBArtistController.h */,
+				996773FA23DB503900C4BCE6 /* JBArtistController.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -127,6 +139,14 @@
 				996773DF23DB4A8A00C4BCE6 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		996773FC23DB504200C4BCE6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				996773FE23DB511200C4BCE6 /* JBFileHelper.h */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +224,8 @@
 				996773F523DB4E1000C4BCE6 /* JBDetailViewController.m in Sources */,
 				996773D323DB4A8700C4BCE6 /* AppDelegate.m in Sources */,
 				996773E423DB4A8A00C4BCE6 /* main.m in Sources */,
+				996773F823DB503000C4BCE6 /* JBArtist.m in Sources */,
+				996773FB23DB503900C4BCE6 /* JBArtistController.m in Sources */,
 				996773D623DB4A8700C4BCE6 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

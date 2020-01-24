@@ -39,6 +39,7 @@
 
 - (void)removeArtist:(DMOArtist *)artist {
     [self.internalSavedArtists removeObject:artist];
+    [self saveToPersistentStore];
 }
 
 - (NSURL *)persistentFileURL {

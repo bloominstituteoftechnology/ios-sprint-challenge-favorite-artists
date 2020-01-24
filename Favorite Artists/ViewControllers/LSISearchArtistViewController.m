@@ -29,6 +29,22 @@
 - (IBAction)saveBarButtonTapped:(UIBarButtonItem *)sender {
 }
 
+- (void)updateViews {
+    
+    if (self.artist) {
+        
+        NSNumber *yearNumber = [NSNumber numberWithInt:self.artist.yearFormed];
+        
+        self.title = self.artist.name;
+        self.nameLabel.text = self.artist.name;
+        self.yearFormedLabel.text = yearNumber;
+        self.bioTextView.text = self.artist.biography;
+    } else {
+        self.title = @"Search Artist";
+    }
+}
+
+
 /*
 #pragma mark - Navigation
 

@@ -12,7 +12,7 @@
 
 @implementation LSIArtistController
 
-- (void)createArtistWithName:(NSString *)name
+- (LSIArtist *)createArtistWithName:(NSString *)name
                           biography:(NSString *)biography
                          yearFormed:(int)yearFormed {
     
@@ -20,6 +20,7 @@
     
     LSIArtist *artist = [[LSIArtist alloc]initWithName:name biography:biography yearFormed:yearNumber];
     
+    return artist;
 }
 
 //- (void)updateArtist:(LSIArtist *)artist withName:(NSString *)name
@@ -28,7 +29,7 @@
 //    
 //}
 
-- (void)deleteDocument:(LSIArtist *)artist {
+- (void)deleteArtist:(LSIArtist *)artist {
     
 }
 

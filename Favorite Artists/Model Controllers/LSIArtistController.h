@@ -13,16 +13,16 @@
 
 @interface LSIArtistController : NSObject
 
+@property (nonatomic, copy, readonly) NSArray *favoriteArtists;
+
 - (LSIArtist *)createArtistWithName:(NSString *)name
                           biography:(NSString *)biography
                          yearFormed:(int)yearFormed;
 
-- (void)updateArtist:(LSIArtist *)artist withName:(NSString *)name
-           biography:(NSString *)biography
-          yearFormed:(int)yearFormed;
+//- (void)updateArtist:(LSIArtist *)artist withName:(NSString *)name
+//           biography:(NSString *)biography
+//          yearFormed:(int)yearFormed;
 
-- (void)deleteDocument:(LSIArtist *)artist;
-
-@property (nonatomic, copy, readonly) NSArray *favoriteArtists;
+- (void)deleteArtist:(LSIArtist *)artist;
 
 @end

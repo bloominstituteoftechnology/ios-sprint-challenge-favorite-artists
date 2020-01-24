@@ -15,6 +15,7 @@
 		BBBCECAD23DB4A2C00506CAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECAC23DB4A2C00506CAF /* main.m */; };
 		BBBCECB523DB4C4200506CAF /* SKSArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECB423DB4C4200506CAF /* SKSArtist.m */; };
 		BBBCECB823DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECB723DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m */; };
+		BBBCECBB23DB50EC00506CAF /* SKSArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		BBBCECB423DB4C4200506CAF /* SKSArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSArtist.m; sourceTree = "<group>"; };
 		BBBCECB623DB4E0000506CAF /* SKSArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKSArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		BBBCECB723DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKSArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		BBBCECB923DB50EC00506CAF /* SKSArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSArtistTableViewController.h; sourceTree = "<group>"; };
+		BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSArtistTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				BBBCECA823DB4A2C00506CAF /* LaunchScreen.storyboard */,
 				BBBCECAB23DB4A2C00506CAF /* Info.plist */,
 				BBBCECAC23DB4A2C00506CAF /* main.m */,
+				BBBCECB923DB50EC00506CAF /* SKSArtistTableViewController.h */,
+				BBBCECBA23DB50EC00506CAF /* SKSArtistTableViewController.m */,
 			);
 			path = "unit4-sprintchallenge2-ss";
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			files = (
 				BBBCEC9C23DB4A2800506CAF /* AppDelegate.m in Sources */,
 				BBBCECAD23DB4A2C00506CAF /* main.m in Sources */,
+				BBBCECBB23DB50EC00506CAF /* SKSArtistTableViewController.m in Sources */,
 				BBBCECB823DB4E0000506CAF /* SKSArtist+NSJSONSerialization.m in Sources */,
 				BBBCECB523DB4C4200506CAF /* SKSArtist.m in Sources */,
 				BBBCEC9F23DB4A2800506CAF /* SceneDelegate.m in Sources */,

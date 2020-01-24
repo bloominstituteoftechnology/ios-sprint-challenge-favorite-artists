@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class JPHArtistController;
+@class JPHArtist;
 
-@interface JPHArtistDetailViewController : UIViewController
+@interface JPHArtistDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property JPHArtistController *artistController;
+@property JPHArtist *artist;
 
 @end
 
-NS_ASSUME_NONNULL_END
+

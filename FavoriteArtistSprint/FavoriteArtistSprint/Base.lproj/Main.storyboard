@@ -120,8 +120,18 @@
                         <viewLayoutGuide key="safeArea" id="9fK-ak-dph"/>
                     </view>
                     <navigationItem key="navigationItem" id="LXZ-L2-RkH">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="R9B-Zi-dF6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="R9B-Zi-dF6">
+                            <connections>
+                                <action selector="saveTapped:" destination="1ce-FA-S0l" id="kcg-ft-qXO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="8yS-eG-RHl" id="yyO-3c-StQ"/>
+                        <outlet property="bioTextView" destination="d1S-YP-dJe" id="DU1-8x-ndD"/>
+                        <outlet property="searchBar" destination="J6z-sI-Brn" id="2XH-NF-lFk"/>
+                        <outlet property="yearFormedLabel" destination="rRZ-nd-uQ2" id="HEh-N0-TZD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qy-1C-XqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

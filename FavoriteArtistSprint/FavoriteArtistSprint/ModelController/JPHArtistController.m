@@ -27,8 +27,9 @@
 }
 
 -(NSMutableArray *)favoriteArtists {
-    NSArray *searchPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *directory = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:directory error:nil];
+NSArray *searchPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+NSString *directory = [searchPath objectAtIndex:0];
+NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:directory error:nil];
     
     for (NSString *artist in filePaths) {
         NSString *filePath = [[NSString alloc]initWithFormat:@"Documents/%@", artist];
@@ -48,6 +49,8 @@
 }
 
 static NSString * const baseURLStr = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
+
+//theaudiodb.com/api/v1/json/{APIKEY}/search.php?s=
 
 - (void)searchArtistWithName:(NSString *)artistName completion:(void (^)(JPHArtist *artist, NSError *error))completion {
     

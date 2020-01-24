@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NMKArtist.h"
 
+@interface NMKArtist (NSJSONSerialization)
 
-@interface NSJSONSerialization (NMKArtist)
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+- (NSDictionary *)toDictionary;
 
 @end
 

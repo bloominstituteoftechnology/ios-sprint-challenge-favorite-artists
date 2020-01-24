@@ -8,6 +8,26 @@
 
 #import "NSJSONSerialization+NMKArtist.h"
 
-@implementation NSJSONSerialization (NMKArtist)
+@implementation NMKArtist (NSJSONSerialization)
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    
+    NSString *name = [dictionary objectForKey:@"strArtist"]; // see if "objectForKey" is needed
+    NSString *biography = [dictionary objectForKey:@"strBiographyEN"];
+    
+    int yearData = [[dictionary objectForKey:@"intFormedYear"] intValue];
+    
+//    int yearFormed = yearData;
+    return [ self initWithArtistName:name biography:biography yearFormed:yearData ];
+    
+}
+
+- (NSDictionary *)toDictionary {
+    
+    // this takes the values and returns the model objects to save the artist attributes needed
+    return @{@"strArtist": self.artist, @"strBiographyEN": self.biography, @"intFormedYear": [[NSNumber alloc] initWithInt:self.yearFormed]};
+}
+
+
 
 @end

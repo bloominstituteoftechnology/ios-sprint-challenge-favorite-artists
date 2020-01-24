@@ -140,7 +140,6 @@ static NSString *artistsKey = @"artists";
 - (NSURL *)persistenceFilePath
 {
     NSURL *url = [self.documentDirectory URLByAppendingPathComponent:@"favoriteArtists.txt"];
-    NSLog(@"persistence url: %@", url);
     return url;
 }
 
@@ -148,7 +147,7 @@ static NSString *artistsKey = @"artists";
 {
     return [[[NSFileManager defaultManager]
              URLsForDirectory:NSDocumentDirectory
-             inDomains:NSUserDomainMask] lastObject];
+             inDomains:NSUserDomainMask] firstObject];
 }
 
 @end

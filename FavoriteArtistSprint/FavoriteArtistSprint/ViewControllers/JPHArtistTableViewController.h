@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JPHArtistTableViewController.h
 //  FavoriteArtistSprint
 //
 //  Created by Jerry haaser on 1/24/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface JPHArtistTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

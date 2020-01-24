@@ -17,6 +17,7 @@
 		C00BB79023DB6FE90073B373 /* DMOArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00BB78F23DB6FE90073B373 /* DMOArtistDetailViewController.m */; };
 		C00BB79323DB72840073B373 /* DMOArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C00BB79223DB72840073B373 /* DMOArtist.m */; };
 		C00BB79A23DB74350073B373 /* DMOArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C00BB79923DB74350073B373 /* DMOArtist+NSJSONSerialization.m */; };
+		C00BB79D23DB75640073B373 /* DMOArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00BB79C23DB75640073B373 /* DMOArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		C00BB79223DB72840073B373 /* DMOArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMOArtist.m; sourceTree = "<group>"; };
 		C00BB79823DB74350073B373 /* DMOArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DMOArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		C00BB79923DB74350073B373 /* DMOArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DMOArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		C00BB79B23DB75640073B373 /* DMOArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMOArtistController.h; sourceTree = "<group>"; };
+		C00BB79C23DB75640073B373 /* DMOArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMOArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,7 @@
 				C00BB77523DB4D410073B373 /* SceneDelegate.m */,
 				C00BB78D23DB6FC20073B373 /* View Controllers */,
 				C00BB77A23DB4D420073B373 /* Main.storyboard */,
+				C00BB79E23DB75690073B373 /* Model Controllers */,
 				C00BB79423DB728F0073B373 /* Models */,
 				C00BB77D23DB4D420073B373 /* Assets.xcassets */,
 				C00BB77F23DB4D420073B373 /* LaunchScreen.storyboard */,
@@ -105,6 +109,15 @@
 				C00BB79923DB74350073B373 /* DMOArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C00BB79E23DB75690073B373 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C00BB79B23DB75640073B373 /* DMOArtistController.h */,
+				C00BB79C23DB75640073B373 /* DMOArtistController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +193,7 @@
 				C00BB79023DB6FE90073B373 /* DMOArtistDetailViewController.m in Sources */,
 				C00BB78C23DB6FB60073B373 /* DMOArtistsTableViewController.m in Sources */,
 				C00BB77323DB4D410073B373 /* AppDelegate.m in Sources */,
+				C00BB79D23DB75640073B373 /* DMOArtistController.m in Sources */,
 				C00BB79323DB72840073B373 /* DMOArtist.m in Sources */,
 				C00BB79A23DB74350073B373 /* DMOArtist+NSJSONSerialization.m in Sources */,
 				C00BB78423DB4D420073B373 /* main.m in Sources */,

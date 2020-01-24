@@ -10,4 +10,16 @@
 
 @implementation NMKArtist
 
+- (instancetype)initWithArtistName:(NSString *)artist
+                         biography:(NSString *)biography
+                        yearFormed:(int)yearFormed {
+    
+    if (self = [super init]) {
+        _artist = artist.copy;
+        _biography = biography.copy;
+        _yearFormed = yearFormed;
+    }
+    return self;
+}
+
 @end

@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface NMKArtist : NSObject
+
+@property (nonatomic, copy) NSString *artist;
+@property (nonatomic, copy) NSString *biography;
+@property (nonatomic) int yearFormed;
+
+- (instancetype)initWithArtistName:(NSString *)artist biography:(NSString *)biography yearFormed:(int)yearFormed;
 
 @end
 
-NS_ASSUME_NONNULL_END

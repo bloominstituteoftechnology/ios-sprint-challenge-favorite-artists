@@ -15,13 +15,14 @@
 
 @property (nonatomic, copy, readonly) NSArray *favoriteArtists;
 
-- (LSIArtist *)createArtistWithName:(NSString *)name
-                          biography:(NSString *)biography
-                         yearFormed:(int)yearFormed;
+- (void)searchForArtist:(void (^)(NSError *error))completion;
 
-//- (void)updateArtist:(LSIArtist *)artist withName:(NSString *)name
-//           biography:(NSString *)biography
-//          yearFormed:(int)yearFormed;
+
+
+- (LSIArtist *)AddArtistWithName:(NSString *)name
+                       biography:(NSString *)biography
+                      yearFormed:(int)yearFormed;
+
 
 - (void)deleteArtist:(LSIArtist *)artist;
 

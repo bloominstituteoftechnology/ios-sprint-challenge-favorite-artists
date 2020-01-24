@@ -27,6 +27,23 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)saveBarButtonTapped:(UIBarButtonItem *)sender {
+    
+    NSString *name = self.nameLabel.text;
+    NSString *bio = self.bioTextView.text;
+    NSString *yearString = self.yearFormedLabel.text;
+    int yearInt = [yearString integerValue];
+
+    
+    if (self.artist) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    } else {
+        
+        [self.artistController AddArtistWithName:name biography:bio yearFormed:yearInt];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (void)updateViews {

@@ -17,6 +17,7 @@
 		FA69ADAD23DB514100798F67 /* LSISearchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADAC23DB514100798F67 /* LSISearchArtistViewController.m */; };
 		FA69ADB023DB522800798F67 /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADAF23DB522800798F67 /* LSIArtist.m */; };
 		FA69ADB323DB528400798F67 /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADB223DB528400798F67 /* LSIArtistController.m */; };
+		FA69ADB623DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADB523DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		FA69ADAF23DB522800798F67 /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 		FA69ADB123DB528400798F67 /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
 		FA69ADB223DB528400798F67 /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
+		FA69ADB423DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+LSIYuorArtistModel.h"; sourceTree = "<group>"; };
+		FA69ADB523DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+LSIYuorArtistModel.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 			children = (
 				FA69ADB123DB528400798F67 /* LSIArtistController.h */,
 				FA69ADB223DB528400798F67 /* LSIArtistController.m */,
+				FA69ADB423DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.h */,
+				FA69ADB523DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				FA69ADAD23DB514100798F67 /* LSISearchArtistViewController.m in Sources */,
 				FA69ADB023DB522800798F67 /* LSIArtist.m in Sources */,
 				FA69AD8F23DB4E7600798F67 /* SceneDelegate.m in Sources */,
+				FA69ADB623DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.m in Sources */,
 				FA69ADAA23DB511900798F67 /* LSIArtistsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

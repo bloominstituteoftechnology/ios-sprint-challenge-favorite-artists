@@ -21,17 +21,18 @@ static NSString *bornKey = @"intBornYear";
 {
     NSString *name = dictionary[nameKey];
     NSString *bio = dictionary[bioKey];
+    NSNumber *yearFormed = dictionary[formedKey];
     NSNumber *originYear;
     BOOL wasBorn;
 
-    if (dictionary[formedKey] == NSNull.null)
+    if ([yearFormed isKindOfClass:[NSNull class]] || yearFormed == 0)
     {
         originYear = dictionary[bornKey];
         wasBorn = YES;
     }
     else
     {
-        originYear = dictionary[formedKey];
+        originYear = yearFormed;
         wasBorn = NO;
     }
     self = [self initWithName:name

@@ -11,7 +11,10 @@
 
 @interface SKSArtistController()
 
-@property (nonatomic) NSMutableArray *tempArtists;
+@property (nonatomic) NSDictionary *artistDictionary;
+
+- (void)loadArtistDictionary;
+- (NSURL *)artistsFileURL;
 
 @end
 
@@ -23,13 +26,47 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
 {
     self = [super init];
     if (self) {
-        _tempArtists = [[NSMutableArray alloc] init];
+        _artistDictionary = @{
+            @"artists" : [[NSMutableArray alloc] init]
+        };
+        [self loadArtistDictionary];
     }
     return self;
 }
 
 - (NSArray *)artists {
-    return [self.tempArtists copy];
+    NSMutableArray *artistArray = [[NSMutableArray alloc] init];
+    NSArray *artistDictionaries = self.artistDictionary[@"artists"];
+    for (NSDictionary *artists in artistDictionaries) {
+        SKSArtist *artist = [[SKSArtist alloc] initWithDictionary:artists];
+        [artistArray addObject:artist];
+    }
+    return [artistArray copy];
+}
+
+
+
+- (void)writeDictionaryToFile:(NSDictionary *)dictionary {
+
+    NSURL *fileURL = [self artistsFileURL];
+    NSLog(@"FileURL %@", fileURL);
+    NSError *writeToURLError = nil;
+
+    [self.artistDictionary[@"artists"] addObject:dictionary];
+
+    NSLog(@"Dictionary %@", self.artistDictionary);
+
+    if([self.artistDictionary writeToURL:fileURL error:&writeToURLError]) {
+
+    }
+}
+
+- (void)loadArtistDictionary {
+    NSDictionary *artistDictionary = [NSDictionary dictionaryWithContentsOfURL:[self artistsFileURL] error: NULL];
+    NSArray *artistDictionaries = artistDictionary[@"artists"];
+    for (NSDictionary *artists in artistDictionaries) {
+        [self.artistDictionary[@"artists"] addObject:artists];
+    }
 }
 
 - (NSURL *)artistsFileURL {

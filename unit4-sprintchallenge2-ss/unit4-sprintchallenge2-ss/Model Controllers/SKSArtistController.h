@@ -16,7 +16,7 @@
 
 - (void)searchForArtistsByName:(NSString *)name completion:(void (^)(SKSArtist *artist, NSError *error))completion;
 
-- (NSURL *)artistsFileURL;
+- (void)writeDictionaryToFile:(NSDictionary *)dictionary;
 
 @end
 

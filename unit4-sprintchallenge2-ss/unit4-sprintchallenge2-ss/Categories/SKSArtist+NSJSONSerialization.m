@@ -24,9 +24,9 @@
 - (NSDictionary *)toDictionary {
 
     NSDictionary *artistDictionary = @{
-        @"artistName" : self.name,
-        @"yearFormed" : [self formedYearString],
-        @"biography" : self.biography
+        @"strArtist" : self.name,
+        @"intFormedYear" : [self formedYearString],
+        @"strBiographyEN" : self.biography
     };
 
     return artistDictionary;

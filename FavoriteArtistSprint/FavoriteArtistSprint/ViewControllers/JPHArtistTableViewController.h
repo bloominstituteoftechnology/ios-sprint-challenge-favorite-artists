@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class JPHArtist;
+@class JPHArtistController;
+
 
 @interface JPHArtistTableViewController : UITableViewController
 
+@property JPHArtist *artist;
+
 @end
 
-NS_ASSUME_NONNULL_END
+

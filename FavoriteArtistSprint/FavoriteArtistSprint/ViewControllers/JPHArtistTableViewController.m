@@ -7,8 +7,14 @@
 //
 
 #import "JPHArtistTableViewController.h"
+#import "JPHArtistDetailViewController.h"
+#import "JPHArtistController.h"
+#import "JPHArtist.h"
 
 @interface JPHArtistTableViewController ()
+
+@property NSMutableArray *artistArray;
+@property JPHArtistController *artistController;
 
 @end
 
@@ -17,34 +23,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.tableView.tableFooterView = [UIView new];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (!self.artistController) {
+        self.artistController = [[JPHArtistController alloc] init];
+        self.artist = [[JPHArtist alloc] init];
+    }
+    
+    [self.artistArray removeAllObjects];
+    self.artistArray = [self.artistController favoriteArtists];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.artistArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    JPHArtist *artist = self.artistArray[indexPath.row];
+    
+    NSString *yearStr = @"";
+    NSString *noYearStr = @"Year not available.";
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

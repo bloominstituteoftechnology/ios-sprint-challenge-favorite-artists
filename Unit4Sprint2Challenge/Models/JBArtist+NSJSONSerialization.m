@@ -21,13 +21,22 @@ static NSString *bornKey = @"intBornYear";
 {
     NSString *name = dictionary[nameKey];
     NSString *bio = dictionary[bioKey];
-    NSNumber *yearFormed = dictionary[formedKey];
-    NSNumber *yearBorn = dictionary[bornKey];
-    BOOL wasBorn = (yearFormed == nil);
+    NSNumber *originYear;
+    BOOL wasBorn;
 
+    if (dictionary[formedKey] == NSNull.null)
+    {
+        originYear = dictionary[bornKey];
+        wasBorn = YES;
+    }
+    else
+    {
+        originYear = dictionary[formedKey];
+        wasBorn = NO;
+    }
     self = [self initWithName:name
                     biography:bio
-                   originYear:(wasBorn ? yearBorn : yearFormed).intValue
+                   originYear:originYear.intValue
                       wasBorn:wasBorn];
 
     return self;

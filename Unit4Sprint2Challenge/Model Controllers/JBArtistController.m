@@ -16,6 +16,8 @@ static NSString *artistsKey = @"artists";
 @interface JBArtistController ()
 
 @property (nonatomic) NSMutableArray *mutableArtists;
+- (void)saveArtistsToPersistence;
+- (NSArray *)loadArtistsFromPersistence;
 
 @end
 
@@ -80,6 +82,18 @@ static NSString *artistsKey = @"artists";
             completion(nil, nil);
         }
     }] resume];
+}
+
+#pragma mark - Persistence
+
+- (void)saveArtistsToPersistence
+{
+
+}
+
+- (NSArray *)loadArtistsFromPersistence
+{
+    return @[];
 }
 
 @end

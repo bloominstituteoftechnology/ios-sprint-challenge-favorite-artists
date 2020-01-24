@@ -34,23 +34,40 @@
     self.searchBar.delegate = self;
     [self.searchBar setHidden:!self.willSearch];
     self.title = (self.willSearch) ? @"New artist" : self.artist.name;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
-                                              initWithTitle:@"Save"
-                                              style:UIBarButtonItemStyleDone
-                                              target:self
-                                              action:NSSelectorFromString(@"saveArtistToFavorites")];
+
+    if (self.willSearch)
+    {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                                  initWithTitle:@"Save"
+                                                  style:UIBarButtonItemStyleDone
+                                                  target:self
+                                                  action:NSSelectorFromString(@"saveArtistToFavorites")];
+        [self.navigationItem.rightBarButtonItem setEnabled:NO];
+    }
+    else
+    {
+        [self.nameLabel setHidden:YES];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.willSearch) { [self.searchBar becomeFirstResponder]; }
 }
 
 - (void)updateViews
 {
     if (self.artist)
     {
+        [self.navigationItem.rightBarButtonItem setEnabled:YES];
         self.nameLabel.text = self.artist.name;
         self.yearLabel.text = self.artist.originYearText;
         self.bioView.text = self.artist.biography;
     }
     else
     {
+        [self.navigationItem.rightBarButtonItem setEnabled:NO];
         self.nameLabel.text = @"";
         self.yearLabel.text = @"";
         self.bioView.text = @"";
@@ -61,6 +78,7 @@
 
 - (void)searchForArtist:(NSString *)artistName
 {
+    self.artist = nil;
     [self.artistController fetchArtistWithName:artistName
                                     completion:^(JBArtist *artist,
                                                  NSError *error)
@@ -86,6 +104,7 @@
             });
         }
     }];
+    [self updateViews];
 }
 
 - (void)saveArtistToFavorites

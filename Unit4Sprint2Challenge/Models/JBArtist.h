@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface JBArtist : NSObject
 
-@end
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSString *biography;
+@property (nonatomic, readonly) int originYear;
 
-NS_ASSUME_NONNULL_END
+@property (nonatomic, readonly) BOOL wasBorn;
+
+- (instancetype) initWithName:(NSString *)name
+                    biography:(NSString *)biography
+                   originYear:(int)originYear
+                      wasBorn:(BOOL)wasBorn;
+
+@end

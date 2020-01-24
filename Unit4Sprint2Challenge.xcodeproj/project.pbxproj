@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9945CF5A23DB5328006B6513 /* JBArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9945CF5923DB5328006B6513 /* JBArtist+NSJSONSerialization.m */; };
 		996773D323DB4A8700C4BCE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773D223DB4A8700C4BCE6 /* AppDelegate.m */; };
 		996773D623DB4A8700C4BCE6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 996773D523DB4A8700C4BCE6 /* SceneDelegate.m */; };
 		996773DC23DB4A8700C4BCE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996773DA23DB4A8700C4BCE6 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9945CF5823DB5328006B6513 /* JBArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JBArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		9945CF5923DB5328006B6513 /* JBArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JBArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		996773CE23DB4A8700C4BCE6 /* Unit4Sprint2Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit4Sprint2Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		996773D123DB4A8700C4BCE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		996773D223DB4A8700C4BCE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 			children = (
 				996773F623DB503000C4BCE6 /* JBArtist.h */,
 				996773F723DB503000C4BCE6 /* JBArtist.m */,
+				9945CF5823DB5328006B6513 /* JBArtist+NSJSONSerialization.h */,
+				9945CF5923DB5328006B6513 /* JBArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9945CF5A23DB5328006B6513 /* JBArtist+NSJSONSerialization.m in Sources */,
 				996773F223DB4DFF00C4BCE6 /* JBFavsViewController.m in Sources */,
 				996773F523DB4E1000C4BCE6 /* JBDetailViewController.m in Sources */,
 				996773D323DB4A8700C4BCE6 /* AppDelegate.m in Sources */,

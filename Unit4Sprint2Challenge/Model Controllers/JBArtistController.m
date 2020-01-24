@@ -21,7 +21,6 @@ static NSString *artistsKey = @"artists";
 @property (nonatomic, readonly) NSURL *documentDirectory;
 @property (nonatomic, readonly) NSURL *persistenceFilePath;
 - (void)saveArtistsToPersistence;
-- (void)saveArtistToPersistence:(JBArtist *)artist;
 - (NSArray *)artistsOnDisk;
 
 @end
@@ -39,7 +38,8 @@ static NSString *artistsKey = @"artists";
     self = [super init];
     if (self) {
         NSArray *artists = self.artistsOnDisk;
-        _mutableArtists = [((artists) ? artists : @[]) mutableCopy];
+        if (artists == nil) { artists = @[]; }
+        _mutableArtists = [artists mutableCopy];
     }
     return self;
 }
@@ -49,6 +49,7 @@ static NSString *artistsKey = @"artists";
 - (void)addArtist:(JBArtist *)artist
 {
     [self.mutableArtists addObject:artist];
+    [self saveArtistsToPersistence];
 }
 
 - (void)fetchArtistWithName:(NSString *)name
@@ -76,15 +77,15 @@ static NSString *artistsKey = @"artists";
             return;
         }
         NSArray *artists = dictionary[artistsKey];
-        if (artists.count > 0)
+        if (artists == NSNull.null)
+        {
+            completion(nil, nil);
+        }
+        else
         {
             NSDictionary *artistDict = artists.firstObject;
             JBArtist *artist = [[JBArtist alloc] initWithDictionary:artistDict];
             completion(artist, nil);
-        }
-        else
-        {
-            completion(nil, nil);
         }
     }] resume];
 }
@@ -94,7 +95,7 @@ static NSString *artistsKey = @"artists";
 - (void)saveArtistsToPersistence
 {
     NSMutableArray *artistDicts = [@[] mutableCopy];
-    for (JBArtist *artist in self.artists)
+    for (JBArtist *artist in self.mutableArtists)
     {
         [artistDicts addObject:artist.toDictionary];
     }
@@ -104,23 +105,23 @@ static NSString *artistsKey = @"artists";
     [dictionary writeToURL:self.persistenceFilePath atomically:YES];
 }
 
-- (void)saveArtistToPersistence:(JBArtist *)artist
-{
-    [artist.toDictionary
-     writeToURL:[NSURL fileURLWithPath:[NSString stringWithFormat:@"artist_%@", artist.name]
-                         relativeToURL:self.documentDirectory] atomically:YES];
-}
-
 - (NSArray *)artistsOnDisk
 {
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:self.persistenceFilePath];
-    return dictionary[artistsKey];
+    NSArray *artistDicts = dictionary[artistsKey];
+    NSMutableArray *artists = [@[] mutableCopy];
+    for (NSDictionary *artistDict in artistDicts)
+    {
+        [artists addObject:[[JBArtist alloc] initWithDictionary:artistDict]];
+    }
+    return artists;
 }
 
 - (NSURL *)persistenceFilePath
 {
-    return [NSURL URLWithString:[self.documentDirectory.path
-                                 stringByAppendingPathComponent:@"favoriteArtists.json"]];
+    NSURL *url = [self.documentDirectory URLByAppendingPathComponent:@"favoriteArtists.txt"];
+    NSLog(@"persistence url: %@", url);
+    return url;
 }
 
 - (NSURL *)documentDirectory

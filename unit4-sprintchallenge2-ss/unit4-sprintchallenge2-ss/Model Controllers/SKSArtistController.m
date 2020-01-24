@@ -17,7 +17,7 @@
 
 @implementation SKSArtistController
 
-static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1";
+static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 - (instancetype)init
 {
@@ -37,7 +37,7 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
 
-    NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName:@"search" value:name];
+    NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName:@"s" value:name];
     [components setQueryItems:@[searchItem]];
 
     NSURL *url = components.URL;

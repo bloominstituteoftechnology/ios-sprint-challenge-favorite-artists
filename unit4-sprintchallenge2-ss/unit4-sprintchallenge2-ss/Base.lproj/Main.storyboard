@@ -83,8 +83,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbS-Of-EXO">
-                                        <rect key="frame" x="0.0" y="49" width="92" height="26.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbS-Of-EXO">
+                                        <rect key="frame" x="0.0" y="49" width="120" height="26.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -124,7 +124,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="biographyTextView" destination="Iuu-rR-FdT" id="e76-fa-bjf"/>
-                        <outlet property="birthYearLabel" destination="kbS-Of-EXO" id="Bfu-fQ-hWN"/>
+                        <outlet property="formedYearLabel" destination="kbS-Of-EXO" id="aOZ-An-8cS"/>
                         <outlet property="nameLabel" destination="f1Q-24-qbU" id="in7-JK-SIa"/>
                         <outlet property="searchBar" destination="Mg7-Ii-GZH" id="FVK-Tk-vv5"/>
                     </connections>

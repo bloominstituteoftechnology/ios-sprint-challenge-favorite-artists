@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSIArtistController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-
+@property (nonatomic) LSIArtistController * controller;
 @end
 

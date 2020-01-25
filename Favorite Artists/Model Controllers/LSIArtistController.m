@@ -13,15 +13,19 @@
 // Declare here private properties
 @interface LSIArtistController ()
 
-//@property LSIArtist *fetchedArtist;
-
 @property NSMutableArray *internalFavArtists;
+@property NSDictionary *artistsDictionary;  // no
 
 @end
 
 @implementation LSIArtistController
 
-
+- (NSURL *)artistsFileURL {
+    
+    NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSString *fileName = @"artists.json";
+    return [documentDirectory URLByAppendingPathComponent:fileName];
+}
 
 // Computed property
 - (NSArray *)favoriteArtists {
@@ -36,15 +40,13 @@ NSString *apiKey = @"1";
 {
     self = [super init];
     if (self) {
-        _internalFavArtists = [[NSMutableArray alloc] init];
+        _internalFavArtists = [[self loadArtistsFromURL] mutableCopy];
     }
     return self;
 }
 
 - (void)searchArtistWithSearchTerm:(NSString *)searchTerm
-                               completion:(void (^)(NSError *error))completion {
-    
-    
+                        completion:(void (^)(NSError *error))completion {
     
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     
@@ -55,7 +57,6 @@ NSString *apiKey = @"1";
     
     NSURL *url = urlComponents.URL;
     NSLog(@"URL before data task: %@",url.absoluteString);
-    ////
     
     NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
@@ -106,18 +107,14 @@ NSString *apiKey = @"1";
     task.resume;
 }
 
-//- (BOOL)writeToURL:(NSURL *)url
-//             error:(NSError * _Nullable *)error {
-//
-//}
-
+// MARK: CRUD
 - (LSIArtist *)AddArtist:(LSIArtist *)artist {
     
     NSNumber *yearNumber = [NSNumber numberWithInt:artist.yearFormed];
     
     LSIArtist *newArtist = [[LSIArtist alloc]initWithName:artist.name biography:artist.biography yearFormed:[yearNumber intValue]];
     [self.internalFavArtists addObject:newArtist];
-        
+    [self saveArtistsToURL];
     return artist;
 }
 
@@ -125,7 +122,51 @@ NSString *apiKey = @"1";
     
     LSIArtist *newArtist = [[LSIArtist alloc]initWithName:artist.name biography:artist.biography yearFormed:artist.yearFormed];
     
-    [self.internalFavArtists removeObject:artist];
+    [self.internalFavArtists removeObject:newArtist];
+    [self saveArtistsToURL];
+}
+
+// MARK: Persistence
+
+- (void)saveArtistsToURL {
+    
+    NSMutableArray *artistDictionaries = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < self.internalFavArtists.count; i++) {
+        
+        LSIArtist *artist = self.internalFavArtists[i];
+        [artistDictionaries addObject: [artist putInDictionary]];
+    }
+    
+    NSData *artistsData = [NSJSONSerialization dataWithJSONObject:artistDictionaries options:0 error:nil];
+    
+    [artistsData writeToURL:[self artistsFileURL] atomically:YES];
+}
+
+- (NSArray *)loadArtistsFromURL {
+    
+    NSData *artistsData = [NSData dataWithContentsOfURL:[self artistsFileURL]];
+    
+    if (!artistsData) { return @[]; }
+    
+    NSError *error = nil;
+    
+    NSArray *artistDictionaries = [NSJSONSerialization JSONObjectWithData:artistsData options:0 error:&error];
+    
+    if (error) {
+        NSLog(@"Error loading saved artists: %@", error);
+        return @[];
+    }
+    
+    NSMutableArray *artists = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < artistDictionaries.count; i++) {
+        
+        NSDictionary *artistDictionary = artistDictionaries[i];
+        LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistDictionary];
+        [artists addObject:artist];
+    }
+    return artists;
 }
 
 @end

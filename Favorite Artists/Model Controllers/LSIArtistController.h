@@ -20,12 +20,10 @@
 - (void)searchArtistWithSearchTerm:(NSString *)searchTerm
 completion:(void (^)(NSError *error))completion;
 
-
-
 - (LSIArtist *)AddArtist:(LSIArtist *)artist;
-
-
 - (void)deleteArtist:(LSIArtist *)artist;
 
-@end
+- (NSArray *)loadArtistsFromURL;
+- (void)saveArtistsToURL;
 
+@end

@@ -9,13 +9,7 @@
 #import "NSJSONSerialization+LSIYuorArtistModel.h"
 
 
-
 @implementation NSJSONSerialization (LSIYuorArtistModel)
 
-//Add a method that returns your model object as a NSDictionary
-//- (NSDictionary *)toDictionary {
-//    
-//    
-//}
 
 @end

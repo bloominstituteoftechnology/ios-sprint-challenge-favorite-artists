@@ -21,4 +21,6 @@
                    biography:(NSString *)biography
                   yearFormed:(int)yearFormed;
 
+- (NSDictionary *)putInDictionary;
+
 @end

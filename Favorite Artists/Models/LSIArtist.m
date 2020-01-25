@@ -16,11 +16,9 @@
     NSString *year = dictionary[@"intFormedYear"];
     NSString *bio = dictionary[@"strBiographyEN"];
     
-    // If you need something inside of an array or another Dictionary
+//     If you need something inside of an array or another Dictionary
 //        NSString *name = dictionary[@"name"][@"firstName"];
-    
-    
-    
+     
     int yearInt = [year intValue];
     
     // returns back an artist object created by what we got from the JSON Dictionary
@@ -38,6 +36,18 @@
         _yearFormed = yearFormed;
     }
     return self;
+}
+
+- (NSDictionary *)putInDictionary {
+    
+    NSNumber *yearNumber = [NSNumber numberWithInt:self.yearFormed];
+    
+    NSDictionary *dictionary = @{
+        @"strArtist" : self.name,
+        @"intFormedYear" : yearNumber,
+        @"strBiographyEN" : self.biography
+    };
+    return dictionary;
 }
 
 @end

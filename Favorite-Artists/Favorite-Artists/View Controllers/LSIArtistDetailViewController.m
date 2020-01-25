@@ -68,6 +68,7 @@
 - (IBAction)save:(UIBarButtonItem *)sender {
 	if (self.artist) {
 		[[self.controller artists] addObject:self.artist];
+		[self.controller saveToDocuments];
 		[self.navigationController popViewControllerAnimated:true];
 	}
 }

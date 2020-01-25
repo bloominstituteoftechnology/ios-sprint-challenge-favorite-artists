@@ -21,7 +21,7 @@
 		_biography = biography;
 		_year = 0;
 
-		if (yearString) {
+		if (yearString && ![yearString isKindOfClass:[NSNull class]]) {
 
 			NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
 			[formatter setNumberStyle:NSNumberFormatterDecimalStyle];
@@ -37,7 +37,7 @@
 
 - (NSDictionary *)toDictionary {
 
-	NSDictionary *dictionary = [[NSDictionary alloc] init];
+	NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
 
 	[dictionary setValue:self.name forKey:@"strArtist"];
 	[dictionary setValue:self.biography forKey:@"strBiographyEN"];

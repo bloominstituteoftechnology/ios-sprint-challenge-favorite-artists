@@ -88,6 +88,12 @@ NSString *apiKey = @"1";
             completion(noDictionaryError);
         }
         
+        if (json[@"artists"] == [NSNull null]) {
+            NSLog(@"Error: No artists found for search term: %@", searchTerm);
+            completion(nil);
+            return;
+        }
+        
         // getting the array "artists" from the json
         NSMutableArray *fetchedArtistInfo = json[@"artists"];
         
@@ -99,6 +105,11 @@ NSString *apiKey = @"1";
     }];
     task.resume;
 }
+
+//- (BOOL)writeToURL:(NSURL *)url
+//             error:(NSError * _Nullable *)error {
+//
+//}
 
 - (LSIArtist *)AddArtist:(LSIArtist *)artist {
     

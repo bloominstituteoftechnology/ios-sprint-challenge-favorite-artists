@@ -28,3 +28,4 @@ completion:(void (^)(NSError *error))completion;
 - (void)deleteArtist:(LSIArtist *)artist;
 
 @end
+

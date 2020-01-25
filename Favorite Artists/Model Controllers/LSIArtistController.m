@@ -112,6 +112,9 @@ NSString *apiKey = @"1";
 
 - (void)deleteArtist:(LSIArtist *)artist {
     
+    LSIArtist *newArtist = [[LSIArtist alloc]initWithName:artist.name biography:artist.biography yearFormed:artist.yearFormed];
+    
+    [self.internalFavArtists removeObject:artist];
 }
 
 @end

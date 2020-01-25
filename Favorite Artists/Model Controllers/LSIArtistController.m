@@ -8,9 +8,12 @@
 
 #import "LSIArtistController.h"
 #import "LSIArtist.h"
+#import "NSJSONSerialization+LSIYuorArtistModel.h"
 
 // Declare here private properties
 @interface LSIArtistController ()
+
+//@property LSIArtist *fetchedArtist;
 
 @property NSMutableArray *internalFavArtists;
 
@@ -25,7 +28,7 @@
     return self.internalFavArtists;
 }
 
-static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json";
+static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 NSString *apiKey = @"1";
 
@@ -38,39 +41,72 @@ NSString *apiKey = @"1";
     return self;
 }
 
-- (void)searchForArtist:(void (^)(NSError *error))completion {
+- (void)searchArtistWithSearchTerm:(NSString *)searchTerm
+                               completion:(void (^)(NSError *error))completion {
+    
+    
+    
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     
-    NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession dataTaskWithURL:baseURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    ////
+    NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
+//    urlComponents.path = apiKey;
+    urlComponents.queryItems = @[[NSURLQueryItem queryItemWithName:@"s" value:searchTerm]];
+    NSLog(@"urlComponents before data task: %@",urlComponents);
+    
+    
+    NSURL *url = urlComponents.URL;
+    NSLog(@"URL before data task: %@",url.absoluteString);
+    ////
+    
+    NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSLog(@"Data: %@", data);
         
         if (error) {
+            NSLog(@"NSURLsession.Error: %@", error);
             completion(error);
             return;
         }
+        
+        NSLog(@"Data: %@", data);
         
         NSError *jsonError = nil;
         NSError *noDictionaryError = nil;
         
         // Taking the JSON and turning it into an Artist
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        NSLog(@"json: %@",[json descriptionInStringsFileFormat]);
+        NSLog(@"Data: %@", data);
         
         if (jsonError) {
             completion(nil);
             return;
         }
         
-        // if it's not a Dictionary
+        NSLog(@"JSON: %@", json);
         if (![json isKindOfClass:[NSDictionary class]]) {
             NSLog(@"JSON was not a dictionary as expected");
             completion(noDictionaryError);
         }
         
         // getting the array "artists" from the json
-        NSArray *fetchedArtistInfo = json[@"artists"];
         
+        NSMutableArray *fetchedArtistInfo = json[@"artists"];
+        //        LSIArtist *fetchedArtist;
         
+        for (NSDictionary *dictionary in fetchedArtistInfo) {
+            LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dictionary];
+            [self.internalFavArtists addObject:artist];
+            self.fetchedArtist = artist;
+        }
+
+        completion(nil);
+        
+
     }];
-    [dataTask response];
+    task.resume;
+//    return self.fetchedArtist;
 }
 
 

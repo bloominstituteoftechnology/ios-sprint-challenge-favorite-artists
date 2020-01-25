@@ -10,13 +10,14 @@
 #import "LSIArtist.h"
 #import "LSIArtistController.h"
 
-@interface LSISearchArtistViewController ()
+@interface LSISearchArtistViewController () <UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *artistSearchBar;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
+@property (weak, nonatomic) IBOutlet UILabel *formedLabel;
 
 @end
 
@@ -24,7 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.artistSearchBar setDelegate:self];
+    [self updateViews];
+
 }
 - (IBAction)saveBarButtonTapped:(UIBarButtonItem *)sender {
     
@@ -46,18 +50,41 @@
     
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.artistController searchArtistWithSearchTerm:self.artistSearchBar.text completion:^(NSError *error) {
+        
+        if (error) {
+            NSLog(@"Error searching for artist: %@", error);
+            return;
+        } else {
+            
+            
+            dispatch_async(dispatch_get_main_queue(), ^ {
+                
+                self.artist = self.artistController.fetchedArtist;
+                [self updateViews];
+            });
+        }
+    }];
+}
+
 - (void)updateViews {
     
     if (self.artist) {
         
-        NSNumber *yearNumber = [NSNumber numberWithInt:self.artist.yearFormed];
+        NSString *yearNumber = [@(self.artist.yearFormed) stringValue];
         
         self.title = self.artist.name;
         self.nameLabel.text = self.artist.name;
         self.yearFormedLabel.text = yearNumber;
         self.bioTextView.text = self.artist.biography;
+        self.formedLabel.text = @"Formed in";
     } else {
         self.title = @"Search Artist";
+        self.nameLabel.text = @"";
+        self.yearFormedLabel.text = @"";
+        self.bioTextView.text = @"";
+        self.formedLabel.text = @"";
     }
 }
 

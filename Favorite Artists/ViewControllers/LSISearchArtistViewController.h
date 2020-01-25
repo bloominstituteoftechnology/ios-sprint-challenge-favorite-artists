@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LSISearchArtistViewController : UIViewController
+@interface LSISearchArtistViewController : UIViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) LSIArtist *artist;
 @property (nonatomic, strong) LSIArtistController *artistController;

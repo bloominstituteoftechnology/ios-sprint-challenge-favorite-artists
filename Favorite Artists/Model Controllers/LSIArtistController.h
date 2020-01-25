@@ -15,7 +15,10 @@
 
 @property (nonatomic, copy, readonly) NSArray *favoriteArtists;
 
-- (void)searchForArtist:(void (^)(NSError *error))completion;
+@property LSIArtist *fetchedArtist;
+
+- (void)searchArtistWithSearchTerm:(NSString *)searchTerm
+completion:(void (^)(NSError *error))completion;
 
 
 

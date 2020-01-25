@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="ZmY-ZA-OHM">
             <objects>
-                <tableViewController id="SJC-8b-MeP" sceneMemberID="viewController">
+                <tableViewController id="SJC-8b-MeP" customClass="LSIArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="o9d-hp-6X8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,6 +145,7 @@
                     <connections>
                         <outlet property="artistSearchBar" destination="vIP-qF-k1w" id="JBV-Lf-HEg"/>
                         <outlet property="bioTextView" destination="Mof-pw-gT5" id="sdw-8e-8kk"/>
+                        <outlet property="formedLabel" destination="EKa-UF-axP" id="gz4-1V-dHZ"/>
                         <outlet property="nameLabel" destination="t3h-P8-1tt" id="tJC-yu-t49"/>
                         <outlet property="yearFormedLabel" destination="eXa-Gm-Hn2" id="blM-Hn-lz6"/>
                     </connections>

@@ -18,6 +18,7 @@
 		FA69ADB023DB522800798F67 /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADAF23DB522800798F67 /* LSIArtist.m */; };
 		FA69ADB323DB528400798F67 /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADB223DB528400798F67 /* LSIArtistController.m */; };
 		FA69ADB623DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69ADB523DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.m */; };
+		FA69ADB823DB985D00798F67 /* ArtistData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA69ADB723DB985D00798F67 /* ArtistData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		FA69ADB223DB528400798F67 /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
 		FA69ADB423DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+LSIYuorArtistModel.h"; sourceTree = "<group>"; };
 		FA69ADB523DB67ED00798F67 /* NSJSONSerialization+LSIYuorArtistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+LSIYuorArtistModel.m"; sourceTree = "<group>"; };
+		FA69ADB723DB985D00798F67 /* ArtistData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ArtistData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		FA69ADA323DB4E8A00798F67 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FA69ADB723DB985D00798F67 /* ArtistData.json */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA69ADB823DB985D00798F67 /* ArtistData.json in Resources */,
 				FA69AD9A23DB4E7900798F67 /* LaunchScreen.storyboard in Resources */,
 				FA69AD9723DB4E7800798F67 /* Assets.xcassets in Resources */,
 				FA69AD9523DB4E7600798F67 /* Main.storyboard in Resources */,

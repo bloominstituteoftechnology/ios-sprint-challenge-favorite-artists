@@ -22,9 +22,7 @@ completion:(void (^)(NSError *error))completion;
 
 
 
-- (LSIArtist *)AddArtistWithName:(NSString *)name
-                       biography:(NSString *)biography
-                      yearFormed:(int)yearFormed;
+- (LSIArtist *)AddArtist:(LSIArtist *)artist;
 
 
 - (void)deleteArtist:(LSIArtist *)artist;

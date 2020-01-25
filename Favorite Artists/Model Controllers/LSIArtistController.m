@@ -48,9 +48,7 @@ NSString *apiKey = @"1";
     
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     
-    ////
     NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
-//    urlComponents.path = apiKey;
     urlComponents.queryItems = @[[NSURLQueryItem queryItemWithName:@"s" value:searchTerm]];
     NSLog(@"urlComponents before data task: %@",urlComponents);
     
@@ -91,38 +89,26 @@ NSString *apiKey = @"1";
         }
         
         // getting the array "artists" from the json
-        
         NSMutableArray *fetchedArtistInfo = json[@"artists"];
-        //        LSIArtist *fetchedArtist;
         
         for (NSDictionary *dictionary in fetchedArtistInfo) {
             LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dictionary];
-            [self.internalFavArtists addObject:artist];
             self.fetchedArtist = artist;
         }
-
         completion(nil);
-        
-
     }];
     task.resume;
-//    return self.fetchedArtist;
 }
 
-
-- (LSIArtist *)AddArtistWithName:(NSString *)name
-                       biography:(NSString *)biography
-                      yearFormed:(int)yearFormed {
+- (LSIArtist *)AddArtist:(LSIArtist *)artist {
     
-    NSNumber *yearNumber = [NSNumber numberWithInt:yearFormed];
+    NSNumber *yearNumber = [NSNumber numberWithInt:artist.yearFormed];
     
-    LSIArtist *artist = [[LSIArtist alloc]initWithName:name biography:biography yearFormed:yearNumber];
-    
-    // TODO : Add it to the favorites array
-    
+    LSIArtist *newArtist = [[LSIArtist alloc]initWithName:artist.name biography:artist.biography yearFormed:[yearNumber intValue]];
+    [self.internalFavArtists addObject:newArtist];
+        
     return artist;
 }
-
 
 - (void)deleteArtist:(LSIArtist *)artist {
     

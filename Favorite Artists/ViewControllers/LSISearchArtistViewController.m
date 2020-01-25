@@ -32,22 +32,15 @@
 }
 - (IBAction)saveBarButtonTapped:(UIBarButtonItem *)sender {
     
-    NSString *name = self.nameLabel.text;
-    NSString *bio = self.bioTextView.text;
-    NSString *yearString = self.yearFormedLabel.text;
-    int yearInt = [yearString integerValue];
-
-    
     if (self.artist) {
+        
+        [self.artistController AddArtist:self.artist];
         [self dismissViewControllerAnimated:YES completion:nil];
-        
     } else {
-        
-        [self.artistController AddArtistWithName:name biography:bio yearFormed:yearInt];
+        return;
     }
     
     [self.navigationController popViewControllerAnimated:YES];
-    
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {

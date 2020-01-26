@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class ArtistController;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistsTableViewController : UITableViewController
-
+@property ArtistController * artistController;
 @end
 
 NS_ASSUME_NONNULL_END

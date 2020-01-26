@@ -16,6 +16,9 @@
 		DD1ADE5223DB509A00DC51FF /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE5123DB509A00DC51FF /* ArtistsTableViewController.m */; };
 		DD1ADE5523DB50AE00DC51FF /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE5423DB50AE00DC51FF /* AddArtistViewController.m */; };
 		DD1ADE5823DB50BA00DC51FF /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE5723DB50BA00DC51FF /* ArtistDetailViewController.m */; };
+		DD1ADE5B23DB513000DC51FF /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE5A23DB513000DC51FF /* Artist.m */; };
+		DD1ADE6123DB5A1B00DC51FF /* ArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE6023DB5A1B00DC51FF /* ArtistController.m */; };
+		DD1ADE9423DCD7F800DC51FF /* NSObject+Artist_NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1ADE9323DCD7F800DC51FF /* NSObject+Artist_NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,12 @@
 		DD1ADE5423DB50AE00DC51FF /* AddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistViewController.m; sourceTree = "<group>"; };
 		DD1ADE5623DB50BA00DC51FF /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
 		DD1ADE5723DB50BA00DC51FF /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		DD1ADE5923DB513000DC51FF /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		DD1ADE5A23DB513000DC51FF /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		DD1ADE5F23DB5A1B00DC51FF /* ArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistController.h; sourceTree = "<group>"; };
+		DD1ADE6023DB5A1B00DC51FF /* ArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistController.m; sourceTree = "<group>"; };
+		DD1ADE9223DCD7F800DC51FF /* NSObject+Artist_NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Artist_NSJSONSerialization.h"; sourceTree = "<group>"; };
+		DD1ADE9323DCD7F800DC51FF /* NSObject+Artist_NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Artist_NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,12 @@
 		DD1ADE4E23DB4E1F00DC51FF /* models */ = {
 			isa = PBXGroup;
 			children = (
+				DD1ADE5923DB513000DC51FF /* Artist.h */,
+				DD1ADE5A23DB513000DC51FF /* Artist.m */,
+				DD1ADE5F23DB5A1B00DC51FF /* ArtistController.h */,
+				DD1ADE6023DB5A1B00DC51FF /* ArtistController.m */,
+				DD1ADE9223DCD7F800DC51FF /* NSObject+Artist_NSJSONSerialization.h */,
+				DD1ADE9323DCD7F800DC51FF /* NSObject+Artist_NSJSONSerialization.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -192,8 +207,11 @@
 				DD1ADE3523DB4DE500DC51FF /* AppDelegate.m in Sources */,
 				DD1ADE5823DB50BA00DC51FF /* ArtistDetailViewController.m in Sources */,
 				DD1ADE5523DB50AE00DC51FF /* AddArtistViewController.m in Sources */,
+				DD1ADE6123DB5A1B00DC51FF /* ArtistController.m in Sources */,
 				DD1ADE4623DB4DE600DC51FF /* main.m in Sources */,
 				DD1ADE3823DB4DE500DC51FF /* SceneDelegate.m in Sources */,
+				DD1ADE9423DCD7F800DC51FF /* NSObject+Artist_NSJSONSerialization.m in Sources */,
+				DD1ADE5B23DB513000DC51FF /* Artist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

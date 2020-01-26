@@ -16,15 +16,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" id="8mh-VH-EWa">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="Sxt-09-ePO" detailTextLabel="tih-Ty-l4i" style="IBUITableViewCellStyleSubtitle" id="8mh-VH-EWa">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8mh-VH-EWa" id="XOQ-oz-LP9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sxt-09-ePO">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tih-Ty-l4i">
+                                            <rect key="frame" x="20" y="31.5" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zUo-ob-c6t" kind="show" id="Xof-jH-Kgp"/>
+                                    <segue destination="zUo-ob-c6t" kind="show" identifier="ArtistDetailSegue" id="Xof-jH-Kgp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -36,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Artists" id="dic-D6-gQc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qa3-zU-veu">
                             <connections>
-                                <segue destination="9Hy-Ai-g73" kind="show" id="mNv-GF-hdH"/>
+                                <segue destination="9Hy-Ai-g73" kind="show" identifier="AddArtistSegue" id="mNv-GF-hdH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -53,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="j3C-U9-K4n">
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="j3C-U9-K4n">
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -97,8 +113,18 @@
                         <viewLayoutGuide key="safeArea" id="ktn-Kv-U9E"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add new artist" id="ufk-tY-5KK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="j6d-y6-igG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="j6d-y6-igG">
+                            <connections>
+                                <action selector="saveArtistButton:" destination="9Hy-Ai-g73" id="F7Q-S0-ReJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bandNameLabel" destination="CrJ-Cd-LMG" id="9Gy-lJ-ECM"/>
+                        <outlet property="biographyLabel" destination="uQc-rS-V1Z" id="j7O-DX-1zn"/>
+                        <outlet property="searchbarLabel" destination="j3C-U9-K4n" id="zaC-2J-EDk"/>
+                        <outlet property="yearFormedLabel" destination="QnA-Tc-2Lr" id="VQr-UT-jdi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIk-Y1-vBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="205.79710144927537" y="174.77678571428569"/>
         </scene>
-        <!--Add new artist-->
+        <!--Artist detail-->
         <scene sceneID="WTz-TE-3Yu">
             <objects>
                 <viewController id="zUo-ob-c6t" customClass="ArtistDetailViewController" sceneMemberID="viewController">
@@ -136,16 +162,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed in 1992." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWG-JU-gTq">
-                                <rect key="frame" x="20" y="206" width="374" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWG-JU-gTq">
+                                <rect key="frame" x="20" y="206" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Nw-QI-jxe">
-                                <rect key="frame" x="20" y="245" width="374" height="597"/>
+                                <rect key="frame" x="20" y="221" width="374" height="621"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -166,7 +191,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jt7-HP-brl"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add new artist" id="dS1-GQ-cCB"/>
+                    <navigationItem key="navigationItem" title="Artist detail" id="dS1-GQ-cCB"/>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="a4r-Fp-DtK" id="gy9-xw-6oj"/>
+                        <outlet property="biographyLabel" destination="1Nw-QI-jxe" id="Fbj-6g-b03"/>
+                        <outlet property="yearFormedLabel" destination="wWG-JU-gTq" id="d4W-lz-48o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1C-ET-HD8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

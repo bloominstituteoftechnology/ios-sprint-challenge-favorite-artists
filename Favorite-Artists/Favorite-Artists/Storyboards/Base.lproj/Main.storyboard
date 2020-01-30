@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="8gE-yX-MYl">
                         <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="Zxp-Zu-yTr">
                             <connections>
-                                <segue destination="Edn-aH-EhZ" kind="show" identifier="AddArtistSegue" id="XwC-nQ-qcV"/>
+                                <segue destination="Edn-aH-EhZ" kind="show" identifier="SearchArtistSegue" id="XwC-nQ-qcV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

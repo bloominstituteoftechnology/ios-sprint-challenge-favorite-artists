@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PNCFavoriteArtistsTableViewController.h
 //  Favorite-Artists
 //
 //  Created by Percy Ngan on 1/24/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
 
+
+@interface PNCFavoriteArtistsTableViewController : UITableViewController
 
 @end
+
 

@@ -18,8 +18,8 @@
 		DD882DA423DB5FEA00DFDD8C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD882DA323DB5FEA00DFDD8C /* Default-568h@2x.png */; };
 		DD882DA723DB605600DFDD8C /* PNCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DA623DB605600DFDD8C /* PNCArtist.m */; };
 		DD882DA823DB605600DFDD8C /* PNCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DA623DB605600DFDD8C /* PNCArtist.m */; };
-		DD882DAB23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAA23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m */; };
-		DD882DAC23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAA23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m */; };
+		DD882DAB23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAA23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m */; };
+		DD882DAC23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAA23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m */; };
 		DD882DAF23DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAE23DB6AE600DFDD8C /* LSIArtistsTableViewController.m */; };
 		DD882DB023DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAE23DB6AE600DFDD8C /* LSIArtistsTableViewController.m */; };
 		DD882DB323DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */; };
@@ -57,8 +57,8 @@
 		DD882DA323DB5FEA00DFDD8C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DD882DA523DB605600DFDD8C /* PNCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCArtist.h; sourceTree = "<group>"; };
 		DD882DA623DB605600DFDD8C /* PNCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCArtist.m; sourceTree = "<group>"; };
-		DD882DA923DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSIArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
-		DD882DAA23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LSIArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		DD882DA923DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PNCArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		DD882DAA23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PNCArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		DD882DAD23DB6AE600DFDD8C /* LSIArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistsTableViewController.h; sourceTree = "<group>"; };
 		DD882DAE23DB6AE600DFDD8C /* LSIArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistsTableViewController.m; sourceTree = "<group>"; };
 		DD882DB123DB6B0B00DFDD8C /* LSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistDetailViewController.h; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 				DD5A7B7923DD0E5700EBD8F6 /* Model Controllers */,
 				DD882DA023DB5F8200DFDD8C /* View Controllers */,
 				DD882DA123DB5FB400DFDD8C /* Resources */,
-				DD882DA923DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.h */,
-				DD882DAA23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m */,
+				DD882DA923DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.h */,
+				DD882DAA23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m */,
 			);
 			path = "Favorite-Artists";
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 				DD882D8C23DB5E8F00DFDD8C /* main.m in Sources */,
 				DD882D7E23DB5E8C00DFDD8C /* SceneDelegate.m in Sources */,
 				DD882DA723DB605600DFDD8C /* PNCArtist.m in Sources */,
-				DD882DAB23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m in Sources */,
+				DD882DAB23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +304,7 @@
 				DD882DB823DB735000DFDD8C /* PNCArtistController.m in Sources */,
 				DD882D9623DB5E9000DFDD8C /* Favorite_ArtistsTests.m in Sources */,
 				DD882DA823DB605600DFDD8C /* PNCArtist.m in Sources */,
-				DD882DAC23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m in Sources */,
+				DD882DAC23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m in Sources */,
 				DD882DB023DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

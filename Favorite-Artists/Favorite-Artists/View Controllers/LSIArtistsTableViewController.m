@@ -7,13 +7,13 @@
 //
 
 #import "PNCArtist.h"
-#import "LSIArtistController.h"
+#import "PNCArtistController.h"
 #import "LSIArtistDetailViewController.h"
 #import "LSIArtistsTableViewController.h"
 
 @interface LSIArtistsTableViewController ()
 
-@property LSIArtistController *controller;
+@property PNCArtistController *controller;
 
 @end
 
@@ -24,7 +24,7 @@
 {
 	self = [super initWithCoder:coder];
 	if (self) {
-		_controller = [[LSIArtistController alloc] init];
+		_controller = [[PNCArtistController alloc] init];
 	}
 	return self;
 }

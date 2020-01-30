@@ -8,7 +8,7 @@
 
 #import "LSIArtistDetailViewController.h"
 #import "PNCArtist.h"
-#import "LSIArtistController.h"
+#import "PNCArtistController.h"
 
 @interface LSIArtistDetailViewController ()
 

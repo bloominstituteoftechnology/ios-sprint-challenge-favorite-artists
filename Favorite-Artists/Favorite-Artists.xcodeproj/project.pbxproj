@@ -24,8 +24,8 @@
 		DD882DB023DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAE23DB6AE600DFDD8C /* LSIArtistsTableViewController.m */; };
 		DD882DB323DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */; };
 		DD882DB423DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */; };
-		DD882DB723DB735000DFDD8C /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* LSIArtistController.m */; };
-		DD882DB823DB735000DFDD8C /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* LSIArtistController.m */; };
+		DD882DB723DB735000DFDD8C /* PNCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* PNCArtistController.m */; };
+		DD882DB823DB735000DFDD8C /* PNCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* PNCArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,8 @@
 		DD882DAE23DB6AE600DFDD8C /* LSIArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistsTableViewController.m; sourceTree = "<group>"; };
 		DD882DB123DB6B0B00DFDD8C /* LSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistDetailViewController.h; sourceTree = "<group>"; };
 		DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
-		DD882DB523DB735000DFDD8C /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
-		DD882DB623DB735000DFDD8C /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
+		DD882DB523DB735000DFDD8C /* PNCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCArtistController.h; sourceTree = "<group>"; };
+		DD882DB623DB735000DFDD8C /* PNCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCArtistController.m; sourceTree = "<group>"; };
 		DD882DF823DC61A900DFDD8C /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,8 +98,8 @@
 		DD5A7B7923DD0E5700EBD8F6 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD882DB523DB735000DFDD8C /* LSIArtistController.h */,
-				DD882DB623DB735000DFDD8C /* LSIArtistController.m */,
+				DD882DB523DB735000DFDD8C /* PNCArtistController.h */,
+				DD882DB623DB735000DFDD8C /* PNCArtistController.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -285,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD882D8123DB5E8C00DFDD8C /* ViewController.m in Sources */,
-				DD882DB723DB735000DFDD8C /* LSIArtistController.m in Sources */,
+				DD882DB723DB735000DFDD8C /* PNCArtistController.m in Sources */,
 				DD882D7B23DB5E8C00DFDD8C /* AppDelegate.m in Sources */,
 				DD882DAF23DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */,
 				DD882DB323DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */,
@@ -301,7 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD882DB423DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */,
-				DD882DB823DB735000DFDD8C /* LSIArtistController.m in Sources */,
+				DD882DB823DB735000DFDD8C /* PNCArtistController.m in Sources */,
 				DD882D9623DB5E9000DFDD8C /* Favorite_ArtistsTests.m in Sources */,
 				DD882DA823DB605600DFDD8C /* PNCArtist.m in Sources */,
 				DD882DAC23DB60F400DFDD8C /* LSIArtist+NSJSONSerialization.m in Sources */,

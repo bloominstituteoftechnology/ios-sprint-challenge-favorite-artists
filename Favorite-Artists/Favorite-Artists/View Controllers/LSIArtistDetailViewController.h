@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class LSIArtistController;
+@class PNCArtistController;
 @class PNCArtist;
 
 @interface LSIArtistDetailViewController : UIViewController <UISearchBarDelegate>
 
-@property LSIArtistController *controller;
+@property PNCArtistController *controller;
 @property PNCArtist *artist;
 
 @end

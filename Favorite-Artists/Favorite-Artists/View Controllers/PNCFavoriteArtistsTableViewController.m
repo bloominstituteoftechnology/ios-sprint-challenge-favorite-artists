@@ -8,7 +8,7 @@
 
 #import "PNCArtist.h"
 #import "PNCArtistController.h"
-#import "PNCArtistViewController.h"
+#import "PNCArtistDetailViewController.h"
 #import "PNCFavoriteArtistsTableViewController.h"
 
 @interface PNCFavoriteArtistsTableViewController ()

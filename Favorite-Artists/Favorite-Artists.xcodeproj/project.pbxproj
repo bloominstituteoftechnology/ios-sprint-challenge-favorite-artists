@@ -21,8 +21,8 @@
 		DD882DAC23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAA23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m */; };
 		DD882DAF23DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAE23DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.m */; };
 		DD882DB023DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DAE23DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.m */; };
-		DD882DB323DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */; };
-		DD882DB423DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */; };
+		DD882DB323DB6B0B00DFDD8C /* PNCArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* PNCArtistDetailViewController.m */; };
+		DD882DB423DB6B0B00DFDD8C /* PNCArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* PNCArtistDetailViewController.m */; };
 		DD882DB723DB735000DFDD8C /* PNCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* PNCArtistController.m */; };
 		DD882DB823DB735000DFDD8C /* PNCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* PNCArtistController.m */; };
 		E313886223E323320003227E /* PNCArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E313886123E323320003227E /* PNCArtistTest.m */; };
@@ -62,8 +62,8 @@
 		DD882DAA23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PNCArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		DD882DAD23DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
 		DD882DAE23DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
-		DD882DB123DB6B0B00DFDD8C /* LSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistDetailViewController.h; sourceTree = "<group>"; };
-		DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
+		DD882DB123DB6B0B00DFDD8C /* PNCArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCArtistDetailViewController.h; sourceTree = "<group>"; };
+		DD882DB223DB6B0B00DFDD8C /* PNCArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCArtistDetailViewController.m; sourceTree = "<group>"; };
 		DD882DB523DB735000DFDD8C /* PNCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCArtistController.h; sourceTree = "<group>"; };
 		DD882DB623DB735000DFDD8C /* PNCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCArtistController.m; sourceTree = "<group>"; };
 		DD882DF823DC61A900DFDD8C /* PNCFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNCFileHelper.h; path = ../../PNCFileHelper.h; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 			children = (
 				DD882DAD23DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.h */,
 				DD882DAE23DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.m */,
-				DD882DB123DB6B0B00DFDD8C /* LSIArtistDetailViewController.h */,
-				DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */,
+				DD882DB123DB6B0B00DFDD8C /* PNCArtistDetailViewController.h */,
+				DD882DB223DB6B0B00DFDD8C /* PNCArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 				DD882D7B23DB5E8C00DFDD8C /* AppDelegate.m in Sources */,
 				DD882DAF23DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.m in Sources */,
 				E313886223E323320003227E /* PNCArtistTest.m in Sources */,
-				DD882DB323DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */,
+				DD882DB323DB6B0B00DFDD8C /* PNCArtistDetailViewController.m in Sources */,
 				DD882D8C23DB5E8F00DFDD8C /* main.m in Sources */,
 				DD882D7E23DB5E8C00DFDD8C /* SceneDelegate.m in Sources */,
 				DD882DA723DB605600DFDD8C /* PNCArtist.m in Sources */,
@@ -307,7 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD882DB423DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */,
+				DD882DB423DB6B0B00DFDD8C /* PNCArtistDetailViewController.m in Sources */,
 				DD882DB823DB735000DFDD8C /* PNCArtistController.m in Sources */,
 				DD882D9623DB5E9000DFDD8C /* Favorite_ArtistsTests.m in Sources */,
 				DD882DA823DB605600DFDD8C /* PNCArtist.m in Sources */,

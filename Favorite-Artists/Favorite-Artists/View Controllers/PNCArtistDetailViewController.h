@@ -1,8 +1,8 @@
 //
-//  LSIArtistDetailViewController.h
-//  Favorite-Artists
+//  PNCArtistViewController.h
+//  Favorite Artist3
 //
-//  Created by Percy Ngan on 1/24/20.
+//  Created by Lambda_School_Loaner_263 on 1/28/20.
 //  Copyright © 2020 Lamdba School. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 @class PNCArtistController;
 @class PNCArtist;
 
-@interface LSIArtistDetailViewController : UIViewController <UISearchBarDelegate>
+@interface PNCArtistViewController : UIViewController
 
 @property PNCArtistController *controller;
 @property PNCArtist *artist;

@@ -28,6 +28,8 @@
 		DD882DB823DB735000DFDD8C /* PNCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* PNCArtistController.m */; };
 		E313886223E323320003227E /* PNCArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E313886123E323320003227E /* PNCArtistTest.m */; };
 		E313886323E323320003227E /* PNCArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E313886123E323320003227E /* PNCArtistTest.m */; };
+		E313886523E324670003227E /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = E313886423E324670003227E /* Artist.json */; };
+		E313886623E324670003227E /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = E313886423E324670003227E /* Artist.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +69,10 @@
 		DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
 		DD882DB523DB735000DFDD8C /* PNCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCArtistController.h; sourceTree = "<group>"; };
 		DD882DB623DB735000DFDD8C /* PNCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCArtistController.m; sourceTree = "<group>"; };
-		DD882DF823DC61A900DFDD8C /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		DD882DF823DC61A900DFDD8C /* PNCFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNCFileHelper.h; path = ../../PNCFileHelper.h; sourceTree = "<group>"; };
 		E313886023E323320003227E /* PNCArtistTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCArtistTest.h; sourceTree = "<group>"; };
 		E313886123E323320003227E /* PNCArtistTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCArtistTest.m; sourceTree = "<group>"; };
+		E313886423E324670003227E /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +149,7 @@
 			children = (
 				E313886023E323320003227E /* PNCArtistTest.h */,
 				E313886123E323320003227E /* PNCArtistTest.m */,
-				DD882DF823DC61A900DFDD8C /* LSIFileHelper.h */,
+				DD882DF823DC61A900DFDD8C /* PNCFileHelper.h */,
 				DD882D9523DB5E9000DFDD8C /* Favorite_ArtistsTests.m */,
 				DD882D9723DB5E9000DFDD8C /* Info.plist */,
 			);
@@ -176,6 +179,7 @@
 				DD882D8523DB5E8F00DFDD8C /* Assets.xcassets */,
 				DD882D8A23DB5E8F00DFDD8C /* Info.plist */,
 				DD882D8B23DB5E8F00DFDD8C /* main.m */,
+				E313886423E324670003227E /* Artist.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -269,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E313886523E324670003227E /* Artist.json in Resources */,
 				DD882D8923DB5E8F00DFDD8C /* LaunchScreen.storyboard in Resources */,
 				DD882DA423DB5FEA00DFDD8C /* Default-568h@2x.png in Resources */,
 				DD882D8623DB5E8F00DFDD8C /* Assets.xcassets in Resources */,
@@ -280,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E313886623E324670003227E /* Artist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

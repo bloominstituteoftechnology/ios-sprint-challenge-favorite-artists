@@ -7,7 +7,7 @@
 //
 
 #import "LSIArtistDetailViewController.h"
-#import "LSIArtist.h"
+#import "PNCArtist.h"
 #import "LSIArtistController.h"
 
 @interface LSIArtistDetailViewController ()
@@ -78,7 +78,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
 
 	[searchBar resignFirstResponder];
-	[self.controller getArtistsFromSearchTerm:[searchBar text] completion:^(NSError *error, LSIArtist *artist) {
+	[self.controller getArtistsFromSearchTerm:[searchBar text] completion:^(NSError *error, PNCArtist *artist) {
 		if (error) {
 			NSLog(@"Error: %@", error);
 			return;

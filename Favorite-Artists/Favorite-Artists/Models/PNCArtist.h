@@ -1,5 +1,5 @@
 //
-//  LSIArtist.h
+//  PNCArtist.h
 //  Favorite-Artists
 //
 //  Created by Percy Ngan on 1/24/20.
@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LSIArtist : NSObject
+@interface PNCArtist : NSObject
 
 @property NSString *name;
 @property NSString *biography;
 @property int year;
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+//- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
-- (NSDictionary *)toDictionary;
+//- (NSDictionary *)toDictionary;
 
 
 

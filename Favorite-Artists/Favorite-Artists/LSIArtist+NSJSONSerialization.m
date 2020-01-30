@@ -10,7 +10,7 @@
 
 
 
-@implementation LSIArtist (NSJSONSerialization)
+@implementation PNCArtist (NSJSONSerialization)
 
 @end
 

@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class LSIArtist;
+@class PNCArtist;
 
 @interface LSIArtistController : NSObject
 
 @property NSMutableArray *artists;
 
 - (void)getArtistsFromSearchTerm:(NSString *)searchTerm
-					  completion:(void (^)(NSError *error, LSIArtist *artist))completion;
+					  completion:(void (^)(NSError *error, PNCArtist *artist))completion;
 
 - (void)saveToDocuments;
 - (void)loadFromDocuments;

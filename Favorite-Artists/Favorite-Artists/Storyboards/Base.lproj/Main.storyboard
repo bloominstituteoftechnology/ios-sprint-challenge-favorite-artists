@@ -50,7 +50,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorite Artists" id="8gE-yX-MYl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zxp-Zu-yTr">
+                        <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="Zxp-Zu-yTr">
                             <connections>
                                 <segue destination="Edn-aH-EhZ" kind="show" identifier="AddArtistSegue" id="XwC-nQ-qcV"/>
                             </connections>
@@ -150,6 +150,9 @@
             <point key="canvasLocation" x="279.71014492753625" y="-81.026785714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="L9k-Ax-UFC"/>
     </inferredMetricsTieBreakers>

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Lamdba School. All rights reserved.
 //
 
-#import "LSIArtist.h"
+#import "PNCArtist.h"
 #import "LSIArtistController.h"
 #import "LSIArtistDetailViewController.h"
 #import "LSIArtistsTableViewController.h"
@@ -49,7 +49,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
 
-	LSIArtist *artist = self.controller.artists[indexPath.row];
+	PNCArtist *artist = self.controller.artists[indexPath.row];
 
 	[[cell textLabel] setText:[artist name]];
 
@@ -62,6 +62,21 @@
 	return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+
+		PNCArtist *artist = self.controller.artists[indexPath.row];
+		NSUInteger index = [[self.controller artists] indexOfObject:artist];
+		[[self.controller artists] removeObjectAtIndex:index];
+		[self.controller saveToDocuments];
+
+		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+	} else if (editingStyle == UITableViewCellEditingStyleInsert) {
+		
+	}
+}
+
  #pragma mark - Navigation
 
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -72,7 +87,7 @@
 
 		 if ([[segue identifier]  isEqual: @"ShowArtistDetailSegue"]) {
              NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-             LSIArtist *artist = self.controller.artists[indexPath.row];
+             PNCArtist *artist = self.controller.artists[indexPath.row];
              [detailVC setArtist:artist];
          }
      }

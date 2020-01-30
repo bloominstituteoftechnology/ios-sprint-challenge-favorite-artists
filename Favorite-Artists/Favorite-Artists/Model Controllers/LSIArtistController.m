@@ -7,7 +7,7 @@
 //
 
 #import "LSIArtistController.h"
-#import "LSIArtist.h"
+#import "PNCArtist.h"
 
 @implementation LSIArtistController
 
@@ -25,7 +25,7 @@ static NSString *const apiKey = @"1";
 	return self;
 }
 
-- (void)getArtistsFromSearchTerm:(NSString *)searchTerm completion:(void (^)(NSError *, LSIArtist *))completion {
+- (void)getArtistsFromSearchTerm:(NSString *)searchTerm completion:(void (^)(NSError *, PNCArtist *))completion {
 
 	NSURL *baseURL = [NSURL URLWithString:baseURLString];
 	NSURL *url = [[baseURL URLByAppendingPathComponent:apiKey] URLByAppendingPathComponent:@"search.php"];
@@ -65,7 +65,7 @@ static NSString *const apiKey = @"1";
 
 				NSDictionary *dictionary = artists[0];
 				if (dictionary) {
-					LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dictionary];
+					PNCArtist *artist = [[PNCArtist alloc] initWithDictionary:dictionary];
 					if (artist) {
 						completion(nil, artist);
 						return;
@@ -94,7 +94,7 @@ static NSString *const apiKey = @"1";
 	NSLog(@"URL: %@", outputFileURL.description);
 
 	NSMutableArray *array = [[NSMutableArray alloc] init];
-	for (LSIArtist *artist in self.artists) {
+	for (PNCArtist *artist in self.artists) {
 		[array addObject:[artist toDictionary]];
 	}
 
@@ -108,7 +108,7 @@ static NSString *const apiKey = @"1";
 
 	NSArray *array = [[NSArray alloc] initWithContentsOfURL:inputFileURL];
 	for (NSDictionary *dictionary in array) {
-		LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dictionary];
+		PNCArtist *artist = [[PNCArtist alloc] initWithDictionary:dictionary];
 		[self.artists addObject:artist];
 	}
 }

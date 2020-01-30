@@ -26,6 +26,8 @@
 		DD882DB423DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* LSIArtistDetailViewController.m */; };
 		DD882DB723DB735000DFDD8C /* PNCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* PNCArtistController.m */; };
 		DD882DB823DB735000DFDD8C /* PNCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* PNCArtistController.m */; };
+		E313886223E323320003227E /* PNCArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E313886123E323320003227E /* PNCArtistTest.m */; };
+		E313886323E323320003227E /* PNCArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E313886123E323320003227E /* PNCArtistTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		DD882DB523DB735000DFDD8C /* PNCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCArtistController.h; sourceTree = "<group>"; };
 		DD882DB623DB735000DFDD8C /* PNCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCArtistController.m; sourceTree = "<group>"; };
 		DD882DF823DC61A900DFDD8C /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		E313886023E323320003227E /* PNCArtistTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCArtistTest.h; sourceTree = "<group>"; };
+		E313886123E323320003227E /* PNCArtistTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNCArtistTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 		DD882D9423DB5E9000DFDD8C /* Favorite-ArtistsTests */ = {
 			isa = PBXGroup;
 			children = (
+				E313886023E323320003227E /* PNCArtistTest.h */,
+				E313886123E323320003227E /* PNCArtistTest.m */,
 				DD882DF823DC61A900DFDD8C /* LSIFileHelper.h */,
 				DD882D9523DB5E9000DFDD8C /* Favorite_ArtistsTests.m */,
 				DD882D9723DB5E9000DFDD8C /* Info.plist */,
@@ -288,6 +294,7 @@
 				DD882DB723DB735000DFDD8C /* PNCArtistController.m in Sources */,
 				DD882D7B23DB5E8C00DFDD8C /* AppDelegate.m in Sources */,
 				DD882DAF23DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */,
+				E313886223E323320003227E /* PNCArtistTest.m in Sources */,
 				DD882DB323DB6B0B00DFDD8C /* LSIArtistDetailViewController.m in Sources */,
 				DD882D8C23DB5E8F00DFDD8C /* main.m in Sources */,
 				DD882D7E23DB5E8C00DFDD8C /* SceneDelegate.m in Sources */,
@@ -305,6 +312,7 @@
 				DD882D9623DB5E9000DFDD8C /* Favorite_ArtistsTests.m in Sources */,
 				DD882DA823DB605600DFDD8C /* PNCArtist.m in Sources */,
 				DD882DAC23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m in Sources */,
+				E313886323E323320003227E /* PNCArtistTest.m in Sources */,
 				DD882DB023DB6AE600DFDD8C /* LSIArtistsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

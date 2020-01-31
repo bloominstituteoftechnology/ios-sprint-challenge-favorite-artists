@@ -25,10 +25,9 @@
 		DD882DB423DB6B0B00DFDD8C /* PNCArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB223DB6B0B00DFDD8C /* PNCArtistDetailViewController.m */; };
 		DD882DB723DB735000DFDD8C /* PNCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* PNCArtistController.m */; };
 		DD882DB823DB735000DFDD8C /* PNCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD882DB623DB735000DFDD8C /* PNCArtistController.m */; };
-		E313886223E323320003227E /* PNCArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E313886123E323320003227E /* PNCArtistTest.m */; };
-		E313886323E323320003227E /* PNCArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E313886123E323320003227E /* PNCArtistTest.m */; };
 		E313886523E324670003227E /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = E313886423E324670003227E /* Artist.json */; };
 		E313886623E324670003227E /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = E313886423E324670003227E /* Artist.json */; };
+		E32CC2E623E3A42D002C6B62 /* PNCArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E313886123E323320003227E /* PNCArtistTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,7 +293,6 @@
 				DD882DB723DB735000DFDD8C /* PNCArtistController.m in Sources */,
 				DD882D7B23DB5E8C00DFDD8C /* AppDelegate.m in Sources */,
 				DD882DAF23DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.m in Sources */,
-				E313886223E323320003227E /* PNCArtistTest.m in Sources */,
 				DD882DB323DB6B0B00DFDD8C /* PNCArtistDetailViewController.m in Sources */,
 				DD882D8C23DB5E8F00DFDD8C /* main.m in Sources */,
 				DD882D7E23DB5E8C00DFDD8C /* SceneDelegate.m in Sources */,
@@ -312,7 +310,7 @@
 				DD882D9623DB5E9000DFDD8C /* Favorite_ArtistsTests.m in Sources */,
 				DD882DA823DB605600DFDD8C /* PNCArtist.m in Sources */,
 				DD882DAC23DB60F400DFDD8C /* PNCArtist+NSJSONSerialization.m in Sources */,
-				E313886323E323320003227E /* PNCArtistTest.m in Sources */,
+				E32CC2E623E3A42D002C6B62 /* PNCArtistTest.m in Sources */,
 				DD882DB023DB6AE600DFDD8C /* PNCFavoriteArtistsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,13 +460,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T87Y8KB3R4;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "$(SRCROOT)/Favorite-Artists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.percyNgan.Favorite-Artists";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.percyngan.Favorite-Artists";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -479,13 +477,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T87Y8KB3R4;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "$(SRCROOT)/Favorite-Artists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.percyNgan.Favorite-Artists";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.percyngan.Favorite-Artists";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

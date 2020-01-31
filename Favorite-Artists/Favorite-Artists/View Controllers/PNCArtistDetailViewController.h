@@ -11,7 +11,7 @@
 @class PNCArtistController;
 @class PNCArtist;
 
-@interface PNCArtistViewController : UIViewController
+@interface PNCArtistDetailViewController : UIViewController
 
 @property PNCArtistController *controller;
 @property PNCArtist *artist;

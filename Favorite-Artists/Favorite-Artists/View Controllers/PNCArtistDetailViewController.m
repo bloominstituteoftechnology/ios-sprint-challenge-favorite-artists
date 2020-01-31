@@ -10,7 +10,7 @@
 #import "PNCArtistController.h"
 #import "PNCArtistDetailViewController.h"
 
-@interface LSIArtistDetailViewController ()
+@interface PNCArtistDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;

@@ -64,7 +64,7 @@
         <!--Add New Artist-->
         <scene sceneID="1vN-sg-iML">
             <objects>
-                <viewController id="Edn-aH-EhZ" customClass="LSIArtistDetailViewController" sceneMemberID="viewController">
+                <viewController id="Edn-aH-EhZ" customClass="PNCArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qae-yW-hJa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

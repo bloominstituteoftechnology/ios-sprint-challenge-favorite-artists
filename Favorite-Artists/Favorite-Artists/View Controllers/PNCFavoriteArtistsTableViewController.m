@@ -69,12 +69,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
    
     if([segue.identifier isEqual: @"SearchArtistSegue"]) {
-            PNCArtistViewController *detailVC = segue.destinationViewController;
+            PNCArtistDetailViewController *detailVC = segue.destinationViewController;
             detailVC.controller = self.controller;
 
         } else if([segue.identifier isEqual: @"ShowArtistDetailSegue"]) {
             NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-            PNCArtistViewController *detailVC = segue.destinationViewController;
+            PNCArtistDetailViewController *detailVC = segue.destinationViewController;
             detailVC.controller = self.controller;
             detailVC.artist = self.controller.artists[indexPath.row];
         }

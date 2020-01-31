@@ -20,7 +20,7 @@
 
 - (void)testParseArtistJson {
     NSBundle *bundle  = [NSBundle bundleForClass:[self class]];
-    NSData *data = loadFile(@"Artists.json", bundle);
+    NSData *data = loadFile(@"Artist.json", bundle);
     XCTAssertNotNil(data);
 
     NSError *error = nil;
@@ -29,17 +29,17 @@
     NSLog(@"Error: %@", error);
     NSLog(@"JSON: %@", json);
 
-    BYArtist *artist = [[PCNArtist alloc] initWithDictionary:json];
+    PNCArtist *artist = [[PNCArtist alloc] initWithDictionary:json];
 
 
 
-    XCTAssertEqualObjects(@"Coldplay", artist.name);
-    XCTAssertEqual(1996, artist.year);
+    XCTAssertEqualObjects(@"Macklemore", artist.name);
+    XCTAssertEqual(1999, artist.year);
 }
 
 - (void)testSaveAndLoadArtists {
     NSBundle *bundle  = [NSBundle bundleForClass:[self class]];
-    NSData *data = loadFile(@"Artists.json", bundle);
+    NSData *data = loadFile(@"Artist.json", bundle);
     XCTAssertNotNil(data);
 
     NSError *error = nil;
@@ -49,18 +49,18 @@
     NSLog(@"JSON: %@", json);
     PNCArtistController *controller = [[PNCArtistController alloc] init];
     PNCArtist *artist = [[PNCArtist alloc] initWithDictionary:json];
-    XCTAssertEqualObjects(@"Coldplay", artist.name);
-    XCTAssertEqual(1996, artist.year);
+    XCTAssertEqualObjects(@"Macklemore", artist.name);
+    XCTAssertEqual(1999, artist.year);
 
     [controller addArtist:artist];
     PNCArtist *artist1 = [controller.artists firstObject];
-    XCTAssertEqualObjects(@"Coldplay", artist1.name);
+    XCTAssertEqualObjects(@"Macklemore", artist1.name);
 
     [controller.artists removeAllObjects];
     XCTAssertTrue([controller.artists count] == 0);
     [controller loadArtists];
     PNCArtist *artist2 = [controller.artists firstObject];
-    XCTAssertEqualObjects(@"Coldplay", artist2.name);
+    XCTAssertEqualObjects(@"Macklemore", artist2.name);
 }
 
 @end

@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef (^JDKArtistSearchCompleted)(JDKArtist *, NSError *);
+typedef (^JDKArtistSearchCompleted)(JDKArtist * _Nullable, NSError * _Nullable);
 
 @interface JDKArtistController : NSObject
 

@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Artist : NSObject
 
+@property NSString *name;
+@property NSString *bio;
+@property int yearFormed;
+
 @end
 
 NS_ASSUME_NONNULL_END

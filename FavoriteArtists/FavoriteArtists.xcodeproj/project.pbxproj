@@ -12,6 +12,7 @@
 		5D0225C623EF280C00C3B4D3 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0225C523EF280C00C3B4D3 /* Artist.m */; };
 		5D0225C923EF285B00C3B4D3 /* Artist+Artist_NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0225C823EF285B00C3B4D3 /* Artist+Artist_NSJSONSerialization.m */; };
 		5D0225CC23EF28A200C3B4D3 /* ArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0225CB23EF28A200C3B4D3 /* ArtistController.m */; };
+		5D0225CF23EF2DAE00C3B4D3 /* ArtistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0225CE23EF2DAE00C3B4D3 /* ArtistTableViewCell.m */; };
 		5D5AB43223EF212700E81FED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5AB43123EF212700E81FED /* AppDelegate.m */; };
 		5D5AB43523EF212700E81FED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5AB43423EF212700E81FED /* SceneDelegate.m */; };
 		5D5AB43B23EF212700E81FED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5AB43923EF212700E81FED /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 		5D0225C823EF285B00C3B4D3 /* Artist+Artist_NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+Artist_NSJSONSerialization.m"; sourceTree = "<group>"; };
 		5D0225CA23EF28A200C3B4D3 /* ArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistController.h; sourceTree = "<group>"; };
 		5D0225CB23EF28A200C3B4D3 /* ArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistController.m; sourceTree = "<group>"; };
+		5D0225CD23EF2DAE00C3B4D3 /* ArtistTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistTableViewCell.h; sourceTree = "<group>"; };
+		5D0225CE23EF2DAE00C3B4D3 /* ArtistTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableViewCell.m; sourceTree = "<group>"; };
 		5D5AB42D23EF212700E81FED /* FavoriteArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5AB43023EF212700E81FED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D5AB43123EF212700E81FED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,10 +122,12 @@
 			isa = PBXGroup;
 			children = (
 				5D5AB43923EF212700E81FED /* Main.storyboard */,
-				5D0225BE23EF27B400C3B4D3 /* ArtistTableViewController.h */,
-				5D0225BF23EF27B400C3B4D3 /* ArtistTableViewController.m */,
 				5D0225C123EF27CA00C3B4D3 /* ArtistDetailViewController.h */,
 				5D0225C223EF27CA00C3B4D3 /* ArtistDetailViewController.m */,
+				5D0225BE23EF27B400C3B4D3 /* ArtistTableViewController.h */,
+				5D0225BF23EF27B400C3B4D3 /* ArtistTableViewController.m */,
+				5D0225CD23EF2DAE00C3B4D3 /* ArtistTableViewCell.h */,
+				5D0225CE23EF2DAE00C3B4D3 /* ArtistTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				5D0225C923EF285B00C3B4D3 /* Artist+Artist_NSJSONSerialization.m in Sources */,
 				5D0225C623EF280C00C3B4D3 /* Artist.m in Sources */,
 				5D5AB43523EF212700E81FED /* SceneDelegate.m in Sources */,
+				5D0225CF23EF2DAE00C3B4D3 /* ArtistTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

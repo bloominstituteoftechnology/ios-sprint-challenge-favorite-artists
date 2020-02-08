@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Artist Table View Controller-->
         <scene sceneID="NeI-hm-8tn">
             <objects>
-                <tableViewController id="bkA-lJ-4Ec" sceneMemberID="viewController">
+                <tableViewController id="bkA-lJ-4Ec" customClass="ArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L9I-3N-ebD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
         <!--Add New Artist-->
         <scene sceneID="byz-Go-eEz">
             <objects>
-                <viewController id="kf2-xN-9bT" sceneMemberID="viewController">
+                <viewController id="kf2-xN-9bT" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RRP-nV-1Z4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

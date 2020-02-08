@@ -14,9 +14,17 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     if (self = [super init]) {
-        self.name = [dictionary objectForKey:@"strArtist"];
-        self.biography = [dictionary objectForKey:@"strBiographyEN"];
-        self.yearFormed = [[dictionary objectForKey:@"intFormedYear"] intValue];
+        NSString *name = dictionary[@"strArtist"];
+        NSString *biography = dictionary[@"strBiographyEN"];
+        NSString *yearNum = dictionary[@"intFormedYear"];
+        
+        if ([yearNum isKindOfClass:[NSString class]] || [yearNum isKindOfClass:[NSNumber class]]) {
+            int yearFormed = [yearNum intValue];
+            return [self initWithName:name biography:biography yearFormed:yearFormed];
+        } else {
+            int yearFormed = 0;
+            return [self initWithName:name biography:biography yearFormed:yearFormed];
+        }
     }
     return self;
 }

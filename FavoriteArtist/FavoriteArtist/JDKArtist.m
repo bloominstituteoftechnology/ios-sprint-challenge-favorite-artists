@@ -10,4 +10,14 @@
 
 @implementation JDKArtist
 
+- (instancetype)initWithName:(NSString *)name biography:(NSString *)biography yearFormed:(int)yearFormed
+{
+    if (self = [super init]) {
+        _name = name;
+        _yearFormed = yearFormed;
+        _biography = biography;
+    }
+    return self;
+}
+
 @end

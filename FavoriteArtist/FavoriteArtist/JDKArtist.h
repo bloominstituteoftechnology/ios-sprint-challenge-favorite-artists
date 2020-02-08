@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *biography;
 @property int yearFormed;
 
+- (instancetype)initWithName:(NSString *)name biography:(NSString *)biography yearFormed:(int)yearFormed;
+
 @end
 
 NS_ASSUME_NONNULL_END

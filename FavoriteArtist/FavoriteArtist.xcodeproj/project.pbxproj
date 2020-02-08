@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		29BB4BC523EF220800B1492E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BC423EF220800B1492E /* AppDelegate.m */; };
 		29BB4BC823EF220800B1492E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BC723EF220800B1492E /* SceneDelegate.m */; };
-		29BB4BCB23EF220800B1492E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BCA23EF220800B1492E /* ViewController.m */; };
 		29BB4BCE23EF220800B1492E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BB4BCC23EF220800B1492E /* Main.storyboard */; };
 		29BB4BD023EF220900B1492E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29BB4BCF23EF220900B1492E /* Assets.xcassets */; };
 		29BB4BD323EF220900B1492E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BB4BD123EF220900B1492E /* LaunchScreen.storyboard */; };
 		29BB4BD623EF220900B1492E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BD523EF220900B1492E /* main.m */; };
+		29BB4BE223EF27E900B1492E /* JDKFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BE123EF27E900B1492E /* JDKFavoriteArtistsTableViewController.m */; };
+		29BB4BE523EF280800B1492E /* JDKAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BE423EF280800B1492E /* JDKAddArtistViewController.m */; };
+		29BB4BE823EF282D00B1492E /* JDKShowArtistDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BE723EF282D00B1492E /* JDKShowArtistDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +24,17 @@
 		29BB4BC423EF220800B1492E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		29BB4BC623EF220800B1492E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		29BB4BC723EF220800B1492E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		29BB4BC923EF220800B1492E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		29BB4BCA23EF220800B1492E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		29BB4BCD23EF220800B1492E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29BB4BCF23EF220900B1492E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29BB4BD223EF220900B1492E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29BB4BD423EF220900B1492E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29BB4BD523EF220900B1492E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29BB4BE023EF27E900B1492E /* JDKFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDKFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		29BB4BE123EF27E900B1492E /* JDKFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		29BB4BE323EF280800B1492E /* JDKAddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDKAddArtistViewController.h; sourceTree = "<group>"; };
+		29BB4BE423EF280800B1492E /* JDKAddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKAddArtistViewController.m; sourceTree = "<group>"; };
+		29BB4BE623EF282D00B1492E /* JDKShowArtistDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDKShowArtistDetailsViewController.h; sourceTree = "<group>"; };
+		29BB4BE723EF282D00B1492E /* JDKShowArtistDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKShowArtistDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +67,14 @@
 		29BB4BC223EF220800B1492E /* FavoriteArtist */ = {
 			isa = PBXGroup;
 			children = (
+				29BB4BDF23EF27C200B1492E /* Models */,
+				29BB4BDE23EF27BA00B1492E /* Model Controllers */,
+				29BB4BDD23EF27B000B1492E /* Views */,
+				29BB4BDC23EF27A700B1492E /* View Controllers */,
 				29BB4BC323EF220800B1492E /* AppDelegate.h */,
 				29BB4BC423EF220800B1492E /* AppDelegate.m */,
 				29BB4BC623EF220800B1492E /* SceneDelegate.h */,
 				29BB4BC723EF220800B1492E /* SceneDelegate.m */,
-				29BB4BC923EF220800B1492E /* ViewController.h */,
-				29BB4BCA23EF220800B1492E /* ViewController.m */,
 				29BB4BCC23EF220800B1492E /* Main.storyboard */,
 				29BB4BCF23EF220900B1492E /* Assets.xcassets */,
 				29BB4BD123EF220900B1492E /* LaunchScreen.storyboard */,
@@ -74,6 +82,40 @@
 				29BB4BD523EF220900B1492E /* main.m */,
 			);
 			path = FavoriteArtist;
+			sourceTree = "<group>";
+		};
+		29BB4BDC23EF27A700B1492E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				29BB4BE023EF27E900B1492E /* JDKFavoriteArtistsTableViewController.h */,
+				29BB4BE123EF27E900B1492E /* JDKFavoriteArtistsTableViewController.m */,
+				29BB4BE323EF280800B1492E /* JDKAddArtistViewController.h */,
+				29BB4BE423EF280800B1492E /* JDKAddArtistViewController.m */,
+				29BB4BE623EF282D00B1492E /* JDKShowArtistDetailsViewController.h */,
+				29BB4BE723EF282D00B1492E /* JDKShowArtistDetailsViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		29BB4BDD23EF27B000B1492E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		29BB4BDE23EF27BA00B1492E /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		29BB4BDF23EF27C200B1492E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +144,7 @@
 		29BB4BB823EF220800B1492E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JDK;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "John Kouris";
 				TargetAttributes = {
@@ -146,10 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29BB4BCB23EF220800B1492E /* ViewController.m in Sources */,
+				29BB4BE223EF27E900B1492E /* JDKFavoriteArtistsTableViewController.m in Sources */,
+				29BB4BE823EF282D00B1492E /* JDKShowArtistDetailsViewController.m in Sources */,
 				29BB4BC523EF220800B1492E /* AppDelegate.m in Sources */,
 				29BB4BD623EF220900B1492E /* main.m in Sources */,
 				29BB4BC823EF220800B1492E /* SceneDelegate.m in Sources */,
+				29BB4BE523EF280800B1492E /* JDKAddArtistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

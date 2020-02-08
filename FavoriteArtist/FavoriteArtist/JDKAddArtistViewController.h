@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JDKAddArtistViewController.h
 //  FavoriteArtist
 //
 //  Created by John Kouris on 2/8/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface JDKAddArtistViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 @class Artist;
 
+typedef void (^ArtistSearchCompletionHandler)(Artist * _Nullable foundArtist, NSError * _Nullable error);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistController : NSObject
@@ -17,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addArtist:(Artist *)anArtist;
 - (void)delArtist:(Artist *)anArtist;
-- (Artist *)searchForArtistNamed:(NSString *)anArtistName;
+- (void)searchForArtistNamed:(NSString *)anArtistName completionHandler:(ArtistSearchCompletionHandler)completionHandler;
 
 @end
 

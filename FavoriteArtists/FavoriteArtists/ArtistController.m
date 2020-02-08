@@ -8,6 +8,9 @@
 
 #import "ArtistController.h"
 #import "Artist.h"
+#import "Artist+Artist_NSJSONSerialization.h"
+
+static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 @implementation ArtistController
 
@@ -23,17 +26,51 @@
     [self.artists removeObject:anArtist];
 }
 
-- (Artist *)searchForArtistNamed:(NSString *)anArtistName
+- (void)searchForArtistNamed:(NSString *)anArtistName completionHandler:(ArtistSearchCompletionHandler)completionHandler
 {
-    Artist *foundArtist = nil;
+    if (!anArtistName) {
+        NSError *error = [[NSError alloc] initWithDomain:[NSURLErrorDomain initWithString:@"No search term"] code:400 userInfo:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(nil, error);
+        });
+    }
     
-    // ********* TEST DATA **********
-    foundArtist = [[Artist alloc] init];
-    foundArtist.name = @"Fake artist";
-    foundArtist.yearFormed = 2020;
-    foundArtist.bio = @"This is test data";
+    NSURLComponents *URLComponents = [[NSURLComponents alloc] initWithString:BaseURLString];
+    NSMutableArray *queryItems = [NSMutableArray arrayWithObject:
+                                  [NSURLQueryItem queryItemWithName:@"s" value:anArtistName]];
+    URLComponents.queryItems = queryItems;
+    NSURL *URL = URLComponents.URL;
     
-    return foundArtist;
+    [[NSURLSession.sharedSession dataTaskWithURL:URL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error) {
+            NSLog(@"Error searching for %@: %@", anArtistName, error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            return;
+        }
+        
+        NSError *jsonError = nil;
+        NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        
+        if (!results) {
+            NSLog(@"Error decoding json: %@", jsonError);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, jsonError);
+            });
+            return;
+        }
+        
+        NSArray *artistDictionaries = [results objectForKey:@"artists"];
+        Artist *foundArtist = [Artist initWithDictionary:artistDictionaries[0]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(foundArtist, nil);
+        });
+        
+    }] resume];
+        
 }
 
 #pragma mark - Accessors

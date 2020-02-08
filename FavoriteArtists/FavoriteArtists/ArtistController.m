@@ -12,7 +12,9 @@
 
 - (void)addArtist:(Artist *)anArtist
 {
-    [self.artists addObject:anArtist];
+    if (![self.artists containsObject:anArtist]) {
+        [self.artists addObject:anArtist];
+    }
 }
 
 - (void)delArtist:(Artist *)anArtist

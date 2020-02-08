@@ -34,14 +34,18 @@
 {
     if (self.viewLoaded) {
         if (self.artist) {
-            self.btnSave.enabled = NO;
+            if ([self.artistController.artists containsObject:self.artist]) {
+                self.btnSave.enabled = NO;
+            } else {
+                self.btnSave.enabled = YES;
+            }
             self.title = self.artist.name;
             self.searchBar.hidden = YES;
             self.lblArtistName.text = self.artist.name;
             self.lblFormedIn.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
             self.txtvBio.text = self.artist.bio;
         } else {
-            self.btnSave.enabled = YES;
+            self.btnSave.enabled = NO;
             self.title = @"Add New Artist";
             self.searchBar.hidden = NO;
             self.lblArtistName.text = @"";
@@ -71,12 +75,16 @@
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
     NSLog(@"Searching");
-    Artist *foundArtist = [self.artistController searchForArtistNamed:self.searchBar.text];
-    
-    if (foundArtist) {
-        NSLog(@"Found %@", foundArtist);
-        self.artist = foundArtist;
-    }
+    [self.artistController searchForArtistNamed:searchBar.text completionHandler:^(Artist * foundArtist, NSError *error) {
+        if (error) {
+            NSLog(@"Returned from search with error: %@", error);
+        }
+        
+        if (foundArtist) {
+            NSLog(@"Found %@", foundArtist);
+            self.artist = foundArtist;
+        }
+    }];
 }
 
 @end

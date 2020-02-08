@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5D5AB43223EF212700E81FED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5AB43123EF212700E81FED /* AppDelegate.m */; };
 		5D5AB43523EF212700E81FED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5AB43423EF212700E81FED /* SceneDelegate.m */; };
-		5D5AB43823EF212700E81FED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5AB43723EF212700E81FED /* ViewController.m */; };
 		5D5AB43B23EF212700E81FED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5AB43923EF212700E81FED /* Main.storyboard */; };
 		5D5AB43D23EF212800E81FED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5AB43C23EF212800E81FED /* Assets.xcassets */; };
 		5D5AB44023EF212800E81FED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5AB43E23EF212800E81FED /* LaunchScreen.storyboard */; };
@@ -22,8 +21,6 @@
 		5D5AB43123EF212700E81FED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5D5AB43323EF212700E81FED /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		5D5AB43423EF212700E81FED /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		5D5AB43623EF212700E81FED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5D5AB43723EF212700E81FED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5D5AB43A23EF212700E81FED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D5AB43C23EF212800E81FED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D5AB43F23EF212800E81FED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,19 +58,57 @@
 		5D5AB42F23EF212700E81FED /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				5D5AB44B23EF217900E81FED /* Model */,
+				5D5AB44C23EF217F00E81FED /* Views */,
+				5D5AB44D23EF218D00E81FED /* Controllers */,
+				5D5AB44A23EF216900E81FED /* Resources */,
+				5D5AB44923EF215800E81FED /* App Lifecycle */,
+			);
+			path = FavoriteArtists;
+			sourceTree = "<group>";
+		};
+		5D5AB44923EF215800E81FED /* App Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
 				5D5AB43023EF212700E81FED /* AppDelegate.h */,
 				5D5AB43123EF212700E81FED /* AppDelegate.m */,
 				5D5AB43323EF212700E81FED /* SceneDelegate.h */,
 				5D5AB43423EF212700E81FED /* SceneDelegate.m */,
-				5D5AB43623EF212700E81FED /* ViewController.h */,
-				5D5AB43723EF212700E81FED /* ViewController.m */,
-				5D5AB43923EF212700E81FED /* Main.storyboard */,
+				5D5AB44223EF212800E81FED /* main.m */,
+			);
+			name = "App Lifecycle";
+			sourceTree = "<group>";
+		};
+		5D5AB44A23EF216900E81FED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				5D5AB43C23EF212800E81FED /* Assets.xcassets */,
 				5D5AB43E23EF212800E81FED /* LaunchScreen.storyboard */,
 				5D5AB44123EF212800E81FED /* Info.plist */,
-				5D5AB44223EF212800E81FED /* main.m */,
 			);
-			path = FavoriteArtists;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5D5AB44B23EF217900E81FED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5D5AB44C23EF217F00E81FED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D5AB43923EF212700E81FED /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5D5AB44D23EF218D00E81FED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +181,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D5AB43823EF212700E81FED /* ViewController.m in Sources */,
 				5D5AB43223EF212700E81FED /* AppDelegate.m in Sources */,
 				5D5AB44323EF212800E81FED /* main.m in Sources */,
 				5D5AB43523EF212700E81FED /* SceneDelegate.m in Sources */,

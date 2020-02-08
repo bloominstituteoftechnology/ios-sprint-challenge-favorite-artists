@@ -17,6 +17,7 @@
 		29BB4BE523EF280800B1492E /* JDKAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BE423EF280800B1492E /* JDKAddArtistViewController.m */; };
 		29BB4BE823EF282D00B1492E /* JDKShowArtistDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BE723EF282D00B1492E /* JDKShowArtistDetailsViewController.m */; };
 		29BB4BEB23EF287800B1492E /* JDKArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BEA23EF287800B1492E /* JDKArtist.m */; };
+		29BB4BEF23EF291900B1492E /* JDKArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB4BEE23EF291900B1492E /* JDKArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		29BB4BE723EF282D00B1492E /* JDKShowArtistDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKShowArtistDetailsViewController.m; sourceTree = "<group>"; };
 		29BB4BE923EF287800B1492E /* JDKArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDKArtist.h; sourceTree = "<group>"; };
 		29BB4BEA23EF287800B1492E /* JDKArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDKArtist.m; sourceTree = "<group>"; };
+		29BB4BED23EF291900B1492E /* JDKArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JDKArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		29BB4BEE23EF291900B1492E /* JDKArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JDKArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		29BB4BC223EF220800B1492E /* FavoriteArtist */ = {
 			isa = PBXGroup;
 			children = (
+				29BB4BEC23EF28EC00B1492E /* Resources */,
 				29BB4BDF23EF27C200B1492E /* Models */,
 				29BB4BDE23EF27BA00B1492E /* Model Controllers */,
 				29BB4BDD23EF27B000B1492E /* Views */,
@@ -121,6 +125,15 @@
 				29BB4BEA23EF287800B1492E /* JDKArtist.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		29BB4BEC23EF28EC00B1492E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29BB4BED23EF291900B1492E /* JDKArtist+NSJSONSerialization.h */,
+				29BB4BEE23EF291900B1492E /* JDKArtist+NSJSONSerialization.m */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +213,7 @@
 				29BB4BEB23EF287800B1492E /* JDKArtist.m in Sources */,
 				29BB4BD623EF220900B1492E /* main.m in Sources */,
 				29BB4BC823EF220800B1492E /* SceneDelegate.m in Sources */,
+				29BB4BEF23EF291900B1492E /* JDKArtist+NSJSONSerialization.m in Sources */,
 				29BB4BE523EF280800B1492E /* JDKAddArtistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 #import "ArtistController.h"
+#import "Artist.h"
 
 @implementation ArtistController
 
@@ -20,6 +21,19 @@
 - (void)delArtist:(Artist *)anArtist
 {
     [self.artists removeObject:anArtist];
+}
+
+- (Artist *)searchForArtistNamed:(NSString *)anArtistName
+{
+    Artist *foundArtist = nil;
+    
+    // ********* TEST DATA **********
+    foundArtist = [[Artist alloc] init];
+    foundArtist.name = @"Fake artist";
+    foundArtist.yearFormed = 2020;
+    foundArtist.bio = @"This is test data";
+    
+    return foundArtist;
 }
 
 #pragma mark - Accessors

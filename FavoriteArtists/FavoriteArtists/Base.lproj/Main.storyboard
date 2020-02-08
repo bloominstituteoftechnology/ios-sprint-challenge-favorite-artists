@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Artist Table View Controller-->
+        <!--Favorite Artists-->
         <scene sceneID="NeI-hm-8tn">
             <objects>
                 <tableViewController id="bkA-lJ-4Ec" customClass="ArtistTableViewController" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                             <outlet property="delegate" destination="bkA-lJ-4Ec" id="Ohb-RQ-8N1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bzF-4O-CSR">
+                    <navigationItem key="navigationItem" title="Favorite Artists" id="bzF-4O-CSR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3pj-fA-RND">
                             <connections>
                                 <segue destination="kf2-xN-9bT" kind="show" identifier="ShowAddArtist" id="BfF-9m-KH1"/>
@@ -112,8 +112,19 @@
                         <viewLayoutGuide key="safeArea" id="f7Q-Dw-kw6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="MgH-1A-pi8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="3dI-JE-UuY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="3dI-JE-UuY">
+                            <connections>
+                                <action selector="saveTapped:" destination="kf2-xN-9bT" id="uZq-Hm-2r2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btnSave" destination="3dI-JE-UuY" id="RJV-dk-yIl"/>
+                        <outlet property="lblArtistName" destination="cVw-SW-HgJ" id="hMx-Fy-jKO"/>
+                        <outlet property="lblFormedIn" destination="aS8-WC-ZID" id="rEg-jy-ldH"/>
+                        <outlet property="searchBar" destination="SkX-lV-sAn" id="iST-e1-Qq7"/>
+                        <outlet property="txtvBio" destination="36S-jL-yeJ" id="EFJ-Cg-cIW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anf-KB-Hhv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

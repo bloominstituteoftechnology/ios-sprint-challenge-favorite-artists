@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addArtist:(Artist *)anArtist;
 - (void)delArtist:(Artist *)anArtist;
+- (Artist *)searchForArtistNamed:(NSString *)anArtistName;
 
 @end
 

@@ -10,7 +10,7 @@
 #import "JDKArtist.h"
 #import "JDKArtist+NSJSONSerialization.h"
 
-static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
+static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 @interface JDKArtistController ()
 
@@ -28,7 +28,7 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
     return self;
 }
 
-- (void)searchForArtist:(NSString *)name completed:(JDKArtistSearchCompleted)completed
+- (void)searchForArtist:(NSString *)name completionHandler:(JDKArtistSearchCompletionHandler)completionHandler
 {
     NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseURL];
     NSArray *queryItems = @[[NSURLQueryItem queryItemWithName:@"s" value:name]];
@@ -38,7 +38,11 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error getting artist: %@", error);
-            completed(nil, error);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            
             return;
         }
         
@@ -46,13 +50,13 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         if (jsonError) {
             NSLog(@"json parsing error: %@", jsonError);
-            completed(nil, error);
+            completionHandler(nil, error);
             return;
         }
         
         NSArray *dictionary = json[@"artists"];
         JDKArtist *artist = [[JDKArtist alloc] initWithDictionary:dictionary[0]];
-        completed(artist, nil);
+        completionHandler(artist, nil);
     }];
     
     [task resume];

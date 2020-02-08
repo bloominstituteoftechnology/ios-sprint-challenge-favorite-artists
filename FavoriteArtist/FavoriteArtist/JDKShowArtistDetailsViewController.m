@@ -7,6 +7,7 @@
 //
 
 #import "JDKShowArtistDetailsViewController.h"
+#import "JDKArtist.h"
 
 @interface JDKShowArtistDetailsViewController ()
 
@@ -16,17 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews {
+    [self.navigationItem setTitle:self.artist.name];
+    
+    self.artistNameLabel.text = self.artist.name;
+    
+    NSString *yearFormed = [NSString stringWithFormat:@"Formed %d", self.artist.yearFormed];
+    self.yearFormedLabel.text = yearFormed;
+    
+    self.biographyTextView.text = self.artist.biography;
 }
-*/
+
 
 @end

@@ -11,11 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef (^JDKArtistSearchCompleted)(JDKArtist * _Nullable, NSError * _Nullable);
+typedef void (^JDKArtistSearchCompletionHandler)(JDKArtist *artist, NSError *error);
 
 @interface JDKArtistController : NSObject
 
-- (void)searchForArtist:(NSString *)name completed:(JDKArtistSearchCompleted)completed;
+- (void)searchForArtist:(NSString *)name completionHandler:(JDKArtistSearchCompletionHandler)completionHandler;
 - (void)saveArtist:(JDKArtist *)artist;
 - (JDKArtist *)fetchSavedArtist:(JDKArtist *)artist;
 - (NSMutableArray *)fetchAllSavedArtists;

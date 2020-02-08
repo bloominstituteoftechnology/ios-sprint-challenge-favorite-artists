@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JDKArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JDKAddArtistViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *biographyTextView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+@property JDKArtistController *artistController;
+@property JDKArtist *searchedArtist;
 
 @end
 

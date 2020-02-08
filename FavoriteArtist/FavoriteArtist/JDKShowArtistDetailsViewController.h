@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JDKArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JDKShowArtistDetailsViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *biographyTextView;
+
+@property JDKArtist *artist;
 
 @end
 

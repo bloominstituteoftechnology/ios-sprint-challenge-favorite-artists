@@ -66,8 +66,12 @@
 {
     if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
         JDKAddArtistViewController *destinationVC = segue.destinationViewController;
+        destinationVC.artistController = self.artistController;
     } else if ([segue.identifier isEqualToString:@"ShowArtistDetailSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         JDKShowArtistDetailsViewController *destinationVC = segue.destinationViewController;
+        self.artist = [self.artistArray objectAtIndex:indexPath.row];
+        destinationVC.artist = self.artist;
     }
 }
 

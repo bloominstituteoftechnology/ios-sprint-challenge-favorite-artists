@@ -110,6 +110,11 @@
                         <viewLayoutGuide key="safeArea" id="CQS-wq-4W2"/>
                     </view>
                     <navigationItem key="navigationItem" id="z7K-s5-G1d"/>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="knw-n6-UFQ" id="5EY-7b-3JJ"/>
+                        <outlet property="biographyTextView" destination="CB8-0f-Z8i" id="uCM-VH-QpG"/>
+                        <outlet property="yearFormedLabel" destination="XWb-1F-UJl" id="aVh-SZ-5rv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Re-0N-zGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,8 +176,18 @@
                         <viewLayoutGuide key="safeArea" id="5gR-Wj-bt8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Artist" id="Wbk-ES-Qrp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="G2x-wP-b9x"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="G2x-wP-b9x">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="4uH-Jh-Ghg" id="utS-I4-L4D"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="kMn-UM-kok" id="USx-VU-Ezz"/>
+                        <outlet property="biographyTextView" destination="gPa-iI-2kq" id="DJk-Vx-uYk"/>
+                        <outlet property="searchBar" destination="5zO-v8-9ba" id="WOx-NI-VKM"/>
+                        <outlet property="yearFormedLabel" destination="ygU-Hx-LC5" id="Eab-MS-xTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ra-yB-jI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

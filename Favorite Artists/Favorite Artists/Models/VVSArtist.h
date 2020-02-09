@@ -10,5 +10,13 @@
 
 @interface VVSArtist : NSObject
 
+@property (nonatomic) NSString *name; // strArtist
+@property (nonatomic) NSUInteger formedYear; // intFormedYear
+@property (nonatomic) NSString *biography; // strBiographyEN
+
+- (instancetype)initWithName:(NSString *)name
+                  formedYear:(NSUInteger)formedYear
+                   biography:(NSString *)biography;
+
 @end
 

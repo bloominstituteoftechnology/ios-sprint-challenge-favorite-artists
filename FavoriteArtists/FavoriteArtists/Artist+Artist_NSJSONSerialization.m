@@ -29,7 +29,7 @@
 
 - (NSDictionary *)toDictionary
 {
-    NSMutableDictionary *dictionary;
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
     [dictionary setObject:self.name forKey:@"strArtist"];
     [dictionary setObject:[NSString stringWithFormat:(@"%d"), self.yearFormed] forKey:@"intFormedYear"];
     [dictionary setObject:self.name forKey:@"strBiographyEN"];

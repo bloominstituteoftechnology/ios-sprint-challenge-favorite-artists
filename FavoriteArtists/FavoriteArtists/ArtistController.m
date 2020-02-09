@@ -12,12 +12,20 @@
 
 static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
+@interface ArtistController ()
+
+- (void)saveArtist:(Artist *)anArtist;
+- (void)loadArtists;
+
+@end
+
 @implementation ArtistController
 
 - (void)addArtist:(Artist *)anArtist
 {
     if (![_artists containsObject:anArtist]) {
         [_artists addObject:anArtist];
+        [self saveArtist:anArtist];
     }
 }
 
@@ -73,6 +81,57 @@ static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/
         
 }
 
+#pragma mark - Persistence methods
+
+- (void)saveArtist:(Artist *)anArtist
+{
+    if (!anArtist) return;
+    
+    NSURL *directory = [[NSFileManager defaultManager]
+                        URLForDirectory:NSDocumentDirectory
+                        inDomain:NSUserDomainMask
+                        appropriateForURL:nil
+                        create:YES
+                        error:nil];
+    
+    NSURL *artistURL = [[directory URLByAppendingPathComponent:anArtist.name] URLByAppendingPathExtension:@"plist"];
+    NSLog(@"URL: %@", artistURL);
+    NSDictionary *dictionary = [anArtist toDictionary];
+//    BOOL written = [dictionary writeToURL:artistURL atomically:YES];
+    NSError *writeError;
+    BOOL written = [dictionary writeToURL:artistURL error:&writeError];
+    if (!written) {
+        NSLog(@"%@ was not written: %@", anArtist.name, writeError);
+    }
+}
+
+- (void)loadArtists
+{
+    NSURL *directory = [[NSFileManager defaultManager]
+                        URLForDirectory:NSDocumentDirectory
+                        inDomain:NSUserDomainMask
+                        appropriateForURL:nil
+                        create:YES
+                        error:nil];
+    NSURL *url = [directory absoluteURL];
+    
+    NSArray *filenames = [[NSFileManager defaultManager]
+                          contentsOfDirectoryAtURL:url
+                          includingPropertiesForKeys:@[]
+                          options:NSDirectoryEnumerationSkipsHiddenFiles
+                          error:nil];
+    
+    if (filenames) {
+        for (NSURL *file in filenames) {
+            NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfURL:file];
+            if (dictionary) {
+                Artist *anArtist = [Artist initWithDictionary:dictionary];
+                [_artists addObject:anArtist];
+            }
+        }
+    }
+}
+
 #pragma mark - Accessors
 
 - (NSArray *)artists {
@@ -84,10 +143,10 @@ static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/
 - (instancetype)init {
     if (self = [super init]) {
         _artists = [[NSMutableArray alloc] init];
+        [self loadArtists];
     }
     
     return self;
 }
-
 
 @end

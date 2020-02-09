@@ -16,8 +16,8 @@ static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/
 
 - (void)addArtist:(Artist *)anArtist
 {
-    if (![self.artists containsObject:anArtist]) {
-        [self.artists addObject:anArtist];
+    if (![_artists containsObject:anArtist]) {
+        [_artists addObject:anArtist];
     }
 }
 

@@ -74,7 +74,7 @@
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
-    NSLog(@"Searching");
+    self.txtvBio.text = @"Searching";
     [self.artistController searchForArtistNamed:searchBar.text completionHandler:^(Artist * foundArtist, NSError *error) {
         if (error) {
             NSLog(@"Returned from search with error: %@", error);
@@ -83,6 +83,10 @@
         if (foundArtist) {
             NSLog(@"Found %@", foundArtist);
             self.artist = foundArtist;
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.txtvBio.text = @"Not found";
+            });
         }
     }];
 }

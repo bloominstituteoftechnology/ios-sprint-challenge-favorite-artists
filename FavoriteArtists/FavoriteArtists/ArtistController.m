@@ -71,6 +71,10 @@ static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/
         }
         
         NSArray *artistDictionaries = [results objectForKey:@"artists"];
+        if ([artistDictionaries class] == [NSNull class] || !artistDictionaries || artistDictionaries.count == 0) {
+            completionHandler(nil, nil);
+            return;
+        }
         Artist *foundArtist = [Artist initWithDictionary:artistDictionaries[0]];
         
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -23,7 +23,7 @@ static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/
 
 - (void)delArtist:(Artist *)anArtist
 {
-    [self.artists removeObject:anArtist];
+    [_artists removeObject:anArtist];
 }
 
 - (void)searchForArtistNamed:(NSString *)anArtistName completionHandler:(ArtistSearchCompletionHandler)completionHandler

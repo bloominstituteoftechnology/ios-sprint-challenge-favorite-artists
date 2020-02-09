@@ -9,7 +9,6 @@
 #import "ArtistTableViewController.h"
 #import "Artist.h"
 #import "ArtistController.h"
-#import "ArtistTableViewCell.h"
 #import "ArtistDetailViewController.h"
 
 @interface ArtistTableViewController ()
@@ -93,7 +92,9 @@
     ArtistDetailViewController *vc = segue.destinationViewController;
     vc.artistController = self.artistController;
     
-    
+    if ([segue.identifier isEqualToString:(@"ShowArtistDetail")]) {
+        vc.artist = self.artistController.artists[self.tableView.indexPathForSelectedRow.row];
+    }
 }
 
 @end

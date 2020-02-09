@@ -16,6 +16,7 @@ static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/
 
 - (void)saveArtist:(Artist *)anArtist;
 - (void)loadArtists;
+- (void)deleteArtistFile:(Artist *)anArtist;
 
 @end
 
@@ -32,6 +33,7 @@ static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/
 - (void)delArtist:(Artist *)anArtist
 {
     [_artists removeObject:anArtist];
+    [self deleteArtistFile:anArtist];
 }
 
 - (void)searchForArtistNamed:(NSString *)anArtistName completionHandler:(ArtistSearchCompletionHandler)completionHandler
@@ -133,6 +135,27 @@ static NSString *const BaseURLString = @"https://www.theaudiodb.com/api/v1/json/
                 [_artists addObject:anArtist];
             }
         }
+    }
+}
+
+- (void)deleteArtistFile:(Artist *)anArtist
+{
+    if (!anArtist) return;
+    
+    NSURL *directory = [[NSFileManager defaultManager]
+                        URLForDirectory:NSDocumentDirectory
+                        inDomain:NSUserDomainMask
+                        appropriateForURL:nil
+                        create:YES
+                        error:nil];
+    
+    NSURL *artistURL = [[directory URLByAppendingPathComponent:anArtist.name] URLByAppendingPathExtension:@"plist"];
+    NSLog(@"URL: %@", artistURL);
+    
+    NSError *deleteError;
+    [NSFileManager.defaultManager removeItemAtURL:artistURL error:&deleteError];
+    if (deleteError) {
+        NSLog(@"Unable to delete %@: %@", anArtist.name, deleteError);
     }
 }
 

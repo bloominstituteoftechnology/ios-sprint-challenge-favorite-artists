@@ -9,8 +9,7 @@
 #import "ArtistController.h"
 #import "Artist.h"
 
-//DON'T FORGET URL!!!!!!!!!!
-static NSString *const ArtistFetcherBaseURLString = @"ENTER URL HERE";
+static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
 
 @class ArtistDetailViewController;
 

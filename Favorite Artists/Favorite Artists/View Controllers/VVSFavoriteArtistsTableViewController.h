@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VVSAddSearchViewController.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface VVSFavoriteArtistsTableViewController : UITableViewController
+@interface VVSFavoriteArtistsTableViewController : UITableViewController <SearchDetailDelegate>
 
 @end
-
-NS_ASSUME_NONNULL_END

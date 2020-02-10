@@ -16,6 +16,8 @@
 		E369F2D723EE5EDA00D8F0B3 /* VVSArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E369F2D623EE5EDA00D8F0B3 /* VVSArtist.m */; };
 		E369F2E423F0AFF700D8F0B3 /* VVSFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E369F2E323F0AFF700D8F0B3 /* VVSFavoriteArtistsTableViewController.m */; };
 		E369F2E723F0B02300D8F0B3 /* VVSAddSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E369F2E623F0B02300D8F0B3 /* VVSAddSearchViewController.m */; };
+		E369F2EA23F0BD7000D8F0B3 /* VVSArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = E369F2E923F0BD7000D8F0B3 /* VVSArtistController.m */; };
+		E369F2ED23F0BE8D00D8F0B3 /* VVSArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E369F2EC23F0BE8D00D8F0B3 /* VVSArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		E369F2E323F0AFF700D8F0B3 /* VVSFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVSFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
 		E369F2E523F0B02300D8F0B3 /* VVSAddSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VVSAddSearchViewController.h; sourceTree = "<group>"; };
 		E369F2E623F0B02300D8F0B3 /* VVSAddSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVSAddSearchViewController.m; sourceTree = "<group>"; };
+		E369F2E823F0BD7000D8F0B3 /* VVSArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VVSArtistController.h; sourceTree = "<group>"; };
+		E369F2E923F0BD7000D8F0B3 /* VVSArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVSArtistController.m; sourceTree = "<group>"; };
+		E369F2EB23F0BE8D00D8F0B3 /* VVSArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VVSArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		E369F2EC23F0BE8D00D8F0B3 /* VVSArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "VVSArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,8 @@
 		E369F2C823EE535D00D8F0B3 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E369F2E823F0BD7000D8F0B3 /* VVSArtistController.h */,
+				E369F2E923F0BD7000D8F0B3 /* VVSArtistController.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -105,6 +113,8 @@
 			children = (
 				E369F2D523EE5EDA00D8F0B3 /* VVSArtist.h */,
 				E369F2D623EE5EDA00D8F0B3 /* VVSArtist.m */,
+				E369F2EB23F0BE8D00D8F0B3 /* VVSArtist+NSJSONSerialization.h */,
+				E369F2EC23F0BE8D00D8F0B3 /* VVSArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,7 +203,9 @@
 				E369F2C223EE4F9900D8F0B3 /* main.m in Sources */,
 				E369F2E723F0B02300D8F0B3 /* VVSAddSearchViewController.m in Sources */,
 				E369F2E423F0AFF700D8F0B3 /* VVSFavoriteArtistsTableViewController.m in Sources */,
+				E369F2ED23F0BE8D00D8F0B3 /* VVSArtist+NSJSONSerialization.m in Sources */,
 				E369F2D723EE5EDA00D8F0B3 /* VVSArtist.m in Sources */,
+				E369F2EA23F0BD7000D8F0B3 /* VVSArtistController.m in Sources */,
 				E369F2B423EE4F9800D8F0B3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

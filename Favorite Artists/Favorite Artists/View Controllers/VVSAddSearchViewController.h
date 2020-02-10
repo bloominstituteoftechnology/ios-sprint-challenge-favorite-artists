@@ -7,11 +7,33 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VVSArtistController.h"
+#import "VVSArtist.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@protocol SearchDetailDelegate <NSObject>
 
-@interface VVSAddSearchViewController : UIViewController
+- (void)didSave:(VVSArtist *)artist;
 
 @end
 
-NS_ASSUME_NONNULL_END
+@interface VVSAddSearchViewController : UIViewController <UISearchBarDelegate>
+
+typedef NS_ENUM(NSInteger, ViewType) {
+    Search,
+    Detail
+};
+
+- (void)updateViews;
+
+@property(nonatomic, weak) id <SearchDetailDelegate> delegate;
+@property (nonatomic) VVSArtistController *artistController;
+@property (nonatomic) VVSArtist *artist;
+@property (nonatomic) ViewType viewType;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+@end

@@ -27,6 +27,12 @@
     _artistController = [[ArtistController alloc] init];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    [self.tableView reloadData];
+}
+
 //MARK: - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

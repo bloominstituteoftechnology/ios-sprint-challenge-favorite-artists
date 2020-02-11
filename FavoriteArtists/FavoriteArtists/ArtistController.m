@@ -56,7 +56,8 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
                 completionHandler:(ArtistFetcherCompletionHandler)completionHandler
 {
     
-    NSURLComponents *URLComponents = [[NSURLComponents alloc] initWithString:ArtistFetcherBaseURLString];
+    NSString *realURL = [ArtistFetcherBaseURLString stringByAppendingString:searchTerm];
+    NSURLComponents *URLComponents = [[NSURLComponents alloc] initWithString:realURL];
     NSURL *URL = URLComponents.URL;
     
     [[NSURLSession.sharedSession dataTaskWithURL:URL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -85,17 +86,13 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
         
         NSArray *artistDictionaries = [results objectForKey:@"artists"];
         
-        Artist *returnArtist = [[Artist alloc] init];
-        
         
         for (NSDictionary *dictionary in artistDictionaries) {
             Artist *artist = [[Artist alloc] initWithDictionary:dictionary];
-            [returnArtist isEqual:artist];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(artist, nil);
+            });
         }
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            completionHandler(returnArtist, nil);
-        });
         
     }] resume];
 }

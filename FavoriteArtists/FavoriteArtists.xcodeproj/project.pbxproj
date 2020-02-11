@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373F9E9123F25F7F0030396B /* Artist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F9E9023F25F7F0030396B /* Artist+NSJSONSerialization.m */; };
 		37BE492F23EDC2730033D422 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BE492E23EDC2730033D422 /* AppDelegate.m */; };
 		37BE493223EDC2730033D422 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BE493123EDC2730033D422 /* SceneDelegate.m */; };
 		37BE493823EDC2730033D422 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37BE493623EDC2730033D422 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373F9E8F23F25F7F0030396B /* Artist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		373F9E9023F25F7F0030396B /* Artist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		37BE492A23EDC2730033D422 /* FavoriteArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37BE492D23EDC2730033D422 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37BE492E23EDC2730033D422 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 			children = (
 				37BE495523EDCA8F0033D422 /* Artist.h */,
 				37BE495623EDCA8F0033D422 /* Artist.m */,
+				373F9E8F23F25F7F0030396B /* Artist+NSJSONSerialization.h */,
+				373F9E9023F25F7F0030396B /* Artist+NSJSONSerialization.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			files = (
 				37BE495123EDC8F20033D422 /* ArtistDetailViewController.m in Sources */,
 				37BE494E23EDC8DA0033D422 /* ArtistsTableViewController.m in Sources */,
+				373F9E9123F25F7F0030396B /* Artist+NSJSONSerialization.m in Sources */,
 				37BE495423EDCA7D0033D422 /* ArtistController.m in Sources */,
 				37BE492F23EDC2730033D422 /* AppDelegate.m in Sources */,
 				37BE494023EDC2790033D422 /* main.m in Sources */,

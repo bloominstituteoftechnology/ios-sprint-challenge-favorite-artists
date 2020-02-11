@@ -10,24 +10,6 @@
 
 @implementation Artist
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
-    
-    if (self = [super init]) {
-        
-        //MAKE SURE THIS IS FILLED OUT THE APPROPRIATE WAY
-        
-        _identifier = [dictionary objectForKey:@"id"];
-        
-        NSDictionary *properties = [dictionary objectForKey:@"properties"];
-        
-        _name = [[properties objectForKey:@"ENTER NAME KEY"] string];
-        _founded = [[properties objectForKey:@"ENTER FOUNDED KEY"] string];
-        _details = [[properties objectForKey:@"ENTER DETAILS KEY"] string];
-    }
-    return self;
-}
-
 //MARK: - Equality
 
 - (BOOL)isEqual:(Artist *)object

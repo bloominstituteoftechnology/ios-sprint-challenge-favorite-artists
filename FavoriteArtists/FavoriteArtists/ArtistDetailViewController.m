@@ -56,7 +56,7 @@
     
     NSString *searchTerm = searchBar.text;
     
-    [_artistController fetchArtistWithSearchTerm:searchTerm completionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
+    [_artistController fetchArtistWithSearchTerm:searchTerm completionHandler:^(Artist * artist, NSError * error) {
         
         if (error) {
             NSLog(@"Error fetching artist: %@", error);

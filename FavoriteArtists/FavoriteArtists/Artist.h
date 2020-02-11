@@ -12,10 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Artist : NSObject
 
-//MARK: - Initializers
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
 //MARK: - Properties
 
 @property (nonatomic, readonly, copy) NSString *identifier;

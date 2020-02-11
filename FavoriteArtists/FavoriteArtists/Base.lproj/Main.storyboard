@@ -76,7 +76,7 @@
                                     <outlet property="delegate" destination="aOQ-to-87e" id="OKI-Xa-XxY"/>
                                 </connections>
                             </searchBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R1Q-9x-boX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1Q-9x-boX">
                                 <rect key="frame" x="20" y="236" width="374" height="626"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>

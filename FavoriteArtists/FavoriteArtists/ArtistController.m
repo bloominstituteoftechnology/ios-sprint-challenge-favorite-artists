@@ -84,8 +84,7 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
             return;
         }
         
-        //IF THERE'S AN ISSUE, IT'S HERE                      vvvvvvvv
-        NSArray *artistDictionaries = [results objectForKey:@"features"];
+        NSArray *artistDictionaries = [results objectForKey:@"artists"];
         
         Artist *returnArtist = [[Artist alloc] init];
         

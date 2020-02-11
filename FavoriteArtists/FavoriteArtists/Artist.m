@@ -10,14 +10,24 @@
 
 @implementation Artist
 
-//MARK: - Equality
-
-- (BOOL)isEqual:(Artist *)object
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    if (self == object) return YES;
-    if (![object isKindOfClass:[Artist class]]) return NO;
-    
-    return [_identifier isEqualToString:object.identifier];
+    if (self = [super init]) {
+        
+        NSDictionary *properties = [dictionary objectForKey:@"artists"];
+        _name = [properties objectForKey:@"strArtist"];
+        _founded = [properties objectForKey:@"intFormedYear"];
+        _details = [properties objectForKey:@"strBiographyEN"];
+    }
+    return self;
+
+}
+
+
+- (NSDictionary *)toDictionary
+{
+    NSDictionary *dictionary;
+    return dictionary;
 }
 
 @end

@@ -7,27 +7,10 @@
 //
 
 #import "Artist+NSJSONSerialization.h"
-#import "Artist.h"
 #import <UIKit/UIKit.h>
 
 
 
 @implementation Artist (NSJSONSerialization)
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
-    if (self = [super init]) {
-         
-    }
-    return self;
-
-}
-
-
-- (NSDictionary *)toDictionary
-{
-    NSDictionary *dictionary;
-    return dictionary;
-}
 
 @end

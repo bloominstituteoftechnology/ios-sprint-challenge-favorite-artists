@@ -59,7 +59,7 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     NSURLComponents *URLComponents = [[NSURLComponents alloc] initWithString:ArtistFetcherBaseURLString];
     
     NSMutableArray *queryItems = [NSMutableArray arrayWithObjects:
-                                  [NSURLQueryItem queryItemWithName:@"strArtist" value:searchTerm],nil];
+                                  [NSURLQueryItem queryItemWithName:@"name" value:searchTerm],nil];
     
     URLComponents.queryItems = queryItems;
     NSURL *URL = URLComponents.URL;

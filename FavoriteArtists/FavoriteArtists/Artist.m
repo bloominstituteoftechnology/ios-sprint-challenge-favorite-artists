@@ -20,7 +20,6 @@
         _details = [properties objectForKey:@"strBiographyEN"];
     }
     return self;
-
 }
 
 

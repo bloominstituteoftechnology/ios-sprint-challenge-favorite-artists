@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _artistController = [[ArtistController alloc] init];
 }
 
 //MARK: - Table view data source
@@ -46,12 +47,12 @@
 //MARK: - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@""]) {
+    if ([segue.identifier isEqualToString:@"artistDetailSegue"]) {
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         ArtistDetailViewController *detailVC = segue.destinationViewController;
         detailVC.artistController = self.artistController;
         detailVC.artist = [self.artistController.artists objectAtIndex:indexPath.row];
-    } else if ([segue.identifier isEqualToString:@""]) {
+    } else if ([segue.identifier isEqualToString:@"searchArtistSegue"]) {
         ArtistDetailViewController *detailVC = segue.destinationViewController;
         detailVC.artistController = self.artistController;
     }

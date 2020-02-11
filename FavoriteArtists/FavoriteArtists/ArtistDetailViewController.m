@@ -27,8 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _artistController = [[ArtistController alloc] init];
-    
     [self updateViews];
 }
 

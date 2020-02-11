@@ -7,10 +7,27 @@
 //
 
 #import "Artist+NSJSONSerialization.h"
+#import "Artist.h"
 #import <UIKit/UIKit.h>
 
 
 
 @implementation Artist (NSJSONSerialization)
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    NSString *name = dictionary[@"strArtist"];
+    NSString *founded = dictionary[@"intFormedYear"];
+    NSString *details = dictionary[@"strBiographyEN"];
+    
+    return [self initWithName:name founded:founded details:details];
+}
+
+
+- (NSDictionary *)toDictionary
+{
+    NSDictionary *dictionary;
+    return dictionary;
+}
 
 @end

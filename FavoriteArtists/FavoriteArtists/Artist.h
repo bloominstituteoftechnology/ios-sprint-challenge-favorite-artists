@@ -12,10 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Artist : NSObject
 
-//MARK: - Initializers
+//MARK: - Initialization
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-- (NSDictionary *)toDictionary;
+- (instancetype)initWithName:(NSString *)name founded:(NSString *)founded details:(NSString *)details;
 
 //MARK: - Properties
 

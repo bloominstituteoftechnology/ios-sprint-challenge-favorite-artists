@@ -10,24 +10,15 @@
 
 @implementation Artist
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+- (instancetype)initWithName:(NSString *)name founded:(NSString *)founded details:(NSString *)details
 {
-    if (self = [super init]) {
-        
-        NSDictionary *properties = [dictionary objectForKey:@"artists"];
-        _name = [properties objectForKey:@"strArtist"];
-        _founded = [properties objectForKey:@"intFormedYear"];
-        _details = [properties objectForKey:@"strBiographyEN"];
-        
+    self = [super init];
+    if (self) {
+        _name = name;
+        _founded = founded;
+        _details = details;
     }
     return self;
-}
-
-
-- (NSDictionary *)toDictionary
-{
-    NSDictionary *dictionary;
-    return dictionary;
 }
 
 @end

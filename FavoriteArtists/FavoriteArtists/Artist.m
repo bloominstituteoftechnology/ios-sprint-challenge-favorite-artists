@@ -18,6 +18,7 @@
         _name = [properties objectForKey:@"strArtist"];
         _founded = [properties objectForKey:@"intFormedYear"];
         _details = [properties objectForKey:@"strBiographyEN"];
+        
     }
     return self;
 }

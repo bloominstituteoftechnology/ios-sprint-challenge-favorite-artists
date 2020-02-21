@@ -10,6 +10,9 @@
 #import "CARCoreDataStack.h"
 #import "CARArtistFetcher.h"
 #import "CARFavoriteArtist.h"
+#import "CARArtist+CoreDataClass.h"
+#import "CARArtist+CoreDataProperties.h"
+#import "NSManagedObject+CARHelpers.h"
 
 @interface CARArtistSearchViewController ()
 
@@ -44,6 +47,20 @@
         self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
     }
     self.biographyTextView.text = self.artist.biography;
+}
+
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    CARArtist *artist = [CARArtist insertNewObjectInContext:self.stack.viewContext];
+    artist.name = self.artist.name;
+    artist.yearFormed = self.artist.yearFormed;
+    artist.biography = self.artist.biography;
+    NSError *saveError = nil;
+    [self.stack.viewContext save:&saveError];
+    if (saveError) {
+        NSLog(@"Error saving Artist objects: %@", saveError);
+        return;
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {

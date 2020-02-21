@@ -39,6 +39,17 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSError *fetchError = nil;
+    [self.fetchedResultsController performFetch:&fetchError];
+    if (fetchError) {
+        NSLog(@"Error fetching objects: %@", fetchError);
+        return;
+    }
+    [self.tableView reloadData];
+}
+
 - (IBAction)addButtonTapped:(UIBarButtonItem *)sender {
     [self performSegueWithIdentifier:@"ShowAddArtistSegue" sender:self];
 }

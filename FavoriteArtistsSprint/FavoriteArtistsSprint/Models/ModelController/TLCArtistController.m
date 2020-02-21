@@ -89,5 +89,20 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
      
 }
 
+-(void) saveDictionary:(NSDictionary *)dictionary {
+    NSURL *fileURL = [self artistsFileURL];
+    // sanity check
+    NSLog(@"Your saving to this URL: %@", fileURL);
+    NSError *saveToURLError = nil;
+    
+    [self.artistDictionary[@"artists"] addObject:dictionary];
+    //should be populated now ^^
+    
+    if([self.artistDictionary writeToURL:fileURL error: &saveToURLError]) {
+        
+    }
+}
+
+
 
 @end

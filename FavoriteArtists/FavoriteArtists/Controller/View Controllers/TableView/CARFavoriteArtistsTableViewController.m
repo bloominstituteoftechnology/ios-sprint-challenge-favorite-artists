@@ -10,7 +10,7 @@
 #import "CARArtist+CoreDataClass.h"
 #import "CARArtist+CoreDataProperties.h"
 #import "CARCoreDataStack.h"
-//#import "CARArtistDetailViewController"
+#import "CARArtistDetailViewController.h"
 
 @interface CARFavoriteArtistsTableViewController ()
 
@@ -50,6 +50,14 @@
     [self.tableView reloadData];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ShowArtistDetailSegue"]) {
+        CARArtistDetailViewController *detailVC = [[CARArtistDetailViewController alloc] init];
+        detailVC = segue.destinationViewController;
+        detailVC.artist = self.artist;
+    }
+}
+
 - (IBAction)addButtonTapped:(UIBarButtonItem *)sender {
     [self performSegueWithIdentifier:@"ShowAddArtistSegue" sender:self];
 }
@@ -63,7 +71,7 @@
     CARArtist *artist = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = artist.name;
     if (artist.yearFormed == 0) {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %@", @"N/A"];
+        cell.detailTextLabel.text = @"Formed in N/A";
     } else {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
     }
@@ -83,6 +91,12 @@
             return;
         }
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CARArtist *artist = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    self.artist = artist;
+    [self performSegueWithIdentifier:@"ShowArtistDetailSegue" sender:self];
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {

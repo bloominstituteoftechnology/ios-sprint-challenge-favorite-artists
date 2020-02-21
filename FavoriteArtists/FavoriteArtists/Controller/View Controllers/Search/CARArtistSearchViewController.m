@@ -42,7 +42,7 @@
 - (void)updateViews {
     self.artistNameLabel.text = self.artist.name;
     if (self.artist.yearFormed == 0) {
-        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %@", @"N/A"];
+        self.yearFormedLabel.text = @"Formed in N/A";
     } else {
         self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
     }

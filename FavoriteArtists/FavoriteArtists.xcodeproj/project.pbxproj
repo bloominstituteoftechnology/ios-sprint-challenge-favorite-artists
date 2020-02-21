@@ -23,6 +23,7 @@
 		63C3A2F8240052D100CF616F /* CARFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2F7240052D100CF616F /* CARFavoriteArtistsTableViewController.m */; };
 		63C3A2FC2400564C00CF616F /* CARArtistSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2FB2400564C00CF616F /* CARArtistSearchViewController.m */; };
 		63C3A30024005D0900CF616F /* NSManagedObject+CARHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2FF24005D0900CF616F /* NSManagedObject+CARHelpers.m */; };
+		63C3A3042400602E00CF616F /* CARArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A3032400602E00CF616F /* CARArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		63C3A2FB2400564C00CF616F /* CARArtistSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARArtistSearchViewController.m; sourceTree = "<group>"; };
 		63C3A2FE24005D0900CF616F /* NSManagedObject+CARHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CARHelpers.h"; sourceTree = "<group>"; };
 		63C3A2FF24005D0900CF616F /* NSManagedObject+CARHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CARHelpers.m"; sourceTree = "<group>"; };
+		63C3A3022400602E00CF616F /* CARArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARArtistDetailViewController.h; sourceTree = "<group>"; };
+		63C3A3032400602E00CF616F /* CARArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,7 @@
 		63C3A2D724004B3100CF616F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63C3A3012400601100CF616F /* Detail */,
 				63C3A2F92400563300CF616F /* Search */,
 				63C3A2F5240052AA00CF616F /* TableView */,
 			);
@@ -215,6 +219,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		63C3A3012400601100CF616F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				63C3A3022400602E00CF616F /* CARArtistDetailViewController.h */,
+				63C3A3032400602E00CF616F /* CARArtistDetailViewController.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,6 +306,7 @@
 				63C3A2BD24004AC900CF616F /* AppDelegate.m in Sources */,
 				63C3A2EA24004F0B00CF616F /* CARArtistFetcher.m in Sources */,
 				63C3A2E724004E0D00CF616F /* CARFavoriteArtists.xcdatamodeld in Sources */,
+				63C3A3042400602E00CF616F /* CARArtistDetailViewController.m in Sources */,
 				63C3A2F224004FA000CF616F /* LSIErrors.m in Sources */,
 				63C3A2E024004BE900CF616F /* CARCoreDataStack.m in Sources */,
 				63C3A30024005D0900CF616F /* NSManagedObject+CARHelpers.m in Sources */,

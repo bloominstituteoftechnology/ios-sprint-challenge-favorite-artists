@@ -1,0 +1,93 @@
+//
+//  TLCArtistController.m
+//  FavoriteArtistsSprint
+//
+//  Created by Lambda_School_Loaner_219 on 2/21/20.
+//  Copyright © 2020 Lambda_School_Loaner_219. All rights reserved.
+//
+
+#import "TLCArtistController.h"
+#import <Foundation/Foundation.h>
+#import "TLCArtist+JSON.h"
+@interface TLCArtistController()
+@property (nonatomic) NSDictionary *artistDictionary;
+-(void)loadArtistDictionary;
+-(NSURL *)artistsFileURL;
+
+@end
+
+
+@implementation TLCArtistController
+
+static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
+
+-(instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _artistDictionary = @{
+            @"artists" : [[NSMutableArray alloc] init]
+        };
+        [self loadArtistDictionary];
+        
+    }
+    return self;
+}
+
+-(NSArray *)artists {
+    NSMutableArray *artistArray = [[NSMutableArray alloc] init];
+    NSArray *artistDictionaries = self.artistDictionary[@"artists"];
+    for (NSDictionary *artists in artistDictionaries) {
+        TLCArtist *artist = [[TLCArtist alloc] initWithDictionary: artists];
+        [artistArray addObject:artist];
+    }
+    return [artistArray copy];
+}
+
+-(void)searchForArtists:(NSString *)name completion:(void (^)(TLCArtist *, NSError *))completion {
+    
+    NSURL *baseURL = [NSURL URLWithString:baseURLString];
+    NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
+    
+    NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName: @"s" value:name];
+    
+    [components setQueryItems:@[searchItem]];
+    
+    NSURL *url = components.URL;
+    
+    [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (error) {
+            completion(nil, error);
+            return;
+        }
+        NSError *jsonError = nil;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options: 0 error:&jsonError];
+        
+        if (jsonError) {
+            completion(nil, jsonError);
+            return;
+        }
+        
+        if (![dictionary isKindOfClass:[NSDictionary class]]) {
+            NSError *dictionaryError = [[NSError alloc] init];
+            completion(nil, dictionaryError);
+        }
+        
+        NSArray *artistDictionaries = dictionary[@"artists"];
+        
+        TLCArtist *artist = [[TLCArtist alloc] initWithDictionary:artistDictionaries[0]]; //first dict only
+        
+        completion(artist, nil);
+    }] resume];
+      
+      
+      
+      
+      
+      
+     
+}
+
+
+@end

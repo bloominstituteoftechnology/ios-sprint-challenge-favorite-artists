@@ -13,6 +13,8 @@
 		DDF182A8240037DD00FD2BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF182A7240037DD00FD2BF7 /* Assets.xcassets */; };
 		DDF182AB240037DD00FD2BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF182A9240037DD00FD2BF7 /* LaunchScreen.storyboard */; };
 		DDF182AE240037DD00FD2BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182AD240037DD00FD2BF7 /* main.m */; };
+		DDF182BC240039D200FD2BF7 /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182BB240039D200FD2BF7 /* ArtistsTableViewController.m */; };
+		DDF182BF240039E700FD2BF7 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182BE240039E700FD2BF7 /* ArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		DDF182AA240037DD00FD2BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDF182AC240037DD00FD2BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDF182AD240037DD00FD2BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDF182BA240039D200FD2BF7 /* ArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistsTableViewController.h; sourceTree = "<group>"; };
+		DDF182BB240039D200FD2BF7 /* ArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsTableViewController.m; sourceTree = "<group>"; };
+		DDF182BD240039E700FD2BF7 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		DDF182BE240039E700FD2BF7 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 		DDF182B92400384300FD2BF7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDF182BA240039D200FD2BF7 /* ArtistsTableViewController.h */,
+				DDF182BB240039D200FD2BF7 /* ArtistsTableViewController.m */,
+				DDF182BD240039E700FD2BF7 /* ArtistDetailViewController.h */,
+				DDF182BE240039E700FD2BF7 /* ArtistDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF182BF240039E700FD2BF7 /* ArtistDetailViewController.m in Sources */,
+				DDF182BC240039D200FD2BF7 /* ArtistsTableViewController.m in Sources */,
 				DDF1829D240037DC00FD2BF7 /* AppDelegate.m in Sources */,
 				DDF182AE240037DD00FD2BF7 /* main.m in Sources */,
 				DDF182A0240037DC00FD2BF7 /* SceneDelegate.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j1m-Vk-P66">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -10,7 +10,7 @@
         <!--Favortite Artists-->
         <scene sceneID="bXt-57-W7t">
             <objects>
-                <tableViewController id="vLW-m1-i8K" sceneMemberID="viewController">
+                <tableViewController id="vLW-m1-i8K" customClass="ArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ByB-oD-egs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,17 +34,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favortite Artists" id="Dwk-OW-xPM">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8aT-IP-aih"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8aT-IP-aih">
+                            <connections>
+                                <action selector="addArtistButtonTapped:" destination="vLW-m1-i8K" id="1Ym-R7-zPx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIn-Gi-BX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="179"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="c3K-Sk-F8O">
             <objects>
-                <viewController id="bbI-7q-esH" sceneMemberID="viewController">
+                <viewController id="bbI-7q-esH" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xS7-o7-Lyc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,6 +96,11 @@ Hey, you know how I'm, like, always trying to save the planet? Here's my chance.
                         <viewLayoutGuide key="safeArea" id="zsI-KH-kFo"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zml-9Y-SZA"/>
+                    <connections>
+                        <outlet property="bandNameLabel" destination="Ckt-ov-5w8" id="drh-Tq-Z3T"/>
+                        <outlet property="biographyLabel" destination="uVE-0R-b61" id="6Lh-Zm-le1"/>
+                        <outlet property="yearFormedLabel" destination="mlR-UY-9Mu" id="hVj-MB-ofx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcE-2J-3W8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

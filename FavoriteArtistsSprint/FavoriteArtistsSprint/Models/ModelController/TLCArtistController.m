@@ -9,6 +9,7 @@
 #import "TLCArtistController.h"
 #import <Foundation/Foundation.h>
 #import "TLCArtist+JSON.h"
+
 @interface TLCArtistController()
 @property (nonatomic) NSDictionary *artistDictionary;
 -(void)loadArtistDictionary;
@@ -45,6 +46,7 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
 }
 
 -(void)searchForArtists:(NSString *)name completion:(void (^)(TLCArtist *, NSError *))completion {
+    NSLog(@"DEBUGGING SearchForArtists executing");
     
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];

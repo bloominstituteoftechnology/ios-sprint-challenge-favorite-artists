@@ -17,6 +17,7 @@
 		FB5E5C2B240040050058E250 /* TLCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C2A240040050058E250 /* TLCArtist.m */; };
 		FB5E5C38240046230058E250 /* TLCArtist+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C37240046230058E250 /* TLCArtist+JSON.m */; };
 		FB5E5C3C240050EE0058E250 /* TLCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C3B240050EE0058E250 /* TLCArtistController.m */; };
+		FB5E5C402400875D0058E250 /* TLCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		FB5E5C37240046230058E250 /* TLCArtist+JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TLCArtist+JSON.m"; sourceTree = "<group>"; };
 		FB5E5C3A240050EE0058E250 /* TLCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCArtistController.h; sourceTree = "<group>"; };
 		FB5E5C3B240050EE0058E250 /* TLCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCArtistController.m; sourceTree = "<group>"; };
+		FB5E5C3E2400875C0058E250 /* TLCSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCSearchViewController.h; sourceTree = "<group>"; };
+		FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 				FB5E5C36240046230058E250 /* TLCArtist+JSON.h */,
 				FB5E5C37240046230058E250 /* TLCArtist+JSON.m */,
 				FB5E5C39240050C30058E250 /* ModelController */,
+				FB5E5C3D2400864A0058E250 /* ViewControllers */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,6 +111,15 @@
 				FB5E5C3B240050EE0058E250 /* TLCArtistController.m */,
 			);
 			path = ModelController;
+			sourceTree = "<group>";
+		};
+		FB5E5C3D2400864A0058E250 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB5E5C3E2400875C0058E250 /* TLCSearchViewController.h */,
+				FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +197,7 @@
 				FB5E5C1624003A770058E250 /* ViewController.m in Sources */,
 				FB5E5C1024003A770058E250 /* AppDelegate.m in Sources */,
 				FB5E5C2124003A780058E250 /* main.m in Sources */,
+				FB5E5C402400875D0058E250 /* TLCSearchViewController.m in Sources */,
 				FB5E5C38240046230058E250 /* TLCArtist+JSON.m in Sources */,
 				FB5E5C3C240050EE0058E250 /* TLCArtistController.m in Sources */,
 				FB5E5C1324003A770058E250 /* SceneDelegate.m in Sources */,

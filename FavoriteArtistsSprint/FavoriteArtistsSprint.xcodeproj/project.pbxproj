@@ -15,6 +15,7 @@
 		FB5E5C1E24003A780058E250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5E5C1C24003A780058E250 /* LaunchScreen.storyboard */; };
 		FB5E5C2124003A780058E250 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C2024003A780058E250 /* main.m */; };
 		FB5E5C2B240040050058E250 /* TLCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C2A240040050058E250 /* TLCArtist.m */; };
+		FB5E5C38240046230058E250 /* TLCArtist+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C37240046230058E250 /* TLCArtist+JSON.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		FB5E5C2724003A970058E250 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
 		FB5E5C29240040050058E250 /* TLCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCArtist.h; sourceTree = "<group>"; };
 		FB5E5C2A240040050058E250 /* TLCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCArtist.m; sourceTree = "<group>"; };
+		FB5E5C36240046230058E250 /* TLCArtist+JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TLCArtist+JSON.h"; sourceTree = "<group>"; };
+		FB5E5C37240046230058E250 /* TLCArtist+JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TLCArtist+JSON.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 			children = (
 				FB5E5C29240040050058E250 /* TLCArtist.h */,
 				FB5E5C2A240040050058E250 /* TLCArtist.m */,
+				FB5E5C36240046230058E250 /* TLCArtist+JSON.h */,
+				FB5E5C37240046230058E250 /* TLCArtist+JSON.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				TargetAttributes = {
 					FB5E5C0A24003A770058E250 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -165,6 +171,7 @@
 				FB5E5C1624003A770058E250 /* ViewController.m in Sources */,
 				FB5E5C1024003A770058E250 /* AppDelegate.m in Sources */,
 				FB5E5C2124003A780058E250 /* main.m in Sources */,
+				FB5E5C38240046230058E250 /* TLCArtist+JSON.m in Sources */,
 				FB5E5C1324003A770058E250 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JYCUK7B5K;
 				INFOPLIST_FILE = FavoriteArtistsSprint/Info.plist;
@@ -314,6 +322,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lambda.FavoriteArtistsSprint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -322,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JYCUK7B5K;
 				INFOPLIST_FILE = FavoriteArtistsSprint/Info.plist;
@@ -331,6 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lambda.FavoriteArtistsSprint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

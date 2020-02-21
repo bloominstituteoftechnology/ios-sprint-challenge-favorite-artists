@@ -19,6 +19,9 @@
     }
     return self;
 }
+-(NSString *)yearFormedString {
+    return [[NSNumber numberWithInt: self.yearFormed] stringValue];
+}
 
 
 

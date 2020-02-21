@@ -10,13 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TLCArtist : NSObject
+@interface TLCArtist : NSObject 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *artistBio;
 @property (nonatomic) int yearFormed ;
 
 -(instancetype)initWithName:(NSString *)name artistBio:(NSString *)artistBio yearFormed:(int)yearFormed;
 
+-(NSString *)yearFormedString;
 @end
 
 NS_ASSUME_NONNULL_END

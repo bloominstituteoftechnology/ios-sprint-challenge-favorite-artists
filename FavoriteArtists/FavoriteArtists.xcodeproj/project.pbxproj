@@ -16,6 +16,10 @@
 		63C3A2E024004BE900CF616F /* CARCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2DF24004BE900CF616F /* CARCoreDataStack.m */; };
 		63C3A2E424004DB100CF616F /* CARFavoriteArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2E324004DB100CF616F /* CARFavoriteArtist.m */; };
 		63C3A2E724004E0D00CF616F /* CARFavoriteArtists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2E524004E0D00CF616F /* CARFavoriteArtists.xcdatamodeld */; };
+		63C3A2EA24004F0B00CF616F /* CARArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2E924004F0B00CF616F /* CARArtistFetcher.m */; };
+		63C3A2F224004FA000CF616F /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2EC24004FA000CF616F /* LSIErrors.m */; };
+		63C3A2F324004FA000CF616F /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2F024004FA000CF616F /* LSIFileHelper.m */; };
+		63C3A2F424004FA000CF616F /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2F124004FA000CF616F /* LSILog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,14 @@
 		63C3A2E224004DB100CF616F /* CARFavoriteArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARFavoriteArtist.h; sourceTree = "<group>"; };
 		63C3A2E324004DB100CF616F /* CARFavoriteArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARFavoriteArtist.m; sourceTree = "<group>"; };
 		63C3A2E624004E0D00CF616F /* CARFavoriteArtists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CARFavoriteArtists.xcdatamodel; sourceTree = "<group>"; };
+		63C3A2E824004F0B00CF616F /* CARArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARArtistFetcher.h; sourceTree = "<group>"; };
+		63C3A2E924004F0B00CF616F /* CARArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARArtistFetcher.m; sourceTree = "<group>"; };
+		63C3A2EC24004FA000CF616F /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		63C3A2ED24004FA000CF616F /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
+		63C3A2EE24004FA000CF616F /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		63C3A2EF24004FA000CF616F /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		63C3A2F024004FA000CF616F /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
+		63C3A2F124004FA000CF616F /* LSILog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSILog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 		63C3A2D424004AF000CF616F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				63C3A2EB24004FA000CF616F /* LambdaSDK */,
 				63C3A2BB24004AC900CF616F /* AppDelegate.h */,
 				63C3A2BC24004AC900CF616F /* AppDelegate.m */,
 				63C3A2BE24004AC900CF616F /* SceneDelegate.h */,
@@ -116,6 +129,8 @@
 		63C3A2D824004B3A00CF616F /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				63C3A2E824004F0B00CF616F /* CARArtistFetcher.h */,
+				63C3A2E924004F0B00CF616F /* CARArtistFetcher.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -146,6 +161,19 @@
 				63C3A2E324004DB100CF616F /* CARFavoriteArtist.m */,
 			);
 			path = "Model Classes";
+			sourceTree = "<group>";
+		};
+		63C3A2EB24004FA000CF616F /* LambdaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				63C3A2EC24004FA000CF616F /* LSIErrors.m */,
+				63C3A2ED24004FA000CF616F /* LSILog.h */,
+				63C3A2EE24004FA000CF616F /* LSIFileHelper.h */,
+				63C3A2EF24004FA000CF616F /* LSIErrors.h */,
+				63C3A2F024004FA000CF616F /* LSIFileHelper.m */,
+				63C3A2F124004FA000CF616F /* LSILog.m */,
+			);
+			path = LambdaSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C3A2F324004FA000CF616F /* LSIFileHelper.m in Sources */,
+				63C3A2F424004FA000CF616F /* LSILog.m in Sources */,
 				63C3A2BD24004AC900CF616F /* AppDelegate.m in Sources */,
+				63C3A2EA24004F0B00CF616F /* CARArtistFetcher.m in Sources */,
 				63C3A2E724004E0D00CF616F /* CARFavoriteArtists.xcdatamodeld in Sources */,
+				63C3A2F224004FA000CF616F /* LSIErrors.m in Sources */,
 				63C3A2E024004BE900CF616F /* CARCoreDataStack.m in Sources */,
 				63C3A2CE24004ACC00CF616F /* main.m in Sources */,
 				63C3A2C024004AC900CF616F /* SceneDelegate.m in Sources */,

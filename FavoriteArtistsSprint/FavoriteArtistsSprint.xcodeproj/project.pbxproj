@@ -14,6 +14,7 @@
 		FB5E5C1B24003A780058E250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5E5C1A24003A780058E250 /* Assets.xcassets */; };
 		FB5E5C1E24003A780058E250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5E5C1C24003A780058E250 /* LaunchScreen.storyboard */; };
 		FB5E5C2124003A780058E250 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C2024003A780058E250 /* main.m */; };
+		FB5E5C2B240040050058E250 /* TLCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C2A240040050058E250 /* TLCArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		FB5E5C1F24003A780058E250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB5E5C2024003A780058E250 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB5E5C2724003A970058E250 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		FB5E5C29240040050058E250 /* TLCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCArtist.h; sourceTree = "<group>"; };
+		FB5E5C2A240040050058E250 /* TLCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 		FB5E5C0D24003A770058E250 /* FavoriteArtistsSprint */ = {
 			isa = PBXGroup;
 			children = (
+				FB5E5C2824003FDB0058E250 /* Models */,
 				FB5E5C0E24003A770058E250 /* AppDelegate.h */,
 				FB5E5C0F24003A770058E250 /* AppDelegate.m */,
 				FB5E5C1124003A770058E250 /* SceneDelegate.h */,
@@ -76,6 +80,15 @@
 				FB5E5C2024003A780058E250 /* main.m */,
 			);
 			path = FavoriteArtistsSprint;
+			sourceTree = "<group>";
+		};
+		FB5E5C2824003FDB0058E250 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB5E5C29240040050058E250 /* TLCArtist.h */,
+				FB5E5C2A240040050058E250 /* TLCArtist.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5E5C2B240040050058E250 /* TLCArtist.m in Sources */,
 				FB5E5C1624003A770058E250 /* ViewController.m in Sources */,
 				FB5E5C1024003A770058E250 /* AppDelegate.m in Sources */,
 				FB5E5C2124003A780058E250 /* main.m in Sources */,

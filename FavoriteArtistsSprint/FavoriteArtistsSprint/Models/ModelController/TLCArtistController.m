@@ -103,6 +103,13 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     }
 }
 
+-(void)loadArtistDictionary {
+    NSDictionary *artistDictionary = [NSDictionary dictionaryWithContentsOfURL:[self artistsFileURL] error: NULL];
+    NSArray *artistDictionaries = artistDictionary[@"artists"];
+    for (NSDictionary *artistsInDict in artistDictionaries) {
+        [self.artistDictionary[@"artists"] addObject: artistsInDict];
+    }
+}
 
 
 @end

@@ -39,6 +39,10 @@
     }
 }
 
+- (IBAction)addButtonTapped:(UIBarButtonItem *)sender {
+    [self performSegueWithIdentifier:@"ShowAddArtistSegue" sender:self];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.fetchedResultsController.fetchedObjects.count;
 }

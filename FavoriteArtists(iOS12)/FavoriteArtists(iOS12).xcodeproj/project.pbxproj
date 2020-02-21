@@ -15,6 +15,10 @@
 		DDF182AE240037DD00FD2BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182AD240037DD00FD2BF7 /* main.m */; };
 		DDF182BC240039D200FD2BF7 /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182BB240039D200FD2BF7 /* ArtistsTableViewController.m */; };
 		DDF182BF240039E700FD2BF7 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182BE240039E700FD2BF7 /* ArtistDetailViewController.m */; };
+		DDF182C22400414500FD2BF7 /* BFVArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182C12400414500FD2BF7 /* BFVArtist.m */; };
+		DDF182C52400416300FD2BF7 /* BFVArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182C42400416300FD2BF7 /* BFVArtistController.m */; };
+		DDF182C824004B4100FD2BF7 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182C724004B4100FD2BF7 /* CoreDataStack.m */; };
+		DDF182CB240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDF182C9240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,13 @@
 		DDF182BB240039D200FD2BF7 /* ArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsTableViewController.m; sourceTree = "<group>"; };
 		DDF182BD240039E700FD2BF7 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
 		DDF182BE240039E700FD2BF7 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		DDF182C02400414500FD2BF7 /* BFVArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFVArtist.h; sourceTree = "<group>"; };
+		DDF182C12400414500FD2BF7 /* BFVArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFVArtist.m; sourceTree = "<group>"; };
+		DDF182C32400416300FD2BF7 /* BFVArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFVArtistController.h; sourceTree = "<group>"; };
+		DDF182C42400416300FD2BF7 /* BFVArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFVArtistController.m; sourceTree = "<group>"; };
+		DDF182C624004B4100FD2BF7 /* CoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		DDF182C724004B4100FD2BF7 /* CoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		DDF182CA240050E800FD2BF7 /* FavoriteArtists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteArtists.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +111,9 @@
 		DDF182B62400381E00FD2BF7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				DDF182C624004B4100FD2BF7 /* CoreDataStack.h */,
+				DDF182C724004B4100FD2BF7 /* CoreDataStack.m */,
+				DDF182C9240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -107,6 +121,8 @@
 		DDF182B72400382700FD2BF7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DDF182C02400414500FD2BF7 /* BFVArtist.h */,
+				DDF182C12400414500FD2BF7 /* BFVArtist.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +130,8 @@
 		DDF182B82400382D00FD2BF7 /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				DDF182C32400416300FD2BF7 /* BFVArtistController.h */,
+				DDF182C42400416300FD2BF7 /* BFVArtistController.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -199,11 +217,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF182C52400416300FD2BF7 /* BFVArtistController.m in Sources */,
 				DDF182BF240039E700FD2BF7 /* ArtistDetailViewController.m in Sources */,
+				DDF182C22400414500FD2BF7 /* BFVArtist.m in Sources */,
+				DDF182C824004B4100FD2BF7 /* CoreDataStack.m in Sources */,
 				DDF182BC240039D200FD2BF7 /* ArtistsTableViewController.m in Sources */,
 				DDF1829D240037DC00FD2BF7 /* AppDelegate.m in Sources */,
 				DDF182AE240037DD00FD2BF7 /* main.m in Sources */,
 				DDF182A0240037DC00FD2BF7 /* SceneDelegate.m in Sources */,
+				DDF182CB240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +417,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DDF182C9240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DDF182CA240050E800FD2BF7 /* FavoriteArtists.xcdatamodel */,
+			);
+			currentVersion = DDF182CA240050E800FD2BF7 /* FavoriteArtists.xcdatamodel */;
+			path = FavoriteArtists.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DDF18290240037DC00FD2BF7 /* Project object */;
 }

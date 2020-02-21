@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class BFVArtistController;
+@class BFVArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistDetailViewController : UIViewController
@@ -15,8 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *bandNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UITextView *biographyLabel;
+@property (nonatomic,nullable) BFVArtist * artist;
+@property(nonatomic, nullable) BFVArtistController *artistController;
 
-
+- (void)updateViews;
 
 
 @end

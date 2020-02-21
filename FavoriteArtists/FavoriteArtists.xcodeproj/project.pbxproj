@@ -20,6 +20,7 @@
 		63C3A2F224004FA000CF616F /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2EC24004FA000CF616F /* LSIErrors.m */; };
 		63C3A2F324004FA000CF616F /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2F024004FA000CF616F /* LSIFileHelper.m */; };
 		63C3A2F424004FA000CF616F /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2F124004FA000CF616F /* LSILog.m */; };
+		63C3A2F8240052D100CF616F /* CARFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2F7240052D100CF616F /* CARFavoriteArtistsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		63C3A2EF24004FA000CF616F /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 		63C3A2F024004FA000CF616F /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
 		63C3A2F124004FA000CF616F /* LSILog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSILog.m; sourceTree = "<group>"; };
+		63C3A2F6240052D100CF616F /* CARFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		63C3A2F7240052D100CF616F /* CARFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,7 @@
 		63C3A2D724004B3100CF616F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63C3A2F5240052AA00CF616F /* TableView */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -174,6 +178,15 @@
 				63C3A2F124004FA000CF616F /* LSILog.m */,
 			);
 			path = LambdaSDK;
+			sourceTree = "<group>";
+		};
+		63C3A2F5240052AA00CF616F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				63C3A2F6240052D100CF616F /* CARFavoriteArtistsTableViewController.h */,
+				63C3A2F7240052D100CF616F /* CARFavoriteArtistsTableViewController.m */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C3A2F8240052D100CF616F /* CARFavoriteArtistsTableViewController.m in Sources */,
 				63C3A2F324004FA000CF616F /* LSIFileHelper.m in Sources */,
 				63C3A2F424004FA000CF616F /* LSILog.m in Sources */,
 				63C3A2BD24004AC900CF616F /* AppDelegate.m in Sources */,

@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gNp-hv-eWw" kind="show" id="sA6-6P-5KO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -81,7 +84,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXa-jI-MIZ">
-                                <rect key="frame" x="20" y="162" width="223" height="51"/>
+                                <rect key="frame" x="20" y="206" width="223" height="51"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,6 +104,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JaI-ai-R9q"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HkY-8u-Z24"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDS-uT-Uqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

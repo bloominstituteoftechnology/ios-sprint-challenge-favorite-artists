@@ -111,5 +111,15 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     }
 }
 
+-(NSURL *) artistsFileURL {
+    NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSString *fileName = @"artists.json";
+    return [documentDirectory URLByAppendingPathComponent:fileName];
+    
+    
+                                 
+                                
+}
+
 
 @end

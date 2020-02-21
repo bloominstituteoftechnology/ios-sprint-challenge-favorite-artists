@@ -13,6 +13,9 @@
 		63C3A2C824004ACC00CF616F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C3A2C724004ACC00CF616F /* Assets.xcassets */; };
 		63C3A2CB24004ACC00CF616F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C3A2C924004ACC00CF616F /* LaunchScreen.storyboard */; };
 		63C3A2CE24004ACC00CF616F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2CD24004ACC00CF616F /* main.m */; };
+		63C3A2E024004BE900CF616F /* CARCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2DF24004BE900CF616F /* CARCoreDataStack.m */; };
+		63C3A2E424004DB100CF616F /* CARFavoriteArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2E324004DB100CF616F /* CARFavoriteArtist.m */; };
+		63C3A2E724004E0D00CF616F /* CARFavoriteArtists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63C3A2E524004E0D00CF616F /* CARFavoriteArtists.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		63C3A2CA24004ACC00CF616F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63C3A2CC24004ACC00CF616F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C3A2CD24004ACC00CF616F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63C3A2DE24004BE900CF616F /* CARCoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARCoreDataStack.h; sourceTree = "<group>"; };
+		63C3A2DF24004BE900CF616F /* CARCoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARCoreDataStack.m; sourceTree = "<group>"; };
+		63C3A2E224004DB100CF616F /* CARFavoriteArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARFavoriteArtist.h; sourceTree = "<group>"; };
+		63C3A2E324004DB100CF616F /* CARFavoriteArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARFavoriteArtist.m; sourceTree = "<group>"; };
+		63C3A2E624004E0D00CF616F /* CARFavoriteArtists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CARFavoriteArtists.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +123,29 @@
 		63C3A2D924004B4300CF616F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63C3A2E124004D8A00CF616F /* Model Classes */,
+				63C3A2DD24004BD500CF616F /* Core Data */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		63C3A2DD24004BD500CF616F /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				63C3A2DE24004BE900CF616F /* CARCoreDataStack.h */,
+				63C3A2DF24004BE900CF616F /* CARCoreDataStack.m */,
+				63C3A2E524004E0D00CF616F /* CARFavoriteArtists.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		63C3A2E124004D8A00CF616F /* Model Classes */ = {
+			isa = PBXGroup;
+			children = (
+				63C3A2E224004DB100CF616F /* CARFavoriteArtist.h */,
+				63C3A2E324004DB100CF616F /* CARFavoriteArtist.m */,
+			);
+			path = "Model Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +174,7 @@
 		63C3A2B024004AC900CF616F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CAR;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Chad Rutherford";
 				TargetAttributes = {
@@ -190,8 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C3A2BD24004AC900CF616F /* AppDelegate.m in Sources */,
+				63C3A2E724004E0D00CF616F /* CARFavoriteArtists.xcdatamodeld in Sources */,
+				63C3A2E024004BE900CF616F /* CARCoreDataStack.m in Sources */,
 				63C3A2CE24004ACC00CF616F /* main.m in Sources */,
 				63C3A2C024004AC900CF616F /* SceneDelegate.m in Sources */,
+				63C3A2E424004DB100CF616F /* CARFavoriteArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +416,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		63C3A2E524004E0D00CF616F /* CARFavoriteArtists.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				63C3A2E624004E0D00CF616F /* CARFavoriteArtists.xcdatamodel */,
+			);
+			currentVersion = 63C3A2E624004E0D00CF616F /* CARFavoriteArtists.xcdatamodel */;
+			path = CARFavoriteArtists.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 63C3A2B024004AC900CF616F /* Project object */;
 }

@@ -59,6 +59,54 @@
             <point key="canvasLocation" x="1013.0434782608696" y="113.83928571428571"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="PBG-61-n2e">
+            <objects>
+                <viewController id="gNp-hv-eWw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pi2-BD-I5C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Formed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7E-en-IOE">
+                                <rect key="frame" x="20" y="221" width="91" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7NB-8A-bWd">
+                                <rect key="frame" x="11" y="304" width="392" height="558"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXa-jI-MIZ">
+                                <rect key="frame" x="20" y="162" width="223" height="51"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JaI-ai-R9q" firstAttribute="trailing" secondItem="7NB-8A-bWd" secondAttribute="trailing" constant="11" id="1Kf-EA-JGe"/>
+                            <constraint firstItem="7NB-8A-bWd" firstAttribute="top" secondItem="a7E-en-IOE" secondAttribute="bottom" constant="57" id="1Ui-ft-R9N"/>
+                            <constraint firstItem="JaI-ai-R9q" firstAttribute="trailing" secondItem="mXa-jI-MIZ" secondAttribute="trailing" constant="171" id="5yj-7l-VJw"/>
+                            <constraint firstItem="JaI-ai-R9q" firstAttribute="trailing" secondItem="a7E-en-IOE" secondAttribute="trailing" constant="303" id="7fC-9W-SCx"/>
+                            <constraint firstItem="7NB-8A-bWd" firstAttribute="top" secondItem="a7E-en-IOE" secondAttribute="bottom" constant="57" id="LLz-UZ-4Hg"/>
+                            <constraint firstItem="a7E-en-IOE" firstAttribute="leading" secondItem="JaI-ai-R9q" secondAttribute="leading" constant="20" id="Pqf-fU-YkY"/>
+                            <constraint firstItem="mXa-jI-MIZ" firstAttribute="leading" secondItem="JaI-ai-R9q" secondAttribute="leading" constant="20" id="bep-aQ-hFE"/>
+                            <constraint firstItem="mXa-jI-MIZ" firstAttribute="top" secondItem="JaI-ai-R9q" secondAttribute="top" constant="118" id="sND-61-XOa"/>
+                            <constraint firstItem="7NB-8A-bWd" firstAttribute="leading" secondItem="JaI-ai-R9q" secondAttribute="leading" constant="11" id="uAv-hv-ii3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JaI-ai-R9q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDS-uT-Uqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766.6666666666667" y="113.83928571428571"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="BBm-av-d5K">
             <objects>
                 <viewController id="Jzl-T1-Sgh" sceneMemberID="viewController">
@@ -66,20 +114,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-4R-0YH">
-                                <rect key="frame" x="0.0" y="147" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-4R-0YH">
+                                <rect key="frame" x="0.0" y="147" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0k-Za-xKh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0k-Za-xKh">
                                 <rect key="frame" x="91" y="107" width="232" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DOc-4R-0YH" firstAttribute="trailing" secondItem="JqB-1c-twe" secondAttribute="trailing" id="Rhz-q7-csv"/>
+                            <constraint firstItem="DOc-4R-0YH" firstAttribute="top" secondItem="a0k-Za-xKh" secondAttribute="bottom" id="Y3q-Fd-gZZ"/>
+                            <constraint firstItem="a0k-Za-xKh" firstAttribute="top" secondItem="JqB-1c-twe" secondAttribute="top" constant="19" id="cjh-bR-Q37"/>
+                            <constraint firstItem="JqB-1c-twe" firstAttribute="trailing" secondItem="a0k-Za-xKh" secondAttribute="trailing" constant="91" id="iW8-pr-HcM"/>
+                            <constraint firstItem="DOc-4R-0YH" firstAttribute="leading" secondItem="JqB-1c-twe" secondAttribute="leading" id="ura-DO-F0h"/>
+                            <constraint firstItem="a0k-Za-xKh" firstAttribute="leading" secondItem="JqB-1c-twe" secondAttribute="leading" constant="91" id="wze-ph-T0I"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JqB-1c-twe"/>
                     </view>
                     <navigationItem key="navigationItem" id="Be9-Re-CCu">
@@ -88,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2E-z7-NDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="113"/>
+            <point key="canvasLocation" x="2503" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9ga-6x-uQO">

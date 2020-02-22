@@ -111,7 +111,7 @@ static NSString * const reuseIdentifier = @"ArtistCell";
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-    
+    //new segue headed to searchview with indexPath.segue
    //add in segue controller for DetailView
     
     if ([[segue identifier] isEqual:@"NewArtistSegue"]) {

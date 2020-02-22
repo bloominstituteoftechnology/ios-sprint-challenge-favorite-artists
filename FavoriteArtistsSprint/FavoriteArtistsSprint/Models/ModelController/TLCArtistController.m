@@ -57,7 +57,7 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     
     NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName: @"s" value:name];
     
-    [components setQueryItems:@[searchItem]];
+    components.queryItems = @[searchItem];
     
     NSURL *url = components.URL;
     

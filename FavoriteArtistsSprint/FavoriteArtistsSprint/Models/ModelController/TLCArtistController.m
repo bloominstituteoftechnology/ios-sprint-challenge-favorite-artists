@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "TLCArtist+JSON.h"
 #import "LSIFileHelper.h"
+#import "LSIErrors.h"
 
 @interface TLCArtistController()
 @property (nonatomic) NSDictionary *artistDictionary;
@@ -21,8 +22,8 @@
 
 
 @implementation TLCArtistController
-//static NSString *const apiKey = @"1";
-//static NSString *const searchComponent = @"search.php";
+
+
 static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 -(instancetype)init
@@ -48,7 +49,6 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     return [artistArray copy];
 }
 
-//going to return artist not void
 -(void)searchForArtists:(NSString *)name completion:(void (^)(TLCArtist *, NSError *))completion {
     NSLog(@"DEBUGGING SearchForArtists executing");
     
@@ -72,28 +72,57 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
             completion(nil, error);
             return;
         }
+       
         NSError *jsonError = nil;
+       
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options: 0 error:&jsonError];
         
         if (jsonError) {
             completion(nil, jsonError);
+            NSLog(@"Returning with json Error");
             return;
         }
         
         if (![dictionary isKindOfClass:[NSDictionary class]]) {
             NSError *dictionaryError = [[NSError alloc] init];
             completion(nil, dictionaryError);
+            return;
         }
         
         NSArray *artistDictionaries = dictionary[@"artists"];
         if ([artistDictionaries isEqual:nil]) {
             NSLog(@"artistDictionaries came back nil");
             return; }
-        
+        NSLog(@"JSON: %@", dictionary);
         TLCArtist *artist = [[TLCArtist alloc] initWithDictionary:artistDictionaries[0]]; //first dict only
+        
+        if ([dictionary[@"name"] isKindOfClass:[NSNull class ]]) {
+           
+            NSLog(@"Returning from null error for dict value");
+            return completion(nil, error);
+            
+        
+            
+            
+            
+            
+            
+    
+        }
+        
+        if (!artist) {
+            NSString *errorMessage = [NSString stringWithFormat:@"Unable to parse json object. %@", artistDictionaries[0]];
+            NSError *parsingError = errorWithMessage(errorMessage, jsonError);
+            completion(nil, parsingError);
+            
+        }
+        
+        
+        
         
         completion(artist, nil);
     }] resume];
+    }
       
       
       
@@ -101,7 +130,7 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
       
       
      
-}
+
 
 -(void) saveDictionary:(NSDictionary *)dictionary {
     NSURL *fileURL = [self artistsFileURL];
@@ -121,9 +150,10 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     NSDictionary *artistDictionary = [NSDictionary dictionaryWithContentsOfURL:[self artistsFileURL] error: NULL];
     NSArray *artistDictionaries = artistDictionary[@"artists"];
     for (NSDictionary *artistsInDict in artistDictionaries) {
+        if (artistsInDict != nil) {
         [self.artistDictionary[@"artists"] addObject: artistsInDict];
     }
-}
+    } }
 
 -(NSURL *) artistsFileURL {
     NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
@@ -134,6 +164,7 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
                                  
                                 
 }
+
 
 
 @end

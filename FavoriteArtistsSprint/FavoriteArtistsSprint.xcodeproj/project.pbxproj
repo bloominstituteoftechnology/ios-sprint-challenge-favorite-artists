@@ -19,6 +19,8 @@
 		FB5E5C3C240050EE0058E250 /* TLCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C3B240050EE0058E250 /* TLCArtistController.m */; };
 		FB5E5C402400875D0058E250 /* TLCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */; };
 		FB5E5C432400A1E00058E250 /* TLCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C422400A1E00058E250 /* TLCTableViewController.m */; };
+		FB5E5C47240113700058E250 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C44240113700058E250 /* LSIErrors.m */; };
+		FB5E5C48240113700058E250 /* LambdaSDK in Resources */ = {isa = PBXBuildFile; fileRef = FB5E5C45240113700058E250 /* LambdaSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,9 @@
 		FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCSearchViewController.m; sourceTree = "<group>"; };
 		FB5E5C412400A1E00058E250 /* TLCTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCTableViewController.h; sourceTree = "<group>"; };
 		FB5E5C422400A1E00058E250 /* TLCTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCTableViewController.m; sourceTree = "<group>"; };
+		FB5E5C44240113700058E250 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		FB5E5C45240113700058E250 /* LambdaSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LambdaSDK; sourceTree = "<group>"; };
+		FB5E5C46240113700058E250 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +128,9 @@
 				FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */,
 				FB5E5C412400A1E00058E250 /* TLCTableViewController.h */,
 				FB5E5C422400A1E00058E250 /* TLCTableViewController.m */,
+				FB5E5C45240113700058E250 /* LambdaSDK */,
+				FB5E5C46240113700058E250 /* LSIErrors.h */,
+				FB5E5C44240113700058E250 /* LSIErrors.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5E5C48240113700058E250 /* LambdaSDK in Resources */,
 				FB5E5C1E24003A780058E250 /* LaunchScreen.storyboard in Resources */,
 				FB5E5C1B24003A780058E250 /* Assets.xcassets in Resources */,
 				FB5E5C1924003A770058E250 /* Main.storyboard in Resources */,
@@ -201,6 +210,7 @@
 				FB5E5C432400A1E00058E250 /* TLCTableViewController.m in Sources */,
 				FB5E5C2B240040050058E250 /* TLCArtist.m in Sources */,
 				FB5E5C1624003A770058E250 /* ViewController.m in Sources */,
+				FB5E5C47240113700058E250 /* LSIErrors.m in Sources */,
 				FB5E5C1024003A770058E250 /* AppDelegate.m in Sources */,
 				FB5E5C2124003A780058E250 /* main.m in Sources */,
 				FB5E5C402400875D0058E250 /* TLCSearchViewController.m in Sources */,

@@ -37,10 +37,10 @@
     if (self.artist) {
         self.nameLabel.text = self.artist.name;
         self.artistBioTextView.text = self.artist.artistBio;
-        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %@", [self.artist yearFormedString]];
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %@", [self.artist yearFormedString]]; }
         
     }
-}
+
 
 -(IBAction)onSavedTapped{
     [self saveArtist];

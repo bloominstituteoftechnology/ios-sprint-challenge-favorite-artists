@@ -12,11 +12,16 @@
 @implementation TLCArtist (NSJSONSerialization)
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary {
+//    if (![t isEqual:nil]) {
+//        NSLog(@"Not nil");
+//    }
+    
     NSString *name = dictionary[@"strArtist"];
     NSString *strFormedYear = dictionary[@"intFormedYear"];
     int formedYear = 0;
     if ([strFormedYear isKindOfClass: [NSString class]]) {
         formedYear = [strFormedYear intValue];
+    
         
     }
     NSString *biography = dictionary[@"strBiographyEN"];

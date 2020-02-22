@@ -18,6 +18,7 @@
 		FB5E5C38240046230058E250 /* TLCArtist+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C37240046230058E250 /* TLCArtist+JSON.m */; };
 		FB5E5C3C240050EE0058E250 /* TLCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C3B240050EE0058E250 /* TLCArtistController.m */; };
 		FB5E5C402400875D0058E250 /* TLCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */; };
+		FB5E5C432400A1E00058E250 /* TLCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C422400A1E00058E250 /* TLCTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		FB5E5C3B240050EE0058E250 /* TLCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCArtistController.m; sourceTree = "<group>"; };
 		FB5E5C3E2400875C0058E250 /* TLCSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCSearchViewController.h; sourceTree = "<group>"; };
 		FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCSearchViewController.m; sourceTree = "<group>"; };
+		FB5E5C412400A1E00058E250 /* TLCTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCTableViewController.h; sourceTree = "<group>"; };
+		FB5E5C422400A1E00058E250 /* TLCTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 			children = (
 				FB5E5C3E2400875C0058E250 /* TLCSearchViewController.h */,
 				FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */,
+				FB5E5C412400A1E00058E250 /* TLCTableViewController.h */,
+				FB5E5C422400A1E00058E250 /* TLCTableViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5E5C432400A1E00058E250 /* TLCTableViewController.m in Sources */,
 				FB5E5C2B240040050058E250 /* TLCArtist.m in Sources */,
 				FB5E5C1624003A770058E250 /* ViewController.m in Sources */,
 				FB5E5C1024003A770058E250 /* AppDelegate.m in Sources */,

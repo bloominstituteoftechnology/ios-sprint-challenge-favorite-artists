@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="gNp-hv-eWw" kind="show" id="sA6-6P-5KO"/>
+                                    <segue destination="gNp-hv-eWw" kind="show" identifier="ShowArtistDetailSegue" id="sA6-6P-5KO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" id="fbX-Yw-YLQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="x4u-Jk-17g">
                             <connections>
-                                <segue destination="Jzl-T1-Sgh" kind="show" id="XNs-gL-uu3"/>
+                                <segue destination="Jzl-T1-Sgh" kind="show" identifier="NewArtistSegue" id="XNs-gL-uu3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

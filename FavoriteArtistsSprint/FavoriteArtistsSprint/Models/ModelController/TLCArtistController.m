@@ -9,9 +9,11 @@
 #import "TLCArtistController.h"
 #import <Foundation/Foundation.h>
 #import "TLCArtist+JSON.h"
+#import "LSIFileHelper.h"
 
 @interface TLCArtistController()
 @property (nonatomic) NSDictionary *artistDictionary;
+
 -(void)loadArtistDictionary;
 -(NSURL *)artistsFileURL;
 
@@ -19,7 +21,8 @@
 
 
 @implementation TLCArtistController
-
+//static NSString *const apiKey = @"1";
+//static NSString *const searchComponent = @"search.php";
 static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 -(instancetype)init
@@ -45,6 +48,7 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     return [artistArray copy];
 }
 
+//going to return artist not void
 -(void)searchForArtists:(NSString *)name completion:(void (^)(TLCArtist *, NSError *))completion {
     NSLog(@"DEBUGGING SearchForArtists executing");
     

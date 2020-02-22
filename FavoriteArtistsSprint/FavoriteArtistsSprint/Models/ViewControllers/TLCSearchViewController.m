@@ -55,6 +55,13 @@
 
 -(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSLog(@"Search bar tapped");
+    if (self.artistController){
+        NSLog(@"EXECUTING self.artistController searchForArtists");
+    }
+    
+    if (!self.artistController){
+        NSLog(@"No artist controller in self");
+    }
     [self.artistController searchForArtists:searchBar.text completion:^(TLCArtist * _Nullable artist, NSError *error)
      {
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -60,6 +60,11 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
     components.queryItems = @[searchItem];
     
     NSURL *url = components.URL;
+    //if ([anArchiver isMemberOfClass:[NSCoder class]])
+    if ( ![url isMemberOfClass: [NSURL class]])
+        NSLog(@"I am not a url");
+        return
+    
     
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
@@ -81,6 +86,9 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
         }
         
         NSArray *artistDictionaries = dictionary[@"artists"];
+        if ([artistDictionaries isEqual:nil]) {
+            NSLog(@"artistDictionaries came back nil");
+            return; }
         
         TLCArtist *artist = [[TLCArtist alloc] initWithDictionary:artistDictionaries[0]]; //first dict only
         

@@ -99,7 +99,7 @@ typedef void(^artistCompletion)(NSError * nullable);
         artist.yearFormed = [dictionary[@"intFormedYear"]intValue]  ;
         artist.biography = dictionary[@"strBiographyEN"];
         NSLog(@"%@", artist.bandName);
-         NSLog(@"%@", dictionary[@"strArtist"]);
+        NSLog(@"%@", dictionary[@"strArtist"]);
         [self saveToPersistentStore];
     }
 }

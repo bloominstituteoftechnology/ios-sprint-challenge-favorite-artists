@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BFVArtistController;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistsTableViewController : UITableViewController
-
+@property(nonatomic) BFVArtistController *artistController;
 @end
 
 NS_ASSUME_NONNULL_END

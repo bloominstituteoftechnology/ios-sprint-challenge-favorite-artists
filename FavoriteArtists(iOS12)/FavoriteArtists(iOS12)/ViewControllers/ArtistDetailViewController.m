@@ -8,7 +8,8 @@
 
 #import "ArtistDetailViewController.h"
 #import "BFVArtistController.h"
-#import "BFVArtist.h"
+#import "BFVArtist+Convenience.h"
+
 @interface ArtistDetailViewController ()
 
 @end
@@ -35,16 +36,17 @@
     self = [super initWithCoder:coder];
     if (self) {
         _artistController = [[BFVArtistController alloc]init];
-        _artist = [[BFVArtist alloc]init];
+       _artist = [[BFVArtist alloc]init];
+     
     }
     return self;
 }
 
 - (void)updateViews {
     if ([self artist]) {
-       // self.bandNameLabel.text = self.artist.bandName;
-       // self.yearFormedLabel.text = self.artist.yearFormed;
-       // self.biographyLabel.text = self.artist.biography;
+        self.bandNameLabel.text = self.artist.bandName;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", self.artist.yearFormed];
+        self.biographyLabel.text = self.artist.biography;
     }
 }
 @end

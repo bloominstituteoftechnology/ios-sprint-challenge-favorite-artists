@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) NSArray *artists;
 
 - (instancetype)init;
-- (void)addArtistWithName:(NSString *)name;
-- (void)deleteArtist:(BFVArtist *)artist;
+- (void)fetchArtistFromApi:(NSString *)artist completionHandler:(void (^)(NSError *error))completion;
+- (void)getFileFromDocumentsDirectory;
 @end
 
 NS_ASSUME_NONNULL_END

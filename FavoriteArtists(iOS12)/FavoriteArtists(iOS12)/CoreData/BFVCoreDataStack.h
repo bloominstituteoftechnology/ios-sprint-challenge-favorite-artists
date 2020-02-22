@@ -1,5 +1,5 @@
 //
-//  CoreDataStack.h
+//  BFVCoreDataStack.h
 //  FavoriteArtists(iOS12)
 //
 //  Created by brian vilchez on 2/21/20.
@@ -10,11 +10,12 @@
 #import <CoreData/CoreData.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CoreDataStack : NSObject
+@interface BFVCoreDataStack : NSObject
 
-@property(class,nonatomic)CoreDataStack *coreDataStack;
-@property(nonatomic, readonly) NSPersistentContainer *container;
-@property(nonatomic) NSManagedObjectContext *context;
++ (BFVCoreDataStack *) shared;
+
+@property(nonatomic) NSPersistentContainer *container;
+@property(nonatomic) NSManagedObjectContext *mainContext;
 @end
 
 NS_ASSUME_NONNULL_END

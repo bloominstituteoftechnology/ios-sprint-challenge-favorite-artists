@@ -15,10 +15,10 @@
 		DDF182AE240037DD00FD2BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182AD240037DD00FD2BF7 /* main.m */; };
 		DDF182BC240039D200FD2BF7 /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182BB240039D200FD2BF7 /* ArtistsTableViewController.m */; };
 		DDF182BF240039E700FD2BF7 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182BE240039E700FD2BF7 /* ArtistDetailViewController.m */; };
-		DDF182C22400414500FD2BF7 /* BFVArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182C12400414500FD2BF7 /* BFVArtist.m */; };
 		DDF182C52400416300FD2BF7 /* BFVArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182C42400416300FD2BF7 /* BFVArtistController.m */; };
-		DDF182C824004B4100FD2BF7 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF182C724004B4100FD2BF7 /* CoreDataStack.m */; };
-		DDF182CB240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDF182C9240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld */; };
+		DDF182FE2400D27900FD2BF7 /* FavoriteArtists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDF182FC2400D27900FD2BF7 /* FavoriteArtists.xcdatamodeld */; };
+		DDF183012400D2D900FD2BF7 /* BFVCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF183002400D2D900FD2BF7 /* BFVCoreDataStack.m */; };
+		DDF1830A2400DB7000FD2BF7 /* BFVArtist+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF183092400DB7000FD2BF7 /* BFVArtist+Convenience.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,13 +36,13 @@
 		DDF182BB240039D200FD2BF7 /* ArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsTableViewController.m; sourceTree = "<group>"; };
 		DDF182BD240039E700FD2BF7 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
 		DDF182BE240039E700FD2BF7 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
-		DDF182C02400414500FD2BF7 /* BFVArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFVArtist.h; sourceTree = "<group>"; };
-		DDF182C12400414500FD2BF7 /* BFVArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFVArtist.m; sourceTree = "<group>"; };
 		DDF182C32400416300FD2BF7 /* BFVArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFVArtistController.h; sourceTree = "<group>"; };
 		DDF182C42400416300FD2BF7 /* BFVArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFVArtistController.m; sourceTree = "<group>"; };
-		DDF182C624004B4100FD2BF7 /* CoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
-		DDF182C724004B4100FD2BF7 /* CoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
-		DDF182CA240050E800FD2BF7 /* FavoriteArtists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteArtists.xcdatamodel; sourceTree = "<group>"; };
+		DDF182FD2400D27900FD2BF7 /* FavoriteArtists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteArtists.xcdatamodel; sourceTree = "<group>"; };
+		DDF182FF2400D2D900FD2BF7 /* BFVCoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFVCoreDataStack.h; sourceTree = "<group>"; };
+		DDF183002400D2D900FD2BF7 /* BFVCoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFVCoreDataStack.m; sourceTree = "<group>"; };
+		DDF183082400DB7000FD2BF7 /* BFVArtist+Convenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BFVArtist+Convenience.h"; sourceTree = "<group>"; };
+		DDF183092400DB7000FD2BF7 /* BFVArtist+Convenience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BFVArtist+Convenience.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +111,11 @@
 		DDF182B62400381E00FD2BF7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				DDF182C624004B4100FD2BF7 /* CoreDataStack.h */,
-				DDF182C724004B4100FD2BF7 /* CoreDataStack.m */,
-				DDF182C9240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld */,
+				DDF182FC2400D27900FD2BF7 /* FavoriteArtists.xcdatamodeld */,
+				DDF183082400DB7000FD2BF7 /* BFVArtist+Convenience.h */,
+				DDF183092400DB7000FD2BF7 /* BFVArtist+Convenience.m */,
+				DDF182FF2400D2D900FD2BF7 /* BFVCoreDataStack.h */,
+				DDF183002400D2D900FD2BF7 /* BFVCoreDataStack.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -121,8 +123,6 @@
 		DDF182B72400382700FD2BF7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DDF182C02400414500FD2BF7 /* BFVArtist.h */,
-				DDF182C12400414500FD2BF7 /* BFVArtist.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,13 +219,13 @@
 			files = (
 				DDF182C52400416300FD2BF7 /* BFVArtistController.m in Sources */,
 				DDF182BF240039E700FD2BF7 /* ArtistDetailViewController.m in Sources */,
-				DDF182C22400414500FD2BF7 /* BFVArtist.m in Sources */,
-				DDF182C824004B4100FD2BF7 /* CoreDataStack.m in Sources */,
+				DDF183012400D2D900FD2BF7 /* BFVCoreDataStack.m in Sources */,
 				DDF182BC240039D200FD2BF7 /* ArtistsTableViewController.m in Sources */,
 				DDF1829D240037DC00FD2BF7 /* AppDelegate.m in Sources */,
 				DDF182AE240037DD00FD2BF7 /* main.m in Sources */,
+				DDF182FE2400D27900FD2BF7 /* FavoriteArtists.xcdatamodeld in Sources */,
 				DDF182A0240037DC00FD2BF7 /* SceneDelegate.m in Sources */,
-				DDF182CB240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld in Sources */,
+				DDF1830A2400DB7000FD2BF7 /* BFVArtist+Convenience.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +419,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DDF182C9240050E800FD2BF7 /* FavoriteArtists.xcdatamodeld */ = {
+		DDF182FC2400D27900FD2BF7 /* FavoriteArtists.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				DDF182CA240050E800FD2BF7 /* FavoriteArtists.xcdatamodel */,
+				DDF182FD2400D27900FD2BF7 /* FavoriteArtists.xcdatamodel */,
 			);
-			currentVersion = DDF182CA240050E800FD2BF7 /* FavoriteArtists.xcdatamodel */;
+			currentVersion = DDF182FD2400D27900FD2BF7 /* FavoriteArtists.xcdatamodel */;
 			path = FavoriteArtists.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

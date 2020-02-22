@@ -8,14 +8,9 @@
 #import <CoreData/CoreData.h>
 #import "ArtistsTableViewController.h"
 #import "ArtistDetailViewController.h"
-#import "BFVArtist.h"
 #import "BFVArtistController.h"
-#import "CoreDataStack.h"
-
-@interface ArtistsTableViewController () <NSFetchedResultsControllerDelegate>
-
-@property(nonatomic) BFVArtistController *artistController;
-@property(strong, nonatomic) NSFetchedResultsController *fetchController;
+#import "BFVArtist+Convenience.h"
+@interface ArtistsTableViewController ()
 
 - (void)addArtistWithName:(NSString *)name;
 - (void)presentAlertVC;
@@ -25,7 +20,6 @@
 //MARK: - initializers / lifeCycles
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configureFetchResultsController];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -56,24 +50,16 @@
 
 //MARK: - helper methods
 
-- (void)configureFetchResultsController {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Artist"];
-    [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"bandName" ascending:true]]];
-    NSManagedObjectContext *context = CoreDataStack.coreDataStack.context;
-    self.fetchController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
-    self.fetchController.delegate = self;
-    
-    NSError *error = nil;
-    [[self fetchController]performFetch:&error];
-    
-    if(error){
-        NSLog(@"failed to perform fetchRequest %@", error);
-    }
-    
-}
-
 - (void)addArtistWithName:(NSString *)name {
-    [[self artistController] addArtistWithName:name];
+    [[self artistController] fetchArtistFromApi:name completionHandler:^(NSError * _Nonnull error) {
+        if (error) {
+            NSLog(@"error fetching artist from api: %@", error);
+            return;
+        }
+       dispatch_async(dispatch_get_main_queue(), ^{
+        [[self tableView]reloadData];
+        });
+    }];
 }
 
 - (void)presentAlertVC {
@@ -99,36 +85,18 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return [[[self artistController] artists]count];
+     return [[[self artistController]artists]count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
-    BFVArtist *artist = [[self fetchController]objectAtIndexPath:indexPath];
-// cell.textLabel.text = artist.bandName;
-//   cell.detailTextLabel.text = artist.yearFormed;
+    BFVArtist *artist =[[[self artistController]artists]objectAtIndex:indexPath.row];
+    cell.textLabel.text = artist.bandName;
+    NSLog(@"%@",artist.bandName);
     return cell;
 }
-
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        BFVArtist *artist = [[[self artistController]artists]objectAtIndex:indexPath.row];
-        [[self artistController] deleteArtist:artist];
-        
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-}
-
 
 #pragma mark - Navigation
 
@@ -137,10 +105,9 @@
     if ([[segue identifier] isEqualToString:@"ArtistDetailSegue"]) {
         ArtistDetailViewController *artistDetailVC = [segue destinationViewController];
         NSIndexPath *artistIndexPath = [[self tableView]indexPathForSelectedRow];
-        artistDetailVC.artist = [[self fetchController]objectAtIndexPath:artistIndexPath];
+        artistDetailVC.artist = [[[self artistController]artists]objectAtIndex:artistIndexPath.row];
         artistDetailVC.artistController = [self artistController];
     }
 }
-
 
 @end

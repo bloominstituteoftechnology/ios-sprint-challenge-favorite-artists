@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="Artist" representedClassName="Artist" syncable="YES" codeGenerationType="class">
+    <entity name="Artist" representedClassName="BFVArtist" syncable="YES" codeGenerationType="class">
         <attribute name="bandName" optional="YES" attributeType="String"/>
         <attribute name="biography" optional="YES" attributeType="String"/>
         <attribute name="yearFormed" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Artist" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Artist" positionX="-54" positionY="-9" width="128" height="88"/>
     </elements>
 </model>

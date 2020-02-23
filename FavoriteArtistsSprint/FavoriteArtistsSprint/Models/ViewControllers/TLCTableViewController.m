@@ -10,7 +10,8 @@
 #import "TLCArtistController.h"
 #import "TLCArtist.h"
 #import "TLCSearchViewController.h"
-//Remember future detail view controller import
+#import "TLCDetailViewController.h"
+
 
 @interface TLCTableViewController ()
 @property (nonatomic, readonly) TLCArtistController *artistController;
@@ -118,6 +119,11 @@ static NSString * const reuseIdentifier = @"ArtistCell";
         TLCSearchViewController *destinationVC = [segue destinationViewController];
         destinationVC.artistController = self.artistController;
         
+ }
+    if ([[segue identifier] isEqual: @"ShowArtistDetailSegue"]) {
+        TLCDetailViewController *destinationVC = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        destinationVC.artist = self.artistController.artists[indexPath.row];
     }
 }
         

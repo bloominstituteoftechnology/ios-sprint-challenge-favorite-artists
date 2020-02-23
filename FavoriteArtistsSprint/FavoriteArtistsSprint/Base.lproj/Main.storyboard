@@ -61,51 +61,58 @@
             </objects>
             <point key="canvasLocation" x="1013.0434782608696" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="PBG-61-n2e">
             <objects>
-                <viewController id="gNp-hv-eWw" sceneMemberID="viewController">
+                <viewController id="gNp-hv-eWw" customClass="TLCDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pi2-BD-I5C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXa-jI-MIZ">
+                                <rect key="frame" x="11" y="162" width="352" height="51"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7E-en-IOE">
-                                <rect key="frame" x="20" y="221" width="91" height="26"/>
+                                <rect key="frame" x="11" y="256" width="223" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7NB-8A-bWd">
-                                <rect key="frame" x="11" y="304" width="392" height="558"/>
+                                <rect key="frame" x="11" y="399" width="392" height="267"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="hXt-Tc-p1X"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXa-jI-MIZ">
-                                <rect key="frame" x="11" y="162" width="223" height="51"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="JaI-ai-R9q" firstAttribute="trailing" secondItem="mXa-jI-MIZ" secondAttribute="trailing" constant="180" id="0eR-l3-Z2g"/>
-                            <constraint firstItem="7NB-8A-bWd" firstAttribute="top" secondItem="a7E-en-IOE" secondAttribute="bottom" constant="57" id="5IC-ms-DBu"/>
-                            <constraint firstItem="mXa-jI-MIZ" firstAttribute="leading" secondItem="JaI-ai-R9q" secondAttribute="leading" constant="11" id="Baj-5V-a0Y"/>
-                            <constraint firstItem="7NB-8A-bWd" firstAttribute="bottom" secondItem="JaI-ai-R9q" secondAttribute="bottom" id="TFc-HC-yAB"/>
-                            <constraint firstItem="JaI-ai-R9q" firstAttribute="trailing" secondItem="7NB-8A-bWd" secondAttribute="trailing" constant="11" id="bOu-Dy-1MA"/>
-                            <constraint firstItem="7NB-8A-bWd" firstAttribute="leading" secondItem="JaI-ai-R9q" secondAttribute="leading" constant="11" id="iGd-As-jB0"/>
-                            <constraint firstItem="mXa-jI-MIZ" firstAttribute="top" secondItem="JaI-ai-R9q" secondAttribute="top" constant="74" id="nxZ-9g-cE8"/>
-                            <constraint firstItem="a7E-en-IOE" firstAttribute="leading" secondItem="JaI-ai-R9q" secondAttribute="leading" constant="20" id="p9A-5v-vEi"/>
-                            <constraint firstItem="JaI-ai-R9q" firstAttribute="trailing" secondItem="a7E-en-IOE" secondAttribute="trailing" constant="303" id="xWh-4x-22D"/>
-                            <constraint firstItem="a7E-en-IOE" firstAttribute="top" secondItem="mXa-jI-MIZ" secondAttribute="bottom" constant="8" id="xYd-GC-3pY"/>
+                            <constraint firstItem="7NB-8A-bWd" firstAttribute="leading" secondItem="a7E-en-IOE" secondAttribute="leading" id="0ZE-YZ-iSr"/>
+                            <constraint firstItem="mXa-jI-MIZ" firstAttribute="top" secondItem="JaI-ai-R9q" secondAttribute="top" constant="74" id="9Kp-Bq-PGz"/>
+                            <constraint firstItem="JaI-ai-R9q" firstAttribute="trailing" secondItem="mXa-jI-MIZ" secondAttribute="trailing" constant="51" id="KuD-DS-Mih"/>
+                            <constraint firstItem="7NB-8A-bWd" firstAttribute="leading" secondItem="JaI-ai-R9q" secondAttribute="leading" constant="11" id="Unc-sU-YsE"/>
+                            <constraint firstItem="mXa-jI-MIZ" firstAttribute="leading" secondItem="JaI-ai-R9q" secondAttribute="leading" constant="11" id="Vz4-nb-IN6"/>
+                            <constraint firstItem="a7E-en-IOE" firstAttribute="top" secondItem="mXa-jI-MIZ" secondAttribute="bottom" constant="43" id="XIF-yq-eVy"/>
+                            <constraint firstItem="JaI-ai-R9q" firstAttribute="bottom" secondItem="7NB-8A-bWd" secondAttribute="bottom" constant="196" id="ai4-uC-25u"/>
+                            <constraint firstItem="JaI-ai-R9q" firstAttribute="trailing" secondItem="a7E-en-IOE" secondAttribute="trailing" constant="180" id="gMm-uM-hVe"/>
+                            <constraint firstItem="JaI-ai-R9q" firstAttribute="trailing" secondItem="7NB-8A-bWd" secondAttribute="trailing" constant="11" id="iUj-ic-cdX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JaI-ai-R9q"/>
                     </view>
                     <navigationItem key="navigationItem" id="HkY-8u-Z24"/>
+                    <connections>
+                        <outlet property="artistBioTextView" destination="7NB-8A-bWd" id="3N1-rp-wf4"/>
+                        <outlet property="nameLabel" destination="mXa-jI-MIZ" id="UHX-K7-gH1"/>
+                        <outlet property="yearFormedLabel" destination="a7E-en-IOE" id="oWB-OI-F9k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDS-uT-Uqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

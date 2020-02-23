@@ -21,6 +21,7 @@
 		FB5E5C432400A1E00058E250 /* TLCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C422400A1E00058E250 /* TLCTableViewController.m */; };
 		FB5E5C47240113700058E250 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C44240113700058E250 /* LSIErrors.m */; };
 		FB5E5C48240113700058E250 /* LambdaSDK in Resources */ = {isa = PBXBuildFile; fileRef = FB5E5C45240113700058E250 /* LambdaSDK */; };
+		FB5E5C4B24025EEA0058E250 /* TLCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E5C4A24025EEA0058E250 /* TLCDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		FB5E5C44240113700058E250 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
 		FB5E5C45240113700058E250 /* LambdaSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LambdaSDK; sourceTree = "<group>"; };
 		FB5E5C46240113700058E250 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		FB5E5C4924025EEA0058E250 /* TLCDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCDetailViewController.h; sourceTree = "<group>"; };
+		FB5E5C4A24025EEA0058E250 /* TLCDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				FB5E5C3F2400875C0058E250 /* TLCSearchViewController.m */,
 				FB5E5C412400A1E00058E250 /* TLCTableViewController.h */,
 				FB5E5C422400A1E00058E250 /* TLCTableViewController.m */,
+				FB5E5C4924025EEA0058E250 /* TLCDetailViewController.h */,
+				FB5E5C4A24025EEA0058E250 /* TLCDetailViewController.m */,
 				FB5E5C45240113700058E250 /* LambdaSDK */,
 				FB5E5C46240113700058E250 /* LSIErrors.h */,
 				FB5E5C44240113700058E250 /* LSIErrors.m */,
@@ -213,6 +218,7 @@
 				FB5E5C47240113700058E250 /* LSIErrors.m in Sources */,
 				FB5E5C1024003A770058E250 /* AppDelegate.m in Sources */,
 				FB5E5C2124003A780058E250 /* main.m in Sources */,
+				FB5E5C4B24025EEA0058E250 /* TLCDetailViewController.m in Sources */,
 				FB5E5C402400875D0058E250 /* TLCSearchViewController.m in Sources */,
 				FB5E5C38240046230058E250 /* TLCArtist+JSON.m in Sources */,
 				FB5E5C3C240050EE0058E250 /* TLCArtistController.m in Sources */,

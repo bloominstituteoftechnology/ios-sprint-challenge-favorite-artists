@@ -33,7 +33,7 @@
     NSDictionary *artistDictionary = @{
         @"strArtist": self.name,
         @"intFormedYear": [self yearFormedString],
-        @"strNiographyEN" : self.artistBio
+        @"strBiographyEN" : self.artistBio
         
     };
     return artistDictionary;

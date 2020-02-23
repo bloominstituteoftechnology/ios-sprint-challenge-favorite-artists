@@ -38,8 +38,32 @@
         self.nameLabel.text = self.artist.name;
         self.artistBioTextView.text = self.artist.artistBio;
         self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %@", [self.artist yearFormedString]]; }
-        
+    
+   
     }
+        
+    
+/*
+ [self.artistController searchForArtistsByName:searchBar.text completion:^(TACArtists *artist, NSError *error) {
+     dispatch_async(dispatch_get_main_queue(), ^{
+         // Get the artist that was returned
+         self.artist = artist;
+         // Was an artist returned?
+          if(artist) {
+              //Display the artist data
+               [self updateViews];
+          }
+          else {
+              // Can you finish this
+              NSLog(@"No artist");
+              self.nameLabel.text = @"No artist found";
+              self.biographyTextView.text = @"no info to be found";
+              self.formedYearLabel.text = @"No year";
+          }
+     });
+ }];
+ */
+
 
 
 -(IBAction)onSavedTapped{
@@ -69,8 +93,18 @@
                 NSLog(@"Error searching: %@", error);
                 return;
             }
-            self.artist = artist;
+           self.artist = artist;
             [self updateViews];
+            
+            if(!self.artist) {
+                        // Can you finish this
+                        NSLog(@"No artist");
+                        self.nameLabel.text = @"No artist found";
+                        self.artistBioTextView.text = @"no info to be found";
+                        self.yearFormedLabel.text = @"No year";
+                    }
+            
+            
         });
     }];
     }

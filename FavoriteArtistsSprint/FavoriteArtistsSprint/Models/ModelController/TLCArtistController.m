@@ -89,26 +89,65 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
             return;
         }
         
+        if (dictionary[@"name"] == (id)[NSNull null]) {
+            [dictionary setValue:@"No name returned from server" forKey:@"name"];
+                  //[bookListing setObject: @"Wind in the Willows"  forKey: @"100-432112"];
+              }
+        
+        if (dictionary[@"strBiographyEN"] == (id)[NSNull null]) {
+                 [dictionary setValue:@"No biography returned from server" forKey:@"strBiographyEN"];
+                       //[bookListing setObject: @"Wind in the Willows"  forKey: @"100-432112"];
+                   }
+        
+        
         NSArray *artistDictionaries = dictionary[@"artists"];
+       
         if ([artistDictionaries isEqual:nil]) {
             NSLog(@"artistDictionaries came back nil");
             return; }
         NSLog(@"JSON: %@", dictionary);
-        TLCArtist *artist = [[TLCArtist alloc] initWithDictionary:artistDictionaries[0]]; //first dict only
         
-        if ([dictionary[@"name"] isKindOfClass:[NSNull class ]]) {
-           
-            NSLog(@"Returning from null error for dict value");
-            return completion(nil, error);
-            
+        if (artistDictionaries == (id)[NSNull null] ) {
+                  NSLog(@"artistDictinaries[0] is null returning");
+                  return;
+              }
         
-            
-            
-            
-            
-            
-    
+        
+        
+        if (dictionary[@"name"] == (id)[NSNull null]) {
+            [dictionary setValue:@"No name returned from server" forKey:@"name"];
+                  //[bookListing setObject: @"Wind in the Willows"  forKey: @"100-432112"];
+              }
+        
+        if (dictionary[@"strBiographyEN"] == (id)[NSNull null]) {
+                 [dictionary setValue:@"No biography returned from server" forKey:@"strBiographyEN"];
+                       //[bookListing setObject: @"Wind in the Willows"  forKey: @"100-432112"];
+                   }
+        
+        if (dictionary[@"intFormedYear"] == (id)[NSNull null]) {
+            [dictionary setValue: @"222" forKey:@"intFormedYear"]; //error code
         }
+        
+        
+      
+        
+        TLCArtist *artist = [TLCArtist alloc];
+                                
+            
+            
+            
+        
+                             
+                             /* if (tel == (id)[NSNull null]) {
+                                  // tel is null
+                              }*/
+        if (artistDictionaries[0] == (id)[NSNull null] ) {
+            NSLog(@"artistDictinaries[0] is null returning");
+            return;
+        }
+                             initWithDictionary:artistDictionaries[0]; //first dict only //this is the problem
+        
+
         
         if (!artist) {
             NSString *errorMessage = [NSString stringWithFormat:@"Unable to parse json object. %@", artistDictionaries[0]];
@@ -121,7 +160,7 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
         
         
         completion(artist, nil);
-    }] resume];
+        }] resume];
     }
       
       

@@ -15,16 +15,25 @@
 //    if (![t isEqual:nil]) {
 //        NSLog(@"Not nil");
 //    }
+    /* if (tel == (id)[NSNull null]) {
+        // tel is null
+    }*/
     
     NSString *name = dictionary[@"strArtist"];
+    if (name == (id)[NSNull null]) {
+        name = @"Null Protection String";
+    }
     NSString *strFormedYear = dictionary[@"intFormedYear"];
     int formedYear = 0;
     if ([strFormedYear isKindOfClass: [NSString class]]) {
-        formedYear = [strFormedYear intValue];
+        formedYear = [strFormedYear intValue]; //already null safe if not string formyear = 0
     
         
     }
     NSString *biography = dictionary[@"strBiographyEN"];
+    if (biography == (id)[NSNull null]) {
+        biography = @"Null Protection String";
+    }
     return [self initWithName:name artistBio:biography yearFormed: formedYear];
     
     

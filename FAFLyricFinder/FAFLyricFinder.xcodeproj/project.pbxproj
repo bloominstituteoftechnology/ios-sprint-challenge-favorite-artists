@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D862F7F0219F1E2A006C1494 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F7EF219F1E2A006C1494 /* AppDelegate.m */; };
+		D862F7F6219F1E2A006C1494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D862F7F4219F1E2A006C1494 /* Main.storyboard */; };
+		D862F7F8219F1E2B006C1494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862F7F7219F1E2B006C1494 /* Assets.xcassets */; };
+		D862F7FB219F1E2B006C1494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D862F7F9219F1E2B006C1494 /* LaunchScreen.storyboard */; };
+		D862F7FE219F1E2B006C1494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F7FD219F1E2B006C1494 /* main.m */; };
+		D862F806219F2883006C1494 /* FAFSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F805219F2883006C1494 /* FAFSongsTableViewController.m */; };
+		D862F809219F2B65006C1494 /* FAFSong.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F808219F2B65006C1494 /* FAFSong.m */; };
+		D862F80C219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D862F80B219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m */; };
+		D8723997219F3294005DFB59 /* FAFSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8723996219F3294005DFB59 /* FAFSongController.m */; };
+		D872399A219F5952005DFB59 /* FAFNewSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8723999219F5952005DFB59 /* FAFNewSongViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D862F7EB219F1E2A006C1494 /* FAFLyricFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAFLyricFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D862F7EE219F1E2A006C1494 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D862F7EF219F1E2A006C1494 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D862F7F5219F1E2A006C1494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D862F7F7219F1E2B006C1494 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D862F7FA219F1E2B006C1494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D862F7FC219F1E2B006C1494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D862F7FD219F1E2B006C1494 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D862F804219F2883006C1494 /* FAFSongsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAFSongsTableViewController.h; sourceTree = "<group>"; };
+		D862F805219F2883006C1494 /* FAFSongsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAFSongsTableViewController.m; sourceTree = "<group>"; };
+		D862F807219F2B65006C1494 /* FAFSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAFSong.h; sourceTree = "<group>"; };
+		D862F808219F2B65006C1494 /* FAFSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAFSong.m; sourceTree = "<group>"; };
+		D862F80A219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+FAFNSJSONSerialization.h"; sourceTree = "<group>"; };
+		D862F80B219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FAFNSJSONSerialization.m"; sourceTree = "<group>"; };
+		D8723995219F3294005DFB59 /* FAFSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAFSongController.h; sourceTree = "<group>"; };
+		D8723996219F3294005DFB59 /* FAFSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAFSongController.m; sourceTree = "<group>"; };
+		D8723998219F5952005DFB59 /* FAFNewSongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAFNewSongViewController.h; sourceTree = "<group>"; };
+		D8723999219F5952005DFB59 /* FAFNewSongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAFNewSongViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D862F7E8219F1E2A006C1494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D862F7E2219F1E29006C1494 = {
+			isa = PBXGroup;
+			children = (
+				D862F7ED219F1E2A006C1494 /* FAFLyricFinder */,
+				D862F7EC219F1E2A006C1494 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D862F7EC219F1E2A006C1494 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D862F7EB219F1E2A006C1494 /* FAFLyricFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D862F7ED219F1E2A006C1494 /* FAFLyricFinder */ = {
+			isa = PBXGroup;
+			children = (
+				D862F7EE219F1E2A006C1494 /* AppDelegate.h */,
+				D862F7EF219F1E2A006C1494 /* AppDelegate.m */,
+				D862F7F4219F1E2A006C1494 /* Main.storyboard */,
+				D872399B219F5958005DFB59 /* View Controllers */,
+				D872399C219F5961005DFB59 /* Model */,
+				D862F80A219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.h */,
+				D862F80B219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m */,
+				D872399D219F5969005DFB59 /* Model Controller */,
+				D862F7F7219F1E2B006C1494 /* Assets.xcassets */,
+				D862F7F9219F1E2B006C1494 /* LaunchScreen.storyboard */,
+				D862F7FC219F1E2B006C1494 /* Info.plist */,
+				D862F7FD219F1E2B006C1494 /* main.m */,
+			);
+			path = FAFLyricFinder;
+			sourceTree = "<group>";
+		};
+		D872399B219F5958005DFB59 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8723998219F5952005DFB59 /* FAFNewSongViewController.h */,
+				D8723999219F5952005DFB59 /* FAFNewSongViewController.m */,
+				D862F804219F2883006C1494 /* FAFSongsTableViewController.h */,
+				D862F805219F2883006C1494 /* FAFSongsTableViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D872399C219F5961005DFB59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D862F807219F2B65006C1494 /* FAFSong.h */,
+				D862F808219F2B65006C1494 /* FAFSong.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D872399D219F5969005DFB59 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8723995219F3294005DFB59 /* FAFSongController.h */,
+				D8723996219F3294005DFB59 /* FAFSongController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D862F7EA219F1E2A006C1494 /* FAFLyricFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D862F801219F1E2B006C1494 /* Build configuration list for PBXNativeTarget "FAFLyricFinder" */;
+			buildPhases = (
+				D862F7E7219F1E2A006C1494 /* Sources */,
+				D862F7E8219F1E2A006C1494 /* Frameworks */,
+				D862F7E9219F1E2A006C1494 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FAFLyricFinder;
+			productName = FAFLyricFinder;
+			productReference = D862F7EB219F1E2A006C1494 /* FAFLyricFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D862F7E3219F1E29006C1494 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FAF;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Farhan;
+				TargetAttributes = {
+					D862F7EA219F1E2A006C1494 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = D862F7E6219F1E29006C1494 /* Build configuration list for PBXProject "FAFLyricFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D862F7E2219F1E29006C1494;
+			productRefGroup = D862F7EC219F1E2A006C1494 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D862F7EA219F1E2A006C1494 /* FAFLyricFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D862F7E9219F1E2A006C1494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D862F7FB219F1E2B006C1494 /* LaunchScreen.storyboard in Resources */,
+				D862F7F8219F1E2B006C1494 /* Assets.xcassets in Resources */,
+				D862F7F6219F1E2A006C1494 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D862F7E7219F1E2A006C1494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D862F809219F2B65006C1494 /* FAFSong.m in Sources */,
+				D862F7FE219F1E2B006C1494 /* main.m in Sources */,
+				D8723997219F3294005DFB59 /* FAFSongController.m in Sources */,
+				D862F80C219F2EC7006C1494 /* NSObject+FAFNSJSONSerialization.m in Sources */,
+				D862F806219F2883006C1494 /* FAFSongsTableViewController.m in Sources */,
+				D862F7F0219F1E2A006C1494 /* AppDelegate.m in Sources */,
+				D872399A219F5952005DFB59 /* FAFNewSongViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D862F7F4219F1E2A006C1494 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D862F7F5219F1E2A006C1494 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D862F7F9219F1E2B006C1494 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D862F7FA219F1E2B006C1494 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D862F7FF219F1E2B006C1494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D862F800219F1E2B006C1494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D862F802219F1E2B006C1494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AL899TPVP;
+				INFOPLIST_FILE = FAFLyricFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhanf.FAFLyricFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D862F803219F1E2B006C1494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AL899TPVP;
+				INFOPLIST_FILE = FAFLyricFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhanf.FAFLyricFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D862F7E6219F1E29006C1494 /* Build configuration list for PBXProject "FAFLyricFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D862F7FF219F1E2B006C1494 /* Debug */,
+				D862F800219F1E2B006C1494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D862F801219F1E2B006C1494 /* Build configuration list for PBXNativeTarget "FAFLyricFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D862F802219F1E2B006C1494 /* Debug */,
+				D862F803219F1E2B006C1494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D862F7E3219F1E29006C1494 /* Project object */;
+}

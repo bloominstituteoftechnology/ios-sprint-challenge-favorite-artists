@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *formedInLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 - (void)setUpViews;
 -(void)startSearching:(NSString *)term;
@@ -30,14 +31,25 @@
     [[Artist new] saveToPersistantStore:_artist.toDictionary];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.artist = [[Artist alloc] initWithName:@" " biography:@" " yearFormed:0];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _searchBar.delegate = self;
     if (_artist) {
         [self setUpViews];
+        [self setTitle:_artist.name];
         [self.searchBar setHidden:YES];
+        [self.saveButton setEnabled:FALSE];
+        [self.saveButton setTintColor:UIColor.clearColor];
     } else {
+        [self setTitle:@"Add New Artist"];
         [self.searchBar setHidden:NO];
+        [self.saveButton setEnabled:YES];
+        [self.saveButton setTintColor:UIColor.systemBlueColor];
     }
 }
 

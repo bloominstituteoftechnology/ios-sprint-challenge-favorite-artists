@@ -19,7 +19,7 @@
     [dictionary writeToFile:filePath atomically:NO];
     NSMutableArray *old = [NSMutableArray new];
     if ([NSUserDefaults.standardUserDefaults objectForKey:@"store"]) {
-        old = [NSUserDefaults.standardUserDefaults objectForKey:@"store"];
+        [old addObjectsFromArray:[NSUserDefaults.standardUserDefaults objectForKey:@"store"]];
     }
     [old addObject:fileName];
     [NSUserDefaults.standardUserDefaults setObject:old forKey:@"store"];
@@ -31,7 +31,6 @@
     NSMutableArray *files = [NSMutableArray new];
     for (NSString *name in names) {
         NSString *filePath = [path stringByAppendingPathComponent:name];
-        NSLog(filePath);
         NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:filePath];
         [files addObject:[[Artist alloc] initWithDictionary:dict]];
     }

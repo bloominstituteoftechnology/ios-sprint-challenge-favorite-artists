@@ -12,7 +12,7 @@
 
 @interface ArtistTableViewController ()
 
-@property (nonatomic) NSArray *artists;
+@property (nonatomic) NSMutableArray *artists;
 
 @end
 
@@ -40,6 +40,15 @@
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"Formed in: %d", artist.yearFormed]];
     
     return cell;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_artists removeObjectAtIndex:indexPath.row];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 #pragma mark - Navigation

@@ -37,4 +37,15 @@
     return files;
 }
 
+- (void)removeFromPersistantStore:(NSNumber *)number {
+    NSMutableArray *old = [NSMutableArray new];
+    if ([NSUserDefaults.standardUserDefaults objectForKey:@"store"]) {
+        [old addObjectsFromArray:[NSUserDefaults.standardUserDefaults objectForKey:@"store"]];
+    }
+    if (old.count >= number.unsignedLongValue) {
+        [old removeObjectAtIndex:number.unsignedLongValue];
+    }
+    [NSUserDefaults.standardUserDefaults setObject:old forKey:@"store"];
+}
+
 @end

@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 - (void)setUpViews;
--(void)startSearching:(NSString *)term;
+- (void)startSearching:(NSString *)term;
 
 @end
 
@@ -67,8 +67,9 @@
 }
 
 - (void)setUpViews {
+    [self setTitle:_artist.name];
     _nameLabel.text = _artist.name;
-    _formedInLabel.text = [NSString stringWithFormat:@"Formed in: %d", _artist.yearFormed];
+    _formedInLabel.text = [NSString stringWithFormat:@"    Formed in: %d", _artist.yearFormed];
     _bioTextView.text = _artist.biography;
 }
 

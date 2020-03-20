@@ -30,6 +30,8 @@
 - (void)getArtist:(NSString *)name
        completion:(void (^)(Artist *))completion {
     [self fetchJson:^(NSDictionary * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) { return; }
+        if (data[@"artists"] == [NSNull new]) { return; }
         completion([[Artist new] initWithDictionary:data]);
     }name:name];
 }

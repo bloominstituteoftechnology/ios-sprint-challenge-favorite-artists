@@ -7,8 +7,12 @@
 //
 
 #import "DetailViewController.h"
+#import "Artist.h"
+#import "ArtistController.h"
 
 @interface DetailViewController ()
+
+@property Artist *artist;
 
 @end
 
@@ -16,7 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[ArtistController new] getArtist:@"" completion:^(Artist *artist) {
+        self.artist = artist;
+        NSLog(@"%@", self.artist.name);
+    }];
 }
 
 /*

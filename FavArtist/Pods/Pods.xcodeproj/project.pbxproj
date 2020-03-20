@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07DE5BE05082E57B201D00600A8C9133 /* Pods_FavArtist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FavArtist.framework; path = "Pods-FavArtist.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07DE5BE05082E57B201D00600A8C9133 /* Pods_FavArtist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavArtist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0AFFA7765563034F666B7A125B2EAE /* CustomUIImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomUIImageView.swift; path = ASUI/CustomUIImageView.swift; sourceTree = "<group>"; };
 		135D66801F6DE1BCAEC7A2A00075F760 /* Pods-FavArtist-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FavArtist-umbrella.h"; sourceTree = "<group>"; };
 		1B2EC4807425B8E7879AAF360F36E9FD /* CustomUIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomUIView.swift; path = ASUI/CustomUIView.swift; sourceTree = "<group>"; };
@@ -40,11 +40,11 @@
 		561473C2EAB8A46EFACF5886737563A5 /* Pods-FavArtist.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FavArtist.modulemap"; sourceTree = "<group>"; };
 		5A6FCD5492C1DF3F79A71B41506ACD14 /* ASUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ASUI-Info.plist"; sourceTree = "<group>"; };
 		71463A0F9DC56DA2762931DA929BEAF1 /* ASUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASUI.h; path = ASUI/ASUI.h; sourceTree = "<group>"; };
-		86DABFCE2240F5DEB33311E6A90D2896 /* ASUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ASUI.framework; path = ASUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86DABFCE2240F5DEB33311E6A90D2896 /* ASUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ASUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9155C177AA35DE7A085D54AEED09E325 /* Pods-FavArtist-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FavArtist-frameworks.sh"; sourceTree = "<group>"; };
 		967FA90927E6E0A0E5E080EBE63DF311 /* CustomTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = ASUI/CustomTextField.swift; sourceTree = "<group>"; };
 		9D8A813525908C4CB9AD5F472D4A4409 /* ASUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ASUI.modulemap; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AE44F78D99C92E2D4D1F60539814DE0D /* ASUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ASUI-dummy.m"; sourceTree = "<group>"; };
 		B0A1080016A75DFC860A73C8472BD696 /* ASUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASUI.debug.xcconfig; sourceTree = "<group>"; };
 		B33449BDA4914270E0A39A5A5841209D /* ASUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASUI-umbrella.h"; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 				1B2EC4807425B8E7879AAF360F36E9FD /* CustomUIView.swift */,
 				25C7676549B2D3C1F9A7FC6ADD94FBAA /* Support Files */,
 			);
-			name = ASUI;
 			path = ASUI;
 			sourceTree = "<group>";
 		};
@@ -243,7 +242,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1130;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -354,7 +353,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F23195E17FA48A8A15811EBFA374D97B /* Pods-FavArtist.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -392,7 +391,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D96BA4EAA4CAE64E9AA44D52B3B0CD8E /* Pods-FavArtist.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

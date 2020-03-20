@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		1A670CAD2425128600507352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A670CAC2425128600507352 /* Assets.xcassets */; };
 		1A670CB02425128600507352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A670CAE2425128600507352 /* LaunchScreen.storyboard */; };
 		1A670CB32425128600507352 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A670CB22425128600507352 /* main.m */; };
+		1A670CC12425244700507352 /* AMCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A670CC02425244700507352 /* AMCArtistController.m */; };
+		1A670CC5242524A900507352 /* AMCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A670CC4242524A900507352 /* AMCArtist.m */; };
+		1A670CC82425250600507352 /* AMCArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A670CC72425250600507352 /* AMCArtist+NSJSONSerialization.m */; };
+		1A670CCB2425254E00507352 /* AMCArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A670CCA2425254E00507352 /* AMCArtistTableViewController.m */; };
+		1A670CCE2425257E00507352 /* AMCArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A670CCD2425257E00507352 /* AMCArtistDetailViewController.m */; };
 		EE38525F04C495BC18536410 /* Pods_FavArtist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C9338E5A81F0F53B90607 /* Pods_FavArtist.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +32,16 @@
 		1A670CAF2425128600507352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A670CB12425128600507352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A670CB22425128600507352 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A670CBF2425244700507352 /* AMCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMCArtistController.h; sourceTree = "<group>"; };
+		1A670CC02425244700507352 /* AMCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMCArtistController.m; sourceTree = "<group>"; };
+		1A670CC3242524A900507352 /* AMCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMCArtist.h; sourceTree = "<group>"; };
+		1A670CC4242524A900507352 /* AMCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMCArtist.m; sourceTree = "<group>"; };
+		1A670CC62425250600507352 /* AMCArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMCArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		1A670CC72425250600507352 /* AMCArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AMCArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		1A670CC92425254E00507352 /* AMCArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMCArtistTableViewController.h; sourceTree = "<group>"; };
+		1A670CCA2425254E00507352 /* AMCArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMCArtistTableViewController.m; sourceTree = "<group>"; };
+		1A670CCC2425257E00507352 /* AMCArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMCArtistDetailViewController.h; sourceTree = "<group>"; };
+		1A670CCD2425257E00507352 /* AMCArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMCArtistDetailViewController.m; sourceTree = "<group>"; };
 		666C9338E5A81F0F53B90607 /* Pods_FavArtist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavArtist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D990CCE6143FBA22336BF9 /* Pods-FavArtist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavArtist.release.xcconfig"; path = "Target Support Files/Pods-FavArtist/Pods-FavArtist.release.xcconfig"; sourceTree = "<group>"; };
 		C7D1A659531F73D5D516ACB0 /* Pods-FavArtist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavArtist.debug.xcconfig"; path = "Target Support Files/Pods-FavArtist/Pods-FavArtist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +84,6 @@
 				1A670CBC24251D8D00507352 /* Controllers */,
 				1A670CB924251C1C00507352 /* Resources */,
 				1A670CBA24251C2700507352 /* Storyboards */,
-				1A670CB22425128600507352 /* main.m */,
 			);
 			path = FavArtist;
 			sourceTree = "<group>";
@@ -77,6 +91,7 @@
 		1A670CB924251C1C00507352 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A670CB22425128600507352 /* main.m */,
 				1A670CA02425128500507352 /* AppDelegate.h */,
 				1A670CA12425128500507352 /* AppDelegate.m */,
 				1A670CA32425128500507352 /* SceneDelegate.h */,
@@ -99,6 +114,10 @@
 		1A670CBB24251D7E00507352 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A670CC92425254E00507352 /* AMCArtistTableViewController.h */,
+				1A670CCA2425254E00507352 /* AMCArtistTableViewController.m */,
+				1A670CCC2425257E00507352 /* AMCArtistDetailViewController.h */,
+				1A670CCD2425257E00507352 /* AMCArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -106,6 +125,7 @@
 		1A670CBC24251D8D00507352 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A670CC22425249C00507352 /* Model Controllers */,
 				1A670CBB24251D7E00507352 /* View Controllers */,
 			);
 			path = Controllers;
@@ -114,16 +134,21 @@
 		1A670CBD24251DA000507352 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1A670CBE24251DAD00507352 /* Networking */,
+				1A670CC3242524A900507352 /* AMCArtist.h */,
+				1A670CC4242524A900507352 /* AMCArtist.m */,
+				1A670CC62425250600507352 /* AMCArtist+NSJSONSerialization.h */,
+				1A670CC72425250600507352 /* AMCArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		1A670CBE24251DAD00507352 /* Networking */ = {
+		1A670CC22425249C00507352 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A670CBF2425244700507352 /* AMCArtistController.h */,
+				1A670CC02425244700507352 /* AMCArtistController.m */,
 			);
-			path = Networking;
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		7E3C7F564F76B1F75632EE3B /* Frameworks */ = {
@@ -140,7 +165,6 @@
 				C7D1A659531F73D5D516ACB0 /* Pods-FavArtist.debug.xcconfig */,
 				A4D990CCE6143FBA22336BF9 /* Pods-FavArtist.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,9 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A670CCE2425257E00507352 /* AMCArtistDetailViewController.m in Sources */,
+				1A670CC12425244700507352 /* AMCArtistController.m in Sources */,
 				1A670CA22425128500507352 /* AppDelegate.m in Sources */,
 				1A670CB32425128600507352 /* main.m in Sources */,
 				1A670CA52425128500507352 /* SceneDelegate.m in Sources */,
+				1A670CC5242524A900507352 /* AMCArtist.m in Sources */,
+				1A670CCB2425254E00507352 /* AMCArtistTableViewController.m in Sources */,
+				1A670CC82425250600507352 /* AMCArtist+NSJSONSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G4A2JWWKQ;
-				INFOPLIST_FILE = FavArtist/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FavArtist/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,7 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G4A2JWWKQ;
-				INFOPLIST_FILE = FavArtist/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FavArtist/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

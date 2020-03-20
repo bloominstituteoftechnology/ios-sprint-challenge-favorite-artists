@@ -12,14 +12,20 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     
-    NSString *strArtist = dictionary[@"strArtist"];
-    NSNumber *intFormedYear = dictionary[@"intFormedYear"];
-    NSString *strBiographyEN = dictionary[@"strBiographyEN"];
+    NSArray *artistArray = dictionary[@"artists"];
+    
+    //NSString *strArtist = dictionary[@"strArtist"];
+    NSString *strArtist = artistArray[0][@"strArtist"];
+    NSNumber *intFormedYear = artistArray[0][@"intFormedYear"];
+    NSString *strBiographyEN = artistArray[0][@"strBiographyEN"];
     
 //    JLAFavoriteArtist *favoriteArtist = [[JLAFavoriteArtist alloc] initWithStrArtist:strArtist
 //                                                               intFormedYear:intFormedYear.intValue
 //                                                              strBiographyEN:strBiographyEN];
-    
+    NSLog(@"Category initWithDictionary");
+    NSLog(@"name: %@", strArtist);
+    NSLog(@"year: %i", intFormedYear.intValue);
+    NSLog(@"bio: %@", strBiographyEN);
     self = [self initWithStrArtist:strArtist intFormedYear:intFormedYear.intValue strBiographyEN:strBiographyEN];
     
     return self;

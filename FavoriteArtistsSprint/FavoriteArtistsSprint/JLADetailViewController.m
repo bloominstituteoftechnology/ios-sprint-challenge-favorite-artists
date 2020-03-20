@@ -8,6 +8,7 @@
 
 #import "JLADetailViewController.h"
 #import "JLAFavoriteArtistController.h"
+#import "JLAFavoriteArtist.h"
 
 @interface JLADetailViewController () <UISearchBarDelegate>
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -40,8 +41,10 @@
     [self.favoriteArtistController fetchFavoriteArtistByName:searchTerm completion:^(JLAFavoriteArtist *favoriteArtist) {
        dispatch_async(dispatch_get_main_queue(), ^{
            NSLog(@"search result = %@", favoriteArtist);
-           //self.title = favoriteArtist.strArtist;
-           
+           self.title = favoriteArtist.strArtist;
+           self.artistNameLabel.text = favoriteArtist.strArtist;
+           self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", favoriteArtist.intFormedYear];
+           self.textView.text = favoriteArtist.strBiographyEN;
         });
     }];
 

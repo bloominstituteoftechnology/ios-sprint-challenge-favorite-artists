@@ -7,8 +7,12 @@
 //
 
 #import "JLAFavoriteArtistsTableViewController.h"
+#import "JLAFavoriteArtistController.h"
+#import "JLAFavoriteArtist.h"
 
 @interface JLAFavoriteArtistsTableViewController ()
+
+@property (nonatomic) JLAFavoriteArtistController *favoriteArtistController;
 
 @end
 
@@ -17,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.favoriteArtistController = [[JLAFavoriteArtistController alloc] init];
+    [self.favoriteArtistController fetchFavoriteArtistByName:@"coldplay" completion:^(JLAFavoriteArtist * favoriteArtist) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           NSLog(@"Coldplay = %@", favoriteArtist);
+        });
+    }];
 }
 
 #pragma mark - Table view data source

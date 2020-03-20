@@ -17,6 +17,7 @@
 		1B5679FC242518500021454B /* JLADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5679FB242518500021454B /* JLADetailViewController.m */; };
 		1B5679FF24251A910021454B /* JLAFavoriteArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5679FE24251A910021454B /* JLAFavoriteArtist.m */; };
 		1B567A0224251EFE0021454B /* JLAFavoriteArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B567A0124251EFE0021454B /* JLAFavoriteArtist+NSJSONSerialization.m */; };
+		1B567A052425235B0021454B /* JLAFavoriteArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B567A042425235B0021454B /* JLAFavoriteArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		1B5679FE24251A910021454B /* JLAFavoriteArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLAFavoriteArtist.m; sourceTree = "<group>"; };
 		1B567A0024251EFE0021454B /* JLAFavoriteArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JLAFavoriteArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		1B567A0124251EFE0021454B /* JLAFavoriteArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JLAFavoriteArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		1B567A032425235B0021454B /* JLAFavoriteArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLAFavoriteArtistController.h; sourceTree = "<group>"; };
+		1B567A042425235B0021454B /* JLAFavoriteArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLAFavoriteArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 		1B5679F3242516B60021454B /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1B567A032425235B0021454B /* JLAFavoriteArtistController.h */,
+				1B567A042425235B0021454B /* JLAFavoriteArtistController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			files = (
 				1B5679FF24251A910021454B /* JLAFavoriteArtist.m in Sources */,
 				1B5679DB2425134B0021454B /* AppDelegate.m in Sources */,
+				1B567A052425235B0021454B /* JLAFavoriteArtistController.m in Sources */,
 				1B5679EC242513530021454B /* main.m in Sources */,
 				1B5679F92425182A0021454B /* JLAFavoriteArtistsTableViewController.m in Sources */,
 				1B5679DE2425134B0021454B /* SceneDelegate.m in Sources */,

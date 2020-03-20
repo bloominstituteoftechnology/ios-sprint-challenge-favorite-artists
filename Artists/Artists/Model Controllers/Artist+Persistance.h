@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Artist (Persistance)
 
 - (void)saveToPersistantStore:(NSDictionary *)dictionary;
-- (void)removeFromPersistantStore:(NSNumber *)number;
+- (void)removeFromPersistantStore:(long)number;
 - (NSMutableArray *)getFromPersistantStore;
 
 @end

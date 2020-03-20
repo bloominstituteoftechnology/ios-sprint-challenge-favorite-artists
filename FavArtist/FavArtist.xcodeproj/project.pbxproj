@@ -13,6 +13,7 @@
 		1A670CAD2425128600507352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A670CAC2425128600507352 /* Assets.xcassets */; };
 		1A670CB02425128600507352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A670CAE2425128600507352 /* LaunchScreen.storyboard */; };
 		1A670CB32425128600507352 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A670CB22425128600507352 /* main.m */; };
+		EE38525F04C495BC18536410 /* Pods_FavArtist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C9338E5A81F0F53B90607 /* Pods_FavArtist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		1A670CAF2425128600507352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A670CB12425128600507352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A670CB22425128600507352 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		666C9338E5A81F0F53B90607 /* Pods_FavArtist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavArtist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D990CCE6143FBA22336BF9 /* Pods-FavArtist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavArtist.release.xcconfig"; path = "Target Support Files/Pods-FavArtist/Pods-FavArtist.release.xcconfig"; sourceTree = "<group>"; };
+		C7D1A659531F73D5D516ACB0 /* Pods-FavArtist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavArtist.debug.xcconfig"; path = "Target Support Files/Pods-FavArtist/Pods-FavArtist.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE38525F04C495BC18536410 /* Pods_FavArtist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				1A670C9F2425128500507352 /* FavArtist */,
 				1A670C9E2425128500507352 /* Products */,
+				A49936934165ABCC6BC408DD /* Pods */,
+				7E3C7F564F76B1F75632EE3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +65,8 @@
 		1A670C9F2425128500507352 /* FavArtist */ = {
 			isa = PBXGroup;
 			children = (
+				1A670CBD24251DA000507352 /* Models */,
+				1A670CBC24251D8D00507352 /* Controllers */,
 				1A670CB924251C1C00507352 /* Resources */,
 				1A670CBA24251C2700507352 /* Storyboards */,
 				1A670CB22425128600507352 /* main.m */,
@@ -87,6 +96,54 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		1A670CBB24251D7E00507352 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1A670CBC24251D8D00507352 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A670CBB24251D7E00507352 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A670CBD24251DA000507352 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A670CBE24251DAD00507352 /* Networking */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A670CBE24251DAD00507352 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7E3C7F564F76B1F75632EE3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				666C9338E5A81F0F53B90607 /* Pods_FavArtist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A49936934165ABCC6BC408DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7D1A659531F73D5D516ACB0 /* Pods-FavArtist.debug.xcconfig */,
+				A4D990CCE6143FBA22336BF9 /* Pods-FavArtist.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A670CB62425128600507352 /* Build configuration list for PBXNativeTarget "FavArtist" */;
 			buildPhases = (
+				5A87074840B386952B763EC0 /* [CP] Check Pods Manifest.lock */,
 				1A670C992425128400507352 /* Sources */,
 				1A670C9A2425128400507352 /* Frameworks */,
 				1A670C9B2425128400507352 /* Resources */,
+				21B9C2B4FAA4ED5E42148824 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +210,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21B9C2B4FAA4ED5E42148824 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FavArtist/Pods-FavArtist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FavArtist/Pods-FavArtist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FavArtist/Pods-FavArtist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A87074840B386952B763EC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FavArtist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A670C992425128400507352 /* Sources */ = {
@@ -297,6 +398,7 @@
 		};
 		1A670CB72425128600507352 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7D1A659531F73D5D516ACB0 /* Pods-FavArtist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +416,7 @@
 		};
 		1A670CB82425128600507352 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4D990CCE6143FBA22336BF9 /* Pods-FavArtist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

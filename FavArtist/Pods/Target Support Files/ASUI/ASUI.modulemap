@@ -1,0 +1,6 @@
+framework module ASUI {
+  umbrella header "ASUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

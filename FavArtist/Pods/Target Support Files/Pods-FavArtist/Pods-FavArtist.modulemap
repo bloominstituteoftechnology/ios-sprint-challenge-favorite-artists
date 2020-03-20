@@ -1,0 +1,6 @@
+framework module Pods_FavArtist {
+  umbrella header "Pods-FavArtist-umbrella.h"
+
+  export *
+  module * { export * }
+}

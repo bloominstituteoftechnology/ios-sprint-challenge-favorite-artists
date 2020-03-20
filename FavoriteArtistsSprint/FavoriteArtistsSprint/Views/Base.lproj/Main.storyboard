@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="aCM-AV-nyr">
             <objects>
-                <tableViewController id="ZEp-WH-UiT" sceneMemberID="viewController">
+                <tableViewController id="ZEp-WH-UiT" customClass="JLAFavoriteArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9zH-fZ-Rbl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
         <!--Add New Artist-->
         <scene sceneID="psk-cN-gve">
             <objects>
-                <viewController id="wEh-Iu-wxu" sceneMemberID="viewController">
+                <viewController id="wEh-Iu-wxu" customClass="JLADetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I97-K6-WAS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oTw-K3-k5c">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oTw-K3-k5c">
                                 <rect key="frame" x="20" y="263.5" width="374" height="598.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -110,8 +110,18 @@
                         <viewLayoutGuide key="safeArea" id="vZC-nJ-SWy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="S1A-uE-A9U">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gfg-9Y-dje"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gfg-9Y-dje">
+                            <connections>
+                                <action selector="saveTapped:" destination="wEh-Iu-wxu" id="tBg-Az-bOm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="RPF-IO-Zpd" id="Jon-mz-rsV"/>
+                        <outlet property="searchBar" destination="dZB-mQ-q3O" id="yeg-Ck-aZi"/>
+                        <outlet property="textView" destination="oTw-K3-k5c" id="7jN-XP-YNE"/>
+                        <outlet property="yearFormedLabel" destination="BOV-Ow-8f7" id="8SC-DQ-0Vs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IiY-rE-w5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

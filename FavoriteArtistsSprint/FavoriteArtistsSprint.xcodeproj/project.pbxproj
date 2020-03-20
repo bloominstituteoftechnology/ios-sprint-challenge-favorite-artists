@@ -13,6 +13,8 @@
 		1B5679E6242513530021454B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5679E5242513530021454B /* Assets.xcassets */; };
 		1B5679E9242513530021454B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5679E7242513530021454B /* LaunchScreen.storyboard */; };
 		1B5679EC242513530021454B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5679EB242513530021454B /* main.m */; };
+		1B5679F92425182A0021454B /* JLAFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5679F82425182A0021454B /* JLAFavoriteArtistsTableViewController.m */; };
+		1B5679FC242518500021454B /* JLADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5679FB242518500021454B /* JLADetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		1B5679E8242513530021454B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B5679EA242513530021454B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B5679EB242513530021454B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B5679F72425182A0021454B /* JLAFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLAFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		1B5679F82425182A0021454B /* JLAFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLAFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		1B5679FA242518500021454B /* JLADetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLADetailViewController.h; sourceTree = "<group>"; };
+		1B5679FB242518500021454B /* JLADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLADetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +64,61 @@
 		1B5679D82425134B0021454B /* FavoriteArtistsSprint */ = {
 			isa = PBXGroup;
 			children = (
+				1B5679F2242516B00021454B /* Model */,
+				1B5679F3242516B60021454B /* Model Controller */,
+				1B5679F4242516BE0021454B /* View Controllers */,
+				1B5679F5242516E90021454B /* Views */,
+				1B5679F62425170B0021454B /* Resources */,
+			);
+			path = FavoriteArtistsSprint;
+			sourceTree = "<group>";
+		};
+		1B5679F2242516B00021454B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1B5679F3242516B60021454B /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		1B5679F4242516BE0021454B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B5679F72425182A0021454B /* JLAFavoriteArtistsTableViewController.h */,
+				1B5679F82425182A0021454B /* JLAFavoriteArtistsTableViewController.m */,
+				1B5679FA242518500021454B /* JLADetailViewController.h */,
+				1B5679FB242518500021454B /* JLADetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1B5679F5242516E90021454B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B5679E22425134B0021454B /* Main.storyboard */,
+				1B5679E7242513530021454B /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B5679F62425170B0021454B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B5679E5242513530021454B /* Assets.xcassets */,
 				1B5679D92425134B0021454B /* AppDelegate.h */,
 				1B5679DA2425134B0021454B /* AppDelegate.m */,
 				1B5679DC2425134B0021454B /* SceneDelegate.h */,
 				1B5679DD2425134B0021454B /* SceneDelegate.m */,
-				1B5679E22425134B0021454B /* Main.storyboard */,
-				1B5679E5242513530021454B /* Assets.xcassets */,
-				1B5679E7242513530021454B /* LaunchScreen.storyboard */,
-				1B5679EA242513530021454B /* Info.plist */,
 				1B5679EB242513530021454B /* main.m */,
+				1B5679EA242513530021454B /* Info.plist */,
 			);
-			path = FavoriteArtistsSprint;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +194,9 @@
 			files = (
 				1B5679DB2425134B0021454B /* AppDelegate.m in Sources */,
 				1B5679EC242513530021454B /* main.m in Sources */,
+				1B5679F92425182A0021454B /* JLAFavoriteArtistsTableViewController.m in Sources */,
 				1B5679DE2425134B0021454B /* SceneDelegate.m in Sources */,
+				1B5679FC242518500021454B /* JLADetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

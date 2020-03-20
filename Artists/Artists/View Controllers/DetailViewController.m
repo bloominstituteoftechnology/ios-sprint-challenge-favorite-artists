@@ -9,21 +9,56 @@
 #import "DetailViewController.h"
 #import "Artist.h"
 #import "ArtistController.h"
+#import "Artist+Persistance.h"
+#import "Artist+NSJSONSerialization.h"
 
 @interface DetailViewController ()
 
-@property Artist *artist;
+@property (nonatomic) Artist *artist;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *formedInLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
+
+- (void)setUpViews;
+-(void)startSearching:(NSString *)term;
 
 @end
 
 @implementation DetailViewController
 
+- (IBAction)save:(id)sender {
+    [[Artist new] saveToPersistantStore:_artist.toDictionary];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[ArtistController new] getArtist:@"" completion:^(Artist *artist) {
+    _searchBar.delegate = self;
+}
+
+-(void)startSearching:(NSString *)term {
+    [[ArtistController new] getArtist:term completion:^(Artist *artist) {
         self.artist = artist;
-        NSLog(@"%@", self.artist.name);
     }];
+}
+
+- (void)setArtist:(Artist *)artist {
+    _artist = artist;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setUpViews];
+    });
+}
+
+- (void)setUpViews {
+    _nameLabel.text = _artist.name;
+    _formedInLabel.text = [NSString stringWithFormat:@"Formed in: %d", _artist.yearFormed];
+    _bioTextView.text = _artist.biography;
+}
+
+// MARK: Search Bar
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self startSearching:searchBar.text];
 }
 
 /*

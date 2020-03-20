@@ -11,14 +11,15 @@
 @implementation Artist (NSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    NSArray *artists = dictionary[@"artists"];
-    NSDictionary *artist = artists[0];
-    NSString *name = artist[@"strArtist"];
-    NSString *biography = artist[@"strBiographyEN"];
-    NSNumber *yearFormed = artist[@"intFormedYear"];
-    
-    self = [self initWithName:name biography:biography yearFormed:yearFormed.intValue];
-    
+        NSArray *artists = dictionary[@"artists"];
+        if (artists.count > 0) {
+            NSDictionary *artist = artists[0];
+            NSString *name = artist[@"strArtist"];
+            NSString *biography = artist[@"strBiographyEN"];
+            NSNumber *yearFormed = artist[@"intFormedYear"];
+            
+            self = [self initWithName:name biography:biography yearFormed:yearFormed.intValue];
+    }
     return self;
 }
 

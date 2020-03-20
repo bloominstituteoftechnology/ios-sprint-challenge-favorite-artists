@@ -11,10 +11,14 @@
 
 @implementation ArtistController
 
-- (void)fetchJson:(completionHandler)completion {
-    NSURL *url = [NSURL URLWithString:@"https://www.theaudiodb.com/api/v1/json/1/search.php?s=macklemore"];
+- (void)fetchJson:(completionHandler)completion
+             name:(NSString *)name {
+    NSURLComponents *url = [[NSURLComponents alloc] initWithString:@"https://www.theaudiodb.com/api/v1/json/1/search.php"];
+    [url setQuery:[[NSString alloc] initWithFormat:@"s=%@", name]];
     
-    NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSLog(@"%@", url.URL);
+    
+    NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url.URL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) { completion(nil, response, error); }
         if (!data) { completion(nil, response, error); }
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
@@ -27,7 +31,7 @@
        completion:(void (^)(Artist *))completion {
     [self fetchJson:^(NSDictionary * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         completion([[Artist new] initWithDictionary:data]);
-    }];
+    }name:name];
 }
 
 @end

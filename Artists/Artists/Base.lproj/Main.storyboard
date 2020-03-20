@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="JQJ-qg-4gY" detailTextLabel="wdY-I3-Zbu" style="IBUITableViewCellStyleSubtitle" id="LWz-4r-BOq">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="JQJ-qg-4gY" detailTextLabel="wdY-I3-Zbu" style="IBUITableViewCellStyleSubtitle" id="LWz-4r-BOq">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LWz-4r-BOq" id="X0E-q4-Gn8">
@@ -69,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H0Z-xN-WSh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H0Z-xN-WSh">
                                 <rect key="frame" x="20" y="295" width="374" height="547"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -113,8 +113,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="8nl-FO-mqg">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="wgX-FM-d1A"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="wgX-FM-d1A">
+                            <connections>
+                                <action selector="save:" destination="BYZ-38-t0r" id="mLX-1F-1FH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bioTextView" destination="H0Z-xN-WSh" id="wY8-vG-hQ7"/>
+                        <outlet property="formedInLabel" destination="rVE-GG-mak" id="wPN-Sp-rrN"/>
+                        <outlet property="nameLabel" destination="FJT-ng-CCs" id="aa7-An-oqd"/>
+                        <outlet property="searchBar" destination="gK5-4B-k6E" id="nn2-O9-nTZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

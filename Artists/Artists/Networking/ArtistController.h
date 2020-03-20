@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^completionHandler)(NSDictionary * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error);
 
-- (void)fetchJson:(completionHandler)completion;
+- (void)fetchJson:(completionHandler)completion
+             name:(NSString *)name;
 - (void)getArtist:(NSString *)name
        completion:(void (^)(Artist *))completion;
 

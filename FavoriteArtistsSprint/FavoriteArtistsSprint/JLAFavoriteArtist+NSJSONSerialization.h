@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JLAFavoriteArtist (NSJSONSerialization)
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+- (NSDictionary *)toDictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

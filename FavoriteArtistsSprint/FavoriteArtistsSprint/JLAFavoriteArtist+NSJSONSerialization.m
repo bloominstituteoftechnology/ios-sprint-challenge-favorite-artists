@@ -10,4 +10,23 @@
 
 @implementation JLAFavoriteArtist (NSJSONSerialization)
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    
+    NSString *strArtist = dictionary[@"strArtist"];
+    NSNumber *intFormedYear = dictionary[@"intFormedYear"];
+    NSString *strBiographyEN = dictionary[@"strBiographyEN"];
+    
+    JLAFavoriteArtist *favoriteArtist = [[JLAFavoriteArtist alloc] initWithStrArtist:strArtist
+                                                               intFormedYear:intFormedYear.intValue
+                                                              strBiographyEN:strBiographyEN];
+    
+    
+    return favoriteArtist;
+}
+
+// TODO: For saving to Documents
+//- (NSDictionary *)toDictionary {
+//
+//}
+
 @end

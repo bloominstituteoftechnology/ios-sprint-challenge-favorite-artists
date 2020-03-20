@@ -58,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="715.94202898550725" y="41.517857142857139"/>
         </scene>
-        <!--Add New Artist-->
+        <!--Title-->
         <scene sceneID="psk-cN-gve">
             <objects>
                 <viewController id="wEh-Iu-wxu" customClass="JLADetailViewController" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vZC-nJ-SWy"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Artist" id="S1A-uE-A9U">
+                    <navigationItem key="navigationItem" title="Title" id="S1A-uE-A9U">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="gfg-9Y-dje">
                             <connections>
                                 <action selector="saveTapped:" destination="wEh-Iu-wxu" id="tBg-Az-bOm"/>

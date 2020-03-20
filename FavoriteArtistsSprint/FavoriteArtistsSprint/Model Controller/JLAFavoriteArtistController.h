@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)fetchFavoriteArtistByName:(NSString *)strArtist completion:(void(^)(JLAFavoriteArtist *))completion;
 
+- (void)addArtistWithArtist:(NSString *)artist
+                       year:(int)year
+                        bio:(NSString *)bio;
 @end
 
 NS_ASSUME_NONNULL_END

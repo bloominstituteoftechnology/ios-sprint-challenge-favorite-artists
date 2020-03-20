@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class JLAFavoriteArtistController;
+@class JLAFavoriteArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JLADetailViewController : UIViewController
+
+@property (nonatomic) JLAFavoriteArtistController *favoriteArtistController;
+@property (nonatomic) JLAFavoriteArtist *favoriteArtist;
 
 @end
 

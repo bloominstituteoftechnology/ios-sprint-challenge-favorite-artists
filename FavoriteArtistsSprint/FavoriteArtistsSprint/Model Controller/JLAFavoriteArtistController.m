@@ -12,6 +12,13 @@
 
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
+@interface JLAFavoriteArtistController()
+
+// Private
+@property (nonatomic) NSMutableArray<JLAFavoriteArtist *> *privateArtists;
+
+@end
+
 @implementation JLAFavoriteArtistController
 
 - (void)fetchFavoriteArtistByName:(NSString *)strArtist completion:(void(^)(JLAFavoriteArtist *))completion {
@@ -63,6 +70,32 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
         JLAFavoriteArtist *favoriteArtistData = [[JLAFavoriteArtist alloc] initWithDictionary:dictionary];
         completion(favoriteArtistData);
     }] resume];
+}
+
+- (instancetype)init {
+    
+    if (self = [super init]) {
+        _privateArtists = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+/// Returns private artists array
+- (NSArray *)favoriteArtists {
+    return self.privateArtists;
+}
+
+- (void)addArtistWithArtist:(NSString *)artist
+                       year:(int)year
+                        bio:(NSString *)bio {
+    
+    JLAFavoriteArtist *newArtist = [[JLAFavoriteArtist alloc] initWithStrArtist:artist
+                                                                  intFormedYear:year
+                                                                 strBiographyEN:bio];
+    [self.privateArtists addObject:newArtist];
+    NSLog(@"added to array: %@", newArtist.strArtist);
+    NSLog(@"arists array last added: %@", self.privateArtists[0]);
+    NSLog(@"privateArtists.count: %i", self.privateArtists.count);
 }
 
 @end

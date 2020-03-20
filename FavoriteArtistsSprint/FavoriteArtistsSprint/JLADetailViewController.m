@@ -16,8 +16,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 
-@property (nonatomic) JLAFavoriteArtistController *favoriteArtistController;
-
 @end
 
 @implementation JLADetailViewController
@@ -31,6 +29,10 @@
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
     NSLog(@"Save Tapped");
     // do work
+    if (!_favoriteArtist) { return; }
+    
+    [self.favoriteArtistController addArtistWithArtist:_favoriteArtist.strArtist year:_favoriteArtist.intFormedYear bio:_favoriteArtist.strBiographyEN];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -41,23 +43,48 @@
     [self.favoriteArtistController fetchFavoriteArtistByName:searchTerm completion:^(JLAFavoriteArtist *favoriteArtist) {
        dispatch_async(dispatch_get_main_queue(), ^{
            NSLog(@"search result = %@", favoriteArtist);
-           self.title = favoriteArtist.strArtist;
-           self.artistNameLabel.text = favoriteArtist.strArtist;
-           self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", favoriteArtist.intFormedYear];
-           self.textView.text = favoriteArtist.strBiographyEN;
+           
+           self.favoriteArtist = favoriteArtist;
+           [self updateViews];
+//           self.title = favoriteArtist.strArtist;
+//           self.artistNameLabel.text = favoriteArtist.strArtist;
+//           self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", favoriteArtist.intFormedYear];
+//           self.textView.text = favoriteArtist.strBiographyEN;
+           
+//           [self.favoriteArtistController addArtistWithArtist:favoriteArtist.strArtist
+//                                                         year:favoriteArtist.intFormedYear
+//                                                          bio:favoriteArtist.strBiographyEN];
         });
     }];
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// didSet
+- (void)setFavoriteArtist:(JLAFavoriteArtist *)favoriteArtist {
+    NSLog(@"favoriteArtist SET");
+    _favoriteArtist = favoriteArtist;
+    [self updateViews];
 }
-*/
+
+- (void)updateViews {
+    NSLog(@"updateViews");
+    
+    if (!self.viewIfLoaded) { return; }
+    
+    // view
+    if (self.favoriteArtist) {
+        NSLog(@"VIEW MODE");
+        self.title = self.favoriteArtist.strArtist;
+    }
+    
+    // add
+    else {
+        NSLog(@"ADD MODE");
+        self.title = self.favoriteArtist.strArtist;
+        self.artistNameLabel.text = self.favoriteArtist.strArtist;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", self.favoriteArtist.intFormedYear];
+        self.textView.text = self.favoriteArtist.strBiographyEN;
+    }
+}
 
 @end

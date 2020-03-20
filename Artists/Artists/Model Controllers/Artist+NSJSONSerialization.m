@@ -24,10 +24,10 @@
 }
 
 - (NSDictionary *)toDictionary {
-    NSDictionary *dict = [NSDictionary new];
-    [dict setValue:self.name forKey:@"strArtist"];
-    [dict setValue:self.biography forKey:@"strBiographyEN"];
-    [dict setValue:[NSNumber numberWithInt:(self.yearFormed)] forKey:@"intFormedYear"];
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    [dict setObject:self.name forKey:@"strArtist"];
+    [dict setObject:self.biography forKey:@"strBiographyEN"];
+    [dict setObject:[NSNumber numberWithInt:(self.yearFormed)] forKey:@"intFormedYear"];
     NSArray *artist = [[NSArray alloc] initWithObjects:dict, nil];
     NSDictionary *artists = [[NSDictionary alloc] initWithObjectsAndKeys:artist, @"artists", nil];
     return artists;

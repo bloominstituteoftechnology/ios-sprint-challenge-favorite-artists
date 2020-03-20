@@ -14,8 +14,6 @@
 
 @interface DetailViewController ()
 
-@property (nonatomic) Artist *artist;
-
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *formedInLabel;
@@ -35,6 +33,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _searchBar.delegate = self;
+    if (_artist) {
+        [self setUpViews];
+        [self.searchBar setHidden:YES];
+    } else {
+        [self.searchBar setHidden:NO];
+    }
 }
 
 -(void)startSearching:(NSString *)term {

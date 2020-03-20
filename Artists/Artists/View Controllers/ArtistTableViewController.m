@@ -8,6 +8,7 @@
 
 #import "ArtistTableViewController.h"
 #import "Artist+Persistance.h"
+#import "DetailViewController.h"
 
 @interface ArtistTableViewController ()
 
@@ -19,7 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _artists = [Artist new].getFromPersistantStore;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.artists = [Artist new].getFromPersistantStore;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -31,18 +37,19 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Artist *artist = _artists[indexPath.row];
     [cell.textLabel setText:artist.name];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"Formed in: %d", artist.yearFormed]];
     
     return cell;
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    DetailViewController *vc = [segue destinationViewController];
+    long index = [self.tableView indexPathForSelectedRow].row;
+    vc.artist = self.artists[index];
+
 }
-*/
 
 @end

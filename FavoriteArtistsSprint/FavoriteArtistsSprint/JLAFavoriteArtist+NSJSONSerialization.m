@@ -16,12 +16,13 @@
     NSNumber *intFormedYear = dictionary[@"intFormedYear"];
     NSString *strBiographyEN = dictionary[@"strBiographyEN"];
     
-    JLAFavoriteArtist *favoriteArtist = [[JLAFavoriteArtist alloc] initWithStrArtist:strArtist
-                                                               intFormedYear:intFormedYear.intValue
-                                                              strBiographyEN:strBiographyEN];
+//    JLAFavoriteArtist *favoriteArtist = [[JLAFavoriteArtist alloc] initWithStrArtist:strArtist
+//                                                               intFormedYear:intFormedYear.intValue
+//                                                              strBiographyEN:strBiographyEN];
     
+    self = [self initWithStrArtist:strArtist intFormedYear:intFormedYear.intValue strBiographyEN:strBiographyEN];
     
-    return favoriteArtist;
+    return self;
 }
 
 // TODO: For saving to Documents

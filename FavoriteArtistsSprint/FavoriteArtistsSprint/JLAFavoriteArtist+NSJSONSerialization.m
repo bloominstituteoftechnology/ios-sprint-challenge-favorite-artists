@@ -12,7 +12,15 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     
+    if (dictionary == nil) {
+        NSLog(@"Try again");
+        return nil;
+    }
+    
     NSArray *artistArray = dictionary[@"artists"];
+    NSLog(@"artistArray = %@", artistArray);
+    NSArray *nilArray = nil;
+    
     
     //NSString *strArtist = dictionary[@"strArtist"];
     NSString *strArtist = artistArray[0][@"strArtist"];
@@ -26,6 +34,15 @@
     NSLog(@"name: %@", strArtist);
     NSLog(@"year: %i", intFormedYear.intValue);
     NSLog(@"bio: %@", strBiographyEN);
+    
+    // Failable init
+    
+    // these are required for valid object
+    if (!strArtist || !strBiographyEN || !artistArray) {
+        NSLog(@"missing something in category");
+        return nil;
+    }
+    
     self = [self initWithStrArtist:strArtist intFormedYear:intFormedYear.intValue strBiographyEN:strBiographyEN];
     
     return self;

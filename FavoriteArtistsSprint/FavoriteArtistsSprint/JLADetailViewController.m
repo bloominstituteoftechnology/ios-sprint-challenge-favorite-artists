@@ -22,13 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.favoriteArtistController = [[JLAFavoriteArtistController alloc] init];
     self.searchBar.delegate = self;
-    // Do any additional setup after loading the view.
+    [self updateViews];
 }
+
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
     NSLog(@"Save Tapped");
-    // do work
+    
     if (!_favoriteArtist) { return; }
     
     [self.favoriteArtistController addArtistWithArtist:_favoriteArtist.strArtist year:_favoriteArtist.intFormedYear bio:_favoriteArtist.strBiographyEN];
@@ -40,10 +40,27 @@
     //Do search logic here
     NSString *searchTerm = searchBar.text;
     NSLog(@"searchTerm%@", searchTerm);
-    [self.favoriteArtistController fetchFavoriteArtistByName:searchTerm completion:^(JLAFavoriteArtist *favoriteArtist) {
+    [self.favoriteArtistController fetchFavoriteArtistByName:searchTerm completion:^(JLAFavoriteArtist *favoriteArtist, NSError *error) {
+        
+        // hey
+        if (error) {
+            NSLog(@"Error fetching artist");
+            return;
+        }
+        
+        // missing property year
+        if (!favoriteArtist) {
+            NSLog(@"nice try, John Williams");
+            return;
+        }
+        
        dispatch_async(dispatch_get_main_queue(), ^{
            NSLog(@"search result = %@", favoriteArtist);
            
+           if (!favoriteArtist.strArtist || !favoriteArtist.intFormedYear || !favoriteArtist.strBiographyEN) {
+               NSLog(@"empty prop");
+               return;
+           }
            self.favoriteArtist = favoriteArtist;
            [self updateViews];
 //           self.title = favoriteArtist.strArtist;
@@ -63,6 +80,7 @@
 - (void)setFavoriteArtist:(JLAFavoriteArtist *)favoriteArtist {
     NSLog(@"favoriteArtist SET");
     _favoriteArtist = favoriteArtist;
+    NSLog(@"%@", _favoriteArtist.strArtist);
     [self updateViews];
 }
 
@@ -75,6 +93,9 @@
     if (self.favoriteArtist) {
         NSLog(@"VIEW MODE");
         self.title = self.favoriteArtist.strArtist;
+        self.artistNameLabel.text = self.favoriteArtist.strArtist;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", self.favoriteArtist.intFormedYear];
+        self.textView.text = self.favoriteArtist.strBiographyEN;
     }
     
     // add

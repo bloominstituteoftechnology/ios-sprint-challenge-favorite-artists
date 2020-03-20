@@ -21,7 +21,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 
 @implementation JLAFavoriteArtistController
 
-- (void)fetchFavoriteArtistByName:(NSString *)strArtist completion:(void(^)(JLAFavoriteArtist *))completion {
+- (void)fetchFavoriteArtistByName:(NSString *)strArtist completion:(void(^)(JLAFavoriteArtist *, NSError *error))completion {
     
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
     
@@ -40,35 +40,41 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
         
         if (error) {
             NSLog(@"Error fetching artist data: %@", error);
-            completion(nil);
+            completion(nil, error);
             return;
         }
         
         if (!data) {
             NSLog(@"Error returned from data task");
-            completion(nil);
+            completion(nil, error);
             return;
         }
         
-        error = nil;
-        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        NSError *jsonError = nil;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
-        if (error) {
+        if (jsonError) {
             NSLog(@"Error decoding JSON from data: %@", error);
-            completion(nil);
+            completion(nil, jsonError);
             return;
         }
         
         if(!dictionary || ![dictionary isKindOfClass:[NSDictionary class]]) {
             NSLog(@"Error: Expected top level dictionary in JSON result: %@", error);
-            completion(nil);
+            completion(nil, error);
             return;
         }
         
         NSLog(@"Dictionary: %@", dictionary);
         
+        if (dictionary[@"artists"] == nil) {
+            NSLog(@"dictionary artists 71 controller: null");
+            completion(nil, error);
+            return;
+        }
+        
         JLAFavoriteArtist *favoriteArtistData = [[JLAFavoriteArtist alloc] initWithDictionary:dictionary];
-        completion(favoriteArtistData);
+        completion(favoriteArtistData, nil);
     }] resume];
 }
 

@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wEh-Iu-wxu" kind="show" identifier="ShowArtistSegue" id="RZD-k1-jhK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -146,4 +149,7 @@
             <point key="canvasLocation" x="-194.20289855072465" y="41.517857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RZD-k1-jhK"/>
+    </inferredMetricsTieBreakers>
 </document>

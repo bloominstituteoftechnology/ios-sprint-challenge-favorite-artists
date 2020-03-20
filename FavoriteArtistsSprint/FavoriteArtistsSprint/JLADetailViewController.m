@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.favoriteArtistController = [[JLAFavoriteArtistController alloc] init];
+    //self.favoriteArtistController = [[JLAFavoriteArtistController alloc] init];
     self.searchBar.delegate = self;
     // Do any additional setup after loading the view.
 }

@@ -9,90 +9,70 @@
 #import "JLAFavoriteArtistsTableViewController.h"
 #import "JLAFavoriteArtistController.h"
 #import "JLAFavoriteArtist.h"
-
-@interface JLAFavoriteArtistsTableViewController ()
-
-@property (nonatomic) JLAFavoriteArtistController *favoriteArtistController;
-
-@end
+#import "JLADetailViewController.h"
 
 @implementation JLAFavoriteArtistsTableViewController
 
+// let modelController = ModelController()
+- (JLAFavoriteArtistController *)favoriteArtistController {
+    
+    if (!_favoriteArtistController) {
+        _favoriteArtistController = [[JLAFavoriteArtistController alloc] init];
+    }
+    return _favoriteArtistController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    
-//    self.favoriteArtistController = [[JLAFavoriteArtistController alloc] init];
-//    [self.favoriteArtistController fetchFavoriteArtistByName:@"coldplay" completion:^(JLAFavoriteArtist * favoriteArtist) {
-//       dispatch_async(dispatch_get_main_queue(), ^{
-//           NSLog(@"Coldplay = %@", favoriteArtist);
-//        });
-//    }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+//    NSLog(@"%@", )
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [[self.favoriteArtistController favoriteArtists] count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    JLAFavoriteArtist *favoriteArtist = self.favoriteArtistController.favoriteArtists[indexPath.row];
+    cell.textLabel.text = favoriteArtist.strArtist;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", favoriteArtist.intFormedYear];
     
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    // ADD
+    if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
+        NSLog(@"AddArtistSegue");
+        JLADetailViewController *detailVC = segue.destinationViewController;
+        detailVC.favoriteArtistController = self.favoriteArtistController;
+    }
+    
+    // VIEW
+    if ([segue.identifier isEqualToString:@"ShowArtistSegue"]) {
+        NSLog(@"ShowArtistSegue");
+        JLADetailViewController *detailVC = segue.destinationViewController;
+        detailVC.favoriteArtistController = self.favoriteArtistController;
+        
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        detailVC.favoriteArtist = self.favoriteArtistController.favoriteArtists[indexPath.row];
+    }
 }
-*/
+
 
 @end

@@ -55,7 +55,7 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
         
         MBMArtistResults *artistResults = [[MBMArtistResults alloc] initWithDictionary:json];
         completion(artistResults.artists, nil);
-        NSLog(@"Count: %d", artistResults.artists.count);
+        NSLog(@"Count: %lu", (unsigned long)artistResults.artists.count);
     }];
     [task resume];
 }

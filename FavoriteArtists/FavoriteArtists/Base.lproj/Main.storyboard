@@ -50,7 +50,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JhX-VV-h04">
+                            <searchBar contentMode="redraw" placeholder="Artist Name:" translatesAutoresizingMaskIntoConstraints="NO" id="JhX-VV-h04">
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -95,13 +95,14 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="nI7-Qj-A5j">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="amR-wi-jdu">
                             <connections>
-                                <action selector="saveTapped:" destination="uTK-Nu-aff" id="XDV-qE-Txt"/>
+                                <action selector="saveTapped:" destination="uTK-Nu-aff" id="2yp-aX-Qdx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistBiographyTextView" destination="KeB-Qs-Pzx" id="fPR-5N-0su"/>
                         <outlet property="artistNameLabel" destination="Qhk-AY-skQ" id="dlr-sD-3Qk"/>
+                        <outlet property="artistSearchBar" destination="JhX-VV-h04" id="z1L-J4-7u6"/>
                         <outlet property="yearFormedLabel" destination="W28-iK-CEb" id="3l1-cA-KXW"/>
                     </connections>
                 </viewController>

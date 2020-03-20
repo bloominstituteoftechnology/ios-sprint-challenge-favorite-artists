@@ -7,16 +7,25 @@
 //
 
 #import "MBMArtistSearchViewController.h"
+#import "MBMArtistResults.h"
+#import "MBMArtist.h"
+#import "ArtistFetcher.h"
 
-@interface MBMArtistSearchViewController ()
+@interface MBMArtistSearchViewController () <UISearchBarDelegate>
 
 // MARK: - Properties
-
+@property (nonatomic) ArtistFetcher *artistFetcher;
 
 // MARK: - IBOutlets
+@property (strong, nonatomic) IBOutlet UISearchBar *artistSearchBar;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (strong, nonatomic) IBOutlet UITextView *artistBiographyTextView;
+
+
+
+
+
 
 
 @end
@@ -25,13 +34,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (IBAction)saveTapped:(id)sender {
+    
+    self.artistSearchBar.delegate = self;
     
 }
 
+// MARK: - IBActions
+- (IBAction)saveTapped:(id)sender {
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    [self.artistFetcher searchArtistsWithArtistName:self.artistSearchBar.text completionBlock:^(NSArray<MBMArtist *> * _Nullable artists, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.artistNameLabel.text = artists.firstObject.artistName;
+            NSLog(@"Artist Name: %@", artists.firstObject.artistName);
+            self.yearFormedLabel.text = [NSString stringWithFormat:@"%d", artists.firstObject.yearFormed];
+            self.artistBiographyTextView.text = artists.firstObject.artistBiography;
+        });
+    }];
+}
+
+    
 
 /*
 #pragma mark - Navigation

@@ -23,7 +23,7 @@
     
     self.artistFetcher = [[ArtistFetcher alloc] init];
     [self.artistFetcher searchArtistsWithArtistName:@"coldplay" completionBlock:^(NSArray<MBMArtist *> * _Nullable artists, NSError * _Nullable error) {
-        
+        NSLog(@"Artist Name: %@", artists.firstObject.artistName);
     }];
 }
 

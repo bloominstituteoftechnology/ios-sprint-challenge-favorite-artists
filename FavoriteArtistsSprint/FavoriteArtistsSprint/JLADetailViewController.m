@@ -57,10 +57,7 @@
        dispatch_async(dispatch_get_main_queue(), ^{
            NSLog(@"search result = %@", favoriteArtist);
            
-           if (!favoriteArtist.strArtist || !favoriteArtist.intFormedYear || !favoriteArtist.strBiographyEN) {
-               NSLog(@"empty prop");
-               return;
-           }
+           
            self.favoriteArtist = favoriteArtist;
            [self updateViews];
 //           self.title = favoriteArtist.strArtist;
@@ -94,16 +91,21 @@
         NSLog(@"VIEW MODE");
         self.title = self.favoriteArtist.strArtist;
         self.artistNameLabel.text = self.favoriteArtist.strArtist;
-        self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", self.favoriteArtist.intFormedYear];
+        if ( self.favoriteArtist.intFormedYear == 0 ) {
+            self.yearFormedLabel.text = @"";
+        }
+        else {
+            self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", self.favoriteArtist.intFormedYear];
+        }
         self.textView.text = self.favoriteArtist.strBiographyEN;
     }
     
     // add
     else {
         NSLog(@"ADD MODE");
-        self.title = self.favoriteArtist.strArtist;
+        self.title = @"Add New Artist";
         self.artistNameLabel.text = self.favoriteArtist.strArtist;
-        self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", self.favoriteArtist.intFormedYear];
+        self.yearFormedLabel.text = @"";
         self.textView.text = self.favoriteArtist.strBiographyEN;
     }
 }

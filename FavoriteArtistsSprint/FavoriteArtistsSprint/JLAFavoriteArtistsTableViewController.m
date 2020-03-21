@@ -47,8 +47,13 @@
     
     JLAFavoriteArtist *favoriteArtist = self.favoriteArtistController.favoriteArtists[indexPath.row];
     cell.textLabel.text = favoriteArtist.strArtist;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", favoriteArtist.intFormedYear];
-    
+    if ( favoriteArtist.intFormedYear == 0 ) {
+        cell.detailTextLabel.text = @"";
+    }
+    else {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", favoriteArtist.intFormedYear];
+    }
+        
     return cell;
 }
 #pragma mark - Navigation

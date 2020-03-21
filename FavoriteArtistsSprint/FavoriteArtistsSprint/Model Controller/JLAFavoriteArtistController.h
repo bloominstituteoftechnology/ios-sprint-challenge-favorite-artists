@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addArtistWithArtist:(NSString *)artist
                        year:(int)year
                         bio:(NSString *)bio;
+
+- (NSURL *)applicationDocumentsDirectory;
+
 @end
 
 NS_ASSUME_NONNULL_END

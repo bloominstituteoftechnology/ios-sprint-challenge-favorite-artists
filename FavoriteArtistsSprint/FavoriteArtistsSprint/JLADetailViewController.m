@@ -98,6 +98,7 @@
             self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", self.favoriteArtist.intFormedYear];
         }
         self.textView.text = self.favoriteArtist.strBiographyEN;
+        //NSLog(self.favoriteArtist.strBiographyEN);
     }
     
     // add
@@ -107,6 +108,7 @@
         self.artistNameLabel.text = self.favoriteArtist.strArtist;
         self.yearFormedLabel.text = @"";
         self.textView.text = self.favoriteArtist.strBiographyEN;
+        //NSLog(self.favoriteArtist.strBiographyEN);
     }
 }
 

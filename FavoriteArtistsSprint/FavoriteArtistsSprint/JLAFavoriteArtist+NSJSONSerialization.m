@@ -58,7 +58,9 @@
     NSNumber *intFormedYear = dict[@"intFormedYear"];
     NSString *strBiographyEN = dict[@"strBiographyEN"];
     
-    self = [[JLAFavoriteArtist alloc] initWithStrArtist:strArtist intFormedYear:intFormedYear.intValue strBiographyEN:strBiographyEN];
+    self = [[JLAFavoriteArtist alloc] initWithStrArtist:strArtist
+                                          intFormedYear:intFormedYear.intValue
+                                         strBiographyEN:strBiographyEN];
     
     return self;
 }
@@ -69,9 +71,9 @@
     NSDictionary *dictionary = @{
         @"strArtist": self.strArtist,
         @"intFormedYear": [NSNumber numberWithInt:self.intFormedYear],
-        @"strBiography": self.strBiographyEN
+        @"strBiographyEN": self.strBiographyEN
     };
-    
+    // strBiographyEN used to just say strBiography, bug
     return dictionary;
 }
 

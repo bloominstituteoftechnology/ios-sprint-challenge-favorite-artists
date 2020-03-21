@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
+/// To decode from documents
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
 - (NSDictionary *)toDictionary;
 
 @end

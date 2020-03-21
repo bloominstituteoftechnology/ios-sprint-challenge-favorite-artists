@@ -13,10 +13,9 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     
     
-    
+    NSLog(@"dictionary: %@", dictionary);
     NSArray *artistArray = dictionary[@"artists"];
     NSLog(@"artistArray = %@", artistArray);
-    NSArray *nilArray = nil;
     
     if (![artistArray isKindOfClass:[NSArray class]]) {
         NSLog(@"Try again");
@@ -48,7 +47,18 @@
         return nil;
     }
     
-    self = [self initWithStrArtist:strArtist intFormedYear:intFormedYear.intValue strBiographyEN:strBiographyEN];
+    self = [[JLAFavoriteArtist alloc] initWithStrArtist:strArtist intFormedYear:intFormedYear.intValue strBiographyEN:strBiographyEN];
+    
+    return self;
+}
+
+- (instancetype)initWithDict:(NSDictionary *)dict {
+    
+    NSString *strArtist = dict[@"strArtist"];
+    NSNumber *intFormedYear = dict[@"intFormedYear"];
+    NSString *strBiographyEN = dict[@"strBiographyEN"];
+    
+    self = [[JLAFavoriteArtist alloc] initWithStrArtist:strArtist intFormedYear:intFormedYear.intValue strBiographyEN:strBiographyEN];
     
     return self;
 }

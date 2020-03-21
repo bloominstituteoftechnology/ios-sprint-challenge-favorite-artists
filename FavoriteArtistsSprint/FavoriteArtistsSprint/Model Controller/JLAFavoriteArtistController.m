@@ -15,7 +15,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 @interface JLAFavoriteArtistController()
 
 // Private
-@property (nonatomic) NSMutableArray<JLAFavoriteArtist *> *privateArtists;
+@property (nonatomic) NSMutableArray *privateArtists;
 
 @end
 
@@ -167,7 +167,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
         
         // self.events = itemsArray
         for (NSDictionary *favoriteArtistDictionary in favoriteArtistsArray) {
-            JLAFavoriteArtist *favoriteArtist = [[JLAFavoriteArtist alloc] initWithDictionary:favoriteArtistDictionary];
+            JLAFavoriteArtist *favoriteArtist = [[JLAFavoriteArtist alloc] initWithDict:favoriteArtistDictionary];
             [self.privateArtists addObject:favoriteArtist];
         }
     }

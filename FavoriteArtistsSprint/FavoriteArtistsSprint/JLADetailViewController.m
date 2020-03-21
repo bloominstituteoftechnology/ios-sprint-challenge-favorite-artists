@@ -27,9 +27,11 @@
 }
 
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
-    NSLog(@"Save Tapped");
     
-    if (!_favoriteArtist) { return; }
+    if (!_favoriteArtist) {
+        self.title = @"Why would you do that?";
+        return;
+    }
     
     [self.favoriteArtistController addArtistWithArtist:_favoriteArtist.strArtist year:_favoriteArtist.intFormedYear bio:_favoriteArtist.strBiographyEN];
     
@@ -37,7 +39,7 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    //Do search logic here
+    
     NSString *searchTerm = searchBar.text;
     NSLog(@"searchTerm%@", searchTerm);
     [self.favoriteArtistController fetchFavoriteArtistByName:searchTerm completion:^(JLAFavoriteArtist *favoriteArtist, NSError *error) {
@@ -48,32 +50,24 @@
             return;
         }
         
-        // missing property year
+        // missing property year / artist not found
         if (!favoriteArtist) {
-            NSLog(@"nice try, John Williams");
+            NSLog(@"No valid results");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.title = [NSString stringWithFormat:@"%@ not found :(", searchTerm];
+            });
             return;
         }
         
        dispatch_async(dispatch_get_main_queue(), ^{
-           NSLog(@"search result = %@", favoriteArtist);
-           
-           
            self.favoriteArtist = favoriteArtist;
            [self updateViews];
-//           self.title = favoriteArtist.strArtist;
-//           self.artistNameLabel.text = favoriteArtist.strArtist;
-//           self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", favoriteArtist.intFormedYear];
-//           self.textView.text = favoriteArtist.strBiographyEN;
-           
-//           [self.favoriteArtistController addArtistWithArtist:favoriteArtist.strArtist
-//                                                         year:favoriteArtist.intFormedYear
-//                                                          bio:favoriteArtist.strBiographyEN];
         });
     }];
 
 }
 
-// didSet
+/// didSet, called when self.favoriteArtist is set
 - (void)setFavoriteArtist:(JLAFavoriteArtist *)favoriteArtist {
     NSLog(@"favoriteArtist SET");
     _favoriteArtist = favoriteArtist;
@@ -88,7 +82,6 @@
     
     // view
     if (self.favoriteArtist) {
-        NSLog(@"VIEW MODE");
         self.title = self.favoriteArtist.strArtist;
         self.artistNameLabel.text = self.favoriteArtist.strArtist;
         if ( self.favoriteArtist.intFormedYear == 0 ) {
@@ -98,17 +91,14 @@
             self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", self.favoriteArtist.intFormedYear];
         }
         self.textView.text = self.favoriteArtist.strBiographyEN;
-        //NSLog(self.favoriteArtist.strBiographyEN);
     }
     
     // add
     else {
-        NSLog(@"ADD MODE");
         self.title = @"Add New Artist";
         self.artistNameLabel.text = self.favoriteArtist.strArtist;
         self.yearFormedLabel.text = @"";
         self.textView.text = self.favoriteArtist.strBiographyEN;
-        //NSLog(self.favoriteArtist.strBiographyEN);
     }
 }
 

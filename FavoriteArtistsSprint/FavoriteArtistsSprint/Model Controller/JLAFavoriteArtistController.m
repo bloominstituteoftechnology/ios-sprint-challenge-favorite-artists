@@ -14,7 +14,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 
 @interface JLAFavoriteArtistController()
 
-// Private
+/// This is where dreams are stored
 @property (nonatomic) NSMutableArray *privateArtists;
 
 @end
@@ -78,6 +78,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     }] resume];
 }
 
+/// inits its array and thens load from documents
 - (instancetype)init {
     
     if (self = [super init]) {
@@ -101,9 +102,6 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
                                                                  strBiographyEN:bio];
     [self.privateArtists addObject:newArtist];
     [self saveToPersistentStore];
-    NSLog(@"added to array: %@", newArtist.strArtist);
-    NSLog(@"arists array last added: %@", self.privateArtists[0]);
-    //NSLog(@"privateArtists.count: %i", self.privateArtists.count);
 }
 
 /// Documents URL
@@ -136,25 +134,6 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     [favoriteArtistsData writeToURL:self.favoriteArtistsURL atomically:YES];
 }
 
-/*
- var persistentFileURL: URL? {
-        let fileManager = FileManager.default
-        guard let documentsDir = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {return nil}
-        let itemsURL = documentsDir.appendingPathComponent("grillcountdown.plist")
-        return itemsURL
-    }
-    func loadFromPersistentStore() {
-        guard let fileURL = persistentFileURL else {return}
-        do {
-            let itemsData = try Data(contentsOf: fileURL)
-            let decoder = PropertyListDecoder()
-            let itemsArray = try decoder.decode([Event].self, from: itemsData)
-            self.events = itemsArray
-        } catch {
-            print("Error loading items from plist: \(error)")
-        }
-    }
- */
 - (void)loadFromPersistentStore {
     NSLog(@"LOAD");
     // let itemsData = try Data(contentsOf: fileURL)

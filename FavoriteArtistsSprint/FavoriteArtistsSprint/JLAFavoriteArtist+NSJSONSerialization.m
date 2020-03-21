@@ -10,30 +10,19 @@
 
 @implementation JLAFavoriteArtist (NSJSONSerialization)
 
+/// Only used for decoding from JSON. Decodes from a dicitionary that has a key, which holds an array of dictionaries
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    
-    
-    NSLog(@"dictionary: %@", dictionary);
+
     NSArray *artistArray = dictionary[@"artists"];
-    NSLog(@"artistArray = %@", artistArray);
     
     if (![artistArray isKindOfClass:[NSArray class]]) {
-        NSLog(@"Try again");
+        NSLog(@"artistArray is not of class NSArray");
         return nil;
     }
     
-    //NSString *strArtist = dictionary[@"strArtist"];
     NSString *strArtist = artistArray[0][@"strArtist"];
     NSNumber *intFormedYear = artistArray[0][@"intFormedYear"];
     NSString *strBiographyEN = artistArray[0][@"strBiographyEN"];
-    
-//    JLAFavoriteArtist *favoriteArtist = [[JLAFavoriteArtist alloc] initWithStrArtist:strArtist
-//                                                               intFormedYear:intFormedYear.intValue
-//                                                              strBiographyEN:strBiographyEN];
-    NSLog(@"Category initWithDictionary");
-    NSLog(@"name: %@", strArtist);
-    NSLog(@"year: %@", intFormedYear);
-    NSLog(@"bio: %@", strBiographyEN);
     
     // Failable init
     if ([intFormedYear isKindOfClass:[NSNull class]]) {
@@ -52,6 +41,7 @@
     return self;
 }
 
+/// Only used for loading from documents. Loads from an array of dictionaries
 - (instancetype)initWithDict:(NSDictionary *)dict {
     
     NSString *strArtist = dict[@"strArtist"];

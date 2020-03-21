@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MBMArtist : NSObject
 
 // MARK: - Properties
-@property (nonatomic, readonly, copy) NSString *artistName;
-@property (nonatomic, readonly) int yearFormed;
-@property (nonatomic, readonly, copy)NSString *artistBiography;
+@property (nonatomic, copy) NSString *artistName;
+@property (nonatomic) int yearFormed;
+@property (nonatomic, copy)NSString *artistBiography;
 
 // MARK: - Methods (init)
 

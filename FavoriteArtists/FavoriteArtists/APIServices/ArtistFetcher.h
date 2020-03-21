@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistFetcher : NSObject
 
-@property (nonatomic)NSURL *filePath;
-
 @property (nonatomic) NSMutableArray *artistsArray;
 
 - (NSURL *)artistFilePath;

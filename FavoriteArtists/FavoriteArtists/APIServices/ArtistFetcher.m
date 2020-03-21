@@ -16,46 +16,50 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
 @implementation ArtistFetcher
 
 - (NSURL *)artistFilePath {
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    NSArray *directoryPaths = NSSearchPathForDirectoriesInDomains
-    (NSDocumentDirectory, NSUserDomainMask, YES);
-    NSURL *documentsDirectoryPath = [directoryPaths objectAtIndex:0];
-    NSURL *filePath = [documentsDirectoryPath URLByAppendingPathComponent:@"artists.plist"];
-    NSLog(@"Path: %@", filePath);
-    return filePath;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    NSURL *documentsDirectoryPath = [fileManager URLForDirectory:NSDocumentDirectory
+                                                        inDomain:NSUserDomainMask
+                                               appropriateForURL:nil create:YES
+                                                           error:&error];
+    NSLog(@"Directory: %@", documentsDirectoryPath);
+    NSURL *url = [documentsDirectoryPath URLByAppendingPathComponent:@"artists.json"];
+    NSLog(@"Path: %@", url);
+    return url;
 }
 
 - (void)saveToPersistentStore {
-    
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *artistKey = @"artist";
     NSURL *artistPath = [self artistFilePath];
+    NSMutableArray *artists = [[NSMutableArray alloc] init];
     
-    NSError *error = nil;
-    
-    
-    if (self.artistsArray.count > 0) {
-        [self.artistsArray writeToURL:artistPath error:&error];
+    for (MBMArtist *artist in self.artistsArray) {
+        NSDictionary *artistDictionary = [artist toDictionary];
+        [artists addObject:artistDictionary];
     }
     
-    
-    
-
+    NSDictionary *dict = @{artistKey : artists};
+    NSError *error = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
+    [data writeToURL:artistPath atomically:YES];
     
 }
 
 - (void)loadFromPersistentStore {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *artistPath = [self artistFilePath];
+    NSString *artistKey = @"artist";
+    NSURL *artistPath = [self artistFilePath];
     
-    NSData *data = [[NSData alloc] initWithContentsOfFile:artistPath];
-    
+    NSData *data = [NSData dataWithContentsOfURL:artistPath];
     NSError *error = nil;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    NSMutableDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
     
-    MBMArtistResults *artistResults = [[MBMArtistResults alloc] initWithDictionary:json];
-    self.artistsArray = artistResults.artists;
     
+    NSArray *artistArray = artistDictionary[artistKey];
+    
+    for (NSMutableDictionary *dict in artistArray) {
+        MBMArtist *artist = [[MBMArtist alloc ] initWithDictionary:dict];
+        [self.artistsArray addObject:artist];
+    }
 }
 
 - (instancetype)init {
@@ -95,7 +99,7 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
             return;
         }
         NSError *jsonError = nil;
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        NSMutableDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
         if (jsonError) {
             NSLog(@"Error decoding JSON from data: %@", jsonError);
@@ -108,13 +112,10 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
         
         MBMArtistResults *artistResults = [[MBMArtistResults alloc] initWithDictionary:json];
         
-        // MARK: - Ask Paul why this commented out code makes the app crash...
-        
-//        [self.artistsArray addObject:artistResults.artists];
         completion(artistResults.artists, nil);
-//        NSLog(@"Count: %lu", (unsigned long)artistResults.artists.count);
     }];
     [task resume];
+
 }
 
 @end

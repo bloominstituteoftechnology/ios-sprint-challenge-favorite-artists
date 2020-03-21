@@ -42,10 +42,12 @@
 
 // MARK: - IBActions
 - (IBAction)saveTapped:(id)sender {
+    if (self.artist == nil) {
+        return;
+    }
+    
     [self.artistFetcher.artistsArray addObject:self.artist];
-//    NSLog(@"SearchVC Count: %lu", self.artistFetcher.artistsArray.count);
-//    NSLog(@"Artist: %@", self.artist);
-//    [self.artistFetcher saveToPersistentStore];
+    [self.artistFetcher saveToPersistentStore];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -59,20 +61,17 @@
             self.artistNameLabel.text = artists.firstObject.artistName;
             NSLog(@"Artist Name: %@", artists.firstObject.artistName);
                 if (artists.firstObject.yearFormed == nil) {
-//                self.yearFormedLabel.text = @"Nah son we ain't got it";
                 self.yearFormedLabel.text = @"Formed in: N/A";
             } else {
                 self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %d", artists.firstObject.yearFormed];
             }
             self.artistBiographyTextView.text = artists.firstObject.artistBiography;
             self.artist = artists.firstObject;
-//            NSLog(@"Name: %@", self.artist.artistName);
             }
         });
     }];
 }
 
-    
 
 /*
 #pragma mark - Navigation

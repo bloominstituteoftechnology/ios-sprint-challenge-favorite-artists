@@ -10,6 +10,7 @@
 #import "MBMArtist.h"
 #import "MBMArtist+NSJSONSerialization.h"
 
+
 @implementation MBMArtistResults
 
 - (instancetype)initWithArtists:(NSMutableArray<MBMArtist *> *)artists {
@@ -21,8 +22,6 @@
 }
 
 - (instancetype)initWithDictionary:(NSMutableDictionary *)dictionary {
-    
-    
     
     NSArray *artistDictionaries = dictionary[@"artists"];
     NSMutableArray *artists = [[NSMutableArray alloc] init];
@@ -37,7 +36,6 @@
             [artists addObject:artist];
         }
     }
-    
     
     self = [self initWithArtists:artists];
     return self;

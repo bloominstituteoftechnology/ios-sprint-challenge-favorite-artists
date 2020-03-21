@@ -14,23 +14,22 @@
 @interface MBMArtistSearchViewController () <UISearchBarDelegate>
 
 // MARK: - Properties
-@property (nonatomic) ArtistFetcher *artistFetcher;
+
+@property (nonatomic) MBMArtist *artist;
 
 // MARK: - IBOutlets
+
 @property (strong, nonatomic) IBOutlet UISearchBar *artistSearchBar;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (strong, nonatomic) IBOutlet UITextView *artistBiographyTextView;
 
 
-
-
-
-
-
 @end
 
 @implementation MBMArtistSearchViewController
+
+@synthesize artistFetcher;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,18 +38,36 @@
     
 }
 
+
+
 // MARK: - IBActions
 - (IBAction)saveTapped:(id)sender {
+    [self.artistFetcher.artistsArray addObject:self.artist];
+//    NSLog(@"SearchVC Count: %lu", self.artistFetcher.artistsArray.count);
+//    NSLog(@"Artist: %@", self.artist);
+//    [self.artistFetcher saveToPersistentStore];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
     [self.artistFetcher searchArtistsWithArtistName:self.artistSearchBar.text completionBlock:^(NSArray<MBMArtist *> * _Nullable artists, NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            if (artists.firstObject == nil) {
+            } else {
+                
             self.artistNameLabel.text = artists.firstObject.artistName;
             NSLog(@"Artist Name: %@", artists.firstObject.artistName);
-            self.yearFormedLabel.text = [NSString stringWithFormat:@"%d", artists.firstObject.yearFormed];
+                if (artists.firstObject.yearFormed == nil) {
+//                self.yearFormedLabel.text = @"Nah son we ain't got it";
+                self.yearFormedLabel.text = @"Formed in: N/A";
+            } else {
+                self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %d", artists.firstObject.yearFormed];
+            }
             self.artistBiographyTextView.text = artists.firstObject.artistBiography;
+            self.artist = artists.firstObject;
+//            NSLog(@"Name: %@", self.artist.artistName);
+            }
         });
     }];
 }

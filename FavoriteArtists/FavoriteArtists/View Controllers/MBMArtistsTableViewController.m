@@ -7,13 +7,15 @@
 //
 
 #import "MBMArtistsTableViewController.h"
+#import "MBMArtistSearchViewController.h"
 #import "MBMArtist.h"
 #import "ArtistFetcher.h"
 
 @interface MBMArtistsTableViewController ()
 
-@property (nonatomic) ArtistFetcher *artistFetcher;
-
+@property (nonatomic, strong) ArtistFetcher *artistFetcher;
+@property (nonatomic, strong) UIRefreshControl *refreshController;
+//@property (nonatomic) NSMutableArray<MBMArtist *> *artists;
 @end
 
 @implementation MBMArtistsTableViewController
@@ -21,33 +23,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.artistFetcher = [[ArtistFetcher alloc] init];
-    [self.artistFetcher searchArtistsWithArtistName:@"coldplay" completionBlock:^(NSArray<MBMArtist *> * _Nullable artists, NSError * _Nullable error) {
-        NSLog(@"Artist Name: %@", artists.firstObject.artistName);
-    }];
+    _artistFetcher = [[ArtistFetcher alloc] init];
+    
+    _refreshController = [[UIRefreshControl alloc] init];
+    [self.refreshController addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshController];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+//    [self.tableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    NSLog(@"Count %lu", (unsigned long)_artistFetcher.artistsArray.count);
+//    self.artists = self.artistFetcher.artistsArray;
+//    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.artistFetcher.artistsArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    MBMArtist *artist = self.artistFetcher.artistsArray[indexPath.row];
+    cell.textLabel.text = artist.artistName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
     
     return cell;
 }
-*/
+
+-(void)handleRefresh : (id)sender {
+    [self.tableView reloadData];
+    NSLog (@"Pull To Refresh Method Called");
+    [self.refreshController endRefreshing];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -83,14 +103,25 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+   
+    if([segue.identifier isEqualToString:@"ArtistSearchSegue"]){
+        MBMArtistSearchViewController *search = (MBMArtistSearchViewController *)segue.destinationViewController;
+        search.artistFetcher = _artistFetcher;
+    }
+    
+//    if ([[segue identifier] isEqualToString:@"ArtistSearchSegue"]) {
+//        // Get reference to the destination view controller
+//        MBMArtistSearchViewController *artistSearchVC = [segue destinationViewController];
+//
+//        // Pass any objects to the view controller here, like...
+//        [artistSearchVC setMyObjectHere:self.artistFetcher];
+//    }
 }
-*/
+
 
 @end

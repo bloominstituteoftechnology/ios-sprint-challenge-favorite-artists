@@ -10,6 +10,16 @@
 
 @implementation MBMArtist
 
+//- (instancetype)init {
+//    self = [super init];
+//    if (self) {
+//
+//        _persistedArtists = [[NSMutableDictionary alloc] init];
+//
+//    }
+//    return self;
+//}
+
 - (instancetype)initWithArtistName:(NSString *)artistName
                         yearFormed:(int)yearFormed
                    artistBiography:(NSString *)artistBiography {

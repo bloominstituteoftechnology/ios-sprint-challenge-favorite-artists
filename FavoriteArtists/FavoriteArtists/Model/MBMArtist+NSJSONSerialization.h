@@ -8,11 +8,12 @@
 
 #import "MBMArtist.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MBMArtist (NSJSONSerialization)
 
--(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+-(instancetype)initWithDictionary:(NSMutableDictionary *)dictionary;
 
 @end
 

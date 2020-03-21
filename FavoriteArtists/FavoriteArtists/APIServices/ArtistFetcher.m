@@ -15,6 +15,59 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
 
 @implementation ArtistFetcher
 
+- (NSURL *)artistFilePath {
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSArray *directoryPaths = NSSearchPathForDirectoriesInDomains
+    (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSURL *documentsDirectoryPath = [directoryPaths objectAtIndex:0];
+    NSURL *filePath = [documentsDirectoryPath URLByAppendingPathComponent:@"artists.plist"];
+    NSLog(@"Path: %@", filePath);
+    return filePath;
+}
+
+- (void)saveToPersistentStore {
+    
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *artistPath = [self artistFilePath];
+    
+    NSError *error = nil;
+    
+    
+    if (self.artistsArray.count > 0) {
+        [self.artistsArray writeToURL:artistPath error:&error];
+    }
+    
+    
+    
+
+    
+}
+
+- (void)loadFromPersistentStore {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *artistPath = [self artistFilePath];
+    
+    NSData *data = [[NSData alloc] initWithContentsOfFile:artistPath];
+    
+    NSError *error = nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    
+    MBMArtistResults *artistResults = [[MBMArtistResults alloc] initWithDictionary:json];
+    self.artistsArray = artistResults.artists;
+    
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        
+        _artistsArray = [[NSMutableArray alloc] init];
+        
+    }
+    return self;
+}
+
 - (void)searchArtistsWithArtistName:(NSString *)artistName completionBlock:(MBMArtistFetcherCompletion)completion {
     
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
@@ -54,8 +107,12 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
         NSLog(@"JSON: %@", json);
         
         MBMArtistResults *artistResults = [[MBMArtistResults alloc] initWithDictionary:json];
+        
+        // MARK: - Ask Paul why this commented out code makes the app crash...
+        
+//        [self.artistsArray addObject:artistResults.artists];
         completion(artistResults.artists, nil);
-        NSLog(@"Count: %lu", (unsigned long)artistResults.artists.count);
+//        NSLog(@"Count: %lu", (unsigned long)artistResults.artists.count);
     }];
     [task resume];
 }

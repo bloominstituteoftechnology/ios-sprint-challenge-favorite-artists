@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly, copy) NSArray<MBMArtist *> *artists;
 
-- (instancetype)initWithArtists:(NSArray<MBMArtist *> *)artists;
+- (instancetype)initWithArtists:(NSMutableArray<MBMArtist *> *)artists;
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionary:(NSMutableDictionary *)dictionary;
 
 @end
 

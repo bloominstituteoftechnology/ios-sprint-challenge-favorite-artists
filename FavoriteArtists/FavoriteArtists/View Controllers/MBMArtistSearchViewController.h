@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-
 NS_ASSUME_NONNULL_BEGIN
 
+@class ArtistFetcher;
+
 @interface MBMArtistSearchViewController : UIViewController
+
+@property (nonatomic, strong) ArtistFetcher *artistFetcher;
 
 @end
 

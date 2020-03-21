@@ -12,7 +12,7 @@
 
 @implementation MBMArtistResults
 
-- (instancetype)initWithArtists:(NSArray<MBMArtist *> *)artists {
+- (instancetype)initWithArtists:(NSMutableArray<MBMArtist *> *)artists {
     self = [super init];
     if (self) {
         _artists = artists;
@@ -20,17 +20,25 @@
     return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+- (instancetype)initWithDictionary:(NSMutableDictionary *)dictionary {
+    
+    
     
     NSArray *artistDictionaries = dictionary[@"artists"];
     NSMutableArray *artists = [[NSMutableArray alloc] init];
     
-    for (NSDictionary *artistDict in artistDictionaries) {
+    if (![artistDictionaries isKindOfClass:[NSArray class]]) {
+        return nil;
+    }
+    
+    for (NSMutableDictionary *artistDict in artistDictionaries) {
         MBMArtist *artist = [[MBMArtist alloc] initWithDictionary:artistDict];
         if (artist) {
             [artists addObject:artist];
         }
     }
+    
+    
     self = [self initWithArtists:artists];
     return self;
 }

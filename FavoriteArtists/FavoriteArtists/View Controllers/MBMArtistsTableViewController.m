@@ -86,7 +86,7 @@
         MBMArtistSearchViewController *detail = (MBMArtistSearchViewController *)segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         MBMArtist *artist = self.artistFetcher.artistsArray[indexPath.row];
-        detail.artist = artist;
+        detail.persistedArtist = artist;
     }
 }
 

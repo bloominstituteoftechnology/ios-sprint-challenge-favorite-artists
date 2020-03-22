@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (strong, nonatomic) IBOutlet UITextView *artistBiographyTextView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 
 @end
@@ -74,10 +75,11 @@
 
 
 -(void)updateViews {
-    if (self.artist != nil) {
-        self.artistNameLabel.text = self.artist.artistName;
-        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %d", self.artist.yearFormed];
-        self.artistBiographyTextView.text = self.artist.artistBiography;
+    if (self.persistedArtist != nil) {
+        self.artistNameLabel.text = self.persistedArtist.artistName;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %d", self.persistedArtist.yearFormed];
+        self.artistBiographyTextView.text = self.persistedArtist.artistBiography;
+        self.navigationItem.rightBarButtonItem = nil;
     }
 }
 

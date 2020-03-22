@@ -122,6 +122,7 @@
                         <outlet property="artistBiographyTextView" destination="KeB-Qs-Pzx" id="fPR-5N-0su"/>
                         <outlet property="artistNameLabel" destination="Qhk-AY-skQ" id="dlr-sD-3Qk"/>
                         <outlet property="artistSearchBar" destination="JhX-VV-h04" id="z1L-J4-7u6"/>
+                        <outlet property="saveButton" destination="amR-wi-jdu" id="sXg-XV-Ceq"/>
                         <outlet property="yearFormedLabel" destination="W28-iK-CEb" id="3l1-cA-KXW"/>
                     </connections>
                 </viewController>

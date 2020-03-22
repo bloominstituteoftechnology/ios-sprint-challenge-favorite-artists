@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) ArtistFetcher *artistFetcher;
 
 @property (nonatomic, strong) MBMArtist *artist;
+
+@property (nonatomic, strong) MBMArtist *persistedArtist;
 @end
 
 NS_ASSUME_NONNULL_END

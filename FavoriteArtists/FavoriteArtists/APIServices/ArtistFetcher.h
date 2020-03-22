@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSMutableArray *artistsArray;
 
-- (NSURL *)artistFilePath;
+- (NSString *)artistFilePath;
 
 - (void)saveToPersistentStore;
 

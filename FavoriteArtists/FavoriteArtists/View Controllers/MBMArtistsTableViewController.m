@@ -48,7 +48,12 @@
     
     MBMArtist *artist = self.artistFetcher.artistsArray[indexPath.row];
     cell.textLabel.text = artist.artistName;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+    if (!artist.yearFormed) {
+        cell.detailTextLabel.text = @"Formed in: N/A";
+    } else {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in: %d", artist.yearFormed];
+    }
+    
     
     return cell;
 }
@@ -59,9 +64,6 @@
     [self.refreshController endRefreshing];
 }
 
-
-
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         MBMArtist *artist = self.artistFetcher.artistsArray[indexPath.row];
@@ -80,6 +82,11 @@
     if([segue.identifier isEqualToString:@"ArtistSearchSegue"]){
         MBMArtistSearchViewController *search = (MBMArtistSearchViewController *)segue.destinationViewController;
         search.artistFetcher = _artistFetcher;
+    } else if ([segue.identifier isEqualToString:@"ArtistDetailSegue"]) {
+        MBMArtistSearchViewController *detail = (MBMArtistSearchViewController *)segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        MBMArtist *artist = self.artistFetcher.artistsArray[indexPath.row];
+        detail.artist = artist;
     }
 }
 

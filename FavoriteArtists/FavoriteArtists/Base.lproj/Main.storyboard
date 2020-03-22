@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="uTK-Nu-aff" kind="show" identifier="ArtistDetailSegue" id="J5v-En-QZ3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -145,4 +148,7 @@
             <point key="canvasLocation" x="544.92753623188412" y="79.6875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="J5v-En-QZ3"/>
+    </inferredMetricsTieBreakers>
 </document>

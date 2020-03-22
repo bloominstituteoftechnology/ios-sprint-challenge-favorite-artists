@@ -15,7 +15,7 @@
 
 // MARK: - Properties
 
-@property (nonatomic) MBMArtist *artist;
+
 
 // MARK: - IBOutlets
 
@@ -35,7 +35,7 @@
     [super viewDidLoad];
     
     self.artistSearchBar.delegate = self;
-    
+    [self updateViews];
 }
 
 
@@ -60,7 +60,7 @@
                 
             self.artistNameLabel.text = artists.firstObject.artistName;
             NSLog(@"Artist Name: %@", artists.firstObject.artistName);
-                if (artists.firstObject.yearFormed == nil) {
+                if (!artists.firstObject.yearFormed) {
                 self.yearFormedLabel.text = @"Formed in: N/A";
             } else {
                 self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %d", artists.firstObject.yearFormed];
@@ -73,14 +73,12 @@
 }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)updateViews {
+    if (self.artist != nil) {
+        self.artistNameLabel.text = self.artist.artistName;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %d", self.artist.yearFormed];
+        self.artistBiographyTextView.text = self.artist.artistBiography;
+    }
 }
-*/
 
 @end

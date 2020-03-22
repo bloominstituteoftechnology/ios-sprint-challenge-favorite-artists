@@ -11,11 +11,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class ArtistFetcher;
+@class MBMArtist;
 
 @interface MBMArtistSearchViewController : UIViewController
 
 @property (nonatomic, strong) ArtistFetcher *artistFetcher;
 
+@property (nonatomic, strong) MBMArtist *artist;
 @end
 
 NS_ASSUME_NONNULL_END

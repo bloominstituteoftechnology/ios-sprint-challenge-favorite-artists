@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		B6E5FBE4244A002F00B6863B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FBE3244A002F00B6863B /* AppDelegate.m */; };
 		B6E5FBE7244A002F00B6863B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FBE6244A002F00B6863B /* SceneDelegate.m */; };
-		B6E5FBEA244A002F00B6863B /* FavoriteArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FBE9244A002F00B6863B /* FavoriteArtistTableViewController.m */; };
+		B6E5FBEA244A002F00B6863B /* NPTFavoriteArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FBE9244A002F00B6863B /* NPTFavoriteArtistTableViewController.m */; };
 		B6E5FBED244A002F00B6863B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E5FBEB244A002F00B6863B /* Main.storyboard */; };
 		B6E5FBEF244A003100B6863B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E5FBEE244A003100B6863B /* Assets.xcassets */; };
 		B6E5FBF2244A003100B6863B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E5FBF0244A003100B6863B /* LaunchScreen.storyboard */; };
 		B6E5FBF5244A003100B6863B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FBF4244A003100B6863B /* main.m */; };
 		B6E5FBFE244A046B00B6863B /* NPTArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FBFD244A046B00B6863B /* NPTArtist.m */; };
-		B6E5FC01244A084700B6863B /* NSJSONSerialization+NSJSONSerialization_NPTArtist_h.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC00244A084700B6863B /* NSJSONSerialization+NSJSONSerialization_NPTArtist_h.m */; };
-		B6E5FC0C244A092F00B6863B /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC0B244A092F00B6863B /* ArtistDetailViewController.m */; };
-		B6E5FC0F244A0AC200B6863B /* ArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC0E244A0AC200B6863B /* ArtistFetcher.m */; };
+		B6E5FC0C244A092F00B6863B /* NPTArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC0B244A092F00B6863B /* NPTArtistDetailViewController.m */; };
 		B6E5FC13244A0B1800B6863B /* NPTLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC12244A0B1800B6863B /* NPTLog.m */; };
+		B6E5FC31244A321E00B6863B /* NPTArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC30244A321E00B6863B /* NPTArtist+NSJSONSerialization.m */; };
+		B6E5FC35244A3A3D00B6863B /* NPTArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC34244A3A3D00B6863B /* NPTArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		B6E5FBE3244A002F00B6863B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B6E5FBE5244A002F00B6863B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		B6E5FBE6244A002F00B6863B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		B6E5FBE8244A002F00B6863B /* FavoriteArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtistTableViewController.h; sourceTree = "<group>"; };
-		B6E5FBE9244A002F00B6863B /* FavoriteArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistTableViewController.m; sourceTree = "<group>"; };
+		B6E5FBE8244A002F00B6863B /* NPTFavoriteArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTFavoriteArtistTableViewController.h; sourceTree = "<group>"; };
+		B6E5FBE9244A002F00B6863B /* NPTFavoriteArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTFavoriteArtistTableViewController.m; sourceTree = "<group>"; };
 		B6E5FBEC244A002F00B6863B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6E5FBEE244A003100B6863B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6E5FBF1244A003100B6863B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,14 +36,14 @@
 		B6E5FBF4244A003100B6863B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6E5FBFC244A046B00B6863B /* NPTArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTArtist.h; sourceTree = "<group>"; };
 		B6E5FBFD244A046B00B6863B /* NPTArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTArtist.m; sourceTree = "<group>"; };
-		B6E5FBFF244A084700B6863B /* NSJSONSerialization+NSJSONSerialization_NPTArtist_h.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+NSJSONSerialization_NPTArtist_h.h"; sourceTree = "<group>"; };
-		B6E5FC00244A084700B6863B /* NSJSONSerialization+NSJSONSerialization_NPTArtist_h.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+NSJSONSerialization_NPTArtist_h.m"; sourceTree = "<group>"; };
-		B6E5FC0A244A092F00B6863B /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
-		B6E5FC0B244A092F00B6863B /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
-		B6E5FC0D244A0AC200B6863B /* ArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistFetcher.h; sourceTree = "<group>"; };
-		B6E5FC0E244A0AC200B6863B /* ArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistFetcher.m; sourceTree = "<group>"; };
+		B6E5FC0A244A092F00B6863B /* NPTArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTArtistDetailViewController.h; sourceTree = "<group>"; };
+		B6E5FC0B244A092F00B6863B /* NPTArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTArtistDetailViewController.m; sourceTree = "<group>"; };
 		B6E5FC11244A0B1800B6863B /* NPTLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTLog.h; sourceTree = "<group>"; };
 		B6E5FC12244A0B1800B6863B /* NPTLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTLog.m; sourceTree = "<group>"; };
+		B6E5FC2F244A321800B6863B /* NPTArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NPTArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		B6E5FC30244A321E00B6863B /* NPTArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NPTArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		B6E5FC33244A3A3600B6863B /* NPTArtistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPTArtistController.h; sourceTree = "<group>"; };
+		B6E5FC34244A3A3D00B6863B /* NPTArtistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPTArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +76,7 @@
 		B6E5FBE1244A002F00B6863B /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				B6E5FC32244A3A2A00B6863B /* Model Controller */,
 				B6E5FC10244A0B0800B6863B /* Helper */,
 				B6E5FC06244A088300B6863B /* Networking */,
 				B6E5FC02244A085000B6863B /* Category */,
@@ -104,8 +105,8 @@
 		B6E5FC02244A085000B6863B /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				B6E5FBFF244A084700B6863B /* NSJSONSerialization+NSJSONSerialization_NPTArtist_h.h */,
-				B6E5FC00244A084700B6863B /* NSJSONSerialization+NSJSONSerialization_NPTArtist_h.m */,
+				B6E5FC2F244A321800B6863B /* NPTArtist+NSJSONSerialization.h */,
+				B6E5FC30244A321E00B6863B /* NPTArtist+NSJSONSerialization.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -113,10 +114,10 @@
 		B6E5FC03244A086000B6863B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B6E5FBE8244A002F00B6863B /* FavoriteArtistTableViewController.h */,
-				B6E5FBE9244A002F00B6863B /* FavoriteArtistTableViewController.m */,
-				B6E5FC0A244A092F00B6863B /* ArtistDetailViewController.h */,
-				B6E5FC0B244A092F00B6863B /* ArtistDetailViewController.m */,
+				B6E5FBE8244A002F00B6863B /* NPTFavoriteArtistTableViewController.h */,
+				B6E5FBE9244A002F00B6863B /* NPTFavoriteArtistTableViewController.m */,
+				B6E5FC0A244A092F00B6863B /* NPTArtistDetailViewController.h */,
+				B6E5FC0B244A092F00B6863B /* NPTArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -142,8 +143,6 @@
 		B6E5FC06244A088300B6863B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				B6E5FC0D244A0AC200B6863B /* ArtistFetcher.h */,
-				B6E5FC0E244A0AC200B6863B /* ArtistFetcher.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -155,6 +154,15 @@
 				B6E5FC12244A0B1800B6863B /* NPTLog.m */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		B6E5FC32244A3A2A00B6863B /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6E5FC33244A3A3600B6863B /* NPTArtistController.h */,
+				B6E5FC34244A3A3D00B6863B /* NPTArtistController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,15 +235,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E5FBEA244A002F00B6863B /* FavoriteArtistTableViewController.m in Sources */,
+				B6E5FBEA244A002F00B6863B /* NPTFavoriteArtistTableViewController.m in Sources */,
 				B6E5FBE4244A002F00B6863B /* AppDelegate.m in Sources */,
-				B6E5FC0F244A0AC200B6863B /* ArtistFetcher.m in Sources */,
 				B6E5FBF5244A003100B6863B /* main.m in Sources */,
 				B6E5FC13244A0B1800B6863B /* NPTLog.m in Sources */,
 				B6E5FBE7244A002F00B6863B /* SceneDelegate.m in Sources */,
-				B6E5FC0C244A092F00B6863B /* ArtistDetailViewController.m in Sources */,
-				B6E5FC01244A084700B6863B /* NSJSONSerialization+NSJSONSerialization_NPTArtist_h.m in Sources */,
+				B6E5FC31244A321E00B6863B /* NPTArtist+NSJSONSerialization.m in Sources */,
+				B6E5FC0C244A092F00B6863B /* NPTArtistDetailViewController.m in Sources */,
 				B6E5FBFE244A046B00B6863B /* NPTArtist.m in Sources */,
+				B6E5FC35244A3A3D00B6863B /* NPTArtistController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

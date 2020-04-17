@@ -10,7 +10,7 @@
         <!--Add New Artist-->
         <scene sceneID="d7j-uL-e96">
             <objects>
-                <viewController id="mXU-MZ-a97" customClass="ArtistDetailViewController" sceneMemberID="viewController">
+                <viewController id="mXU-MZ-a97" customClass="NPTArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZGX-wq-yKH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Favorite Artists-->
         <scene sceneID="san-OJ-GEm">
             <objects>
-                <tableViewController id="CCn-sK-n84" customClass="FavoriteArtistTableViewController" sceneMemberID="viewController">
+                <tableViewController id="CCn-sK-n84" customClass="NPTFavoriteArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VSr-ei-sX0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

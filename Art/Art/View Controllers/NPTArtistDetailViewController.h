@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class NPTArtistController;
+@class NPTArtist;
 
-@interface ArtistDetailViewController : UIViewController<UISearchBarDelegate,UISearchDisplayDelegate>
+@interface NPTArtistDetailViewController : UIViewController<UISearchBarDelegate,UISearchDisplayDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-
+@property NPTArtistController *artistController;
+@property NPTArtist *artist;
 
 
 @end

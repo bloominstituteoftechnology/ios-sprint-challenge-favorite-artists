@@ -10,8 +10,7 @@
 
 @implementation EPWArtist (NSJSONSerialization)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     if (self = [super init]) {
         self.name = [dictionary objectForKey:@"strArtist"];
         
@@ -25,8 +24,7 @@
     return self;
 }
 
-- (NSDictionary *)toDictionary
-{
+- (NSDictionary *)toDictionary {
     NSDictionary *artistDictionary = @{
         @"strArtist": self.name,
         @"intFormedYear": [[NSNumber alloc] initWithInt:(int)self.formedYear],

@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="qXk-sP-4fC">
             <objects>
-                <tableViewController id="1ys-R0-FT8" customClass="EPWFavoriteArtistsTableViewController" customModule="Favorite_Artists_Sprint" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="1ys-R0-FT8" customClass="EPWFavoriteArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KFY-me-QsN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
         <!--Add New Artist-->
         <scene sceneID="u0g-mc-Ymy">
             <objects>
-                <viewController id="7yU-dg-T9D" customClass="EPWAddSearchViewController" customModule="Favorite_Artists_Sprint" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7yU-dg-T9D" customClass="EPWAddSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jG7-Z8-YFB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="maR-LA-D1Y">
                                 <rect key="frame" x="20" y="216" width="374" height="626"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxh-gv-7hP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxh-gv-7hP">
                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="InZ-Gp-13P"/>
@@ -89,8 +89,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcJ-ee-Eu6">
-                                        <rect key="frame" x="0.0" y="51" width="41" height="26.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcJ-ee-Eu6">
+                                        <rect key="frame" x="0.0" y="51" width="50" height="26.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26.5" id="sTw-h9-5un"/>
                                         </constraints>
@@ -98,7 +98,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="bio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nu0-WQ-lK2">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nu0-WQ-lK2">
                                         <rect key="frame" x="0.0" y="87.5" width="374" height="538.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -128,7 +128,7 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="d3G-Dz-84a">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="7S3-Ds-aWk">
                             <connections>
-                                <action selector="savePressed:" destination="7yU-dg-T9D" id="d4N-EJ-nv2"/>
+                                <action selector="savePressed:" destination="7yU-dg-T9D" id="WsM-5a-gkg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

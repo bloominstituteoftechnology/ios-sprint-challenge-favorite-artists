@@ -21,72 +21,73 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSArray *loadedArtists = [self.artistController fetchFavoritedArtists];
 
+    self.favoritedArtists = [[NSMutableArray alloc] initWithArray:loadedArtists];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    if (self = [super initWithCoder:coder]) {
+        _artistController = [[EPWArtistController alloc] init];
+        _favoritedArtists = [[NSMutableArray alloc] init];
+    }
+    return self;
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.favoritedArtists.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    EPWArtist *artist = self.favoritedArtists[indexPath.row];
+    cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in: %lu", (unsigned long)artist.formedYear];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
 // Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"DetailSegue" sender:nil];
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
+    if ([[segue identifier] isEqualToString:@"AddSegue"]) {
+        
     // Pass the selected object to the new view controller.
+      EPWAddSearchViewController *addVC = [segue destinationViewController];
+            
+        addVC.artistController = self.artistController;
+        addVC.viewType = Search;
+        addVC.delegate = self;
+    }
+    
+     if ([[segue identifier] isEqualToString:@"DetailSegue"]) {
+      EPWAddSearchViewController *detailVC = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            
+        detailVC.artistController = self.artistController;
+        detailVC.artist = [self.favoritedArtists objectAtIndex:indexPath.row];
+        detailVC.viewType = Detail;
+    }
+}
+
+- (void)didSave:(EPWArtist *)artist {
+    [self.favoritedArtists addObject:artist];
+    [self.tableView reloadData];
 }
 
 @end

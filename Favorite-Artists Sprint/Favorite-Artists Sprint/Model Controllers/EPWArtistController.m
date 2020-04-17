@@ -20,8 +20,7 @@
 static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
 - (void)searchForArtist:(NSString *)searchTerm
-             completion:(void (^)(EPWArtist *artist, NSError *error))completion
-{
+             completion:(void (^)(EPWArtist *artist, NSError *error))completion {
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
@@ -69,8 +68,7 @@ static NSString *const baseURLString = @"https://theaudiodb.com/api/v1/json/1/se
     [task resume];
 }
 
-- (NSArray *)fetchFavoritedArtists
-{
+- (NSArray *)fetchFavoritedArtists {
     NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *dir = [path objectAtIndex:0];
     NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:dir error:nil];

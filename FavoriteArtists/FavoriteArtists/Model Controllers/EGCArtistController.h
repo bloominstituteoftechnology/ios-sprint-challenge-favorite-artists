@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class EGCArtist;
 
 @interface EGCArtistController : NSObject
 
-@end
+@property (readonly, nonatomic) NSArray *savedArtists;
+@property (readonly, nonatomic) EGCArtist *currentArtist;
 
-NS_ASSUME_NONNULL_END
+- (void)loadFromPersistentStore;
+- (void)saveArtist:(EGCArtist *)artist;
+- (void)removeArtist:(EGCArtist *)artist;
+- (void)searchForArtistWithName:(NSString *)name completion:(void (^)(EGCArtist *artist, NSError *error))completion;
+
+@end

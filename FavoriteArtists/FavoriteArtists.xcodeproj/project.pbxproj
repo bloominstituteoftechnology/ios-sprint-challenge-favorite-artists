@@ -16,6 +16,7 @@
 		55398AA3244A02610066C4BE /* KMLArtistSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398AA2244A02610066C4BE /* KMLArtistSearchViewController.m */; };
 		55398AA6244A02790066C4BE /* KMLArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398AA5244A02790066C4BE /* KMLArtistDetailViewController.m */; };
 		55398AA9244A029B0066C4BE /* KMLArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398AA8244A029B0066C4BE /* KMLArtistTableViewController.m */; };
+		55398AAC244A036C0066C4BE /* KMLArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398AAB244A036C0066C4BE /* KMLArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		55398AA5244A02790066C4BE /* KMLArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLArtistDetailViewController.m; sourceTree = "<group>"; };
 		55398AA7244A029B0066C4BE /* KMLArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLArtistTableViewController.h; sourceTree = "<group>"; };
 		55398AA8244A029B0066C4BE /* KMLArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLArtistTableViewController.m; sourceTree = "<group>"; };
+		55398AAA244A036C0066C4BE /* KMLArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLArtist.h; sourceTree = "<group>"; };
+		55398AAB244A036C0066C4BE /* KMLArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 		55398A9F244A02220066C4BE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				55398AAA244A036C0066C4BE /* KMLArtist.h */,
+				55398AAB244A036C0066C4BE /* KMLArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			files = (
 				55398A872449FE8E0066C4BE /* AppDelegate.m in Sources */,
 				55398AA6244A02790066C4BE /* KMLArtistDetailViewController.m in Sources */,
+				55398AAC244A036C0066C4BE /* KMLArtist.m in Sources */,
 				55398A982449FE960066C4BE /* main.m in Sources */,
 				55398AA3244A02610066C4BE /* KMLArtistSearchViewController.m in Sources */,
 				55398A8A2449FE8E0066C4BE /* SceneDelegate.m in Sources */,

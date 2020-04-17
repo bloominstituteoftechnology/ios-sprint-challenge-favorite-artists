@@ -13,6 +13,9 @@ typedef void (^NPTArtistFetcherCompletionBlock)(NPTArtist * _Nullable artist,NSE
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistFetcher : NSObject
+@property NSMutableArray<NPTArtist *> *favoriteArtists;
+
+- (instancetype)initWithArtist:(NSMutableArray<NPTArtist *> *)artists;
 
 - (void)fetchArtistWithSearchTerm:(NSString *)term completionBlock:(NPTArtistFetcherCompletionBlock)completionBlock;
 @end

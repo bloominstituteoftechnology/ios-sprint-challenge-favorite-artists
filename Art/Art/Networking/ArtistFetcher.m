@@ -9,16 +9,27 @@
 #import "ArtistFetcher.h"
 #import "NPTLog.h"
 #import "NPTArtist.h"
-#import "NPTErrors.h"
+
 
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
+NSMutableArray<NPTArtist *>*artists;
 
 @implementation ArtistFetcher
 
 - (instancetype)init {
     self = [super init];
-    if (self) { }
+    if (self) {
+        _favoriteArtists = artists;
+    }
     return self ;
+}
+
+-(instancetype)initWithArtist:(NSMutableArray<NPTArtist *> *)artists {
+    self = [super init];
+    if (self) {
+        _favoriteArtists = artists;
+    }
+    return self;
 }
 
 - (void)fetchArtistWithSearchTerm:(NSString *)term completionBlock:(NPTArtistFetcherCompletionBlock)completionBlock {
@@ -49,6 +60,10 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
             return;
         }
         NPTArtist *artistResult = [[NPTArtist alloc] initWithDictionary:json];
+        
+        NSMutableArray *ac = [NSMutableArray array];
+        [ ac addObject:artistResult];
+
         completionBlock(artistResult,nil);
         
         
@@ -58,5 +73,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     
    
 }
+
+
 
 @end

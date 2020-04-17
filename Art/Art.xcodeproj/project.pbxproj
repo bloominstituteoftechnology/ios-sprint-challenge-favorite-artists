@@ -19,7 +19,6 @@
 		B6E5FC0C244A092F00B6863B /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC0B244A092F00B6863B /* ArtistDetailViewController.m */; };
 		B6E5FC0F244A0AC200B6863B /* ArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC0E244A0AC200B6863B /* ArtistFetcher.m */; };
 		B6E5FC13244A0B1800B6863B /* NPTLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC12244A0B1800B6863B /* NPTLog.m */; };
-		B6E5FC16244A0EDD00B6863B /* NPTErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E5FC15244A0EDD00B6863B /* NPTErrors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,8 +44,6 @@
 		B6E5FC0E244A0AC200B6863B /* ArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistFetcher.m; sourceTree = "<group>"; };
 		B6E5FC11244A0B1800B6863B /* NPTLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTLog.h; sourceTree = "<group>"; };
 		B6E5FC12244A0B1800B6863B /* NPTLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTLog.m; sourceTree = "<group>"; };
-		B6E5FC14244A0EDD00B6863B /* NPTErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTErrors.h; sourceTree = "<group>"; };
-		B6E5FC15244A0EDD00B6863B /* NPTErrors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTErrors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +153,6 @@
 			children = (
 				B6E5FC11244A0B1800B6863B /* NPTLog.h */,
 				B6E5FC12244A0B1800B6863B /* NPTLog.m */,
-				B6E5FC14244A0EDD00B6863B /* NPTErrors.h */,
-				B6E5FC15244A0EDD00B6863B /* NPTErrors.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -239,7 +234,6 @@
 				B6E5FC13244A0B1800B6863B /* NPTLog.m in Sources */,
 				B6E5FBE7244A002F00B6863B /* SceneDelegate.m in Sources */,
 				B6E5FC0C244A092F00B6863B /* ArtistDetailViewController.m in Sources */,
-				B6E5FC16244A0EDD00B6863B /* NPTErrors.m in Sources */,
 				B6E5FC01244A084700B6863B /* NSJSONSerialization+NSJSONSerialization_NPTArtist_h.m in Sources */,
 				B6E5FBFE244A046B00B6863B /* NPTArtist.m in Sources */,
 			);

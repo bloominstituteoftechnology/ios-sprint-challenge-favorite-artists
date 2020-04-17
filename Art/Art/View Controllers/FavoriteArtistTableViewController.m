@@ -15,19 +15,22 @@
 @implementation FavoriteArtistTableViewController
 
 
-
-
 - (IBAction)addPressed:(UIBarButtonItem *)sender {
     
 }
 
-
-
-
-
-
-
-
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    return 10;
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//}
+//
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

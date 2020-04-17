@@ -17,7 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
-
+@property (nonatomic, copy) NSMutableArray *artists;
 @property (nonatomic) ArtistFetcher *artistFetcher;
 
 @end
@@ -33,12 +33,12 @@
 
 
 - (IBAction)savePressed:(UIBarButtonItem *)sender {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [self.searchBar becomeFirstResponder];
     [self.searchBar setShowsScopeBar:YES];
     _searchBar.delegate = self;
@@ -46,6 +46,7 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
     [self.artistFetcher fetchArtistWithSearchTerm:searchBar.text completionBlock:^(NPTArtist * _Nullable artist, NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(),^{
             if (artist) {
@@ -55,6 +56,8 @@
             }
         });
         NSLog(artist.name);
+        NSLog(@"%d",self.artists.count);
+       
     }];
 }
 

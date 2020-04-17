@@ -10,6 +10,16 @@
 
 @implementation NPTArtist
 
+
+- (instancetype)initWithArtists:(NSArray<NPTArtist *> *)artist {
+    self = [super init];
+    if (self) {
+        _artists = artist;
+    }
+    return self;
+}
+
+
 - (instancetype)initWithName:(NSString *)name biography:(NSString *)biography yearFormed:(int)yearFormed {
     self = [super init];
     if (self) {
@@ -32,6 +42,7 @@
     self = [self initWithName:name
                     biography:biography
                    yearFormed:yearFormed.intValue];
+   
     
     return self;
 }

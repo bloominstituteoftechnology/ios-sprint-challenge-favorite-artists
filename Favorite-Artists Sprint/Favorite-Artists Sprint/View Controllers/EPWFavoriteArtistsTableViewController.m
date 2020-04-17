@@ -7,6 +7,7 @@
 //
 
 #import "EPWFavoriteArtistsTableViewController.h"
+#import "EPWArtist.h"
 
 @interface EPWFavoriteArtistsTableViewController ()
 

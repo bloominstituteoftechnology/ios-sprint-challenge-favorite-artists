@@ -59,7 +59,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRc-BQ-7P2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="-78"/>
+            <point key="canvasLocation" x="1346" y="-78"/>
         </scene>
         <!--Add New Artist-->
         <scene sceneID="u0g-mc-Ymy">
@@ -80,8 +80,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="maR-LA-D1Y">
                                 <rect key="frame" x="20" y="216" width="374" height="626"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxh-gv-7hP">
-                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxh-gv-7hP">
+                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="InZ-Gp-13P"/>
                                         </constraints>
@@ -89,8 +89,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcJ-ee-Eu6">
-                                        <rect key="frame" x="0.0" y="51" width="131" height="26.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcJ-ee-Eu6">
+                                        <rect key="frame" x="0.0" y="51" width="41" height="26.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26.5" id="sTw-h9-5un"/>
                                         </constraints>
@@ -98,7 +98,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nu0-WQ-lK2">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="bio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nu0-WQ-lK2">
                                         <rect key="frame" x="0.0" y="87.5" width="374" height="538.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -133,16 +133,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bioTextView" destination="Nu0-WQ-lK2" id="9Yg-BY-mJ5"/>
-                        <outlet property="nameLabel" destination="Hxh-gv-7hP" id="cvk-wc-Tx1"/>
-                        <outlet property="saveButton" destination="7S3-Ds-aWk" id="pVj-dI-h9d"/>
-                        <outlet property="searchBar" destination="IgG-Dl-aI5" id="6sj-sY-Ao4"/>
-                        <outlet property="yearLabel" destination="HcJ-ee-Eu6" id="EW8-Nz-CQh"/>
+                        <outlet property="bioTextView" destination="Nu0-WQ-lK2" id="oBf-2n-93j"/>
+                        <outlet property="nameLabel" destination="Hxh-gv-7hP" id="JgO-qH-QJv"/>
+                        <outlet property="saveButton" destination="7S3-Ds-aWk" id="62w-l7-7Rv"/>
+                        <outlet property="searchBar" destination="IgG-Dl-aI5" id="PXx-1K-IxP"/>
+                        <outlet property="yearLabel" destination="HcJ-ee-Eu6" id="W8t-DW-oTO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htc-hl-AXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2193" y="-78"/>
+            <point key="canvasLocation" x="2109" y="-78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EJg-lw-Ljz">

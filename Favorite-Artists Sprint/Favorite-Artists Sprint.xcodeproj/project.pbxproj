@@ -17,6 +17,7 @@
 		B5845635244A012800130288 /* EPWArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5845634244A012800130288 /* EPWArtistController.m */; };
 		B5845639244A061400130288 /* EPWFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5845638244A061400130288 /* EPWFavoriteArtistsTableViewController.m */; };
 		B584563C244A065100130288 /* EPWAddSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B584563B244A065100130288 /* EPWAddSearchViewController.m */; };
+		B5845648244A0F9500130288 /* EPWArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B5845647244A0F9500130288 /* EPWArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		B5845638244A061400130288 /* EPWFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPWFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
 		B584563A244A065100130288 /* EPWAddSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPWAddSearchViewController.h; sourceTree = "<group>"; };
 		B584563B244A065100130288 /* EPWAddSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPWAddSearchViewController.m; sourceTree = "<group>"; };
+		B5845646244A0F9500130288 /* EPWArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EPWArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		B5845647244A0F9500130288 /* EPWArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EPWArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 			children = (
 				B584562F244A00CF00130288 /* EPWArtist.h */,
 				B5845630244A00CF00130288 /* EPWArtist.m */,
+				B5845646244A0F9500130288 /* EPWArtist+NSJSONSerialization.h */,
+				B5845647244A0F9500130288 /* EPWArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B58456172449FEBF00130288 /* AppDelegate.m in Sources */,
+				B5845648244A0F9500130288 /* EPWArtist+NSJSONSerialization.m in Sources */,
 				B5845631244A00CF00130288 /* EPWArtist.m in Sources */,
 				B5845635244A012800130288 /* EPWArtistController.m in Sources */,
 				B58456282449FEC500130288 /* main.m in Sources */,

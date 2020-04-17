@@ -10,7 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class KMLArtist;
+
 @interface KMLArtistDetailViewController : UIViewController
+
+
+@property (nonatomic) KMLArtist *artist;
 
 @end
 

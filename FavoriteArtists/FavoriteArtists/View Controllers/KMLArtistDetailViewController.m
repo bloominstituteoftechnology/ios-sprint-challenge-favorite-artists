@@ -7,8 +7,14 @@
 //
 
 #import "KMLArtistDetailViewController.h"
+#import "KMLArtist.h"
 
 @interface KMLArtistDetailViewController ()
+
+@property (strong, nonatomic) IBOutlet UILabel *formedYear;
+@property (strong, nonatomic) IBOutlet UITextView *biography;
+
+- (void)updateViews;
 
 @end
 
@@ -16,17 +22,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews {
+    if (self.artist) {
+        self.title = self.artist.name;
+        self.formedYear.text = [NSString stringWithFormat:@"Formed in: %@", [self.artist formedYearString]];
+        self.biography.text = self.artist.biography;
+    }
 }
-*/
 
 @end

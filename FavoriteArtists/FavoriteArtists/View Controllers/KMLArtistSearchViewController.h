@@ -10,7 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KMLArtistSearchViewController : UIViewController
+@class KMLArtistController;
+@class KMLArtist;
+
+@interface KMLArtistSearchViewController : UIViewController  <UISearchBarDelegate>
+
+
+@property (nonatomic) KMLArtistController *artistController;
+@property (nonatomic) KMLArtist *artist;
 
 @end
 

@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class KMLArtist;
+
 @interface KMLArtistController : NSObject
+
+@property (nonatomic, readonly) NSArray *artists;
+
+- (void)searchForArtistsByName:(NSString *)name completion:(void (^)(KMLArtist *artist, NSError *error))completion;
+
+-(void)writeDictionaryToFile:(NSDictionary *)dictionary;
 
 @end
 

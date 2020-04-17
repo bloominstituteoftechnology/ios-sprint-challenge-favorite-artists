@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSJSONSerialization (KMLArtist_)
+@interface KMLArtist (NSJSONSerialization)
 
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;

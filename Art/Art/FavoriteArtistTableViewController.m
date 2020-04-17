@@ -6,13 +6,13 @@
 //  Copyright © 2020 Nick Nguyen. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FavoriteArtistTableViewController.h"
 
-@interface ViewController ()
+@interface FavoriteArtistTableViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FavoriteArtistTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

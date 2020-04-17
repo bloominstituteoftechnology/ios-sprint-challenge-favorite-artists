@@ -13,6 +13,8 @@
 		727C59262449FEFA0056ED1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727C59252449FEFA0056ED1C /* Assets.xcassets */; };
 		727C59292449FEFA0056ED1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727C59272449FEFA0056ED1C /* LaunchScreen.storyboard */; };
 		727C592C2449FEFA0056ED1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C592B2449FEFA0056ED1C /* main.m */; };
+		727C593A244A03CB0056ED1C /* ArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C5939244A03CB0056ED1C /* ArtistTableViewController.m */; };
+		727C593D244A03E40056ED1C /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C593C244A03E40056ED1C /* ArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,10 @@
 		727C592A2449FEFA0056ED1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		727C592B2449FEFA0056ED1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		727C59372449FFCE0056ED1C /* CDGFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CDGFileHelper.h; path = ../../../CDGFileHelper.h; sourceTree = "<group>"; };
+		727C5938244A03CB0056ED1C /* ArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistTableViewController.h; sourceTree = "<group>"; };
+		727C5939244A03CB0056ED1C /* ArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableViewController.m; sourceTree = "<group>"; };
+		727C593B244A03E40056ED1C /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		727C593C244A03E40056ED1C /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,10 @@
 		727C59332449FF9C0056ED1C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				727C5938244A03CB0056ED1C /* ArtistTableViewController.h */,
+				727C5939244A03CB0056ED1C /* ArtistTableViewController.m */,
+				727C593B244A03E40056ED1C /* ArtistDetailViewController.h */,
+				727C593C244A03E40056ED1C /* ArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -183,6 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727C593D244A03E40056ED1C /* ArtistDetailViewController.m in Sources */,
+				727C593A244A03CB0056ED1C /* ArtistTableViewController.m in Sources */,
 				727C591B2449FEF90056ED1C /* AppDelegate.m in Sources */,
 				727C592C2449FEFA0056ED1C /* main.m in Sources */,
 				727C591E2449FEF90056ED1C /* SceneDelegate.m in Sources */,

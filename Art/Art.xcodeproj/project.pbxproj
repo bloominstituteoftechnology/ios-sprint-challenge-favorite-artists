@@ -78,7 +78,6 @@
 			children = (
 				B6E5FC32244A3A2A00B6863B /* Model Controller */,
 				B6E5FC10244A0B0800B6863B /* Helper */,
-				B6E5FC06244A088300B6863B /* Networking */,
 				B6E5FC02244A085000B6863B /* Category */,
 				B6E5FBFB244A03BF00B6863B /* Resources */,
 				B6E5FC03244A086000B6863B /* View Controllers */,
@@ -138,13 +137,6 @@
 				B6E5FBFD244A046B00B6863B /* NPTArtist.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		B6E5FC06244A088300B6863B /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		B6E5FC10244A0B0800B6863B /* Helper */ = {

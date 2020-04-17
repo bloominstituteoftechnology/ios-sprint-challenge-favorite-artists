@@ -48,6 +48,7 @@
 
 
 - (void)updateViews {
+    self.navigationItem.title = self.artist.name;
     self.artistNameLabel.text = self.artist.name;
     self.biographyTextView.text = self.artist.biography;
     self.yearFormedLabel.text = [NSString stringWithFormat:@"%d",_artist.yearFormed];

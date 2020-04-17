@@ -10,4 +10,30 @@
 
 @implementation NSJSONSerialization (KMLArtist_)
 
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+
+    NSString *name = dictionary[@"strArtist"];
+    NSString *strFormedYear = dictionary[@"intFormedYear"];
+    int formedYear = 0;
+    if ([strFormedYear isKindOfClass:[NSString class]]) {
+       formedYear = [strFormedYear intValue];
+    }
+    NSString *biography = dictionary[@"strBiographyEN"];
+
+    return [self initWithName:name biography:biography formedYear:formedYear];
+
+}
+
+- (NSDictionary *)toDictionary {
+
+    NSDictionary *artistDictionary = @{
+        @"strArtist" : self.name,
+        @"intFormedYear" : [self formedYearString],
+        @"strBiographyEN" : self.biography
+    };
+
+    return artistDictionary;
+}
+
 @end

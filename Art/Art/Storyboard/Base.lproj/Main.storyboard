@@ -10,7 +10,7 @@
         <!--Add New Artist-->
         <scene sceneID="d7j-uL-e96">
             <objects>
-                <viewController id="mXU-MZ-a97" sceneMemberID="viewController">
+                <viewController id="mXU-MZ-a97" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZGX-wq-yKH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,27 +61,37 @@
                         <viewLayoutGuide key="safeArea" id="OdK-1I-9vJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="qmW-ic-nwz">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="8nS-sZ-lQC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="8nS-sZ-lQC">
+                            <connections>
+                                <action selector="savePressed:" destination="mXU-MZ-a97" id="eeP-NH-VvK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="g5f-xC-Z5a" id="zf2-eU-F6X"/>
+                        <outlet property="biographyTextView" destination="fwv-hm-3qH" id="yjj-Wz-uTW"/>
+                        <outlet property="searchBar" destination="Nt1-i4-YXp" id="uFH-RE-JKv"/>
+                        <outlet property="yearFormedLabel" destination="5Le-oy-381" id="W8t-eV-sH6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuf-v7-nTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3052.1739130434785" y="130.58035714285714"/>
+            <point key="canvasLocation" x="2751" y="100"/>
         </scene>
         <!--Favorite Artists-->
         <scene sceneID="san-OJ-GEm">
             <objects>
-                <tableViewController id="CCn-sK-n84" sceneMemberID="viewController">
+                <tableViewController id="CCn-sK-n84" customClass="FavoriteArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VSr-ei-sX0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NbL-YI-Ard">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArtCell" id="NbL-YI-Ard">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NbL-YI-Ard" id="q6M-H0-8P0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -97,6 +107,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="fJP-YE-5we">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="oPK-6F-hXW">
                             <connections>
+                                <action selector="addPressed:" destination="CCn-sK-n84" id="IXz-Zg-5ES"/>
                                 <segue destination="mXU-MZ-a97" kind="show" identifier="PlusButtonSegue" id="eIv-UP-Gyx"/>
                             </connections>
                         </barButtonItem>

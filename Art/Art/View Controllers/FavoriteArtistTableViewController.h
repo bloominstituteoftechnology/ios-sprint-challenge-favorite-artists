@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavoriteArtistTableViewController : UIViewController
+@interface FavoriteArtistTableViewController : UITableViewController
 
 
 @end

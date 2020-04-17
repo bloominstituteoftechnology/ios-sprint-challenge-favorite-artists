@@ -10,4 +10,22 @@
 
 @implementation KMLArtist
 
+- (instancetype)initWithName:(NSString *)name
+                   biography:(NSString *)biography
+                  formedYear:(int)formedYear {
+    self = [super init];
+    if (self) {
+        _name = name;
+        _biography = biography;
+        _formedYear = formedYear;
+    }
+    return self;
+}
+
+
+- (NSString *)formedYearString {
+    return [[NSNumber numberWithInt:self.formedYear] stringValue];
+}
+
+
 @end

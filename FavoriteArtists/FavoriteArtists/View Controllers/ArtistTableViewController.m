@@ -47,7 +47,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    
+    //TODO: pass the model controller when created to the detail view.
 }
 
 

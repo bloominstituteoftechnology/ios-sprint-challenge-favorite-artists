@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Artists Table View Controller-->
         <scene sceneID="Na2-nE-GiH">
             <objects>
-                <tableViewController id="ZTP-BO-DI1" sceneMemberID="viewController">
+                <tableViewController id="ZTP-BO-DI1" customClass="EGCArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="159-gY-GsG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="69f-Qc-IbN" detailTextLabel="NPy-f3-UbL" style="IBUITableViewCellStyleSubtitle" id="4lO-yg-VO1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="69f-Qc-IbN" detailTextLabel="NPy-f3-UbL" style="IBUITableViewCellStyleSubtitle" id="4lO-yg-VO1">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4lO-yg-VO1" id="7Ya-xV-Hfg">
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1668" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="XJ9-gI-ALd">
             <objects>
-                <viewController id="zB9-Gg-vxp" sceneMemberID="viewController">
+                <viewController id="zB9-Gg-vxp" customClass="EGCArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xZp-yh-Lku">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +76,7 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fa2-bh-sov">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fa2-bh-sov">
                                 <rect key="frame" x="20" y="174" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="bRc-le-vKG"/>
@@ -93,7 +93,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWx-2B-T9Y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWx-2B-T9Y">
                                 <rect key="frame" x="20" y="132" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="EFH-zT-ihi"/>
@@ -122,8 +122,18 @@
                         <viewLayoutGuide key="safeArea" id="Uil-RF-zzn"/>
                     </view>
                     <navigationItem key="navigationItem" id="bVn-0H-WSu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Hlh-tv-4oJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Hlh-tv-4oJ">
+                            <connections>
+                                <action selector="saveTapped:" destination="zB9-Gg-vxp" id="9PA-df-I4b"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="aboutTextView" destination="8A9-Gh-inu" id="ubp-rN-fwx"/>
+                        <outlet property="nameLabel" destination="NWx-2B-T9Y" id="tOs-fY-HFr"/>
+                        <outlet property="searchBar" destination="uf4-jT-M4Q" id="kZn-dW-tby"/>
+                        <outlet property="yearLabel" destination="Fa2-bh-sov" id="ye4-dy-cgk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7b-ps-3MR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,9 @@
 //
 
 #import "EGCArtistsTableViewController.h"
+#import "EGCArtistController.h"
+#import "EGCArtist.h"
+#import "EGCArtistDetailViewController.h"
 
 @interface EGCArtistsTableViewController ()
 
@@ -14,18 +17,68 @@
 
 @implementation EGCArtistsTableViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _controller = [[EGCArtistController alloc] init];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.controller loadFromPersistentStore];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+    NSLog(@"viewWillAppear");
 }
 
 // MARK: - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.controller.savedArtists.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
+    
+    EGCArtist *artist = self.controller.savedArtists[indexPath.row];
+    NSString *dateString = [self yearString:artist];
+    cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = dateString;
+    return cell;
+}
+
+- (NSString *)yearString:(EGCArtist *)artist {
+    if (artist.year != 0) {
+        return [NSString stringWithFormat:@"%i", artist.year];
+    } else {
+        return @"Not available";
+    }
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        EGCArtist *artist = self.controller.savedArtists[indexPath.row];
+        [self.controller removeArtist:artist];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+// MARK: - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    EGCArtistDetailViewController *detailVC = segue.destinationViewController;
+    detailVC.artistController = self.controller;
+    
+    if ([segue.identifier isEqualToString:@"ShowArtistDetailSegue"]) {
+        EGCArtist *artist = self.controller.savedArtists[indexPath.row];
+        detailVC.artist = artist;
+    }
 }
 
 @end

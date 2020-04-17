@@ -14,9 +14,9 @@
 		5C36CEA72449FDAF00FDD240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CEA52449FDAF00FDD240 /* LaunchScreen.storyboard */; };
 		5C36CEAA2449FDAF00FDD240 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEA92449FDAF00FDD240 /* main.m */; };
 		5C36CEB3244A01A500FDD240 /* EGCArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEB2244A01A500FDD240 /* EGCArtistsTableViewController.m */; };
-		5C36CEB7244A01C900FDD240 /* EGCArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEB6244A01C900FDD240 /* EGCArtistViewController.m */; };
 		5C36CEBD244A025A00FDD240 /* EGCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEBC244A025A00FDD240 /* EGCArtistController.m */; };
 		5C36CEC0244A028000FDD240 /* EGCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEBF244A028000FDD240 /* EGCArtist.m */; };
+		5C36CEE9244A128A00FDD240 /* EGCArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEE8244A128A00FDD240 /* EGCArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +32,12 @@
 		5C36CEA92449FDAF00FDD240 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C36CEB1244A01A500FDD240 /* EGCArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtistsTableViewController.h; sourceTree = "<group>"; };
 		5C36CEB2244A01A500FDD240 /* EGCArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtistsTableViewController.m; sourceTree = "<group>"; };
-		5C36CEB5244A01C900FDD240 /* EGCArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtistViewController.h; sourceTree = "<group>"; };
-		5C36CEB6244A01C900FDD240 /* EGCArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtistViewController.m; sourceTree = "<group>"; };
 		5C36CEBB244A025A00FDD240 /* EGCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtistController.h; sourceTree = "<group>"; };
 		5C36CEBC244A025A00FDD240 /* EGCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtistController.m; sourceTree = "<group>"; };
 		5C36CEBE244A028000FDD240 /* EGCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtist.h; sourceTree = "<group>"; };
 		5C36CEBF244A028000FDD240 /* EGCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtist.m; sourceTree = "<group>"; };
+		5C36CEE7244A128A00FDD240 /* EGCArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtistDetailViewController.h; sourceTree = "<group>"; };
+		5C36CEE8244A128A00FDD240 /* EGCArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 			children = (
 				5C36CEB1244A01A500FDD240 /* EGCArtistsTableViewController.h */,
 				5C36CEB2244A01A500FDD240 /* EGCArtistsTableViewController.m */,
-				5C36CEB5244A01C900FDD240 /* EGCArtistViewController.h */,
-				5C36CEB6244A01C900FDD240 /* EGCArtistViewController.m */,
+				5C36CEE7244A128A00FDD240 /* EGCArtistDetailViewController.h */,
+				5C36CEE8244A128A00FDD240 /* EGCArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -193,12 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C36CEB7244A01C900FDD240 /* EGCArtistViewController.m in Sources */,
 				5C36CE992449FDAE00FDD240 /* AppDelegate.m in Sources */,
 				5C36CEAA2449FDAF00FDD240 /* main.m in Sources */,
 				5C36CEB3244A01A500FDD240 /* EGCArtistsTableViewController.m in Sources */,
 				5C36CEC0244A028000FDD240 /* EGCArtist.m in Sources */,
 				5C36CEBD244A025A00FDD240 /* EGCArtistController.m in Sources */,
+				5C36CEE9244A128A00FDD240 /* EGCArtistDetailViewController.m in Sources */,
 				5C36CE9C2449FDAE00FDD240 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

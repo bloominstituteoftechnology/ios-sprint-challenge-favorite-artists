@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class EGCArtistController;
 
 @interface EGCArtistsTableViewController : UITableViewController
 
-@end
+@property EGCArtistController *controller;
 
-NS_ASSUME_NONNULL_END
+@end

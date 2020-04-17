@@ -32,12 +32,12 @@
 - (void)saveArtist:(EGCArtist *)artist {
     NSLog(@"saveArtist");
     [self.internalSavedArtists addObject:artist];
-//    [self saveToPersistentStore];
+    [self saveToPersistentStore];
 }
 
 - (void)removeArtist:(EGCArtist *)artist {
     [self.internalSavedArtists removeObject:artist];
-//    [self saveToPersistentStore];
+    [self saveToPersistentStore];
 }
 
 - (NSURL *)persistentFileURL {
@@ -53,7 +53,7 @@
     NSMutableArray *artistsArray = [[NSMutableArray alloc] init];
     
     for (EGCArtist *artist in self.internalSavedArtists) {
-//        NSDictionary *artistDict = [artist toDictionary];
+        NSDictionary *artistDict = [artist toDictionary];
         [artistsArray addObject:artistDict];
     }
     NSDictionary *artistsDictionary = @{
@@ -76,7 +76,7 @@
     if (![artistsDictionary[@"artists"]  isEqual: @""]) {
         NSArray *artistDictionaries = artistsDictionary[@"artists"];
         for (NSDictionary *artistDictionary in artistDictionaries) {
-//            EGCArtist *artist = [[EGCArtist alloc] initWithDictionary:artistDictionary];
+            EGCArtist *artist = [[EGCArtist alloc] initWithDictionary:artistDictionary];
             [self.internalSavedArtists addObject:artist];
         }
     }
@@ -117,7 +117,7 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
         if (dictionary[@"artists"] != [NSNull null]) {
             NSArray *artistDictionaries = dictionary[@"artists"];
             NSDictionary *artistDictionary = artistDictionaries.firstObject;
-//            EGCArtist *artist = [[EGCArtist alloc] initWithDictionary:artistDictionary];
+            EGCArtist *artist = [[EGCArtist alloc] initWithDictionary:artistDictionary];
             completion(artist, nil);
         }
     }] resume];

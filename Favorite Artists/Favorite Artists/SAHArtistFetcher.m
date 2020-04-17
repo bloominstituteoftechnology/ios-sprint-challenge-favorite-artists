@@ -11,6 +11,8 @@
 
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
+
+
 @implementation SAHArtistFetcher
 
 - (instancetype)init {
@@ -48,13 +50,15 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
         
         NSError *jsonError = nil;
         NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        NSArray *artists = jsonDictionary[@"artists"];
+        NSDictionary *artistDictionary = artists.firstObject;
         
         if (jsonError) {
             completionBlock(nil, jsonError);
             return;
         }
         
-        SAHArtist *artist = [[SAHArtist alloc] initWithDictionary:jsonDictionary];
+        SAHArtist *artist = [[SAHArtist alloc] initWithDictionary:artistDictionary];
         completionBlock(artist, nil);
         
     }];

@@ -11,15 +11,27 @@
 @implementation SAHArtist (NSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    NSArray *artists = dictionary[@"artists"];
-    NSDictionary *artist = artists.firstObject;
-    NSString *name = artist[@"strArtist"];
-    NSNumber *yearNumber = artist[@"intFormedYear"];
-    NSString *bio = artist[@"strBiographyEN"];
+    NSString *name = dictionary[@"strArtist"];
+    NSNumber *yearNumber = dictionary[@"intFormedYear"];
+    NSString *bio = dictionary[@"strBiographyEN"];
     
-    self = [self initWithName:name yearFormed:yearNumber.intValue biography:bio];
+    if ([yearNumber isKindOfClass:[NSNull class]]) {
+        self = [self initWithName:name yearFormed:0 biography:bio];
+    } else {
+       self = [self initWithName:name yearFormed:yearNumber.intValue biography:bio];
+    }
     
     return self;
+}
+
+- (NSDictionary *)toDictionary {
+    NSNumber *year = [NSNumber numberWithInt:self.yearFormed];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    [dictionary setObject:self.name forKey:@"strArtist"];
+    [dictionary setObject:[year stringValue] forKey:@"intFormedYear"];
+    [dictionary setObject:self.biography forKey:@"strBiographyEN"];
+    return dictionary;
+    
 }
 
 @end

@@ -9,6 +9,7 @@
 #import "SAHArtistDetailViewController.h"
 #import "SAHArtistFetcher.h"
 #import "SAHArtist.h"
+#import "SAHArtistController.h"
 
 @interface SAHArtistDetailViewController () <UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
@@ -46,17 +47,31 @@
         NSLog(@"Artist: %@", artist.biography);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.artistNameLabel.text = artist.name;
-            self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
-            self.artistBiographyTextView.text = artist.biography;
+            self.artist = artist;
+            [self updateViews];
         });
         
         
     }];
 }
 
+- (void)updateViews {
+    
+    if (self.artist) {
+        self.artistNameLabel.text = self.artist.name;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+        self.artistBiographyTextView.text = self.artist.biography;
+    } else {
+        self.artistNameLabel.text = @"";
+        self.yearFormedLabel.text = @"";
+        self.artistBiographyTextView.text = @"";
+    }
+    
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self updateViews];
 }
 
 -(SAHArtistFetcher *)artistFetcher {
@@ -65,6 +80,13 @@
     }
     
     return _artistFetcher;
+}
+- (IBAction)saveTapped:(UIBarButtonItem *)sender {
+    if (self.artist) {
+       [self.artistController saveArtist:self.artist];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
 }
 
 /*

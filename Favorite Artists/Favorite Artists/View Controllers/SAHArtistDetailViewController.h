@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class SAHArtistController;
+@class SAHArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SAHArtistDetailViewController : UIViewController
+
+@property (nonatomic) SAHArtistController *artistController;
+@property (nonatomic) SAHArtist *artist;
 
 @end
 

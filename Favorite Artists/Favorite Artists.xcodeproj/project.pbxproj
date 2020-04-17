@@ -18,6 +18,7 @@
 		D28E06F3244A08CF0013FEAC /* SAHArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = D28E06F2244A08CF0013FEAC /* SAHArtist.m */; };
 		D28E06F9244A1ACB0013FEAC /* SAHArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D28E06F8244A1ACB0013FEAC /* SAHArtist+NSJSONSerialization.m */; };
 		D28E06FC244A1C070013FEAC /* SAHArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D28E06FB244A1C070013FEAC /* SAHArtistFetcher.m */; };
+		D2D32CD8244A3F66000B18C0 /* SAHArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D32CD7244A3F66000B18C0 /* SAHArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		D28E06F8244A1ACB0013FEAC /* SAHArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SAHArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		D28E06FA244A1C070013FEAC /* SAHArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAHArtistFetcher.h; sourceTree = "<group>"; };
 		D28E06FB244A1C070013FEAC /* SAHArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAHArtistFetcher.m; sourceTree = "<group>"; };
+		D2D32CD6244A3F66000B18C0 /* SAHArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAHArtistController.h; sourceTree = "<group>"; };
+		D2D32CD7244A3F66000B18C0 /* SAHArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAHArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				D28E06DF244A04300013FEAC /* Info.plist */,
 				D28E06FA244A1C070013FEAC /* SAHArtistFetcher.h */,
 				D28E06FB244A1C070013FEAC /* SAHArtistFetcher.m */,
+				D2D32CD6244A3F66000B18C0 /* SAHArtistController.h */,
+				D2D32CD7244A3F66000B18C0 /* SAHArtistController.m */,
 			);
 			path = "Favorite Artists";
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				D28E06EC244A07310013FEAC /* SAHFavoriteArtistsTableViewController.m in Sources */,
 				D28E06D0244A042D0013FEAC /* AppDelegate.m in Sources */,
 				D28E06E1244A04300013FEAC /* main.m in Sources */,
+				D2D32CD8244A3F66000B18C0 /* SAHArtistController.m in Sources */,
 				D28E06D3244A042D0013FEAC /* SceneDelegate.m in Sources */,
 				D28E06F9244A1ACB0013FEAC /* SAHArtist+NSJSONSerialization.m in Sources */,
 			);

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Keri Levesque. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "KMLArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

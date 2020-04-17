@@ -13,7 +13,7 @@
 - (instancetype)initWithName:(NSString *)name
                    biography:(NSString *)biography
                   formedYear:(int)formedYear {
-    self = [super init];
+    self = [self init];
     if (self) {
         _name = name;
         _biography = biography;

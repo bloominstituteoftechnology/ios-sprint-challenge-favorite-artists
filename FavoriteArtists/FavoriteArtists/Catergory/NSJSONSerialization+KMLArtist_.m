@@ -8,7 +8,8 @@
 
 #import "NSJSONSerialization+KMLArtist_.h"
 
-@implementation NSJSONSerialization (KMLArtist_)
+
+@implementation KMLArtist (NSJSONSerialization)
 
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {

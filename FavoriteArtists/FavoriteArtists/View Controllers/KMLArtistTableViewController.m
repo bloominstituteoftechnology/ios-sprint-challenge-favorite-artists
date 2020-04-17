@@ -7,8 +7,15 @@
 //
 
 #import "KMLArtistTableViewController.h"
+#import "KMLArtistController.h"
+#import "KMLArtist.h"
+#import "KMLArtistDetailViewController.h"
+#import "KMLArtistSearchViewController.h"
+
 
 @interface KMLArtistTableViewController ()
+
+@property (nonatomic, readonly) KMLArtistController *artistController;
 
 @end
 

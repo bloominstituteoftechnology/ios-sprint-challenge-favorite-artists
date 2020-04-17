@@ -17,7 +17,7 @@
 
 @implementation CDGArtistController
 
-static NSString const *baserURLString = @"theaudiodb.com/api/v1/json/1/search.php";
+static NSString *const baserURLString = @"theaudiodb.com/api/v1/json/1/search.php";
 
 - (void)searchForArtist:(NSString *)searchTerm completion:(void (^)(CDGArtist *artist, NSError *error))completion{
     
@@ -31,19 +31,33 @@ static NSString const *baserURLString = @"theaudiodb.com/api/v1/json/1/search.ph
     
     NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        NSLog(@"url: %@", url);
-        
         if(error) {
             NSLog(@"Error searching with url: %@", error);
             completion(nil, error);
             return;
         }
-        
         if (!data) {
             NSError *error;
             completion(nil, error);
             return;
         }
+        NSError *responseError = nil;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                             options:0 error:&responseError];
+        if (responseError) {
+            completion(nil, error);
+            return;
+        }
+        if (![json isKindOfClass:[NSDictionary class]]){
+            completion(nil, [[NSError alloc]init]);
+            return;
+        }
+        NSDictionary *artist = [[json objectForKey:@"artists"] firstObject];
+        if (artist == nil ){
+            completion(nil, [[NSError alloc]init]);
+        }
+        self.searchResult = [[CDGArtist alloc] initWithDictionary:artist];
+        completion(self.searchResult, nil);
         
     }];
     [task resume];

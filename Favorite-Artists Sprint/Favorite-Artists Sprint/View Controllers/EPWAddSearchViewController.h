@@ -18,13 +18,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface EPWAddSearchViewController : UIViewController
+@interface EPWAddSearchViewController : UIViewController <UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
+typedef NS_ENUM(NSInteger, ViewType) {
+    Search,
+    Detail
+};
+
+- (void)updateViews;
+
+@property(nonatomic, weak) id <SearchDetailDelegate> delegate;
+@property (nonatomic) EPWArtistController *artistController;
+@property (nonatomic) EPWArtist *artist;
+@property (nonatomic) ViewType viewType;
 
 @end
 

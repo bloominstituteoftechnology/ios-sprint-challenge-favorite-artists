@@ -6,12 +6,14 @@
 //  Copyright © 2020 Keri Levesque. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-int main(int argc, const char * argv[]) {
+int main(int argc, char * argv[]) {
+    NSString * appDelegateClassName;
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        // Setup code that might create autoreleased objects goes here.
+        appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
-    return 0;
+    return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }

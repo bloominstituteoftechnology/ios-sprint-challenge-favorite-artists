@@ -7,28 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55398A732449FD010066C4BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398A722449FD010066C4BE /* main.m */; };
+		55398A872449FE8E0066C4BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398A862449FE8E0066C4BE /* AppDelegate.m */; };
+		55398A8A2449FE8E0066C4BE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398A892449FE8E0066C4BE /* SceneDelegate.m */; };
+		55398A8D2449FE8E0066C4BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398A8C2449FE8E0066C4BE /* ViewController.m */; };
+		55398A902449FE8E0066C4BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55398A8E2449FE8E0066C4BE /* Main.storyboard */; };
+		55398A922449FE960066C4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55398A912449FE960066C4BE /* Assets.xcassets */; };
+		55398A952449FE960066C4BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55398A932449FE960066C4BE /* LaunchScreen.storyboard */; };
+		55398A982449FE960066C4BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398A972449FE960066C4BE /* main.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		55398A6D2449FD010066C4BE /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		55398A6F2449FD010066C4BE /* FavoriteArtists */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FavoriteArtists; sourceTree = BUILT_PRODUCTS_DIR; };
-		55398A722449FD010066C4BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55398A822449FE8E0066C4BE /* FavoriteArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55398A852449FE8E0066C4BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55398A862449FE8E0066C4BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55398A882449FE8E0066C4BE /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		55398A892449FE8E0066C4BE /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		55398A8B2449FE8E0066C4BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		55398A8C2449FE8E0066C4BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		55398A8F2449FE8E0066C4BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55398A912449FE960066C4BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55398A942449FE960066C4BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55398A962449FE960066C4BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55398A972449FE960066C4BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		55398A6C2449FD010066C4BE /* Frameworks */ = {
+		55398A7F2449FE8E0066C4BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,26 +42,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		55398A662449FD010066C4BE = {
+		55398A792449FE8E0066C4BE = {
 			isa = PBXGroup;
 			children = (
-				55398A712449FD010066C4BE /* FavoriteArtists */,
-				55398A702449FD010066C4BE /* Products */,
+				55398A842449FE8E0066C4BE /* FavoriteArtists */,
+				55398A832449FE8E0066C4BE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		55398A702449FD010066C4BE /* Products */ = {
+		55398A832449FE8E0066C4BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55398A6F2449FD010066C4BE /* FavoriteArtists */,
+				55398A822449FE8E0066C4BE /* FavoriteArtists.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		55398A712449FD010066C4BE /* FavoriteArtists */ = {
+		55398A842449FE8E0066C4BE /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
-				55398A722449FD010066C4BE /* main.m */,
+				55398A852449FE8E0066C4BE /* AppDelegate.h */,
+				55398A862449FE8E0066C4BE /* AppDelegate.m */,
+				55398A882449FE8E0066C4BE /* SceneDelegate.h */,
+				55398A892449FE8E0066C4BE /* SceneDelegate.m */,
+				55398A8B2449FE8E0066C4BE /* ViewController.h */,
+				55398A8C2449FE8E0066C4BE /* ViewController.m */,
+				55398A8E2449FE8E0066C4BE /* Main.storyboard */,
+				55398A912449FE960066C4BE /* Assets.xcassets */,
+				55398A932449FE960066C4BE /* LaunchScreen.storyboard */,
+				55398A962449FE960066C4BE /* Info.plist */,
+				55398A972449FE960066C4BE /* main.m */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -65,13 +79,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55398A6E2449FD010066C4BE /* FavoriteArtists */ = {
+		55398A812449FE8E0066C4BE /* FavoriteArtists */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55398A762449FD010066C4BE /* Build configuration list for PBXNativeTarget "FavoriteArtists" */;
+			buildConfigurationList = 55398A9B2449FE960066C4BE /* Build configuration list for PBXNativeTarget "FavoriteArtists" */;
 			buildPhases = (
-				55398A6B2449FD010066C4BE /* Sources */,
-				55398A6C2449FD010066C4BE /* Frameworks */,
-				55398A6D2449FD010066C4BE /* CopyFiles */,
+				55398A7E2449FE8E0066C4BE /* Sources */,
+				55398A7F2449FE8E0066C4BE /* Frameworks */,
+				55398A802449FE8E0066C4BE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -79,24 +93,24 @@
 			);
 			name = FavoriteArtists;
 			productName = FavoriteArtists;
-			productReference = 55398A6F2449FD010066C4BE /* FavoriteArtists */;
-			productType = "com.apple.product-type.tool";
+			productReference = 55398A822449FE8E0066C4BE /* FavoriteArtists.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		55398A672449FD010066C4BE /* Project object */ = {
+		55398A7A2449FE8E0066C4BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Keri Levesque";
 				TargetAttributes = {
-					55398A6E2449FD010066C4BE = {
+					55398A812449FE8E0066C4BE = {
 						CreatedOnToolsVersion = 11.4;
 					};
 				};
 			};
-			buildConfigurationList = 55398A6A2449FD010066C4BE /* Build configuration list for PBXProject "FavoriteArtists" */;
+			buildConfigurationList = 55398A7D2449FE8E0066C4BE /* Build configuration list for PBXProject "FavoriteArtists" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +118,64 @@
 				en,
 				Base,
 			);
-			mainGroup = 55398A662449FD010066C4BE;
-			productRefGroup = 55398A702449FD010066C4BE /* Products */;
+			mainGroup = 55398A792449FE8E0066C4BE;
+			productRefGroup = 55398A832449FE8E0066C4BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55398A6E2449FD010066C4BE /* FavoriteArtists */,
+				55398A812449FE8E0066C4BE /* FavoriteArtists */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		55398A802449FE8E0066C4BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55398A952449FE960066C4BE /* LaunchScreen.storyboard in Resources */,
+				55398A922449FE960066C4BE /* Assets.xcassets in Resources */,
+				55398A902449FE8E0066C4BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		55398A6B2449FD010066C4BE /* Sources */ = {
+		55398A7E2449FE8E0066C4BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55398A732449FD010066C4BE /* main.m in Sources */,
+				55398A8D2449FE8E0066C4BE /* ViewController.m in Sources */,
+				55398A872449FE8E0066C4BE /* AppDelegate.m in Sources */,
+				55398A982449FE960066C4BE /* main.m in Sources */,
+				55398A8A2449FE8E0066C4BE /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		55398A8E2449FE8E0066C4BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55398A8F2449FE8E0066C4BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55398A932449FE960066C4BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55398A942449FE960066C4BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		55398A742449FD010066C4BE /* Debug */ = {
+		55398A992449FE960066C4BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -176,15 +225,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		55398A752449FD010066C4BE /* Release */ = {
+		55398A9A2449FE960066C4BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,51 +277,68 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		55398A772449FD010066C4BE /* Debug */ = {
+		55398A9C2449FE960066C4BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FavoriteArtists/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteArtists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		55398A782449FD010066C4BE /* Release */ = {
+		55398A9D2449FE960066C4BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FavoriteArtists/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteArtists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55398A6A2449FD010066C4BE /* Build configuration list for PBXProject "FavoriteArtists" */ = {
+		55398A7D2449FE8E0066C4BE /* Build configuration list for PBXProject "FavoriteArtists" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				55398A742449FD010066C4BE /* Debug */,
-				55398A752449FD010066C4BE /* Release */,
+				55398A992449FE960066C4BE /* Debug */,
+				55398A9A2449FE960066C4BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55398A762449FD010066C4BE /* Build configuration list for PBXNativeTarget "FavoriteArtists" */ = {
+		55398A9B2449FE960066C4BE /* Build configuration list for PBXNativeTarget "FavoriteArtists" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				55398A772449FD010066C4BE /* Debug */,
-				55398A782449FD010066C4BE /* Release */,
+				55398A9C2449FE960066C4BE /* Debug */,
+				55398A9D2449FE960066C4BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 55398A672449FD010066C4BE /* Project object */;
+	rootObject = 55398A7A2449FE8E0066C4BE /* Project object */;
 }

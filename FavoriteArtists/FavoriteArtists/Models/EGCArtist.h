@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface EGCArtist : NSObject
 
-@end
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic) int year;
+@property (nonatomic, copy)NSString *about;
 
-NS_ASSUME_NONNULL_END
+- (instancetype)initWithName:(NSString *)name
+                        year:(int)year
+                       about:(NSString *)about;
+
+@end

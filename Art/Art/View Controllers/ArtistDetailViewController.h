@@ -10,7 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ArtistDetailViewController : UIViewController
+@interface ArtistDetailViewController : UIViewController<UISearchBarDelegate,UISearchDisplayDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+
 
 @end
 

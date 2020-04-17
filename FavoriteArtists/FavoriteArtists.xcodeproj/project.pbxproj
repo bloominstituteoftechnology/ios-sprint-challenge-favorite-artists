@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		5C36CE992449FDAE00FDD240 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CE982449FDAE00FDD240 /* AppDelegate.m */; };
 		5C36CE9C2449FDAE00FDD240 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CE9B2449FDAE00FDD240 /* SceneDelegate.m */; };
-		5C36CE9F2449FDAE00FDD240 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CE9E2449FDAE00FDD240 /* ViewController.m */; };
 		5C36CEA22449FDAE00FDD240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CEA02449FDAE00FDD240 /* Main.storyboard */; };
 		5C36CEA42449FDAF00FDD240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CEA32449FDAF00FDD240 /* Assets.xcassets */; };
 		5C36CEA72449FDAF00FDD240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CEA52449FDAF00FDD240 /* LaunchScreen.storyboard */; };
 		5C36CEAA2449FDAF00FDD240 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEA92449FDAF00FDD240 /* main.m */; };
+		5C36CEB3244A01A500FDD240 /* EGCArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEB2244A01A500FDD240 /* EGCArtistsTableViewController.m */; };
+		5C36CEB7244A01C900FDD240 /* EGCArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEB6244A01C900FDD240 /* EGCArtistViewController.m */; };
+		5C36CEBD244A025A00FDD240 /* EGCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEBC244A025A00FDD240 /* EGCArtistController.m */; };
+		5C36CEC0244A028000FDD240 /* EGCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEBF244A028000FDD240 /* EGCArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +25,19 @@
 		5C36CE982449FDAE00FDD240 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5C36CE9A2449FDAE00FDD240 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		5C36CE9B2449FDAE00FDD240 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		5C36CE9D2449FDAE00FDD240 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5C36CE9E2449FDAE00FDD240 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5C36CEA12449FDAE00FDD240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C36CEA32449FDAF00FDD240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C36CEA62449FDAF00FDD240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C36CEA82449FDAF00FDD240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C36CEA92449FDAF00FDD240 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C36CEB1244A01A500FDD240 /* EGCArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtistsTableViewController.h; sourceTree = "<group>"; };
+		5C36CEB2244A01A500FDD240 /* EGCArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtistsTableViewController.m; sourceTree = "<group>"; };
+		5C36CEB5244A01C900FDD240 /* EGCArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtistViewController.h; sourceTree = "<group>"; };
+		5C36CEB6244A01C900FDD240 /* EGCArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtistViewController.m; sourceTree = "<group>"; };
+		5C36CEBB244A025A00FDD240 /* EGCArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtistController.h; sourceTree = "<group>"; };
+		5C36CEBC244A025A00FDD240 /* EGCArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtistController.m; sourceTree = "<group>"; };
+		5C36CEBE244A028000FDD240 /* EGCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtist.h; sourceTree = "<group>"; };
+		5C36CEBF244A028000FDD240 /* EGCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +70,57 @@
 		5C36CE962449FDAE00FDD240 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				5C36CEBA244A021B00FDD240 /* Model Controllers */,
+				5C36CEB9244A020B00FDD240 /* Models */,
+				5C36CEB0244A018000FDD240 /* View Controllers */,
 				5C36CE972449FDAE00FDD240 /* AppDelegate.h */,
 				5C36CE982449FDAE00FDD240 /* AppDelegate.m */,
 				5C36CE9A2449FDAE00FDD240 /* SceneDelegate.h */,
 				5C36CE9B2449FDAE00FDD240 /* SceneDelegate.m */,
-				5C36CE9D2449FDAE00FDD240 /* ViewController.h */,
-				5C36CE9E2449FDAE00FDD240 /* ViewController.m */,
-				5C36CEA02449FDAE00FDD240 /* Main.storyboard */,
+				5C36CEB8244A01FC00FDD240 /* Storyboards */,
 				5C36CEA32449FDAF00FDD240 /* Assets.xcassets */,
-				5C36CEA52449FDAF00FDD240 /* LaunchScreen.storyboard */,
 				5C36CEA82449FDAF00FDD240 /* Info.plist */,
 				5C36CEA92449FDAF00FDD240 /* main.m */,
 			);
 			path = FavoriteArtists;
+			sourceTree = "<group>";
+		};
+		5C36CEB0244A018000FDD240 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C36CEB1244A01A500FDD240 /* EGCArtistsTableViewController.h */,
+				5C36CEB2244A01A500FDD240 /* EGCArtistsTableViewController.m */,
+				5C36CEB5244A01C900FDD240 /* EGCArtistViewController.h */,
+				5C36CEB6244A01C900FDD240 /* EGCArtistViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5C36CEB8244A01FC00FDD240 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5C36CEA02449FDAE00FDD240 /* Main.storyboard */,
+				5C36CEA52449FDAF00FDD240 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5C36CEB9244A020B00FDD240 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C36CEBE244A028000FDD240 /* EGCArtist.h */,
+				5C36CEBF244A028000FDD240 /* EGCArtist.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C36CEBA244A021B00FDD240 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C36CEBB244A025A00FDD240 /* EGCArtistController.h */,
+				5C36CEBC244A025A00FDD240 /* EGCArtistController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C36CE9F2449FDAE00FDD240 /* ViewController.m in Sources */,
+				5C36CEB7244A01C900FDD240 /* EGCArtistViewController.m in Sources */,
 				5C36CE992449FDAE00FDD240 /* AppDelegate.m in Sources */,
 				5C36CEAA2449FDAF00FDD240 /* main.m in Sources */,
+				5C36CEB3244A01A500FDD240 /* EGCArtistsTableViewController.m in Sources */,
+				5C36CEC0244A028000FDD240 /* EGCArtist.m in Sources */,
+				5C36CEBD244A025A00FDD240 /* EGCArtistController.m in Sources */,
 				5C36CE9C2449FDAE00FDD240 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

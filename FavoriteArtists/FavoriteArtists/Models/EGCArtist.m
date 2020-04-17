@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  EGCArtist.m
 //  FavoriteArtists
 //
 //  Created by Enrique Gongora on 4/17/20.
 //  Copyright © 2020 Enrique Gongora. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "EGCArtist.h"
 
-@interface ViewController : UIViewController
-
+@implementation EGCArtist
 
 @end
-

@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)searchForArtist:(NSString *)searchTerm completion:(void (^)(CDGArtist *artist, NSError *error))completion;
 
-- (NSArray *)fetchFavoriteArtists;
+- (NSArray *)loadFavoriteArtists;
+
+- (void)saveToDirectory:(CDGArtist *)artist;
 
 @end
 

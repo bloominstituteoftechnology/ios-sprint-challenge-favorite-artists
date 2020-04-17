@@ -63,9 +63,55 @@ static NSString *const baserURLString = @"theaudiodb.com/api/v1/json/1/search.ph
     [task resume];
 }
 
-- (NSArray *)fetchFavoriteArtists {
-  
+
+- (void)saveToDirectory:(CDGArtist *)artist {
+    if (!artist) {
+        return;
+    }
+    NSData *data = [NSJSONSerialization dataWithJSONObject: [artist toDictionary]
+                                                   options:0
+                                                     error:nil];
+    NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
+                                                              inDomain:NSUserDomainMask
+                                                     appropriateForURL:nil
+                                                                create:YES
+                                                                 error:nil];
+    NSURL *url = [[directory URLByAppendingPathComponent:artist.artist]URLByAppendingPathExtension:@"json"];
+    [data writeToURL:url
+          atomically:YES];
 }
 
+
+//NSData *loadFile(NSString *filename, NSBundle *bundle) {
+//    NSString *basename = [filename stringByDeletingPathExtension];
+//    NSString *extension = [filename pathExtension];
+//
+//    NSString *path = [bundle pathForResource:basename ofType:extension];
+//    NSData *data = [NSData dataWithContentsOfFile:path];
+//    return data;
+//}
+
+- (NSArray *)loadFavoriteArtists{
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *dir = [path objectAtIndex:0];
+    NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:dir error:nil];
+    
+    NSMutableArray *artistsArray = [[NSMutableArray alloc] init];
+    
+    for (NSString *artist in filePaths) {
+        NSString *artistPath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", artist];
+        
+        NSURL *artistURL = [NSURL fileURLWithPath:artistPath];
+        NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
+        if (artistData == nil) {
+            NSLog(@"No artist data");
+        } else {
+            NSDictionary *artistDict = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
+            CDGArtist *artist = [[CDGArtist alloc] initWithDictionary:artistDict];
+            [artistsArray addObject:artist];
+        }
+    }
+    return artistsArray;
+}
 
 @end

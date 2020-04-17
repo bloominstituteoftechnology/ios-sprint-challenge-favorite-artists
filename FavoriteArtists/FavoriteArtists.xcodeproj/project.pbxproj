@@ -18,7 +18,7 @@
 		55398AA9244A029B0066C4BE /* KMLArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398AA8244A029B0066C4BE /* KMLArtistTableViewController.m */; };
 		55398AAC244A036C0066C4BE /* KMLArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398AAB244A036C0066C4BE /* KMLArtist.m */; };
 		55398AAF244A04FA0066C4BE /* KMLArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398AAE244A04FA0066C4BE /* KMLArtistController.m */; };
-		55398AB5244A09070066C4BE /* NSDateInterval+KMLArtist_NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398AB4244A09070066C4BE /* NSDateInterval+KMLArtist_NSJSONSerialization.m */; };
+		55398ABE244A0AED0066C4BE /* NSJSONSerialization+KMLArtist_.m in Sources */ = {isa = PBXBuildFile; fileRef = 55398ABD244A0AED0066C4BE /* NSJSONSerialization+KMLArtist_.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +42,8 @@
 		55398AAB244A036C0066C4BE /* KMLArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLArtist.m; sourceTree = "<group>"; };
 		55398AAD244A04FA0066C4BE /* KMLArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLArtistController.h; sourceTree = "<group>"; };
 		55398AAE244A04FA0066C4BE /* KMLArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMLArtistController.m; sourceTree = "<group>"; };
-		55398AB3244A09070066C4BE /* NSDateInterval+KMLArtist_NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateInterval+KMLArtist_NSJSONSerialization.h"; sourceTree = "<group>"; };
-		55398AB4244A09070066C4BE /* NSDateInterval+KMLArtist_NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateInterval+KMLArtist_NSJSONSerialization.m"; sourceTree = "<group>"; };
+		55398ABC244A0AED0066C4BE /* NSJSONSerialization+KMLArtist_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+KMLArtist_.h"; sourceTree = "<group>"; };
+		55398ABD244A0AED0066C4BE /* NSJSONSerialization+KMLArtist_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+KMLArtist_.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +127,8 @@
 		55398AB2244A08A10066C4BE /* Catergory */ = {
 			isa = PBXGroup;
 			children = (
-				55398AB3244A09070066C4BE /* NSDateInterval+KMLArtist_NSJSONSerialization.h */,
-				55398AB4244A09070066C4BE /* NSDateInterval+KMLArtist_NSJSONSerialization.m */,
+				55398ABC244A0AED0066C4BE /* NSJSONSerialization+KMLArtist_.h */,
+				55398ABD244A0AED0066C4BE /* NSJSONSerialization+KMLArtist_.m */,
 			);
 			path = Catergory;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 				55398AAC244A036C0066C4BE /* KMLArtist.m in Sources */,
 				55398A982449FE960066C4BE /* main.m in Sources */,
 				55398AA3244A02610066C4BE /* KMLArtistSearchViewController.m in Sources */,
-				55398AB5244A09070066C4BE /* NSDateInterval+KMLArtist_NSJSONSerialization.m in Sources */,
+				55398ABE244A0AED0066C4BE /* NSJSONSerialization+KMLArtist_.m in Sources */,
 				55398A8A2449FE8E0066C4BE /* SceneDelegate.m in Sources */,
 				55398AA9244A029B0066C4BE /* KMLArtistTableViewController.m in Sources */,
 				55398AAF244A04FA0066C4BE /* KMLArtistController.m in Sources */,

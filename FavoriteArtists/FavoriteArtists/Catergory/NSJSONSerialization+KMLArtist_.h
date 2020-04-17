@@ -1,5 +1,5 @@
 //
-//  NSDateInterval+KMLArtist_NSJSONSerialization.h
+//  NSJSONSerialization+KMLArtist_.h
 //  FavoriteArtists
 //
 //  Created by Keri Levesque on 4/17/20.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSDateInterval (KMLArtist_NSJSONSerialization)
+@interface NSJSONSerialization (KMLArtist_)
 
 @end
 

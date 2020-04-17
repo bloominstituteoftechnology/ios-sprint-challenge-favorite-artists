@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CDGArtistController : NSObject
 
+@property (nonatomic, copy) NSMutableArray *privateArtistArray;
+
 @end
 
 NS_ASSUME_NONNULL_END

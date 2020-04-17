@@ -42,23 +42,25 @@ static NSString const *biographyKey = @"strBiographyEn";
 //}
 
 - (instancetype)initWithDictionary:(NSDictionary *)artistDictionary{
-    
+    self = [super init];
+    if (self) {
+        
     NSString *artistString = artistDictionary[artistKey];
     NSNumber *formedYear = artistDictionary[formedYearKey];
     NSString *biography = artistDictionary[biographyKey];
     
     NSInteger yearFormedInt;
-    if ([formedYear isKindOfClass:[NSNull null]]) {
+    if ([formedYear isKindOfClass:[NSNull class]]) {
         NSLog(@"No founding year");
         yearFormedInt = 0;
     } else {
         yearFormedInt = [formedYear integerValue];
     }
-    
-    
     self = [self initWithArtist:artistString
                      formedYear:formedYear.integerValue
                       biography:biography];
+        
+    }
     return self;
 }
 

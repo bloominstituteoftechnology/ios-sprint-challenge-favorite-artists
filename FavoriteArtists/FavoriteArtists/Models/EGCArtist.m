@@ -8,6 +8,8 @@
 
 #import "EGCArtist.h"
 
+@class EGCArtist;
+
 @implementation EGCArtist
 
 - (instancetype)initWithName:(NSString *)name

@@ -17,6 +17,7 @@
 		5C36CEBD244A025A00FDD240 /* EGCArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEBC244A025A00FDD240 /* EGCArtistController.m */; };
 		5C36CEC0244A028000FDD240 /* EGCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEBF244A028000FDD240 /* EGCArtist.m */; };
 		5C36CEE9244A128A00FDD240 /* EGCArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEE8244A128A00FDD240 /* EGCArtistDetailViewController.m */; };
+		5C36CEF6244A1BA800FDD240 /* EGCArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CEF5244A1BA800FDD240 /* EGCArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		5C36CEBF244A028000FDD240 /* EGCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtist.m; sourceTree = "<group>"; };
 		5C36CEE7244A128A00FDD240 /* EGCArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGCArtistDetailViewController.h; sourceTree = "<group>"; };
 		5C36CEE8244A128A00FDD240 /* EGCArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGCArtistDetailViewController.m; sourceTree = "<group>"; };
+		5C36CEF4244A1BA800FDD240 /* EGCArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGCArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		5C36CEF5244A1BA800FDD240 /* EGCArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EGCArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 			children = (
 				5C36CEBE244A028000FDD240 /* EGCArtist.h */,
 				5C36CEBF244A028000FDD240 /* EGCArtist.m */,
+				5C36CEF4244A1BA800FDD240 /* EGCArtist+NSJSONSerialization.h */,
+				5C36CEF5244A1BA800FDD240 /* EGCArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				5C36CEB3244A01A500FDD240 /* EGCArtistsTableViewController.m in Sources */,
 				5C36CEC0244A028000FDD240 /* EGCArtist.m in Sources */,
 				5C36CEBD244A025A00FDD240 /* EGCArtistController.m in Sources */,
+				5C36CEF6244A1BA800FDD240 /* EGCArtist+NSJSONSerialization.m in Sources */,
 				5C36CEE9244A128A00FDD240 /* EGCArtistDetailViewController.m in Sources */,
 				5C36CE9C2449FDAE00FDD240 /* SceneDelegate.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import "EGCArtistController.h"
 #import "EGCArtist.h"
+#import "EGCArtist+NSJSONSerialization.h"
 
 @interface EGCArtistController() {}
 

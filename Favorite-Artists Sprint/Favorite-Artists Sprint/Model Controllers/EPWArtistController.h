@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EPWArtist+NSJSONSerialization.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class EPWArtist;
+
 @interface EPWArtistController : NSObject
+
+- (void)searchForArtist:(NSString *)searchTerm completion:(void (^)(EPWArtist *artist, NSError *error))completion;
+
+- (NSArray *)fetchFavoritedArtists;
 
 @end
 

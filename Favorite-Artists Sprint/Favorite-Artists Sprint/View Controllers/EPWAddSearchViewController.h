@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EPWArtist.h"
+#import "EPWArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+@protocol SearchDetailDelegate <NSObject>
+
+-(void)didSave:(EPWArtist *)artist;
+
+@end
 
 @interface EPWAddSearchViewController : UIViewController
 

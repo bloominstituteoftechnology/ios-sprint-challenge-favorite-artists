@@ -8,8 +8,12 @@
 
 #import "EPWFavoriteArtistsTableViewController.h"
 #import "EPWArtist.h"
+#import "EPWArtistController.h"
 
 @interface EPWFavoriteArtistsTableViewController ()
+
+@property (nonatomic) EPWArtistController *artistController;
+@property NSMutableArray *favoritedArtists;
 
 @end
 
@@ -17,12 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 #pragma mark - Table view data source
@@ -81,7 +80,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -89,6 +88,5 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EPWAddSearchViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EPWFavoriteArtistsTableViewController : UITableViewController
+@interface EPWFavoriteArtistsTableViewController : UITableViewController <SearchDetailDelegate>
 
 @end
 

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hzb-0D-bic">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorite Artists-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorite Artists" id="7sC-mK-UzY">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="r13-HY-1qe">
+                            <connections>
+                                <segue destination="mXU-MZ-a97" kind="show" id="qiY-DR-2gw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--Add New Artist-->
+        <scene sceneID="d7j-uL-e96">
+            <objects>
+                <viewController id="mXU-MZ-a97" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZGX-wq-yKH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Justin Bieber..." translatesAutoresizingMaskIntoConstraints="NO" id="Nt1-i4-YXp">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fwv-hm-3qH">
+                                <rect key="frame" x="8" y="394" width="398" height="476"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="7wA-ZV-RaE">
+                                <rect key="frame" x="16" y="228" width="382" height="86"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weezer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5f-xC-Z5a">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Le-oy-381">
+                                        <rect key="frame" x="0.0" y="59.5" width="382" height="26.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Nt1-i4-YXp" firstAttribute="top" secondItem="OdK-1I-9vJ" secondAttribute="top" id="C8S-08-ewi"/>
+                            <constraint firstItem="Nt1-i4-YXp" firstAttribute="leading" secondItem="OdK-1I-9vJ" secondAttribute="leading" id="CVj-AO-uYC"/>
+                            <constraint firstItem="fwv-hm-3qH" firstAttribute="top" secondItem="7wA-ZV-RaE" secondAttribute="bottom" constant="80" id="END-Zc-5pM"/>
+                            <constraint firstItem="7wA-ZV-RaE" firstAttribute="leading" secondItem="OdK-1I-9vJ" secondAttribute="leading" constant="16" id="LqR-fy-3K8"/>
+                            <constraint firstItem="7wA-ZV-RaE" firstAttribute="top" secondItem="Nt1-i4-YXp" secondAttribute="bottom" constant="32" id="PVd-Qd-ivc"/>
+                            <constraint firstItem="Nt1-i4-YXp" firstAttribute="trailing" secondItem="OdK-1I-9vJ" secondAttribute="trailing" id="QsG-pr-hBF"/>
+                            <constraint firstItem="fwv-hm-3qH" firstAttribute="leading" secondItem="OdK-1I-9vJ" secondAttribute="leading" constant="8" id="dzY-UR-wFp"/>
+                            <constraint firstItem="fwv-hm-3qH" firstAttribute="bottom" secondItem="OdK-1I-9vJ" secondAttribute="bottom" constant="8" id="iLL-63-dJ1"/>
+                            <constraint firstItem="OdK-1I-9vJ" firstAttribute="trailing" secondItem="7wA-ZV-RaE" secondAttribute="trailing" constant="16" id="lag-QD-ZMx"/>
+                            <constraint firstItem="OdK-1I-9vJ" firstAttribute="trailing" secondItem="fwv-hm-3qH" secondAttribute="trailing" constant="8" id="y2H-MI-IEw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OdK-1I-9vJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Artist" id="qmW-ic-nwz">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="8nS-sZ-lQC"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuf-v7-nTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2142.0289855072465" y="130.58035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vII-Os-f9F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hzb-0D-bic" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ryo-UG-UhL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="owB-Kg-3Bv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvY-D8-36z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

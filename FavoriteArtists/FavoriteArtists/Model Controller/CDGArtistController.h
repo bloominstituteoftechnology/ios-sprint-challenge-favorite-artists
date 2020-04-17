@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CDGArtistController : NSObject
 
-@property (nonatomic, copy) NSMutableArray *privateArtistArray;
+- (void)searchForArtist:(NSString *)searchTerm completion:(void (^)(CDGArtist *artist, NSError *error))completion;
+
+- (NSArray *)fetchFavoriteArtists;
 
 @end
 

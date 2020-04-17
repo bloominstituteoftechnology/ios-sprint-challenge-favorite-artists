@@ -17,7 +17,6 @@
 		727C593D244A03E40056ED1C /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C593C244A03E40056ED1C /* ArtistDetailViewController.m */; };
 		727C5940244A059C0056ED1C /* CDGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C593F244A059C0056ED1C /* CDGArtist.m */; };
 		727C5948244A16FB0056ED1C /* CDGArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C5947244A16FB0056ED1C /* CDGArtistController.m */; };
-		727C594B244A17470056ED1C /* CDGArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C594A244A17470056ED1C /* CDGArtistFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +39,6 @@
 		727C593F244A059C0056ED1C /* CDGArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDGArtist.m; sourceTree = "<group>"; };
 		727C5946244A16FB0056ED1C /* CDGArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDGArtistController.h; sourceTree = "<group>"; };
 		727C5947244A16FB0056ED1C /* CDGArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDGArtistController.m; sourceTree = "<group>"; };
-		727C5949244A17470056ED1C /* CDGArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDGArtistFetcher.h; sourceTree = "<group>"; };
-		727C594A244A17470056ED1C /* CDGArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDGArtistFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +75,6 @@
 				727C59362449FFB80056ED1C /* Helpers */,
 				727C59352449FFAC0056ED1C /* Model Controller */,
 				727C59342449FFA40056ED1C /* Model */,
-				727C5942244A07310056ED1C /* Networking */,
 				727C59332449FF9C0056ED1C /* View Controllers */,
 				727C59322449FF500056ED1C /* Resources */,
 				727C592B2449FEFA0056ED1C /* main.m */,
@@ -135,15 +131,6 @@
 				727C59372449FFCE0056ED1C /* CDGFileHelper.h */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		727C5942244A07310056ED1C /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				727C5949244A17470056ED1C /* CDGArtistFetcher.h */,
-				727C594A244A17470056ED1C /* CDGArtistFetcher.m */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +206,6 @@
 				727C593D244A03E40056ED1C /* ArtistDetailViewController.m in Sources */,
 				727C5940244A059C0056ED1C /* CDGArtist.m in Sources */,
 				727C593A244A03CB0056ED1C /* ArtistTableViewController.m in Sources */,
-				727C594B244A17470056ED1C /* CDGArtistFetcher.m in Sources */,
 				727C591B2449FEF90056ED1C /* AppDelegate.m in Sources */,
 				727C592C2449FEFA0056ED1C /* main.m in Sources */,
 				727C591E2449FEF90056ED1C /* SceneDelegate.m in Sources */,

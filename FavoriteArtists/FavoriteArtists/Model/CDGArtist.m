@@ -48,8 +48,8 @@ static NSString const *biographyKey = @"strBiographyEn";
     NSString *artistString = artistDictionary[artistKey];
     NSNumber *formedYear = artistDictionary[formedYearKey];
     NSString *biography = artistDictionary[biographyKey];
-    
     NSInteger yearFormedInt;
+        
     if ([formedYear isKindOfClass:[NSNull class]]) {
         NSLog(@"No founding year");
         yearFormedInt = 0;
@@ -59,7 +59,6 @@ static NSString const *biographyKey = @"strBiographyEn";
     self = [self initWithArtist:artistString
                      formedYear:formedYear.integerValue
                       biography:biography];
-        
     }
     return self;
 }

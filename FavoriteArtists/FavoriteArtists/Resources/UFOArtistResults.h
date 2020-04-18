@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UFOArtistResults : NSObject
 
-@property (nonatomic, readonly, copy) NSArray<UFOArtist *> *artists;
+@property (nonatomic, readonly, copy) NSMutableArray<UFOArtist *> *artists;
 
 - (instancetype)initWithArtists:(NSMutableArray<UFOArtist *> *)artists;
 - (instancetype)initWithDictionary:(NSMutableDictionary *)dictionary;

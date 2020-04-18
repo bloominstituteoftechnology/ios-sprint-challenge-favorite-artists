@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		390350322167B59F00A249E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 390350312167B59F00A249E3 /* AppDelegate.m */; };
+		390350382167B59F00A249E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390350362167B59F00A249E3 /* Main.storyboard */; };
+		3903503A2167B59F00A249E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 390350392167B59F00A249E3 /* Assets.xcassets */; };
+		3903503D2167B59F00A249E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3903503B2167B59F00A249E3 /* LaunchScreen.storyboard */; };
+		390350402167B59F00A249E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3903503F2167B59F00A249E3 /* main.m */; };
+		3903504D2167B6B400A249E3 /* LTBLyric.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3903504B2167B6B400A249E3 /* LTBLyric.xcdatamodeld */; };
+		390350592167B7E300A249E3 /* LTBCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 390350582167B7E300A249E3 /* LTBCoreDataStack.m */; };
+		390350622167BC3800A249E3 /* LTBLyric+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 390350612167BC3800A249E3 /* LTBLyric+Convenience.m */; };
+		390350662167BE4C00A249E3 /* LTBLyricController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390350652167BE4C00A249E3 /* LTBLyricController.m */; };
+		390350692167C23000A249E3 /* LTBLyricFinderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390350682167C23000A249E3 /* LTBLyricFinderTableViewController.m */; };
+		3903506C2167C24900A249E3 /* LTBLyricsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3903506B2167C24900A249E3 /* LTBLyricsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3903502D2167B59F00A249E3 /* LyricFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		390350302167B59F00A249E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		390350312167B59F00A249E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		390350372167B59F00A249E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		390350392167B59F00A249E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3903503C2167B59F00A249E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3903503E2167B59F00A249E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3903503F2167B59F00A249E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3903504C2167B6B400A249E3 /* LTBLyric.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LTBLyric.xcdatamodel; sourceTree = "<group>"; };
+		390350572167B7E300A249E3 /* LTBCoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBCoreDataStack.h; sourceTree = "<group>"; };
+		390350582167B7E300A249E3 /* LTBCoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBCoreDataStack.m; sourceTree = "<group>"; };
+		390350602167BC3800A249E3 /* LTBLyric+Convenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LTBLyric+Convenience.h"; sourceTree = "<group>"; };
+		390350612167BC3800A249E3 /* LTBLyric+Convenience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LTBLyric+Convenience.m"; sourceTree = "<group>"; };
+		390350642167BE4C00A249E3 /* LTBLyricController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBLyricController.h; sourceTree = "<group>"; };
+		390350652167BE4C00A249E3 /* LTBLyricController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBLyricController.m; sourceTree = "<group>"; };
+		390350672167C23000A249E3 /* LTBLyricFinderTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBLyricFinderTableViewController.h; sourceTree = "<group>"; };
+		390350682167C23000A249E3 /* LTBLyricFinderTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBLyricFinderTableViewController.m; sourceTree = "<group>"; };
+		3903506A2167C24900A249E3 /* LTBLyricsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBLyricsViewController.h; sourceTree = "<group>"; };
+		3903506B2167C24900A249E3 /* LTBLyricsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBLyricsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3903502A2167B59F00A249E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		390350242167B59F00A249E3 = {
+			isa = PBXGroup;
+			children = (
+				3903502F2167B59F00A249E3 /* LyricFinder */,
+				3903502E2167B59F00A249E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3903502E2167B59F00A249E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3903502D2167B59F00A249E3 /* LyricFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3903502F2167B59F00A249E3 /* LyricFinder */ = {
+			isa = PBXGroup;
+			children = (
+				390350462167B5BB00A249E3 /* App Lifecycle */,
+				3903504A2167B67A00A249E3 /* Model */,
+				390350632167BDE900A249E3 /* Model Controller */,
+				390350472167B5C700A249E3 /* View Controllers */,
+				390350482167B5D000A249E3 /* Storyboards */,
+				390350492167B5D900A249E3 /* Resources */,
+			);
+			path = LyricFinder;
+			sourceTree = "<group>";
+		};
+		390350462167B5BB00A249E3 /* App Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				390350302167B59F00A249E3 /* AppDelegate.h */,
+				390350312167B59F00A249E3 /* AppDelegate.m */,
+			);
+			path = "App Lifecycle";
+			sourceTree = "<group>";
+		};
+		390350472167B5C700A249E3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				390350672167C23000A249E3 /* LTBLyricFinderTableViewController.h */,
+				390350682167C23000A249E3 /* LTBLyricFinderTableViewController.m */,
+				3903506A2167C24900A249E3 /* LTBLyricsViewController.h */,
+				3903506B2167C24900A249E3 /* LTBLyricsViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		390350482167B5D000A249E3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				390350362167B59F00A249E3 /* Main.storyboard */,
+				3903503B2167B59F00A249E3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		390350492167B5D900A249E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				390350392167B59F00A249E3 /* Assets.xcassets */,
+				3903503E2167B59F00A249E3 /* Info.plist */,
+				3903503F2167B59F00A249E3 /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3903504A2167B67A00A249E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3903504B2167B6B400A249E3 /* LTBLyric.xcdatamodeld */,
+				390350602167BC3800A249E3 /* LTBLyric+Convenience.h */,
+				390350612167BC3800A249E3 /* LTBLyric+Convenience.m */,
+				390350572167B7E300A249E3 /* LTBCoreDataStack.h */,
+				390350582167B7E300A249E3 /* LTBCoreDataStack.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		390350632167BDE900A249E3 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				390350642167BE4C00A249E3 /* LTBLyricController.h */,
+				390350652167BE4C00A249E3 /* LTBLyricController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3903502C2167B59F00A249E3 /* LyricFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 390350432167B59F00A249E3 /* Build configuration list for PBXNativeTarget "LyricFinder" */;
+			buildPhases = (
+				390350292167B59F00A249E3 /* Sources */,
+				3903502A2167B59F00A249E3 /* Frameworks */,
+				3903502B2167B59F00A249E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LyricFinder;
+			productName = LyricFinder;
+			productReference = 3903502D2167B59F00A249E3 /* LyricFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		390350252167B59F00A249E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LTB;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Linh Bouniol";
+				TargetAttributes = {
+					3903502C2167B59F00A249E3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 390350282167B59F00A249E3 /* Build configuration list for PBXProject "LyricFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 390350242167B59F00A249E3;
+			productRefGroup = 3903502E2167B59F00A249E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3903502C2167B59F00A249E3 /* LyricFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3903502B2167B59F00A249E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3903503D2167B59F00A249E3 /* LaunchScreen.storyboard in Resources */,
+				3903503A2167B59F00A249E3 /* Assets.xcassets in Resources */,
+				390350382167B59F00A249E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		390350292167B59F00A249E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				390350662167BE4C00A249E3 /* LTBLyricController.m in Sources */,
+				390350692167C23000A249E3 /* LTBLyricFinderTableViewController.m in Sources */,
+				3903504D2167B6B400A249E3 /* LTBLyric.xcdatamodeld in Sources */,
+				3903506C2167C24900A249E3 /* LTBLyricsViewController.m in Sources */,
+				390350402167B59F00A249E3 /* main.m in Sources */,
+				390350622167BC3800A249E3 /* LTBLyric+Convenience.m in Sources */,
+				390350322167B59F00A249E3 /* AppDelegate.m in Sources */,
+				390350592167B7E300A249E3 /* LTBCoreDataStack.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		390350362167B59F00A249E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				390350372167B59F00A249E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3903503B2167B59F00A249E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3903503C2167B59F00A249E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		390350412167B59F00A249E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		390350422167B59F00A249E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		390350442167B59F00A249E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39ZVY2XGME;
+				INFOPLIST_FILE = "$(SRCROOT)/LyricFinder/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linhbouniol.LyricFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		390350452167B59F00A249E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39ZVY2XGME;
+				INFOPLIST_FILE = "$(SRCROOT)/LyricFinder/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linhbouniol.LyricFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		390350282167B59F00A249E3 /* Build configuration list for PBXProject "LyricFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				390350412167B59F00A249E3 /* Debug */,
+				390350422167B59F00A249E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		390350432167B59F00A249E3 /* Build configuration list for PBXNativeTarget "LyricFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				390350442167B59F00A249E3 /* Debug */,
+				390350452167B59F00A249E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3903504B2167B6B400A249E3 /* LTBLyric.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3903504C2167B6B400A249E3 /* LTBLyric.xcdatamodel */,
+			);
+			currentVersion = 3903504C2167B6B400A249E3 /* LTBLyric.xcdatamodel */;
+			path = LTBLyric.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 390350252167B59F00A249E3 /* Project object */;
+}

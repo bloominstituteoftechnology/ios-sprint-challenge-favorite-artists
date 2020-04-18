@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TeD-gp-eAi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add New Artist-->
+        <scene sceneID="d7j-uL-e96">
+            <objects>
+                <viewController id="mXU-MZ-a97" customClass="NPTArtistDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZGX-wq-yKH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Justin Bieber..." translatesAutoresizingMaskIntoConstraints="NO" id="Nt1-i4-YXp">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fwv-hm-3qH">
+                                <rect key="frame" x="8" y="434" width="398" height="436"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="7wA-ZV-RaE">
+                                <rect key="frame" x="16" y="228" width="382" height="126"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5f-xC-Z5a">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Le-oy-381">
+                                        <rect key="frame" x="0.0" y="76" width="382" height="50"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Nt1-i4-YXp" firstAttribute="top" secondItem="OdK-1I-9vJ" secondAttribute="top" id="C8S-08-ewi"/>
+                            <constraint firstItem="Nt1-i4-YXp" firstAttribute="leading" secondItem="OdK-1I-9vJ" secondAttribute="leading" id="CVj-AO-uYC"/>
+                            <constraint firstItem="fwv-hm-3qH" firstAttribute="top" secondItem="7wA-ZV-RaE" secondAttribute="bottom" constant="80" id="END-Zc-5pM"/>
+                            <constraint firstItem="7wA-ZV-RaE" firstAttribute="leading" secondItem="OdK-1I-9vJ" secondAttribute="leading" constant="16" id="LqR-fy-3K8"/>
+                            <constraint firstItem="7wA-ZV-RaE" firstAttribute="top" secondItem="Nt1-i4-YXp" secondAttribute="bottom" constant="32" id="PVd-Qd-ivc"/>
+                            <constraint firstItem="Nt1-i4-YXp" firstAttribute="trailing" secondItem="OdK-1I-9vJ" secondAttribute="trailing" id="QsG-pr-hBF"/>
+                            <constraint firstItem="fwv-hm-3qH" firstAttribute="leading" secondItem="OdK-1I-9vJ" secondAttribute="leading" constant="8" id="dzY-UR-wFp"/>
+                            <constraint firstItem="fwv-hm-3qH" firstAttribute="bottom" secondItem="OdK-1I-9vJ" secondAttribute="bottom" constant="8" id="iLL-63-dJ1"/>
+                            <constraint firstItem="OdK-1I-9vJ" firstAttribute="trailing" secondItem="7wA-ZV-RaE" secondAttribute="trailing" constant="16" id="lag-QD-ZMx"/>
+                            <constraint firstItem="OdK-1I-9vJ" firstAttribute="trailing" secondItem="fwv-hm-3qH" secondAttribute="trailing" constant="8" id="y2H-MI-IEw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OdK-1I-9vJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Artist" id="qmW-ic-nwz">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="8nS-sZ-lQC">
+                            <connections>
+                                <action selector="savePressed:" destination="mXU-MZ-a97" id="eeP-NH-VvK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="g5f-xC-Z5a" id="zf2-eU-F6X"/>
+                        <outlet property="biographyTextView" destination="fwv-hm-3qH" id="yjj-Wz-uTW"/>
+                        <outlet property="searchBar" destination="Nt1-i4-YXp" id="jsI-ZG-JBH"/>
+                        <outlet property="yearFormedLabel" destination="5Le-oy-381" id="W8t-eV-sH6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuf-v7-nTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2751" y="100"/>
+        </scene>
+        <!--Favorite Artists-->
+        <scene sceneID="san-OJ-GEm">
+            <objects>
+                <tableViewController id="CCn-sK-n84" customClass="NPTFavoriteArtistTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VSr-ei-sX0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArtCell" id="NbL-YI-Ard">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NbL-YI-Ard" id="q6M-H0-8P0">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mXU-MZ-a97" kind="show" identifier="CellSegue" id="c54-JZ-WnC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CCn-sK-n84" id="J5X-jP-ZvQ"/>
+                            <outlet property="delegate" destination="CCn-sK-n84" id="DmK-K3-U9e"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorite Artists" id="fJP-YE-5we">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="oPK-6F-hXW">
+                            <connections>
+                                <action selector="addPressed:" destination="CCn-sK-n84" id="IXz-Zg-5ES"/>
+                                <segue destination="mXU-MZ-a97" kind="show" identifier="PlusButtonSegue" id="eIv-UP-Gyx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5u-ab-m1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985.5072463768117" y="100.44642857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wXU-Vy-DKU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TeD-gp-eAi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HwY-6k-8JQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CCn-sK-n84" kind="relationship" relationship="rootViewController" id="S0M-Gg-rCt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abj-65-lYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.3623188405797" y="100.44642857142857"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="c54-JZ-WnC"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

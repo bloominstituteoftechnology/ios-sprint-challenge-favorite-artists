@@ -21,8 +21,6 @@
 - (instancetype)initWithName:(NSString *)name biography:(NSString *)biography yearFormed:(int)yearFormed;
 
 
-
-
 @end
 
 

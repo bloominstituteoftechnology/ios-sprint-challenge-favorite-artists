@@ -13,7 +13,7 @@
 
 @interface NPTArtistDetailViewController ()
 
-
+//MARK:- Outlets
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
@@ -24,29 +24,28 @@
 
 @implementation NPTArtistDetailViewController
 
-
-
-
-- (IBAction)savePressed:(UIBarButtonItem *)sender {
-  
+- (IBAction)savePressed:(UIBarButtonItem *)sender
+{
         [self.artistController saveArtist:self.artist];
         [self.navigationController popViewControllerAnimated:YES];
-    
-  
 }
+//MARK:- Life Cycle
 
-- (void)viewDidLoad {
-    
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    [self updateViews];
     
+    if (_artist)
+    {
+        [self updateViews];
+    }
     [self.searchBar becomeFirstResponder];
     [self.searchBar setShowsScopeBar:YES];
     _searchBar.delegate = self;
-
+ 
 }
 
-
+//MARK:- Methods
 - (void)updateViews {
     self.navigationItem.title = self.artist.name;
     self.artistNameLabel.text = self.artist.name;

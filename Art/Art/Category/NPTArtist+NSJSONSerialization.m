@@ -10,22 +10,19 @@
 
 @implementation NPTArtist (NSJSONSerialization)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
     NSString *name = dictionary[@"strArtist"];
     NSString *bio = dictionary[@"strBiographyEN"];
     NSLog(@"%@", dictionary[@"intFormedYear"]);
-    NSString *yearNumber = dictionary[@"intFormedYear"];
-    if ([yearNumber isKindOfClass:[NSString class]] || [yearNumber isKindOfClass:[NSNumber class]]) {
-        NSLog(@"%@", yearNumber);
-        int year = [yearNumber intValue];
-        return [self initWithName:name biography:bio yearFormed:year];
-    } else {
-        int year = 0;
-        return [self initWithName:name biography:bio yearFormed:year];
-    }
+    NSNumber *yearNumber = dictionary[@"intFormedYear"];
+    
+    return [self initWithName:name biography:bio yearFormed:yearNumber.intValue];
+    
 }
 
-- (NSDictionary *)toDictionary {
+- (NSDictionary *)toDictionary
+{
     NSNumber *yearNum = [NSNumber numberWithInt:self.yearFormed];
     NSDictionary *dictionary = @{
         @"strArtist" : self.name,

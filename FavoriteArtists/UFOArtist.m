@@ -11,20 +11,16 @@
 @implementation UFOArtist
 
 - (instancetype)initWithName:(NSString *)name
-                        yearFormed:(int)yearFormed
-                   artistBiography:(NSString *)artistBiography {
+                        yearFormed:(int long)yearFormed
+                   biography:(NSString *)biography {
     
     self = [super init];
     if (self) {
         _name = [name copy];
         _yearFormed = yearFormed;
-        _artistBiography = [artistBiography copy];
+        _biography = [biography copy];
     }
     return self;
-}
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    NSDictionary *artists = dictionary[@"artistst"];
 }
 
 @end

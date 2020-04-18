@@ -13,15 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UFOArtist : NSObject
 
 // MARK: - Properties
-@property (nonatomic, readonly, copy) NSString *name;
-@property (nonatomic, readonly) int yearFormed;
-@property (nonatomic, readonly, copy)NSString *artistBiography;
+@property (nonatomic, copy, readonly) NSString *name;
+@property (nonatomic, copy, readonly) NSString *biography;
+@property (nonatomic, readonly) NSInteger yearFormed;
 
 - (instancetype)initWithName:(NSString *)name
-                  yearFormed:(int)yearFormed
-                   artistBiography:(NSString *)artistBiography;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+                  yearFormed:(NSInteger)yearFormed
+                   biography:(NSString *)biography;
 
 @end
 

@@ -10,15 +10,15 @@
 
 @class UFOArtist;
 
-typedef void (^UFOAPIControllerCompletionBlock)(NSArray<UFOArtist *> * _Nullable artist, NSError * _Nullable error);
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UFOAPIController : NSObject
 
-@property (nonatomic, readonly, copy) NSArray<UFOArtist *> *artists;
+@property (nonatomic, readonly, copy) NSMutableArray<UFOArtist *> *artists;
 
-- (void)searchArtistWithName:(NSString *) name completionBlock: (UFOAPIControllerCompletionBlock)completionBlock;
+- (void)searchArtistWithStrArtist:(NSString *) strArtist completion:(void(^)(UFOArtist *))completion;
+- (void)addArtist:(UFOArtist *)artist;
+- (void)saveArtists;
 
 @end
 

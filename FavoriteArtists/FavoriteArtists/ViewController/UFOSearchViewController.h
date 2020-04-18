@@ -11,10 +11,14 @@
 @class UFOArtist;
 @class UFOAPIController;
 
-@interface UFOSearchViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
+
+@interface UFOSearchViewController : UIViewController <UISearchBarDelegate>
 
 @property (nonatomic, strong) UFOAPIController *apiController;
 @property (nonatomic, strong) UFOArtist *artist;
 
 @end
+
+NS_ASSUME_NONNULL_END
 

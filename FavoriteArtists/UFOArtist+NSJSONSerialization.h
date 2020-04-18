@@ -6,14 +6,14 @@
 //  Copyright © 2020 Ufuk Türközü. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
-
-
 #import "UFOArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UFOArtist (NSJSONSerialization)
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)toDictionary;
 
 @end
 

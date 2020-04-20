@@ -36,9 +36,14 @@
 }
 
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
+    NSData *data = [NSJSONSerialization dataWithJSONObject: [self.artist toDictionary] options:0 error:nil];
+    NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+    NSURL *url = [[directory URLByAppendingPathComponent:self.artist.artist] URLByAppendingPathExtension: @"json"];
     
-}
+    [data writeToURL:url atomically:YES];
 
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (void)updateViews {
     if (self.artist != nil) {
@@ -69,21 +74,6 @@
     }];
     
     [self.searchBar endEditing:YES];
-}
-
-- (IBAction)savePressed:(id)sender {
-    if (_artist == nil) {
-        return;
-    }
-    
-    NSData *data = [NSJSONSerialization dataWithJSONObject: [self.artist toDictionary] options:0 error:nil];
-    NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
-    NSURL *url = [[directory URLByAppendingPathComponent:self.artist.artist] URLByAppendingPathExtension: @"json"];
-    
-    [data writeToURL:url atomically:YES];
-
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    
 }
 
 @end

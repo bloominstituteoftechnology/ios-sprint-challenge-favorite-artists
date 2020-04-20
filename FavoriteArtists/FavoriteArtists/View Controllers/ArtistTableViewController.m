@@ -19,7 +19,6 @@
 
 @implementation ArtistTableViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -37,7 +36,6 @@
     return self.favoriteArtistsArray.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
@@ -48,7 +46,6 @@
     
     return cell;
 }
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     

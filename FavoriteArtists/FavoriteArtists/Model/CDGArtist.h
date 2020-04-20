@@ -10,8 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CDGArtist : NSObject
-
+@interface CDGArtist: NSObject
 
 @property (nonatomic, readonly, copy) NSString *artist;
 @property (nonatomic, readonly) NSInteger formedYear;
@@ -20,12 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithArtist:(NSString *)artist
                     formedYear:(NSInteger)formedYear
                      biography:(NSString *)biography;
-
-//- (instancetype)initWithArray:(NSArray *)artistArray;
-
-- (instancetype)initWithDictionary: (NSDictionary *)artistDictionary;
-
--(NSDictionary *)toDictionary;
 
 @end
 

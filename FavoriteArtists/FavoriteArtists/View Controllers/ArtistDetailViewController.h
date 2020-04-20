@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistDetailViewController : UIViewController <UISearchBarDelegate>
 
+@property (nonatomic) CDGArtistController *artistController;
+@property (nonatomic) CDGArtist *artist;
+
 - (void)updateViews;
 
 @end

@@ -9,21 +9,36 @@
 #import "ArtistTableViewController.h"
 #import "CDGArtist.h"
 #import "CDGArtistController.h"
+#import "ArtistDetailViewController.h"
 
 @interface ArtistTableViewController ()
 
 @property (nonatomic, readonly) CDGArtistController *artistController;
-@property NSMutableArray *favoriteArtistsArray;
 
 @end
 
 @implementation ArtistTableViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _artistController = [[CDGArtistController alloc] init];
+    }
+    return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (_artistController.artistsArray){
+    [self.tableView reloadData];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     NSArray *loadedArtists = [self.artistController loadFavoriteArtists];
-    self.favoriteArtistsArray = [[NSMutableArray alloc]initWithArray:loadedArtists];
 }
 
 #pragma mark - Table view data source
@@ -33,15 +48,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.favoriteArtistsArray.count;
+    return self.artistController.artistsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    CDGArtist *artistName = self.favoriteArtistsArray[indexPath.row];
-    cell.textLabel.text = artistName;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in: %ld", (long)artistName.formedYear];
+    CDGArtist *artist = self.artistController.artistsArray[indexPath.row];
+    cell.textLabel.text = artist.artist;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in: %ld", (long)artist.formedYear];
  
     
     return cell;
@@ -51,20 +66,17 @@
     
     if ([[segue identifier] isEqualToString:@"AddArtistSegue"])
        {
-           ArtistDetailViewController *detailVC = [segue destinationViewController];
+           ArtistDetailViewController *detailVC = (ArtistDetailViewController *)[segue destinationViewController];
            
            detailVC.artistController = self.artistController;
        }
        
        if ([[segue identifier] isEqualToString:@"DetailViewSegue"])
        {
-           ArtistDetailViewController *detailVC = [segue destinationViewController];
+           ArtistDetailViewController *detailVC = (ArtistDetailViewController *)[segue destinationViewController];
            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-           
-           detailVC.artistController = self.artistController;
-           detailVC.artist = [self.favoritedArtists objectAtIndex:indexPath.row];
+                    detailVC.artistController = self.artistController;
+           detailVC.artist = self.artistController.artistsArray[indexPath.row];
        }
 }
-
-
 @end

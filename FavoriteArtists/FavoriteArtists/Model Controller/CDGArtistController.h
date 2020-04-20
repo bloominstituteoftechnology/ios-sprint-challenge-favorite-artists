@@ -17,7 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray *)loadFavoriteArtists;
 
+@property (nonatomic, readonly, copy)NSArray *artistsArray;
+
 - (void)saveToDirectory:(CDGArtist *)artist;
+
+- (void)addArtist:(CDGArtist *)artist;
 
 @end
 

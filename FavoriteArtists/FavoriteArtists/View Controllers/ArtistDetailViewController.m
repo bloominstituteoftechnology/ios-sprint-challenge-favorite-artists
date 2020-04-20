@@ -15,8 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *foundedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistInfoLabel;
 
-@property (nonatomic) CDGArtistController *artistController;
-@property (nonatomic) CDGArtist *artist;
+//@property (nonatomic) CDGArtistController *artistController;
+//@property (nonatomic) CDGArtist *artist;
 
 
 @end
@@ -28,6 +28,7 @@
     self.searchBar.delegate = self;
     
     if (self.artist) {
+        [self updateViews];
         [self.searchBar setHidden:YES];
         self.navigationItem.rightBarButtonItem = nil;
     } else {
@@ -36,12 +37,10 @@
 }
 
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
-    NSData *data = [NSJSONSerialization dataWithJSONObject: [self.artist toDictionary] options:0 error:nil];
-    NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
-    NSURL *url = [[directory URLByAppendingPathComponent:self.artist.artist] URLByAppendingPathExtension: @"json"];
-    
-    [data writeToURL:url atomically:YES];
 
+    if (self.artist){
+        [self.artistController addArtist:self.artist];
+    }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

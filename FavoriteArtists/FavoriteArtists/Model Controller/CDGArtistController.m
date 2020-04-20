@@ -8,28 +8,41 @@
 
 #import "CDGArtistController.h"
 #import "CDGArtist.h"
+#import "CDGArtist+JSONSerialization.h"
 
 @interface CDGArtistController()
 
-@property CDGArtist *searchResult;
+@property (nonatomic, copy) NSMutableArray *internalArtistsArray;
 
 @end
 
 @implementation CDGArtistController
 
-static NSString *const baserURLString = @"theaudiodb.com/api/v1/json/1/search.php";
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _internalArtistsArray = [[self loadFavoriteArtists] mutableCopy];
+    }
+    return self;
+}
+
+static NSString *const baserURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
 - (void)searchForArtist:(NSString *)searchTerm completion:(void (^)(CDGArtist *artist, NSError *error))completion{
+    NSURL *baseURL = [NSURL URLWithString:@"https://theaudiodb.com/api/v1/json/1/search.php"];
     
-    NSURLComponents *urlComponents = [[NSURLComponents alloc]initWithString:baserURLString];
-    
+    NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:true];
+
     urlComponents.queryItems = @[
-        [NSURLQueryItem queryItemWithName:@"artist" value:searchTerm]
+        [NSURLQueryItem queryItemWithName:@"s" value:searchTerm]
     ];
-    
+
     NSURL *url = urlComponents.URL;
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url];
     
-    NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         if(error) {
             NSLog(@"Error searching with url: %@", error);
@@ -52,66 +65,66 @@ static NSString *const baserURLString = @"theaudiodb.com/api/v1/json/1/search.ph
             completion(nil, [[NSError alloc]init]);
             return;
         }
-        NSDictionary *artist = [[json objectForKey:@"artists"] firstObject];
-        if (artist == nil ){
+        NSDictionary *artistsDictionary = [[json objectForKey:@"artists"] firstObject];
+        if (artistsDictionary == nil ){
             completion(nil, [[NSError alloc]init]);
         }
-        self.searchResult = [[CDGArtist alloc] initWithDictionary:artist];
-        completion(self.searchResult, nil);
+        CDGArtist *artist = [[CDGArtist alloc] initWithDictionary:artistsDictionary];
+        completion(artist, nil);
         
-    }];
-    [task resume];
+    }]
+     resume];
 }
 
+- (void)addArtist:(CDGArtist *)artist {
+    [self.internalArtistsArray addObject:artist];
+    [self saveToDirectory];
+    
+}
 
-- (void)saveToDirectory:(CDGArtist *)artist {
-    if (!artist) {
-        return;
+- (void)saveToDirectory {
+    NSMutableArray *artistDictionaries = [[NSMutableArray alloc]init];
+    
+    for (int i = 0; i < self.internalArtistsArray.count; i++) {
+        CDGArtist *artist = self.internalArtistsArray[i];
+        [artistDictionaries addObject:[artist toDictionary]];
     }
-    NSData *data = [NSJSONSerialization dataWithJSONObject: [artist toDictionary]
-                                                   options:0
-                                                     error:nil];
-    NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
-                                                              inDomain:NSUserDomainMask
-                                                     appropriateForURL:nil
-                                                                create:YES
-                                                                 error:nil];
-    NSURL *url = [[directory URLByAppendingPathComponent:artist.artist]URLByAppendingPathExtension:@"json"];
-    [data writeToURL:url
-          atomically:YES];
+    
+    NSData *artistData = [NSJSONSerialization dataWithJSONObject:artistDictionaries options:0 error:nil];
+    [artistData writeToURL:[self artistsFileURL] atomically:YES];
+    
 }
 
+- (NSArray *)artistsArray {
+    return self.internalArtistsArray;
+}
 
-//NSData *loadFile(NSString *filename, NSBundle *bundle) {
-//    NSString *basename = [filename stringByDeletingPathExtension];
-//    NSString *extension = [filename pathExtension];
-//
-//    NSString *path = [bundle pathForResource:basename ofType:extension];
-//    NSData *data = [NSData dataWithContentsOfFile:path];
-//    return data;
-//}
+- (NSURL *)artistsFileURL
+{
+    NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSString *fileName = @"artists.json";
+    return [documentDirectory URLByAppendingPathComponent:fileName];
+}
+
 
 - (NSArray *)loadFavoriteArtists{
-    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *dir = [path objectAtIndex:0];
-    NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:dir error:nil];
     
-    NSMutableArray *artistsArray = [[NSMutableArray alloc] init];
     
-    for (NSString *artist in filePaths) {
-        NSString *artistPath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", artist];
-        
-        NSURL *artistURL = [NSURL fileURLWithPath:artistPath];
-        NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
-        if (artistData == nil) {
-            NSLog(@"No artist data");
-        } else {
-            NSDictionary *artistDict = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
-            CDGArtist *artist = [[CDGArtist alloc] initWithDictionary:artistDict];
-            [artistsArray addObject:artist];
-        }
+    NSData *artistsData = [NSData dataWithContentsOfURL:[self artistsFileURL]];
+    if (!artistsData) { return @[]; }
+    NSError *error = nil;
+    NSArray *artistDictionaries = [NSJSONSerialization JSONObjectWithData:artistsData options:0 error:&error];
+    if (error) {
+        NSLog(@"Error loading saved artists: %@", error);
+        return @[];
     }
-    return artistsArray;
+    NSMutableArray *artists = [[NSMutableArray alloc] init];
+    for (int i = 0; i < artistDictionaries.count; i++) {
+        NSDictionary *artistDictionary = artistDictionaries[i];
+        CDGArtist *artist = [[CDGArtist alloc] initWithDictionary:artistDictionary];
+        [artists addObject:artist];
+    }
+    return artists;
 }
 
 @end

@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="L8a-Cv-Lky" kind="show" identifier="ViewDetailSegue" id="QL0-K9-0DK"/>
+                                    <segue destination="L8a-Cv-Lky" kind="show" identifier="DetailViewSegue" id="QL0-K9-0DK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

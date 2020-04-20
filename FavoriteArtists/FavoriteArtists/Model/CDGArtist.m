@@ -10,10 +10,6 @@
 
 @implementation CDGArtist
 
-static NSString const *artistKey = @"strArtist";
-static NSString const *formedYearKey = @"intFormedYead";
-static NSString const *biographyKey = @"strBiographyEn";
-
 - (instancetype)initWithArtist:(NSString *)artist
                     formedYear:(NSInteger)formedYear
                      biography:(NSString *)biography {
@@ -26,48 +22,4 @@ static NSString const *biographyKey = @"strBiographyEn";
     return self;
 }
 
-//- (instancetype)initWithArray:(NSArray *)artistArray{
-//
-//    NSArray *artist = [NSArray array];
-//    for (NSDictionary *artistDictionary in artist) {
-//        NSString *artistString = artistDictionary[@"strArtist"];
-//        NSNumber *formedYear = artistDictionary[@"intFormedYear"];
-//        NSString *biography = artistDictionary[@"strBiographyEn"];
-//
-//        self = [self initWithArtist:artistString
-//                         formedYear:formedYear
-//                          biography:biography];
-//    }
-//    return self;
-//}
-
-- (instancetype)initWithDictionary:(NSDictionary *)artistDictionary{
-    self = [super init];
-    if (self) {
-        
-    NSString *artistString = artistDictionary[artistKey];
-    NSNumber *formedYear = artistDictionary[formedYearKey];
-    NSString *biography = artistDictionary[biographyKey];
-    NSInteger yearFormedInt;
-        
-    if ([formedYear isKindOfClass:[NSNull class]]) {
-        NSLog(@"No founding year");
-        yearFormedInt = 0;
-    } else {
-        yearFormedInt = [formedYear integerValue];
-    }
-    self = [self initWithArtist:artistString
-                     formedYear:formedYear.integerValue
-                      biography:biography];
-    }
-    return self;
-}
-
--(NSDictionary *)toDictionary {
-    return @{
-        artistKey: self.artist,
-        formedYearKey: @(self.formedYear),
-        biographyKey: self.biography
-    };
-}
 @end

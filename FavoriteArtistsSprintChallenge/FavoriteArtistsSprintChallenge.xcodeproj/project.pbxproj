@@ -15,6 +15,7 @@
 		927CAD8A244D2DFD00FDC54E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 927CAD89244D2DFD00FDC54E /* main.m */; };
 		927CAD92244D2F0900FDC54E /* FavoriteArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927CAD91244D2F0900FDC54E /* FavoriteArtistsViewController.m */; };
 		927CAD95244D30FD00FDC54E /* SearchArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927CAD94244D30FD00FDC54E /* SearchArtistsViewController.m */; };
+		927CAD98244D37C900FDC54E /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 927CAD97244D37C900FDC54E /* Artist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		927CAD91244D2F0900FDC54E /* FavoriteArtistsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsViewController.m; sourceTree = "<group>"; };
 		927CAD93244D30FD00FDC54E /* SearchArtistsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchArtistsViewController.h; sourceTree = "<group>"; };
 		927CAD94244D30FD00FDC54E /* SearchArtistsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchArtistsViewController.m; sourceTree = "<group>"; };
+		927CAD96244D37C900FDC54E /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		927CAD97244D37C900FDC54E /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				927CAD78244D2DFC00FDC54E /* AppDelegate.m */,
 				927CAD7A244D2DFC00FDC54E /* SceneDelegate.h */,
 				927CAD7B244D2DFC00FDC54E /* SceneDelegate.m */,
+				927CAD96244D37C900FDC54E /* Artist.h */,
+				927CAD97244D37C900FDC54E /* Artist.m */,
 				927CAD90244D2F0900FDC54E /* FavoriteArtistsViewController.h */,
 				927CAD91244D2F0900FDC54E /* FavoriteArtistsViewController.m */,
 				927CAD93244D30FD00FDC54E /* SearchArtistsViewController.h */,
@@ -155,6 +160,7 @@
 				927CAD95244D30FD00FDC54E /* SearchArtistsViewController.m in Sources */,
 				927CAD8A244D2DFD00FDC54E /* main.m in Sources */,
 				927CAD7C244D2DFC00FDC54E /* SceneDelegate.m in Sources */,
+				927CAD98244D37C900FDC54E /* Artist.m in Sources */,
 				927CAD92244D2F0900FDC54E /* FavoriteArtistsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

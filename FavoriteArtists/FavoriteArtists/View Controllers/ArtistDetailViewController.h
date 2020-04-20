@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CDGArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ArtistDetailViewController : UIViewController
+@interface ArtistDetailViewController : UIViewController <UISearchBarDelegate>
+
+
+- (void)updateViews;
 
 @end
 

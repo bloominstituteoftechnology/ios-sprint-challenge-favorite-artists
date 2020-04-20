@@ -7,47 +7,66 @@
 //
 
 #import "ArtistTableViewController.h"
+#import "CDGArtist.h"
+#import "CDGArtistController.h"
 
 @interface ArtistTableViewController ()
 
-
+@property (nonatomic, readonly) CDGArtistController *artistController;
+@property NSMutableArray *favoriteArtistsArray;
 
 @end
 
 @implementation ArtistTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
+    NSArray *loadedArtists = [self.artistController loadFavoriteArtists];
+    self.favoriteArtistsArray = [[NSMutableArray alloc]initWithArray:loadedArtists];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.favoriteArtistsArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
+    CDGArtist *artistName = self.favoriteArtistsArray[indexPath.row];
+    cell.textLabel.text = artistName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in: %ld", (long)artistName.formedYear];
  
     
     return cell;
 }
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
     
-    //TODO: pass the model controller when created to the detail view.
+    if ([[segue identifier] isEqualToString:@"AddArtistSegue"])
+       {
+           ArtistDetailViewController *detailVC = [segue destinationViewController];
+           
+           detailVC.artistController = self.artistController;
+       }
+       
+       if ([[segue identifier] isEqualToString:@"DetailViewSegue"])
+       {
+           ArtistDetailViewController *detailVC = [segue destinationViewController];
+           NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+           
+           detailVC.artistController = self.artistController;
+           detailVC.artist = [self.favoritedArtists objectAtIndex:indexPath.row];
+       }
 }
 
 

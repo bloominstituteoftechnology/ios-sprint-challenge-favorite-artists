@@ -27,11 +27,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
-    
-    [fetcher fetchArtist:@"macklemore" WithCompletionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
-        // Just testing whether url is built correctly
-    }];
 }
 
 /*

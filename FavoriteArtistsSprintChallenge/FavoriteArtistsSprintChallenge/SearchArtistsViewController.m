@@ -7,13 +7,13 @@
 //
 
 #import "SearchArtistsViewController.h"
+#import "Artist.h"
+#import "ArtistFetcher.h"
 
 @interface SearchArtistsViewController ()
 
 // Properties
-@property (nonatomic) NSString *artistName;
-@property (nonatomic) NSString *yearFounded;
-@property (nonatomic) NSString *artistBio;
+@property (nonatomic, readonly) Artist *artist;
 
 
 // IBOutlets
@@ -33,7 +33,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _artistNameLabel.text = @"";
+    _yearFoundedLabel.text = @"";
+    _artistBioTextView.text = @"";
+    
+    ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
+    
+    [fetcher fetchArtist:@"macklemore" WithCompletionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
+        if (artist) {
+            self->_artist = artist;
+            self->_artistNameLabel.text = artist.artistName;
+            self->_artistBioTextView.text = artist.artistBio;
+            if (artist.yearFounded != 0) {
+                NSString *yearFoundedText = [NSString stringWithFormat:@"%d", artist.yearFounded];
+                self->_yearFoundedLabel.text = yearFoundedText;
+            } else {
+                self->_yearFoundedLabel.text = @"";
+            }
+        }
+    }];
 }
 
 // MARK: - Private Methods

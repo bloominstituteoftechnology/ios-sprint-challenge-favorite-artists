@@ -21,8 +21,14 @@
     if (![artistDictionary isKindOfClass:[NSDictionary class]]) return nil;
     
     NSString *artistName = [artistDictionary objectForKey:@"strArtist"];
+    
     NSNumber *yearFoundedNumber = [artistDictionary valueForKey:@"intFormedYear"];
-    int yearFounded = [yearFoundedNumber intValue];
+    int yearFounded = 0;
+    if ([yearFoundedNumber isKindOfClass:[NSNull class]]) {
+        yearFounded = 0;
+    } else {
+        yearFounded = [yearFoundedNumber intValue];
+    }
     NSString *artistBio = [artistDictionary objectForKey:@"strBiographyEN"];
     
 //    NSLog(@"%@", artistName);

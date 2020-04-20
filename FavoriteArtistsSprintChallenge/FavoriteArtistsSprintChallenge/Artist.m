@@ -10,6 +10,15 @@
 
 @implementation Artist
 
-
+-(instancetype)initWithArtistName:(NSString *)artistName yearFounded:(int)yearFounded artistBio:(NSString *)artistBio
+{
+    if (self = [super init]) {
+        _artistName = artistName;
+        _yearFounded = yearFounded;
+        _artistBio = artistBio;
+    }
+    
+    return self;
+}
 
 @end

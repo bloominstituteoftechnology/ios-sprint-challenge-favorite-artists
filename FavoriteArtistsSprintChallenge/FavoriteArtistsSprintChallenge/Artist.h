@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
                        yearFounded:(int)yearFounded
                          artistBio:(NSString *)artistBio;
 
-- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
+//- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

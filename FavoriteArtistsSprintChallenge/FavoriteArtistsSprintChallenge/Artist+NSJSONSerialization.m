@@ -42,4 +42,18 @@
     return artist;
 }
 
+//- (NSDictionary *)toDictionary
+//{
+//    
+//    
+////    NSDictionary *artistInfo = [[NSDictionary alloc] initWithObjectsAndKeys:
+////                                artist.artistName ?: [NSNull null], @"strArtist",
+////                                artist.yearFounded, @"intFormedYear",
+////                                artist.artistBio ?: [NSNull null], @"strBiographyEN",
+////                                nil];
+////    NSLog(@"%@", artistInfo);
+////    return artistInfo;
+//}
+
+
 @end

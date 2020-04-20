@@ -80,7 +80,10 @@
                         <subviews>
                             <searchBar contentMode="redraw" text="" placeholder="Artist Name:" translatesAutoresizingMaskIntoConstraints="NO" id="Lbv-qH-6z5">
                                 <rect key="frame" x="0.0" y="140" width="414" height="38"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="smp-AM-SCt" id="gQ4-Lh-40b"/>
+                                </connections>
                             </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4qp-oP-V0p">
                                 <rect key="frame" x="16" y="194" width="382" height="668"/>

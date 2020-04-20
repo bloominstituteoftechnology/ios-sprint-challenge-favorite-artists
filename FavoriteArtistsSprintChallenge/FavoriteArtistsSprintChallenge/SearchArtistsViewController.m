@@ -9,12 +9,17 @@
 #import "SearchArtistsViewController.h"
 #import "Artist.h"
 #import "ArtistFetcher.h"
+#import "Artist+NSJSONSerialization.h"
 
 @interface SearchArtistsViewController ()
 
 // Properties
-@property (nonatomic, readonly) Artist *artist;
+@property (nonatomic) Artist *artist;
+@property (nonatomic) NSString *artistName;
+@property (nonatomic) int yearFounded;
+@property (nonatomic) NSString *artistBio;
 
+@property (nonatomic) BOOL isTyping;
 
 // IBOutlets
 @property (nonatomic) IBOutlet UILabel *artistNameLabel;
@@ -34,31 +39,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _artistNameLabel.text = @"";
-    _yearFoundedLabel.text = @"";
-    _artistBioTextView.text = @"";
+    self.artistNameLabel.text = @"";
+    self.yearFoundedLabel.text = @"";
+    self.artistBioTextView.text = @"";
     
-    ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
+   
     
-    [fetcher fetchArtist:@"macklemore" WithCompletionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
-        if (artist) {
-            self->_artist = artist;
-            self->_artistNameLabel.text = artist.artistName;
-            self->_artistBioTextView.text = artist.artistBio;
-            if (artist.yearFounded != 0) {
-                NSString *yearFoundedText = [NSString stringWithFormat:@"%d", artist.yearFounded];
-                self->_yearFoundedLabel.text = yearFoundedText;
-            } else {
-                self->_yearFoundedLabel.text = @"";
-            }
-        }
-    }];
+//    ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
+//
+//    [fetcher fetchArtist:@"macklemore" WithCompletionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
+//        if (artist) {
+//            self.artist = artist;
+//            self.artistNameLabel.text = artist.artistName;
+//            self.artistBioTextView.text = artist.artistBio;
+//            if (artist.yearFounded != 0) {
+//                NSString *yearFoundedText = [NSString stringWithFormat:@"%d", artist.yearFounded];
+//                self.yearFoundedLabel.text = yearFoundedText;
+//            } else {
+//                self.yearFoundedLabel.text = @"";
+//            }
+//        }
+//    }];
 }
 
 // MARK: - Private Methods
 
 - (void)saveNewFavoriteArtist
 {
+   
+    
+    
+    
     
 }
 
@@ -74,5 +85,54 @@
 {
     [self saveNewFavoriteArtist];
 }
+
+// MARK: - UISearchBar
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if (!self.isTyping) {
+        ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
+        
+        
+        [fetcher fetchArtist:searchText WithCompletionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
+            if (artist) {
+                self.artist = artist;
+                self.artistNameLabel.text = artist.artistName;
+                self.artistBioTextView.text = artist.artistBio;
+                if (artist.yearFounded != 0) {
+                    NSString *yearFoundedText = [NSString stringWithFormat:@"%d", artist.yearFounded];
+                    self.yearFoundedLabel.text = yearFoundedText;
+                } else {
+                    self.yearFoundedLabel.text = @"";
+                }
+            }
+        }];
+    }
+}
+
+//- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+//{
+//    self.isTyping = YES;
+//}
+//
+//- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+//{
+//    self.isTyping = NO;
+//}
+//
+////- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+////{
+////    return self.isTyping = YES;
+////}
+////
+////- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
+////{
+////    return YES;
+////}
+//
+//- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+//{
+//    [self searchForArtistWithName:]
+//}
 
 @end

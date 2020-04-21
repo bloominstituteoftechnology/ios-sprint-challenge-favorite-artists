@@ -68,6 +68,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="vgM-2L-mo3" id="iDw-bW-Lgy"/>
+                        <segue destination="smp-AM-SCt" kind="show" identifier="ShowArtistDetailSegue" id="aKb-0Z-7E8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACk-cx-COM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -137,7 +138,8 @@
                     <connections>
                         <outlet property="artistBioTextView" destination="tDQ-Eb-kOo" id="Fww-Aq-bDC"/>
                         <outlet property="artistNameLabel" destination="Rdn-tA-DLf" id="g7W-XG-da3"/>
-                        <outlet property="artistSearchBar" destination="Lbv-qH-6z5" id="KET-Ck-83e"/>
+                        <outlet property="artistSearchBar" destination="Lbv-qH-6z5" id="EUe-EV-cmy"/>
+                        <outlet property="saveButton" destination="yhO-xl-JTI" id="F1O-b1-9zT"/>
                         <outlet property="yearFoundedLabel" destination="0ad-GJ-205" id="tfC-07-Vnm"/>
                     </connections>
                 </viewController>
@@ -164,4 +166,7 @@
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aKb-0Z-7E8"/>
+    </inferredMetricsTieBreakers>
 </document>

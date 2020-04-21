@@ -10,11 +10,11 @@
 #import "Artist.h"
 #import "ArtistFetcher.h"
 #import "Artist+NSJSONSerialization.h"
+#import "FavoriteArtistsViewController.h"
 
 @interface SearchArtistsViewController ()
 
 // Properties
-@property (nonatomic) Artist *artist;
 @property (nonatomic) NSString *artistName;
 @property (nonatomic) int yearFounded;
 @property (nonatomic) NSString *artistBio;
@@ -26,6 +26,7 @@
 @property (nonatomic) IBOutlet UILabel *yearFoundedLabel;
 @property (nonatomic) IBOutlet UITextView *artistBioTextView;
 @property (nonatomic) IBOutlet UISearchBar *artistSearchBar;
+@property (nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 // Private Methods
 - (void)saveNewFavoriteArtist;
@@ -39,9 +40,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.artistNameLabel.text = @"";
-    self.yearFoundedLabel.text = @"";
-    self.artistBioTextView.text = @"";
+    if (!self.artist) {
+        self.artistNameLabel.text = @"";
+        self.yearFoundedLabel.text = @"";
+        self.artistBioTextView.text = @"";
+    } else {
+        self.artistNameLabel.text = _artist.artistName;
+        self.yearFoundedLabel.text = [NSString stringWithFormat:@"%d", _artist.yearFounded];
+        self.artistBioTextView.text = _artist.artistBio;
+    }
+    
+    
     
    
     

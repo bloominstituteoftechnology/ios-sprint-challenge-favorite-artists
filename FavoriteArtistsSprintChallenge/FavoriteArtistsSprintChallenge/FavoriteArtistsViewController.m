@@ -9,6 +9,7 @@
 #import "FavoriteArtistsViewController.h"
 #import "Artist.h"
 #import "ArtistFetcher.h"
+#import "SearchArtistsViewController.h"
 
 @interface FavoriteArtistsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -73,15 +74,22 @@
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"ShowArtistDetailSegue"]) {
+        SearchArtistsViewController *artistDetailVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        artistDetailVC.artist = self.allArtists[indexPath.row];
+    }
+    
+    
 }
-*/
+
 
 
 // MARK: - UITableViewDataSource
@@ -95,9 +103,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
     NSArray *artists = self.artistDictionary.allValues;
-    
+    self.allArtists = artists;
     Artist *artist = [artists objectAtIndex:indexPath.row];
     cell.textLabel.text = artist.artistName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", artist.yearFounded];
     
     return cell;
 }
@@ -106,7 +115,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self performSegueWithIdentifier:@"ShowArtistDetailSegue" sender:self];
 }
 
 @end

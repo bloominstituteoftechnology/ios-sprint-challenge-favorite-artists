@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, retain) NSDictionary *artistDictionary;
 @property(readonly, copy) NSArray<Artist *> *allValues;
+@property (nonatomic) NSArray *allArtists;
 
 //+ (NSDictionary<NSString *,Artist *> *)dictionaryWithContentsOfURL:(NSURL *)url
 //                                                               error:(NSError * _Nullable *)error;

@@ -19,6 +19,8 @@
 @property (nonatomic) int yearFounded;
 @property (nonatomic) NSString *artistBio;
 
+@property (nonatomic) Artist *artist;
+
 @property (nonatomic) BOOL isTyping;
 
 // IBOutlets
@@ -30,7 +32,6 @@
 
 // Private Methods
 - (void)saveNewFavoriteArtist;
-- (void)searchForArtistWithName:(NSString *)artistName;
 
 @end
 
@@ -40,14 +41,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (!self.artist) {
+    if (!self.artistDetail) {
         self.artistNameLabel.text = @"";
         self.yearFoundedLabel.text = @"";
         self.artistBioTextView.text = @"";
     } else {
-        self.artistNameLabel.text = _artist.artistName;
-        self.yearFoundedLabel.text = [NSString stringWithFormat:@"%d", _artist.yearFounded];
-        self.artistBioTextView.text = _artist.artistBio;
+        self.artistNameLabel.text = _artistDetail.artistName;
+        self.yearFoundedLabel.text = [NSString stringWithFormat:@"%d", _artistDetail.yearFounded];
+        self.artistBioTextView.text = _artistDetail.artistBio;
+        [self.artistSearchBar setHidden:YES];
+        self.saveButton.tintColor = UIColor.clearColor;
     }
     
     
@@ -67,25 +70,24 @@
 //            } else {
 //                self.yearFoundedLabel.text = @"";
 //            }
-//        }
-//    }];
+    //        }
+    //    }];
 }
 
 // MARK: - Private Methods
 
 - (void)saveNewFavoriteArtist
 {
-   
-    
-    
-    
-    
+    if (_artist) {
+        [self.artistFetcher.allArtists addObject:_artist];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
-- (void)searchForArtistWithName:(NSString *)artistName
-{
-    
-}
+//- (void)searchForArtistWithName:(NSString *)artistName
+//{
+//
+//}
 
 
 // MARK: - IBActions
@@ -100,10 +102,10 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     if (!self.isTyping) {
-        ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
+//        ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
         
         
-        [fetcher fetchArtist:searchText WithCompletionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
+        [_artistFetcher fetchArtist:searchText WithCompletionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
             if (artist) {
                 self.artist = artist;
                 self.artistNameLabel.text = artist.artistName;

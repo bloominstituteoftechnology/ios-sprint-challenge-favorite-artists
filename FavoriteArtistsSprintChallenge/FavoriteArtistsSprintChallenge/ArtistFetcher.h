@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistFetcher : NSObject
 
+@property (nonatomic, retain) NSMutableArray *allArtists;
+
 - (void)fetchArtist:(NSString *)artistName WithCompletionHandler:(ArtistFetcherCompletionHandler)completionHandler;
 
 @end

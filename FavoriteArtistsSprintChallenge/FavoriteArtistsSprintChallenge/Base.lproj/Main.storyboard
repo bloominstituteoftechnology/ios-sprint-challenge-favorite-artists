@@ -84,14 +84,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" text="" placeholder="Artist Name:" translatesAutoresizingMaskIntoConstraints="NO" id="Lbv-qH-6z5">
-                                <rect key="frame" x="0.0" y="140" width="414" height="38"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="smp-AM-SCt" id="gQ4-Lh-40b"/>
                                 </connections>
                             </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4qp-oP-V0p">
-                                <rect key="frame" x="16" y="194" width="382" height="668"/>
+                                <rect key="frame" x="16" y="211" width="382" height="651"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdn-tA-DLf">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="33.5"/>
@@ -106,7 +106,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tDQ-Eb-kOo">
-                                        <rect key="frame" x="0.0" y="76" width="382" height="592"/>
+                                        <rect key="frame" x="0.0" y="76" width="382" height="575"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -122,7 +122,7 @@
                             <constraint firstItem="H0w-HQ-J6b" firstAttribute="trailing" secondItem="4qp-oP-V0p" secondAttribute="trailing" constant="16" id="52Z-gd-c9h"/>
                             <constraint firstItem="Lbv-qH-6z5" firstAttribute="top" secondItem="H0w-HQ-J6b" secondAttribute="top" id="7aE-Lx-nEC"/>
                             <constraint firstItem="Lbv-qH-6z5" firstAttribute="leading" secondItem="H0w-HQ-J6b" secondAttribute="leading" id="9RG-BB-Kxl"/>
-                            <constraint firstItem="4qp-oP-V0p" firstAttribute="top" secondItem="Lbv-qH-6z5" secondAttribute="bottom" constant="16" id="XOc-vk-PiF"/>
+                            <constraint firstItem="4qp-oP-V0p" firstAttribute="top" secondItem="Lbv-qH-6z5" secondAttribute="bottom" constant="15" id="Pbc-Qs-w3r"/>
                             <constraint firstItem="Lbv-qH-6z5" firstAttribute="trailing" secondItem="H0w-HQ-J6b" secondAttribute="trailing" id="q9w-Wq-t8q"/>
                             <constraint firstItem="4qp-oP-V0p" firstAttribute="leading" secondItem="H0w-HQ-J6b" secondAttribute="leading" constant="16" id="ua1-fL-pAY"/>
                         </constraints>
@@ -167,6 +167,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aKb-0Z-7E8"/>
+        <segue reference="tFp-6j-I3N"/>
     </inferredMetricsTieBreakers>
 </document>

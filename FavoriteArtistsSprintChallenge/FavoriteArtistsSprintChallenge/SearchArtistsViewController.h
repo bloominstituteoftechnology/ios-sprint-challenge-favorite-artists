@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Artist.h"
+#import "ArtistFetcher.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchArtistsViewController : UIViewController <UISearchBarDelegate, UITextFieldDelegate>
 
-@property (nonatomic) Artist *artist;
+@property (nonatomic) Artist *artistDetail;
+@property (nonatomic) ArtistFetcher *artistFetcher;
 
 @end
 

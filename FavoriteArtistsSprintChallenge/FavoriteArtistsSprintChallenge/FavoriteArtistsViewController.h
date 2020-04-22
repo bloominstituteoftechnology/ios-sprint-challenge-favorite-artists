@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Artist.h"
+#import "ArtistFetcher.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, retain) NSDictionary *artistDictionary;
 @property(readonly, copy) NSArray<Artist *> *allValues;
-@property (nonatomic) NSArray *allArtists;
+@property (nonatomic) ArtistFetcher *artistFetcher;
 
 //+ (NSDictionary<NSString *,Artist *> *)dictionaryWithContentsOfURL:(NSURL *)url
 //                                                               error:(NSError * _Nullable *)error;

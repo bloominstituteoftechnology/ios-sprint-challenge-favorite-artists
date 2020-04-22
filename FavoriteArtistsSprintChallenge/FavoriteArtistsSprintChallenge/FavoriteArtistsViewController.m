@@ -27,6 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
+    self.artistFetcher = fetcher;
+    
     NSFileManager *fileManager = [NSFileManager new];
     NSError *error = nil;
     NSURL *docsURL = [fileManager URLForDirectory:NSDocumentDirectory
@@ -38,7 +41,7 @@
         NSURL *artistDictionaryURL = [docsURL URLByAppendingPathComponent:@"Artists"];
         NSLog(@"%@", artistDictionaryURL);
         
-        if (![fileManager fileExistsAtPath:artistDictionaryURL.path]) {
+//        if (![fileManager fileExistsAtPath:artistDictionaryURL.path]) {
             [fileManager createDirectoryAtURL:artistDictionaryURL withIntermediateDirectories:YES attributes:nil error:&error];
             if (!error) {
                 [self writeToURL:artistDictionaryURL error:&error];
@@ -48,13 +51,19 @@
                 NSLog(@"Error: %@, writing dictionary to path: %@", error, artistDictionaryURL);
             }
             
-        } else {
-            NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:artistDictionaryURL error:&error];
-            NSLog(@"%@", dictionary);
-        }
+//        }
+//        else {
+//            NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:artistDictionaryURL error:&error];
+//            NSLog(@"%@", dictionary);
+//        }
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
-    
+    [self.tableView reloadData];
 }
 
 
@@ -63,7 +72,8 @@
 - (BOOL)writeToURL:(NSURL *)url error:(NSError * _Nullable __autoreleasing *)error
 {
     Artist *testArtist = [[Artist alloc] initWithArtistName:@"Test" yearFounded:1999 artistBio:@"This is a test artist"];
-    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:testArtist, testArtist.artistName, nil];
+    Artist *anotherArtist = [[Artist alloc] initWithArtistName:@"Test 2" yearFounded:1989 artistBio:@"This is a another test artist"];
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:testArtist, testArtist.artistName, anotherArtist, anotherArtist.artistName, nil];
     
     [dictionary writeToURL:url error:error];
     self.artistDictionary = dictionary;
@@ -84,10 +94,13 @@
     if ([segue.identifier isEqualToString:@"ShowArtistDetailSegue"]) {
         SearchArtistsViewController *artistDetailVC = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        artistDetailVC.artist = self.allArtists[indexPath.row];
+        artistDetailVC.artistDetail = self.artistFetcher.allArtists[indexPath.row];
+        artistDetailVC.artistFetcher = self.artistFetcher;
+        artistDetailVC.title = artistDetailVC.artistDetail.artistName;
+    } else if ([segue.identifier isEqualToString:@"AddNewArtistSegue"]) {
+        SearchArtistsViewController *artistDetailVC = segue.destinationViewController;
+        artistDetailVC.artistFetcher = self.artistFetcher;
     }
-    
-    
 }
 
 
@@ -102,9 +115,10 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    NSArray *artists = self.artistDictionary.allValues;
-    self.allArtists = artists;
-    Artist *artist = [artists objectAtIndex:indexPath.row];
+    
+    
+    self.artistFetcher.allArtists = [[NSMutableArray alloc] initWithArray:self.artistDictionary.allValues];
+    Artist *artist = [self.artistFetcher.allArtists objectAtIndex:indexPath.row];
     cell.textLabel.text = artist.artistName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", artist.yearFounded];
     

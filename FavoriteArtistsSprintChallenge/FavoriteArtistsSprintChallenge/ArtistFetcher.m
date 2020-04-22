@@ -63,4 +63,53 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     }] resume];
 }
 
+
+- (void)createOrLoadArtistDictionary
+{
+    NSFileManager *fileManager = [NSFileManager new];
+    NSError *error = nil;
+    NSURL *docsURL = [fileManager URLForDirectory:NSDocumentDirectory
+                                         inDomain:NSUserDomainMask
+                                appropriateForURL:nil
+                                           create:YES
+                                            error:&error];
+    if (!error) {
+        NSURL *artistDictionaryURL = [docsURL URLByAppendingPathComponent:@"Artists"];
+        NSLog(@"%@", artistDictionaryURL);
+        
+        if (![fileManager fileExistsAtPath:artistDictionaryURL.path]) {
+            [fileManager createDirectoryAtURL:artistDictionaryURL withIntermediateDirectories:YES attributes:nil error:&error];
+            if (!error) {
+                error = [self saveDictionaryWithUrl:artistDictionaryURL];
+                if (error) {
+                    NSLog(@"Error: %@, writing dictionary to path: %@", error, artistDictionaryURL);
+                }
+            }
+        } else {
+            NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:artistDictionaryURL error:&error];
+            NSLog(@"%@", dictionary);
+        }
+    }
+}
+
+
+- (NSError *)saveDictionaryWithUrl:(NSURL *)url
+{
+    Artist *testArtist = [[Artist alloc] initWithArtistName:@"Test" yearFounded:1999 artistBio:@"This is a test artist"];
+    Artist *anotherArtist = [[Artist alloc] initWithArtistName:@"Test 2" yearFounded:1989 artistBio:@"This is a another test artist"];
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:testArtist, testArtist.artistName, anotherArtist, anotherArtist.artistName, nil];
+    
+    NSError *error = nil;
+    [dictionary writeToURL:url error:&error];
+    
+    if (!error) {
+        self.localArtistDictionary = dictionary;
+        self.allArtists = [[NSMutableArray alloc] initWithArray:self.localArtistDictionary.allValues];
+        return nil;
+    } else {
+        return error;
+    }
+}
+
+
 @end

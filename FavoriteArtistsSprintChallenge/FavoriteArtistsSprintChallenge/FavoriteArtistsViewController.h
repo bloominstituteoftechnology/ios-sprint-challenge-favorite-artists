@@ -14,15 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FavoriteArtistsViewController : UIViewController
 
-@property (nonatomic, retain) NSDictionary *artistDictionary;
-@property(readonly, copy) NSArray<Artist *> *allValues;
 @property (nonatomic) ArtistFetcher *artistFetcher;
 
-//+ (NSDictionary<NSString *,Artist *> *)dictionaryWithContentsOfURL:(NSURL *)url
-//                                                               error:(NSError * _Nullable *)error;
-
-- (BOOL)writeToURL:(NSURL *)url
-             error:(NSError * _Nullable *)error;
 
 @end
 

@@ -29,58 +29,13 @@
     
     ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
     self.artistFetcher = fetcher;
-    
-    NSFileManager *fileManager = [NSFileManager new];
-    NSError *error = nil;
-    NSURL *docsURL = [fileManager URLForDirectory:NSDocumentDirectory
-                                         inDomain:NSUserDomainMask
-                                appropriateForURL:nil
-                                           create:YES
-                                            error:&error];
-    if (!error) {
-        NSURL *artistDictionaryURL = [docsURL URLByAppendingPathComponent:@"Artists"];
-        NSLog(@"%@", artistDictionaryURL);
-        
-//        if (![fileManager fileExistsAtPath:artistDictionaryURL.path]) {
-            [fileManager createDirectoryAtURL:artistDictionaryURL withIntermediateDirectories:YES attributes:nil error:&error];
-            if (!error) {
-                [self writeToURL:artistDictionaryURL error:&error];
-//                NSLog(@"%@", self.artistDictionary);
-            }
-            if (error) {
-                NSLog(@"Error: %@, writing dictionary to path: %@", error, artistDictionaryURL);
-            }
-            
-//        }
-//        else {
-//            NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:artistDictionaryURL error:&error];
-//            NSLog(@"%@", dictionary);
-//        }
-    }
+    [self.artistFetcher createOrLoadArtistDictionary];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
     [self.tableView reloadData];
-}
-
-
-// MARK: - Methods
-
-- (BOOL)writeToURL:(NSURL *)url error:(NSError * _Nullable __autoreleasing *)error
-{
-    Artist *testArtist = [[Artist alloc] initWithArtistName:@"Test" yearFounded:1999 artistBio:@"This is a test artist"];
-    Artist *anotherArtist = [[Artist alloc] initWithArtistName:@"Test 2" yearFounded:1989 artistBio:@"This is a another test artist"];
-    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:testArtist, testArtist.artistName, anotherArtist, anotherArtist.artistName, nil];
-    
-    [dictionary writeToURL:url error:error];
-    self.artistDictionary = dictionary;
-    [self.tableView reloadData];
-    NSLog(@"%@", self.artistDictionary);
-    
-    return YES;
 }
 
 
@@ -108,17 +63,15 @@
 // MARK: - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.artistDictionary.count;
+    return self.artistFetcher.allArtists.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    
-    
-    self.artistFetcher.allArtists = [[NSMutableArray alloc] initWithArray:self.artistDictionary.allValues];
     Artist *artist = [self.artistFetcher.allArtists objectAtIndex:indexPath.row];
+    
     cell.textLabel.text = artist.artistName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", artist.yearFounded];
     

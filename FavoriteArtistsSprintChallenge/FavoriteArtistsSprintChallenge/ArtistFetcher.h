@@ -16,8 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ArtistFetcher : NSObject
 
 @property (nonatomic, retain) NSMutableArray *allArtists;
+@property (nonatomic, retain) NSDictionary *localArtistDictionary;
+@property (readonly, copy) NSArray<Artist *> *allValues;
 
 - (void)fetchArtist:(NSString *)artistName WithCompletionHandler:(ArtistFetcherCompletionHandler)completionHandler;
+
+- (void)createOrLoadArtistDictionary;
+- (NSError *)saveDictionaryWithUrl: (NSURL *)url;
+
+//- (BOOL)writeToURL:(NSURL *)url
+//             error:(NSError * _Nullable *)error;
 
 @end
 

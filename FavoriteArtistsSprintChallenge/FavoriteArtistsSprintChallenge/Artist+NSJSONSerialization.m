@@ -12,28 +12,16 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSArray *artistsDictionaries = [dictionary objectForKey:@"artists"];
-    if (![artistsDictionaries isKindOfClass:[NSArray class]]) return nil;
+    NSString *artistName = [dictionary objectForKey:@"strArtist"];
     
-//    NSLog(@"%@", artistsDictionaries);
-    
-    NSDictionary *artistDictionary = [artistsDictionaries objectAtIndex:0];
-    if (![artistDictionary isKindOfClass:[NSDictionary class]]) return nil;
-    
-    NSString *artistName = [artistDictionary objectForKey:@"strArtist"];
-    
-    NSNumber *yearFoundedNumber = [artistDictionary valueForKey:@"intFormedYear"];
+    NSNumber *yearFoundedNumber = [dictionary valueForKey:@"intFormedYear"];
     int yearFounded = 0;
     if ([yearFoundedNumber isKindOfClass:[NSNull class]]) {
         yearFounded = 0;
     } else {
         yearFounded = [yearFoundedNumber intValue];
     }
-    NSString *artistBio = [artistDictionary objectForKey:@"strBiographyEN"];
-    
-//    NSLog(@"%@", artistName);
-//    NSLog(@"%d", yearFounded);
-//    NSLog(@"%@", artistBio);
+    NSString *artistBio = [dictionary objectForKey:@"strBiographyEN"];
     
     Artist *artist = [[Artist alloc] initWithArtistName:artistName
                                             yearFounded:yearFounded
@@ -42,18 +30,21 @@
     return artist;
 }
 
-//- (NSDictionary *)toDictionary
-//{
-//    
-//    
-////    NSDictionary *artistInfo = [[NSDictionary alloc] initWithObjectsAndKeys:
-////                                artist.artistName ?: [NSNull null], @"strArtist",
-////                                artist.yearFounded, @"intFormedYear",
-////                                artist.artistBio ?: [NSNull null], @"strBiographyEN",
-////                                nil];
-////    NSLog(@"%@", artistInfo);
-////    return artistInfo;
-//}
+- (NSDictionary *)toDictionary;
+{
+    NSString *artistName = self.artistName;
+    int yearFounded = self.yearFounded;
+    NSString *yearFoundedString = [NSString stringWithFormat:@"%d", yearFounded];
+    NSString *artistBio = self.artistBio;
+    
+    NSArray *values = [NSArray arrayWithObjects:artistName, yearFoundedString, artistBio, nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"strArtist", @"intFormedYear", @"strBiographyEN", nil];
+    
+    NSDictionary *artistInfo = [[NSDictionary alloc] initWithObjects:values forKeys:keys];
+    
+//    NSLog(@"%@", artistInfo);
+    return artistInfo;
+}
 
 
 @end

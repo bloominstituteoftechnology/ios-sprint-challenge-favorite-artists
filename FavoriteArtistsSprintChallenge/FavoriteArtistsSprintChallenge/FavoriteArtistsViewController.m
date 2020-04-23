@@ -24,12 +24,14 @@
 
 @implementation FavoriteArtistsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
     self.artistFetcher = fetcher;
     [self.artistFetcher createOrLoadArtistDictionary];
+    self.artistsArray = [[NSMutableArray alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -70,8 +72,11 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    Artist *artist = [self.artistFetcher.allArtists objectAtIndex:indexPath.row];
+//    NSDictionary *artistDictionary = [self.artistFetcher.allArtists objectAtIndex:indexPath.row];
+//    Artist *singleArtist = [[Artist alloc] initWithDictionary:artistDictionary];
+//    [self.artistsArray addObject:singleArtist];
     
+    Artist *artist = self.artistFetcher.allArtists[indexPath.row];
     cell.textLabel.text = artist.artistName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", artist.yearFounded];
     

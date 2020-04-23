@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FavoriteArtistsViewController : UIViewController
 
 @property (nonatomic) ArtistFetcher *artistFetcher;
+@property (nonatomic) NSMutableArray *artistsArray;
 
 
 @end

@@ -44,22 +44,30 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
             });
         }
         
-        NSLog(@"%@", dictionary);
+        NSArray *artistsDictionariesArray = [dictionary objectForKey:@"artists"];
+        if (![artistsDictionariesArray isKindOfClass:[NSArray class]]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, [[NSError alloc] initWithDomain:@"No Artists Array" code:-2 userInfo:nil]);
+            });
+        }
         
-        NSArray *artistsDictionaries = [dictionary objectForKey:@"artists"];
-        NSDictionary *artistDictionary = [artistsDictionaries objectAtIndex:0];
-        
-        Artist *artist = [[Artist alloc] initWithDictionary:artistDictionary];
-        
-        NSLog(@"%@", artist.artistName);
-        NSLog(@"%d", artist.yearFounded);
-        NSLog(@"%@", artist.artistBio);
-        
-
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            completionHandler(artist, nil);
-        });
+        if (!artistsDictionariesArray) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, [[NSError alloc] initWithDomain:@"No Artists Array" code:-2 userInfo:nil]);
+            });
+        } else {
+            NSDictionary *artistDictionary = [artistsDictionariesArray objectAtIndex:0];
+            if (![artistDictionary isKindOfClass:[NSDictionary class]]) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completionHandler(nil, [[NSError alloc] initWithDomain:@"No Artist Dictionary" code:-2 userInfo:nil]);
+                });
+            } else {
+                Artist *artist = [[Artist alloc] initWithDictionary:artistDictionary];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completionHandler(artist, nil);
+                });
+            }
+        }
         
     }] resume];
 }

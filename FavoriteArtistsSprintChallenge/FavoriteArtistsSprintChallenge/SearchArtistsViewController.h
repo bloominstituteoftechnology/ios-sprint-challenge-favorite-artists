@@ -12,10 +12,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SearchArtistsViewController : UIViewController <UISearchBarDelegate, UITextFieldDelegate>
+@interface SearchArtistsViewController : UIViewController
 
 @property (nonatomic) Artist *artistDetail;
 @property (nonatomic) ArtistFetcher *artistFetcher;
+
+- (void)searchForArtistWithName:(NSString *)artistName;
 
 @end
 

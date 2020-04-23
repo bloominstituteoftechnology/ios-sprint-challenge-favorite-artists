@@ -37,7 +37,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.tableView reloadData];
 }
 
 
@@ -78,7 +77,11 @@
     
     Artist *artist = self.artistFetcher.allArtists[indexPath.row];
     cell.textLabel.text = artist.artistName;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", artist.yearFounded];
+    if (artist.yearFounded == 0) {
+        cell.detailTextLabel.text = @"";
+    } else {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", artist.yearFounded];
+    }
     
     return cell;
 }

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Artist.h"
+#import "Artist+NSJSONSerialization.h"
 
 typedef void(^ArtistFetcherCompletionHandler)(Artist *_Nullable artist, NSError *_Nullable error);
 
@@ -15,17 +16,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistFetcher : NSObject
 
-@property (nonatomic, retain) NSMutableArray *allArtists;
+@property (nonatomic, retain) NSMutableArray<Artist *> *allArtists;
 @property (nonatomic, retain) NSDictionary *localArtistDictionary;
 @property (readonly, copy) NSArray<Artist *> *allValues;
 
-- (void)fetchArtist:(NSString *)artistName WithCompletionHandler:(ArtistFetcherCompletionHandler)completionHandler;
+- (void)fetchArtistFromServer:(NSString *)artistName WithCompletionHandler:(ArtistFetcherCompletionHandler)completionHandler;
 
 - (void)createOrLoadArtistDictionary;
-- (NSError *)saveDictionaryWithUrl: (NSURL *)url;
+- (NSError *)createLocalArtistDictionary;
 
-//- (BOOL)writeToURL:(NSURL *)url
-//             error:(NSError * _Nullable *)error;
+- (void)saveNewArtistToLocalDictionary;
+
+- (NSURL *)getLocalArtistsDictionaryURL;
+- (void)parseLocalArtistDataWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

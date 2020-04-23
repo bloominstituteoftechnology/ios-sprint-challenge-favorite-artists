@@ -7,14 +7,12 @@
 //
 
 #import "ArtistFetcher.h"
-#import "Artist.h"
-#import "Artist+NSJSONSerialization.h"
 
 static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 @implementation ArtistFetcher
 
--(void)fetchArtist:(NSString *)artistName WithCompletionHandler:(ArtistFetcherCompletionHandler)completionHandler
+-(void)fetchArtistFromServer:(NSString *)artistName WithCompletionHandler:(ArtistFetcherCompletionHandler)completionHandler
 {
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:ArtistFetcherBaseURLString];
     
@@ -48,7 +46,10 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
         
         NSLog(@"%@", dictionary);
         
-        Artist *artist = [[Artist alloc] initWithDictionary:dictionary];
+        NSArray *artistsDictionaries = [dictionary objectForKey:@"artists"];
+        NSDictionary *artistDictionary = [artistsDictionaries objectAtIndex:0];
+        
+        Artist *artist = [[Artist alloc] initWithDictionary:artistDictionary];
         
         NSLog(@"%@", artist.artistName);
         NSLog(@"%d", artist.yearFounded);
@@ -63,53 +64,84 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     }] resume];
 }
 
+// MARK: - Initial App Set-Up Methods
 
 - (void)createOrLoadArtistDictionary
 {
-    NSFileManager *fileManager = [NSFileManager new];
-    NSError *error = nil;
-    NSURL *docsURL = [fileManager URLForDirectory:NSDocumentDirectory
-                                         inDomain:NSUserDomainMask
-                                appropriateForURL:nil
-                                           create:YES
-                                            error:&error];
-    if (!error) {
-        NSURL *artistDictionaryURL = [docsURL URLByAppendingPathComponent:@"Artists"];
-        NSLog(@"%@", artistDictionaryURL);
-        
-        if (![fileManager fileExistsAtPath:artistDictionaryURL.path]) {
-            [fileManager createDirectoryAtURL:artistDictionaryURL withIntermediateDirectories:YES attributes:nil error:&error];
-            if (!error) {
-                error = [self saveDictionaryWithUrl:artistDictionaryURL];
-                if (error) {
-                    NSLog(@"Error: %@, writing dictionary to path: %@", error, artistDictionaryURL);
-                }
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSURL *artistsDictionaryURL = [self getLocalArtistsDictionaryURL];
+    
+    if (![fileManager fileExistsAtPath:artistsDictionaryURL.path]) {
+        NSError *error = nil;
+        [fileManager createFileAtPath:artistsDictionaryURL.path contents:nil attributes:nil];
+        if (!error) {
+            error = [self createLocalArtistDictionary];
+            if (error) {
+                NSLog(@"Error saving dictionary to URL: %@", error);
             }
-        } else {
-            NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:artistDictionaryURL error:&error];
-            NSLog(@"%@", dictionary);
+        }
+        
+    } else {
+        NSDictionary *loadedArtists = [[NSDictionary alloc] initWithContentsOfURL:artistsDictionaryURL];
+        self.localArtistDictionary = loadedArtists;
+        self.allArtists = [[NSMutableArray alloc] init];
+        for (NSDictionary *singleArtistDictionary in loadedArtists.allValues) {
+            [self parseLocalArtistDataWithDictionary:singleArtistDictionary];
         }
     }
 }
 
-
-- (NSError *)saveDictionaryWithUrl:(NSURL *)url
+- (NSError *)createLocalArtistDictionary
 {
+    NSURL *url = [self getLocalArtistsDictionaryURL];
     Artist *testArtist = [[Artist alloc] initWithArtistName:@"Test" yearFounded:1999 artistBio:@"This is a test artist"];
-    Artist *anotherArtist = [[Artist alloc] initWithArtistName:@"Test 2" yearFounded:1989 artistBio:@"This is a another test artist"];
-    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:testArtist, testArtist.artistName, anotherArtist, anotherArtist.artistName, nil];
+    NSDictionary *testDictionary = [testArtist toDictionary];
+    NSString *testKey = testArtist.artistName;
     
+    Artist *anotherArtist = [[Artist alloc] initWithArtistName:@"Test2" yearFounded:1999 artistBio:@"This is a test artist"];
+    NSDictionary *anotherDictionary = [anotherArtist toDictionary];
+    NSString *anotherKey = anotherArtist.artistName;
+    
+    NSDictionary *testArtistsDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:testDictionary, testKey, anotherDictionary, anotherKey, nil];
     NSError *error = nil;
-    [dictionary writeToURL:url error:&error];
+    [testArtistsDictionary writeToURL:url error:&error];
     
     if (!error) {
-        self.localArtistDictionary = dictionary;
-        self.allArtists = [[NSMutableArray alloc] initWithArray:self.localArtistDictionary.allValues];
+        self.localArtistDictionary = testArtistsDictionary;
+        self.allArtists = [[NSMutableArray alloc] init];
+        for (NSDictionary *singleArtistDictionary in self.localArtistDictionary.allValues) {
+            [self parseLocalArtistDataWithDictionary:singleArtistDictionary];
+        }
         return nil;
     } else {
         return error;
     }
 }
+
+
+
+// MARK: - Helper Functions
+
+- (void)parseLocalArtistDataWithDictionary:(NSDictionary *)dictionary
+{
+    Artist *singleArtist = [[Artist alloc] initWithDictionary:dictionary];
+    [self.allArtists addObject:singleArtist];
+}
+
+
+- (NSURL *)getLocalArtistsDictionaryURL
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"artists.plist"];
+    
+    NSURL *artistsDictionaryURL = [[NSURL alloc] initFileURLWithPath:path isDirectory:NO];
+    
+    return artistsDictionaryURL;
+}
+
+
 
 
 @end

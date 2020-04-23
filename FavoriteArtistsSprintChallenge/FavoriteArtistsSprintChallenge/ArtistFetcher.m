@@ -119,6 +119,29 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     }
 }
 
+- (void)saveLocalDictionaryWithNewArtist:(Artist *)artist
+{
+    NSURL *url = [self getLocalArtistsDictionaryURL];
+    NSMutableDictionary *artistsDictionary = [[NSMutableDictionary alloc] initWithDictionary:self.localArtistDictionary];
+    
+    NSDictionary *newArtistDetailsDictionary = [artist toDictionary];
+    NSString *newArtistKey = artist.artistName;
+    NSDictionary *newArtistDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:newArtistDetailsDictionary, newArtistKey, nil];
+    
+    [artistsDictionary addEntriesFromDictionary:newArtistDictionary];
+    
+    NSError *error = nil;
+    [artistsDictionary writeToURL:url error:&error];
+    
+    if (!error) {
+        self.localArtistDictionary = artistsDictionary;
+        [self.allArtists removeAllObjects];
+        for (NSDictionary *singleArtistDictionary in self.localArtistDictionary.allValues) {
+            [self parseLocalArtistDataWithDictionary:singleArtistDictionary];
+        }
+    }
+}
+
 
 
 // MARK: - Helper Functions

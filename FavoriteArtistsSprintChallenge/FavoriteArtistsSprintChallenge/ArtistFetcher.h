@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)createOrLoadArtistDictionary;
 - (NSError *)createLocalArtistDictionary;
 
-- (void)saveNewArtistToLocalDictionary;
+- (void)saveLocalDictionaryWithNewArtist:(Artist *)artist;
 
 - (NSURL *)getLocalArtistsDictionaryURL;
 - (void)parseLocalArtistDataWithDictionary:(NSDictionary *)dictionary;

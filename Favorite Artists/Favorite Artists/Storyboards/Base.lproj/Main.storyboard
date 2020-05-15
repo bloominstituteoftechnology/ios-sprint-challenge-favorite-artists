@@ -165,6 +165,11 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="YBK-1s-6Et">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Rx2-xG-2rd"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistLabel" destination="yIT-Ui-RnO" id="Wo9-b0-APE"/>
+                        <outlet property="biographyTextView" destination="Hh4-ly-ZOK" id="sat-zK-J4s"/>
+                        <outlet property="yearLabel" destination="hBA-El-hMx" id="tP6-15-qsa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0a-X4-gic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

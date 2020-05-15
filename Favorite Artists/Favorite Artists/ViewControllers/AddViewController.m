@@ -10,9 +10,17 @@
 #import "MTGArtist.h"
 #import "MTGArtistFetcher.h"
 
-@interface AddViewController ()
+@interface AddViewController () {
+    MTGArtist *artist;
+}
 
 @property (nonatomic) MTGArtistFetcher *fetcher;
+
+// MARK: - Outlets
+
+@property (strong, nonatomic) IBOutlet UILabel *artistLabel;
+@property (strong, nonatomic) IBOutlet UILabel *yearLabel;
+@property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
 
 @end
 
@@ -20,7 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self updateViews];
 
     [self.fetcher fetchArtistByName:@"Macklemore" completionBlock:^(MTGArtist * _Nullable artist, NSError * _Nullable error) {
         if (error) {
@@ -30,6 +39,15 @@
 
         NSLog(@"Arstist: %@", artist);
     }];
+}
+
+- (void)updateViews {
+
+    if (artist == nil) {
+        self.artistLabel.text = @"";
+        _yearLabel.text = @"";
+        _biographyTextView.text = @"";
+    }
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "ArtistsTableViewController.h"
 #import "ArtistContoller.h"
 #import "MTGArtist.h"
+#import "AddViewController.h"
 
 @interface ArtistsTableViewController ()
 

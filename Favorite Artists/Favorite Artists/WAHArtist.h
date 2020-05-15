@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
                      biography:(NSString *)biography
                     yearFormed:(int)yearFormed;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

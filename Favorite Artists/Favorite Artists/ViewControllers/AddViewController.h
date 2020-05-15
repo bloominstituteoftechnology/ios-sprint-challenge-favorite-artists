@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AddViewController.h
 //  Favorite Artists
 //
 //  Created by Mark Gerrior on 5/15/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface AddViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="ndD-qx-LBd">
             <objects>
-                <tableViewController title="Favorite Artists" id="gcT-WD-mLz" sceneMemberID="viewController">
+                <tableViewController title="Favorite Artists" id="gcT-WD-mLz" customClass="ArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VbZ-4X-xgO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,8 +49,8 @@
                             <outlet property="delegate" destination="gcT-WD-mLz" id="M4Z-XE-Dpq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="OBW-5c-zyA">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Fwt-5m-nIX">
+                    <navigationItem key="navigationItem" title="Favorite Artists" id="OBW-5c-zyA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fwt-5m-nIX">
                             <connections>
                                 <segue destination="tVQ-V7-QV5" kind="show" id="HWU-s5-uX7"/>
                             </connections>
@@ -64,7 +64,7 @@
         <!--Artist Name-->
         <scene sceneID="G22-xW-KpW">
             <objects>
-                <viewController title="Artist Name" id="bGz-T6-gx3" sceneMemberID="viewController">
+                <viewController title="Artist Name" id="bGz-T6-gx3" customClass="ViewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="evo-cF-WaV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
         <!--Add New Artist-->
         <scene sceneID="dbv-Xl-gOz">
             <objects>
-                <viewController id="tVQ-V7-QV5" sceneMemberID="viewController">
+                <viewController id="tVQ-V7-QV5" customClass="AddViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aPz-aI-E1u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

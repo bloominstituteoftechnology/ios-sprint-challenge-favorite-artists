@@ -8,6 +8,6 @@
 
 #import "Artist+NSJSONSerialization.h"
 
-@implementation Artist (NSJSONSerialization)
+@implementation HLOArtist (NSJSONSerialization)
 
 @end

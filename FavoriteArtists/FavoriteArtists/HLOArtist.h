@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Artist : NSObject
+@interface HLOArtist : NSObject
 
 @property (nonatomic, readonly, copy) NSString *artistName;
 @property (nonatomic, readonly, copy) NSString *artistBiography;

@@ -25,6 +25,8 @@
 		92F7BF8D246EFA45009A0A7A /* Macklemore.json in Resources */ = {isa = PBXBuildFile; fileRef = 92F7BF89246EFA45009A0A7A /* Macklemore.json */; };
 		92F7BF91246EFC10009A0A7A /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF8F246EFC10009A0A7A /* LSIFileHelper.m */; };
 		92F7BF92246EFC90009A0A7A /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF8F246EFC10009A0A7A /* LSIFileHelper.m */; };
+		92F7BF97246F243A009A0A7A /* MTGArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF96246F243A009A0A7A /* MTGArtistFetcher.m */; };
+		92F7BF9B246F270E009A0A7A /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF9A246F270E009A0A7A /* LSIErrors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		92F7BF89246EFA45009A0A7A /* Macklemore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Macklemore.json; sourceTree = "<group>"; };
 		92F7BF8F246EFC10009A0A7A /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
 		92F7BF90246EFC10009A0A7A /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		92F7BF96246F243A009A0A7A /* MTGArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGArtistFetcher.m; sourceTree = "<group>"; };
+		92F7BF98246F256F009A0A7A /* MTGArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTGArtistFetcher.h; sourceTree = "<group>"; };
+		92F7BF99246F270E009A0A7A /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		92F7BF9A246F270E009A0A7A /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,8 @@
 				92F7BF83246EF925009A0A7A /* JSON */,
 				92F7BF8E246EFBF0009A0A7A /* LambdaSDK */,
 				92F7BF6C246EF20F009A0A7A /* Models */,
+				92F7BF98246F256F009A0A7A /* MTGArtistFetcher.h */,
+				92F7BF96246F243A009A0A7A /* MTGArtistFetcher.m */,
 				92F7BF60246EEA86009A0A7A /* Resources */,
 				92F7BF61246EEA9E009A0A7A /* Storyboards */,
 				92F7BF62246EEE1C009A0A7A /* ViewControllers */,
@@ -188,6 +196,8 @@
 		92F7BF8E246EFBF0009A0A7A /* LambdaSDK */ = {
 			isa = PBXGroup;
 			children = (
+				92F7BF99246F270E009A0A7A /* LSIErrors.h */,
+				92F7BF9A246F270E009A0A7A /* LSIErrors.m */,
 				92F7BF90246EFC10009A0A7A /* LSIFileHelper.h */,
 				92F7BF8F246EFC10009A0A7A /* LSIFileHelper.m */,
 			);
@@ -304,8 +314,10 @@
 				92F7BF6F246EF288009A0A7A /* MTGArtist.m in Sources */,
 				92F7BF65246EEF22009A0A7A /* ArtistsTableViewController.m in Sources */,
 				92F7BF3B246EEA25009A0A7A /* AppDelegate.m in Sources */,
+				92F7BF9B246F270E009A0A7A /* LSIErrors.m in Sources */,
 				92F7BF6B246EEF65009A0A7A /* ViewViewController.m in Sources */,
 				92F7BF82246EF7CF009A0A7A /* MTGArtist+NSJSONSerialization.m in Sources */,
+				92F7BF97246F243A009A0A7A /* MTGArtistFetcher.m in Sources */,
 				92F7BF4C246EEA29009A0A7A /* main.m in Sources */,
 				92F7BF3E246EEA25009A0A7A /* SceneDelegate.m in Sources */,
 			);

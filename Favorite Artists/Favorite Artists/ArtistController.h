@@ -1,5 +1,5 @@
 //
-//  ArtistContoller.h
+//  ArtistController.h
 //  Favorite Artists
 //
 //  Created by Mark Gerrior on 5/15/20.
@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ArtistContoller : NSObject
+@interface ArtistController : NSObject
 
 @property (nonatomic, readwrite, copy) NSArray *artists;
 

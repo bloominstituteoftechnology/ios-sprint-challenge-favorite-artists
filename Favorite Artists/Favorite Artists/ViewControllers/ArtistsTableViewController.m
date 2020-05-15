@@ -7,13 +7,13 @@
 //
 
 #import "ArtistsTableViewController.h"
-#import "ArtistContoller.h"
+#import "ArtistController.h"
 #import "MTGArtist.h"
 #import "AddViewController.h"
 
 @interface ArtistsTableViewController ()
 
-@property ArtistContoller *artistController;
+@property ArtistController *artistController;
 
 @end
 
@@ -23,7 +23,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-        _artistController = [[ArtistContoller alloc] init];
+        _artistController = [[ArtistController alloc] init];
     }
     return self;
 }

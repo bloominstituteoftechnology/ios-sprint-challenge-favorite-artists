@@ -1,14 +1,14 @@
 //
-//  ArtistContoller.m
+//  ArtistController.m
 //  Favorite Artists
 //
 //  Created by Mark Gerrior on 5/15/20.
 //  Copyright © 2020 Mark Gerrior. All rights reserved.
 //
 
-#import "ArtistContoller.h"
+#import "ArtistController.h"
 
-@implementation ArtistContoller
+@implementation ArtistController
 
 - (void)add:(MTGArtist *)artist {
     self.artists = [self.artists arrayByAddingObject:artist];

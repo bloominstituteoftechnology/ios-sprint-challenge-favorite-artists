@@ -61,7 +61,7 @@
 
 - (IBAction)saveButton:(UIBarButtonItem *)sender {
     // TODO: Save artist
-    [_artistController add:_artist];
+    [self.artistController add:self.artist];
 
     NSLog(@"%lul", (unsigned long)_artistController.artists.count);
 

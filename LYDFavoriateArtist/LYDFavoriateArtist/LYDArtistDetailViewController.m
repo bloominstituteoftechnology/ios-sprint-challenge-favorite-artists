@@ -36,7 +36,7 @@
 -(void)setUpViews{
     
     if (self.artist != nil){
-        self.navigationItem.title = @"";
+        self.navigationItem.title = [NSString stringWithFormat:@"%@", self.artist.name];
         self.nameLabel.text = self.artist.name;
         self.biographyLabel.text = self.artist.biography;
         self.yearLabel.text = [self yearStr];

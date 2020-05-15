@@ -33,17 +33,6 @@
 // MARK: - View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.fetcher fetchArtistWithName:@"newsboys" completionBlock:^(CBDArtist * _Nullable artist, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error fetching artist");
-            return;
-        }
-        NSLog(@"Artist: %@", artist.strArtist);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self updateViews];
-        });
-    }];
-    
 }
 
 -(void)updateViews {
@@ -75,18 +64,6 @@
     return cell;
 }
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
 // MARK: - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -98,13 +75,11 @@
         detailVC.fetcher = self.fetcher;
         NSIndexPath *index = [self.tableView indexPathForSelectedRow];
         detailVC.artist = self.fetcher.artists[index.row];
-        
     }
 }
 
 - (IBAction)unwindSegue:(UIStoryboardSegue *)segue {
     [self updateViews];
 }
-
 
 @end

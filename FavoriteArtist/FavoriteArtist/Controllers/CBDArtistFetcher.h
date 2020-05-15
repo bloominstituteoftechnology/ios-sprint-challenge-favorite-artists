@@ -20,7 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithArtists:(NSMutableArray *)artists;
 
 - (void)fetchArtistWithName:(NSString *)name
-completionBlock:(CBDArtistCompletion)completionBlock;
+            completionBlock:(CBDArtistCompletion)completionBlock;
+
+- (void)saveArtist:(CBDArtist *)artist
+   completionBlock:(CBDArtistCompletion)completionBlock;
+
+- (void)saveToDisk;
 
 @end
 

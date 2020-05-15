@@ -63,13 +63,31 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
         NSLog(@"dictionary");
         CBDArtist *artist = [[CBDArtist alloc] initWithDictionary:dictionary];
         if (artist) {
-            [self.artists addObject:artist];
+            //[self.artists addObject:artist];
             completionBlock(artist, nil);
             return;
         }
         completionBlock(nil, nil);
     }];
     [task resume];
+}
+
+- (void)saveArtist:(CBDArtist *)artist
+   completionBlock:(CBDArtistCompletion)completionBlock {
+    [self.artists addObject:artist];
+    completionBlock(nil, nil);
+    [self saveToDisk];
+}
+
+- (void)saveToDisk {
+    NSArray *urls = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [urls objectAtIndex:0];
+    NSString *fileName = [documentsDirectory stringByAppendingPathComponent:@"artists.txt"];
+
+    NSMutableDictionary *artistDictionary = [[NSMutableDictionary alloc] init];
+    [artistDictionary setValue:self.artists forKey:@"artists"];
+    [artistDictionary writeToFile:fileName atomically:YES];
+    NSLog(@"File Directory: %@", fileName);
 }
 
 @end

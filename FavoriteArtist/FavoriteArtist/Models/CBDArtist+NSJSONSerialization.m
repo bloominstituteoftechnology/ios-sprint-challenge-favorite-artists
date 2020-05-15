@@ -29,7 +29,8 @@
 }
 
 - (NSDictionary *)toDictionary {
-     
+    //NSDictionary *dict = [[NSMutableDictionary alloc] init];
+    //[dict setValue:self.artists forKey:@"artists"];
     return [NSDictionary new];
 }
 

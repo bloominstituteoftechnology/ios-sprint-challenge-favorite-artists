@@ -34,7 +34,7 @@
     //self.favoriteArtistSearchBar = [UISearchBar init];
     self.favoriteArtistSearchBar.delegate = self;
     // Do any additional setup after loading the view.
-    
+    self.navigationItem.rightBarButtonItem.title = @"Save Artist";
     [self updateViews];
 }
 
@@ -55,9 +55,12 @@
 
 // MARK: - Actions
 - (IBAction)saveArtist:(id)sender {
-    if ([self.fetcher.artists containsObject:self.artist]) {
-        
-        [self performSegueWithIdentifier:@"UnwindToArtistsTVC" sender:self];
+    if (![self.fetcher.artists containsObject:self.artist] && self.artist.strArtist != nil) {
+        [self.fetcher saveArtist:self.artist completionBlock:^(CBDArtist * _Nullable artist, NSError * _Nullable error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self performSegueWithIdentifier:@"UnwindToArtistsTVC" sender:self];
+            });
+        }];
     }
     
 }
@@ -82,7 +85,7 @@
 //    if ([[segue identifier] isEqualToString:@"UnwindToArtistsTVC"]) {
 //        CBDArtistsTableViewController *artistsTVC = [segue destinationViewController];
 //        artistsTVC.fetcher = self.fetcher;
-//    } 
+//    }
 //}
 
 @end

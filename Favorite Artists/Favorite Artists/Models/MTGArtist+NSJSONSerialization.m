@@ -14,20 +14,24 @@
 
 + (instancetype)initWithDictionary:(NSDictionary *)dictionary {
 
-    NSString *artist     = dictionary[@"artist"];
-    NSString *biography  = dictionary[@"biography"];
-    NSNumber *formedYear = dictionary[@"formedYear"];
+    NSArray  *artistsArray = dictionary[@"artists"];
+    // FIXME: What about 0 objects?
+    NSDictionary *artistDictionary = artistsArray[0];
+
+    NSString *artist     = artistDictionary[@"strArtist"];
+    NSString *biography  = artistDictionary[@"strBiographyEN"];
+    NSNumber *formedYear = artistDictionary[@"intFormedYear"];
 
     if ([formedYear isKindOfClass:[NSNull class]]) { formedYear = nil; }
 
     // The required elements
     if (formedYear == nil) {
-        formedYear = [NSNumber numberWithDouble:-1];
+        formedYear = [NSNumber numberWithInt:-1];
     }
 
     return [[MTGArtist alloc] initWithArtist:artist
                                    biography:biography
-                                  formedYear:formedYear.doubleValue
+                                  formedYear:formedYear.intValue
             ];
 }
 

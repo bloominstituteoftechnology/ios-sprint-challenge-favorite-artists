@@ -7,12 +7,15 @@
 //
 
 #import "FavoriteArtistsTableViewController.h"
+#import "HLOArtist.h"
+#import "HLOArtistModelController.h"
 
 @interface FavoriteArtistsTableViewController ()
 // MARK:- Properties
 
-// MARK:- Outlets
+@property (nonatomic) HLOArtistModelController *artistController;
 
+// MARK:- Outlets
 
 
 @end
@@ -21,7 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.artistController = [[HLOArtistModelController alloc] init];
+    HLOArtist *testArtist = [[HLOArtist alloc] initWithName:@"Testlemore" artistBiography:@"Was a real gangsta" yearFormed:42069];
+    [self.artistController.favoriteArtists addObject:testArtist];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -32,24 +37,23 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.artistController.favoriteArtists.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FavArtistCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    HLOArtist *artist = self.artistController.favoriteArtists[indexPath.row];
+    cell.textLabel.text = artist.artistName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -85,14 +89,16 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+    if ([segue.identifier isEqualToString:@"ViewArtistShowSegue"]) {
+
+    } else if ([segue.identifier isEqualToString:@"AddArtistShowSegue"]) {
+
+    }
 }
-*/
 
 @end

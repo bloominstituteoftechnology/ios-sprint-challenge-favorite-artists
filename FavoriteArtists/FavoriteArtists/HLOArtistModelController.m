@@ -8,6 +8,7 @@
 
 #import "HLOArtistModelController.h"
 #import "HLOArtist.h"
+#import "HLOArtist+NSJSONSerialization.h"
 
 static NSString *baseURLString = @"theaudiodb.com/api/v1/json/1/search.php?s=";
 
@@ -17,7 +18,7 @@ static NSString *baseURLString = @"theaudiodb.com/api/v1/json/1/search.php?s=";
     self = [super init];
     if (self) {
         // Initialize empty array in default initializer so that tableview may have data to use for protocol stubs.
-        _favoriteArtists = [[NSMutableArray alloc] init];
+        _favoriteArtists = [[NSMutableArray<HLOArtist *> alloc] init];
     }
     return self;
 }

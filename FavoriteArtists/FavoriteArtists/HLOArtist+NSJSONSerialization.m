@@ -41,7 +41,7 @@
     [dictionary setValue:self.artistName forKey:@"strArtist"];
     [dictionary setValue:self.artistBiography forKey:@"strBiographyEN"];
     NSString *yearFormed = [NSString stringWithFormat:@"%d", self.yearFormed];
-    [dictionary setValue:yearFormed forKey:@"intYearFormed"];
+    [dictionary setValue:yearFormed forKey:@"intFormedYear"];
 
     // Create an array containeras done in the dictionary passed from the API so that the initFromDictionary will work whether data is loaded from API or persistence. (Let's hope this works)
     NSArray *artistsContainer = [[NSArray alloc] initWithObjects:dictionary, nil];
@@ -67,6 +67,13 @@
 
     NSLog(@"%@", saveFileURL);
     NSError *saveError = nil;
-    return [dictRepresentation writeToURL:saveFileURL error:&saveError];
+    [dictRepresentation writeToURL:saveFileURL error:&saveError];
+
+    if (saveError) {
+        NSLog(@"Error saving %@", saveError);
+        return false;
+    }
+
+    return true;
 }
 @end

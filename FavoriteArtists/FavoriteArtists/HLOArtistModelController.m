@@ -92,14 +92,10 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 
     for (NSString *path in data) {
         NSURL *filePath = [documentsDirectory URLByAppendingPathComponent:path];
-        NSData *jsonData = [NSData dataWithContentsOfURL:filePath];
-        [self parseJSONData:jsonData completionBlock:^(HLOArtist * _Nullable artist, NSError * _Nullable error) {
-            if (error) {
-                NSLog(@"Error loading file at: %@", filePath);
-                return;
-            }
-            [self.favoriteArtists addObject:artist];
-        }];
+//        NSData *jsonData = [NSData dataWithContentsOfURL:filePath];
+        NSDictionary *fileDict = [NSDictionary dictionaryWithContentsOfURL:filePath];
+        HLOArtist *newArtist = [[HLOArtist alloc] initFromDictionary:fileDict];
+        [self.favoriteArtists addObject:newArtist];
     }
 
     completionBlock(nil);

@@ -17,6 +17,7 @@
 		92F7BF65246EEF22009A0A7A /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF64246EEF22009A0A7A /* ArtistsTableViewController.m */; };
 		92F7BF68246EEF52009A0A7A /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF67246EEF52009A0A7A /* AddViewController.m */; };
 		92F7BF6B246EEF65009A0A7A /* ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF6A246EEF65009A0A7A /* ViewViewController.m */; };
+		92F7BF6F246EF288009A0A7A /* MTGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF6E246EF288009A0A7A /* MTGArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		92F7BF67246EEF52009A0A7A /* AddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		92F7BF69246EEF65009A0A7A /* ViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewViewController.h; sourceTree = "<group>"; };
 		92F7BF6A246EEF65009A0A7A /* ViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewViewController.m; sourceTree = "<group>"; };
+		92F7BF6D246EF288009A0A7A /* MTGArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTGArtist.h; sourceTree = "<group>"; };
+		92F7BF6E246EF288009A0A7A /* MTGArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,7 @@
 		92F7BF38246EEA25009A0A7A /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				92F7BF6C246EF20F009A0A7A /* Models */,
 				92F7BF60246EEA86009A0A7A /* Resources */,
 				92F7BF61246EEA9E009A0A7A /* Storyboards */,
 				92F7BF62246EEE1C009A0A7A /* ViewControllers */,
@@ -142,6 +146,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		92F7BF6C246EF20F009A0A7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92F7BF6D246EF288009A0A7A /* MTGArtist.h */,
+				92F7BF6E246EF288009A0A7A /* MTGArtist.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +199,7 @@
 		92F7BF2E246EEA25009A0A7A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MTG;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Mark Gerrior";
 				TargetAttributes = {
@@ -243,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F7BF68246EEF52009A0A7A /* AddViewController.m in Sources */,
+				92F7BF6F246EF288009A0A7A /* MTGArtist.m in Sources */,
 				92F7BF65246EEF22009A0A7A /* ArtistsTableViewController.m in Sources */,
 				92F7BF3B246EEA25009A0A7A /* AppDelegate.m in Sources */,
 				92F7BF6B246EEF65009A0A7A /* ViewViewController.m in Sources */,

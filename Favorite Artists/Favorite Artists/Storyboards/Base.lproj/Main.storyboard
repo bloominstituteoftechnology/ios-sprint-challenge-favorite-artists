@@ -163,7 +163,11 @@
                         <viewLayoutGuide key="safeArea" id="Sh5-jb-dBb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="YBK-1s-6Et">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Rx2-xG-2rd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Rx2-xG-2rd">
+                            <connections>
+                                <action selector="saveButton:" destination="tVQ-V7-QV5" id="99L-0O-y30"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistLabel" destination="yIT-Ui-RnO" id="Wo9-b0-APE"/>

@@ -10,7 +10,7 @@
 #import "HLOArtist.h"
 #import "HLOArtist+NSJSONSerialization.h"
 
-static NSString *baseURLString = @"theaudiodb.com/api/v1/json/1/search.php";
+static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 @implementation HLOArtistModelController
 
@@ -25,9 +25,6 @@ static NSString *baseURLString = @"theaudiodb.com/api/v1/json/1/search.php";
 
 - (void)fetchArtistWithName:(NSString *)artistName
             completionBlock:(void (^)(NSError * _Nullable error))completionBlock {
-//
-//    NSURL *baseURL = [[NSURL alloc] initWithString:baseURLString];
-//    NSURL *requestURL = [baseURL URLByAppendingPathExtension:artistName];
 
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
 
@@ -35,14 +32,46 @@ static NSString *baseURLString = @"theaudiodb.com/api/v1/json/1/search.php";
         [NSURLQueryItem queryItemWithName:@"s" value:artistName]
     ];
 
-    NSLog(@"%@", urlComponents.URL);
-//    NSLog(@"%@", requestURL.absoluteString);
+    NSURL *url = urlComponents.URL;
+
+    NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"%@", urlComponents.URL);
+        if (error) {
+            completionBlock(error);
+            return;
+        }
+
+        [self parseJSONData:data completionBlock:^(NSError * _Nullable error) {
+            if (error) {
+                completionBlock(error);
+                return;
+            }
+            completionBlock(nil);
+        }];
+
+    }];
+
+    [task resume];
+
 
 }
 
-- (HLOArtist *)parseJSONData:(NSData *)data
+- (void)parseJSONData:(NSData *)data
       completionBlock:(void (^)(NSError * _Nullable error))completionBlock {
-    return nil;
+
+    NSError *jsonError = nil;
+
+    if (jsonError) {
+        completionBlock(jsonError);
+        return;
+    }
+
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+
+    NSLog(@"JSON taken out of request: %@", json);
+    
+
+    return;
 }
 
 @end

@@ -64,7 +64,7 @@
         <!--Add New Artist-->
         <scene sceneID="KDA-ru-tBK">
             <objects>
-                <viewController id="NJh-Fs-HBx" sceneMemberID="viewController">
+                <viewController id="NJh-Fs-HBx" customClass="ArtistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oyn-hy-nTn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,8 +114,18 @@
                         <viewLayoutGuide key="safeArea" id="YWY-MY-mYp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="efu-M4-c4h">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9b2-0A-HZR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9b2-0A-HZR">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="NJh-Fs-HBx" id="iRP-WS-4js"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="biographyTextView" destination="MOs-T8-lSm" id="AwB-vN-cBo"/>
+                        <outlet property="nameLabel" destination="6EH-iz-Jup" id="hfa-TF-c70"/>
+                        <outlet property="searchBar" destination="TSG-Zm-bZx" id="Qj2-oK-mKb"/>
+                        <outlet property="yearFormedLabel" destination="KqP-TS-jy1" id="E28-1d-czh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpu-Jm-evb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

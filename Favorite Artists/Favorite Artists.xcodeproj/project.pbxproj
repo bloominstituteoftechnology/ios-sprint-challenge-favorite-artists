@@ -16,6 +16,7 @@
 		13AEC789246EE8D400C97C80 /* WAHArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC788246EE8D400C97C80 /* WAHArtist.m */; };
 		13AEC795246EEE9000C97C80 /* WAHArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC794246EEE9000C97C80 /* WAHArtistController.m */; };
 		13AEC799246EF29E00C97C80 /* WAHArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC798246EF29E00C97C80 /* WAHArtistTableViewController.m */; };
+		13AEC79E246EF7BF00C97C80 /* ArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC79D246EF7BF00C97C80 /* ArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		13AEC794246EEE9000C97C80 /* WAHArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAHArtistController.m; sourceTree = "<group>"; };
 		13AEC797246EF29E00C97C80 /* WAHArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAHArtistTableViewController.h; sourceTree = "<group>"; };
 		13AEC798246EF29E00C97C80 /* WAHArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAHArtistTableViewController.m; sourceTree = "<group>"; };
+		13AEC79C246EF7BF00C97C80 /* ArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistViewController.h; sourceTree = "<group>"; };
+		13AEC79D246EF7BF00C97C80 /* ArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,16 +70,14 @@
 		13AEC76D246EE6D900C97C80 /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
-				13AEC796246EF28700C97C80 /* New Group */,
+				13AEC796246EF28700C97C80 /* View Controllers */,
 				13AEC76E246EE6D900C97C80 /* AppDelegate.h */,
 				13AEC76F246EE6D900C97C80 /* AppDelegate.m */,
 				13AEC771246EE6D900C97C80 /* SceneDelegate.h */,
 				13AEC772246EE6D900C97C80 /* SceneDelegate.m */,
 				13AEC777246EE6DA00C97C80 /* Main.storyboard */,
-				13AEC793246EEE9000C97C80 /* WAHArtistController.h */,
-				13AEC794246EEE9000C97C80 /* WAHArtistController.m */,
-				13AEC787246EE8D400C97C80 /* WAHArtist.h */,
-				13AEC788246EE8D400C97C80 /* WAHArtist.m */,
+				13AEC79B246EF76A00C97C80 /* Model Controller */,
+				13AEC79A246EF75C00C97C80 /* Model */,
 				13AEC77A246EE6DA00C97C80 /* Assets.xcassets */,
 				13AEC77C246EE6DA00C97C80 /* LaunchScreen.storyboard */,
 				13AEC77F246EE6DA00C97C80 /* Info.plist */,
@@ -85,13 +86,33 @@
 			path = "Favorite Artists";
 			sourceTree = "<group>";
 		};
-		13AEC796246EF28700C97C80 /* New Group */ = {
+		13AEC796246EF28700C97C80 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				13AEC797246EF29E00C97C80 /* WAHArtistTableViewController.h */,
 				13AEC798246EF29E00C97C80 /* WAHArtistTableViewController.m */,
+				13AEC79C246EF7BF00C97C80 /* ArtistViewController.h */,
+				13AEC79D246EF7BF00C97C80 /* ArtistViewController.m */,
 			);
-			name = "New Group";
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		13AEC79A246EF75C00C97C80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13AEC787246EE8D400C97C80 /* WAHArtist.h */,
+				13AEC788246EE8D400C97C80 /* WAHArtist.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		13AEC79B246EF76A00C97C80 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13AEC793246EEE9000C97C80 /* WAHArtistController.h */,
+				13AEC794246EEE9000C97C80 /* WAHArtistController.m */,
+			);
+			name = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +191,7 @@
 				13AEC795246EEE9000C97C80 /* WAHArtistController.m in Sources */,
 				13AEC781246EE6DA00C97C80 /* main.m in Sources */,
 				13AEC773246EE6D900C97C80 /* SceneDelegate.m in Sources */,
+				13AEC79E246EF7BF00C97C80 /* ArtistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

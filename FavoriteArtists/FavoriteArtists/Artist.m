@@ -10,4 +10,16 @@
 
 @implementation Artist
 
+- (instancetype)initWithName:(NSString *)artistName
+artistBiography:(NSString *)artistBiography
+                  yearFormed:(int)yearFormed {
+    self = [super init];
+    if (self) {
+        _artistName = artistName;
+        _artistBiography = artistBiography;
+        _yearFormed = yearFormed;
+    }
+    return self;
+}
+
 @end

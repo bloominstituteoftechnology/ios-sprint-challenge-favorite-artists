@@ -19,6 +19,10 @@
 		92F7BF6B246EEF65009A0A7A /* ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF6A246EEF65009A0A7A /* ViewViewController.m */; };
 		92F7BF6F246EF288009A0A7A /* MTGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF6E246EF288009A0A7A /* MTGArtist.m */; };
 		92F7BF82246EF7CF009A0A7A /* MTGArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF81246EF7CF009A0A7A /* MTGArtist+NSJSONSerialization.m */; };
+		92F7BF8A246EFA45009A0A7A /* Pink Floyd.json in Resources */ = {isa = PBXBuildFile; fileRef = 92F7BF86246EFA45009A0A7A /* Pink Floyd.json */; };
+		92F7BF8B246EFA45009A0A7A /* John Williams.json in Resources */ = {isa = PBXBuildFile; fileRef = 92F7BF87246EFA45009A0A7A /* John Williams.json */; };
+		92F7BF8C246EFA45009A0A7A /* Zero 7.json in Resources */ = {isa = PBXBuildFile; fileRef = 92F7BF88246EFA45009A0A7A /* Zero 7.json */; };
+		92F7BF8D246EFA45009A0A7A /* Macklemore.json in Resources */ = {isa = PBXBuildFile; fileRef = 92F7BF89246EFA45009A0A7A /* Macklemore.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		92F7BF6E246EF288009A0A7A /* MTGArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGArtist.m; sourceTree = "<group>"; };
 		92F7BF80246EF7CF009A0A7A /* MTGArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTGArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		92F7BF81246EF7CF009A0A7A /* MTGArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MTGArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		92F7BF86246EFA45009A0A7A /* Pink Floyd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Pink Floyd.json"; sourceTree = "<group>"; };
+		92F7BF87246EFA45009A0A7A /* John Williams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "John Williams.json"; sourceTree = "<group>"; };
+		92F7BF88246EFA45009A0A7A /* Zero 7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Zero 7.json"; sourceTree = "<group>"; };
+		92F7BF89246EFA45009A0A7A /* Macklemore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Macklemore.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 		92F7BF38246EEA25009A0A7A /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				92F7BF83246EF925009A0A7A /* JSON */,
 				92F7BF6C246EF20F009A0A7A /* Models */,
 				92F7BF60246EEA86009A0A7A /* Resources */,
 				92F7BF61246EEA9E009A0A7A /* Storyboards */,
@@ -158,6 +167,17 @@
 				92F7BF81246EF7CF009A0A7A /* MTGArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		92F7BF83246EF925009A0A7A /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				92F7BF87246EFA45009A0A7A /* John Williams.json */,
+				92F7BF89246EFA45009A0A7A /* Macklemore.json */,
+				92F7BF86246EFA45009A0A7A /* Pink Floyd.json */,
+				92F7BF88246EFA45009A0A7A /* Zero 7.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F7BF49246EEA29009A0A7A /* LaunchScreen.storyboard in Resources */,
+				92F7BF8B246EFA45009A0A7A /* John Williams.json in Resources */,
 				92F7BF46246EEA28009A0A7A /* Assets.xcassets in Resources */,
 				92F7BF44246EEA25009A0A7A /* Main.storyboard in Resources */,
+				92F7BF8C246EFA45009A0A7A /* Zero 7.json in Resources */,
+				92F7BF8A246EFA45009A0A7A /* Pink Floyd.json in Resources */,
+				92F7BF8D246EFA45009A0A7A /* Macklemore.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

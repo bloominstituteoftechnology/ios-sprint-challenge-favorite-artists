@@ -74,7 +74,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [self.artistController fetchArtistWithName:searchBar.text completionBlock:^(WAHArtist * _Nullable artist, NSError * _Nullable error) {
         if (error) {
-            NSLog(@"Fetching Error: %@", error);
+            NSLog(@"Fetching Error: ");
             return;
         }
         

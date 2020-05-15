@@ -49,6 +49,11 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
             return;
         }
         
+        if ([dictionary[@"artists"] isKindOfClass:[NSNull class]]) {
+            completionBlock(nil, [[NSError alloc] init]);
+            return;
+        }
+
         NSDictionary *artist = [[dictionary objectForKey:@"artists"] firstObject];
         if (artist == nil) {
             completionBlock(nil, [[NSError alloc] init]);

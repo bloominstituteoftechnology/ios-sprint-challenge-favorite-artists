@@ -61,4 +61,8 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     [task resume];
 }
 
+- (NSArray *)fetchSavedArtist {
+    return nil;
+}
+
 @end

@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)fetchArtistWithName:(NSString *)name
             completionBlock:(WAHArtistFetcherCompletion)completionBlock;
 
+- (NSArray *)fetchSavedArtist;
+
 @end
 
 NS_ASSUME_NONNULL_END

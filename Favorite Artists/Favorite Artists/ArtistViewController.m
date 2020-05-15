@@ -61,17 +61,20 @@
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    
+    if (self.artist == nil) {
+        return;
+    }
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject: [self.artist toDictionary] options:0 error:nil];
+    NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+    NSURL *url = [[directory URLByAppendingPathComponent:self.artist.artist] URLByAppendingPathExtension: @"json"];
+    
+    NSLog(@"DIRECTORY: %@", directory);
+    NSLog(@"URL: %@", url);
+
+    [data writeToURL:url atomically:YES];
 }
 
 

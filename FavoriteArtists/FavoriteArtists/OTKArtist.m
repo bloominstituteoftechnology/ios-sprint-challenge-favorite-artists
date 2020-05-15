@@ -15,8 +15,8 @@
                   yearFormed:(int)yearFormed {
     self = [super init];
     if (self) {
-        _name = name;
-        _bio = bio;
+        _name = [name copy];
+        _bio = [bio copy];
         _yearFormed = yearFormed;
     }
 

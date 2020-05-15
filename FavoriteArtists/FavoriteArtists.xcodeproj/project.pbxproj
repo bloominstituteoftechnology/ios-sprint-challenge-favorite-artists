@@ -16,6 +16,7 @@
 		2C9004EC246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9004EB246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.m */; };
 		2C9004EF246EF10E00926D4F /* OTKSearchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9004EE246EF10E00926D4F /* OTKSearchArtistViewController.m */; };
 		2C9004F2246EF28E00926D4F /* OTKArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9004F1246EF28E00926D4F /* OTKArtist.m */; };
+		2C900501246EF89C00926D4F /* OTKArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C900500246EF89C00926D4F /* OTKArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		2C9004EE246EF10E00926D4F /* OTKSearchArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTKSearchArtistViewController.m; sourceTree = "<group>"; };
 		2C9004F0246EF28E00926D4F /* OTKArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTKArtist.h; sourceTree = "<group>"; };
 		2C9004F1246EF28E00926D4F /* OTKArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTKArtist.m; sourceTree = "<group>"; };
+		2C9004FF246EF89C00926D4F /* OTKArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTKArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		2C900500246EF89C00926D4F /* OTKArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OTKArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 			children = (
 				2C9004F0246EF28E00926D4F /* OTKArtist.h */,
 				2C9004F1246EF28E00926D4F /* OTKArtist.m */,
+				2C9004FF246EF89C00926D4F /* OTKArtist+NSJSONSerialization.h */,
+				2C900500246EF89C00926D4F /* OTKArtist+NSJSONSerialization.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				2C9004DE246EEC4A00926D4F /* main.m in Sources */,
 				2C9004EF246EF10E00926D4F /* OTKSearchArtistViewController.m in Sources */,
 				2C9004D0246EEC4800926D4F /* SceneDelegate.m in Sources */,
+				2C900501246EF89C00926D4F /* OTKArtist+NSJSONSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

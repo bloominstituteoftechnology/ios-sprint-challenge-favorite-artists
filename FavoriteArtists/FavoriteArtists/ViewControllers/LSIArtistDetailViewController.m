@@ -22,6 +22,8 @@
 @property (strong, nonatomic) IBOutlet UITextView *artistBioTextView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
+// MARK: - Private Method Declarations
+
 - (void)setUp;
 - (void)setUpSearchbar;
 - (void)updateUI;
@@ -29,7 +31,6 @@
 @end
 
 @implementation LSIArtistDetailViewController
-
 
 // MARK: - Init
 
@@ -102,7 +103,6 @@
         [self.navigationController popViewControllerAnimated:true];
     }
 }
-
 
 // MARK: - Search Results Updating
 

@@ -9,6 +9,7 @@
 #import "FavoriteArtistsTableViewController.h"
 #import "HLOArtist.h"
 #import "HLOArtistModelController.h"
+#import "ArtistDetailViewController.h"
 
 @interface FavoriteArtistsTableViewController ()
 // MARK:- Properties
@@ -93,11 +94,14 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
     if ([segue.identifier isEqualToString:@"ViewArtistShowSegue"]) {
-
+        ArtistDetailViewController *detailVC = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        detailVC.artist = self.artistController.favoriteArtists[indexPath.row];
+        detailVC.artistController = self.artistController;
     } else if ([segue.identifier isEqualToString:@"AddArtistShowSegue"]) {
-
+        ArtistDetailViewController *detailVC = [segue destinationViewController];
+        detailVC.artistController = self.artistController;
     }
 }
 

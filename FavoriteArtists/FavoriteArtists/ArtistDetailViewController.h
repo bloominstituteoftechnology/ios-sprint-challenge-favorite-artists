@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class HLOArtistModelController;
+@class HLOArtist;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistDetailViewController : UIViewController
-
+@property (nonatomic, nullable) HLOArtist *artist;
+@property (nonatomic) HLOArtistModelController *artistController;
 @end
 
 NS_ASSUME_NONNULL_END

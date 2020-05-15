@@ -116,6 +116,13 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="cui-M8-LuU">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="5V8-sA-ySv"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="biographyText" destination="lXz-9s-SSw" id="BED-0F-PBq"/>
+                        <outlet property="nameLabel" destination="fdV-n3-GN4" id="UgZ-Lh-QSz"/>
+                        <outlet property="saveButton" destination="5V8-sA-ySv" id="Sad-zF-mVs"/>
+                        <outlet property="searchBar" destination="8oJ-Nm-cpF" id="fBT-NH-d3I"/>
+                        <outlet property="yearLabel" destination="Afb-cs-7ql" id="P6E-uu-KSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2R-d3-9bp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,6 +148,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JlB-nb-WC1"/>
+        <segue reference="Ezd-Mn-N6Z"/>
     </inferredMetricsTieBreakers>
 </document>

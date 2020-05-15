@@ -10,7 +10,7 @@
 #import "HLOArtist.h"
 #import "HLOArtist+NSJSONSerialization.h"
 
-static NSString *baseURLString = @"theaudiodb.com/api/v1/json/1/search.php?s=";
+static NSString *baseURLString = @"theaudiodb.com/api/v1/json/1/search.php";
 
 @implementation HLOArtistModelController
 
@@ -25,17 +25,24 @@ static NSString *baseURLString = @"theaudiodb.com/api/v1/json/1/search.php?s=";
 
 - (void)fetchArtistWithName:(NSString *)artistName
             completionBlock:(void (^)(NSError * _Nullable error))completionBlock {
+//
+//    NSURL *baseURL = [[NSURL alloc] initWithString:baseURLString];
+//    NSURL *requestURL = [baseURL URLByAppendingPathExtension:artistName];
 
-    NSURL *baseURL = [[NSURL alloc] initWithString:baseURLString];
-    NSURL *requestURL = [baseURL URLByAppendingPathComponent:artistName];
+    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
 
-    NSLog(@"%@", requestURL.absoluteString);
+    urlComponents.queryItems = @[
+        [NSURLQueryItem queryItemWithName:@"s" value:artistName]
+    ];
+
+    NSLog(@"%@", urlComponents.URL);
+//    NSLog(@"%@", requestURL.absoluteString);
 
 }
 
-- (void)parseJSONData:(NSData *)data
+- (HLOArtist *)parseJSONData:(NSData *)data
       completionBlock:(void (^)(NSError * _Nullable error))completionBlock {
-
+    return nil;
 }
 
 @end

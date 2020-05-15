@@ -26,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self clearViews];
     [self setupViews];
 }
 
@@ -42,23 +41,19 @@
         self.biographyText.text = self.artist.artistBiography;
     } else {
         self.searchBar.delegate = self;
+        self.searchBar.text = @"";
+        self.nameLabel.text = @"";
+        self.yearLabel.text = @"";
+        self.biographyText.text = @"";
     }
 }
 
-- (void)clearViews {
-    self.searchBar.text = @"";
-    self.nameLabel.text = @"";
-    self.yearLabel.text = @"";
-    self.biographyText.text = @"";
-}
-/*
- #pragma mark - Navigation
+// MARK:- Protocol Conformation
 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.artistController fetchArtistWithName:searchBar.text completionBlock:^(NSError * _Nullable error) {
+
+    }];
+}
 
 @end

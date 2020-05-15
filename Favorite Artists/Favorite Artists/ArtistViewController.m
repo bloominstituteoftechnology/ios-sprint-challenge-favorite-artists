@@ -9,6 +9,7 @@
 #import "ArtistViewController.h"
 #import "WAHArtistController.h"
 #import "WAHArtist.h"
+#import "WAHArtist+NSJSONSerialization.h"
 
 @interface ArtistViewController ()<UISearchBarDelegate>
 
@@ -53,7 +54,7 @@
         NSLog(@"Fetched artist: %@", artist);
         self.artist = artist;
         
-        __weak typeof(self) weakSelf = self;
+        // __weak typeof(self) weakSelf = self;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self updateViews];
         });

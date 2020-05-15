@@ -23,7 +23,6 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     NSURL *url = urlComponents.URL;
     
     NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSLog(@"url: %@", url);
         
         if (error) {
             completion(nil, error);

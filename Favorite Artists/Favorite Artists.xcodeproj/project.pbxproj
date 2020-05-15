@@ -27,6 +27,7 @@
 		92F7BF92246EFC90009A0A7A /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF8F246EFC10009A0A7A /* LSIFileHelper.m */; };
 		92F7BF97246F243A009A0A7A /* MTGArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF96246F243A009A0A7A /* MTGArtistFetcher.m */; };
 		92F7BF9B246F270E009A0A7A /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF9A246F270E009A0A7A /* LSIErrors.m */; };
+		92F7BF9E246F43F2009A0A7A /* ArtistContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7BF9D246F43F2009A0A7A /* ArtistContoller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		92F7BF98246F256F009A0A7A /* MTGArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTGArtistFetcher.h; sourceTree = "<group>"; };
 		92F7BF99246F270E009A0A7A /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 		92F7BF9A246F270E009A0A7A /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		92F7BF9C246F43F2009A0A7A /* ArtistContoller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistContoller.h; sourceTree = "<group>"; };
+		92F7BF9D246F43F2009A0A7A /* ArtistContoller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistContoller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 		92F7BF38246EEA25009A0A7A /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				92F7BF9C246F43F2009A0A7A /* ArtistContoller.h */,
+				92F7BF9D246F43F2009A0A7A /* ArtistContoller.m */,
 				92F7BF83246EF925009A0A7A /* JSON */,
 				92F7BF8E246EFBF0009A0A7A /* LambdaSDK */,
 				92F7BF6C246EF20F009A0A7A /* Models */,
@@ -314,6 +319,7 @@
 				92F7BF6F246EF288009A0A7A /* MTGArtist.m in Sources */,
 				92F7BF65246EEF22009A0A7A /* ArtistsTableViewController.m in Sources */,
 				92F7BF3B246EEA25009A0A7A /* AppDelegate.m in Sources */,
+				92F7BF9E246F43F2009A0A7A /* ArtistContoller.m in Sources */,
 				92F7BF9B246F270E009A0A7A /* LSIErrors.m in Sources */,
 				92F7BF6B246EEF65009A0A7A /* ViewViewController.m in Sources */,
 				92F7BF82246EF7CF009A0A7A /* MTGArtist+NSJSONSerialization.m in Sources */,

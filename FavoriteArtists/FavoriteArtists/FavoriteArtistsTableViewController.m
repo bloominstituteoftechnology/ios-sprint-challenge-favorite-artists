@@ -10,6 +10,7 @@
 #import "HLOArtist.h"
 #import "HLOArtistModelController.h"
 #import "ArtistDetailViewController.h"
+#import "HLOArtist+NSJSONSerialization.h"
 
 @interface FavoriteArtistsTableViewController ()
 // MARK:- Properties
@@ -26,8 +27,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.artistController = [[HLOArtistModelController alloc] init];
-    HLOArtist *testArtist = [[HLOArtist alloc] initWithName:@"Testlemore" artistBiography:@"Was a real gangsta" yearFormed:42069];
-    [self.artistController.favoriteArtists addObject:testArtist];
+//    HLOArtist *testArtist = [[HLOArtist alloc] initWithName:@"Testlemore" artistBiography:@"Was a real gangsta" yearFormed:42069];
+//    [self.artistController.favoriteArtists addObject:testArtist];
+    [self.artistController loadArtistsFromPersistence:^(NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error loading files: %@", error);
+            return;
+        }
+
+        [self.tableView reloadData];
+    }];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -39,6 +48,9 @@
     [super viewWillAppear:animated];
 
     [self.tableView reloadData];
+    for (HLOArtist *artist in self.artistController.favoriteArtists) {
+        [artist saveToPersistence];
+    }
 }
 
 #pragma mark - Table view data source

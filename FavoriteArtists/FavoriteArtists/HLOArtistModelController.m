@@ -80,4 +80,29 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     return;
 }
 
+- (void)loadArtistsFromPersistence:(void (^)(NSError * _Nullable error))completionBlock {
+    NSURL *documentsDirectory = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
+
+    NSError *loadDataError = nil;
+    NSArray *data = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectory.path error:&loadDataError];
+    if (loadDataError) {
+        completionBlock(loadDataError);
+        return;
+    }
+
+    for (NSString *path in data) {
+        NSURL *filePath = [documentsDirectory URLByAppendingPathComponent:path];
+        NSData *jsonData = [NSData dataWithContentsOfURL:filePath];
+        [self parseJSONData:jsonData completionBlock:^(HLOArtist * _Nullable artist, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"Error loading file at: %@", filePath);
+                return;
+            }
+            [self.favoriteArtists addObject:artist];
+        }];
+    }
+
+    completionBlock(nil);
+}
+
 @end

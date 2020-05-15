@@ -15,8 +15,8 @@ artistBiography:(NSString *)artistBiography
                   yearFormed:(int)yearFormed {
     self = [super init];
     if (self) {
-        _artistName = artistName;
-        _artistBiography = artistBiography;
+        _artistName = [artistName copy];
+        _artistBiography = [artistBiography copy];
         _yearFormed = yearFormed;
     }
     return self;

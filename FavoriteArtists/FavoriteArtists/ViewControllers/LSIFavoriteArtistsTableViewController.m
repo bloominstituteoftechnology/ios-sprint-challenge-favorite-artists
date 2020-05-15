@@ -68,7 +68,12 @@
     
     LSIArtist *artist = self.artistController.artists[indexPath.row];
     cell.textLabel.text = artist.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed.intValue];
+    if (artist.yearFormed) {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed.intValue];
+    } else {
+        cell.detailTextLabel.text = @"Formed in N/A";
+    }
+    
     
     return cell;
 }

@@ -12,6 +12,9 @@
 
 @interface ArtistDetailViewController () <UISearchBarDelegate>
 
+// MARK:- Properties
+@property (nonatomic) HLOArtist *artistResult;
+
 // MARK:- Outlets
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
@@ -51,7 +54,11 @@
 // MARK:- Protocol Conformation
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [self.artistController fetchArtistWithName:searchBar.text completionBlock:^(NSError * _Nullable error) {
+    [self.artistController fetchArtistWithName:searchBar.text completionBlock:^(HLOArtist * _Nullable artist, NSError * _Nullable error) {
+        if (error) {
+            self.nameLabel.text = @"Error fetching data from server.";
+            self.yearLabel.text = @"Artist name may be wrong.";
+        }
 
     }];
 }

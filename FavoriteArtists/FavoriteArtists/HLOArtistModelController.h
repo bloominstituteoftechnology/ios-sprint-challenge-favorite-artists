@@ -16,10 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSMutableArray<HLOArtist *> *favoriteArtists;
 
 - (void)fetchArtistWithName:(NSString *)artistName
-            completionBlock:(void (^)(NSError * _Nullable error))completionBlock;
+            completionBlock:(void (^)(HLOArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
 
 - (void)parseJSONData:(NSData *)data
-      completionBlock:(void (^)(NSError * _Nullable error))completionBlock;
+      completionBlock:(void (^)(HLOArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
 
 @end
 

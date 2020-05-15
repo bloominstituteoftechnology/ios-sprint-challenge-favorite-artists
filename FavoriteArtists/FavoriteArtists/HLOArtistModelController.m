@@ -24,7 +24,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 }
 
 - (void)fetchArtistWithName:(NSString *)artistName
-            completionBlock:(void (^)(NSError * _Nullable error))completionBlock {
+            completionBlock:(void (^)(HLOArtist * _Nullable artist, NSError * _Nullable error))completionBlock {
 
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
 
@@ -37,16 +37,16 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSLog(@"%@", urlComponents.URL);
         if (error) {
-            completionBlock(error);
+            completionBlock(nil, error);
             return;
         }
 
-        [self parseJSONData:data completionBlock:^(NSError * _Nullable error) {
+        [self parseJSONData:data completionBlock:^(HLOArtist * _Nullable artist, NSError * _Nullable error) {
             if (error) {
-                completionBlock(error);
+                completionBlock(nil, error);
                 return;
             }
-            completionBlock(nil);
+            completionBlock(artist, nil);
         }];
 
     }];
@@ -57,28 +57,25 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 }
 
 - (void)parseJSONData:(NSData *)data
-      completionBlock:(void (^)(NSError * _Nullable error))completionBlock {
+      completionBlock:(void (^)(HLOArtist * _Nullable artist, NSError * _Nullable error))completionBlock {
 
     NSError *jsonError = nil;
 
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+
     if (jsonError) {
-        completionBlock(jsonError);
+        completionBlock(nil, jsonError);
         return;
     }
 
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-
-#warning caller won't know if the search was invalid.
     // FIXME: Create custom errors.
     if (json[@"artists"] == nil) {
-        completionBlock(nil);
+        completionBlock(nil, [[NSError alloc] init]);
         return;
     }
 
     HLOArtist *newArtist = [[HLOArtist alloc] initFromDictionary:json];
-
-    [self.favoriteArtists addObject:newArtist];
-    completionBlock(nil);
+    completionBlock(newArtist, nil);
 
     return;
 }

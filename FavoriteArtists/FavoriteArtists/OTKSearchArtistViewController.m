@@ -74,13 +74,7 @@
 }
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
-    NSData *data = [NSJSONSerialization dataWithJSONObject:[self.artist toDictionary] options:0 error:nil];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSURL *documentDir = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
-    NSURL *artistsURL = [documentDir URLByAppendingPathComponent:@"artistsURL"];
-    [data writeToURL:artistsURL atomically:YES];
 
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

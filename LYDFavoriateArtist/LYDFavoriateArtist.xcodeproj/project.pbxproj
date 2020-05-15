@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEFF7597246EBDEE006EAB68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF7596246EBDEE006EAB68 /* AppDelegate.m */; };
+		AEFF759A246EBDEE006EAB68 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF7599246EBDEE006EAB68 /* SceneDelegate.m */; };
+		AEFF75A0246EBDEE006EAB68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFF759E246EBDEE006EAB68 /* Main.storyboard */; };
+		AEFF75A2246EBDEF006EAB68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFF75A1246EBDEF006EAB68 /* Assets.xcassets */; };
+		AEFF75A5246EBDEF006EAB68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFF75A3246EBDEF006EAB68 /* LaunchScreen.storyboard */; };
+		AEFF75A8246EBDEF006EAB68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF75A7246EBDEF006EAB68 /* main.m */; };
+		AEFF75B1246EC412006EAB68 /* LYDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF75B0246EC412006EAB68 /* LYDArtist.m */; };
+		AEFF75B6246EC5EE006EAB68 /* LYDArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF75B5246EC5EE006EAB68 /* LYDArtistController.m */; };
+		AEFF75BC246ED97E006EAB68 /* LYDArtist+LYDJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF75BB246ED97E006EAB68 /* LYDArtist+LYDJSONHelper.m */; };
+		AEFF75C3246EE759006EAB68 /* LYDArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF75C2246EE759006EAB68 /* LYDArtistsTableViewController.m */; };
+		AEFF75C6246EE83A006EAB68 /* LYDArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF75C5246EE83A006EAB68 /* LYDArtistDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AEFF7592246EBDEE006EAB68 /* LYDFavoriateArtist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYDFavoriateArtist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEFF7595246EBDEE006EAB68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AEFF7596246EBDEE006EAB68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AEFF7598246EBDEE006EAB68 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		AEFF7599246EBDEE006EAB68 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		AEFF759F246EBDEE006EAB68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEFF75A1246EBDEF006EAB68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEFF75A4246EBDEF006EAB68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEFF75A6246EBDEF006EAB68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEFF75A7246EBDEF006EAB68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEFF75AF246EC412006EAB68 /* LYDArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDArtist.h; sourceTree = "<group>"; };
+		AEFF75B0246EC412006EAB68 /* LYDArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYDArtist.m; sourceTree = "<group>"; };
+		AEFF75B4246EC5EE006EAB68 /* LYDArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDArtistController.h; sourceTree = "<group>"; };
+		AEFF75B5246EC5EE006EAB68 /* LYDArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYDArtistController.m; sourceTree = "<group>"; };
+		AEFF75BA246ED97E006EAB68 /* LYDArtist+LYDJSONHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LYDArtist+LYDJSONHelper.h"; path = "../LYDArtist+LYDJSONHelper.h"; sourceTree = "<group>"; };
+		AEFF75BB246ED97E006EAB68 /* LYDArtist+LYDJSONHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LYDArtist+LYDJSONHelper.m"; path = "../LYDArtist+LYDJSONHelper.m"; sourceTree = "<group>"; };
+		AEFF75BD246EE6C7006EAB68 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		AEFF75C1246EE759006EAB68 /* LYDArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDArtistsTableViewController.h; sourceTree = "<group>"; };
+		AEFF75C2246EE759006EAB68 /* LYDArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYDArtistsTableViewController.m; sourceTree = "<group>"; };
+		AEFF75C4246EE83A006EAB68 /* LYDArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDArtistDetailViewController.h; sourceTree = "<group>"; };
+		AEFF75C5246EE83A006EAB68 /* LYDArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYDArtistDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEFF758F246EBDEE006EAB68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEFF7589246EBDEE006EAB68 = {
+			isa = PBXGroup;
+			children = (
+				AEFF7594246EBDEE006EAB68 /* LYDFavoriateArtist */,
+				AEFF7593246EBDEE006EAB68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEFF7593246EBDEE006EAB68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF7592246EBDEE006EAB68 /* LYDFavoriateArtist.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEFF7594246EBDEE006EAB68 /* LYDFavoriateArtist */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF75C1246EE759006EAB68 /* LYDArtistsTableViewController.h */,
+				AEFF75C2246EE759006EAB68 /* LYDArtistsTableViewController.m */,
+				AEFF75C4246EE83A006EAB68 /* LYDArtistDetailViewController.h */,
+				AEFF75C5246EE83A006EAB68 /* LYDArtistDetailViewController.m */,
+				AEFF75B3246EC5D8006EAB68 /* ModelController */,
+				AEFF75B2246EC41F006EAB68 /* Model */,
+				AEFF75AE246EBE0E006EAB68 /* Other */,
+				AEFF759E246EBDEE006EAB68 /* Main.storyboard */,
+				AEFF75A1246EBDEF006EAB68 /* Assets.xcassets */,
+				AEFF75BD246EE6C7006EAB68 /* LSIFileHelper.h */,
+				AEFF75A6246EBDEF006EAB68 /* Info.plist */,
+			);
+			path = LYDFavoriateArtist;
+			sourceTree = "<group>";
+		};
+		AEFF75AE246EBE0E006EAB68 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF7595246EBDEE006EAB68 /* AppDelegate.h */,
+				AEFF7596246EBDEE006EAB68 /* AppDelegate.m */,
+				AEFF7598246EBDEE006EAB68 /* SceneDelegate.h */,
+				AEFF7599246EBDEE006EAB68 /* SceneDelegate.m */,
+				AEFF75A7246EBDEF006EAB68 /* main.m */,
+				AEFF75A3246EBDEF006EAB68 /* LaunchScreen.storyboard */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		AEFF75B2246EC41F006EAB68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF75BA246ED97E006EAB68 /* LYDArtist+LYDJSONHelper.h */,
+				AEFF75BB246ED97E006EAB68 /* LYDArtist+LYDJSONHelper.m */,
+				AEFF75AF246EC412006EAB68 /* LYDArtist.h */,
+				AEFF75B0246EC412006EAB68 /* LYDArtist.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AEFF75B3246EC5D8006EAB68 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF75B4246EC5EE006EAB68 /* LYDArtistController.h */,
+				AEFF75B5246EC5EE006EAB68 /* LYDArtistController.m */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEFF7591246EBDEE006EAB68 /* LYDFavoriateArtist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEFF75AB246EBDEF006EAB68 /* Build configuration list for PBXNativeTarget "LYDFavoriateArtist" */;
+			buildPhases = (
+				AEFF758E246EBDEE006EAB68 /* Sources */,
+				AEFF758F246EBDEE006EAB68 /* Frameworks */,
+				AEFF7590246EBDEE006EAB68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYDFavoriateArtist;
+			productName = LYDFavoriateArtist;
+			productReference = AEFF7592246EBDEE006EAB68 /* LYDFavoriateArtist.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEFF758A246EBDEE006EAB68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Lydia Zhang";
+				TargetAttributes = {
+					AEFF7591246EBDEE006EAB68 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AEFF758D246EBDEE006EAB68 /* Build configuration list for PBXProject "LYDFavoriateArtist" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEFF7589246EBDEE006EAB68;
+			productRefGroup = AEFF7593246EBDEE006EAB68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEFF7591246EBDEE006EAB68 /* LYDFavoriateArtist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEFF7590246EBDEE006EAB68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFF75A5246EBDEF006EAB68 /* LaunchScreen.storyboard in Resources */,
+				AEFF75A2246EBDEF006EAB68 /* Assets.xcassets in Resources */,
+				AEFF75A0246EBDEE006EAB68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEFF758E246EBDEE006EAB68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFF7597246EBDEE006EAB68 /* AppDelegate.m in Sources */,
+				AEFF75A8246EBDEF006EAB68 /* main.m in Sources */,
+				AEFF75BC246ED97E006EAB68 /* LYDArtist+LYDJSONHelper.m in Sources */,
+				AEFF75B6246EC5EE006EAB68 /* LYDArtistController.m in Sources */,
+				AEFF75C6246EE83A006EAB68 /* LYDArtistDetailViewController.m in Sources */,
+				AEFF75C3246EE759006EAB68 /* LYDArtistsTableViewController.m in Sources */,
+				AEFF75B1246EC412006EAB68 /* LYDArtist.m in Sources */,
+				AEFF759A246EBDEE006EAB68 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AEFF759E246EBDEE006EAB68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEFF759F246EBDEE006EAB68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEFF75A3246EBDEF006EAB68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEFF75A4246EBDEF006EAB68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEFF75A9246EBDEF006EAB68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AEFF75AA246EBDEF006EAB68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEFF75AC246EBDEF006EAB68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYDFavoriateArtist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lydia.LYDFavoriateArtist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEFF75AD246EBDEF006EAB68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYDFavoriateArtist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lydia.LYDFavoriateArtist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEFF758D246EBDEE006EAB68 /* Build configuration list for PBXProject "LYDFavoriateArtist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFF75A9246EBDEF006EAB68 /* Debug */,
+				AEFF75AA246EBDEF006EAB68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEFF75AB246EBDEF006EAB68 /* Build configuration list for PBXNativeTarget "LYDFavoriateArtist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFF75AC246EBDEF006EAB68 /* Debug */,
+				AEFF75AD246EBDEF006EAB68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEFF758A246EBDEE006EAB68 /* Project object */;
+}

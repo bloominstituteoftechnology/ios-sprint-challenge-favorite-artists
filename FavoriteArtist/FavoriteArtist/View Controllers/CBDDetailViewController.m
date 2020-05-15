@@ -9,6 +9,7 @@
 #import "CBDDetailViewController.h"
 #import "CBDArtistFetcher.h"
 #import "CBDArtist.h"
+#import "CBDArtistsTableViewController.h"
 
 @interface CBDDetailViewController ()
 
@@ -52,6 +53,16 @@
     }
 }
 
+// MARK: - Actions
+- (IBAction)saveArtist:(id)sender {
+    if ([self.fetcher.artists containsObject:self.artist]) {
+        
+        [self performSegueWithIdentifier:@"UnwindToArtistsTVC" sender:self];
+    }
+    
+}
+
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSString *searchItem = searchBar.text;
     [self.fetcher fetchArtistWithName:searchItem completionBlock:^(CBDArtist * _Nullable artist, NSError * _Nullable error) {
@@ -65,7 +76,13 @@
             [self updateViews];
         });
     }];
-    
 }
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([[segue identifier] isEqualToString:@"UnwindToArtistsTVC"]) {
+//        CBDArtistsTableViewController *artistsTVC = [segue destinationViewController];
+//        artistsTVC.fetcher = self.fetcher;
+//    } 
+//}
 
 @end

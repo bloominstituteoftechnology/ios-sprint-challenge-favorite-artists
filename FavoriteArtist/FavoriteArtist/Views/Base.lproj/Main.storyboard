@@ -115,7 +115,7 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="Pgq-PZ-2BN">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="gaY-ch-TuP">
                             <connections>
-                                <segue destination="TFN-mU-TLp" kind="unwind" unwindAction="unwindSegue:" id="wJc-gD-jVY"/>
+                                <action selector="saveArtist:" destination="EDA-vq-2WJ" id="Bb3-rd-zoe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -124,6 +124,7 @@
                         <outlet property="artistNameLabel" destination="Neh-v7-2RH" id="X48-A4-RPv"/>
                         <outlet property="favoriteArtistSearchBar" destination="ksa-cR-jHk" id="tW9-ao-DKC"/>
                         <outlet property="yearFormedLabel" destination="Xv9-k9-QUN" id="ki6-hF-bDN"/>
+                        <segue destination="TFN-mU-TLp" kind="unwind" identifier="UnwindToArtistsTVC" unwindAction="unwindSegue:" id="ltm-nj-RG0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cs9-De-4ej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -149,6 +150,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UF4-9Y-S4f"/>
+        <segue reference="beB-98-JZM"/>
     </inferredMetricsTieBreakers>
 </document>

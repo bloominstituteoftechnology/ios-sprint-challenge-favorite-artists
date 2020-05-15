@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initFromDictionary:(NSDictionary *)dictionary;
 
-
+- (NSDictionary *)toDictionary;
 
 @end
 

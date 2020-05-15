@@ -18,6 +18,7 @@
 		9C1314A1246EEFBB0019A139 /* ArtistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1314A0246EEFBA0019A139 /* ArtistTableViewCell.m */; };
 		9C1314A4246EF3850019A139 /* HLOArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1314A3246EF3850019A139 /* HLOArtist.m */; };
 		9C1314A7246EF6170019A139 /* HLOArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1314A6246EF6170019A139 /* HLOArtist+NSJSONSerialization.m */; };
+		9C1314AA246EFCF20019A139 /* HLOArtistModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1314A9246EFCF20019A139 /* HLOArtistModelController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		9C1314A3246EF3850019A139 /* HLOArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLOArtist.m; sourceTree = "<group>"; };
 		9C1314A5246EF6170019A139 /* HLOArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HLOArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		9C1314A6246EF6170019A139 /* HLOArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HLOArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		9C1314A8246EFCF20019A139 /* HLOArtistModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLOArtistModelController.h; sourceTree = "<group>"; };
+		9C1314A9246EFCF20019A139 /* HLOArtistModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLOArtistModelController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 		9C131493246EEE5C0019A139 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9C1314A8246EFCF20019A139 /* HLOArtistModelController.h */,
+				9C1314A9246EFCF20019A139 /* HLOArtistModelController.m */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				9C13147A246EE8C00019A139 /* AppDelegate.m in Sources */,
 				9C13148B246EE8C40019A139 /* main.m in Sources */,
 				9C13147D246EE8C00019A139 /* SceneDelegate.m in Sources */,
+				9C1314AA246EFCF20019A139 /* HLOArtistModelController.m in Sources */,
 				9C1314A4246EF3850019A139 /* HLOArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

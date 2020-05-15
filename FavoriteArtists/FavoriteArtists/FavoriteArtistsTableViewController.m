@@ -9,6 +9,11 @@
 #import "FavoriteArtistsTableViewController.h"
 
 @interface FavoriteArtistsTableViewController ()
+// MARK:- Properties
+
+// MARK:- Outlets
+
+
 
 @end
 

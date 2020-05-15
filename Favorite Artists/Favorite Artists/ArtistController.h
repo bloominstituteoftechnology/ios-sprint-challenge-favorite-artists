@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistController : NSObject
 
-@property (nonatomic, readwrite, copy) NSArray *artists;
+@property (nonatomic, readwrite, copy) NSMutableArray *artists;
 
 - (void)add:(MTGArtist *)artist;
 

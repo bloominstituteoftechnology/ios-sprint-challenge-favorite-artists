@@ -7,8 +7,12 @@
 //
 
 #import "AddViewController.h"
+#import "MTGArtist.h"
+#import "MTGArtistFetcher.h"
 
 @interface AddViewController ()
+
+@property (nonatomic) MTGArtistFetcher *fetcher;
 
 @end
 
@@ -17,6 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [self.fetcher fetchArtistByName:@"Macklemore" completionBlock:^(MTGArtist * _Nullable artist, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Artist Fetching Error: %@", error);
+            return;
+        }
+
+        NSLog(@"Arstist: %@", artist);
+    }];
 }
 
 /*
@@ -28,5 +41,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+// Properties
+
+// Lazy property
+- (MTGArtistFetcher *)fetcher {
+    if (!_fetcher) {
+        _fetcher = [[MTGArtistFetcher alloc] init];
+    }
+    return _fetcher;
+}
 
 @end

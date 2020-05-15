@@ -14,6 +14,10 @@
 
 + (instancetype)initWithDictionary:(NSDictionary *)dictionary {
 
+    // No result is returned as: {"artists":null}
+    // Test for that here.
+    if ([dictionary[@"artists"] isKindOfClass:[NSNull class]]) { return nil; }
+
     NSArray  *artistsArray = dictionary[@"artists"];
     // FIXME: What about 0 objects?
     NSDictionary *artistDictionary = artistsArray[0];

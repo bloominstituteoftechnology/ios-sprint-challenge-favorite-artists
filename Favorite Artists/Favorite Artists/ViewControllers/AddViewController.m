@@ -11,7 +11,6 @@
 #import "MTGArtistFetcher.h"
 
 @interface AddViewController () <UISearchBarDelegate> {
-    MTGArtist *artist;
 }
 
 @property (nonatomic) MTGArtistFetcher *fetcher;
@@ -43,18 +42,18 @@
 
 - (void)updateViews {
 
-    if (artist == nil) {
+    if (_artist == nil) {
         _artistLabel.text = @"";
         _yearLabel.text = @"";
         _biographyTextView.text = @"";
     } else {
-        _artistLabel.text = artist.artist;
-        if (artist.formedYear == -1) {
+        _artistLabel.text = _artist.artist;
+        if (_artist.formedYear == -1) {
             _yearLabel.text = @"Formed: N/A";
         } else {
-            _yearLabel.text = [NSString stringWithFormat:@"Formed in %0d", artist.formedYear];
+            _yearLabel.text = [NSString stringWithFormat:@"Formed in %0d", _artist.formedYear];
         }
-        _biographyTextView.text = artist.biography;
+        _biographyTextView.text = _artist.biography;
     }
 }
 
@@ -62,6 +61,9 @@
 
 - (IBAction)saveButton:(UIBarButtonItem *)sender {
     // TODO: Save artist
+    [_artistController add:_artist];
+
+    NSLog(@"%lul", (unsigned long)_artistController.artists.count);
 
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -92,7 +94,7 @@
         NSLog(@"Arstist: %@", foundArtist);
 
         dispatch_async(dispatch_get_main_queue(), ^{
-            self->artist = foundArtist;
+            self->_artist = foundArtist;
             [self updateViews];
         });
     }];

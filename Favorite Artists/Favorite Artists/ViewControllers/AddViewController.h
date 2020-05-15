@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArtistContoller.h"
+#import "MTGArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddViewController : UIViewController
+
+@property ArtistContoller *artistController;
+@property MTGArtist *artist;
 
 @end
 

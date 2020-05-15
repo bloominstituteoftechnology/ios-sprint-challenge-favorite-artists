@@ -7,6 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "LSIFileHelper.h"
+#import "MTGArtist.h"
+#import "MTGArtist+NSJSONSerialization.h"
 
 @interface Favorite_ArtistsTests : XCTestCase
 
@@ -14,24 +17,34 @@
 
 @implementation Favorite_ArtistsTests
 
-- (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+- (void)testMacklemore {
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-}
+    // Load test object from file.
+    NSData *artistData = loadFile(@"Macklemore.json", [MTGArtist class]);
+    NSLog(@"artistData: %@", artistData);
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
+    // Pass through JSON Serializer
+    NSError *jsonError = nil;
+    NSDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:artistData
+                                                                     options:0
+                                                                       error:&jsonError];
+    if (jsonError) {
+        NSLog(@"JSON Parsing error: %@", jsonError);
+    }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+    NSLog(@"JSON: %@", artistDictionary);
+
+    // Parse the dictionary and turn it into a CurrentWeather object
+
+    // Pass it through MTGArtist initializer
+    MTGArtist *artist = [MTGArtist initWithDictionary:artistDictionary];
+
+    NSLog(@"artist: %@", artist);
+
+    XCTAssertEqualObjects(@"Macklemore", artist.artist);
+// FIXME: Starts with?
+//    XCTAssertEqualObjects(@"Ben Haggerty (born June 19, 1983)", artist.biography);
+    XCTAssertEqual(1999, artist.formedYear);
 }
 
 @end

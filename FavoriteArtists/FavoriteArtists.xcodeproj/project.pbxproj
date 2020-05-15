@@ -17,6 +17,7 @@
 		2C9004EF246EF10E00926D4F /* OTKSearchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9004EE246EF10E00926D4F /* OTKSearchArtistViewController.m */; };
 		2C9004F2246EF28E00926D4F /* OTKArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9004F1246EF28E00926D4F /* OTKArtist.m */; };
 		2C900501246EF89C00926D4F /* OTKArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C900500246EF89C00926D4F /* OTKArtist+NSJSONSerialization.m */; };
+		2C900504246EFCD300926D4F /* OTKArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C900503246EFCD300926D4F /* OTKArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		2C9004F1246EF28E00926D4F /* OTKArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTKArtist.m; sourceTree = "<group>"; };
 		2C9004FF246EF89C00926D4F /* OTKArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTKArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		2C900500246EF89C00926D4F /* OTKArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OTKArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		2C900502246EFCD300926D4F /* OTKArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTKArtistController.h; sourceTree = "<group>"; };
+		2C900503246EFCD300926D4F /* OTKArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTKArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 		2C9004E6246EECD800926D4F /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C900502246EFCD300926D4F /* OTKArtistController.h */,
+				2C900503246EFCD300926D4F /* OTKArtistController.m */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9004CD246EEC4800926D4F /* AppDelegate.m in Sources */,
+				2C900504246EFCD300926D4F /* OTKArtistController.m in Sources */,
 				2C9004F2246EF28E00926D4F /* OTKArtist.m in Sources */,
 				2C9004EC246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.m in Sources */,
 				2C9004DE246EEC4A00926D4F /* main.m in Sources */,

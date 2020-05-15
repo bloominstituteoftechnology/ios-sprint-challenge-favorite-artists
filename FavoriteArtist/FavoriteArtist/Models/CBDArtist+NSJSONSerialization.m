@@ -13,15 +13,19 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     NSArray *artists = dictionary[@"artists"];
-    NSDictionary *artist = [artists objectAtIndex:0];
-    
-    NSString *strArtist = artist[@"strArtist"];
-    NSString *intFormedYear = artist[@"intFormedYear"];
-    NSString *strBiographyEN = artist[@"strBiographyEN"];
-    
-    int yearFormed = [intFormedYear intValue];
-    
-    return [self initWithStrArtist:strArtist yearFormed:yearFormed strBiographyEN:strBiographyEN];
+    if (artists) {
+        NSDictionary *artist = [artists objectAtIndex:0];
+        
+        NSString *strArtist = artist[@"strArtist"];
+        NSString *intFormedYear = artist[@"intFormedYear"];
+        NSString *strBiographyEN = artist[@"strBiographyEN"];
+        
+        int yearFormed = [intFormedYear intValue];
+        
+        return [self initWithStrArtist:strArtist yearFormed:yearFormed strBiographyEN:strBiographyEN];
+    } else {
+        return nil;
+    }
 }
 
 - (NSDictionary *)toDictionary {

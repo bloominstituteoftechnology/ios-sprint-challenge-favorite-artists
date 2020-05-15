@@ -12,7 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CBDDetailViewController : UIViewController
+@interface CBDDetailViewController : UIViewController<UISearchBarDelegate>
+
+@property (nonatomic, nullable) CBDArtistFetcher *fetcher;
+@property (nonatomic, nullable) CBDArtist *artist;
 
 @end
 

@@ -9,6 +9,7 @@
 #import "CBDArtistsTableViewController.h"
 #import "CBDArtistFetcher.h"
 #import "CBDArtist.h"
+#import "CBDDetailViewController.h"
 
 @interface CBDArtistsTableViewController ()
 
@@ -38,11 +39,15 @@
             return;
         }
         NSLog(@"Artist: %@", artist.strArtist);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateViews];
+        });
     }];
+    
 }
 
 -(void)updateViews {
-    
+    [self.tableView reloadData];
 }
 
 //MARK: - IBActions
@@ -60,23 +65,15 @@
     return self.fetcher.artists.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
+    CBDArtist *artist = self.fetcher.artists[indexPath.row];
+    cell.textLabel.text = artist.strArtist;
+    NSString *detail = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+    cell.detailTextLabel.text = detail;
+
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
 /*
 // Override to support editing the table view.
@@ -90,26 +87,19 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 // MARK: - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"AddArtistSegue"]) {
+        CBDDetailViewController *addArtistVC = [segue destinationViewController];
+        addArtistVC.fetcher = self.fetcher;
+    } else if ([[segue identifier] isEqualToString:@"ArtistDetailSegue"]) {
+        CBDDetailViewController *detailVC = [segue destinationViewController];
+        detailVC.fetcher = self.fetcher;
+        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+        detailVC.artist = self.fetcher.artists[index.row];
+        
+    }
 }
 
 - (IBAction)unwindSegue:(UIStoryboardSegue *)segue {

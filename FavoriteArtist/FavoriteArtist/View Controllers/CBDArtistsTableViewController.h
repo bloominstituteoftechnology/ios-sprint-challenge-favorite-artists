@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 @class CBDArtistFetcher;
 @class CBDArtist;
+@class CBDDetailViewController;
 
 NS_ASSUME_NONNULL_BEGIN
 

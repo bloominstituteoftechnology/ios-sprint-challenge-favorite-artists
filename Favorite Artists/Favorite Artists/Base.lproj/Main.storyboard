@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="sw3-GL-gTi" detailTextLabel="fGm-mL-dW7" style="IBUITableViewCellStyleSubtitle" id="tOe-hc-Syc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="sw3-GL-gTi" detailTextLabel="fGm-mL-dW7" style="IBUITableViewCellStyleSubtitle" id="tOe-hc-Syc">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tOe-hc-Syc" id="9vm-9i-MVy">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sw3-GL-gTi">
@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="NJh-Fs-HBx" kind="show" id="wAW-fb-D4K"/>
+                                    <segue destination="NJh-Fs-HBx" kind="show" identifier="ShowArtistSegue" id="wAW-fb-D4K"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -123,6 +123,7 @@
                     <connections>
                         <outlet property="biographyTextView" destination="MOs-T8-lSm" id="AwB-vN-cBo"/>
                         <outlet property="nameLabel" destination="6EH-iz-Jup" id="hfa-TF-c70"/>
+                        <outlet property="saveButton" destination="9b2-0A-HZR" id="LtZ-xS-zzQ"/>
                         <outlet property="searchBar" destination="TSG-Zm-bZx" id="Qj2-oK-mKb"/>
                         <outlet property="yearFormedLabel" destination="KqP-TS-jy1" id="E28-1d-czh"/>
                     </connections>
@@ -149,6 +150,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Jgs-9B-dHw"/>
+        <segue reference="wAW-fb-D4K"/>
     </inferredMetricsTieBreakers>
 </document>

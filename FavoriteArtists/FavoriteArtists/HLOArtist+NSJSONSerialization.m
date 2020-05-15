@@ -50,4 +50,15 @@
 
     return dictionaryContainer;
 }
+
+- (void)saveToPersistence {
+    NSURL *documentsDirectory = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
+
+    NSURL *saveFileURL = [documentsDirectory URLByAppendingPathComponent:self.artistName];
+
+    NSDictionary *dictRepresentation = self.toDictionary;
+
+    NSError *saveError = nil;
+    [dictRepresentation writeToURL:saveFileURL error:&saveError];
+}
 @end

@@ -17,8 +17,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
-@property (nonatomic) WAHArtist *artist;
+@property (nonatomic) BOOL isArtist;
 
 @end
 
@@ -27,9 +28,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.searchBar.delegate = self;
+    
+    if (self.artist == nil) {
+        self.isArtist = NO;
+    } else {
+        self.isArtist = YES;
+        [self updateViews];
+    }
 }
 
 - (void)updateViews {
+    if (self.isArtist == YES) {
+        self.searchBar.hidden = YES;
+        self.title = self.artist.artist;
+    }
+    
     self.nameLabel.hidden = NO;
     self.yearFormedLabel.hidden = NO;
     self.biographyTextView.hidden = NO;

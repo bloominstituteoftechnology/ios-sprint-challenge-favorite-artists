@@ -16,7 +16,11 @@
 		045DB9CD246EE7DA002D736D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9CC246EE7DA002D736D /* main.m */; };
 		045DB9D5246EE87E002D736D /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9D4246EE87E002D736D /* LSIArtist.m */; };
 		045DB9DC246EEBAC002D736D /* LSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9DB246EEBAC002D736D /* LSIArtist+NSJSONSerialization.m */; };
-		045DB9DF246EEC20002D736D /* LSINetworkingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9DE246EEC20002D736D /* LSINetworkingClient.m */; };
+		045DB9DF246EEC20002D736D /* LSIAudioDBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9DE246EEC20002D736D /* LSIAudioDBClient.m */; };
+		045DB9E9246EEFB4002D736D /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9E3246EEFB4002D736D /* LSILog.m */; };
+		045DB9EA246EEFB4002D736D /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9E4246EEFB4002D736D /* LSIErrors.m */; };
+		045DB9EB246EEFB4002D736D /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9E5246EEFB4002D736D /* LSIFileHelper.m */; };
+		045DB9EE246EF014002D736D /* LSIArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9ED246EF014002D736D /* LSIArtistResults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +40,16 @@
 		045DB9D4246EE87E002D736D /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 		045DB9DA246EEBAC002D736D /* LSIArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSIArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		045DB9DB246EEBAC002D736D /* LSIArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LSIArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
-		045DB9DD246EEC20002D736D /* LSINetworkingClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSINetworkingClient.h; sourceTree = "<group>"; };
-		045DB9DE246EEC20002D736D /* LSINetworkingClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSINetworkingClient.m; sourceTree = "<group>"; };
+		045DB9DD246EEC20002D736D /* LSIAudioDBClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIAudioDBClient.h; sourceTree = "<group>"; };
+		045DB9DE246EEC20002D736D /* LSIAudioDBClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIAudioDBClient.m; sourceTree = "<group>"; };
+		045DB9E3246EEFB4002D736D /* LSILog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSILog.m; sourceTree = "<group>"; };
+		045DB9E4246EEFB4002D736D /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		045DB9E5246EEFB4002D736D /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
+		045DB9E6246EEFB4002D736D /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		045DB9E7246EEFB4002D736D /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		045DB9E8246EEFB4002D736D /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
+		045DB9EC246EF014002D736D /* LSIArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistResults.h; sourceTree = "<group>"; };
+		045DB9ED246EF014002D736D /* LSIArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistResults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 				045DB9C3246EE7D8002D736D /* Main.storyboard */,
 				045DB9C6246EE7DA002D736D /* Assets.xcassets */,
 				045DB9CC246EE7DA002D736D /* main.m */,
+				045DB9E2246EEFB4002D736D /* LambdaSDK */,
 				045DB9E1246EEC3F002D736D /* Resources */,
 			);
 			path = FavoriteArtists;
@@ -85,6 +98,8 @@
 		045DB9D6246EE882002D736D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				045DB9EC246EF014002D736D /* LSIArtistResults.h */,
+				045DB9ED246EF014002D736D /* LSIArtistResults.m */,
 				045DB9D3246EE87E002D736D /* LSIArtist.h */,
 				045DB9D4246EE87E002D736D /* LSIArtist.m */,
 				045DB9DA246EEBAC002D736D /* LSIArtist+NSJSONSerialization.h */,
@@ -96,8 +111,8 @@
 		045DB9E0246EEC28002D736D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				045DB9DD246EEC20002D736D /* LSINetworkingClient.h */,
-				045DB9DE246EEC20002D736D /* LSINetworkingClient.m */,
+				045DB9DD246EEC20002D736D /* LSIAudioDBClient.h */,
+				045DB9DE246EEC20002D736D /* LSIAudioDBClient.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -113,6 +128,19 @@
 				045DB9CB246EE7DA002D736D /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		045DB9E2246EEFB4002D736D /* LambdaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				045DB9E3246EEFB4002D736D /* LSILog.m */,
+				045DB9E4246EEFB4002D736D /* LSIErrors.m */,
+				045DB9E5246EEFB4002D736D /* LSIFileHelper.m */,
+				045DB9E6246EEFB4002D736D /* LSIFileHelper.h */,
+				045DB9E7246EEFB4002D736D /* LSIErrors.h */,
+				045DB9E8246EEFB4002D736D /* LSILog.h */,
+			);
+			path = LambdaSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,13 +213,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045DB9EB246EEFB4002D736D /* LSIFileHelper.m in Sources */,
 				045DB9C2246EE7D8002D736D /* ViewController.m in Sources */,
 				045DB9BC246EE7D8002D736D /* AppDelegate.m in Sources */,
+				045DB9EA246EEFB4002D736D /* LSIErrors.m in Sources */,
 				045DB9CD246EE7DA002D736D /* main.m in Sources */,
-				045DB9DF246EEC20002D736D /* LSINetworkingClient.m in Sources */,
+				045DB9DF246EEC20002D736D /* LSIAudioDBClient.m in Sources */,
 				045DB9BF246EE7D8002D736D /* SceneDelegate.m in Sources */,
+				045DB9E9246EEFB4002D736D /* LSILog.m in Sources */,
 				045DB9D5246EE87E002D736D /* LSIArtist.m in Sources */,
 				045DB9DC246EEBAC002D736D /* LSIArtist+NSJSONSerialization.m in Sources */,
+				045DB9EE246EF014002D736D /* LSIArtistResults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

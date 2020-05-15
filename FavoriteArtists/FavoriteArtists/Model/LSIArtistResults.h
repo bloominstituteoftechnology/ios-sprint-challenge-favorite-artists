@@ -1,5 +1,5 @@
 //
-//  Artist.h
+//  LSIArtistResults.h
 //  FavoriteArtists
 //
 //  Created by Shawn Gee on 5/15/20.
@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class LSIArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LSIArtist : NSObject
+@interface LSIArtistResults : NSObject
 
-@property (nonatomic, readonly, copy) NSString *name;
-@property (nonatomic, readonly, copy) NSString *biography;
-@property (nonatomic, readonly) int yearFormed;
+@property (nonatomic, readonly, copy) NSArray<LSIArtist *> *artists;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

@@ -61,8 +61,28 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     [task resume];
 }
 
-- (NSArray *)fetchSavedArtist {
-    return nil;
+- (NSArray *)fetchSavedArtists {
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *directory = [path objectAtIndex:0];
+    NSArray *filePaths = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:directory error:nil];
+    
+    NSMutableArray *artists = [[NSMutableArray alloc] init];
+    
+    for (NSString *artist in filePaths) {
+        NSString *artistDirPath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", artist];
+        NSURL *artistURL = [NSURL fileURLWithPath:artistDirPath];
+        
+        NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];
+        NSDictionary *artistDictionary = [NSJSONSerialization
+                                          JSONObjectWithData:artistData
+                                          options:0
+                                          error:nil];
+        
+        WAHArtist *artist = [[WAHArtist alloc] initWithDictionary:artistDictionary];
+        [artists addObject:artist];
+    }
+    
+    return artists;
 }
 
 @end

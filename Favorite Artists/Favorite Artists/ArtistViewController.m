@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
+@property (nonatomic) WAHArtist *artistSearch;
 @property (nonatomic) BOOL isArtist;
 
 @end
@@ -41,20 +42,33 @@
     if (self.isArtist == YES) {
         self.searchBar.hidden = YES;
         self.title = self.artist.artist;
-    }
-    
-    self.nameLabel.hidden = NO;
-    self.yearFormedLabel.hidden = NO;
-    self.biographyTextView.hidden = NO;
-    
-    self.nameLabel.text = self.artist.artist;
+        
+        self.nameLabel.hidden = NO;
+        self.yearFormedLabel.hidden = NO;
+        self.biographyTextView.hidden = NO;
+        
+        self.nameLabel.text = self.artist.artist;
 
-    if (self.artist.yearFormed == 0) {
-        self.yearFormedLabel.text = @"N/A";
+        if (self.artist.yearFormed == 0) {
+            self.yearFormedLabel.text = @"N/A";
+        } else {
+            self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+        }
+        self.biographyTextView.text = self.artist.biography;
     } else {
-        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+        self.nameLabel.hidden = NO;
+        self.yearFormedLabel.hidden = NO;
+        self.biographyTextView.hidden = NO;
+        
+        self.nameLabel.text = self.artistSearch.artist;
+
+        if (self.artistSearch.yearFormed == 0) {
+            self.yearFormedLabel.text = @"N/A";
+        } else {
+            self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artistSearch.yearFormed];
+        }
+        self.biographyTextView.text = self.artistSearch.biography;
     }
-    self.biographyTextView.text = self.artist.biography;
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -65,7 +79,8 @@
         }
         
         NSLog(@"Fetched artist: %@", artist);
-        self.artist = artist;
+        self.artistSearch = artist;
+//        _artist = [[WAHArtist alloc] initWithArtist:artist.artist biography:artist.biography yearFormed:artist.yearFormed];
         
         // __weak typeof(self) weakSelf = self;
         dispatch_async(dispatch_get_main_queue(), ^{

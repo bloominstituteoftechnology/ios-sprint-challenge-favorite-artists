@@ -29,15 +29,14 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
     
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
-    //NSString *search = [NSString stringWithFormat:@"search.php\?s=%@", name];
     NSURLQueryItem *searchTerm = [NSURLQueryItem queryItemWithName:@"s" value:name];
     components.queryItems = @[searchTerm];
-    //NSURL *url = [baseURL URLByAppendingPathComponent:searchTerm];
     NSURL *url = components.URL;
     
     if (!url) {
         return;
     }
+    
     NSLog(@"URL: %@", url);
     
     NSURLSessionTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -61,10 +60,14 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
             return;
         }
         
+        NSLog(@"dictionary");
         CBDArtist *artist = [[CBDArtist alloc] initWithDictionary:dictionary];
-        [self.artists addObject:artist];
-        completionBlock(artist, nil);
-                              
+        if (artist) {
+            [self.artists addObject:artist];
+            completionBlock(artist, nil);
+            return;
+        }
+        completionBlock(nil, nil);
     }];
     [task resume];
 }

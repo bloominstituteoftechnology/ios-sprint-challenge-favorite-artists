@@ -13,7 +13,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     NSArray *artists = dictionary[@"artists"];
-    if (artists) {
+    if (![artists isKindOfClass:[NSNull class]]) {
         NSDictionary *artist = [artists objectAtIndex:0];
         
         NSString *strArtist = artist[@"strArtist"];

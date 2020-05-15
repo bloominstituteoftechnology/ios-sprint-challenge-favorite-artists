@@ -63,8 +63,6 @@
     // TODO: Save artist
     [self.artistController add:self.artist];
 
-    NSLog(@"%lul", (unsigned long)_artistController.artists.count);
-
     [self.navigationController popViewControllerAnimated:YES];
 }
 

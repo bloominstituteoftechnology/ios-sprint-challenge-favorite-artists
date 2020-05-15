@@ -10,8 +10,24 @@
 
 @implementation ArtistController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _artists = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 - (void)add:(MTGArtist *)artist {
-    self.artists = [self.artists arrayByAddingObject:artist];
+    @try  {
+       [self.artists addObject:artist];
+    } @catch (NSException *exception) {
+       NSLog(@"%@ ",exception.name);
+       NSLog(@"Reason: %@ ",exception.reason);
+    }
+
+    NSLog(@"Artists count: %lu", (unsigned long)self.artists.count);
 }
 
 @end

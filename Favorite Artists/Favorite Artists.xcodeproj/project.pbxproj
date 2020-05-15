@@ -13,6 +13,7 @@
 		13AEC77B246EE6DA00C97C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AEC77A246EE6DA00C97C80 /* Assets.xcassets */; };
 		13AEC77E246EE6DA00C97C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13AEC77C246EE6DA00C97C80 /* LaunchScreen.storyboard */; };
 		13AEC781246EE6DA00C97C80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC780246EE6DA00C97C80 /* main.m */; };
+		13AEC789246EE8D400C97C80 /* WAHArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC788246EE8D400C97C80 /* WAHArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		13AEC77D246EE6DA00C97C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13AEC77F246EE6DA00C97C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13AEC780246EE6DA00C97C80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13AEC787246EE8D400C97C80 /* WAHArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAHArtist.h; sourceTree = "<group>"; };
+		13AEC788246EE8D400C97C80 /* WAHArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAHArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				13AEC771246EE6D900C97C80 /* SceneDelegate.h */,
 				13AEC772246EE6D900C97C80 /* SceneDelegate.m */,
 				13AEC777246EE6DA00C97C80 /* Main.storyboard */,
+				13AEC787246EE8D400C97C80 /* WAHArtist.h */,
+				13AEC788246EE8D400C97C80 /* WAHArtist.m */,
 				13AEC77A246EE6DA00C97C80 /* Assets.xcassets */,
 				13AEC77C246EE6DA00C97C80 /* LaunchScreen.storyboard */,
 				13AEC77F246EE6DA00C97C80 /* Info.plist */,
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13AEC770246EE6D900C97C80 /* AppDelegate.m in Sources */,
+				13AEC789246EE8D400C97C80 /* WAHArtist.m in Sources */,
 				13AEC781246EE6DA00C97C80 /* main.m in Sources */,
 				13AEC773246EE6D900C97C80 /* SceneDelegate.m in Sources */,
 			);

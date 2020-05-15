@@ -22,6 +22,9 @@
 @property (strong, nonatomic) IBOutlet UITextView *biographyText;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
+// MARK:- Actions
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender;
+
 @end
 
 @implementation ArtistDetailViewController
@@ -66,10 +69,17 @@
             self.nameLabel.text = @"Error fetching data from server.";
             self.yearLabel.text = @"Artist name may be wrong.";
         }
-        
+
         self.artistResult = artist;
         [self setupViews];
     }];
 }
 
+// MARK:- Actions
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    if (self.artistResult) {
+        [self.artistController.favoriteArtists addObject:self.artistResult];
+        [self.navigationController popViewControllerAnimated:true];
+    }
+}
 @end

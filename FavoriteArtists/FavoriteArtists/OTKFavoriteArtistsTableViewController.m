@@ -9,6 +9,7 @@
 #import "OTKFavoriteArtistsTableViewController.h"
 #import "OTKArtist.h"
 #import "OTKArtistController.h"
+#import "OTKSearchArtistViewController.h"
 
 @interface OTKFavoriteArtistsTableViewController ()
 
@@ -55,7 +56,13 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
+        OTKSearchArtistViewController *destinationVC = segue.destinationViewController;
+        destinationVC.artistController = self.artistController;
+    } else if ([segue.identifier isEqualToString:@"ShowArtistDetailSegue"]) {
+        OTKSearchArtistViewController *destinationVC = segue.destinationViewController;
+        destinationVC.artistController = self.artistController;
+    }
 }
 
 @end

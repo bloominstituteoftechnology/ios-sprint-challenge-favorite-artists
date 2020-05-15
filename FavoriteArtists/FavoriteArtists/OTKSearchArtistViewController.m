@@ -7,6 +7,8 @@
 //
 
 #import "OTKSearchArtistViewController.h"
+#import "OTKArtist.h"
+#import "OTKArtistController.h"
 
 @interface OTKSearchArtistViewController ()
 
@@ -22,21 +24,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.searchBar.delegate = self;
 }
 
+- (void)updateViews {
+    if (!self.artist) {
+        self.title = @"";
+        self.artistNameLabel.text = self.artist.name;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %i", self.artist.yearFormed];
+        self.artistBioTextView.text = self.artist.bio;
+
+        [self.searchBar setHidden:YES];
+        [self.saveButton setEnabled:NO];
+        self.saveButton.tintColor = [UIColor clearColor];
+    } else {
+        [self.artistNameLabel setHidden:YES];
+        [self.yearFormedLabel setHidden:YES];
+        [self.artistBioTextView setHidden:YES];
+    }
+}
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

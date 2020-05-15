@@ -14,6 +14,7 @@
 @property LSIAudioDBClient *audioDBClient;
 
 - (void)setUp;
+- (void)setUpSearchbar;
 
 @end
 
@@ -42,21 +43,19 @@
     self.audioDBClient = [[LSIAudioDBClient alloc] init];
 }
 
+// MARK: - View Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+}
+
+- (void)setUpSearchbar {
     UISearchController *search = [[UISearchController alloc] initWithSearchResultsController:nil];
     search.searchResultsUpdater = self;
     search.obscuresBackgroundDuringPresentation = false;
     search.searchBar.placeholder = @"Search for an artist";
     search.searchBar.delegate = self;
     self.navigationItem.searchController = search;
-
-    
-    // Test Fetch
-    
-    
-    
 }
 
 // MARK: - Search Results Updating

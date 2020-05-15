@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CBDArtistFetcher : NSObject
 
+@property (nonatomic, nullable) NSMutableArray *artists;
+
+- (instancetype)initWithArtists:(NSMutableArray *)artists;
+
 - (void)fetchArtistWithName:(NSString *)name
 completionBlock:(CBDArtistCompletion)completionBlock;
 

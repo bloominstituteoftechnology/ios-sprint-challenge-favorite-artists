@@ -13,7 +13,6 @@
 @interface CBDArtistsTableViewController ()
 
 //MARK: - Private Properties
-@property (nonatomic) CBDArtistFetcher *fetcher;
 @property (nonatomic) NSMutableArray *artists;
 
 @end
@@ -24,7 +23,7 @@
 
 - (CBDArtistFetcher *)fetcher {
     if (!_fetcher) {
-        _fetcher = [[CBDArtistFetcher alloc] init];
+        _fetcher = [[CBDArtistFetcher alloc] initWithArtists:[NSMutableArray new]];
     }
     return _fetcher;
 }
@@ -33,11 +32,12 @@
 // MARK: - View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.fetcher fetchArtistWithName:@"ColdPlay" completionBlock:^(CBDArtist * _Nullable artist, NSError * _Nullable error) {
+    [self.fetcher fetchArtistWithName:@"newsboys" completionBlock:^(CBDArtist * _Nullable artist, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error fetching artist");
             return;
         }
+        NSLog(@"Artist: %@", artist.strArtist);
     }];
 }
 
@@ -53,13 +53,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.fetcher.artists.count;
 }
 
 /*

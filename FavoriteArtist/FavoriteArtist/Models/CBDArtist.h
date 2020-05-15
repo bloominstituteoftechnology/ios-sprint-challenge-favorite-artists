@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CBDArtist : NSObject
 
-@property NSString *strArtist;
-@property int yearFormed;
-@property NSString *strBiographyEN;
+@property (nonatomic, nullable) NSString *strArtist;
+@property (nonatomic) int yearFormed;
+@property (nonatomic, nullable) NSString *strBiographyEN;
 
 - (instancetype)initWithStrArtist:(NSString *)strArtist
                   yearFormed:(int)yearFormed

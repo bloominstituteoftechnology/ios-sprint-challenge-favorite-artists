@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CBDArtistsTableViewController : UITableViewController
 
+@property (nonatomic, nullable) CBDArtistFetcher *fetcher;
+
 //- (IBAction)unwindSegue:(UIStoryboardSegue *)segue;
 
 @end

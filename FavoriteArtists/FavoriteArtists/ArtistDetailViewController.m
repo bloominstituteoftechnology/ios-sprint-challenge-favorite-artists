@@ -66,8 +66,13 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [self.artistController fetchArtistWithName:searchBar.text completionBlock:^(HLOArtist * _Nullable artist, NSError * _Nullable error) {
         if (error) {
-            self.nameLabel.text = @"Error fetching data from server.";
-            self.yearLabel.text = @"Artist name may be wrong.";
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.nameLabel setHidden:false];
+                [self.yearLabel setHidden:false];
+                self.nameLabel.text = @"Error fetching data from server.";
+                self.yearLabel.text = @"Artist name may be wrong.";
+            });
+            return;
         }
 
         self.artistResult = artist;

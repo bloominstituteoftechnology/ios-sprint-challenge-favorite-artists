@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, copy) NSArray *artists;
 
 - (void)addArtist:(LSIArtist *)artist;
+- (void)deleteArtistAtIndex:(long)index;
 
 @end
 

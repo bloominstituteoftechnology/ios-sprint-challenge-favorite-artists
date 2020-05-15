@@ -23,6 +23,8 @@ static NSString *artistsKey = @"artists";
 
 @implementation LSIArtistController
 
+// MARK: - Init
+
 - (instancetype)init {
     self = [super init];
     if (!self) { return nil; }
@@ -37,10 +39,21 @@ static NSString *artistsKey = @"artists";
     return self;
 }
 
+// MARK: - CRUD
+
 - (void)addArtist:(LSIArtist *)artist {
     self.artists = [self.artists arrayByAddingObject:artist];
     [self saveToPersistentStore];
 }
+
+- (void)deleteArtistAtIndex:(long)index {
+    NSMutableArray *artists = [self.artists mutableCopy];
+    [artists removeObjectAtIndex:index];
+    self.artists = [artists copy];
+    [self saveToPersistentStore];
+}
+
+// MARK: - Persistence
 
 - (NSURL *)persistentStoreURL {
     NSURL *url = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] objectAtIndex:0];

@@ -8,13 +8,16 @@
 
 #import "ArtistViewController.h"
 #import "WAHArtistController.h"
+#import "WAHArtist.h"
 
-@interface ArtistViewController ()
+@interface ArtistViewController ()<UISearchBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
+
+@property (nonatomic) WAHArtist *artist;
 
 @end
 
@@ -22,19 +25,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.searchBar.delegate = self;
+}
+
+- (void)updateViews {
+    self.nameLabel.hidden = NO;
+    self.yearFormedLabel.hidden = NO;
+    self.biographyTextView.hidden = NO;
     
-    [self.artistController fetchArtistWithName:@"macklemore" completionBlock:^(WAHArtist * _Nullable artist, NSError * _Nullable error) {
+    self.nameLabel.text = self.artist.artist;
+
+    if (self.artist.yearFormed == 0) {
+        self.yearFormedLabel.text = @"N/A";
+    } else {
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+    }
+    self.biographyTextView.text = self.artist.biography;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.artistController fetchArtistWithName:searchBar.text completionBlock:^(WAHArtist * _Nullable artist, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Fetching Error: %@", error);
             return;
         }
         
         NSLog(@"Fetched artist: %@", artist);
-    
+        self.artist = artist;
+        
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateViews];
+        });
     }];
-
-    NSLog(@"herer");
-
 }
 
 /*

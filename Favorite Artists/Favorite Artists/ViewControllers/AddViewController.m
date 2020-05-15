@@ -10,7 +10,7 @@
 #import "MTGArtist.h"
 #import "MTGArtistFetcher.h"
 
-@interface AddViewController () {
+@interface AddViewController () <UISearchBarDelegate> {
     MTGArtist *artist;
 }
 
@@ -21,6 +21,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *artistLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yearLabel;
 @property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
+
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -34,21 +36,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.searchBar.delegate = self;
+
     [self updateViews];
-
-    [self.fetcher fetchArtistByName:@"Macklemore" completionBlock:^(MTGArtist * _Nullable foundArtist, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Artist Fetching Error: %@", error);
-            return;
-        }
-
-        NSLog(@"Arstist: %@", foundArtist);
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self->artist = foundArtist;
-            [self updateViews];
-        });
-    }];
 }
 
 - (void)updateViews {
@@ -84,6 +74,28 @@
         _fetcher = [[MTGArtistFetcher alloc] init];
     }
     return _fetcher;
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+
+    [self performSearch:searchBar.text];
+}
+
+-(void)performSearch:(NSString *)searchTerm {
+    [self.fetcher fetchArtistByName:searchTerm completionBlock:^(MTGArtist * _Nullable foundArtist, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Artist Fetching Error: %@", error);
+            return;
+        }
+
+        NSLog(@"Arstist: %@", foundArtist);
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self->artist = foundArtist;
+            [self updateViews];
+        });
+    }];
 }
 
 @end

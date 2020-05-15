@@ -39,7 +39,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
         }
 
         if (!data) {
-            NSError *dataError = errorWithMessage(@"No earthquake data returned", LSIDataNilError);
+            NSError *dataError = errorWithMessage(@"No artist data returned", LSIDataNilError);
             completionBlock(nil, dataError);
             return;
         }

@@ -24,24 +24,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self updateViews];
     self.searchBar.delegate = self;
 }
 
 - (void)updateViews {
     if (!self.artist) {
-        self.title = @"";
+        self.title = @"Add New Artist";
+        self.searchBar.placeholder = @"Artist Name:";
+
+        [self.searchBar setHidden:NO];
+        [self.artistNameLabel setHidden:YES];
+        [self.yearFormedLabel setHidden:YES];
+        [self.artistBioTextView setHidden:YES];
+        [self.saveButton setEnabled:NO];
+        self.saveButton.tintColor = [UIColor clearColor];
+    } else {
         self.artistNameLabel.text = self.artist.name;
         self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %i", self.artist.yearFormed];
         self.artistBioTextView.text = self.artist.bio;
 
+        self.title = @"";
         [self.searchBar setHidden:YES];
-        [self.saveButton setEnabled:NO];
-        self.saveButton.tintColor = [UIColor clearColor];
-    } else {
-        [self.artistNameLabel setHidden:YES];
-        [self.yearFormedLabel setHidden:YES];
-        [self.artistBioTextView setHidden:YES];
+        [self.artistNameLabel setHidden:NO];
+        [self.yearFormedLabel setHidden:NO];
+        [self.artistBioTextView setHidden:NO];
+        [self.saveButton setEnabled:YES];
+        self.saveButton.tintColor = [UIColor blackColor];
     }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.artistController findArtist:searchBar.text completion:^(OTKArtist * _Nullable artist, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error finding artist");
+            return;
+        }
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (artist) {
+                self.artist = artist;
+                [self updateViews];
+            }
+        });
+    }];
+
+    [self.searchBar endEditing:YES];
 }
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {

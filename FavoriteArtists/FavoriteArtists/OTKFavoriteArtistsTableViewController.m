@@ -61,6 +61,9 @@
         destinationVC.artistController = self.artistController;
     } else if ([segue.identifier isEqualToString:@"ShowArtistDetailSegue"]) {
         OTKSearchArtistViewController *destinationVC = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        OTKArtist *artist = self.artistController.artists[indexPath.row];
+        destinationVC.artist = artist;
         destinationVC.artistController = self.artistController;
     }
 }

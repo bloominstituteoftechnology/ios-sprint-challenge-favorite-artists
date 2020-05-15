@@ -8,11 +8,11 @@
 
 #import "WAHArtistTableViewController.h"
 #import "WAHArtistController.h"
+#import "ArtistViewController.h"
 
 @interface WAHArtistTableViewController ()
 
 @property (nonatomic) WAHArtistController *artistController;
-
 
 
 @end
@@ -21,16 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.artistController fetchArtistWithName:@"macklemore" completionBlock:^(WAHArtist * _Nullable artist, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Fetching Error: %@", error);
-            return;
-        }
-        
-        NSLog(@"Fetched artist: %@", artist);
-    
-    }];
     
 }
 
@@ -54,15 +44,17 @@
     return cell;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"ShowArtistSearchSegue"]){
+        ArtistViewController *controller = (ArtistViewController *)segue.destinationViewController;
+        controller.artistController = self.artistController;
+    }
 }
-*/
+
 
 - (WAHArtistController *)artistController {
     if (!_artistController) {

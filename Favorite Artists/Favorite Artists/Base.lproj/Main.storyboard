@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="2V9-Rl-kLZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MlE-Ee-QqB">
                             <connections>
-                                <segue destination="NJh-Fs-HBx" kind="show" id="Jgs-9B-dHw"/>
+                                <segue destination="NJh-Fs-HBx" kind="show" identifier="ShowArtistSearchSegue" id="Jgs-9B-dHw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -149,6 +149,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wAW-fb-D4K"/>
+        <segue reference="Jgs-9B-dHw"/>
     </inferredMetricsTieBreakers>
 </document>

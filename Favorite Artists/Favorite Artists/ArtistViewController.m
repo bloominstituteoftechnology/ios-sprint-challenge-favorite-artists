@@ -7,6 +7,7 @@
 //
 
 #import "ArtistViewController.h"
+#import "WAHArtistController.h"
 
 @interface ArtistViewController ()
 
@@ -21,7 +22,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.artistController fetchArtistWithName:@"macklemore" completionBlock:^(WAHArtist * _Nullable artist, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Fetching Error: %@", error);
+            return;
+        }
+        
+        NSLog(@"Fetched artist: %@", artist);
+    
+    }];
+
+    NSLog(@"herer");
+
 }
 
 /*

@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
              artistBiography:(NSString *)artistBiography
                   yearFormed:(int)yearFormed;
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

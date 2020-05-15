@@ -16,6 +16,7 @@
 		9C13149B246EEF340019A139 /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C13149A246EEF340019A139 /* FavoriteArtistsTableViewController.m */; };
 		9C13149E246EEF640019A139 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C13149D246EEF640019A139 /* ArtistDetailViewController.m */; };
 		9C1314A1246EEFBB0019A139 /* ArtistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1314A0246EEFBA0019A139 /* ArtistTableViewCell.m */; };
+		9C1314A4246EF3850019A139 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1314A3246EF3850019A139 /* Artist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		9C13149D246EEF640019A139 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 		9C13149F246EEFBA0019A139 /* ArtistTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistTableViewCell.h; sourceTree = "<group>"; };
 		9C1314A0246EEFBA0019A139 /* ArtistTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableViewCell.m; sourceTree = "<group>"; };
+		9C1314A2246EF3850019A139 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		9C1314A3246EF3850019A139 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 		9C131492246EEE540019A139 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9C1314A2246EF3850019A139 /* Artist.h */,
+				9C1314A3246EF3850019A139 /* Artist.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				9C13147A246EE8C00019A139 /* AppDelegate.m in Sources */,
 				9C13148B246EE8C40019A139 /* main.m in Sources */,
 				9C13147D246EE8C00019A139 /* SceneDelegate.m in Sources */,
+				9C1314A4246EF3850019A139 /* Artist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

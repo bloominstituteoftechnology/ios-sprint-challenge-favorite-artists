@@ -23,7 +23,7 @@
     if([artistBiography isKindOfClass:[NSNull class]]) { artistBiography = @"Artist Biography not found"; }
 
     // MARK:- Why the hell did they name it intYearFormed when it returns a String ??????????????????
-    NSString *yearFormedString = artistResultDict[@"intYearFormed"];
+    NSString *yearFormedString = artistResultDict[@"intFormedYear"];
     if([yearFormedString isKindOfClass:[NSNull class]]) { yearFormedString = nil; }
 
     // If year is nil return 1 (which we'll use to check for what string to print)

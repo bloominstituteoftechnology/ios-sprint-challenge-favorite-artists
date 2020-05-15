@@ -35,20 +35,27 @@
 // MARK:- Methods
 
 - (void)setupViews {
-    if (self.artist) {
-        [self.searchBar setHidden:true];
-        [self.saveButton setEnabled:false];
-        [self setTitle:[NSString stringWithFormat:@"%@", self.artist.artistName]];
-        self.nameLabel.text = self.artist.artistName;
-        self.yearLabel.text = self.artist.yearFormed == 1 ? @"No year data from database." : [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
-        self.biographyText.text = self.artist.artistBiography;
-    } else {
-        self.searchBar.delegate = self;
-        self.searchBar.text = @"";
-        self.nameLabel.text = @"";
-        self.yearLabel.text = @"";
-        self.biographyText.text = @"";
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.artist) {
+            [self.searchBar setHidden:true];
+            [self.saveButton setEnabled:false];
+            [self setTitle:[NSString stringWithFormat:@"%@", self.artist.artistName]];
+            self.nameLabel.text = self.artist.artistName;
+            self.yearLabel.text = self.artist.yearFormed == 1 ? @"No year data from database." : [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+            self.biographyText.text = self.artist.artistBiography;
+        } else if (self.artistResult) {
+            self.searchBar.delegate = self;
+            self.nameLabel.text = self.artistResult.artistName;
+            self.yearLabel.text = self.artistResult.yearFormed == 1 ? @"No year data from database." : [NSString stringWithFormat:@"Formed in %d", self.artistResult.yearFormed];
+            self.biographyText.text = self.artistResult.artistBiography;
+        } else {
+            self.searchBar.delegate = self;
+            self.searchBar.text = @"";
+            self.nameLabel.text = @"";
+            self.yearLabel.text = @"";
+            self.biographyText.text = @"";
+        }
+    });
 }
 
 // MARK:- Protocol Conformation
@@ -59,7 +66,9 @@
             self.nameLabel.text = @"Error fetching data from server.";
             self.yearLabel.text = @"Artist name may be wrong.";
         }
-
+        
+        self.artistResult = artist;
+        [self setupViews];
     }];
 }
 

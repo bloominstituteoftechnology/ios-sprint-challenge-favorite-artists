@@ -26,27 +26,45 @@
 
 @implementation AddViewController
 
+//- (void)setArtist:(MTGArtist *)artist {
+//    self.artist = artist;
+//    [self updateViews];
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [self updateViews];
 
-    [self.fetcher fetchArtistByName:@"Macklemore" completionBlock:^(MTGArtist * _Nullable artist, NSError * _Nullable error) {
+    [self.fetcher fetchArtistByName:@"Macklemore" completionBlock:^(MTGArtist * _Nullable foundArtist, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Artist Fetching Error: %@", error);
             return;
         }
 
-        NSLog(@"Arstist: %@", artist);
+        NSLog(@"Arstist: %@", foundArtist);
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self->artist = foundArtist;
+            [self updateViews];
+        });
     }];
 }
 
 - (void)updateViews {
 
     if (artist == nil) {
-        self.artistLabel.text = @"";
+        _artistLabel.text = @"";
         _yearLabel.text = @"";
         _biographyTextView.text = @"";
+    } else {
+        _artistLabel.text = artist.artist;
+        if (artist.formedYear == -1) {
+            _yearLabel.text = @"Formed: N/A";
+        } else {
+            _yearLabel.text = [NSString stringWithFormat:@"Formed in %0d", artist.formedYear];
+        }
+        _biographyTextView.text = artist.biography;
     }
 }
 

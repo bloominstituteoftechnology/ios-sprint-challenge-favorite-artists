@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		045DB9BC246EE7D8002D736D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9BB246EE7D8002D736D /* AppDelegate.m */; };
 		045DB9BF246EE7D8002D736D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9BE246EE7D8002D736D /* SceneDelegate.m */; };
-		045DB9C2246EE7D8002D736D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9C1246EE7D8002D736D /* ViewController.m */; };
+		045DB9C2246EE7D8002D736D /* LSIAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9C1246EE7D8002D736D /* LSIAddArtistViewController.m */; };
 		045DB9C5246EE7D8002D736D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045DB9C3246EE7D8002D736D /* Main.storyboard */; };
 		045DB9C7246EE7DA002D736D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045DB9C6246EE7DA002D736D /* Assets.xcassets */; };
 		045DB9CA246EE7DA002D736D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045DB9C8246EE7DA002D736D /* LaunchScreen.storyboard */; };
@@ -21,6 +21,7 @@
 		045DB9EA246EEFB4002D736D /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9E4246EEFB4002D736D /* LSIErrors.m */; };
 		045DB9EB246EEFB4002D736D /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9E5246EEFB4002D736D /* LSIFileHelper.m */; };
 		045DB9EE246EF014002D736D /* LSIArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9ED246EF014002D736D /* LSIArtistResults.m */; };
+		045DB9F2246EFDA2002D736D /* LSIFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DB9F1246EFDA2002D736D /* LSIFavoriteArtistsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,8 @@
 		045DB9BB246EE7D8002D736D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		045DB9BD246EE7D8002D736D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		045DB9BE246EE7D8002D736D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		045DB9C0246EE7D8002D736D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		045DB9C1246EE7D8002D736D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		045DB9C0246EE7D8002D736D /* LSIAddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIAddArtistViewController.h; sourceTree = "<group>"; };
+		045DB9C1246EE7D8002D736D /* LSIAddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIAddArtistViewController.m; sourceTree = "<group>"; };
 		045DB9C4246EE7D8002D736D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		045DB9C6246EE7DA002D736D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045DB9C9246EE7DA002D736D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +51,8 @@
 		045DB9E8246EEFB4002D736D /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
 		045DB9EC246EF014002D736D /* LSIArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistResults.h; sourceTree = "<group>"; };
 		045DB9ED246EF014002D736D /* LSIArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistResults.m; sourceTree = "<group>"; };
+		045DB9F0246EFDA2002D736D /* LSIFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		045DB9F1246EFDA2002D736D /* LSIFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +87,7 @@
 			children = (
 				045DB9D6246EE882002D736D /* Model */,
 				045DB9E0246EEC28002D736D /* Networking */,
-				045DB9C0246EE7D8002D736D /* ViewController.h */,
-				045DB9C1246EE7D8002D736D /* ViewController.m */,
+				045DB9EF246EFD5B002D736D /* ViewControllers */,
 				045DB9C3246EE7D8002D736D /* Main.storyboard */,
 				045DB9C6246EE7DA002D736D /* Assets.xcassets */,
 				045DB9CC246EE7DA002D736D /* main.m */,
@@ -141,6 +143,17 @@
 				045DB9E8246EEFB4002D736D /* LSILog.h */,
 			);
 			path = LambdaSDK;
+			sourceTree = "<group>";
+		};
+		045DB9EF246EFD5B002D736D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				045DB9F0246EFDA2002D736D /* LSIFavoriteArtistsTableViewController.h */,
+				045DB9F1246EFDA2002D736D /* LSIFavoriteArtistsTableViewController.m */,
+				045DB9C0246EE7D8002D736D /* LSIAddArtistViewController.h */,
+				045DB9C1246EE7D8002D736D /* LSIAddArtistViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,12 +227,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				045DB9EB246EEFB4002D736D /* LSIFileHelper.m in Sources */,
-				045DB9C2246EE7D8002D736D /* ViewController.m in Sources */,
+				045DB9C2246EE7D8002D736D /* LSIAddArtistViewController.m in Sources */,
 				045DB9BC246EE7D8002D736D /* AppDelegate.m in Sources */,
 				045DB9EA246EEFB4002D736D /* LSIErrors.m in Sources */,
 				045DB9CD246EE7DA002D736D /* main.m in Sources */,
 				045DB9DF246EEC20002D736D /* LSIAudioDBClient.m in Sources */,
 				045DB9BF246EE7D8002D736D /* SceneDelegate.m in Sources */,
+				045DB9F2246EFDA2002D736D /* LSIFavoriteArtistsTableViewController.m in Sources */,
 				045DB9E9246EEFB4002D736D /* LSILog.m in Sources */,
 				045DB9D5246EE87E002D736D /* LSIArtist.m in Sources */,
 				045DB9DC246EEBAC002D736D /* LSIArtist+NSJSONSerialization.m in Sources */,

@@ -3,13 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Favorite Artists-->
         <scene sceneID="Z14-cr-1e5">
             <objects>
-                <tableViewController id="y5b-rt-18P" customClass="ViewController" sceneMemberID="viewController">
+                <tableViewController id="y5b-rt-18P" customClass="LSIFavoriteArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hLg-MF-yRA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,11 +30,72 @@
                             <outlet property="delegate" destination="y5b-rt-18P" id="HBd-Uq-RCm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4uH-Dm-GNj"/>
+                    <navigationItem key="navigationItem" title="Favorite Artists" id="4uH-Dm-GNj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SZo-6P-1vS">
+                            <connections>
+                                <segue destination="fbe-Oi-GDe" kind="show" id="HPE-sb-73q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drk-i9-zh8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="715.94202898550725" y="112.5"/>
+        </scene>
+        <!--Add New Artist-->
+        <scene sceneID="Los-6G-QEm">
+            <objects>
+                <viewController id="fbe-Oi-GDe" customClass="LSIAddArtistViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HVp-BX-CCg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pav-ih-bxu">
+                                <rect key="frame" x="20" y="108" width="374" height="734"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQE-9i-mbK">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uL4-WX-zsu">
+                                        <rect key="frame" x="0.0" y="58" width="374" height="50"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMP-4V-hL5">
+                                        <rect key="frame" x="0.0" y="116" width="374" height="618"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pav-ih-bxu" firstAttribute="top" secondItem="NX8-eL-JMh" secondAttribute="top" constant="20" id="0Yg-rG-0mo"/>
+                            <constraint firstItem="NX8-eL-JMh" firstAttribute="trailing" secondItem="Pav-ih-bxu" secondAttribute="trailing" constant="20" id="43i-Be-dz0"/>
+                            <constraint firstItem="NX8-eL-JMh" firstAttribute="bottom" secondItem="Pav-ih-bxu" secondAttribute="bottom" constant="20" id="X2A-U3-7At"/>
+                            <constraint firstItem="Pav-ih-bxu" firstAttribute="leading" secondItem="NX8-eL-JMh" secondAttribute="leading" constant="20" id="xnc-ad-Eom"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NX8-eL-JMh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Artist" id="3FG-w7-EHe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gk8-s9-KZI"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistBioTextView" destination="XMP-4V-hL5" id="U4D-lR-9ap"/>
+                        <outlet property="artistNameLabel" destination="VQE-9i-mbK" id="dhH-CE-2AY"/>
+                        <outlet property="artistYearLabel" destination="uL4-WX-zsu" id="Iya-QK-Imo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgR-2U-5V3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602.8985507246377" y="112.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xCM-CD-hsn">

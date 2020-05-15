@@ -6,19 +6,28 @@
 //  Copyright © 2020 Swift Student. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LSIAddArtistViewController.h"
 #import "LSIAudioDBClient.h"
+#import "LSIArtist.h"
 
-@interface ViewController ()
+@interface LSIAddArtistViewController ()
 
 @property LSIAudioDBClient *audioDBClient;
+@property LSIArtist *artist;
+
+// MARK: - IBOutlets
+
+@property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *artistYearLabel;
+@property (strong, nonatomic) IBOutlet UITextView *artistBioTextView;
 
 - (void)setUp;
 - (void)setUpSearchbar;
+- (void)updateUI;
 
 @end
 
-@implementation ViewController
+@implementation LSIAddArtistViewController
 
 
 // MARK: - Init
@@ -47,7 +56,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpSearchbar];
 }
+
+// MARK: - Private Methods
 
 - (void)setUpSearchbar {
     UISearchController *search = [[UISearchController alloc] initWithSearchResultsController:nil];
@@ -56,6 +68,18 @@
     search.searchBar.placeholder = @"Search for an artist";
     search.searchBar.delegate = self;
     self.navigationItem.searchController = search;
+}
+
+- (void)updateUI {
+    if (self.artist) {
+        self.artistNameLabel.text = self.artist.name;
+        self.artistYearLabel.text = [NSString stringWithFormat: @"%d", self.artist.yearFormed];
+        self.artistBioTextView.text = self.artist.biography;
+    } else {
+        self.artistNameLabel.text = @"No Results";
+        self.artistYearLabel.text = @"";
+        self.artistBioTextView.text = @"";
+    }
 }
 
 // MARK: - Search Results Updating
@@ -71,9 +95,22 @@
     
     if (query && query != nil) {
         [self.audioDBClient fetchArtistsForQuery:query completion:^(NSArray<LSIArtist *> * _Nullable artists, NSError * _Nullable error) {
-            NSLog(@"%lu", artists.count);
+            if (artists.count >= 1) {
+                self.artist = artists[0];
+            } else {
+                self.artist = nil;
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self updateUI];
+                if (self.artist) {
+                    searchBar.text = @"";
+                }
+                [self.navigationItem.searchController dismissViewControllerAnimated:true completion:nil];
+            });
         }];
     }
 }
 
 @end
+

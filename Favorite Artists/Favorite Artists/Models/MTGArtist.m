@@ -12,7 +12,7 @@
 
 - (instancetype)initWithArtist:(NSString *)artist
                      biography:(NSString *)biography
-                    formedYear:(double)formedYear {
+                    formedYear:(int)formedYear {
 
     self = [super init];
     if (self != nil) {
@@ -21,6 +21,11 @@
         _formedYear = formedYear;
     }
     return self;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"Artist: %@; Year: %d", _artist, _formedYear];
 }
 
 @end

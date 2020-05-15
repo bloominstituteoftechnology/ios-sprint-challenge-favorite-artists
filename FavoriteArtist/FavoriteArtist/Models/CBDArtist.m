@@ -10,14 +10,14 @@
 
 @implementation CBDArtist
 
-- (instancetype)initWithName:(NSString *)name
-                  yearFormed:(int)yearFormed
-             details:(NSString *)details {
+- (instancetype)initWithStrArtist:(NSString *)strArtist
+                       yearFormed:(int)yearFormed
+                   strBiographyEN:(NSString *)strBiographyEN {
     self = [super init];
     if (self) {
-        _name = name;
+        _strArtist = strArtist;
         _yearFormed = yearFormed;
-        _details = details;
+        _strBiographyEN = strBiographyEN;
     }
     
     return self;

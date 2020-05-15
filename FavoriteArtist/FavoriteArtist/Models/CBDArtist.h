@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CBDArtist : NSObject
 
-@property NSString *name;
+@property NSString *strArtist;
 @property int yearFormed;
-@property NSString *details;
+@property NSString *strBiographyEN;
 
-- (instancetype)initWithName:(NSString *)name
+- (instancetype)initWithStrArtist:(NSString *)strArtist
                   yearFormed:(int)yearFormed
-                     details:(NSString *)details;
+                     strBiographyEN:(NSString *)strBiographyEN;
 
 @end
 

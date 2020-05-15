@@ -1,16 +1,16 @@
 //
-//  NSJSONSerialization+CBDArtist.h
+//  CBDArtist+NSJSONSerialization.h
 //  FavoriteArtist
 //
 //  Created by Christopher Devito on 5/15/20.
 //  Copyright © 2020 Christopher Devito. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "CBDArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSJSONSerialization (CBDArtist)
+@interface CBDArtist (NSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

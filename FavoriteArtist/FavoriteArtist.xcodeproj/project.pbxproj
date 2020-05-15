@@ -17,7 +17,9 @@
 		E2D1AE35246EEA9600222D60 /* CBDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE34246EEA9600222D60 /* CBDDetailViewController.m */; };
 		E2D1AE38246EEAA800222D60 /* CBDArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE37246EEAA800222D60 /* CBDArtistsTableViewController.m */; };
 		E2D1AE3B246EEBD200222D60 /* CBDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE3A246EEBD200222D60 /* CBDArtist.m */; };
-		E2D1AE44246EF10500222D60 /* NSJSONSerialization+CBDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE43246EF10500222D60 /* NSJSONSerialization+CBDArtist.m */; };
+		E2D1AE46246EF3AA00222D60 /* CBDArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE45246EF3AA00222D60 /* CBDArtistTest.m */; };
+		E2D1AE49246EF43300222D60 /* CBDArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE48246EF43300222D60 /* CBDArtist+NSJSONSerialization.m */; };
+		E2D1AE4B246EF81300222D60 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = E2D1AE4A246EF81300222D60 /* Artist.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +52,11 @@
 		E2D1AE37246EEAA800222D60 /* CBDArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBDArtistsTableViewController.m; sourceTree = "<group>"; };
 		E2D1AE39246EEBD200222D60 /* CBDArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBDArtist.h; sourceTree = "<group>"; };
 		E2D1AE3A246EEBD200222D60 /* CBDArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBDArtist.m; sourceTree = "<group>"; };
-		E2D1AE42246EF10500222D60 /* NSJSONSerialization+CBDArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+CBDArtist.h"; sourceTree = "<group>"; };
-		E2D1AE43246EF10500222D60 /* NSJSONSerialization+CBDArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+CBDArtist.m"; sourceTree = "<group>"; };
+		E2D1AE45246EF3AA00222D60 /* CBDArtistTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBDArtistTest.m; sourceTree = "<group>"; };
+		E2D1AE47246EF43300222D60 /* CBDArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBDArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		E2D1AE48246EF43300222D60 /* CBDArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBDArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		E2D1AE4A246EF81300222D60 /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
+		E2D1AE4C246EF9A300222D60 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../../LSIFileHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,7 @@
 				E2C4C08B246EE80E00F4E2CC /* View Controllers */,
 				E2C4C08A246EE7E300F4E2CC /* Controllers */,
 				E2C4C074246EE79C00F4E2CC /* main.m */,
+				E2D1AE4A246EF81300222D60 /* Artist.json */,
 				E2C4C089246EE7B400F4E2CC /* Resources */,
 			);
 			path = FavoriteArtist;
@@ -108,6 +114,7 @@
 			children = (
 				E2C4C07E246EE79C00F4E2CC /* FavoriteArtistTests.m */,
 				E2C4C080246EE79C00F4E2CC /* Info.plist */,
+				E2D1AE45246EF3AA00222D60 /* CBDArtistTest.m */,
 			);
 			path = FavoriteArtistTests;
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 		E2C4C089246EE7B400F4E2CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2D1AE4C246EF9A300222D60 /* LSIFileHelper.h */,
 				E2C4C062246EE79900F4E2CC /* AppDelegate.h */,
 				E2C4C063246EE79900F4E2CC /* AppDelegate.m */,
 				E2C4C065246EE79900F4E2CC /* SceneDelegate.h */,
@@ -157,8 +165,8 @@
 			children = (
 				E2D1AE39246EEBD200222D60 /* CBDArtist.h */,
 				E2D1AE3A246EEBD200222D60 /* CBDArtist.m */,
-				E2D1AE42246EF10500222D60 /* NSJSONSerialization+CBDArtist.h */,
-				E2D1AE43246EF10500222D60 /* NSJSONSerialization+CBDArtist.m */,
+				E2D1AE47246EF43300222D60 /* CBDArtist+NSJSONSerialization.h */,
+				E2D1AE48246EF43300222D60 /* CBDArtist+NSJSONSerialization.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 			files = (
 				E2C4C072246EE79C00F4E2CC /* LaunchScreen.storyboard in Resources */,
 				E2C4C06F246EE79C00F4E2CC /* Assets.xcassets in Resources */,
+				E2D1AE4B246EF81300222D60 /* Artist.json in Resources */,
 				E2C4C06D246EE79A00F4E2CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,12 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2D1AE44246EF10500222D60 /* NSJSONSerialization+CBDArtist.m in Sources */,
 				E2C4C064246EE79900F4E2CC /* AppDelegate.m in Sources */,
 				E2C4C075246EE79C00F4E2CC /* main.m in Sources */,
 				E2D1AE38246EEAA800222D60 /* CBDArtistsTableViewController.m in Sources */,
 				E2C4C067246EE79A00F4E2CC /* SceneDelegate.m in Sources */,
 				E2D1AE3B246EEBD200222D60 /* CBDArtist.m in Sources */,
+				E2D1AE49246EF43300222D60 /* CBDArtist+NSJSONSerialization.m in Sources */,
 				E2D1AE35246EEA9600222D60 /* CBDDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D1AE46246EF3AA00222D60 /* CBDArtistTest.m in Sources */,
 				E2C4C07F246EE79C00F4E2CC /* FavoriteArtistTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8825K9HH49;
-				INFOPLIST_FILE = FavoriteArtist/Info.plist;
+				INFOPLIST_FILE = FavoriteArtist/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8825K9HH49;
-				INFOPLIST_FILE = FavoriteArtist/Info.plist;
+				INFOPLIST_FILE = FavoriteArtist/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

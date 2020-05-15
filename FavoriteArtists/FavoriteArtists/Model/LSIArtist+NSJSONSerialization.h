@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LSIArtist (NSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)dictionaryRepresentation;
 
 @end
 

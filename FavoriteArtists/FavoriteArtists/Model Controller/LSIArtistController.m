@@ -7,6 +7,7 @@
 //
 
 #import "LSIArtistController.h"
+#import "LSIArtist+NSJSONSerialization.h"
 #import "LSIArtist.h"
 
 static NSString *artistsKey = @"artists";
@@ -47,16 +48,31 @@ static NSString *artistsKey = @"artists";
 }
 
 - (NSArray<LSIArtist *> *)loadFromPersistentStore {
+    
     NSDictionary *store = [[NSDictionary alloc] initWithContentsOfURL:[self persistentStoreURL]];
+    
     if (store) {
-        return store[artistsKey];
+        NSArray *artistDicts = store[artistsKey];
+        NSMutableArray *artists = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *artistDict in artistDicts) {
+            [artists addObject:[[LSIArtist alloc] initWithDictionary:artistDict]];
+        }
+        return [artists copy];
     } else {
         return nil;
     }
 }
 
 - (void)saveToPersistentStore {
-    NSDictionary *store = @{artistsKey: self.artists};
+    
+    NSMutableArray *artistDicts = [[NSMutableArray alloc] init];
+    
+    for (LSIArtist *artist in self.artists) {
+        [artistDicts addObject:[artist dictionaryRepresentation]];
+    }
+    
+    NSDictionary *store = @{artistsKey: artistDicts};
     [store writeToURL:[self persistentStoreURL] error:nil];
 }
 

@@ -8,16 +8,20 @@
 
 #import "LSIArtist+NSJSONSerialization.h"
 
+static NSDictionary *codingKeys;
+
 @implementation LSIArtist (NSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     if (self = [super init]) {
         
-        NSDictionary *codingKeys = @{
-            @"name": @"strArtist",
-            @"biography": @"strBiographyEN",
-            @"yearFormed": @"intFormedYear",
-        };
+        if (!codingKeys) {
+            codingKeys = @{
+                @"name": @"strArtist",
+                @"biography": @"strBiographyEN",
+                @"yearFormed": @"intFormedYear",
+            };
+        }
         
         for (NSString *codingKey in [codingKeys keyEnumerator]) {
             
@@ -35,4 +39,18 @@
     
     return self;
 }
+
+- (NSDictionary *)dictionaryRepresentation {
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    
+    for (NSString *codingKey in [codingKeys keyEnumerator]) {
+        
+        NSString *key = [codingKeys objectForKey:codingKey];
+        id value = [self valueForKey:codingKey];
+        [dictionary setValue:value forKey:key];
+    }
+    
+    return [dictionary copy];
+}
+
 @end

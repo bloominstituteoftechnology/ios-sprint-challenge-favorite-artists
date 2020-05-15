@@ -96,6 +96,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92410625246F5F16000744EC /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92F7BF9C246F43F2009A0A7A /* ArtistController.h */,
+				92F7BF9D246F43F2009A0A7A /* ArtistController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		92410626246F5F68000744EC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				92F7BF98246F256F009A0A7A /* MTGArtistFetcher.h */,
+				92F7BF96246F243A009A0A7A /* MTGArtistFetcher.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		92F7BF2D246EEA25009A0A7A = {
 			isa = PBXGroup;
 			children = (
@@ -117,13 +135,11 @@
 		92F7BF38246EEA25009A0A7A /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
-				92F7BF9C246F43F2009A0A7A /* ArtistController.h */,
-				92F7BF9D246F43F2009A0A7A /* ArtistController.m */,
 				92F7BF83246EF925009A0A7A /* JSON */,
 				92F7BF8E246EFBF0009A0A7A /* LambdaSDK */,
+				92410625246F5F16000744EC /* Model Controller */,
 				92F7BF6C246EF20F009A0A7A /* Models */,
-				92F7BF98246F256F009A0A7A /* MTGArtistFetcher.h */,
-				92F7BF96246F243A009A0A7A /* MTGArtistFetcher.m */,
+				92410626246F5F68000744EC /* Networking */,
 				92F7BF60246EEA86009A0A7A /* Resources */,
 				92F7BF61246EEA9E009A0A7A /* Storyboards */,
 				92F7BF62246EEE1C009A0A7A /* ViewControllers */,

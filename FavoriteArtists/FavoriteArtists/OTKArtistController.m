@@ -12,18 +12,12 @@
 
 static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
-@interface OTKArtistController ()
-
-@property (nonatomic) NSMutableArray *artists;
-
-@end
-
 @implementation OTKArtistController
 
-- (instancetype)init {
+- (instancetype)initWithArray:(NSMutableArray *)artists {
     self = [super init];
     if (self) {
-        _artists = self.artists;
+        _artists = artists;
     }
 
     return self;

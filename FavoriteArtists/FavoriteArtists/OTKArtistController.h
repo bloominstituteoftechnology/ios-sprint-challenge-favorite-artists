@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OTKArtistController : NSObject
 
+@property (nonatomic) NSMutableArray *artists;
+
+- (instancetype)initWithArray:(NSMutableArray *)artists;
 - (void)findArtist:(NSString *)artistName completion:(ArtistFetchCompletion)completion;
 - (void)saveArtist:(OTKArtist *)artist;
 

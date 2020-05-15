@@ -45,12 +45,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UISearchController *search = [[UISearchController alloc] initWithSearchResultsController:nil];
+    search.searchResultsUpdater = self;
+    search.obscuresBackgroundDuringPresentation = false;
+    search.searchBar.placeholder = @"Search for an artist";
+    search.searchBar.delegate = self;
+    self.navigationItem.searchController = search;
+
     
     // Test Fetch
-    [self.audioDBClient fetchArtistsForQuery:@"Macklemore" completion:^(NSArray<LSIArtist *> * _Nullable artists, NSError * _Nullable error) {
-        NSLog(@"%lu", artists.count);
-    }];
+    
+    
+    
 }
 
+// MARK: - Search Results Updating
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
+}
+
+// MARK: - Search Bar Delegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSString *query = searchBar.text;
+    
+    if (query && query != nil) {
+        [self.audioDBClient fetchArtistsForQuery:query completion:^(NSArray<LSIArtist *> * _Nullable artists, NSError * _Nullable error) {
+            NSLog(@"%lu", artists.count);
+        }];
+    }
+}
 
 @end

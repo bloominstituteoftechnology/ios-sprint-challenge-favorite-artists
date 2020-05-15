@@ -17,11 +17,18 @@
     if (!self) { return nil; }
     
     NSArray<NSDictionary *> *artistDicts = dictionary[@"artists"];
+    
+    if ([artistDicts isKindOfClass:[NSNull class]]) {
+        artistDicts = nil;
+    }
+    
     NSMutableArray<LSIArtist *> *artists = [[NSMutableArray alloc] init];
     
-    for (NSDictionary *artistDict in artistDicts) {
-        LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistDict];
-        [artists addObject:artist];
+    if (artistDicts) {
+        for (NSDictionary *artistDict in artistDicts) {
+            LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artistDict];
+            [artists addObject:artist];
+        }
     }
     
     _artists = [artists copy];

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CBDArtistFetcher;
+@class CBDArtist;
 
 NS_ASSUME_NONNULL_BEGIN
 

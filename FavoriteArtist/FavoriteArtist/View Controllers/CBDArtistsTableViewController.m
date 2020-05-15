@@ -7,25 +7,38 @@
 //
 
 #import "CBDArtistsTableViewController.h"
+#import "CBDArtistFetcher.h"
+#import "CBDArtist.h"
 
 @interface CBDArtistsTableViewController ()
 
 //MARK: - Private Properties
-
+@property (nonatomic) CBDArtistFetcher *fetcher;
+@property (nonatomic) NSMutableArray *artists;
 
 @end
 
 @implementation CBDArtistsTableViewController
 
+// MARK: - Properties
+
+- (CBDArtistFetcher *)fetcher {
+    if (!_fetcher) {
+        _fetcher = [[CBDArtistFetcher alloc] init];
+    }
+    return _fetcher;
+}
+
+
 // MARK: - View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.fetcher fetchArtistWithName:@"ColdPlay" completionBlock:^(CBDArtist * _Nullable artist, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error fetching artist");
+            return;
+        }
+    }];
 }
 
 -(void)updateViews {

@@ -7,6 +7,8 @@
 //
 
 #import "CBDDetailViewController.h"
+#import "CBDArtistFetcher.h"
+#import "CBDArtist.h"
 
 @interface CBDDetailViewController ()
 
@@ -27,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)updateViews {

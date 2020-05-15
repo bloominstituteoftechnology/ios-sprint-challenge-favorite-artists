@@ -20,6 +20,8 @@
 		E2D1AE46246EF3AA00222D60 /* CBDArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE45246EF3AA00222D60 /* CBDArtistTest.m */; };
 		E2D1AE49246EF43300222D60 /* CBDArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE48246EF43300222D60 /* CBDArtist+NSJSONSerialization.m */; };
 		E2D1AE4B246EF81300222D60 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = E2D1AE4A246EF81300222D60 /* Artist.json */; };
+		E2D1AE4F246F017B00222D60 /* CBDArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE4E246F017B00222D60 /* CBDArtistFetcher.m */; };
+		E2D1AE50246F017B00222D60 /* CBDArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE4E246F017B00222D60 /* CBDArtistFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		E2D1AE48246EF43300222D60 /* CBDArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBDArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		E2D1AE4A246EF81300222D60 /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
 		E2D1AE4C246EF9A300222D60 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../../LSIFileHelper.h; sourceTree = "<group>"; };
+		E2D1AE4D246F017B00222D60 /* CBDArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBDArtistFetcher.h; sourceTree = "<group>"; };
+		E2D1AE4E246F017B00222D60 /* CBDArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBDArtistFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 		E2C4C08A246EE7E300F4E2CC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E2D1AE4D246F017B00222D60 /* CBDArtistFetcher.h */,
+				E2D1AE4E246F017B00222D60 /* CBDArtistFetcher.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 				E2C4C067246EE79A00F4E2CC /* SceneDelegate.m in Sources */,
 				E2D1AE3B246EEBD200222D60 /* CBDArtist.m in Sources */,
 				E2D1AE49246EF43300222D60 /* CBDArtist+NSJSONSerialization.m in Sources */,
+				E2D1AE4F246F017B00222D60 /* CBDArtistFetcher.m in Sources */,
 				E2D1AE35246EEA9600222D60 /* CBDDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D1AE50246F017B00222D60 /* CBDArtistFetcher.m in Sources */,
 				E2D1AE46246EF3AA00222D60 /* CBDArtistTest.m in Sources */,
 				E2C4C07F246EE79C00F4E2CC /* FavoriteArtistTests.m in Sources */,
 			);

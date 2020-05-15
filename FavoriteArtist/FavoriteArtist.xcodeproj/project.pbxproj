@@ -17,6 +17,7 @@
 		E2D1AE35246EEA9600222D60 /* CBDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE34246EEA9600222D60 /* CBDDetailViewController.m */; };
 		E2D1AE38246EEAA800222D60 /* CBDArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE37246EEAA800222D60 /* CBDArtistsTableViewController.m */; };
 		E2D1AE3B246EEBD200222D60 /* CBDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE3A246EEBD200222D60 /* CBDArtist.m */; };
+		E2D1AE44246EF10500222D60 /* NSJSONSerialization+CBDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1AE43246EF10500222D60 /* NSJSONSerialization+CBDArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		E2D1AE37246EEAA800222D60 /* CBDArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBDArtistsTableViewController.m; sourceTree = "<group>"; };
 		E2D1AE39246EEBD200222D60 /* CBDArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBDArtist.h; sourceTree = "<group>"; };
 		E2D1AE3A246EEBD200222D60 /* CBDArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBDArtist.m; sourceTree = "<group>"; };
+		E2D1AE42246EF10500222D60 /* NSJSONSerialization+CBDArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+CBDArtist.h"; sourceTree = "<group>"; };
+		E2D1AE43246EF10500222D60 /* NSJSONSerialization+CBDArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+CBDArtist.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,8 @@
 			children = (
 				E2D1AE39246EEBD200222D60 /* CBDArtist.h */,
 				E2D1AE3A246EEBD200222D60 /* CBDArtist.m */,
+				E2D1AE42246EF10500222D60 /* NSJSONSerialization+CBDArtist.h */,
+				E2D1AE43246EF10500222D60 /* NSJSONSerialization+CBDArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D1AE44246EF10500222D60 /* NSJSONSerialization+CBDArtist.m in Sources */,
 				E2C4C064246EE79900F4E2CC /* AppDelegate.m in Sources */,
 				E2C4C075246EE79C00F4E2CC /* main.m in Sources */,
 				E2D1AE38246EEAA800222D60 /* CBDArtistsTableViewController.m in Sources */,

@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UISearchBar *favoriteArtistSearchBar;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UITextView *artistDetailsTextView;
+@property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 
 @end
 

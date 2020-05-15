@@ -52,6 +52,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="iOc-Db-O5L">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rgy-44-77N">
                             <connections>
+                                <action selector="addNewArtist:" destination="1Ar-Ha-zlD" id="Nw7-ci-gA5"/>
                                 <segue destination="EDA-vq-2WJ" kind="show" identifier="AddArtistSegue" id="beB-98-JZM"/>
                             </connections>
                         </barButtonItem>
@@ -70,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-xt-V9Z">
-                                <rect key="frame" x="20" y="241.5" width="374" height="600.5"/>
+                                <rect key="frame" x="20" y="272.5" width="374" height="569.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -80,8 +81,14 @@
                                 <rect key="frame" x="0.0" y="145" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Neh-v7-2RH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Neh-v7-2RH">
                                 <rect key="frame" x="20" y="211" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Formed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xv9-k9-QUN">
+                                <rect key="frame" x="20" y="241.5" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -91,29 +98,38 @@
                         <constraints>
                             <constraint firstItem="Neh-v7-2RH" firstAttribute="leading" secondItem="37Z-ac-Xzj" secondAttribute="leading" constant="20" id="189-8N-Atm"/>
                             <constraint firstItem="37Z-ac-Xzj" firstAttribute="trailing" secondItem="sqY-xt-V9Z" secondAttribute="trailing" constant="20" id="7K4-6C-6U2"/>
+                            <constraint firstItem="Xv9-k9-QUN" firstAttribute="leading" secondItem="37Z-ac-Xzj" secondAttribute="leading" constant="20" id="Abv-ZC-Hos"/>
                             <constraint firstItem="ksa-cR-jHk" firstAttribute="trailing" secondItem="37Z-ac-Xzj" secondAttribute="trailing" id="IxF-pr-Pqq"/>
+                            <constraint firstItem="Xv9-k9-QUN" firstAttribute="top" secondItem="Neh-v7-2RH" secondAttribute="bottom" constant="10" id="K72-fn-2GZ"/>
                             <constraint firstItem="ksa-cR-jHk" firstAttribute="leading" secondItem="37Z-ac-Xzj" secondAttribute="leading" id="OSV-0O-bIA"/>
                             <constraint firstItem="37Z-ac-Xzj" firstAttribute="trailing" secondItem="Neh-v7-2RH" secondAttribute="trailing" constant="20" id="YcR-Xk-n2X"/>
+                            <constraint firstItem="sqY-xt-V9Z" firstAttribute="top" secondItem="Xv9-k9-QUN" secondAttribute="bottom" constant="10" id="ZD3-nc-S2J"/>
+                            <constraint firstItem="37Z-ac-Xzj" firstAttribute="trailing" secondItem="Xv9-k9-QUN" secondAttribute="trailing" constant="20" id="aUK-yX-ECF"/>
                             <constraint firstItem="sqY-xt-V9Z" firstAttribute="leading" secondItem="37Z-ac-Xzj" secondAttribute="leading" constant="20" id="fs8-0A-RA3"/>
                             <constraint firstItem="Neh-v7-2RH" firstAttribute="top" secondItem="ksa-cR-jHk" secondAttribute="bottom" constant="10" id="fvF-hT-i4w"/>
                             <constraint firstItem="37Z-ac-Xzj" firstAttribute="bottom" secondItem="sqY-xt-V9Z" secondAttribute="bottom" constant="20" id="lga-Wh-n65"/>
                             <constraint firstItem="ksa-cR-jHk" firstAttribute="top" secondItem="37Z-ac-Xzj" secondAttribute="top" constant="5" id="qRL-6x-7A2"/>
-                            <constraint firstItem="sqY-xt-V9Z" firstAttribute="top" secondItem="Neh-v7-2RH" secondAttribute="bottom" constant="10" id="sh9-cE-KSk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="37Z-ac-Xzj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="Pgq-PZ-2BN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gaY-ch-TuP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gaY-ch-TuP">
+                            <connections>
+                                <segue destination="TFN-mU-TLp" kind="unwind" unwindAction="unwindSegue:" id="wJc-gD-jVY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistDetailsTextView" destination="sqY-xt-V9Z" id="afj-tK-NVu"/>
                         <outlet property="artistNameLabel" destination="Neh-v7-2RH" id="X48-A4-RPv"/>
                         <outlet property="favoriteArtistSearchBar" destination="ksa-cR-jHk" id="tW9-ao-DKC"/>
+                        <outlet property="yearFormedLabel" destination="Xv9-k9-QUN" id="ki6-hF-bDN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cs9-De-4ej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="TFN-mU-TLp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="936" y="46"/>
+            <point key="canvasLocation" x="934.78260869565224" y="45.535714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NGw-Tf-1NM">

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CBDArtistsTableViewController : UITableViewController
 
+//- (IBAction)unwindSegue:(UIStoryboardSegue *)segue;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,4 +10,17 @@
 
 @implementation CBDArtist
 
+- (instancetype)initWithName:(NSString *)name
+                  yearFormed:(int)yearFormed
+             details:(NSString *)details {
+    self = [super init];
+    if (self) {
+        _name = name;
+        _yearFormed = yearFormed;
+        _details = details;
+    }
+    
+    return self;
+}
+
 @end

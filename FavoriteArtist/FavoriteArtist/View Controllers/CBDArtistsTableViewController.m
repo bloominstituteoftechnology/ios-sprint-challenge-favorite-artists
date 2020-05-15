@@ -10,10 +10,14 @@
 
 @interface CBDArtistsTableViewController ()
 
+//MARK: - Private Properties
+
+
 @end
 
 @implementation CBDArtistsTableViewController
 
+// MARK: - View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -23,6 +27,15 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+-(void)updateViews {
+    
+}
+
+//MARK: - IBActions
+- (IBAction)addNewArtist:(id)sender {
+}
+
 
 #pragma mark - Table view data source
 
@@ -80,14 +93,17 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+// MARK: - Navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
+- (IBAction)unwindSegue:(UIStoryboardSegue *)segue {
+    [self updateViews];
+}
+
 
 @end

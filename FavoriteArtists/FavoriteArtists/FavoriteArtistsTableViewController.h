@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FavoriteArtistsTableViewController.h
 //  FavoriteArtists
 //
 //  Created by Karen Rodriguez on 5/15/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface FavoriteArtistsTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

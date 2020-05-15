@@ -10,13 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Artist : NSObject
+@interface LSIArtist : NSObject
 
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly, copy) NSString *biography;
 @property (nonatomic, readonly) int *yearFormed;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

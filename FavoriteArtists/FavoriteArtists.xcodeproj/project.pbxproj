@@ -17,6 +17,7 @@
 		9C13149E246EEF640019A139 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C13149D246EEF640019A139 /* ArtistDetailViewController.m */; };
 		9C1314A1246EEFBB0019A139 /* ArtistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1314A0246EEFBA0019A139 /* ArtistTableViewCell.m */; };
 		9C1314A4246EF3850019A139 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1314A3246EF3850019A139 /* Artist.m */; };
+		9C1314A7246EF6170019A139 /* Artist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1314A6246EF6170019A139 /* Artist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		9C1314A0246EEFBA0019A139 /* ArtistTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableViewCell.m; sourceTree = "<group>"; };
 		9C1314A2246EF3850019A139 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
 		9C1314A3246EF3850019A139 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		9C1314A5246EF6170019A139 /* Artist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		9C1314A6246EF6170019A139 /* Artist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				9C131491246EE8E40019A139 /* LSIFileHelper.h */,
+				9C1314A5246EF6170019A139 /* Artist+NSJSONSerialization.h */,
+				9C1314A6246EF6170019A139 /* Artist+NSJSONSerialization.m */,
 			);
 			name = "Helpers+Categories";
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			files = (
 				9C13149E246EEF640019A139 /* ArtistDetailViewController.m in Sources */,
 				9C13149B246EEF340019A139 /* FavoriteArtistsTableViewController.m in Sources */,
+				9C1314A7246EF6170019A139 /* Artist+NSJSONSerialization.m in Sources */,
 				9C1314A1246EEFBB0019A139 /* ArtistTableViewCell.m in Sources */,
 				9C13147A246EE8C00019A139 /* AppDelegate.m in Sources */,
 				9C13148B246EE8C40019A139 /* main.m in Sources */,

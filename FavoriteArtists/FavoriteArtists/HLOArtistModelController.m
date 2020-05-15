@@ -68,8 +68,17 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 
-    NSLog(@"JSON taken out of request: %@", json);
-    
+#warning caller won't know if the search was invalid.
+    // FIXME: Create custom errors.
+    if (json[@"artists"] == nil) {
+        completionBlock(nil);
+        return;
+    }
+
+    HLOArtist *newArtist = [[HLOArtist alloc] initFromDictionary:json];
+
+    [self.favoriteArtists addObject:newArtist];
+    completionBlock(nil);
 
     return;
 }

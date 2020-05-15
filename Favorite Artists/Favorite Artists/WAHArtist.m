@@ -23,7 +23,19 @@
 }
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    return nil;
+    NSString *artist = dictionary[@"strArtist"];
+    NSString *biography = dictionary[@"strBiographyEN"];
+    NSNumber *yearFormedNS = dictionary[@"intFormedYear"];
+
+    if ([yearFormedNS isKindOfClass:[NSNull class]]) { yearFormedNS = nil; }
+//    if ([artist isKindOfClass:[NSNull class]]) { artist = nil; }
+//    if ([biography isKindOfClass:[NSNull class]]) { biography = nil; }
+    
+    int yearFormed = yearFormedNS.intValue;
+
+    return [self initWithArtist:artist
+                      biography:biography
+                     yearFormed:yearFormed];
 }
 
 @end

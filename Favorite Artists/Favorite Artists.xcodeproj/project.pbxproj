@@ -15,6 +15,7 @@
 		13AEC781246EE6DA00C97C80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC780246EE6DA00C97C80 /* main.m */; };
 		13AEC789246EE8D400C97C80 /* WAHArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC788246EE8D400C97C80 /* WAHArtist.m */; };
 		13AEC795246EEE9000C97C80 /* WAHArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC794246EEE9000C97C80 /* WAHArtistController.m */; };
+		13AEC799246EF29E00C97C80 /* WAHArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AEC798246EF29E00C97C80 /* WAHArtistTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		13AEC788246EE8D400C97C80 /* WAHArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAHArtist.m; sourceTree = "<group>"; };
 		13AEC793246EEE9000C97C80 /* WAHArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAHArtistController.h; sourceTree = "<group>"; };
 		13AEC794246EEE9000C97C80 /* WAHArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAHArtistController.m; sourceTree = "<group>"; };
+		13AEC797246EF29E00C97C80 /* WAHArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAHArtistTableViewController.h; sourceTree = "<group>"; };
+		13AEC798246EF29E00C97C80 /* WAHArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAHArtistTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 		13AEC76D246EE6D900C97C80 /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				13AEC796246EF28700C97C80 /* New Group */,
 				13AEC76E246EE6D900C97C80 /* AppDelegate.h */,
 				13AEC76F246EE6D900C97C80 /* AppDelegate.m */,
 				13AEC771246EE6D900C97C80 /* SceneDelegate.h */,
@@ -79,6 +83,15 @@
 				13AEC780246EE6DA00C97C80 /* main.m */,
 			);
 			path = "Favorite Artists";
+			sourceTree = "<group>";
+		};
+		13AEC796246EF28700C97C80 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				13AEC797246EF29E00C97C80 /* WAHArtistTableViewController.h */,
+				13AEC798246EF29E00C97C80 /* WAHArtistTableViewController.m */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13AEC770246EE6D900C97C80 /* AppDelegate.m in Sources */,
+				13AEC799246EF29E00C97C80 /* WAHArtistTableViewController.m in Sources */,
 				13AEC789246EE8D400C97C80 /* WAHArtist.m in Sources */,
 				13AEC795246EEE9000C97C80 /* WAHArtistController.m in Sources */,
 				13AEC781246EE6DA00C97C80 /* main.m in Sources */,

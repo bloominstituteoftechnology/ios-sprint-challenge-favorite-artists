@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="p2q-bp-CGZ">
             <objects>
-                <tableViewController id="Pjz-3q-kqF" sceneMemberID="viewController">
+                <tableViewController id="Pjz-3q-kqF" customClass="WAHArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="E5b-7P-UXt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

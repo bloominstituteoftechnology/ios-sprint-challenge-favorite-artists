@@ -49,9 +49,13 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
             return;
         }
         
-        WAHArtist *artistResults = [[WAHArtist alloc] initWithDictionary:dictionary];
+        NSDictionary *artist = [[dictionary objectForKey:@"artists"] firstObject];
+        if (artist == nil) {
+            completionBlock(nil, [[NSError alloc] init]);
+        }
+    
+        WAHArtist *artistResults = [[WAHArtist alloc] initWithDictionary:artist];
         completionBlock(artistResults, nil);
-        
         
     }];
     [task resume];

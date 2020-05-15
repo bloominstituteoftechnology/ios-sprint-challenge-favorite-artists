@@ -80,7 +80,7 @@
 - (void)updateUI {
     if (self.artist) {
         self.artistNameLabel.text = self.artist.name;
-        self.artistYearLabel.text = [NSString stringWithFormat: @"Formed in %d", self.artist.yearFormed];
+        self.artistYearLabel.text = [NSString stringWithFormat: @"Formed in %d", self.artist.yearFormed.intValue];
         self.artistBioTextView.text = self.artist.biography;
     } else {
         self.artistNameLabel.text = @"No Results";

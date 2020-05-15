@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly, copy) NSString *biography;
-@property (nonatomic, readonly) int yearFormed;
+@property (nonatomic, readonly, nullable) NSNumber *yearFormed;
 
 @end
 

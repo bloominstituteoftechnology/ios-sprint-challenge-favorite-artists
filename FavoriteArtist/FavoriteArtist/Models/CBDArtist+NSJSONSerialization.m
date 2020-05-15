@@ -21,7 +21,7 @@
     
     int yearFormed = [intFormedYear intValue];
     
-    return nil;
+    return [self initWithStrArtist:strArtist yearFormed:yearFormed strBiographyEN:strBiographyEN];
 }
 
 - (NSDictionary *)toDictionary {

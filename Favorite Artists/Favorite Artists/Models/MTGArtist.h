@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, copy) NSString *biography;
 @property (nonatomic, readonly) double formedYear;
 
+- (instancetype)initWithArtist:(NSString *)artist
+                     biography:(NSString *)biography
+                    formedYear:(double)formedYear
 @end
 
 NS_ASSUME_NONNULL_END

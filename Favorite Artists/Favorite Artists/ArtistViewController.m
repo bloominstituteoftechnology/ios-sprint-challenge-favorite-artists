@@ -91,13 +91,13 @@
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     
-    if (self.artist == nil) {
+    if (self.artistSearch == nil) {
         return;
     }
     
-    NSData *data = [NSJSONSerialization dataWithJSONObject: [self.artist toDictionary] options:0 error:nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject: [self.artistSearch toDictionary] options:0 error:nil];
     NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
-    NSURL *url = [[directory URLByAppendingPathComponent:self.artist.artist] URLByAppendingPathExtension: @"json"];
+    NSURL *url = [[directory URLByAppendingPathComponent:self.artistSearch.artist] URLByAppendingPathExtension: @"json"];
     
     NSLog(@"DIRECTORY: %@", directory);
     NSLog(@"URL: %@", url);

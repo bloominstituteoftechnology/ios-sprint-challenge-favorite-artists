@@ -27,6 +27,15 @@
     self.savedArtists = [[NSMutableArray alloc] initWithArray:tempArtists];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+   [super viewWillAppear:animated];
+    
+    NSArray *tempArtists = [self.artistController fetchSavedArtists];
+    self.savedArtists = [[NSMutableArray alloc] initWithArray:tempArtists];
+    
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

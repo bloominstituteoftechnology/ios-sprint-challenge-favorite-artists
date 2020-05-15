@@ -84,17 +84,10 @@
 		92F7BF38246EEA25009A0A7A /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
-				92F7BF39246EEA25009A0A7A /* AppDelegate.h */,
-				92F7BF3A246EEA25009A0A7A /* AppDelegate.m */,
-				92F7BF3C246EEA25009A0A7A /* SceneDelegate.h */,
-				92F7BF3D246EEA25009A0A7A /* SceneDelegate.m */,
+				92F7BF60246EEA86009A0A7A /* Resources */,
+				92F7BF61246EEA9E009A0A7A /* Storyboards */,
 				92F7BF3F246EEA25009A0A7A /* ViewController.h */,
 				92F7BF40246EEA25009A0A7A /* ViewController.m */,
-				92F7BF42246EEA25009A0A7A /* Main.storyboard */,
-				92F7BF45246EEA28009A0A7A /* Assets.xcassets */,
-				92F7BF47246EEA29009A0A7A /* LaunchScreen.storyboard */,
-				92F7BF4A246EEA29009A0A7A /* Info.plist */,
-				92F7BF4B246EEA29009A0A7A /* main.m */,
 			);
 			path = "Favorite Artists";
 			sourceTree = "<group>";
@@ -106,6 +99,29 @@
 				92F7BF57246EEA29009A0A7A /* Info.plist */,
 			);
 			path = "Favorite ArtistsTests";
+			sourceTree = "<group>";
+		};
+		92F7BF60246EEA86009A0A7A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92F7BF39246EEA25009A0A7A /* AppDelegate.h */,
+				92F7BF3A246EEA25009A0A7A /* AppDelegate.m */,
+				92F7BF45246EEA28009A0A7A /* Assets.xcassets */,
+				92F7BF4A246EEA29009A0A7A /* Info.plist */,
+				92F7BF4B246EEA29009A0A7A /* main.m */,
+				92F7BF3C246EEA25009A0A7A /* SceneDelegate.h */,
+				92F7BF3D246EEA25009A0A7A /* SceneDelegate.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92F7BF61246EEA9E009A0A7A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				92F7BF47246EEA29009A0A7A /* LaunchScreen.storyboard */,
+				92F7BF42246EEA25009A0A7A /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,7 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Favorite Artists/Info.plist";
+				INFOPLIST_FILE = "Favorite Artists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Favorite Artists/Info.plist";
+				INFOPLIST_FILE = "Favorite Artists/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

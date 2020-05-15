@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fbe-Oi-GDe" kind="show" id="QE2-Su-qbO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -111,6 +114,7 @@
                         <outlet property="artistBioTextView" destination="XMP-4V-hL5" id="U4D-lR-9ap"/>
                         <outlet property="artistNameLabel" destination="VQE-9i-mbK" id="dhH-CE-2AY"/>
                         <outlet property="artistYearLabel" destination="uL4-WX-zsu" id="Iya-QK-Imo"/>
+                        <outlet property="saveButton" destination="gk8-s9-KZI" id="JL8-e0-FWQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgR-2U-5V3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,4 +140,7 @@
             <point key="canvasLocation" x="-194.20289855072465" y="112.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QE2-Su-qbO"/>
+    </inferredMetricsTieBreakers>
 </document>

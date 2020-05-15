@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class LSIArtistController;
+@class LSIArtist;
 
 @interface LSIArtistDetailViewController : UIViewController <UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 
 @property LSIArtistController *artistController;
+@property LSIArtist *artist;
 
 @end
 

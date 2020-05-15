@@ -93,6 +93,12 @@
     if ([segue.destinationViewController isKindOfClass:[LSIArtistDetailViewController class]]) {
         LSIArtistDetailViewController *addArtistVC = segue.destinationViewController;
         addArtistVC.artistController = self.artistController;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        if (indexPath) {
+            addArtistVC.artist = self.artistController.artists[indexPath.row];
+        }
+    
     }
 }
 

@@ -14,13 +14,13 @@
 @interface LSIArtistDetailViewController ()
 
 @property LSIAudioDBClient *audioDBClient;
-@property LSIArtist *artist;
 
 // MARK: - IBOutlets
 
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *artistYearLabel;
 @property (strong, nonatomic) IBOutlet UITextView *artistBioTextView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 - (void)setUp;
 - (void)setUpSearchbar;
@@ -57,7 +57,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUpSearchbar];
+    if (!self.artist) {
+       [self setUpSearchbar];
+    } else {
+        [self.saveButton setEnabled:false];
+        [self updateUI];
+        self.title = self.artist.name;
+    }
 }
 
 // MARK: - Private Methods

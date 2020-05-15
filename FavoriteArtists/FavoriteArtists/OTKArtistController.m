@@ -12,7 +12,22 @@
 
 static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
+@interface OTKArtistController ()
+
+@property (nonatomic) NSMutableArray *artists;
+
+@end
+
 @implementation OTKArtistController
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _artists = self.artists;
+    }
+
+    return self;
+}
 
 - (void)findArtist:(NSString *)artistName completion:(ArtistFetchCompletion)completion {
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
@@ -46,6 +61,10 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
     }];
 
     [task resume];
+}
+
+- (void)saveArtist:(OTKArtist *)artist {
+    [self.artists addObject:artist];
 }
 
 @end

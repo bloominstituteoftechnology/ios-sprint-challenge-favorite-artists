@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OTKArtistController : NSObject
 
 - (void)findArtist:(NSString *)artistName completion:(ArtistFetchCompletion)completion;
-- (void)addArtist:(OTKArtist *)artist;
+- (void)saveArtist:(OTKArtist *)artist;
 
 @end
 

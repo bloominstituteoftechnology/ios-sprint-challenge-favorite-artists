@@ -13,6 +13,8 @@
 		2C9004D8246EEC4A00926D4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9004D7246EEC4A00926D4F /* Assets.xcassets */; };
 		2C9004DB246EEC4A00926D4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9004D9246EEC4A00926D4F /* LaunchScreen.storyboard */; };
 		2C9004DE246EEC4A00926D4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9004DD246EEC4A00926D4F /* main.m */; };
+		2C9004EC246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9004EB246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.m */; };
+		2C9004EF246EF10E00926D4F /* OTKSearchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9004EE246EF10E00926D4F /* OTKSearchArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		2C9004DA246EEC4A00926D4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9004DC246EEC4A00926D4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9004DD246EEC4A00926D4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C9004EA246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTKFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		2C9004EB246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTKFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		2C9004ED246EF10E00926D4F /* OTKSearchArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTKSearchArtistViewController.h; sourceTree = "<group>"; };
+		2C9004EE246EF10E00926D4F /* OTKSearchArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTKSearchArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,10 @@
 		2C9004E5246EECBB00926D4F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C9004EA246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.h */,
+				2C9004EB246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.m */,
+				2C9004ED246EF10E00926D4F /* OTKSearchArtistViewController.h */,
+				2C9004EE246EF10E00926D4F /* OTKSearchArtistViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -145,6 +155,7 @@
 		2C9004C0246EEC4800926D4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = OTK;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Tobi Kuyoro";
 				TargetAttributes = {
@@ -190,7 +201,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9004CD246EEC4800926D4F /* AppDelegate.m in Sources */,
+				2C9004EC246EF0B400926D4F /* OTKFavoriteArtistsTableViewController.m in Sources */,
 				2C9004DE246EEC4A00926D4F /* main.m in Sources */,
+				2C9004EF246EF10E00926D4F /* OTKSearchArtistViewController.m in Sources */,
 				2C9004D0246EEC4800926D4F /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

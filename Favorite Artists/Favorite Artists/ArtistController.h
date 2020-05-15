@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, copy) NSMutableArray *artists;
 
 - (void)add:(MTGArtist *)artist;
+- (void)delete:(long)atIndex;
 
 @end
 

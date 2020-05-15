@@ -19,6 +19,10 @@
     return self;
 }
 
+// MARK: - CRUD
+
+// Create
+
 - (void)add:(MTGArtist *)artist {
     @try  {
        [self.artists addObject:artist];
@@ -27,7 +31,24 @@
        NSLog(@"Reason: %@ ",exception.reason);
     }
 
-    NSLog(@"Artists count: %lu", (unsigned long)self.artists.count);
+//    NSLog(@"Artists count: %lu", (unsigned long)self.artists.count);
 }
+
+// Read
+
+// Update
+
+// Delete
+- (void)delete:(long)atIndex {
+    @try  {
+       [self.artists removeObjectAtIndex:atIndex];
+    } @catch (NSException *exception) {
+       NSLog(@"%@ ",exception.name);
+       NSLog(@"Reason: %@ ",exception.reason);
+    }
+
+//    NSLog(@"Artists count: %lu", (unsigned long)self.artists.count);
+}
+
 
 @end

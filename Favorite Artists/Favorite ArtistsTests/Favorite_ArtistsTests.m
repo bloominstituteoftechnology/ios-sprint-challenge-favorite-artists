@@ -19,31 +19,18 @@
 
 - (void)testMacklemore {
 
-    // Load test object from file.
-    NSData *artistData = loadFile(@"Macklemore.json", [MTGArtist class]);
-    NSLog(@"artistData: %@", artistData);
-
-    // Pass through JSON Serializer
-    NSError *jsonError = nil;
-    NSDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:artistData
-                                                                     options:0
-                                                                       error:&jsonError];
-    if (jsonError) {
-        NSLog(@"JSON Parsing error: %@", jsonError);
-    }
-
-    NSLog(@"JSON: %@", artistDictionary);
-
-    // Parse the dictionary and turn it into a CurrentWeather object
-
-    // Pass it through MTGArtist initializer
-    MTGArtist *artist = [MTGArtist initWithDictionary:artistDictionary];
+    NSString *filename = @"Macklemore.json";
+    MTGArtist *artist = [self loadArtist:filename];
 
     NSLog(@"artist: %@", artist);
 
     XCTAssertEqualObjects(@"Macklemore", artist.artist);
-// FIXME: Starts with?
-//    XCTAssertEqualObjects(@"Ben Haggerty (born June 19, 1983)", artist.biography);
+
+    // Starts with test...
+    NSString *strToCompare = @"Ben Haggerty (born June 19, 1983)";
+    NSString *strToTest = [artist.biography substringToIndex:[strToCompare length]];
+    XCTAssertEqualObjects(strToCompare, strToTest);
+
     XCTAssertEqual(1999, artist.formedYear);
 }
 
@@ -67,7 +54,7 @@
     // Parse the dictionary and turn it into a CurrentWeather object
 
     // Pass it through MTGArtist initializer
-    MTGArtist *artist = [MTGArtist initWithDictionary:artistDictionary];
+    MTGArtist *artist = [[MTGArtist alloc] initWithDictionary:artistDictionary];
 
     return artist;
 }
@@ -79,8 +66,12 @@
     NSLog(@"artist: %@", artist);
 
     XCTAssertEqualObjects(@"John Williams", artist.artist);
-// FIXME: Starts with?
-//    XCTAssertEqualObjects(@"John Towner Williams (born February 8, 1932) is an American composer", artist.biography);
+
+    // Starts with test...
+    NSString *strToCompare = @"John Towner Williams (born February 8, 1932) is an American composer";
+    NSString *strToTest = [artist.biography substringToIndex:[strToCompare length]];
+    XCTAssertEqualObjects(strToCompare, strToTest);
+
     XCTAssertEqual(-1, artist.formedYear);
 }
 
@@ -94,8 +85,12 @@
     NSLog(@"artist: %@", artist);
 
     XCTAssertEqualObjects(@"Pink Floyd", artist.artist);
-// FIXME: Starts with?
-//    XCTAssertEqualObjects(@"Pink Floyd were an English rock band that achieved international success with their progressive and psychedelic rock music marked by the use of philosophical lyrics", artist.biography);
+
+    // Starts with test...
+    NSString *strToCompare = @"Pink Floyd were an English rock band that achieved international success with their progressive and psychedelic rock music marked by the use of philosophical lyrics";
+    NSString *strToTest = [artist.biography substringToIndex:[strToCompare length]];
+    XCTAssertEqualObjects(strToCompare, strToTest);
+
     XCTAssertEqual(1965, artist.formedYear);
 }
 
@@ -107,8 +102,12 @@
     NSLog(@"artist: %@", artist);
 
     XCTAssertEqualObjects(@"Zero 7", artist.artist);
-// FIXME: Starts with?
-//    XCTAssertEqualObjects(@"Zero 7 is a British musical duo consisting of Henry Binns and Sam Hardaker.", artist.biography);
+
+    // Starts with test...
+    NSString *strToCompare = @"Zero 7 is a British musical duo consisting of Henry Binns and Sam Hardaker.";
+    NSString *strToTest = [artist.biography substringToIndex:[strToCompare length]];
+    XCTAssertEqualObjects(strToCompare, strToTest);
+
     XCTAssertEqual(1997, artist.formedYear);
 }
 @end

@@ -19,7 +19,7 @@
     if ([dictionary[@"artists"] isKindOfClass:[NSNull class]]) { return nil; }
 
     NSArray  *artistsArray = dictionary[@"artists"];
-    // FIXME: What about 0 objects?
+
     NSDictionary *artistDictionary = artistsArray[0];
 
     NSString *artist     = artistDictionary[@"strArtist"];
@@ -39,13 +39,33 @@
             ];
 }
 
+/// Call this version when using persistent store.
+- (instancetype)initWithDictionaryLite:(NSDictionary *)dictionary {
+
+    NSString *artist     = dictionary[@"strArtist"];
+    NSString *biography  = dictionary[@"strBiographyEN"];
+    NSNumber *formedYear = dictionary[@"intFormedYear"];
+
+    if ([formedYear isKindOfClass:[NSNull class]]) { formedYear = nil; }
+
+    // The required elements
+    if (formedYear == nil) {
+        formedYear = [NSNumber numberWithInt:-1];
+    }
+
+    return [[MTGArtist alloc] initWithArtist:artist
+                                   biography:biography
+                                  formedYear:formedYear.intValue
+            ];
+}
+
 - (NSDictionary *)toDictionary {
-//    NSDictionary *codingKeys = @{
-//        @"artist": @"strArtist",
-//        @"biography": @"strBiographyEN",
-//        @"formedYear": @"intFormedYear",
-//    };
-    NSDictionary *codingKeys;
+    NSDictionary *codingKeys = @{
+        @"artist": @"strArtist",
+        @"biography": @"strBiographyEN",
+        @"formedYear": @"intFormedYear",
+    };
+//    NSDictionary *codingKeys;
 
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
 

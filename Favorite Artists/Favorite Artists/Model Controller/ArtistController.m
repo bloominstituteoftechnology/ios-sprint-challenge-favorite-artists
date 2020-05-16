@@ -43,15 +43,19 @@ static NSString *artistsKey = @"Artists";
 
 - (void)add:(MTGArtist *)artist {
     @try  {
-       [self.artists addObject:artist];
+        [self.artists addObject:artist];
+// FIXME:
+// Favorite Artists[37551:3235177] -[__NSSingleObjectArrayI addObject:]: unrecognized selector sent to instance 0x600002a7c230
+// Favorite Artists[37551:3235177] NSInvalidArgumentException
+// Favorite Artists[37551:3235177] Reason: -[__NSSingleObjectArrayI addObject:]: unrecognized selector sent to instance 0x600002a7c230
     } @catch (NSException *exception) {
-       NSLog(@"%@ ",exception.name);
-       NSLog(@"Reason: %@ ",exception.reason);
+        NSLog(@"%@ ",exception.name);
+        NSLog(@"Reason: %@ ",exception.reason);
     }
 
     NSLog(@"Artists count: %lu", (unsigned long)self.artists.count);
 
-//    [self saveToPersistentStore];
+    [self saveToPersistentStore];
 }
 
 // Read
@@ -85,8 +89,6 @@ static NSString *artistsKey = @"Artists";
 
 - (NSMutableArray<MTGArtist *> *)loadFromPersistentStore {
 
-    return nil; // FIXME:
-
     NSDictionary *store = [[NSDictionary alloc] initWithContentsOfURL:[self persistentStoreURL]];
 
     if (store != nil) {
@@ -94,7 +96,7 @@ static NSString *artistsKey = @"Artists";
         NSMutableArray *artists = [[NSMutableArray alloc] init];
 
         for (NSDictionary *artistDict in artistDicts) {
-            [artists addObject:[[MTGArtist alloc] initWithDictionary:artistDict]];
+            [artists addObject:[[MTGArtist alloc] initWithDictionaryLite:artistDict]];
         }
         return [artists copy];
     } else {

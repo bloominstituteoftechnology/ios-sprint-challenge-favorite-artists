@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MTGArtist (NSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionaryLite:(NSDictionary *)dictionary;
 
 - (NSDictionary *)toDictionary;
 

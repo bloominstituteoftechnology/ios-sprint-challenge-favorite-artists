@@ -68,7 +68,7 @@
 // MARK: - IBActions
 
 - (IBAction)saveButton:(UIBarButtonItem *)sender {
-    // TODO: Save artist
+    // Add the artist to the our list
     [self.artistController add:self.artist];
 
     [self.navigationController popViewControllerAnimated:YES];

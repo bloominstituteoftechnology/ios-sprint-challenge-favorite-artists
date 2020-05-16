@@ -29,7 +29,6 @@
     return _fetcher;
 }
 
-
 // MARK: - View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,9 +43,7 @@
 - (IBAction)addNewArtist:(id)sender {
 }
 
-
-#pragma mark - Table view data source
-
+// MARK: - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -71,7 +68,6 @@
 }
 
 // MARK: - Navigation
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"AddArtistSegue"]) {
         CBDDetailViewController *addArtistVC = [segue destinationViewController];

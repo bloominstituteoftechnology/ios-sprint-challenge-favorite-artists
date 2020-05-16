@@ -17,8 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, nullable) CBDArtistFetcher *fetcher;
 
-//- (IBAction)unwindSegue:(UIStoryboardSegue *)segue;
-
 @end
 
 NS_ASSUME_NONNULL_END

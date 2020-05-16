@@ -13,7 +13,6 @@
 @implementation CBDArtistFetcher
 
 static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
-// https://theaudiodb.com/api/v1/json/[key]/[search.php?s={artist name}]
 
 - (instancetype)initWithArtists:(NSMutableArray *)artists {
     self = [super init];
@@ -36,8 +35,6 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
         return;
     }
     
-    //NSLog(@"URL: %@", url);
-    
     NSURLSessionTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                               
         if (error) {
@@ -59,10 +56,8 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
             return;
         }
         
-        //NSLog(@"dictionary");
         CBDArtist *artist = [[CBDArtist alloc] initWithDictionary:dictionary];
         if (artist) {
-            //[self.artists addObject:artist];
             completionBlock(artist, nil);
             return;
         }
@@ -86,12 +81,8 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
     for (int i = 0; i < self.artists.count; i++) {
         [dictionary setValue:[self.artists[i] toDictionary] forKey:self.artists[i].strArtist];
-        //dictionary[self.artists[i].strArtist] = [self.artists[i] toDictionary];
     }
-    //[artistDictionary setValue:self.artists forKey:@"artists"];
     [dictionary writeToFile:fileName atomically:YES];
-
-    NSLog(@"File: %@", fileName);
 }
 
 - (void)loadFromDisk {
@@ -106,8 +97,6 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
         CBDArtist *artist = [[CBDArtist alloc] initWithLocalDictionary:artistEntry];
         [self.artists addObject:artist];
     }
-    
-    NSLog(@"Dictionary: %@", self.artists);
 }
 
 @end

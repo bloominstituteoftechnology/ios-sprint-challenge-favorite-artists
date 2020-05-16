@@ -67,7 +67,6 @@
     
 }
 
-
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSString *searchItem = searchBar.text;
     [self.fetcher fetchArtistWithName:searchItem completionBlock:^(CBDArtist * _Nullable artist, NSError * _Nullable error) {
@@ -81,12 +80,5 @@
         });
     }];
 }
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([[segue identifier] isEqualToString:@"UnwindToArtistsTVC"]) {
-//        CBDArtistsTableViewController *artistsTVC = [segue destinationViewController];
-//        artistsTVC.fetcher = self.fetcher;
-//    }
-//}
 
 @end

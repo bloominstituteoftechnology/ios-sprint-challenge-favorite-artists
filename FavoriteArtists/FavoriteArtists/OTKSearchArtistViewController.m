@@ -74,7 +74,8 @@
 }
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
-
+    [self.artistController saveArtist:self.artist];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

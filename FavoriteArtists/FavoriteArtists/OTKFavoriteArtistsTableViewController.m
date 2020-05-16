@@ -23,6 +23,11 @@
     [super viewDidLoad];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
@@ -59,7 +64,7 @@
     if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
         OTKSearchArtistViewController *destinationVC = segue.destinationViewController;
         destinationVC.artistController = self.artistController;
-    } else if ([segue.identifier isEqualToString:@"ShowArtistDetailSegue"]) {
+    } else if ([segue.identifier isEqualToString:@"ArtistDetailSegue"]) {
         OTKSearchArtistViewController *destinationVC = segue.destinationViewController;
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         OTKArtist *artist = self.artistController.artists[indexPath.row];

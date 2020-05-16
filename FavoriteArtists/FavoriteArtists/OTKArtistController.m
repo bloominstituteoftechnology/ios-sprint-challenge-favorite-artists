@@ -12,12 +12,19 @@
 
 static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
+@interface OTKArtistController ()
+
+@property (nonatomic) NSMutableArray *privateArtists;
+
+@end
+
 @implementation OTKArtistController
 
-- (instancetype)initWithArray:(NSMutableArray *)artists {
+- (instancetype)init {
     self = [super init];
     if (self) {
-        _artists = artists;
+        _privateArtists = [[NSMutableArray alloc] init];
+        [self fetchArtists];
     }
 
     return self;
@@ -57,51 +64,51 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
     [task resume];
 }
 
-- (void)saveArtist:(OTKArtist *)artist {
-    [self.artists addObject:artist];
-    [self saveFavoriteArtists];
+- (NSArray<OTKArtist *> *)artists {
+    return [_privateArtists copy];
 }
 
-- (NSURL *)persistentFileURL {
+- (void)saveArtist:(OTKArtist *)artist {
+    [self.privateArtists addObject:artist];
+
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *documentDir = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
-    NSURL *artistsURL = [documentDir URLByAppendingPathComponent:@"artistsURL"];
-
-    return artistsURL;
-}
-
-- (void)saveFavoriteArtists {
-
+    NSURL *artistsURL = [documentDir URLByAppendingPathComponent:@"artistsURL.json"];
     NSMutableArray *favorites = [[NSMutableArray alloc] init];
 
-    for (int i = 0; i < self.artists.count; i++) {
-        OTKArtist *artist = self.artists[i];
+    for(OTKArtist *artist in self.privateArtists) {
         [favorites addObject:[artist toDictionary]];
     }
 
-    NSData *data = [NSJSONSerialization dataWithJSONObject:favorites options:0 error:nil];
-    [data writeToURL:[self persistentFileURL] atomically:YES];
-}
-
-- (NSArray *)fetchFavoriteArtists {
-    NSData *data = [[NSData alloc] initWithContentsOfURL:[self persistentFileURL]];
-
-    NSError *errorWithJSON;
-    NSArray *artistsArrayData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&errorWithJSON];
-    NSMutableArray *artists = [[NSMutableArray alloc] init];
+    NSError *errorWithJSON = nil;
+    NSData* json = [NSJSONSerialization dataWithJSONObject:favorites options:0 error:&errorWithJSON];
 
     if (errorWithJSON) {
-        NSLog(@"Error fetching artists: %@", errorWithJSON);
-        return @[];
+        NSLog(@"Error saving artist: %@", errorWithJSON);
+        return;
     }
 
-    for (int i = 0; i < artistsArrayData.count; i++) {
-        NSDictionary *dictionary = artistsArrayData[i];
+    [json writeToURL:artistsURL atomically:YES];
+}
+
+- (void)fetchArtists {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *documentDir = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSURL *artistsURL = [documentDir URLByAppendingPathComponent:@"artistsURL.json"];
+    NSData *favoriteArtists = [NSData dataWithContentsOfURL:artistsURL];
+
+    NSError *errorWithJSON = nil;
+    NSArray *favorites = [NSJSONSerialization JSONObjectWithData:favoriteArtists options:0 error:&errorWithJSON];
+
+    if (errorWithJSON) {
+        NSLog(@"Error fetching artist: %@", errorWithJSON);
+        return;
+    }
+
+    for (NSDictionary *dictionary in favorites) {
         OTKArtist *artist = [[OTKArtist alloc] initWithDictionary:dictionary];
-        [artists addObject:artist];
+        [self.privateArtists addObject:artist];
     }
-
-    return artists;
 }
 
 @end

@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OTKSearchArtistViewController : UIViewController <UISearchBarDelegate>
+@interface OTKSearchArtistViewController : UIViewController
 
 @property (nonatomic) OTKArtistController *artistController;
 @property (nonatomic) OTKArtist *artist;

@@ -64,12 +64,14 @@
     if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
         OTKSearchArtistViewController *destinationVC = segue.destinationViewController;
         destinationVC.artistController = self.artistController;
+        destinationVC.detailView = FindArtist;
     } else if ([segue.identifier isEqualToString:@"ArtistDetailSegue"]) {
         OTKSearchArtistViewController *destinationVC = segue.destinationViewController;
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         OTKArtist *artist = self.artistController.artists[indexPath.row];
         destinationVC.artist = artist;
         destinationVC.artistController = self.artistController;
+        destinationVC.detailView = ShowArtist;
     }
 }
 

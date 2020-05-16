@@ -129,7 +129,7 @@
                     <connections>
                         <outlet property="artistBioTextView" destination="Jv9-gR-BgY" id="rL1-Q3-Ru1"/>
                         <outlet property="artistNameLabel" destination="qv6-wU-F6K" id="6cO-yo-J7g"/>
-                        <outlet property="saveButton" destination="bKT-Fl-pVP" id="PMZ-5X-PQ1"/>
+                        <outlet property="saveButton" destination="bKT-Fl-pVP" id="3gD-7C-3OE"/>
                         <outlet property="searchBar" destination="EzG-Q7-aOK" id="TA5-Su-9tI"/>
                         <outlet property="yearFormedLabel" destination="E6m-nN-opc" id="LU2-zh-CiE"/>
                     </connections>

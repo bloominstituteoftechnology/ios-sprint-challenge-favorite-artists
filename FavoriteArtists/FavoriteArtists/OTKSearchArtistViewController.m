@@ -25,6 +25,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    switch (self.detailView) {
+        case FindArtist:
+            [self.saveButton setEnabled:YES];
+            self.saveButton.tintColor = [UIColor blackColor];
+            break;
+        case ShowArtist:
+            [self.saveButton setEnabled:NO];
+            self.saveButton.tintColor = [UIColor clearColor];
+            break;
+    }
+
     [self updateViews];
     self.searchBar.delegate = self;
 }
@@ -38,8 +50,6 @@
         [self.artistNameLabel setHidden:YES];
         [self.yearFormedLabel setHidden:YES];
         [self.artistBioTextView setHidden:YES];
-        [self.saveButton setEnabled:NO];
-        self.saveButton.tintColor = [UIColor clearColor];
     } else {
         self.artistNameLabel.text = self.artist.name;
         self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %i", self.artist.yearFormed];
@@ -50,8 +60,6 @@
         [self.artistNameLabel setHidden:NO];
         [self.yearFormedLabel setHidden:NO];
         [self.artistBioTextView setHidden:NO];
-        [self.saveButton setEnabled:YES];
-        self.saveButton.tintColor = [UIColor blackColor];
     }
 }
 
@@ -74,8 +82,10 @@
 }
 
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
-    [self.artistController saveArtist:self.artist];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if (self.artist) {
+        [self.artistController saveArtist:self.artist];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 @end

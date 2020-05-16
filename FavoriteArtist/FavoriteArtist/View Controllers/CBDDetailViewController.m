@@ -31,9 +31,8 @@
 // MARK: - View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.favoriteArtistSearchBar = [UISearchBar init];
+
     self.favoriteArtistSearchBar.delegate = self;
-    // Do any additional setup after loading the view.
     self.navigationItem.rightBarButtonItem.title = @"Save Artist";
     [self updateViews];
 }
@@ -43,8 +42,11 @@
         self.artistNameLabel.text = self.artist.strArtist;
         self.artistDetailsTextView.text = self.artist.strBiographyEN;
         self.title = self.artist.strArtist;
-        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %d", self.artist.yearFormed];
-        //[self.favoriteArtistSearchBar ] = YES;
+        if (self.artist.yearFormed == 0) {
+            self.yearFormedLabel.text = @"Formed in: N/A";
+        } else {
+            self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in: %d", self.artist.yearFormed];
+        }
     } else {
         self.artistNameLabel.text = @"";
         self.artistDetailsTextView.text = @"";
@@ -73,7 +75,6 @@
             NSLog(@"Error fetching artist");
             return;
         }
-        NSLog(@"Artist: %@", artist.strArtist);
         self.artist = artist;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self updateViews];

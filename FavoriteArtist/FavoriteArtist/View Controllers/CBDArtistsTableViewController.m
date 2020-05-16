@@ -33,6 +33,7 @@
 // MARK: - View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.fetcher loadFromDisk];
 }
 
 -(void)updateViews {
@@ -58,7 +59,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     CBDArtist *artist = self.fetcher.artists[indexPath.row];
     cell.textLabel.text = artist.strArtist;
-    NSString *detail = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+    NSString *detail;
+    if (artist.yearFormed == 0) {
+        detail = @"Formed in: N/A";
+    } else {
+        detail = [NSString stringWithFormat:@"Formed in: %d", artist.yearFormed];
+    }
     cell.detailTextLabel.text = detail;
 
     return cell;

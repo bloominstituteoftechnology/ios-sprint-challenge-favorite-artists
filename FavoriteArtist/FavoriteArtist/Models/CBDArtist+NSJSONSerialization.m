@@ -20,7 +20,12 @@
         NSString *intFormedYear = artist[@"intFormedYear"];
         NSString *strBiographyEN = artist[@"strBiographyEN"];
         
-        int yearFormed = [intFormedYear intValue];
+        int yearFormed;
+        if ([intFormedYear isKindOfClass:[NSNull class]]) {
+            yearFormed = 0;
+        } else {
+            yearFormed = [intFormedYear intValue];
+        }
         
         return [self initWithStrArtist:strArtist yearFormed:yearFormed strBiographyEN:strBiographyEN];
     } else {
@@ -28,10 +33,24 @@
     }
 }
 
+- (instancetype)initWithLocalDictionary:(NSDictionary *)dictionary {
+    NSString *strArtist = dictionary[@"artist"];
+    NSString *intFormedYear = dictionary[@"yearFormed"];
+    NSString *strBiographyEN = dictionary[@"biography"];
+    
+    int yearFormed = [intFormedYear intValue];
+    
+    return [self initWithStrArtist:strArtist yearFormed:yearFormed strBiographyEN:strBiographyEN];
+}
+
 - (NSDictionary *)toDictionary {
-    //NSDictionary *dict = [[NSMutableDictionary alloc] init];
-    //[dict setValue:self.artists forKey:@"artists"];
-    return [NSDictionary new];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    [dictionary setValue:self.strArtist forKey:@"artist"];
+    [dictionary setValue:self.strBiographyEN forKey:@"biography"];
+    NSNumber *year = [NSNumber numberWithInt:self.yearFormed];
+    [dictionary setValue:year forKey:@"yearFormed"];
+    NSDictionary *artistDictionary = dictionary;
+    return artistDictionary;
 }
 
 @end

@@ -25,7 +25,6 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
 
 - (void)fetchArtistWithName:(NSString *)name
             completionBlock:(CBDArtistCompletion)completionBlock {
-    NSLog(@"Beginning Fetch");
     
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
@@ -37,7 +36,7 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
         return;
     }
     
-    NSLog(@"URL: %@", url);
+    //NSLog(@"URL: %@", url);
     
     NSURLSessionTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                               
@@ -60,7 +59,7 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
             return;
         }
         
-        NSLog(@"dictionary");
+        //NSLog(@"dictionary");
         CBDArtist *artist = [[CBDArtist alloc] initWithDictionary:dictionary];
         if (artist) {
             //[self.artists addObject:artist];
@@ -84,10 +83,31 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
     NSString *documentsDirectory = [urls objectAtIndex:0];
     NSString *fileName = [documentsDirectory stringByAppendingPathComponent:@"artists.txt"];
 
-    NSMutableDictionary *artistDictionary = [[NSMutableDictionary alloc] init];
-    [artistDictionary setValue:self.artists forKey:@"artists"];
-    [artistDictionary writeToFile:fileName atomically:YES];
-    NSLog(@"File Directory: %@", fileName);
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    for (int i = 0; i < self.artists.count; i++) {
+        [dictionary setValue:[self.artists[i] toDictionary] forKey:self.artists[i].strArtist];
+        //dictionary[self.artists[i].strArtist] = [self.artists[i] toDictionary];
+    }
+    //[artistDictionary setValue:self.artists forKey:@"artists"];
+    [dictionary writeToFile:fileName atomically:YES];
+
+    NSLog(@"File: %@", fileName);
+}
+
+- (void)loadFromDisk {
+    NSArray *urls = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [urls objectAtIndex:0];
+    NSString *fileName = [documentsDirectory stringByAppendingPathComponent:@"artists.txt"];
+    
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:fileName];
+    
+    for (id key in dictionary) {
+        NSDictionary *artistEntry = dictionary[key];
+        CBDArtist *artist = [[CBDArtist alloc] initWithLocalDictionary:artistEntry];
+        [self.artists addObject:artist];
+    }
+    
+    NSLog(@"Dictionary: %@", self.artists);
 }
 
 @end

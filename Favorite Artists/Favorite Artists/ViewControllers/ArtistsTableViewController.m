@@ -10,6 +10,7 @@
 #import "ArtistController.h"
 #import "MTGArtist.h"
 #import "AddViewController.h"
+#import "ViewViewController.h"
 
 @interface ArtistsTableViewController ()
 
@@ -64,7 +65,8 @@
         // Delete the row from the data source
         [self.artistController delete:indexPath.row];
 
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        // Remove boiler plate that breaks when you add persistance.
+        //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
@@ -78,6 +80,15 @@
     if ([segue.destinationViewController isKindOfClass:[AddViewController class]]) {
         AddViewController *addVC = segue.destinationViewController;
         addVC.artistController = self.artistController;
+    }
+
+    if ([segue.destinationViewController isKindOfClass:[ViewViewController class]]) {
+        ViewViewController *viewVC = segue.destinationViewController;
+
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        if (indexPath) {
+            viewVC.artist = self.artistController.artists[indexPath.row];
+        }
     }
 }
 

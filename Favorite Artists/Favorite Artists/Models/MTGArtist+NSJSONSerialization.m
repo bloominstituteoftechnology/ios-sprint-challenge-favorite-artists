@@ -12,7 +12,7 @@
 
 @implementation MTGArtist (NSJSONSerialization)
 
-+ (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
 
     // No result is returned as: {"artists":null}
     // Test for that here.
@@ -39,8 +39,24 @@
             ];
 }
 
-+ (NSDictionary *)toDictionary {
-    return nil;
+- (NSDictionary *)toDictionary {
+//    NSDictionary *codingKeys = @{
+//        @"artist": @"strArtist",
+//        @"biography": @"strBiographyEN",
+//        @"formedYear": @"intFormedYear",
+//    };
+    NSDictionary *codingKeys;
+
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+
+    for (NSString *codingKey in [codingKeys keyEnumerator]) {
+
+        NSString *key = [codingKeys objectForKey:codingKey];
+        id value = [self valueForKey:codingKey];
+        [dictionary setValue:value forKey:key];
+    }
+
+    return [dictionary copy];
 }
 
 @end

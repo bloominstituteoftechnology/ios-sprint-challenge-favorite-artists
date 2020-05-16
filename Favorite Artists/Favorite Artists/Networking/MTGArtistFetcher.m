@@ -53,7 +53,8 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
             return;
         }
 
-        MTGArtist *artist = [MTGArtist initWithDictionary:dictionary];
+        MTGArtist *artist = [[MTGArtist alloc] initWithDictionary:dictionary];
+
         completionBlock(artist, nil);
     }];
 

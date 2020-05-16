@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="bGz-T6-gx3" kind="show" id="vjH-5u-Pbt"/>
+                                    <segue destination="bGz-T6-gx3" kind="show" identifier="ViewSegue" id="vjH-5u-Pbt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="OBW-5c-zyA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fwt-5m-nIX">
                             <connections>
-                                <segue destination="tVQ-V7-QV5" kind="show" id="HWU-s5-uX7"/>
+                                <segue destination="tVQ-V7-QV5" kind="show" identifier="AddSegue" id="HWU-s5-uX7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -70,19 +70,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t49-Pc-2TU">
-                                <rect key="frame" x="20" y="160" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="160" width="374" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxp-5h-2Qw">
-                                <rect key="frame" x="20" y="201" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="221" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sL5-aQ-TtX">
-                                <rect key="frame" x="20" y="242" width="374" height="600"/>
+                                <rect key="frame" x="20" y="274.5" width="374" height="567.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -106,6 +106,11 @@
                         <viewLayoutGuide key="safeArea" id="IMK-IO-4lQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Artist Name" id="rmH-aF-75A"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="t49-Pc-2TU" id="SZ8-LX-jyW"/>
+                        <outlet property="biographyTextView" destination="sL5-aQ-TtX" id="KKI-gy-ZrF"/>
+                        <outlet property="yearLabel" destination="dxp-5h-2Qw" id="wuH-ZY-0Eu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBf-PH-Yhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

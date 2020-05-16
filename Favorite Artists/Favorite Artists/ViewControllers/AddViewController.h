@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property ArtistController *artistController;
 @property MTGArtist *artist;
+@property BOOL foundArtist;
 
 @end
 

@@ -177,6 +177,7 @@
                     <connections>
                         <outlet property="artistLabel" destination="yIT-Ui-RnO" id="Wo9-b0-APE"/>
                         <outlet property="biographyTextView" destination="Hh4-ly-ZOK" id="sat-zK-J4s"/>
+                        <outlet property="saveButtonItem" destination="Rx2-xG-2rd" id="Dko-of-1Zz"/>
                         <outlet property="searchBar" destination="fIG-SF-oDg" id="ahH-FW-cKx"/>
                         <outlet property="yearLabel" destination="hBA-El-hMx" id="tP6-15-qsa"/>
                     </connections>

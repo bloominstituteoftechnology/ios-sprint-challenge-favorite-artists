@@ -67,7 +67,7 @@ static NSString *artistsKey = @"Artists";
        NSLog(@"Reason: %@ ",exception.reason);
     }
 
-    [self saveToPersistentStore];
+//    [self saveToPersistentStore];
 
 //    NSLog(@"Artists count: %lu", (unsigned long)self.artists.count);
 }
@@ -86,7 +86,7 @@ static NSString *artistsKey = @"Artists";
 - (NSMutableArray<MTGArtist *> *)loadFromPersistentStore {
 
     return nil; // FIXME:
-    
+
     NSDictionary *store = [[NSDictionary alloc] initWithContentsOfURL:[self persistentStoreURL]];
 
     if (store != nil) {

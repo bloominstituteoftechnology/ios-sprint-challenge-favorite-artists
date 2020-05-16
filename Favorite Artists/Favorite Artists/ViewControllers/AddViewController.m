@@ -22,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButtonItem;
 
 @end
 
@@ -35,6 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.foundArtist = true;
     self.searchBar.delegate = self;
 
     [self updateViews];
@@ -43,9 +45,14 @@
 - (void)updateViews {
 
     if (_artist == nil) {
-        _artistLabel.text = @"";
+        if (_foundArtist == false) {
+            _artistLabel.text = @"Artist Not Found";
+        } else {
+            _artistLabel.text = @"";
+        }
         _yearLabel.text = @"";
         _biographyTextView.text = @"";
+        [_saveButtonItem setEnabled:false];
     } else {
         _artistLabel.text = _artist.artist;
         if (_artist.formedYear == -1) {
@@ -54,6 +61,7 @@
             _yearLabel.text = [NSString stringWithFormat:@"Formed in %0d", _artist.formedYear];
         }
         _biographyTextView.text = _artist.biography;
+        [_saveButtonItem setEnabled:true];
     }
 }
 
@@ -92,6 +100,12 @@
         NSLog(@"%@", foundArtist);
 
         dispatch_async(dispatch_get_main_queue(), ^{
+            if (foundArtist == nil) {
+                self.foundArtist = false;
+            } else {
+                self.foundArtist = true;
+            }
+
             self->_artist = foundArtist;
             [self updateViews];
         });

@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		E3950904246F32040078EB2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3950903246F32040078EB2B /* AppDelegate.m */; };
 		E3950907246F32040078EB2B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3950906246F32040078EB2B /* SceneDelegate.m */; };
-		E395090A246F32040078EB2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3950909246F32040078EB2B /* ViewController.m */; };
 		E395090D246F32040078EB2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E395090B246F32040078EB2B /* Main.storyboard */; };
 		E395090F246F320B0078EB2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E395090E246F320B0078EB2B /* Assets.xcassets */; };
 		E3950912246F320B0078EB2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3950910246F320B0078EB2B /* LaunchScreen.storyboard */; };
 		E3950915246F320B0078EB2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3950914246F320B0078EB2B /* main.m */; };
+		E395091D246FD4D10078EB2B /* MSKArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E395091C246FD4D10078EB2B /* MSKArtist.m */; };
+		E3950920246FE0010078EB2B /* MSKArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E395091F246FE0010078EB2B /* MSKArtist+NSJSONSerialization.m */; };
+		E3950923246FE4030078EB2B /* MSKArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3950922246FE4030078EB2B /* MSKArtistController.m */; };
+		E3950926246FE6D50078EB2B /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3950925246FE6D50078EB2B /* LSIFileHelper.m */; };
+		E39509322472C3CB0078EB2B /* MSKArtistListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39509312472C3CB0078EB2B /* MSKArtistListTableViewController.m */; };
+		E39509382472C40B0078EB2B /* MSKArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39509372472C40A0078EB2B /* MSKArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +27,23 @@
 		E3950903246F32040078EB2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E3950905246F32040078EB2B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		E3950906246F32040078EB2B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		E3950908246F32040078EB2B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E3950909246F32040078EB2B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E395090C246F32040078EB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E395090E246F320B0078EB2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3950911246F320B0078EB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3950913246F320B0078EB2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3950914246F320B0078EB2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E395091B246FD4D10078EB2B /* MSKArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSKArtist.h; sourceTree = "<group>"; };
+		E395091C246FD4D10078EB2B /* MSKArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSKArtist.m; sourceTree = "<group>"; };
+		E395091E246FE0010078EB2B /* MSKArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSKArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		E395091F246FE0010078EB2B /* MSKArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MSKArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		E3950921246FE4030078EB2B /* MSKArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSKArtistController.h; sourceTree = "<group>"; };
+		E3950922246FE4030078EB2B /* MSKArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSKArtistController.m; sourceTree = "<group>"; };
+		E3950924246FE6CA0078EB2B /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		E3950925246FE6D50078EB2B /* LSIFileHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
+		E39509302472C3CB0078EB2B /* MSKArtistListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSKArtistListTableViewController.h; sourceTree = "<group>"; };
+		E39509312472C3CB0078EB2B /* MSKArtistListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSKArtistListTableViewController.m; sourceTree = "<group>"; };
+		E39509362472C40A0078EB2B /* MSKArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSKArtistDetailViewController.h; sourceTree = "<group>"; };
+		E39509372472C40A0078EB2B /* MSKArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSKArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +76,77 @@
 		E3950901246F32040078EB2B /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				E3950927246FE6E70078EB2B /* Delegates */,
+				E3950928246FE7280078EB2B /* StoryBoards */,
+				E395092A2472C2FD0078EB2B /* MSKArtist */,
+				E395092B2472C3160078EB2B /* Controller */,
+				E3950929246FE9F80078EB2B /* LSIFileHelper */,
+				E395090E246F320B0078EB2B /* Assets.xcassets */,
+				E3950913246F320B0078EB2B /* Info.plist */,
+				E3950914246F320B0078EB2B /* main.m */,
+				E395092F2472C3620078EB2B /* ViewControllers */,
+			);
+			path = FavoriteArtists;
+			sourceTree = "<group>";
+		};
+		E3950927246FE6E70078EB2B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
 				E3950902246F32040078EB2B /* AppDelegate.h */,
 				E3950903246F32040078EB2B /* AppDelegate.m */,
 				E3950905246F32040078EB2B /* SceneDelegate.h */,
 				E3950906246F32040078EB2B /* SceneDelegate.m */,
-				E3950908246F32040078EB2B /* ViewController.h */,
-				E3950909246F32040078EB2B /* ViewController.m */,
-				E395090B246F32040078EB2B /* Main.storyboard */,
-				E395090E246F320B0078EB2B /* Assets.xcassets */,
-				E3950910246F320B0078EB2B /* LaunchScreen.storyboard */,
-				E3950913246F320B0078EB2B /* Info.plist */,
-				E3950914246F320B0078EB2B /* main.m */,
 			);
-			path = FavoriteArtists;
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		E3950928246FE7280078EB2B /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				E395090B246F32040078EB2B /* Main.storyboard */,
+				E3950910246F320B0078EB2B /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		E3950929246FE9F80078EB2B /* LSIFileHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E3950924246FE6CA0078EB2B /* LSIFileHelper.h */,
+				E3950925246FE6D50078EB2B /* LSIFileHelper.m */,
+			);
+			path = LSIFileHelper;
+			sourceTree = "<group>";
+		};
+		E395092A2472C2FD0078EB2B /* MSKArtist */ = {
+			isa = PBXGroup;
+			children = (
+				E395091B246FD4D10078EB2B /* MSKArtist.h */,
+				E395091C246FD4D10078EB2B /* MSKArtist.m */,
+				E395091E246FE0010078EB2B /* MSKArtist+NSJSONSerialization.h */,
+				E395091F246FE0010078EB2B /* MSKArtist+NSJSONSerialization.m */,
+			);
+			path = MSKArtist;
+			sourceTree = "<group>";
+		};
+		E395092B2472C3160078EB2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E3950921246FE4030078EB2B /* MSKArtistController.h */,
+				E3950922246FE4030078EB2B /* MSKArtistController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E395092F2472C3620078EB2B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E39509302472C3CB0078EB2B /* MSKArtistListTableViewController.h */,
+				E39509312472C3CB0078EB2B /* MSKArtistListTableViewController.m */,
+				E39509362472C40A0078EB2B /* MSKArtistDetailViewController.h */,
+				E39509372472C40A0078EB2B /* MSKArtistDetailViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E395090A246F32040078EB2B /* ViewController.m in Sources */,
+				E395091D246FD4D10078EB2B /* MSKArtist.m in Sources */,
+				E3950920246FE0010078EB2B /* MSKArtist+NSJSONSerialization.m in Sources */,
+				E39509382472C40B0078EB2B /* MSKArtistDetailViewController.m in Sources */,
 				E3950904246F32040078EB2B /* AppDelegate.m in Sources */,
+				E39509322472C3CB0078EB2B /* MSKArtistListTableViewController.m in Sources */,
 				E3950915246F320B0078EB2B /* main.m in Sources */,
+				E3950926246FE6D50078EB2B /* LSIFileHelper.m in Sources */,
+				E3950923246FE4030078EB2B /* MSKArtistController.m in Sources */,
 				E3950907246F32040078EB2B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

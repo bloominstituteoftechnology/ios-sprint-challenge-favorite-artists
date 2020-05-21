@@ -73,12 +73,22 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
         [self.artists addObject:artist];
     }
 }
+-(void)removeArtistFromAppAtIndex:(NSUInteger *)index {
+    [_artists removeObjectAtIndex: *index];
+    NSURL *url = [self persistentURL];
+    [[NSFileManager defaultManager] removeItemAtPath: url.absoluteString error:NULL];
+    [self.artists writeToURL:url
+                       error:nil];
+}
+    
+    
 -(void)saveArtistToPersistence:(MSKArtist *)artist
                 completionBlock:(void (^)(NSError * _Nullable error))completionBlock;{
     NSURL *url = [self persistentURL];
+    [[NSFileManager defaultManager] removeItemAtPath: url.absoluteString error:NULL];
     NSDictionary *artistDict = [artist toDict];
     [self.artists addObject:artistDict];
-    [artistDict writeToURL:url
+    [self.artists writeToURL:url
                      error:nil];
 }
 @end

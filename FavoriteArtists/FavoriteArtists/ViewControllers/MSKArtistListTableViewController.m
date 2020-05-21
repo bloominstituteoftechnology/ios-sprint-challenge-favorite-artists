@@ -58,8 +58,10 @@
     if ([segue.identifier isEqualToString:@"detailSegue"]) {
         MSKArtistDetailViewController *detailVC = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        detailVC.artist = self.controller.artists[indexPath.row];
+        NSDictionary *artistDict = self.controller.artists[indexPath.row];
+        MSKArtist *artist =  [[MSKArtist alloc] initFromDict:artistDict];
         detailVC.controller = self.controller;
+        detailVC.artist = artist;
         
     } else  {
         if ([segue.identifier isEqualToString:@"searchSegue"]) {

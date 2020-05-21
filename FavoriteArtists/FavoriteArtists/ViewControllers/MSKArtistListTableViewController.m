@@ -9,11 +9,12 @@
 #import "MSKArtistListTableViewController.h"
 #import "MSKArtistDetailViewController.h"
 #import "MSKArtistController.h"
+
 @interface MSKArtistListTableViewController () <UITableViewDataSource>
 @end
 @implementation MSKArtistListTableViewController
--(instancetype)init {
-    self = [super init];
+-(instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
     if (self) {
         _controller = [[MSKArtistController alloc] init];
     }
@@ -21,26 +22,17 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.controller = [[MSKArtistController alloc] init];
     [self.controller loadArtistsFromPersistence:^(NSError *_Nullable error) {
         if (error) {
             NSLog(@"Error loading from persistence!");
             return;
         }
-        self.artists = self.controller.artists;
+        ;
     }];
     [self.tableView reloadData];
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.tableView reloadData];
-    [self.controller loadArtistsFromPersistence:^(NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error loading from persistence!");
-            return;
-        }
-        self.artists = self.controller.artists;
-    }];
     [self.tableView reloadData];
 }
 #pragma mark - Table view data source
@@ -53,7 +45,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"artistCell"
                                                             forIndexPath:indexPath];
-    MSKArtist *artist = self.controller.artists[indexPath.row];
+    NSDictionary *artistDict = self.controller.artists[indexPath.row];
+    MSKArtist *artist = [[MSKArtist alloc] initFromDict:artistDict];
+    
     cell.textLabel.text = artist.artistName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", artist.yearFormed];
     return cell;
@@ -66,10 +60,12 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         detailVC.artist = self.controller.artists[indexPath.row];
         detailVC.controller = self.controller;
+        
     } else  {
         if ([segue.identifier isEqualToString:@"searchSegue"]) {
            MSKArtistDetailViewController *searchArtist = segue.destinationViewController;
             searchArtist.controller = self.controller;
+
         }
     }
 }

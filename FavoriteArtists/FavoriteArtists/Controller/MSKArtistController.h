@@ -6,10 +6,12 @@
 //  Copyright © 2020 Lambda. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-@class MSKArtist;
+#import "MSKArtist.h"
 NS_ASSUME_NONNULL_BEGIN
+
 @interface MSKArtistController : NSObject
-@property (nonatomic) NSMutableArray<MSKArtist *> *artists;
+@property (readwrite, nonatomic) NSMutableArray *artists;
+@property (readwrite, nonatomic) MSKArtist *artist;
 - (void)fetchArtistWithName:(NSString *)artistName completionBlock:(void (^)(MSKArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
 - (void)parseJSONData:(NSData *)data
       completionBlock:(void (^)(MSKArtist * _Nullable artist,

@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MSKArtistController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+
 
 
 @end

@@ -19,6 +19,10 @@
 		E3950926246FE6D50078EB2B /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3950925246FE6D50078EB2B /* LSIFileHelper.m */; };
 		E39509322472C3CB0078EB2B /* MSKArtistListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39509312472C3CB0078EB2B /* MSKArtistListTableViewController.m */; };
 		E39509382472C40B0078EB2B /* MSKArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39509372472C40A0078EB2B /* MSKArtistDetailViewController.m */; };
+		E3E953A72476AA0F000A04B0 /* MSKArtistController.h in Sources */ = {isa = PBXBuildFile; fileRef = E3950921246FE4030078EB2B /* MSKArtistController.h */; };
+		E3E953A82476AA17000A04B0 /* MSKArtist.h in Sources */ = {isa = PBXBuildFile; fileRef = E395091B246FD4D10078EB2B /* MSKArtist.h */; };
+		E3E953A92476AA1D000A04B0 /* MSKArtist+NSJSONSerialization.h in Sources */ = {isa = PBXBuildFile; fileRef = E395091E246FE0010078EB2B /* MSKArtist+NSJSONSerialization.h */; };
+		E3E953AB2476AE37000A04B0 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = E3950902246F32040078EB2B /* AppDelegate.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,6 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E953AB2476AE37000A04B0 /* AppDelegate.h in Sources */,
+				E3E953A92476AA1D000A04B0 /* MSKArtist+NSJSONSerialization.h in Sources */,
+				E3E953A82476AA17000A04B0 /* MSKArtist.h in Sources */,
+				E3E953A72476AA0F000A04B0 /* MSKArtistController.h in Sources */,
 				E395091D246FD4D10078EB2B /* MSKArtist.m in Sources */,
 				E3950920246FE0010078EB2B /* MSKArtist+NSJSONSerialization.m in Sources */,
 				E39509382472C40B0078EB2B /* MSKArtistDetailViewController.m in Sources */,

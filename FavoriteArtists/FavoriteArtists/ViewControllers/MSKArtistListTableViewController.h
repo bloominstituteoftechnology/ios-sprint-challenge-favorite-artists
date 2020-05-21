@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface MSKArtistListTableViewController : UITableViewController
-@property (nonatomic, nullable) NSMutableArray *artists ;
-@property (nonatomic, nullable) MSKArtistController *controller;
+
+@property MSKArtistController *controller;
 
 
 

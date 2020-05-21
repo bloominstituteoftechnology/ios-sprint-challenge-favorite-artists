@@ -8,99 +8,77 @@
 #import "MSKArtistController.h"
 #import "MSKArtist.h"
 #import "MSKArtist+NSJSONSerialization.h"
+
+#import "AppDelegate.h"
 static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 @implementation MSKArtistController
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self loadArtistsFromPersistence:^(NSError * _Nullable error) {
-            if (error) {
-                NSLog(@"Problem loading from persistance!");
-            }
-        }];
+        _artists = [[NSMutableArray alloc] init];
     }
     return self;
 }
+
+
 - (void)fetchArtistWithName:(NSString *)artistName
             completionBlock:(void (^)(MSKArtist *artist,
                                       NSError * _Nullable error))completionBlock {
-    NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:[NSURL
-                                                                         URLWithString:baseURL]
-                                                resolvingAgainstBaseURL:YES];
-    urlComponents.queryItems = @[
-        [NSURLQueryItem queryItemWithName:@"s"
-                                    value:artistName]
-    ];
-    NSURL *url = [urlComponents URL];
-    NSURLSessionDataTask *task = [NSURLSession.sharedSession
-                                  dataTaskWithURL:url
-                                  completionHandler:^(NSData * _Nullable data,
-                                                      NSURLResponse * _Nullable response,
-                                                      NSError * _Nullable error) {
-        NSLog(@"%@",
-              urlComponents.URL);
+    NSURL *base = [NSURL URLWithString: baseURL];
+        NSURLComponents *components = [NSURLComponents componentsWithURL:base
+                                                 resolvingAgainstBaseURL:YES];
+        NSURLQueryItem *searchItem = [NSURLQueryItem queryItemWithName:@"s"
+                                                                 value:artistName];
+    [components setQueryItems:@[searchItem]];
+    NSURL *url = [components URL];
+    [[[NSURLSession sharedSession] dataTaskWithURL:url
+                                 completionHandler:^(NSData * _Nullable data,
+                                                     NSURLResponse * _Nullable response,
+                                                     NSError * _Nullable error) {
         if (error) {
             completionBlock(nil,
                             error);
             return;
         }
-        [self parseJSONData:data
-            completionBlock:^(MSKArtist * _Nullable artist,
-                              NSError * _Nullable error) {
-            if (error) {
-                completionBlock(nil,
-                                error);
-                return;
-            }
-            completionBlock(artist,
-                            nil);
-        }];
-    }];
-[task resume];
+        NSError *jsonError = nil;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:0
+                                                                     error:&jsonError];
+        if (jsonError) {
+            completionBlock(nil,
+                            jsonError);
+            return;
+        }
+        if (dictionary[@"artists"] != [NSNull null]) {
+            NSArray *artistDicts = dictionary[@"artists"];
+            NSDictionary *artistDict = artistDicts.firstObject;
+            MSKArtist *artist = [[MSKArtist alloc] initFromDict:artistDict];
+
+                    completionBlock(artist, nil);
+            self.artist = artist;
+        }
+    }] resume];
 }
-- (void)parseJSONData:(NSData *)data
-      completionBlock:(void (^)(MSKArtist * _Nullable artist,
-                                NSError * _Nullable error))completionBlock {
-    NSError *jsonError = nil;
-    NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data
-                                                         options:0
-                                                           error:&jsonError];
-    if (jsonError) {
-        NSLog(@"There was a jsonError!");
-        completionBlock(nil, jsonError);
-    }
-    if ([dataDict[@"artists"]
-         isKindOfClass:[NSNull class]]) {
-        NSLog(@"Something is messed up at the pull");
-        completionBlock(nil,
-                        [[NSError alloc] initWithDomain:@"domain"
-                                                   code:1
-                                               userInfo:nil]);
-        return;
-    }
-    MSKArtist *artist = [[MSKArtist alloc] initFromDict:dataDict[@"artists"][0]];
-    completionBlock(artist, nil);
-    return;
+-(NSURL *)persistentURL {
+    NSURL *docs = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSString *artists = @"artists.json";
+    return [docs URLByAppendingPathComponent:artists];
 }
 - (void)loadArtistsFromPersistence:(void (^)(NSError * _Nullable error))completionBlock {
-    NSURL *documents = [[NSFileManager defaultManager]
-                        URLsForDirectory:NSDocumentDirectory
-                        inDomains:NSUserDomainMask].firstObject;
-    self.artists = _artists.init;
-    NSURL *persistentURL = [documents URLByAppendingPathComponent:@"artists.json"];
-    NSDictionary *artistDict = [NSDictionary dictionaryWithContentsOfURL:persistentURL];
+    NSURL *url = [self persistentURL];
+    NSDictionary *artistDict = [NSDictionary dictionaryWithContentsOfURL:url];
     NSArray *artistArray = artistDict[@"artists"];
     for (NSDictionary *dict in artistArray) {
         MSKArtist *artist = [[MSKArtist alloc] initFromDict:dict];
         [self.artists addObject:artist];
     }
 }
-- (void)saveArtistToPersistence:(MSKArtist *)artist completionBlock:(void (^)(NSError * _Nullable error))completionBlock;{
-    NSURL *documents = [[NSFileManager defaultManager]
-                        URLsForDirectory:NSDocumentDirectory
-                        inDomains:NSUserDomainMask].firstObject;
-    NSURL *persistentURL = [documents URLByAppendingPathComponent:@"artists.json"];
-    NSDictionary *artistDict = [NSDictionary  dictionaryWithObject:artist forKey:artist.artistName];
-    [artistDict writeToURL:persistentURL error:nil];
+-(void)saveArtistToPersistence:(MSKArtist *)artist
+                completionBlock:(void (^)(NSError * _Nullable error))completionBlock;{
+    NSURL *url = [self persistentURL];
+    NSDictionary *artistDict = [artist toDict];
+    [self.artists addObject:artistDict];
+    [artistDict writeToURL:url
+                     error:nil];
 }
 @end

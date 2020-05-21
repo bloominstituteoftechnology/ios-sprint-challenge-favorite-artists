@@ -9,6 +9,7 @@
 #import "MSKArtist.h"
 #import "MSKArtistController.h"
 #import "MSKArtist+NSJSONSerialization.h"
+
 @interface MSKArtistDetailViewController ()
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
@@ -17,12 +18,10 @@
 @end
 @implementation MSKArtistDetailViewController
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
-    MSKArtist *artist = [[MSKArtist alloc] initWithName: _artistNameLabel.text
-                                        artistBiography: _bioTV.text
-                                             yearFormed: _artist.yearFormed];
-    [_controller.artists addObject:artist];
+    NSDictionary *dict = [_artist toDict];
+    [self.controller.artists addObject:dict];
     [self.navigationController popViewControllerAnimated:YES];
-    [_controller saveArtistToPersistence:artist completionBlock:^(NSError * _Nullable error) {
+    [self.controller saveArtistToPersistence:_artist completionBlock:^(NSError * _Nullable error) {
         if (error) {
             NSLog(@"Saving error!");
         }
@@ -48,7 +47,7 @@
 }
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSString *searchTerm = searchBar.text;
-    [_controller fetchArtistWithName:searchTerm completionBlock:^(MSKArtist * _Nullable artist, NSError * _Nullable error) {
+    [self.controller fetchArtistWithName:searchTerm completionBlock:^(MSKArtist * _Nullable artist, NSError * _Nullable error) {
         if (error) {
             NSLog(@"%@", [NSString stringWithFormat:@"There was a error: %@", error]);
             return;

@@ -12,6 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface MSKArtistDetailViewController : UIViewController <UISearchBarDelegate>
 @property (nonatomic)  MSKArtist *artist;
-@property (nonatomic)  MSKArtistController *controller;
+@property (nonatomic, readwrite) MSKArtistController *controller;
+
+
 @end
 NS_ASSUME_NONNULL_END

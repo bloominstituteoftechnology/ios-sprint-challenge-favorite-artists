@@ -18,14 +18,17 @@
 @end
 @implementation MSKArtistDetailViewController
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
-    NSDictionary *dict = [_artist toDict];
-    [self.controller.artists addObject:dict];
-    [self.navigationController popViewControllerAnimated:YES];
-    [self.controller saveArtistToPersistence:_artist completionBlock:^(NSError * _Nullable error) {
+    if (_artist) {
+    [self.controller saveArtistToPersistence:_artist completionBlock:^(NSString *nullable,NSError * _Nullable error) {
         if (error) {
-            NSLog(@"Saving error!");
+            NSLog(@"SaveError");
         }
+        return;
     }];
+    [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        return;
+    }
 }
 -(void)viewDidLoad {
     [super viewDidLoad];

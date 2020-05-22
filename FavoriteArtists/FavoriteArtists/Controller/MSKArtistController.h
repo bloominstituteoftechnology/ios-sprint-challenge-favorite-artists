@@ -13,10 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readwrite, nonatomic) NSMutableArray *artists;
 @property (readwrite, nonatomic) MSKArtist *artist;
 - (void)fetchArtistWithName:(NSString *)artistName completionBlock:(void (^)(MSKArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
-- (void)parseJSONData:(NSData *)data
-      completionBlock:(void (^)(MSKArtist * _Nullable artist,
-                                NSError * _Nullable error))completionBlock;
-- (void)loadArtistsFromPersistence:(void (^)(NSError * _Nullable error))completionBlock;
-- (void) saveArtistToPersistence:(MSKArtist *)artist completionBlock:(void (^)(NSError * _Nullable error))completionBlock;
+-(void)removeArtistFromAppAtIndex:(NSUInteger *)index;
+-(void)loadArtistsFromPersistence:(void (^)(NSError * _Nullable error))completionBlock;
+- (void) saveArtistToPersistence:(MSKArtist *)artist completionBlock:(void(^)(NSString *_Nullable alreadyInString, NSError *_Nullable error))completionBlock;
 @end
 NS_ASSUME_NONNULL_END

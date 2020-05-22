@@ -112,7 +112,7 @@
                     <navigationItem key="navigationItem" id="ARf-4d-Gf4">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="0EW-bm-GVb">
                             <connections>
-                                <action selector="saveTapped:" destination="txC-3X-BF8" id="4hN-BN-lQN"/>
+                                <action selector="saveTapped:" destination="txC-3X-BF8" id="wzC-nY-13s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

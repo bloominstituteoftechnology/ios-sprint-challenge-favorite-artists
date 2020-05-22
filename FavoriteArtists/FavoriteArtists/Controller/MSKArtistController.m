@@ -53,9 +53,13 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
             NSArray *artistDicts = dictionary[@"artists"];
             NSDictionary *artistDict = artistDicts.firstObject;
             MSKArtist *artist = [[MSKArtist alloc] initFromDict:artistDict];
-
-                    completionBlock(artist, nil);
             self.artist = artist;
+            completionBlock(artist, nil);
+           
+            }
+        else {
+                       NSLog(@"Can't find the artist!");
+            
         }
     }] resume];
 }
@@ -66,11 +70,9 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
 }
 - (void)loadArtistsFromPersistence:(void (^)(NSError * _Nullable error))completionBlock {
     NSURL *url = [self persistentURL];
-    NSDictionary *artistDict = [NSDictionary dictionaryWithContentsOfURL:url];
-    NSArray *artistArray = artistDict[@"artists"];
+    NSMutableArray *artistArray = [NSMutableArray arrayWithContentsOfURL:url];
     for (NSDictionary *dict in artistArray) {
-        MSKArtist *artist = [[MSKArtist alloc] initFromDict:dict];
-        [self.artists addObject:artist];
+        [self.artists addObject:dict];
     }
 }
 -(void)removeArtistFromAppAtIndex:(NSUInteger *)index {
@@ -83,12 +85,25 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
     
     
 -(void)saveArtistToPersistence:(MSKArtist *)artist
-                completionBlock:(void (^)(NSError * _Nullable error))completionBlock;{
+                completionBlock:(void (^)(NSString * alreadyInString ,NSError * _Nullable error))completionBlock;{
+    NSString *alreadyIn = @"This artist has already been saved!";
+    for (NSDictionary *d in self.artists) {
+        if (d[@"strArtist"] == artist.artistName) {
+              NSLog(@"%@", alreadyIn);
+              completionBlock(alreadyIn, nil);
+              return;
+          }
+      }
+    
     NSURL *url = [self persistentURL];
+   
     [[NSFileManager defaultManager] removeItemAtPath: url.absoluteString error:NULL];
-    NSDictionary *artistDict = [artist toDict];
-    [self.artists addObject:artistDict];
+  
+    NSDictionary *dict = [artist toDict];
+    [self.artists addObject:dict];
     [self.artists writeToURL:url
-                     error:nil];
+                       error:nil];
+    NSLog(@"Saved it for you!");
+    completionBlock(nil, nil);
 }
 @end

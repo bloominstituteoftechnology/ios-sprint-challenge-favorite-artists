@@ -17,6 +17,7 @@
 		E04B1EA22481EB8F0075794D /* SBAArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EA12481EB8F0075794D /* SBAArtist.m */; };
 		E04B1EA62481F0110075794D /* SBAFavArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EA52481F0110075794D /* SBAFavArtistsTableViewController.m */; };
 		E04B1EA92481F0770075794D /* SBADetailSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EA82481F0770075794D /* SBADetailSearchViewController.m */; };
+		E04B1EAC2481F49B0075794D /* NSJSONSerialization+SBAArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EAB2481F49B0075794D /* NSJSONSerialization+SBAArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		E04B1EA52481F0110075794D /* SBAFavArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAFavArtistsTableViewController.m; sourceTree = "<group>"; };
 		E04B1EA72481F0770075794D /* SBADetailSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBADetailSearchViewController.h; sourceTree = "<group>"; };
 		E04B1EA82481F0770075794D /* SBADetailSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBADetailSearchViewController.m; sourceTree = "<group>"; };
+		E04B1EAA2481F49B0075794D /* NSJSONSerialization+SBAArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+SBAArtist.h"; sourceTree = "<group>"; };
+		E04B1EAB2481F49B0075794D /* NSJSONSerialization+SBAArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+SBAArtist.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				E04B1EA52481F0110075794D /* SBAFavArtistsTableViewController.m */,
 				E04B1EA72481F0770075794D /* SBADetailSearchViewController.h */,
 				E04B1EA82481F0770075794D /* SBADetailSearchViewController.m */,
+				E04B1EAA2481F49B0075794D /* NSJSONSerialization+SBAArtist.h */,
+				E04B1EAB2481F49B0075794D /* NSJSONSerialization+SBAArtist.m */,
 			);
 			path = "Favorite Artists";
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				E04B1E8B2481E9170075794D /* ViewController.m in Sources */,
 				E04B1E852481E9170075794D /* AppDelegate.m in Sources */,
 				E04B1EA22481EB8F0075794D /* SBAArtist.m in Sources */,
+				E04B1EAC2481F49B0075794D /* NSJSONSerialization+SBAArtist.m in Sources */,
 				E04B1E962481E91D0075794D /* main.m in Sources */,
 				E04B1E882481E9170075794D /* SceneDelegate.m in Sources */,
 				E04B1EA92481F0770075794D /* SBADetailSearchViewController.m in Sources */,

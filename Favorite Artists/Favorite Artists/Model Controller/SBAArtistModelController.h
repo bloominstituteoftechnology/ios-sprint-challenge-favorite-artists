@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)parseJSONData:(NSData *)data
       completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
 
-- (void)loadFromPersistentStore;
+- (void)loadFromPersistence:(void (^)(NSError * _Nullable error))completionBlock;
 
 - (void)saveArtist:(SBAArtist *)artist;
 

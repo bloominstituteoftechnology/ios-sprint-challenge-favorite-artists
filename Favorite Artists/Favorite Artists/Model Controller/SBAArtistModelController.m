@@ -13,6 +13,7 @@
 //BaseURL for search string
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
+
 @implementation SBAArtistModelController
 
 - (instancetype)init {
@@ -77,5 +78,25 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 }
 
 //TO DO setup persistence
+
+- (void)loadFromPersistence:(void (^)(NSError * _Nullable))completionBlock
+{
+  NSURL *documentsDirectory = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
+  NSError *loadDataError = nil;
+  NSArray *data = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectory error:&loadDataError];
+  if (loadDataError) {
+    completionBlock(loadDataError);
+    return;
+  }
+  
+  for (NSString *path in data) {
+    NSURL *filePath = [documentsDirectory URLByAppendingPathComponent:path];
+    NSDictionary *fileDictionary = [NSDictionary dictionaryWithContentsOfURL:filePath];
+    SBAArtist *newArtist = [[SBAArtist alloc] initFromDictionary:fileDictionary];
+    [self.favoriteArtists addObject:newArtist];
+  }
+  completionBlock(nil);
+}
+
 
 @end

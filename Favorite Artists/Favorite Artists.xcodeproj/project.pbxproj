@@ -77,10 +77,18 @@
 				E04B1E942481E91D0075794D /* Info.plist */,
 				E04B1E9C2481E92E0075794D /* LSIFileHelper.h */,
 				E04B1E952481E91D0075794D /* main.m */,
+				E04B1EA32481ECBD0075794D /* Model */,
+			);
+			path = "Favorite Artists";
+			sourceTree = "<group>";
+		};
+		E04B1EA32481ECBD0075794D /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				E04B1EA02481EB8F0075794D /* SBAArtist.h */,
 				E04B1EA12481EB8F0075794D /* SBAArtist.m */,
 			);
-			path = "Favorite Artists";
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

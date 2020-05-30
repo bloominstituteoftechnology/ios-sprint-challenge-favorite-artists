@@ -51,7 +51,7 @@
       self.artistBioTextView.text = self.artistResult.biography;
     } else { // blank out results to start
       self.searchBar.delegate = self;
-      self.searchBar.text = @"Search for artist";
+      self.searchBar.text = @"";
       self.artistName.text = @"";
       self.artistFormationLbl.text = @"";
       self.artistBioTextView.text = @"";

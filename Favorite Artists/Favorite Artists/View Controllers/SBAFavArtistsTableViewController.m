@@ -23,8 +23,8 @@
     self.artistController = [[SBAArtistModelController alloc] init];
   
     // create test Artist
-//  SBAArtist *testArtist = [[SBAArtist alloc] initWithArtistName:@"Bob Marley" biography:@"Jah Lives" yearFormed:1977];
-//  [self.artistController.favoriteArtists addObject:testArtist];
+  SBAArtist *testArtist = [[SBAArtist alloc] initWithArtistName:@"Bob Marley" biography:@"Dummy data to check if working..Jah Lives" yearFormed:1974];
+  [self.artistController.favoriteArtists addObject:testArtist];
   [self.tableView reloadData];
     
 }
@@ -33,7 +33,7 @@
     [self.tableView reloadData];
   for (SBAArtist *artist in self.artistController.favoriteArtists) {
     [self.tableView reloadData];
-    //save to persistance
+    //save to persistance store here
   }
 }
  

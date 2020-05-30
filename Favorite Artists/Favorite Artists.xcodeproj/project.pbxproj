@@ -34,7 +34,7 @@
 		E04B1E922481E91D0075794D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04B1E942481E91D0075794D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E04B1E952481E91D0075794D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E04B1E9C2481E92E0075794D /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		E04B1E9C2481E92E0075794D /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		E04B1EA02481EB8F0075794D /* SBAArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAArtist.h; sourceTree = "<group>"; };
 		E04B1EA12481EB8F0075794D /* SBAArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAArtist.m; sourceTree = "<group>"; };
 		E04B1EA42481F0110075794D /* SBAFavArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAFavArtistsTableViewController.h; sourceTree = "<group>"; };
@@ -77,23 +77,19 @@
 		E04B1E822481E9170075794D /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				E04B1EBE24822A080075794D /* Helpers */,
 				E04B1E832481E9170075794D /* AppDelegate.h */,
 				E04B1E842481E9170075794D /* AppDelegate.m */,
 				E04B1E862481E9170075794D /* SceneDelegate.h */,
 				E04B1E872481E9170075794D /* SceneDelegate.m */,
-				E04B1E892481E9170075794D /* ViewController.h */,
-				E04B1E8A2481E9170075794D /* ViewController.m */,
 				E04B1E8C2481E9170075794D /* Main.storyboard */,
 				E04B1E8F2481E91D0075794D /* Assets.xcassets */,
 				E04B1E912481E91D0075794D /* LaunchScreen.storyboard */,
 				E04B1E942481E91D0075794D /* Info.plist */,
-				E04B1E9C2481E92E0075794D /* LSIFileHelper.h */,
 				E04B1E952481E91D0075794D /* main.m */,
 				E04B1EA32481ECBD0075794D /* Model */,
 				E04B1EBC2482036C0075794D /* Model Controller */,
 				E04B1EBD24820AC10075794D /* View Controllers */,
-				E04B1EB62481FF9A0075794D /* SBAArtist+NSJSONSerialization.h */,
-				E04B1EB72481FF9A0075794D /* SBAArtist+NSJSONSerialization.m */,
 			);
 			path = "Favorite Artists";
 			sourceTree = "<group>";
@@ -123,8 +119,20 @@
 				E04B1EA52481F0110075794D /* SBAFavArtistsTableViewController.m */,
 				E04B1EA72481F0770075794D /* SBADetailSearchViewController.h */,
 				E04B1EA82481F0770075794D /* SBADetailSearchViewController.m */,
+				E04B1E892481E9170075794D /* ViewController.h */,
+				E04B1E8A2481E9170075794D /* ViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E04B1EBE24822A080075794D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E04B1E9C2481E92E0075794D /* LSIFileHelper.h */,
+				E04B1EB62481FF9A0075794D /* SBAArtist+NSJSONSerialization.h */,
+				E04B1EB72481FF9A0075794D /* SBAArtist+NSJSONSerialization.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

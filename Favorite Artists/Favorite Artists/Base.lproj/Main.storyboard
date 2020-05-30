@@ -112,8 +112,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="vBX-HZ-7YF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="B2m-QZ-vT1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="B2m-QZ-vT1">
+                            <connections>
+                                <action selector="saveButtnPressed:" destination="BYZ-38-t0r" id="lfF-dW-ege"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistBioTextView" destination="8p3-Fd-QAN" id="win-TO-dab"/>
+                        <outlet property="artistFormationLbl" destination="9B5-3J-8C5" id="giE-8J-bkP"/>
+                        <outlet property="artistName" destination="bjB-Ki-SQD" id="b0M-ja-BVq"/>
+                        <outlet property="saveBtn" destination="B2m-QZ-vT1" id="KGu-kw-JD9"/>
+                        <outlet property="searchBar" destination="mhu-Rq-nUM" id="w52-Dx-nJe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

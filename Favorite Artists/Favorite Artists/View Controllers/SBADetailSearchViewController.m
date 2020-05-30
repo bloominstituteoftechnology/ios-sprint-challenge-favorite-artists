@@ -7,10 +7,26 @@
 //
 
 #import "SBADetailSearchViewController.h"
+#import "SBAArtistModelController.h"
+#import "SBAArtist.h"
 
-@interface SBADetailSearchViewController ()
+// add search bar delegate
+@interface SBADetailSearchViewController () <UISearchBarDelegate>
+
+@property (nonatomic) SBAArtist *artistResult;
+
+//MARK Outlets
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistName;
+@property (weak, nonatomic) IBOutlet UILabel *artistFormationLbl;
+@property (weak, nonatomic) IBOutlet UITextView *artistBioTextView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveBtn;
+
+//Mark Action
+- (IBAction)saveButtnPressed:(UIBarButtonItem *)sender;
 
 @end
+
 
 @implementation SBADetailSearchViewController
 
@@ -29,4 +45,11 @@
 }
 */
 
+- (IBAction)saveButtnPressed:(id)sender {
+  if (self.artistResult) {
+    [self.artistController.favoriteArtists addObject:self.artistResult];
+    [self.navigationController popToRootViewControllerAnimated:true];
+  }
+  
+}
 @end

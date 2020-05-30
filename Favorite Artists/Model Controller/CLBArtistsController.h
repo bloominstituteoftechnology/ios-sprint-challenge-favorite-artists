@@ -8,9 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class CLBArtists;
+
+typedef void (^ArtistFetchCompletionHandler)(CLBArtists* _Nullable artist, NSError *_Nullable error);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CLBArtistsController : NSObject
+
+- (void) fetchArtistsWithName:(NSString *)name completion:(ArtistFetchCompletionHandler)completion;
+
+- (NSArray *)fetchSavedArtists;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import "CLBArtistsController.h"
 
+
 @implementation CLBArtistsController
 
 @end

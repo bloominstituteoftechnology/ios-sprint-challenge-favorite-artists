@@ -10,7 +10,7 @@
         <!--Root View Controller-->
         <scene sceneID="AmS-jZ-Sid">
             <objects>
-                <tableViewController id="z9k-Lh-5qK" sceneMemberID="viewController">
+                <tableViewController id="z9k-Lh-5qK" customClass="CLBArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="faJ-hk-kIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="678" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="SD7-pX-ryY">
             <objects>
-                <viewController id="Qfi-s1-WIP" sceneMemberID="viewController">
+                <viewController id="Qfi-s1-WIP" customClass="CLBArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VvE-OD-eYg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,27 +74,53 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IHO-lF-5jf">
-                                <rect key="frame" x="20" y="144" width="374" height="718"/>
+                                <rect key="frame" x="20" y="239.5" width="374" height="656.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjR-36-MtT">
+                                <rect key="frame" x="20" y="144" width="374" height="48"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Established" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcq-6i-xhk">
+                                <rect key="frame" x="20" y="200" width="374" height="31"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="P2p-Ll-V6D" firstAttribute="trailing" secondItem="IHO-lF-5jf" secondAttribute="trailing" constant="20" id="7tX-DA-Jee"/>
-                            <constraint firstItem="IHO-lF-5jf" firstAttribute="leading" secondItem="P2p-Ll-V6D" secondAttribute="leading" constant="20" id="CaH-Gq-m3K"/>
-                            <constraint firstItem="IHO-lF-5jf" firstAttribute="bottom" secondItem="P2p-Ll-V6D" secondAttribute="bottom" id="NH3-xs-2JE"/>
-                            <constraint firstItem="IHO-lF-5jf" firstAttribute="top" secondItem="opn-kR-p0Z" secondAttribute="bottom" id="mgE-Dr-DD6"/>
+                            <constraint firstItem="IHO-lF-5jf" firstAttribute="top" secondItem="Fcq-6i-xhk" secondAttribute="bottom" constant="8.5" id="I29-JU-WkM"/>
+                            <constraint firstItem="Fcq-6i-xhk" firstAttribute="leading" secondItem="P2p-Ll-V6D" secondAttribute="leading" constant="20" id="KSQ-4l-rFP"/>
+                            <constraint firstItem="Fcq-6i-xhk" firstAttribute="top" secondItem="BjR-36-MtT" secondAttribute="bottom" constant="8" id="N4w-PL-DeD"/>
+                            <constraint firstItem="P2p-Ll-V6D" firstAttribute="trailing" secondItem="BjR-36-MtT" secondAttribute="trailing" constant="20" id="Rxw-SP-F95"/>
+                            <constraint firstItem="IHO-lF-5jf" firstAttribute="leading" secondItem="P2p-Ll-V6D" secondAttribute="leading" constant="20" id="aZu-pG-KSW"/>
+                            <constraint firstItem="BjR-36-MtT" firstAttribute="top" secondItem="opn-kR-p0Z" secondAttribute="bottom" id="cEu-bq-8Nx"/>
                             <constraint firstItem="opn-kR-p0Z" firstAttribute="trailing" secondItem="P2p-Ll-V6D" secondAttribute="trailing" id="nSY-jz-fyV"/>
+                            <constraint firstAttribute="bottom" secondItem="IHO-lF-5jf" secondAttribute="bottom" id="qfW-l1-IwT"/>
                             <constraint firstItem="opn-kR-p0Z" firstAttribute="leading" secondItem="P2p-Ll-V6D" secondAttribute="leading" id="sTp-Kw-wJ4"/>
+                            <constraint firstItem="P2p-Ll-V6D" firstAttribute="trailing" secondItem="Fcq-6i-xhk" secondAttribute="trailing" constant="20" id="t4m-ez-b4S"/>
                             <constraint firstItem="opn-kR-p0Z" firstAttribute="top" secondItem="P2p-Ll-V6D" secondAttribute="top" id="vZf-9y-4Rc"/>
+                            <constraint firstItem="P2p-Ll-V6D" firstAttribute="trailing" secondItem="IHO-lF-5jf" secondAttribute="trailing" constant="20" id="wVN-PY-zTG"/>
+                            <constraint firstItem="BjR-36-MtT" firstAttribute="leading" secondItem="P2p-Ll-V6D" secondAttribute="leading" constant="20" id="zS4-uw-XIQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P2p-Ll-V6D"/>
                     </view>
-                    <navigationItem key="navigationItem" id="f25-CX-f2m"/>
+                    <navigationItem key="navigationItem" id="f25-CX-f2m">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="FPG-nO-yX0"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistLabel" destination="BjR-36-MtT" id="f02-EQ-jxj"/>
+                        <outlet property="boigraphyTextView" destination="IHO-lF-5jf" id="ihE-l8-LHh"/>
+                        <outlet property="saveButton" destination="FPG-nO-yX0" id="wjr-l4-yGl"/>
+                        <outlet property="searchBar" destination="opn-kR-p0Z" id="GKV-11-Ilv"/>
+                        <outlet property="yearFormed" destination="Fcq-6i-xhk" id="gdr-QG-I5t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUR-eH-xrf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

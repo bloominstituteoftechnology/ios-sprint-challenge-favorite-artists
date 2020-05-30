@@ -16,7 +16,9 @@
 		1739A6742482CD03003EDCAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A6732482CD03003EDCAB /* main.m */; };
 		1739A67D2482D921003EDCAB /* CLBArtists.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A67C2482D921003EDCAB /* CLBArtists.m */; };
 		1739A6812482DDA5003EDCAB /* CLBArtistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A6802482DDA5003EDCAB /* CLBArtistsController.m */; };
-		1739A6852482F187003EDCAB /* CLBArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A6842482F187003EDCAB /* CLBArtistsTableViewController.m */; };
+		1739A6892482F291003EDCAB /* CLBArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A6882482F291003EDCAB /* CLBArtist+NSJSONSerialization.m */; };
+		1739A68C2482F521003EDCAB /* CLBArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A68B2482F521003EDCAB /* CLBArtistDetailViewController.m */; };
+		1739A68F2482F653003EDCAB /* CLBArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A68E2482F653003EDCAB /* CLBArtistTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +38,12 @@
 		1739A67C2482D921003EDCAB /* CLBArtists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBArtists.m; sourceTree = "<group>"; };
 		1739A67F2482DDA5003EDCAB /* CLBArtistsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBArtistsController.h; sourceTree = "<group>"; };
 		1739A6802482DDA5003EDCAB /* CLBArtistsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBArtistsController.m; sourceTree = "<group>"; };
-		1739A6832482F187003EDCAB /* CLBArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBArtistsTableViewController.h; sourceTree = "<group>"; };
-		1739A6842482F187003EDCAB /* CLBArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBArtistsTableViewController.m; sourceTree = "<group>"; };
+		1739A6872482F291003EDCAB /* CLBArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLBArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		1739A6882482F291003EDCAB /* CLBArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CLBArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		1739A68A2482F521003EDCAB /* CLBArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBArtistDetailViewController.h; sourceTree = "<group>"; };
+		1739A68B2482F521003EDCAB /* CLBArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBArtistDetailViewController.m; sourceTree = "<group>"; };
+		1739A68D2482F653003EDCAB /* CLBArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBArtistTableViewController.h; sourceTree = "<group>"; };
+		1739A68E2482F653003EDCAB /* CLBArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBArtistTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		1739A6552482CD00003EDCAB = {
 			isa = PBXGroup;
 			children = (
+				1739A6862482F252003EDCAB /* Helper */,
 				1739A6822482F165003EDCAB /* Controllers */,
 				1739A67E2482DD85003EDCAB /* Model Controller */,
 				1739A67A2482D8EE003EDCAB /* Model */,
@@ -109,10 +116,21 @@
 		1739A6822482F165003EDCAB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1739A6832482F187003EDCAB /* CLBArtistsTableViewController.h */,
-				1739A6842482F187003EDCAB /* CLBArtistsTableViewController.m */,
+				1739A68A2482F521003EDCAB /* CLBArtistDetailViewController.h */,
+				1739A68B2482F521003EDCAB /* CLBArtistDetailViewController.m */,
+				1739A68D2482F653003EDCAB /* CLBArtistTableViewController.h */,
+				1739A68E2482F653003EDCAB /* CLBArtistTableViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1739A6862482F252003EDCAB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1739A6872482F291003EDCAB /* CLBArtist+NSJSONSerialization.h */,
+				1739A6882482F291003EDCAB /* CLBArtist+NSJSONSerialization.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,12 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1739A68F2482F653003EDCAB /* CLBArtistTableViewController.m in Sources */,
+				1739A68C2482F521003EDCAB /* CLBArtistDetailViewController.m in Sources */,
 				1739A6692482CD01003EDCAB /* ViewController.m in Sources */,
-				1739A6852482F187003EDCAB /* CLBArtistsTableViewController.m in Sources */,
 				1739A6632482CD01003EDCAB /* AppDelegate.m in Sources */,
 				1739A6812482DDA5003EDCAB /* CLBArtistsController.m in Sources */,
 				1739A67D2482D921003EDCAB /* CLBArtists.m in Sources */,
 				1739A6742482CD03003EDCAB /* main.m in Sources */,
+				1739A6892482F291003EDCAB /* CLBArtist+NSJSONSerialization.m in Sources */,
 				1739A6662482CD01003EDCAB /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,16 +1,16 @@
 //
-//  CLBArtistsTableViewController.h
+//  CLBArtistTableViewController.h
 //  Favorite Artists
 //
 //  Created by Christian Lorenzo on 5/30/20.
 //  Copyright © 2020 Christian Lorenzo. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CLBArtistsTableViewController : NSObject
+@interface CLBArtistTableViewController : UITableViewController
 
 @end
 

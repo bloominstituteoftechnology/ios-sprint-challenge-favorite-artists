@@ -23,7 +23,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
   return self;
 }
 //Fetch artists from search
-- (void)fetchArtistWithName:(NSString *)artistName completionBlock:(void (^)(SBAArtist * _Nullable, NSError * _Nullable))completionBlock
+- (void)fetchArtistWithName:(NSString *)artistName  completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock
 {
   NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
   
@@ -42,15 +42,39 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     
     //Parse JSON
     [self parseJSONData:data completionBlock:^(SBAArtist * _Nullable artist, NSError * _Nullable error) {
-      if (error) {
-        completionBlock(nil, error);
-        return;
-      }
-      completionBlock(artist, nil);
+            if (error) {
+                completionBlock(nil, error);
+                return;
+            }
+            completionBlock(artist, nil);
+        }];
     }];
-  }];
-  [task resume];
-  
+    [task resume];
+}
+
+//parse JSON Data Method
+- (void)parseJSONData:(NSData *)data
+      completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock {
+
+    NSError *jsonError = nil;
+
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+
+    if (jsonError) {
+        completionBlock(nil, jsonError);
+        return;
+    }
+
+    // FIXME: Create custom errors.
+    if ([json[@"artists"] isKindOfClass:[NSNull class]]) {
+        completionBlock(nil, [[NSError alloc] initWithDomain:@"domain" code:1 userInfo:nil]);
+        return;
+    }
+
+    SBAArtist *newArtist = [[SBAArtist alloc] initFromDictionary:json];
+    completionBlock(newArtist, nil);
+
+    return;
 }
 
 //TO DO setup persistence

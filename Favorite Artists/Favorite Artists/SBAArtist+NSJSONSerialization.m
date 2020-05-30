@@ -17,11 +17,11 @@
   
   NSString *artistName = artistsResultsDictionary[@"strArtist"];
   if ([artistName isKindOfClass:[NSNull class]]) { artistName = @"Artist was not found";}
-  else if (![artistName isKindOfClass:[NSString class]]) return nil;
-  
+//  else if (![artistName isKindOfClass:[NSString class]]) return nil;
+//
   NSString *artistBiography = artistsResultsDictionary[@"strBiographyEN"];
   if ([artistBiography isKindOfClass:[NSNull class]]) { artistBiography = @"Artist Bio was not found";}
-  else if (![artistBiography isKindOfClass:[NSString class]]) return nil;
+//  else if (![artistBiography isKindOfClass:[NSString class]]) return nil;
   
   NSString *artistYearFormed = artistsResultsDictionary[@"intFormedYear"];
   if ([artistYearFormed isKindOfClass:[NSNull class]]) { artistYearFormed = nil;}

@@ -26,13 +26,9 @@
   
     // create test Artist
   SBAArtist *testArtist = [[SBAArtist alloc] initWithArtistName:@"Bob Marley" biography:@"Jah Lives" yearFormed:1977];
+  [self.artistController.favoriteArtists addObject:testArtist];
   [self.tableView reloadData];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 #pragma mark - Table view data source
@@ -60,14 +56,15 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if ([segue.identifier isEqualToString:@"AddArtistsSegue"]) {
+  if ([segue.identifier isEqualToString:@"ViewArtistDetailSegue"]) {
     SBADetailSearchViewController *searchVC = [segue destinationViewController];
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//    searchVC.artist = self.artistController.favoriteArtists[indexPath.row];
-    
+    searchVC.artist = self.artistController.favoriteArtists[indexPath.row];
+    searchVC.artistController = self.artistController;
+  } else if ([segue.identifier isEqualToString:@"AddArtistsSegue"]){
+    SBADetailSearchViewController *detailsVC = [segue destinationViewController];
+    detailsVC.artistController = self.artistController;
   }
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
  
 

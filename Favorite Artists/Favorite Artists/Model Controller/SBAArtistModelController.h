@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+//fwd class declaraion
 @class SBAArtist;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -19,9 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
             completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
 
 - (void)parseJSONData:(NSData *)data
-            completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
+      completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
 
-//TO DO Load from persistence here
+//- (void)loadArtistsFromPersistence:(void (^)(NSError * _Nullable error))completionBlock;
 
 @end
 

@@ -24,7 +24,7 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
         return;
     }
     
-    NSURLSessionTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData *_Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error) {
         if (error) {
             completion(nil, error);
             return;
@@ -69,7 +69,7 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
     NSMutableArray *artists = [[NSMutableArray alloc] init];
     
     for (NSString *artist in filePath) {
-        NSString *artistForPath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents%@", artist];
+        NSString *artistForPath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", artist];
         NSURL *artistURL = [NSURL fileURLWithPath:artistForPath];
         
         NSData *artistData = [[NSData alloc] initWithContentsOfURL:artistURL];

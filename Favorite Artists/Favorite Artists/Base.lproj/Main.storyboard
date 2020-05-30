@@ -112,7 +112,11 @@
                         <viewLayoutGuide key="safeArea" id="P2p-Ll-V6D"/>
                     </view>
                     <navigationItem key="navigationItem" id="f25-CX-f2m">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="FPG-nO-yX0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="FPG-nO-yX0">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="Qfi-s1-WIP" id="8Jl-4p-87p"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistLabel" destination="BjR-36-MtT" id="f02-EQ-jxj"/>
@@ -124,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUR-eH-xrf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457.9710144927537" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1662" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tJ0-Pm-whr">

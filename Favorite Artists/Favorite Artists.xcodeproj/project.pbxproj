@@ -17,8 +17,8 @@
 		E04B1EA22481EB8F0075794D /* SBAArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EA12481EB8F0075794D /* SBAArtist.m */; };
 		E04B1EA62481F0110075794D /* SBAFavArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EA52481F0110075794D /* SBAFavArtistsTableViewController.m */; };
 		E04B1EA92481F0770075794D /* SBADetailSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EA82481F0770075794D /* SBADetailSearchViewController.m */; };
-		E04B1EB22481FA6A0075794D /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EB12481FA6A0075794D /* Artist.m */; };
 		E04B1EB82481FF9A0075794D /* SBAArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EB72481FF9A0075794D /* SBAArtist+NSJSONSerialization.m */; };
+		E04B1EBB248203670075794D /* SBAArtistModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1EBA248203670075794D /* SBAArtistModelController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +41,10 @@
 		E04B1EA52481F0110075794D /* SBAFavArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAFavArtistsTableViewController.m; sourceTree = "<group>"; };
 		E04B1EA72481F0770075794D /* SBADetailSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBADetailSearchViewController.h; sourceTree = "<group>"; };
 		E04B1EA82481F0770075794D /* SBADetailSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBADetailSearchViewController.m; sourceTree = "<group>"; };
-		E04B1EB12481FA6A0075794D /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 		E04B1EB62481FF9A0075794D /* SBAArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SBAArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		E04B1EB72481FF9A0075794D /* SBAArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SBAArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		E04B1EB9248203670075794D /* SBAArtistModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAArtistModelController.h; sourceTree = "<group>"; };
+		E04B1EBA248203670075794D /* SBAArtistModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAArtistModelController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +77,6 @@
 		E04B1E822481E9170075794D /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
-				E04B1EB12481FA6A0075794D /* Artist.m */,
 				E04B1E832481E9170075794D /* AppDelegate.h */,
 				E04B1E842481E9170075794D /* AppDelegate.m */,
 				E04B1E862481E9170075794D /* SceneDelegate.h */,
@@ -89,9 +89,8 @@
 				E04B1E942481E91D0075794D /* Info.plist */,
 				E04B1E9C2481E92E0075794D /* LSIFileHelper.h */,
 				E04B1E952481E91D0075794D /* main.m */,
-				E04B1EA02481EB8F0075794D /* SBAArtist.h */,
-				E04B1EA12481EB8F0075794D /* SBAArtist.m */,
 				E04B1EA32481ECBD0075794D /* Model */,
+				E04B1EBC2482036C0075794D /* Model Controller */,
 				E04B1EA42481F0110075794D /* SBAFavArtistsTableViewController.h */,
 				E04B1EA52481F0110075794D /* SBAFavArtistsTableViewController.m */,
 				E04B1EA72481F0770075794D /* SBADetailSearchViewController.h */,
@@ -105,8 +104,19 @@
 		E04B1EA32481ECBD0075794D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E04B1EA02481EB8F0075794D /* SBAArtist.h */,
+				E04B1EA12481EB8F0075794D /* SBAArtist.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E04B1EBC2482036C0075794D /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E04B1EB9248203670075794D /* SBAArtistModelController.h */,
+				E04B1EBA248203670075794D /* SBAArtistModelController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +195,9 @@
 				E04B1EA22481EB8F0075794D /* SBAArtist.m in Sources */,
 				E04B1E962481E91D0075794D /* main.m in Sources */,
 				E04B1E882481E9170075794D /* SceneDelegate.m in Sources */,
+				E04B1EBB248203670075794D /* SBAArtistModelController.m in Sources */,
 				E04B1EB82481FF9A0075794D /* SBAArtist+NSJSONSerialization.m in Sources */,
 				E04B1EA92481F0770075794D /* SBADetailSearchViewController.m in Sources */,
-				E04B1EB22481FA6A0075794D /* Artist.m in Sources */,
 				E04B1EA62481F0110075794D /* SBAFavArtistsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MYA9HNSTZ;
 				INFOPLIST_FILE = "Favorite Artists/Info.plist";
@@ -335,6 +346,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "sal.b.amer.Favorite-Artists";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MYA9HNSTZ;
 				INFOPLIST_FILE = "Favorite Artists/Info.plist";
@@ -352,6 +365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "sal.b.amer.Favorite-Artists";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

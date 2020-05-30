@@ -47,7 +47,7 @@
     } else if (self.artistResult) {
       self.searchBar.delegate = self;
       self.artistName.text = self.artistResult.name;
-      self.artistFormationLbl.text = self.artistResult.yearFormed == 1 ? @"No formation year found in DB." : [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+      self.artistFormationLbl.text = self.artistResult.yearFormed == 1 ? @"No formation year found in DB." : [NSString stringWithFormat:@"Formed in %d", self.artistResult.yearFormed];
       self.artistBioTextView.text = self.artistResult.biography;
     } else { // blank out results to start
       self.searchBar.delegate = self;

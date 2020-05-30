@@ -65,7 +65,6 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
         return;
     }
 
-    // FIXME: Create custom errors.
     if ([json[@"artists"] isKindOfClass:[NSNull class]]) {
         completionBlock(nil, [[NSError alloc] initWithDomain:@"domain" code:1 userInfo:nil]);
         return;

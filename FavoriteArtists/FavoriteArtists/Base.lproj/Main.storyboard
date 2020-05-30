@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="3la-Qn-lsT" kind="show" identifier="DetailSegue" id="ZW6-in-V85"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="N9a-fU-rAZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="spO-UU-nSh">
                             <connections>
-                                <segue destination="3la-Qn-lsT" kind="show" identifier="DetailSegue" id="pbd-by-mrP"/>
+                                <segue destination="3la-Qn-lsT" kind="show" identifier="AddSegue" id="pbd-by-mrP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -115,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ick-ff-IJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="723.1884057971015" y="-17.410714285714285"/>
+            <point key="canvasLocation" x="696" y="-17"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VA6-sz-43U">
@@ -134,4 +137,7 @@
             <point key="canvasLocation" x="-783" y="-17"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZW6-in-V85"/>
+    </inferredMetricsTieBreakers>
 </document>

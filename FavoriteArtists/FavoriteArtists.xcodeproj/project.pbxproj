@@ -69,11 +69,10 @@
 			isa = PBXGroup;
 			children = (
 				1F1E584E2482C5470073FC8F /* Model */,
-				1F1E582F2482BD230073FC8F /* AppDelegate.h */,
-				1F1E58502482D3F90073FC8F /* LSIArtistsController.h */,
-				1F1E58512482D3F90073FC8F /* LSIArtistsController.m */,
+				1F1E58532482D45F0073FC8F /* ModelControllers */,
 				1F1E58302482BD230073FC8F /* AppDelegate.m */,
 				1F1E58322482BD230073FC8F /* SceneDelegate.h */,
+				1F1E582F2482BD230073FC8F /* AppDelegate.h */,
 				1F1E58332482BD230073FC8F /* SceneDelegate.m */,
 				1F1E584F2482C8CC0073FC8F /* Helpers */,
 				1F1E58382482BD230073FC8F /* Main.storyboard */,
@@ -100,6 +99,15 @@
 				1F1E58482482C1B00073FC8F /* LSIFileHelper.h */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		1F1E58532482D45F0073FC8F /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F1E58502482D3F90073FC8F /* LSIArtistsController.h */,
+				1F1E58512482D3F90073FC8F /* LSIArtistsController.m */,
+			);
+			name = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

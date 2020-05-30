@@ -51,7 +51,7 @@
         self.searchBar.hidden = YES;
         self.title = self.artist.artist;
         
-        self.artistLabel.hidden = NO;
+        self.artistLabel.hidden = YES;
         self.yearFormed.hidden = NO;
         self.biographyTextView.hidden = NO;
         
@@ -60,7 +60,7 @@
         if (self.artist.yearFormed == 0) {
             self.yearFormed.text = @"N/A";
         } else {
-            self.yearFormed.text = [NSString stringWithFormat:@"Formed in $d", self.artist.yearFormed];
+            self.yearFormed.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
         }
         
         self.biographyTextView.text = self.artist.biography;
@@ -98,6 +98,24 @@
     }];
 }
 
-
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    
+    if (self.artistSearch == nil) {
+        return;
+    }
+    
+    [self.navigationController popToRootViewControllerAnimated:true];
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:[self.artistSearch toDictionary] options:0 error:nil];
+    NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+    
+    NSURL *url = [[directory URLByAppendingPathComponent:self.artistSearch.artist] URLByAppendingPathExtension: @"json"];
+    
+    NSLog(@"Directory: %@", directory);
+    NSLog(@"URL: %@", url);
+    
+    [data writeToURL:url atomically:YES];
+    
+}
 
 @end

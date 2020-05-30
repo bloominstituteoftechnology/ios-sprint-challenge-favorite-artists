@@ -113,7 +113,11 @@
                         <viewLayoutGuide key="safeArea" id="xU8-uo-gxb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="wqt-0f-dKa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="h3h-KS-KdH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="h3h-KS-KdH">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="3la-Qn-lsT" id="DOP-wc-qNA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistLabel" destination="3ub-qU-ZHx" id="OQN-tq-DrH"/>
@@ -125,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ick-ff-IJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698.55072463768124" y="-17.410714285714285"/>
+            <point key="canvasLocation" x="619" y="-17"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VA6-sz-43U">

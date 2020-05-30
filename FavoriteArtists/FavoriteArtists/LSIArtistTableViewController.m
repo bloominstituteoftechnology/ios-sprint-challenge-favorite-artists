@@ -54,8 +54,10 @@
     
     if (artist.yearFormed == 0) {
         cell.detailTextLabel.text = @"N/A";
+        cell.textLabel.text = artist.artist;
     } else {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+        cell.textLabel.text = artist.artist;
     }
     
     return cell;

@@ -18,6 +18,7 @@
 		129249032481FB8D0080488B /* DSCAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129249022481FB8D0080488B /* DSCAddArtistViewController.m */; };
 		129249062481FD930080488B /* DSCArtistControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129249052481FD930080488B /* DSCArtistControllerViewController.m */; };
 		129249092481FDAC0080488B /* DSCFetchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129249082481FDAC0080488B /* DSCFetchArtistViewController.m */; };
+		1292490F248204400080488B /* DSCArtist+DSCArtist_NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1292490E248204400080488B /* DSCArtist+DSCArtist_NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		129249052481FD930080488B /* DSCArtistControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCArtistControllerViewController.m; sourceTree = "<group>"; };
 		129249072481FDAC0080488B /* DSCFetchArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCFetchArtistViewController.h; sourceTree = "<group>"; };
 		129249082481FDAC0080488B /* DSCFetchArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCFetchArtistViewController.m; sourceTree = "<group>"; };
+		1292490D248204400080488B /* DSCArtist+DSCArtist_NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSCArtist+DSCArtist_NSJSONSerialization.h"; sourceTree = "<group>"; };
+		1292490E248204400080488B /* DSCArtist+DSCArtist_NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DSCArtist+DSCArtist_NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				129249052481FD930080488B /* DSCArtistControllerViewController.m */,
 				129249072481FDAC0080488B /* DSCFetchArtistViewController.h */,
 				129249082481FDAC0080488B /* DSCFetchArtistViewController.m */,
+				1292490D248204400080488B /* DSCArtist+DSCArtist_NSJSONSerialization.h */,
+				1292490E248204400080488B /* DSCArtist+DSCArtist_NSJSONSerialization.m */,
 				129248DB2481EAB60080488B /* Main.storyboard */,
 				129248DE2481EAB80080488B /* Assets.xcassets */,
 				129248E02481EAB80080488B /* LaunchScreen.storyboard */,
@@ -172,6 +177,7 @@
 				129249032481FB8D0080488B /* DSCAddArtistViewController.m in Sources */,
 				129248D42481EAB60080488B /* AppDelegate.m in Sources */,
 				129249002481FB6B0080488B /* DSCFavoriteArtistTableViewController.m in Sources */,
+				1292490F248204400080488B /* DSCArtist+DSCArtist_NSJSONSerialization.m in Sources */,
 				129249092481FDAC0080488B /* DSCFetchArtistViewController.m in Sources */,
 				129248E52481EAB80080488B /* main.m in Sources */,
 				129249062481FD930080488B /* DSCArtistControllerViewController.m in Sources */,

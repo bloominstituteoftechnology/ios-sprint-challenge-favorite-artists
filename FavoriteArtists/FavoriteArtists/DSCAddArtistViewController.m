@@ -9,6 +9,10 @@
 #import "DSCAddArtistViewController.h"
 
 @interface DSCAddArtistViewController ()
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
 
 @end
 
@@ -18,6 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+- (IBAction)saveButtonTapped:(id)sender {
+    
+}
+
 
 /*
 #pragma mark - Navigation

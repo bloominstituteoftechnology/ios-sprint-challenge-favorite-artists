@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		1F1E58312482BD230073FC8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E58302482BD230073FC8F /* AppDelegate.m */; };
 		1F1E58342482BD230073FC8F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E58332482BD230073FC8F /* SceneDelegate.m */; };
-		1F1E58372482BD230073FC8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E58362482BD230073FC8F /* ViewController.m */; };
 		1F1E583A2482BD230073FC8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E58382482BD230073FC8F /* Main.storyboard */; };
 		1F1E583C2482BD240073FC8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E583B2482BD240073FC8F /* Assets.xcassets */; };
 		1F1E583F2482BD240073FC8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E583D2482BD240073FC8F /* LaunchScreen.storyboard */; };
 		1F1E58422482BD240073FC8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E58412482BD240073FC8F /* main.m */; };
+		1F1E584A2482C1BC0073FC8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E58492482C1BC0073FC8F /* README.md */; };
+		1F1E584D2482C53B0073FC8F /* LSIArtists.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E584C2482C53B0073FC8F /* LSIArtists.m */; };
+		1F1E58522482D3F90073FC8F /* LSIArtistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E58512482D3F90073FC8F /* LSIArtistsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +24,17 @@
 		1F1E58302482BD230073FC8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1F1E58322482BD230073FC8F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		1F1E58332482BD230073FC8F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		1F1E58352482BD230073FC8F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1F1E58362482BD230073FC8F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1F1E58392482BD230073FC8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F1E583B2482BD240073FC8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F1E583E2482BD240073FC8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F1E58402482BD240073FC8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F1E58412482BD240073FC8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F1E58482482C1B00073FC8F /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		1F1E58492482C1BC0073FC8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1F1E584B2482C53B0073FC8F /* LSIArtists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtists.h; sourceTree = "<group>"; };
+		1F1E584C2482C53B0073FC8F /* LSIArtists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtists.m; sourceTree = "<group>"; };
+		1F1E58502482D3F90073FC8F /* LSIArtistsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistsController.h; sourceTree = "<group>"; };
+		1F1E58512482D3F90073FC8F /* LSIArtistsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 		1F1E58232482BD230073FC8F = {
 			isa = PBXGroup;
 			children = (
+				1F1E58492482C1BC0073FC8F /* README.md */,
 				1F1E582E2482BD230073FC8F /* FavoriteArtists */,
 				1F1E582D2482BD230073FC8F /* Products */,
 			);
@@ -61,12 +68,14 @@
 		1F1E582E2482BD230073FC8F /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				1F1E584E2482C5470073FC8F /* Model */,
 				1F1E582F2482BD230073FC8F /* AppDelegate.h */,
+				1F1E58502482D3F90073FC8F /* LSIArtistsController.h */,
+				1F1E58512482D3F90073FC8F /* LSIArtistsController.m */,
 				1F1E58302482BD230073FC8F /* AppDelegate.m */,
 				1F1E58322482BD230073FC8F /* SceneDelegate.h */,
 				1F1E58332482BD230073FC8F /* SceneDelegate.m */,
-				1F1E58352482BD230073FC8F /* ViewController.h */,
-				1F1E58362482BD230073FC8F /* ViewController.m */,
+				1F1E584F2482C8CC0073FC8F /* Helpers */,
 				1F1E58382482BD230073FC8F /* Main.storyboard */,
 				1F1E583B2482BD240073FC8F /* Assets.xcassets */,
 				1F1E583D2482BD240073FC8F /* LaunchScreen.storyboard */,
@@ -74,6 +83,23 @@
 				1F1E58412482BD240073FC8F /* main.m */,
 			);
 			path = FavoriteArtists;
+			sourceTree = "<group>";
+		};
+		1F1E584E2482C5470073FC8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F1E584B2482C53B0073FC8F /* LSIArtists.h */,
+				1F1E584C2482C53B0073FC8F /* LSIArtists.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1F1E584F2482C8CC0073FC8F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1F1E58482482C1B00073FC8F /* LSIFileHelper.h */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +161,7 @@
 			files = (
 				1F1E583F2482BD240073FC8F /* LaunchScreen.storyboard in Resources */,
 				1F1E583C2482BD240073FC8F /* Assets.xcassets in Resources */,
+				1F1E584A2482C1BC0073FC8F /* README.md in Resources */,
 				1F1E583A2482BD230073FC8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,8 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F1E58372482BD230073FC8F /* ViewController.m in Sources */,
 				1F1E58312482BD230073FC8F /* AppDelegate.m in Sources */,
+				1F1E58522482D3F90073FC8F /* LSIArtistsController.m in Sources */,
+				1F1E584D2482C53B0073FC8F /* LSIArtists.m in Sources */,
 				1F1E58422482BD240073FC8F /* main.m in Sources */,
 				1F1E58342482BD230073FC8F /* SceneDelegate.m in Sources */,
 			);

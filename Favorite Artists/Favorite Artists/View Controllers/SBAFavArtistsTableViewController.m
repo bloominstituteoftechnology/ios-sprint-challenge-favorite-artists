@@ -14,8 +14,6 @@
 
 @interface SBAFavArtistsTableViewController ()
 @property (nonatomic) SBAArtistModelController *artistController;
-
-
 @end
 
 @implementation SBAFavArtistsTableViewController
@@ -25,12 +23,20 @@
     self.artistController = [[SBAArtistModelController alloc] init];
   
     // create test Artist
-  SBAArtist *testArtist = [[SBAArtist alloc] initWithArtistName:@"Bob Marley" biography:@"Jah Lives" yearFormed:1977];
-  [self.artistController.favoriteArtists addObject:testArtist];
+//  SBAArtist *testArtist = [[SBAArtist alloc] initWithArtistName:@"Bob Marley" biography:@"Jah Lives" yearFormed:1977];
+//  [self.artistController.favoriteArtists addObject:testArtist];
   [self.tableView reloadData];
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+  for (SBAArtist *artist in self.artistController.favoriteArtists) {
+    [self.tableView reloadData];
+    //save to persistance
+  }
+}
+ 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -50,8 +56,6 @@
   return cell;
 }
 
-
- 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

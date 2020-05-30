@@ -60,7 +60,6 @@
 }
 
 //Setup Search
-
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
   [self.artistController fetchArtistWithName:searchBar.text completionBlock:^(SBAArtist * _Nullable artist, NSError * _Nullable error) {
     if (error) {
@@ -89,9 +88,8 @@
 
 - (IBAction)saveButtnPressed:(id)sender {
   if (self.artistResult) {
-    [self.artistController.favoriteArtists addObject:self.artistResult];
-    [self.navigationController popToRootViewControllerAnimated:true];
-  }
-  
+     [self.artistController.favoriteArtists addObject:self.artistResult];
+     [self.navigationController popToRootViewControllerAnimated:true];
+  }  
 }
 @end

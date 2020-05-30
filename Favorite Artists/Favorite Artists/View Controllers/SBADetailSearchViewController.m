@@ -31,8 +31,50 @@
 @implementation SBADetailSearchViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+  [self updateViews];
+}
+
+- (void)updateViews {
+  dispatch_async(dispatch_get_main_queue(), ^{
+    if (self.artist) {
+      [self.saveBtn setEnabled:false];
+      [self.searchBar setHidden:true];
+      [self setTitle:[NSString stringWithFormat:@"%@", self.artist.name]];
+      self.artistName.text = self.artist.name;
+      self.artistFormationLbl.text = self.artist.yearFormed == 1 ? @"No formation year found in DB." : [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+      self.artistBioTextView.text = self.artist.biography;
+    } else if (self.artistResult) {
+      self.searchBar.delegate = self;
+      self.artistName.text = self.artistResult.name;
+      self.artistFormationLbl.text = self.artistResult.yearFormed == 1 ? @"No formation year found in DB." : [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+      self.artistBioTextView.text = self.artistResult.biography;
+    } else { // blank out results to start
+      self.searchBar.delegate = self;
+      self.searchBar.text = @"Search for artist";
+      self.artistName.text = @"";
+      self.artistFormationLbl.text = @"";
+      self.artistBioTextView.text = @"";
+    }
+  });
+}
+
+//Setup Search
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+  [self.artistController fetchArtistWithName:searchBar.text completionBlock:^(SBAArtist * _Nullable artist, NSError * _Nullable error) {
+    if (error) {
+      dispatch_async(dispatch_get_main_queue(), ^{
+        [self.artistName setHidden:false];
+        [self.artistFormationLbl setHidden:false];
+        self.artistName.text = @"Error fetching artist name from DB.";
+        self.artistFormationLbl.text = @"Error fetching artist formation year.";
+      });
+      return;
+    }
+    self.artistResult = artist;
+    [self updateViews];
+  }];
 }
 
 /*

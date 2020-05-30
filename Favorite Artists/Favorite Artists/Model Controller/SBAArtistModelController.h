@@ -16,13 +16,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSMutableArray<SBAArtist *> *favoriteArtists;
 
+//create array for savedArtists
+@property (nonatomic,readonly) NSArray *savedArtists;
+
+
 - (void)fetchArtistWithName:(NSString *)artistName
             completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
 
 - (void)parseJSONData:(NSData *)data
       completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
 
-//- (void)loadArtistsFromPersistence:(void (^)(NSError * _Nullable error))completionBlock;
+- (void)loadFromPersistentStore;
+
+- (void)saveArtist:(SBAArtist *)artist;
 
 @end
 

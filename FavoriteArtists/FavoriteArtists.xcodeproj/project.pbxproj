@@ -18,6 +18,7 @@
 		1F1E58522482D3F90073FC8F /* LSIArtistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E58512482D3F90073FC8F /* LSIArtistsController.m */; };
 		1F1E58562482F16E0073FC8F /* LSIArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E58552482F16E0073FC8F /* LSIArtistTableViewController.m */; };
 		1F1E585A2482F2750073FC8F /* LSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E58592482F2750073FC8F /* LSIArtist+NSJSONSerialization.m */; };
+		1F1E585D2482F4C60073FC8F /* ArtistsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E585C2482F4C60073FC8F /* ArtistsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		1F1E58552482F16E0073FC8F /* LSIArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistTableViewController.m; sourceTree = "<group>"; };
 		1F1E58582482F2750073FC8F /* LSIArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSIArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		1F1E58592482F2750073FC8F /* LSIArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LSIArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		1F1E585B2482F4C60073FC8F /* LSIArtistsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistsDetailViewController.h; sourceTree = "<group>"; };
+		1F1E585C2482F4C60073FC8F /* ArtistsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 			children = (
 				1F1E58542482F16E0073FC8F /* LSIArtistTableViewController.h */,
 				1F1E58552482F16E0073FC8F /* LSIArtistTableViewController.m */,
+				1F1E585B2482F4C60073FC8F /* LSIArtistsDetailViewController.h */,
+				1F1E585C2482F4C60073FC8F /* ArtistsDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				1F1E58312482BD230073FC8F /* AppDelegate.m in Sources */,
 				1F1E58522482D3F90073FC8F /* LSIArtistsController.m in Sources */,
 				1F1E584D2482C53B0073FC8F /* LSIArtists.m in Sources */,
+				1F1E585D2482F4C60073FC8F /* ArtistsDetailViewController.m in Sources */,
 				1F1E58422482BD240073FC8F /* main.m in Sources */,
 				1F1E58342482BD230073FC8F /* SceneDelegate.m in Sources */,
 				1F1E58562482F16E0073FC8F /* LSIArtistTableViewController.m in Sources */,

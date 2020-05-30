@@ -10,13 +10,13 @@
         <!--Favorite Artists-->
         <scene sceneID="kEi-6d-P9b">
             <objects>
-                <tableViewController id="BdU-b9-whC" sceneMemberID="viewController">
+                <tableViewController id="BdU-b9-whC" customClass="LSIArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NdX-0P-sBR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistsCell" textLabel="rkZ-JD-nwL" detailTextLabel="7Ql-0r-HOI" style="IBUITableViewCellStyleSubtitle" id="cwi-Fj-fBH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="rkZ-JD-nwL" detailTextLabel="7Ql-0r-HOI" style="IBUITableViewCellStyleSubtitle" id="cwi-Fj-fBH">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cwi-Fj-fBH" id="7MT-FF-sHO">
@@ -59,12 +59,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIW-Dn-LPG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="-17"/>
+            <point key="canvasLocation" x="-46" y="-17"/>
         </scene>
         <!--Add New Artist-->
         <scene sceneID="b0V-gR-muH">
             <objects>
-                <viewController id="3la-Qn-lsT" sceneMemberID="viewController">
+                <viewController id="3la-Qn-lsT" customClass="LSIArtistsDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQ8-2n-1h0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ub-qU-ZHx">
-                                <rect key="frame" x="20" y="193" width="186" height="41"/>
+                                <rect key="frame" x="20" y="193" width="361" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -107,7 +107,7 @@
                             <constraint firstItem="3ub-qU-ZHx" firstAttribute="leading" secondItem="rQ8-2n-1h0" secondAttribute="leadingMargin" id="Zbp-1Y-pdL"/>
                             <constraint firstItem="zAL-yD-374" firstAttribute="leading" secondItem="r3B-fe-kjX" secondAttribute="leading" id="a5B-n9-rXw"/>
                             <constraint firstItem="0Zu-iZ-81r" firstAttribute="leading" secondItem="xU8-uo-gxb" secondAttribute="leading" id="dVe-Wj-26Q"/>
-                            <constraint firstItem="xU8-uo-gxb" firstAttribute="trailing" secondItem="3ub-qU-ZHx" secondAttribute="trailing" constant="208" id="ius-p2-iPm"/>
+                            <constraint firstItem="xU8-uo-gxb" firstAttribute="trailing" secondItem="3ub-qU-ZHx" secondAttribute="trailing" constant="33" id="ius-p2-iPm"/>
                             <constraint firstItem="3ub-qU-ZHx" firstAttribute="top" secondItem="0Zu-iZ-81r" secondAttribute="bottom" constant="6" id="pNv-7E-6cn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xU8-uo-gxb"/>
@@ -115,10 +115,17 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="wqt-0f-dKa">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="h3h-KS-KdH"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistLabel" destination="3ub-qU-ZHx" id="OQN-tq-DrH"/>
+                        <outlet property="biographyTextView" destination="r3B-fe-kjX" id="WhV-U0-DS3"/>
+                        <outlet property="saveButton" destination="h3h-KS-KdH" id="Q1g-Ky-fSr"/>
+                        <outlet property="searchBar" destination="0Zu-iZ-81r" id="71P-xF-aCd"/>
+                        <outlet property="yearFormed" destination="zAL-yD-374" id="6dp-wl-sYR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ick-ff-IJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="-17"/>
+            <point key="canvasLocation" x="698.55072463768124" y="-17.410714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VA6-sz-43U">
@@ -138,6 +145,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZW6-in-V85"/>
+        <segue reference="pbd-by-mrP"/>
     </inferredMetricsTieBreakers>
 </document>

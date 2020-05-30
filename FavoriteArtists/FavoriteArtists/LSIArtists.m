@@ -27,7 +27,7 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     NSString *artist = dictionary[@"strArtist"];
     
-    NSString *biography = dictionary[@"strBiographuEN"];
+    NSString *biography = dictionary[@"strBiographyEN"];
     
     NSNumber *yearFormedNS = dictionary[@"intFormedYear"];
     

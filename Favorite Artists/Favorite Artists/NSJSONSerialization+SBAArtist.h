@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSJSONSerialization (SBAArtist)
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+- (NSDictionary *)toDictionary;
+
+//TODO Add persistence
+- (BOOL)saveToPersistence;
+
 @end
 
 NS_ASSUME_NONNULL_END

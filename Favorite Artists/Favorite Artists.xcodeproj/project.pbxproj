@@ -91,10 +91,7 @@
 				E04B1E952481E91D0075794D /* main.m */,
 				E04B1EA32481ECBD0075794D /* Model */,
 				E04B1EBC2482036C0075794D /* Model Controller */,
-				E04B1EA42481F0110075794D /* SBAFavArtistsTableViewController.h */,
-				E04B1EA52481F0110075794D /* SBAFavArtistsTableViewController.m */,
-				E04B1EA72481F0770075794D /* SBADetailSearchViewController.h */,
-				E04B1EA82481F0770075794D /* SBADetailSearchViewController.m */,
+				E04B1EBD24820AC10075794D /* View Controllers */,
 				E04B1EB62481FF9A0075794D /* SBAArtist+NSJSONSerialization.h */,
 				E04B1EB72481FF9A0075794D /* SBAArtist+NSJSONSerialization.m */,
 			);
@@ -117,6 +114,17 @@
 				E04B1EBA248203670075794D /* SBAArtistModelController.m */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		E04B1EBD24820AC10075794D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E04B1EA42481F0110075794D /* SBAFavArtistsTableViewController.h */,
+				E04B1EA52481F0110075794D /* SBAFavArtistsTableViewController.m */,
+				E04B1EA72481F0770075794D /* SBADetailSearchViewController.h */,
+				E04B1EA82481F0770075794D /* SBADetailSearchViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

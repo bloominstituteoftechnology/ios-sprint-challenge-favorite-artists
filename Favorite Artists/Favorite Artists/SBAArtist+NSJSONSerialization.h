@@ -1,23 +1,24 @@
 //
-//  NSJSONSerialization+SBAArtist.h
+//  SBAArtist+NSJSONSerialization.h
 //  Favorite Artists
 //
 //  Created by Sal B Amer on 5/29/20.
 //  Copyright © 2020 Sal B AmerDEv. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "SBAArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSJSONSerialization (SBAArtist)
+@interface SBAArtist (NSJSONSerialization)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+- (instancetype)initFromDictionary:(NSDictionary *)dictionary;
 
 - (NSDictionary *)toDictionary;
 
 //TODO Add persistence
-- (BOOL)saveToPersistence;
+
 
 @end
 

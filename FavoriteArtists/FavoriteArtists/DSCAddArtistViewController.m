@@ -7,8 +7,11 @@
 //
 
 #import "DSCAddArtistViewController.h"
+#import "DSCFetchArtist.h"
+#import "DSCArtist.h"
 
 @interface DSCAddArtistViewController ()
+
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
@@ -20,22 +23,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.searchBar setDelegate:self];
+    
+    //testing fetch request
+    NSString *searchedArtistName = @"coldplay";
+    
+    DSCFetchArtist *fetcher = [[DSCFetchArtist alloc]init];
+    [fetcher fetchArtist:searchedArtistName completion:^(DSCArtist * _Nullable artist, NSError * _Nullable error) {
+        NSLog(@"Got this artist: %@", artist);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.artistNameLabel.text = artist.name;
+            self.bioTextView.text = artist.biography;
+            self.yearLabel.text = [NSString stringWithFormat:@"%d", artist.year];
+        });
+    }];
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
     
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

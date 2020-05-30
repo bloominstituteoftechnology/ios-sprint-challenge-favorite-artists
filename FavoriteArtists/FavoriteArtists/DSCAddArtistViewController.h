@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class DSCArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DSCAddArtistViewController : UIViewController
+@interface DSCAddArtistViewController : UIViewController <UISearchBarDelegate>
+
+@property DSCArtist *artist;
 
 @end
 

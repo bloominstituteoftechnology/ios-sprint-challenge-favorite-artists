@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)fetchArtistWithName:(NSString *)artistName
             completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
 
+- (void)parseJSONData:(NSData *)data
+            completionBlock:(void (^)(SBAArtist * _Nullable artist, NSError * _Nullable error))completionBlock;
+
 //TO DO Load from persistence here
 
 @end

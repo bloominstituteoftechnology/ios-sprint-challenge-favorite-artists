@@ -8,7 +8,7 @@
 
 #import "ArtistDetailViewController.h"
 
-@interface ArtistDetailViewController ()
+@interface ArtistDetailViewController () <UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.searchBar.delegate = self;
 }
 
 /*

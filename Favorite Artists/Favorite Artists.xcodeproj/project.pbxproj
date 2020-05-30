@@ -16,6 +16,7 @@
 		1739A6742482CD03003EDCAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A6732482CD03003EDCAB /* main.m */; };
 		1739A67D2482D921003EDCAB /* CLBArtists.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A67C2482D921003EDCAB /* CLBArtists.m */; };
 		1739A6812482DDA5003EDCAB /* CLBArtistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A6802482DDA5003EDCAB /* CLBArtistsController.m */; };
+		1739A6852482F187003EDCAB /* CLBArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739A6842482F187003EDCAB /* CLBArtistsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		1739A67C2482D921003EDCAB /* CLBArtists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBArtists.m; sourceTree = "<group>"; };
 		1739A67F2482DDA5003EDCAB /* CLBArtistsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBArtistsController.h; sourceTree = "<group>"; };
 		1739A6802482DDA5003EDCAB /* CLBArtistsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBArtistsController.m; sourceTree = "<group>"; };
+		1739A6832482F187003EDCAB /* CLBArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBArtistsTableViewController.h; sourceTree = "<group>"; };
+		1739A6842482F187003EDCAB /* CLBArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBArtistsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 		1739A6552482CD00003EDCAB = {
 			isa = PBXGroup;
 			children = (
+				1739A6822482F165003EDCAB /* Controllers */,
 				1739A67E2482DD85003EDCAB /* Model Controller */,
 				1739A67A2482D8EE003EDCAB /* Model */,
 				1739A6602482CD01003EDCAB /* Favorite Artists */,
@@ -100,6 +104,15 @@
 				1739A6802482DDA5003EDCAB /* CLBArtistsController.m */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		1739A6822482F165003EDCAB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1739A6832482F187003EDCAB /* CLBArtistsTableViewController.h */,
+				1739A6842482F187003EDCAB /* CLBArtistsTableViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1739A6692482CD01003EDCAB /* ViewController.m in Sources */,
+				1739A6852482F187003EDCAB /* CLBArtistsTableViewController.m in Sources */,
 				1739A6632482CD01003EDCAB /* AppDelegate.m in Sources */,
 				1739A6812482DDA5003EDCAB /* CLBArtistsController.m in Sources */,
 				1739A67D2482D921003EDCAB /* CLBArtists.m in Sources */,

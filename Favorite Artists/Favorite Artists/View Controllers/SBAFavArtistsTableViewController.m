@@ -23,17 +23,24 @@
     self.artistController = [[SBAArtistModelController alloc] init];
   
     // create test Artist
-  SBAArtist *testArtist = [[SBAArtist alloc] initWithArtistName:@"Bob Marley" biography:@"Dummy data to check if working..Jah Lives" yearFormed:1974];
-  [self.artistController.favoriteArtists addObject:testArtist];
+//  SBAArtist *testArtist = [[SBAArtist alloc] initWithArtistName:@"Bob Marley" biography:@"Dummy data to check if working..Jah Lives" yearFormed:1974];
+//  [self.artistController.favoriteArtists addObject:testArtist];
+  [self.artistController loadFromPersistence:^(NSError * _Nullable error) {
+    if (error) {
+      NSLog(@"Error Loading files: %@", error);
+      return;
+    }
+    [self.tableView reloadData];
+  }];
   [self.tableView reloadData];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.tableView reloadData];
   for (SBAArtist *artist in self.artistController.favoriteArtists) {
+//    [artist ]
     [self.tableView reloadData];
-    //save to persistance store here
+    
   }
 }
  

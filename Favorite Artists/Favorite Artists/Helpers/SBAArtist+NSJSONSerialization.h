@@ -6,18 +6,17 @@
 //  Copyright © 2020 Sal B AmerDEv. All rights reserved.
 //
 
-#import "SBAArtist.h"
+#import "../Model/SBAArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SBAArtist (NSJSONSerialization)
 
-
 - (instancetype)initFromDictionary:(NSDictionary *)dictionary;
 
 - (NSDictionary *)toDictionary;
 
-//TODO Add persistence
+- (BOOL)saveToPersistence;
 
 
 @end

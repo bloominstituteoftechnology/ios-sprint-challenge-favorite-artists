@@ -7,8 +7,8 @@
 //
 
 #import "SBADetailSearchViewController.h"
-#import "SBAArtistModelController.h"
-#import "SBAArtist.h"
+#import "../Model Controller/SBAArtistModelController.h"
+#import "../Model/SBAArtist.h"
 
 // add search bar delegate
 @interface SBADetailSearchViewController () <UISearchBarDelegate>

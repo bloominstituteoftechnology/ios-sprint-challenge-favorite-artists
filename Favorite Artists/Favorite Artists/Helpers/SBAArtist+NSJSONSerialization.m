@@ -29,8 +29,8 @@
   self = [[SBAArtist alloc] initWithArtistName:artistName biography:artistBiography yearFormed:artistYearFormed == nil ? 1 : artistYearFormed.intValue];  //incase year formed is nil
   return self;
 }
-//Add a method that returns your model object as a NSDictionary (to save artists).
 
+//Add a method that returns your model object as a NSDictionary (to save artists).
 - (NSDictionary *)toDictionary {
   NSMutableDictionary *dictionaryContainer = [[NSMutableDictionary alloc] init];
   NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];

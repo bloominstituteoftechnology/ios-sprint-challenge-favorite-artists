@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) int yearFormed;
 
 - (instancetype)initWithName:(NSString *)artistName biography:(NSString *)artistBiography yearFormed:(int)yearFormed;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

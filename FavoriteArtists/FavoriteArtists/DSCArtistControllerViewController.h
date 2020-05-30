@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DSCArtistControllerViewController.h
 //  FavoriteArtists
 //
 //  Created by denis cedeno on 5/29/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface DSCArtistControllerViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

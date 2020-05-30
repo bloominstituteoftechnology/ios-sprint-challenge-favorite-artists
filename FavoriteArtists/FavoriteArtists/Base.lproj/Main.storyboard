@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="NEN-xg-pAk">
             <objects>
-                <tableViewController id="AkJ-SG-TVx" sceneMemberID="viewController">
+                <tableViewController id="AkJ-SG-TVx" customClass="DSCFavoriteArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bkz-ef-ulN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
         <!--Add New Artist-->
         <scene sceneID="hg5-z5-erU">
             <objects>
-                <viewController id="CHL-Xy-Ygp" sceneMemberID="viewController">
+                <viewController id="CHL-Xy-Ygp" customClass="DSCAddArtistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FWZ-aY-nVI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxw-eC-UYw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791" y="157"/>
+            <point key="canvasLocation" x="1743" y="157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v66-2l-1SP">
@@ -102,7 +102,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cs1-Fm-j9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84.057971014492765" y="155.35714285714286"/>
+            <point key="canvasLocation" x="233" y="157"/>
         </scene>
     </scenes>
 </document>

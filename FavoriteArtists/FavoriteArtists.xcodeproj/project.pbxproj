@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		129248D42481EAB60080488B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 129248D32481EAB60080488B /* AppDelegate.m */; };
 		129248D72481EAB60080488B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 129248D62481EAB60080488B /* SceneDelegate.m */; };
-		129248DA2481EAB60080488B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129248D92481EAB60080488B /* ViewController.m */; };
 		129248DD2481EAB60080488B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129248DB2481EAB60080488B /* Main.storyboard */; };
 		129248DF2481EAB80080488B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 129248DE2481EAB80080488B /* Assets.xcassets */; };
 		129248E22481EAB80080488B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129248E02481EAB80080488B /* LaunchScreen.storyboard */; };
 		129248E52481EAB80080488B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 129248E42481EAB80080488B /* main.m */; };
-		129248EE2481EBBF0080488B /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 129248ED2481EBBF0080488B /* Artist.m */; };
+		129248FD2481FAFA0080488B /* DSCArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 129248FC2481FAFA0080488B /* DSCArtist.m */; };
+		129249002481FB6B0080488B /* DSCFavoriteArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129248FF2481FB6B0080488B /* DSCFavoriteArtistTableViewController.m */; };
+		129249032481FB8D0080488B /* DSCAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129249022481FB8D0080488B /* DSCAddArtistViewController.m */; };
+		129249062481FD930080488B /* DSCArtistControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129249052481FD930080488B /* DSCArtistControllerViewController.m */; };
+		129249092481FDAC0080488B /* DSCFetchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129249082481FDAC0080488B /* DSCFetchArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +26,22 @@
 		129248D32481EAB60080488B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		129248D52481EAB60080488B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		129248D62481EAB60080488B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		129248D82481EAB60080488B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		129248D92481EAB60080488B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		129248DC2481EAB60080488B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		129248DE2481EAB80080488B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		129248E12481EAB80080488B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		129248E32481EAB80080488B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		129248E42481EAB80080488B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		129248EB2481EB190080488B /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
-		129248EC2481EBBF0080488B /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
-		129248ED2481EBBF0080488B /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		129248FB2481FAFA0080488B /* DSCArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCArtist.h; sourceTree = "<group>"; };
+		129248FC2481FAFA0080488B /* DSCArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCArtist.m; sourceTree = "<group>"; };
+		129248FE2481FB6B0080488B /* DSCFavoriteArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCFavoriteArtistTableViewController.h; sourceTree = "<group>"; };
+		129248FF2481FB6B0080488B /* DSCFavoriteArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCFavoriteArtistTableViewController.m; sourceTree = "<group>"; };
+		129249012481FB8D0080488B /* DSCAddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCAddArtistViewController.h; sourceTree = "<group>"; };
+		129249022481FB8D0080488B /* DSCAddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCAddArtistViewController.m; sourceTree = "<group>"; };
+		129249042481FD930080488B /* DSCArtistControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCArtistControllerViewController.h; sourceTree = "<group>"; };
+		129249052481FD930080488B /* DSCArtistControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCArtistControllerViewController.m; sourceTree = "<group>"; };
+		129249072481FDAC0080488B /* DSCFetchArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCFetchArtistViewController.h; sourceTree = "<group>"; };
+		129249082481FDAC0080488B /* DSCFetchArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCFetchArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +78,16 @@
 				129248D32481EAB60080488B /* AppDelegate.m */,
 				129248D52481EAB60080488B /* SceneDelegate.h */,
 				129248D62481EAB60080488B /* SceneDelegate.m */,
-				129248D82481EAB60080488B /* ViewController.h */,
-				129248D92481EAB60080488B /* ViewController.m */,
-				129248EC2481EBBF0080488B /* Artist.h */,
-				129248ED2481EBBF0080488B /* Artist.m */,
+				129248FE2481FB6B0080488B /* DSCFavoriteArtistTableViewController.h */,
+				129248FF2481FB6B0080488B /* DSCFavoriteArtistTableViewController.m */,
+				129249012481FB8D0080488B /* DSCAddArtistViewController.h */,
+				129249022481FB8D0080488B /* DSCAddArtistViewController.m */,
+				129248FB2481FAFA0080488B /* DSCArtist.h */,
+				129248FC2481FAFA0080488B /* DSCArtist.m */,
+				129249042481FD930080488B /* DSCArtistControllerViewController.h */,
+				129249052481FD930080488B /* DSCArtistControllerViewController.m */,
+				129249072481FDAC0080488B /* DSCFetchArtistViewController.h */,
+				129249082481FDAC0080488B /* DSCFetchArtistViewController.m */,
 				129248DB2481EAB60080488B /* Main.storyboard */,
 				129248DE2481EAB80080488B /* Assets.xcassets */,
 				129248E02481EAB80080488B /* LaunchScreen.storyboard */,
@@ -109,6 +124,7 @@
 		129248C72481EAB60080488B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DSC;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "DenCedeno Co.";
 				TargetAttributes = {
@@ -153,11 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				129248DA2481EAB60080488B /* ViewController.m in Sources */,
+				129249032481FB8D0080488B /* DSCAddArtistViewController.m in Sources */,
 				129248D42481EAB60080488B /* AppDelegate.m in Sources */,
+				129249002481FB6B0080488B /* DSCFavoriteArtistTableViewController.m in Sources */,
+				129249092481FDAC0080488B /* DSCFetchArtistViewController.m in Sources */,
 				129248E52481EAB80080488B /* main.m in Sources */,
+				129249062481FD930080488B /* DSCArtistControllerViewController.m in Sources */,
 				129248D72481EAB60080488B /* SceneDelegate.m in Sources */,
-				129248EE2481EBBF0080488B /* Artist.m in Sources */,
+				129248FD2481FAFA0080488B /* DSCArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

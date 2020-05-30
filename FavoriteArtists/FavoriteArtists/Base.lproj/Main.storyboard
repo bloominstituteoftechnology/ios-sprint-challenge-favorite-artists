@@ -52,19 +52,21 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="2Lx-B7-7iN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3O3-iB-Jbd">
                             <connections>
+                                <action selector="addArtistButtonTapped:" destination="17a-eu-uv5" id="GrN-6D-YMn"/>
                                 <segue destination="rej-Mk-WSS" kind="show" identifier="SearchArtistSegue" id="HlL-s8-Y8A"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdL-Oi-Cqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="17a-eu-uv5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1272" y="123"/>
         </scene>
         <!--Add New Artist-->
         <scene sceneID="xYo-sw-z2k">
             <objects>
-                <viewController id="rej-Mk-WSS" sceneMemberID="viewController">
+                <viewController id="rej-Mk-WSS" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HdE-Xm-QTn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,8 +113,18 @@
                         <viewLayoutGuide key="safeArea" id="AMj-2b-nHC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="xWa-rt-CPJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="p92-EZ-GpE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="p92-EZ-GpE">
+                            <connections>
+                                <action selector="saveTapped:" destination="rej-Mk-WSS" id="D7l-VI-KlZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="HF2-yL-CV9" id="UhH-9o-xZ2"/>
+                        <outlet property="biographyLabel" destination="2mn-om-pWu" id="XSK-7H-g9k"/>
+                        <outlet property="searchBar" destination="Zsl-1E-DOl" id="j14-9Z-YvS"/>
+                        <outlet property="yearFormedLabel" destination="sx0-7Q-ae2" id="tSQ-aU-Udh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SmL-LD-oe0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

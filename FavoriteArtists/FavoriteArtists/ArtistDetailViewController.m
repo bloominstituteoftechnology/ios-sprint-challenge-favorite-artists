@@ -7,6 +7,8 @@
 //
 
 #import "ArtistDetailViewController.h"
+#import "ArtistFetcher.h"
+#import "Artist.h"
 
 @interface ArtistDetailViewController () <UISearchBarDelegate>
 
@@ -15,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *biographyLabel;
 
+
+
 @end
 
 @implementation ArtistDetailViewController
@@ -22,6 +26,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.searchBar.delegate = self;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSString *name = searchBar.text;
+    ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
+    [fetcher fetchArtistWithName:name
+               completionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
+        NSLog(@"");
+    }];
 }
 
 /*

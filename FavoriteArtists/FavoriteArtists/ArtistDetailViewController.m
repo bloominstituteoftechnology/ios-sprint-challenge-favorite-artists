@@ -17,6 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *biographyLabel;
 
+@property (nonatomic) Artist *artist;
+
+- (void)updateViews;
+
 @end
 
 @implementation ArtistDetailViewController
@@ -24,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.searchBar.delegate = self;
+//    [self updateViews];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -32,10 +37,17 @@
     ArtistFetcher *fetcher = [[ArtistFetcher alloc] init];
     [fetcher fetchArtistWithName:name
                completionHandler:^(Artist * _Nullable artist, NSError * _Nullable error) {
-        NSLog(@"");
+        self.artist = artist;
+        [self updateViews];
     }];
 }
 
+- (void)updateViews
+{
+    _artistNameLabel.text = self.artist.artistName;
+    _yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+    _biographyLabel.text = self.artist.artistBiography;
+}
 /*
 #pragma mark - Navigation
 

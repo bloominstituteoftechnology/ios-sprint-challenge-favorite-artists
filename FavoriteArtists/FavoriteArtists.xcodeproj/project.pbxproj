@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		956AA7D8248445D50057C0D0 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 956AA7D7248445D50057C0D0 /* Artist.json */; };
 		95C8621D2481E996002B318E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8621C2481E996002B318E /* AppDelegate.m */; };
 		95C862202481E996002B318E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8621F2481E996002B318E /* SceneDelegate.m */; };
 		95C862262481E996002B318E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C862242481E996002B318E /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		956AA7D7248445D50057C0D0 /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
 		95C862182481E996002B318E /* FavoriteArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C8621B2481E996002B318E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		95C8621C2481E996002B318E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				95C862292481E996002B318E /* LaunchScreen.storyboard */,
 				95C8622C2481E996002B318E /* Info.plist */,
 				95C8622D2481E996002B318E /* main.m */,
+				956AA7D7248445D50057C0D0 /* Artist.json */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			files = (
 				95C8622B2481E996002B318E /* LaunchScreen.storyboard in Resources */,
 				95C862282481E996002B318E /* Assets.xcassets in Resources */,
+				956AA7D8248445D50057C0D0 /* Artist.json in Resources */,
 				95C862262481E996002B318E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

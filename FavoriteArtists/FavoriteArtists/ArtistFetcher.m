@@ -10,17 +10,18 @@
 #import "Artist.h"
 
 //static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=macklemore";
-static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
+static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api/v1/json/1";
 
 
 @implementation ArtistFetcher
 
 - (void)fetchArtistWithName:(NSString *)name completionHandler:(nonnull ArtistFetcherCompletionHandler)completionHandler
 {
-    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:ArtistFetcherURLString];
-    urlComponents.queryItems = @[
-        [NSURLQueryItem queryItemWithName:@"strArtist" value:name],
-    ];
+    NSURL *baseURL = [[[NSURL alloc] initWithString:ArtistFetcherURLString] URLByAppendingPathComponent:@"/search.php"];
+    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithURL:baseURL resolvingAgainstBaseURL:YES];
+
+//    urlComponents.path = @"/search.php";
+    urlComponents.query = [NSString stringWithFormat:@"s=%@",name.lowercaseString];
 
     NSURL *url = urlComponents.URL;
     NSLog(@"Fetching Artists: %@", url);
@@ -29,13 +30,15 @@ static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api
                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
             NSLog(@"Error fetching artist: %@", error);
-
             dispatch_async(dispatch_get_main_queue(), ^{
                 completionHandler(nil, error);
             });
             return;
         }
-
+        if (!data) {
+            NSLog(@"Data should not be nil.");
+            return;
+        }
         NSError *jsonError;
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         if (!dictionary) {
@@ -48,7 +51,10 @@ static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api
             return;
         }
 
-        Artist *result = [[Artist alloc] initWithDictionary:dictionary];
+        NSArray *artistArray = dictionary[@"artists"];
+        NSDictionary *artistDictionary = artistArray[0];
+
+        Artist *result = [[Artist alloc] initWithDictionary:artistDictionary];
         if (!result) {
             NSError *error = [NSError errorWithDomain:@"ArtistFetcherDomain" code:-1 userInfo:nil];
 
@@ -62,6 +68,5 @@ static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api
         });
     }] resume];
 }
-
 
 @end

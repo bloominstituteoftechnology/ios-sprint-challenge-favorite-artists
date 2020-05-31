@@ -17,8 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *biographyLabel;
 
-
-
 @end
 
 @implementation ArtistDetailViewController

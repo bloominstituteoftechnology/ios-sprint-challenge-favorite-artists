@@ -42,10 +42,11 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
         }
         if (dictionary[@"artists"] != [NSNull null])
         {
-            NSArray *artistDictionaries = dictionary[@"artists"];
-            NSDictionary *artistDictionary = artistDictionaries.firstObject;
-            DSCArtist *artist = [[DSCArtist alloc]initWithDictionary:artistDictionary];
+            NSArray *artistDictionary = dictionary[@"artists"];
+            NSDictionary *artistObject = artistDictionary.firstObject;
+            DSCArtist *artist = [[DSCArtist alloc]initWithDictionary:artistObject];
             NSLog(@"gues who this artist is: %@", artist.name);
+            NSLog(@"Print Artist Dictionary artist is: %@", artistObject);
             completionHandler(artist, nil);
         }
         

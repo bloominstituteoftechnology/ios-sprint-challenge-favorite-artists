@@ -25,11 +25,13 @@
     [super viewDidLoad];
     [self.searchBar setDelegate:self];
     
-    //testing fetch request
-    NSString *searchedArtistName = @"coldplay";
-    
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;
+{
+    NSString *searchedText = searchText;
     DSCFetchArtist *fetcher = [[DSCFetchArtist alloc]init];
-    [fetcher fetchArtist:searchedArtistName completion:^(DSCArtist * _Nullable artist, NSError * _Nullable error) {
+    [fetcher fetchArtist:searchedText completion:^(DSCArtist * _Nullable artist, NSError * _Nullable error) {
         NSLog(@"Got this artist: %@", artist);
         dispatch_async(dispatch_get_main_queue(), ^{
             self.artistNameLabel.text = artist.name;

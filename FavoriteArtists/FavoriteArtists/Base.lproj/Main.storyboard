@@ -85,16 +85,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sx0-7Q-ae2">
-                                <rect key="frame" x="20" y="261" width="374" height="34"/>
+                                <rect key="frame" x="20" y="249" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="473-si-Emg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mn-om-pWu">
-                                <rect key="frame" x="20" y="307" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="285" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="AMj-2b-nHC" firstAttribute="trailing" secondItem="HF2-yL-CV9" secondAttribute="trailing" constant="20" id="2es-Dc-KVD"/>
-                            <constraint firstItem="2mn-om-pWu" firstAttribute="top" secondItem="sx0-7Q-ae2" secondAttribute="bottom" priority="999" constant="12" id="3L3-ZH-hd1"/>
+                            <constraint firstItem="2mn-om-pWu" firstAttribute="top" secondItem="sx0-7Q-ae2" secondAttribute="bottom" priority="999" constant="2" id="3L3-ZH-hd1"/>
                             <constraint firstItem="Zsl-1E-DOl" firstAttribute="top" secondItem="AMj-2b-nHC" secondAttribute="top" id="4pv-nh-LHX"/>
                             <constraint firstItem="2mn-om-pWu" firstAttribute="leading" secondItem="AMj-2b-nHC" secondAttribute="leading" constant="20" id="JzL-Y8-ilT"/>
                             <constraint firstItem="AMj-2b-nHC" firstAttribute="trailing" secondItem="sx0-7Q-ae2" secondAttribute="trailing" constant="20" id="Ryz-Pf-BaU"/>
@@ -112,7 +112,7 @@
                             <constraint firstItem="Zsl-1E-DOl" firstAttribute="leading" secondItem="AMj-2b-nHC" secondAttribute="leading" id="e0e-ma-k89"/>
                             <constraint firstItem="AMj-2b-nHC" firstAttribute="trailing" secondItem="2mn-om-pWu" secondAttribute="trailing" constant="20" id="gdm-4j-vpU"/>
                             <constraint firstItem="Zsl-1E-DOl" firstAttribute="trailing" secondItem="AMj-2b-nHC" secondAttribute="trailing" id="glI-k5-HFQ"/>
-                            <constraint firstItem="sx0-7Q-ae2" firstAttribute="top" secondItem="HF2-yL-CV9" secondAttribute="bottom" constant="12" id="inM-lF-cf4"/>
+                            <constraint firstItem="sx0-7Q-ae2" firstAttribute="top" secondItem="HF2-yL-CV9" secondAttribute="bottom" id="inM-lF-cf4"/>
                             <constraint firstItem="HF2-yL-CV9" firstAttribute="leading" secondItem="AMj-2b-nHC" secondAttribute="leading" constant="20" id="jZh-I8-JVS"/>
                             <constraint firstItem="AMj-2b-nHC" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2mn-om-pWu" secondAttribute="bottom" id="mCr-ey-sn8"/>
                         </constraints>

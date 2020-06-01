@@ -7,10 +7,14 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class SKIArtistController;
+@class SKIArtist;
 
 @interface SKIDetailViewController : UIViewController
 
+@property SKIArtistController *artistController;
+@property SKIArtist *artist;
+
 @end
 
-NS_ASSUME_NONNULL_END
+

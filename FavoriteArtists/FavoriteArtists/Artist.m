@@ -27,6 +27,10 @@
     NSString *biography = dictionary[@"strBiographyEN"];
     NSNumber *year = dictionary[@"intFormedYear"];
 
+    if ([year isKindOfClass:[NSNull class]]) {
+        year = nil;
+    }
+
     return [self initWithName:name.copy
                     biography:biography.copy
                    yearFormed:year.intValue];

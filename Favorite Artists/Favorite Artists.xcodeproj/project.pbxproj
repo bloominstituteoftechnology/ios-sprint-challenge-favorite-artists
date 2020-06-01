@@ -13,6 +13,7 @@
 		63CCDA9724849FD0007BBAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CCDA9624849FD0007BBAF4 /* Assets.xcassets */; };
 		63CCDA9A24849FD0007BBAF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CCDA9824849FD0007BBAF4 /* LaunchScreen.storyboard */; };
 		63CCDA9D24849FD0007BBAF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDA9C24849FD0007BBAF4 /* main.m */; };
+		63CCDAA52484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDAA42484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		63CCDA9924849FD0007BBAF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63CCDA9B24849FD0007BBAF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63CCDA9C24849FD0007BBAF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63CCDAA32484A7A6007BBAF4 /* FavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		63CCDAA42484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				63CCDA9824849FD0007BBAF4 /* LaunchScreen.storyboard */,
 				63CCDA9B24849FD0007BBAF4 /* Info.plist */,
 				63CCDA9C24849FD0007BBAF4 /* main.m */,
+				63CCDAA32484A7A6007BBAF4 /* FavoriteArtistsTableViewController.h */,
+				63CCDAA42484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m */,
 			);
 			path = "Favorite Artists";
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CCDAA52484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m in Sources */,
 				63CCDA8C24849FCE007BBAF4 /* AppDelegate.m in Sources */,
 				63CCDA9D24849FD0007BBAF4 /* main.m in Sources */,
 				63CCDA8F24849FCE007BBAF4 /* SceneDelegate.m in Sources */,

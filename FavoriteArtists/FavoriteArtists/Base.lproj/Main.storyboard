@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="qHZ-w4-4bA">
             <objects>
-                <tableViewController id="6jj-yX-9BG" sceneMemberID="viewController">
+                <tableViewController id="6jj-yX-9BG" customClass="SKITableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ftm-I4-DTn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1510.144927536232" y="164.73214285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="8mJ-dw-6zO">
             <objects>
-                <viewController id="EZX-ce-tfr" sceneMemberID="viewController">
+                <viewController id="EZX-ce-tfr" customClass="SKIDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rcb-yC-UKH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,8 +114,18 @@
                         <viewLayoutGuide key="safeArea" id="sMF-Hj-e5m"/>
                     </view>
                     <navigationItem key="navigationItem" id="1qK-9S-ync">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RMz-Oh-7hH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RMz-Oh-7hH">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="EZX-ce-tfr" id="NqC-n9-WXc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="aboutAristTextView" destination="nDz-Se-rSw" id="LBe-EV-2hY"/>
+                        <outlet property="nameLabel" destination="f6J-8t-Sab" id="g7d-Ju-vgQ"/>
+                        <outlet property="searchBar" destination="7XU-xt-nsY" id="CB0-rg-piW"/>
+                        <outlet property="yearLabel" destination="5he-cP-cjI" id="fUa-y2-me8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1x-tQ-sU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

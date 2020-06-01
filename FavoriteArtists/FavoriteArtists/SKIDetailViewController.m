@@ -9,6 +9,12 @@
 
 @interface SKIDetailViewController ()
 
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *yearLabel;
+@property (strong, nonatomic) IBOutlet UITextView *aboutAristTextView;
+
+
 @end
 
 @implementation SKIDetailViewController
@@ -27,5 +33,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)saveButtonTapped:(id)sender {
+}
 
 @end

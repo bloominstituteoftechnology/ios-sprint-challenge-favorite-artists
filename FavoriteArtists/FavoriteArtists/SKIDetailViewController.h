@@ -10,7 +10,7 @@
 @class SKIArtistController;
 @class SKIArtist;
 
-@interface SKIDetailViewController : UIViewController
+@interface SKIDetailViewController : UIViewController <UISearchBarDelegate>
 
 @property SKIArtistController *artistController;
 @property SKIArtist *artist;

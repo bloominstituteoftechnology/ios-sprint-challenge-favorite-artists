@@ -6,14 +6,15 @@
 //
 
 #import "SKIDetailViewController.h"
+#import "SKIArtistController.h"
+#import "SKIArtist.h"
 
 @interface SKIDetailViewController ()
 
-@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *yearLabel;
-@property (strong, nonatomic) IBOutlet UITextView *aboutAristTextView;
-
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *aboutAristTextView;
 
 @end
 
@@ -21,19 +22,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.searchBar setDelegate:self];
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews {
+    self.nameLabel.text = self.artist.name;
+    self.aboutAristTextView.text = self.artist.about;
+    self.yearLabel.text = [self yearString];
+    NSLog(@"%@", _aboutAristTextView.text);
 }
-*/
+
+- (NSString *)yearString {
+    if (self.artist.year != 0) {
+        return [NSString stringWithFormat:@"%i", self.artist.year];
+    } else {
+        return @"Not available";
+    }
+}
+
 - (IBAction)saveButtonTapped:(id)sender {
+    if (self.artist) {
+        NSLog(@"saveTapped");
+        [self.artistController saveArtist:self.artist];
+        [self.navigationController popViewControllerAnimated:true];
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSString *searchTerm = searchBar.text;
+    
+    [self.artistController searchForArtistWithName:searchTerm completion:^(SKIArtist *artist, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Artist: %@, Error: %@", artist.name, error);
+            self.artist = artist;
+            [self updateViews];
+            NSLog(@"called!");
+        });
+    }];
 }
 
 @end

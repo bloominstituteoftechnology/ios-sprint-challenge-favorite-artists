@@ -76,40 +76,43 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="RRx-bi-UCd">
-                                <rect key="frame" x="8" y="132" width="398" height="730"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d3T-oE-J6L">
+                                <rect key="frame" x="8" y="140" width="398" height="49"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6J-8t-Sab">
-                                        <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5he-cP-cjI">
-                                        <rect key="frame" x="0.0" y="31.5" width="34" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3x-wa-oK6">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nDz-Se-rSw">
-                                        <rect key="frame" x="0.0" y="63" width="240" height="667"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgI-Ho-snT">
+                                        <rect key="frame" x="0.0" y="28.5" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ux4-R2-Xy5">
+                                <rect key="frame" x="8" y="197" width="398" height="657"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="sMF-Hj-e5m" firstAttribute="trailing" secondItem="RRx-bi-UCd" secondAttribute="trailing" constant="8" id="0Wg-Bh-nm6"/>
-                            <constraint firstItem="7XU-xt-nsY" firstAttribute="trailing" secondItem="RRx-bi-UCd" secondAttribute="trailing" id="5Rf-yR-xHv"/>
-                            <constraint firstItem="RRx-bi-UCd" firstAttribute="top" secondItem="7XU-xt-nsY" secondAttribute="bottom" id="ZFR-CL-Eef"/>
-                            <constraint firstItem="7XU-xt-nsY" firstAttribute="leading" secondItem="RRx-bi-UCd" secondAttribute="leading" id="h7Q-oS-hbm"/>
-                            <constraint firstItem="RRx-bi-UCd" firstAttribute="leading" secondItem="sMF-Hj-e5m" secondAttribute="leading" constant="8" id="o0A-Ri-1Ho"/>
-                            <constraint firstItem="sMF-Hj-e5m" firstAttribute="bottom" secondItem="RRx-bi-UCd" secondAttribute="bottom" id="xrR-Gg-10V"/>
+                            <constraint firstItem="ux4-R2-Xy5" firstAttribute="leading" secondItem="sMF-Hj-e5m" secondAttribute="leading" constant="8" id="DlP-2H-IU6"/>
+                            <constraint firstItem="sMF-Hj-e5m" firstAttribute="trailing" secondItem="d3T-oE-J6L" secondAttribute="trailing" constant="8" id="GYR-FK-1zF"/>
+                            <constraint firstItem="7XU-xt-nsY" firstAttribute="leading" secondItem="sMF-Hj-e5m" secondAttribute="leading" constant="8" id="PVE-IM-xiJ"/>
+                            <constraint firstItem="sMF-Hj-e5m" firstAttribute="trailing" secondItem="ux4-R2-Xy5" secondAttribute="trailing" constant="8" id="YXo-bX-AAQ"/>
+                            <constraint firstItem="7XU-xt-nsY" firstAttribute="centerX" secondItem="rcb-yC-UKH" secondAttribute="centerX" id="bH1-hl-Dhk"/>
+                            <constraint firstItem="sMF-Hj-e5m" firstAttribute="bottom" secondItem="ux4-R2-Xy5" secondAttribute="bottom" constant="8" id="h3t-qh-uMK"/>
+                            <constraint firstItem="d3T-oE-J6L" firstAttribute="leading" secondItem="sMF-Hj-e5m" secondAttribute="leading" constant="8" id="hRy-V9-qWL"/>
+                            <constraint firstItem="d3T-oE-J6L" firstAttribute="top" secondItem="7XU-xt-nsY" secondAttribute="bottom" constant="8" id="tWA-kG-fY3"/>
                             <constraint firstItem="7XU-xt-nsY" firstAttribute="top" secondItem="sMF-Hj-e5m" secondAttribute="top" id="xs6-3t-DP6"/>
+                            <constraint firstItem="ux4-R2-Xy5" firstAttribute="top" secondItem="d3T-oE-J6L" secondAttribute="bottom" constant="8" id="yhP-cA-bVi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sMF-Hj-e5m"/>
                     </view>
@@ -121,10 +124,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="aboutAristTextView" destination="nDz-Se-rSw" id="LBe-EV-2hY"/>
-                        <outlet property="nameLabel" destination="f6J-8t-Sab" id="g7d-Ju-vgQ"/>
+                        <outlet property="aboutAristTextView" destination="ux4-R2-Xy5" id="Khr-1a-COB"/>
+                        <outlet property="nameLabel" destination="w3x-wa-oK6" id="aA9-tj-kwR"/>
                         <outlet property="searchBar" destination="7XU-xt-nsY" id="CB0-rg-piW"/>
-                        <outlet property="yearLabel" destination="5he-cP-cjI" id="fUa-y2-me8"/>
+                        <outlet property="yearLabel" destination="mgI-Ho-snT" id="Spc-8d-LEX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1x-tQ-sU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

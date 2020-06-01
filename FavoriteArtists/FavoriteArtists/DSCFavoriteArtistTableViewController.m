@@ -7,7 +7,6 @@
 //
 
 #import "DSCFavoriteArtistTableViewController.h"
-#import "DSCAddArtistViewController.h"
 #import "DSCArtistController.h"
 #import "DSCArtist.h"
 #import "DSCFetchArtist.h"
@@ -28,14 +27,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [self.aController loadFromPersistentStore];
 }
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+
 }
+
+
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -73,5 +77,6 @@
         detailVC.artist = self.aController.artistArray[selectedIndexPath.row];
     }
 }
+
 
 @end

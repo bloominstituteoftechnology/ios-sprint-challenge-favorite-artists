@@ -10,14 +10,16 @@
 
 @class DSCArtist;
 @class DSCArtistController;
+@class DSCFavoriteArtistTableViewController;
+
 
 NS_ASSUME_NONNULL_BEGIN
+
 
 @interface DSCAddArtistViewController : UIViewController <UISearchBarDelegate>
 
 @property (nonatomic) DSCArtist *artist;
 @property (nonatomic) DSCArtistController *aController;
-
 @end
 
 NS_ASSUME_NONNULL_END

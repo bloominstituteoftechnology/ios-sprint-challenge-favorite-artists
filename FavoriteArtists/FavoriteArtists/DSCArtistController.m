@@ -22,7 +22,6 @@
 
 -(void)saveArtist:(DSCArtist *)artist
 {
-    NSLog(@"from saveArtist");
     [self loadFromPersistentStore];
     [self.artistArray addObject:artist];
     [self saveToPersistentStore];

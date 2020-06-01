@@ -11,6 +11,7 @@
 #import "DSCArtist.h"
 #import "DSCArtistController.h"
 #import "DSCArtist+_NSJSONSerialization.h"
+#import "DSCFavoriteArtistTableViewController.h"
 
 @interface DSCAddArtistViewController ()
 
@@ -49,6 +50,7 @@
         [self updateViews];
     }
 }
+
 -(void)updateViews {
     self.title = @"Add New Artist";
     self.artistNameLabel.text = self.artist.name;
@@ -84,4 +86,7 @@
     [self.navigationController popViewControllerAnimated:true];
     
 }
+
+
+
 @end

@@ -19,6 +19,7 @@
 		63CCDAAE2484AF1D007BBAF4 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDAAD2484AF1D007BBAF4 /* Artist.m */; };
 		63CCDAB12484B144007BBAF4 /* Artist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDAB02484B144007BBAF4 /* Artist+NSJSONSerialization.m */; };
 		63CCDAB42484BF6A007BBAF4 /* ArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDAB32484BF6A007BBAF4 /* ArtistResults.m */; };
+		63CCDAB82484D182007BBAF4 /* FavoriteArtistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDAB72484D182007BBAF4 /* FavoriteArtistsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		63CCDAB22484BF6A007BBAF4 /* ArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistResults.h; sourceTree = "<group>"; };
 		63CCDAB32484BF6A007BBAF4 /* ArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistResults.m; sourceTree = "<group>"; };
 		63CCDAB52484CAB0007BBAF4 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		63CCDAB62484D182007BBAF4 /* FavoriteArtistsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtistsController.h; sourceTree = "<group>"; };
+		63CCDAB72484D182007BBAF4 /* FavoriteArtistsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				63CCDAB32484BF6A007BBAF4 /* ArtistResults.m */,
 				63CCDAA92484AEA7007BBAF4 /* ArtistFetcher.h */,
 				63CCDAAA2484AEA7007BBAF4 /* ArtistFetcher.m */,
+				63CCDAB62484D182007BBAF4 /* FavoriteArtistsController.h */,
+				63CCDAB72484D182007BBAF4 /* FavoriteArtistsController.m */,
 				63CCDAA32484A7A6007BBAF4 /* FavoriteArtistsTableViewController.h */,
 				63CCDAA42484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m */,
 				63CCDAA62484A823007BBAF4 /* ArtistDetailViewController.h */,
@@ -173,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CCDAB82484D182007BBAF4 /* FavoriteArtistsController.m in Sources */,
 				63CCDAA82484A823007BBAF4 /* ArtistDetailViewController.m in Sources */,
 				63CCDAB42484BF6A007BBAF4 /* ArtistResults.m in Sources */,
 				63CCDAA52484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m in Sources */,

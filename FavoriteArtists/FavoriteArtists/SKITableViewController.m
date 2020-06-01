@@ -42,13 +42,29 @@
 }
 
 
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
- 
- // Configure the cell...
- 
- return cell;
- }
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    
+    SKIArtist *artist = self.controller.savedArtists[indexPath.row];
+    NSString *dateString = [self yearString:artist];
+    
+    cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = dateString;
+    
+    return cell;
+}
+
+- (NSString *)yearString:(SKIArtist *)artist {
+    if (artist.year != 0) {
+        return [NSString stringWithFormat:@"%i", artist.year];
+    } else {
+        return @"Not available";
+    }
+}
+
+
+
 
 
 /*

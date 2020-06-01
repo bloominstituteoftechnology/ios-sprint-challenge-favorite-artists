@@ -35,7 +35,7 @@
 
 - (NSDictionary *)toDictionary
 {
-    NSNumber *yearFormed = (self.yearFormed == 0) ? [NSNumber numberWithInt:self.yearFormed] : nil;
+    NSNumber *yearFormed = [NSNumber numberWithInt:self.yearFormed];
     
     return @{ @"strArtist": self.name,
               @"intFormedYear": yearFormed,

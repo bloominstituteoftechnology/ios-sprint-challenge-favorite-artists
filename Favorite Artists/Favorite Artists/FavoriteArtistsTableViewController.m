@@ -66,14 +66,24 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"ShowArtistDetailSegue"]) {
+            ArtistDetailViewController *artistDetailVC = [segue destinationViewController];
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            Artist *artist = [self.favoriteArtistsController.artists objectAtIndex:indexPath.row];
+            
+            artistDetailVC.artist = artist;
+            artistDetailVC.isShowingFavoriteArtistDetail = YES;
+            
+        } else if ([[segue identifier] isEqualToString:@"ShowAddArtistSegue"]) {
+            ArtistDetailViewController *artistDetailVC = [segue destinationViewController];
+            
+            artistDetailVC.isShowingFavoriteArtistDetail = NO;
+            artistDetailVC.favoriteArtistsController = self.favoriteArtistsController;
+        }
 }
-*/
 
 @end

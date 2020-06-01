@@ -26,18 +26,15 @@
     return _aController;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.aController loadFromPersistentStore];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
-    
 }
 
 #pragma mark - Table view data source
@@ -48,38 +45,26 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"from number of rows in section: %lu", (unsigned long)self.aController.returnArtistArray.count);
     return self.aController.returnArtistArray.count;
-
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
 
     DSCArtist *artist = self.aController.returnArtistArray[indexPath.row];
-    NSLog(@"artistName from tableview:%@", artist.name);
     cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed In %d", artist.year];
     return cell;
 }
 
-
-
-
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        DSCArtist *artist = self.aController.returnArtistArray[indexPath.row];
+        [self.aController deleteArtist:artist];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
-
-
-
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"ViewArtistSegue"]) {
@@ -88,6 +73,5 @@
         detailVC.artist = self.aController.artistArray[selectedIndexPath.row];
     }
 }
-
 
 @end

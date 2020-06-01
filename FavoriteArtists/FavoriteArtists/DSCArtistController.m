@@ -20,7 +20,6 @@
      return self;
 }
 
-
 -(void)saveArtist:(DSCArtist *)artist
 {
     NSLog(@"from saveArtist");
@@ -29,24 +28,21 @@
     [self saveToPersistentStore];
 }
 
-- (NSArray *)returnArtistArray 
+-(void)deleteArtist:(DSCArtist *)artist
 {
-    NSLog(@"from returnsArtistArray: %@", self.artistArray );
-    return [self.artistArray copy];
+    [self.artistArray removeObject:artist];
+    [self saveToPersistentStore];
 }
 
-- (void)saveArtistDictionary:(NSDictionary *)artistDictionary
+- (NSArray *)returnArtistArray 
 {
-    NSLog(@"from saved artist dictionary");
-    [self.artistArray addObject:artistDictionary];
+    return [self.artistArray copy];
 }
 
 - (NSURL *)persistentFileURL
 {
     NSURL *directory = [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
     NSString *fileName = @"artists.json";
-    NSLog(@"fileURL: %@", fileName);
-    NSLog(@"directoryURL: %@", directory);
     return [directory URLByAppendingPathComponent:fileName];
 }
 
@@ -63,8 +59,6 @@
     }
     NSDictionary *outerDictionary = @{ @"artists" : middleArray};
     [outerDictionary writeToURL:url atomically:YES];
-    NSLog(@"URL:%@", url);
-    NSLog(@"From saveToPersistentStore:%@", outerDictionary.allValues);
     return;
 }
 
@@ -77,7 +71,6 @@
     for (NSDictionary *innerDictionary in middleArray) {
         DSCArtist *artist = [[DSCArtist alloc]initWithDictionary:innerDictionary];
         [self.artistArray addObject:artist];
-        NSLog(@"From loadPersistentStore:%@", self.artistArray);
     }
 }
 

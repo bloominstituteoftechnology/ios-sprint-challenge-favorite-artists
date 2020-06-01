@@ -10,10 +10,8 @@
 
 @implementation DSCArtist (_NSJSONSerialization)
 
-
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    
     NSString *name = dictionary[@"strArtist"];
     NSString *biography = dictionary[@"strBiographyEN"];
     NSString *yearInt = dictionary[@"intFormedYear"];
@@ -37,6 +35,5 @@
     };
     return dictionary;
 }
-
 
 @end

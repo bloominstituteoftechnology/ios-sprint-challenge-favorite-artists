@@ -20,9 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray *)returnArtistArray;
 - (NSURL *)persistentFileURL;
 - (void)saveArtist:(DSCArtist *)artist;
-- (void)saveArtistDictionary:(NSDictionary *)artistDictionary;
 - (void)saveToPersistentStore;
 - (void)loadFromPersistentStore;
+- (void)deleteArtist:(DSCArtist *)artist;
 
 @end
 

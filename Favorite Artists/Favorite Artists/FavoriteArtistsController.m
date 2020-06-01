@@ -7,7 +7,37 @@
 //
 
 #import "FavoriteArtistsController.h"
+#import "Artist.h"
+
+@interface FavoriteArtistsController () {
+    NSMutableArray *_internalArtists;
+}
+
+@end
 
 @implementation FavoriteArtistsController
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _internalArtists = [[NSMutableArray alloc] init];
+        
+        // TODO: Load Artists from disk
+        
+    }
+    return self;
+}
+
+#pragma mark - Convenience Accessors
+
+- (NSArray<Artist *> *)artists
+{
+    return _internalArtists.copy;
+}
+
+- (void)addArtist:(Artist *)artist
+{
+    [_internalArtists addObject:artist];
+}
 
 @end

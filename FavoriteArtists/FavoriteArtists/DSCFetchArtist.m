@@ -45,13 +45,35 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
             NSArray *artistDictionary = dictionary[@"artists"];
             NSDictionary *artistObject = artistDictionary.firstObject;
             DSCArtist *artist = [[DSCArtist alloc]initWithDictionary:artistObject];
-            NSLog(@"gues who this artist is: %@", artist.name);
-            NSLog(@"Print Artist Dictionary artist is: %@", artistObject);
             completionHandler(artist, nil);
         }
         
         
     }] resume];
 }
+
+//- (NSArray *)fetchedSavedArtist
+//{
+//    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *directory = [path objectAtIndex:0];
+//    NSArray *filePath = [[NSFileManager defaultManager]subpathsAtPath:directory];
+//    
+//    NSMutableArray *artistsArray = [[NSMutableArray alloc]init];
+//    
+//    for (NSString *name in filePath)
+//    {
+//        NSString *artistStringPath = [NSHomeDirectory() stringByAppendingFormat:@"/documents%@", name];
+//        NSURL *artistURL = [NSURL fileURLWithPath:artistStringPath];
+//        NSLog(@"artist URL:%@", artistURL);
+//        NSData *artistData = [[NSData alloc]initWithContentsOfURL:artistURL];
+//        NSDictionary *artistDictionary = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
+//        
+//        DSCArtist *artist = [[DSCArtist alloc]initWithDictionary:artistDictionary];
+//        [artistsArray addObject:artist];
+//    }
+//    
+//    return artistsArray;
+//}
+
 @end
 

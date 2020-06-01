@@ -7,10 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+@class DSCArtist;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DSCArtistController : NSObject
+
+@property (nonatomic) NSMutableArray *artistArray;
+
+@property DSCArtist *artist;
+
+- (NSArray *)returnArtistArray;
+- (NSURL *)persistentFileURL;
+- (void)saveArtist:(DSCArtist *)artist;
+- (void)saveArtistDictionary:(NSDictionary *)artistDictionary;
+- (void)saveToPersistentStore;
+- (void)loadFromPersistentStore;
 
 @end
 

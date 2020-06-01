@@ -32,8 +32,8 @@
     NSNumber *yearInt = [NSNumber numberWithInt:self.year];
     NSDictionary *dictionary = @{
         @"strArtist" : self.name,
-        @"strBiographyEN" : yearInt,
-        @"intFormedYear" : self.biography
+        @"strBiographyEN" : self.biography,
+        @"intFormedYear" : yearInt
     };
     return dictionary;
 }

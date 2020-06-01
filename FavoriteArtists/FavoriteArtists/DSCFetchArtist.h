@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DSCFetchArtist : NSObject
 
 - (void)fetchArtist:(NSString *)name completion:(nonnull ArtistFetcherCompletionHandler)completionHandler;
+//- (NSArray *)fetchedSavedArtist;
 
 @end
 

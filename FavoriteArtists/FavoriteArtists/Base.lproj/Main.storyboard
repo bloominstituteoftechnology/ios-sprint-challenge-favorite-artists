@@ -16,13 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mf9-NN-lP3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" id="mf9-NN-lP3">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mf9-NN-lP3" id="bod-aM-F5r">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CHL-Xy-Ygp" kind="show" identifier="ViewArtistSegue" id="UwB-4c-3b0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,7 +36,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="tIj-IY-1w8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hA6-Jy-ZBM">
                             <connections>
-                                <segue destination="CHL-Xy-Ygp" kind="show" id="47N-iW-bJZ"/>
+                                <segue destination="CHL-Xy-Ygp" kind="show" identifier="AddArtistSegue" id="47N-iW-bJZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -59,8 +62,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of6-qU-1hf">
-                                <rect key="frame" x="27" y="233" width="96" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="27" y="220.5" width="150" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -106,6 +109,7 @@
                     <connections>
                         <outlet property="artistNameLabel" destination="Of6-qU-1hf" id="jOw-4L-Pll"/>
                         <outlet property="bioTextView" destination="JGk-ap-QRE" id="bAY-7w-sNT"/>
+                        <outlet property="saveBarButton" destination="qfe-xd-zvh" id="6WL-Pf-dV8"/>
                         <outlet property="searchBar" destination="bwb-QY-Fh8" id="egb-yC-T49"/>
                         <outlet property="yearLabel" destination="4or-on-4uX" id="rvT-w5-LnG"/>
                     </connections>
@@ -133,4 +137,7 @@
             <point key="canvasLocation" x="233" y="157"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UwB-4c-3b0"/>
+    </inferredMetricsTieBreakers>
 </document>

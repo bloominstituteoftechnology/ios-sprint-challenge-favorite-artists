@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class DSCArtistController;
+@class DSCFetchArtist;
+@class DSCArtist;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DSCFavoriteArtistTableViewController : UITableViewController
+
+@property (nonatomic) DSCArtistController *aController;
+@property (nonatomic) DSCArtist *artist;
 
 @end
 

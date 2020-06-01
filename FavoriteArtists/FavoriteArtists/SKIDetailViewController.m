@@ -30,7 +30,6 @@
     self.nameLabel.text = self.artist.name;
     self.aboutAristTextView.text = self.artist.about;
     self.yearLabel.text = [self yearString];
-    NSLog(@"%@", _aboutAristTextView.text);
 }
 
 - (NSString *)yearString {

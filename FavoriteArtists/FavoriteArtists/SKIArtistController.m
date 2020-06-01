@@ -16,8 +16,8 @@
 
 @end
 
-@implementation SKIArtistController
 
+@implementation SKIArtistController
 
 - (instancetype)init {
     self = [super init];
@@ -27,13 +27,11 @@
     return self;
 }
 
-
 - (NSArray *)savedArtists {
     return [self.internalSavedArtists copy];
 }
 
 - (void)saveArtist:(SKIArtist *)artist {
-    NSLog(@"saveArtist");
     [self.internalSavedArtists addObject:artist];
     [self saveToPersistentStore];
 }
@@ -63,7 +61,6 @@
     };
     bool successfulSave = [artistsDictionary writeToURL:url error:nil];
     if (successfulSave) {
-        NSLog(@"saved");
         return;
     } else {
         NSLog(@"Error saving artists: %@", saveError);
@@ -83,7 +80,6 @@
         }
     }
 }
-
 
 static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
@@ -126,7 +122,5 @@ static NSString * const baseURLString = @"https://www.theaudiodb.com/api/v1/json
         }
     }] resume];
 }
-
-
 
 @end

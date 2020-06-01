@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class Artist;
+
+//typedef void(^LoadArtistsCompletionHandler)(NSArray *_Nullable artists, NSError *_Nullable error);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FavoriteArtistsController : NSObject

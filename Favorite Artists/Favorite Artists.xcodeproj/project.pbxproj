@@ -16,6 +16,7 @@
 		63CCDAA52484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDAA42484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m */; };
 		63CCDAA82484A823007BBAF4 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDAA72484A823007BBAF4 /* ArtistDetailViewController.m */; };
 		63CCDAAB2484AEA7007BBAF4 /* ArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDAAA2484AEA7007BBAF4 /* ArtistFetcher.m */; };
+		63CCDAAE2484AF1D007BBAF4 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CCDAAD2484AF1D007BBAF4 /* Artist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		63CCDAA72484A823007BBAF4 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 		63CCDAA92484AEA7007BBAF4 /* ArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistFetcher.h; sourceTree = "<group>"; };
 		63CCDAAA2484AEA7007BBAF4 /* ArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistFetcher.m; sourceTree = "<group>"; };
+		63CCDAAC2484AF1D007BBAF4 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		63CCDAAD2484AF1D007BBAF4 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				63CCDAA72484A823007BBAF4 /* ArtistDetailViewController.m */,
 				63CCDAA92484AEA7007BBAF4 /* ArtistFetcher.h */,
 				63CCDAAA2484AEA7007BBAF4 /* ArtistFetcher.m */,
+				63CCDAAC2484AF1D007BBAF4 /* Artist.h */,
+				63CCDAAD2484AF1D007BBAF4 /* Artist.m */,
 			);
 			path = "Favorite Artists";
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				63CCDA8C24849FCE007BBAF4 /* AppDelegate.m in Sources */,
 				63CCDA9D24849FD0007BBAF4 /* main.m in Sources */,
 				63CCDA8F24849FCE007BBAF4 /* SceneDelegate.m in Sources */,
+				63CCDAAE2484AF1D007BBAF4 /* Artist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class Artist;
+@class FavoriteArtistsController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistDetailViewController : UIViewController
+
+@property (nonatomic, nullable) Artist *artist;
+@property (nonatomic, nullable) FavoriteArtistsController *favoriteArtistsController;
+@property (nonatomic) BOOL isShowingFavoriteArtistDetail;
 
 @end
 

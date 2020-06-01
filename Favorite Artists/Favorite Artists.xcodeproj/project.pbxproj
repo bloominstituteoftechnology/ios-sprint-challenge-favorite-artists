@@ -44,6 +44,7 @@
 		63CCDAB02484B144007BBAF4 /* Artist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		63CCDAB22484BF6A007BBAF4 /* ArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistResults.h; sourceTree = "<group>"; };
 		63CCDAB32484BF6A007BBAF4 /* ArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistResults.m; sourceTree = "<group>"; };
+		63CCDAB52484CAB0007BBAF4 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,7 @@
 				63CCDAA42484A7A6007BBAF4 /* FavoriteArtistsTableViewController.m */,
 				63CCDAA62484A823007BBAF4 /* ArtistDetailViewController.h */,
 				63CCDAA72484A823007BBAF4 /* ArtistDetailViewController.m */,
+				63CCDAB52484CAB0007BBAF4 /* LSIFileHelper.h */,
 				63CCDA9324849FCE007BBAF4 /* Main.storyboard */,
 				63CCDA9624849FD0007BBAF4 /* Assets.xcassets */,
 				63CCDA8A24849FCE007BBAF4 /* AppDelegate.h */,

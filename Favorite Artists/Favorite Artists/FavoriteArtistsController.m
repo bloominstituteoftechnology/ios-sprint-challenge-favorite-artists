@@ -6,8 +6,10 @@
 //  Copyright © 2020 David Wright. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import "FavoriteArtistsController.h"
 #import "Artist.h"
+#import "Artist+NSJSONSerialization.h"
 
 @interface FavoriteArtistsController () {
     NSMutableArray *_internalArtists;
@@ -22,8 +24,14 @@
     if (self = [super init]) {
         _internalArtists = [[NSMutableArray alloc] init];
         
-        // TODO: Load Artists from disk
+        // Load favorite artists from disk
+        NSString *filePath = self.getFilePath;
+        NSFileManager *fileManager = [NSFileManager defaultManager];
         
+        if ([fileManager fileExistsAtPath:filePath]) {
+            NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfURL:self.getFileURL];
+            [self updateArtistsArrayWithDictionary:dictionary];
+        }
     }
     return self;
 }
@@ -38,6 +46,45 @@
 - (void)addArtist:(Artist *)artist
 {
     [_internalArtists addObject:artist];
+
+    // Save favorite artists to disk
+    [self.dictionaryFromArtistsArray writeToURL:self.getFileURL atomically:YES];
+}
+
+- (NSURL *)getFileURL
+{
+    NSString *fileName = @"FavoriteArtistsData.plist";
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSURL *baseURL = [NSURL fileURLWithPath:path];
+    NSURL *fileURL = [baseURL URLByAppendingPathComponent:fileName];
+    return fileURL;
+}
+
+- (NSString *)getFilePath
+{
+    return self.getFileURL.path;
+}
+
+- (NSDictionary *)dictionaryFromArtistsArray
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    for (Artist *artist in _internalArtists) {
+        NSString *key = artist.name;
+        dictionary[key] = artist.toDictionary;
+    }
+    
+    return dictionary;
+}
+
+- (void)updateArtistsArrayWithDictionary:(NSDictionary *)dictionary
+{
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (NSDictionary *artistDictionary in dictionary.allValues) {
+        Artist *artist = [[Artist alloc] initWithDictionary:artistDictionary];
+        [array addObject:artist];
+    }
+    
+    _internalArtists = array;
 }
 
 @end

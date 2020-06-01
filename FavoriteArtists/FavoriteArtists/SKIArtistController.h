@@ -7,10 +7,17 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class SKIArtist;
 
 @interface SKIArtistController : NSObject
 
+@property (readonly, nonatomic) NSArray *savedArtists;
+@property (readonly, nonatomic) SKIArtist *currentArtist;
+
+- (void)loadFromPersistentStore;
+- (void)saveArtist:(SKIArtist *)artist;
+- (void)removeArtist:(SKIArtist *)artist;
+- (void)searchForArtistWithName:(NSString *)name completion:(void (^)(SKIArtist *artist, NSError *error))completion;
+
 @end
 
-NS_ASSUME_NONNULL_END

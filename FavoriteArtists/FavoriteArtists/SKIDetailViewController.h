@@ -5,11 +5,11 @@
 //  Created by Joshua Rutkowski on 5/31/20.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKIDetailViewController : ViewController
+@interface SKIDetailViewController : UIViewController
 
 @end
 

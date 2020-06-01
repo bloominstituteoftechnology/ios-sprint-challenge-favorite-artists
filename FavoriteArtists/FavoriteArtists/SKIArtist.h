@@ -7,10 +7,15 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface SKIArtist : NSObject
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic) int year;
+@property (nonatomic, copy)NSString *about;
+
+- (instancetype)initWithName:(NSString *)name
+                        year:(int)year
+                       about:(NSString *)about;
 
 @end
 
-NS_ASSUME_NONNULL_END

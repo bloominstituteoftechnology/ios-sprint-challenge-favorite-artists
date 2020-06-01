@@ -26,4 +26,12 @@
     return self;
 }
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    NSString *artistName = dictionary[@"artistName"];
+    NSString *artistInfo = dictionary[@"artistInfo"];
+    
+    NSDate *yearFormed = [NSDate date];
+    return[self initWithName:artistName artistInfo: artistInfo yearFormed:yearFormed];
+}
+
 @end

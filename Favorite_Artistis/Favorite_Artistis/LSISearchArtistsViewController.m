@@ -18,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
         LSIArtist *artist = [LSIArtist new];
-    }
+        artist.artistName = @"Smashing Pumpkins";
+        NSLog(@"%@", artist);
 }
 
 @end

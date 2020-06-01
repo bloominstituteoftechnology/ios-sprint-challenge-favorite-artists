@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithName:(NSString *)artistName
                   artistInfo:(NSString *)artistInfo
                     yearFormed:(NSDate *)yearFormed;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

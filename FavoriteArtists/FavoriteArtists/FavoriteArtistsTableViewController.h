@@ -13,7 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FavoriteArtistsTableViewController : UITableViewController
 
-@property (nonatomic) NSArray<Artist *> *artists;
+
+//- (BOOL)writeToURL:(NSURL *)url atomically:(BOOL)atomically API_DEPRECATED_WITH_REPLACEMENT("writeToURL:error:", macos(10.0, API_TO_BE_DEPRECATED), ios(2.0, API_TO_BE_DEPRECATED), watchos(2.0, API_TO_BE_DEPRECATED), tvos(9.0, API_TO_BE_DEPRECATED)); // the atomically flag is ignored if url of a type that cannot be written atomically.
+//
+
 
 @end
 

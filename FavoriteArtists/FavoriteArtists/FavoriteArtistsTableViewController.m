@@ -7,10 +7,14 @@
 //
 
 #import "FavoriteArtistsTableViewController.h"
+#import "ArtistController.h"
+#import "ArtistDetailViewController.h"
 
 @interface FavoriteArtistsTableViewController ()
 
-
+@property (nonatomic) NSArray<Artist *> *favoriteArtists;
+@property (nonatomic) ArtistController *artistController;
+@property (nonatomic, readonly) Artist *artist;
 
 @end
 
@@ -18,12 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _artistController = [[ArtistController alloc] init];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -33,7 +33,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.artists.count;
+    return self.artistController.artists.count;
 }
 
 - (IBAction)addArtistButtonTapped:(UIBarButtonItem *)sender {
@@ -42,7 +42,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    Artist *cellArtist = self.artists[indexPath.row];
+    Artist *cellArtist = self.artistController.artists[indexPath.row];
     cell.textLabel.text = cellArtist.artistName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Year formed %d", cellArtist.yearFormed];
     return cell;
@@ -52,10 +52,15 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier  isEqual:@"SearchArtistSegue"]) {
-        self.title = @"Add New Artist";
+        ArtistDetailViewController *detailVC = [[ArtistDetailViewController alloc] init];
+        if ([detailVC isKindOfClass:[ArtistDetailViewController class]])
+        {
+            detailVC.title = @"Add New Artist";
+        }
     } else {
-        //        self.title = artist.artistName;
-
+        ArtistDetailViewController *detailVC = [[ArtistDetailViewController alloc] init];
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        detailVC.artist = self.artistController.artists[indexPath.row];
     }
 }
 

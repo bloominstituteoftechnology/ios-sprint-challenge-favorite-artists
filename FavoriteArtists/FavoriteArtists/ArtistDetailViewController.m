@@ -9,6 +9,7 @@
 #import "ArtistDetailViewController.h"
 #import "ArtistFetcher.h"
 #import "Artist.h"
+#import "ArtistController.h"
 
 @interface ArtistDetailViewController () <UISearchBarDelegate>
 
@@ -17,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *biographyLabel;
 
-@property (nonatomic) Artist *artist;
+@property (nonatomic) ArtistController *artistController;
 
 - (void)updateViews;
 
@@ -28,7 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.searchBar.delegate = self;
-//    [self updateViews];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -45,19 +45,19 @@
 - (void)updateViews
 {
     _artistNameLabel.text = self.artist.artistName;
-    _yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+    if (self.artist.yearFormed != 0) {
+        _yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+    } else {
+        _yearFormedLabel.text = @"Year formed unavailable.";
+    }
     _biographyLabel.text = self.artist.artistBiography;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
+
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        [self.artistController saveArtistToFavorites:[[Artist alloc]initWithName:self.artist.artistName biography:self.artist.artistBiography yearFormed:self.artist.yearFormed]];
+    }];
 }
 
 @end

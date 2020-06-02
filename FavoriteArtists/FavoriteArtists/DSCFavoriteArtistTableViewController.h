@@ -12,6 +12,7 @@
 @class DSCFetchArtist;
 @class DSCArtist;
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DSCFavoriteArtistTableViewController: UITableViewController
@@ -20,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) DSCArtist *artist;
 
 @end
-
-
 NS_ASSUME_NONNULL_END
+
+
+

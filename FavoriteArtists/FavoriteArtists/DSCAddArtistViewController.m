@@ -32,10 +32,12 @@
     return _aController;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.searchBar setDelegate:self];
     [self loadViews];
+
 }
 
 - (void)loadViews {
@@ -83,10 +85,10 @@
     }
     
     [self.aController saveArtist: self.artist];
+    [self.aController loadFromPersistentStore];
+    [self.aController returnArtistArray];
     [self.navigationController popViewControllerAnimated:true];
-    
 }
-
 
 
 @end

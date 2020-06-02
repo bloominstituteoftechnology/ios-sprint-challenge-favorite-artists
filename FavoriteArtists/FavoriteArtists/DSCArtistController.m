@@ -25,6 +25,7 @@
     [self loadFromPersistentStore];
     [self.artistArray addObject:artist];
     [self saveToPersistentStore];
+    NSLog(@"Count of artist array from saveArtist in aController:%lu", (unsigned long)self.artistArray.count);
 }
 
 -(void)deleteArtist:(DSCArtist *)artist

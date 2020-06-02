@@ -11,6 +11,7 @@
 #import "DSCArtist.h"
 #import "DSCFetchArtist.h"
 #import "DSCArtist+_NSJSONSerialization.h"
+#import "DSCAddArtistViewController.h"
 
 @interface DSCFavoriteArtistTableViewController ()
 
@@ -27,34 +28,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self.aController loadFromPersistentStore];
 }
-
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
+    NSLog(@"%lu", (unsigned long)self.aController.artistArray.count);
+    NSLog(@"%lu", (unsigned long)self.aController.returnArtistArray.count);
     [self.tableView reloadData];
-
+    
 }
-
-
 
 #pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"from number of rows in section: %lu", (unsigned long)self.aController.returnArtistArray.count);
-    return self.aController.returnArtistArray.count;
+    NSLog(@"from number of rows in section: %lu", (unsigned long)self.aController.artistArray.count);
+    return self.aController.artistArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
 
-    DSCArtist *artist = self.aController.returnArtistArray[indexPath.row];
+    DSCArtist *artist = self.aController.artistArray[indexPath.row];
     cell.textLabel.text = artist.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed In %d", artist.year];
     return cell;
@@ -77,6 +74,5 @@
         detailVC.artist = self.aController.artistArray[selectedIndexPath.row];
     }
 }
-
 
 @end

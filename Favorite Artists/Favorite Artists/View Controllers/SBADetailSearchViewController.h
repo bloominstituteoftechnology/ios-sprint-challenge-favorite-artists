@@ -13,7 +13,7 @@
 @class SBAArtist;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SBADetailSearchViewController : UIViewController
+@interface SBADetailSearchViewController : UIViewController 
 
 @property (nonatomic, nullable) SBAArtist *artist;
 @property (nonatomic) SBAArtistModelController *artistController;

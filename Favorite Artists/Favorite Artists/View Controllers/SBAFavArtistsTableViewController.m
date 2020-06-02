@@ -16,7 +16,7 @@
  Tested persistance URL - Working file:///Users/lambdacatalina/Library/Developer/CoreSimulator/Devices/F7E673F4-F9F5-4D6E-AAC6-459E176CA29D/data/Containers/Data/Application/19335BAD-B53D-4E5F-A839-88D286FCA5AD/Documents/Joe
  */
 
-
+  
 @interface SBAFavArtistsTableViewController ()
 @property (nonatomic) SBAArtistModelController *artistController;
 @end

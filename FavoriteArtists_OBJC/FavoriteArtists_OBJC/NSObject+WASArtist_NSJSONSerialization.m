@@ -6,11 +6,34 @@
 //  Copyright © 2020 shillwil. All rights reserved.
 //
 
+#import "WASArtist.h"
 #import "NSObject+WASArtist_NSJSONSerialization.h"
 
-#import <AppKit/AppKit.h>
+@implementation WASArtist (WASArtist_NSJSONSerialization)
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    NSString *name = dictionary[@"strArtist"];
+    NSString *biography = dictionary[@"strBiographyEN"];
+    NSLog(@"%@", dictionary[@"intFormedYear"]);
+    NSString *yearFormed = dictionary[@"intFormedYear"];//yearInt;
+    if ([yearFormed isKindOfClass:[NSString class]] || [yearFormed isKindOfClass:[NSNumber class]]) {
+        NSLog(@"%@", yearFormed);
+        int year = [yearFormed intValue];
+        return [self initWithName:name biography:biography yearFormed:year];
+    } else {
+        int year = 0;
+        return [self initWithName:name biography:biography yearFormed:year];
+    }
+}
 
-@implementation NSObject (WASArtist_NSJSONSerialization)
+- (NSDictionary *)aDictionary {
+    NSNumber *year = [NSNumber numberWithInt:self.yearFormed];
+    NSDictionary *dictionary = @{
+        @"strArtist" : self.name,
+        @"intFormedYear" : year,
+        @"strBiographyEN" : self.biography
+    };
+    return dictionary;
+}
 
 @end

@@ -18,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (WASArtist_NSJSONSerialization)
 
-- (void)fetchArtist:(NSString *)artist completion:(WASArtistCompletionBlock)completion;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)aDictionary;
 
 @end
 

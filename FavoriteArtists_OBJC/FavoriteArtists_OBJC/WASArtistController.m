@@ -32,7 +32,6 @@
 }
 
 - (void)saveArtist:(WASArtist *)artist {
-    NSLog(@"saveArtist");
     [self.archive addObject:artist];
     [self saveToPersistentStore];
 }
@@ -63,7 +62,6 @@
     };
     bool successfulSave = [artistsDictionary writeToURL:url error:nil];
     if (successfulSave) {
-        NSLog(@"saved");
         return;
     } else {
         NSLog(@"Error saving artists: %@", saveError);

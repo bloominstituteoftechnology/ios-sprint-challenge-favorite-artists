@@ -23,6 +23,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowArtistDetailSegue" id="VOZ-bd-XKe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,7 +36,7 @@
                     <navigationItem key="navigationItem" title="Artists" id="NSa-JO-lyc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eex-w4-AtI">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="90t-dd-ZkU"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="" id="90t-dd-ZkU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -128,4 +131,7 @@
             <point key="canvasLocation" x="-820.28985507246387" y="143.97321428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VOZ-bd-XKe"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2C4EC5D2492C6EB009C2802 /* WASArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C4EC5C2492C6EB009C2802 /* WASArtistController.m */; };
+		A2C4EC602492CDA0009C2802 /* WASTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C4EC5F2492CDA0009C2802 /* WASTableViewController.m */; };
 		A2E9F2C324005382003F3D50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9F2C224005382003F3D50 /* AppDelegate.m */; };
 		A2E9F2C624005382003F3D50 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9F2C524005382003F3D50 /* SceneDelegate.m */; };
 		A2E9F2C924005382003F3D50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9F2C824005382003F3D50 /* ViewController.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2C4EC5B2492C6EB009C2802 /* WASArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASArtistController.h; sourceTree = "<group>"; };
+		A2C4EC5C2492C6EB009C2802 /* WASArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASArtistController.m; sourceTree = "<group>"; };
+		A2C4EC5E2492CDA0009C2802 /* WASTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASTableViewController.h; sourceTree = "<group>"; };
+		A2C4EC5F2492CDA0009C2802 /* WASTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASTableViewController.m; sourceTree = "<group>"; };
 		A2E9F2BE24005382003F3D50 /* FavoriteArtists_OBJC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteArtists_OBJC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E9F2C124005382003F3D50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2E9F2C224005382003F3D50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +88,10 @@
 				A2E9F2CF24005383003F3D50 /* LaunchScreen.storyboard */,
 				A2E9F2D224005383003F3D50 /* Info.plist */,
 				A2E9F2D324005383003F3D50 /* main.m */,
+				A2C4EC5B2492C6EB009C2802 /* WASArtistController.h */,
+				A2C4EC5C2492C6EB009C2802 /* WASArtistController.m */,
+				A2C4EC5E2492CDA0009C2802 /* WASTableViewController.h */,
+				A2C4EC5F2492CDA0009C2802 /* WASTableViewController.m */,
 			);
 			path = FavoriteArtists_OBJC;
 			sourceTree = "<group>";
@@ -156,10 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C4EC5D2492C6EB009C2802 /* WASArtistController.m in Sources */,
 				A2E9F2C924005382003F3D50 /* ViewController.m in Sources */,
 				A2E9F2C324005382003F3D50 /* AppDelegate.m in Sources */,
 				A2E9F2E224005EBE003F3D50 /* NSObject+WASArtist_NSJSONSerialization.m in Sources */,
 				A2E9F2D424005383003F3D50 /* main.m in Sources */,
+				A2C4EC602492CDA0009C2802 /* WASTableViewController.m in Sources */,
 				A2E9F2C624005382003F3D50 /* SceneDelegate.m in Sources */,
 				A2E9F2DF24005D68003F3D50 /* WASArtist.m in Sources */,
 			);

@@ -16,11 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *biography;
 @property (nonatomic) int yearFormed;
 
-- (NSDictionary *)dictionaryRep;
-
-- (instancetype)initWithName:(NSString *)name biography:(NSString *)biography yearFormed:(int)yearFormed;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithName:(NSString *)name
+                   biography:(NSString *)biography
+                  yearFormed:(int)yearFormed;
 
 @end
 

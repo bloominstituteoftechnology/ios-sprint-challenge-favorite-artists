@@ -46,7 +46,6 @@
 
 - (IBAction)saveTapped:(id)sender {
     if (self.artist) {
-        NSLog(@"saveTapped");
         [self.artistController saveArtist:self.artist];
         [self.navigationController popViewControllerAnimated:true];
     }
@@ -62,7 +61,6 @@
             NSLog(@"Artist: %@, Error: %@", artist.name, error);
             self.artist = artist;
             [self updateViews];
-            NSLog(@"called!");
         });
     }];
 }

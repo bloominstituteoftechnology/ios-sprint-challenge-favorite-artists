@@ -7,8 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "WASArtistController.h"
+#import "WASArtist.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+@property (weak, nonatomic) IBOutlet UILabel *formedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 
 @end
 

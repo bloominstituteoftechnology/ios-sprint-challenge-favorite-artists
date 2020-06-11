@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class WASArtist;
+@class WASArtistController;
 
+@interface ViewController : UIViewController <UISearchBarDelegate>
+
+@property WASArtist *artist;
+@property WASArtistController *artistController;
 
 @end
 

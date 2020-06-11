@@ -1,0 +1,16 @@
+//
+//  SceneDelegate.h
+//  FavoriteArtists_OBJC
+//
+//  Created by Alex Shillingford on 2/21/20.
+//  Copyright © 2020 shillwil. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
+
+@property (strong, nonatomic) UIWindow * window;
+
+@end
+

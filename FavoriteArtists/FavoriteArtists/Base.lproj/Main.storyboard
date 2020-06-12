@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="bUA-uX-MVC">
             <objects>
-                <tableViewController id="pdC-0O-q16" customClass="LYDArtistsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="pdC-0O-q16" customClass="CMDArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JgR-cL-QPP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
         <!--Artist Detail View Controller-->
         <scene sceneID="krO-NH-wLz">
             <objects>
-                <viewController id="dk2-1i-deG" customClass="LYDArtistDetailViewController" sceneMemberID="viewController">
+                <viewController id="dk2-1i-deG" customClass="CMDArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ezh-LH-JpF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,10 +86,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-0g-hsx">
-                                <rect key="frame" x="20" y="267" width="80.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-0g-hsx">
+                                <rect key="frame" x="20" y="267" width="121.5" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80.5" id="Cvg-KI-QUe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80.5" id="Cvg-KI-QUe"/>
                                     <constraint firstAttribute="height" constant="21" id="tUm-cq-OEC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -97,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUi-Od-Onb">
-                                <rect key="frame" x="115.5" y="267" width="41" height="21"/>
+                                <rect key="frame" x="156.5" y="267" width="0.0" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9tl-ZE-XpT"/>
                                 </constraints>

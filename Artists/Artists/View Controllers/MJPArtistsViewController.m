@@ -17,17 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.searchBar.delegate = self;
+    [self updateViews];
+
+}
+
+- (void)updateViews {
     if (_artist) {
-        self.searchBar.isHidden;
         self.artistLabel.text = _artist.strArtist;
         self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i",_artist.yearFormed];
         self.bioTextView.text = _artist.strBiographyEN;
-        } else if (!_artist) {
-            self.artistLabel.text = @"";
-            self.yearLabel.text = @"";
-            self.bioTextView.text = @"";
-        }
+    } else if (!_artist) {
+        self.artistLabel.text = @"";
+        self.yearLabel.text = @"";
+        self.bioTextView.text = @"";
     }
+}
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
@@ -40,7 +44,11 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.searchedArtist = artist;
                 self.artistLabel.text = self.searchedArtist.strArtist;
-                self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)self.searchedArtist.yearFormed];
+                if (self.artist.yearFormed != 0 ) {
+                    self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i",self.artist.yearFormed];
+                   } else {
+                       self.yearLabel.text = @"Date formed not available.";
+                   }
                 self.bioTextView.text = self.searchedArtist.strBiographyEN;
             });
         }
@@ -50,7 +58,7 @@
 - (IBAction)saveButtonPressed:(id)sender
 {
     if (_searchedArtist) {
-       [_artistController createArtist:_searchedArtist];
+        [_artistController createArtist:_searchedArtist];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }

@@ -67,7 +67,7 @@
     HAOArtist *artist = self.favoriteArtists[indexPath.row];
     
     cell.textLabel.text = artist.artistName;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", artist.yearFormed];
     
     return cell;
 }

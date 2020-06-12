@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSString *artistName;
 @property NSString *artistBiography;
-@property int yearFormed;
+@property NSString *yearFormed;
 
-- (instancetype)initWithArtistName:(NSString *)artistName artistBiography:(NSString *)artistBiography yearFormed:(int)yearFormed;
+- (instancetype)initWithArtistName:(NSString *)artistName artistBiography:(NSString *)artistBiography yearFormed:(NSString *)yearFormed;
 
 @end
 

@@ -10,7 +10,7 @@
 
 @implementation HAOArtist
 
-- (instancetype)initWithArtistName:(NSString *)artistName artistBiography:(NSString *)artistBiography yearFormed:(int)yearFormed
+- (instancetype)initWithArtistName:(NSString *)artistName artistBiography:(NSString *)artistBiography yearFormed:(NSString *)yearFormed
 {
     self = [super init];
     if (self) {

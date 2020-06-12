@@ -45,7 +45,7 @@
     
     self.title = self.artist.artistName;
     self.artistNameLabel.text = self.artist.artistName;
-    self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+    self.yearFormedLabel.text = [NSString stringWithFormat:@"%@", self.artist.yearFormed];
     self.artistBiographyTextView.text = self.artist.artistBiography;
 }
 
@@ -65,13 +65,24 @@
 
 - (void)updateViews
 {
+    if (!self.artist) {
+        self.artistNameLabel.text = @"No artist with that name found";
+        self.yearFormedLabel.text = @"";
+        self.artistBiographyTextView.text = @"";
+        return;
+    }
+    
     self.artistNameLabel.text = self.artist.artistName;
-    self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+    self.yearFormedLabel.text = [NSString stringWithFormat:@"%@", self.artist.yearFormed];
     self.artistBiographyTextView.text = self.artist.artistBiography;
 }
 
 - (IBAction)saveArtist:(id)sender
 {
+    if (!self.artist) {
+        return;
+    }
+    
     if ([self.delegate respondsToSelector:@selector(didSaveArtist:)]) {
         [self.delegate didSaveArtist:self.artist];
     }

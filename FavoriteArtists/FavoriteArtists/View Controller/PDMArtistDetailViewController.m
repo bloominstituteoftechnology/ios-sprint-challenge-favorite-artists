@@ -32,8 +32,9 @@
 - (IBAction)saveArtist:(id)sender {
     if (self.artist) {
         [self.artistController addArtist:self.artist];
+        [self.navigationController popViewControllerAnimated:YES];
     } else {
-        NSLog(@"No Artist to Save - Add some UI feature to disable button if search field is empty.");
+        NSLog(@"No Artist to Save - Add some UI feature to disable button if search field is empty. Returns user to table view to try agian.");
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

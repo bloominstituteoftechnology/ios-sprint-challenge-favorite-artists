@@ -13,6 +13,7 @@
 		DB85DB622493D3030049D1A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB85DB612493D3030049D1A0 /* Assets.xcassets */; };
 		DB85DB652493D3030049D1A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB85DB632493D3030049D1A0 /* LaunchScreen.storyboard */; };
 		DB85DB682493D3030049D1A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB672493D3030049D1A0 /* main.m */; };
+		DB85DB752493D4850049D1A0 /* PDMArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB742493D4850049D1A0 /* PDMArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		DB85DB642493D3030049D1A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB85DB662493D3030049D1A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB85DB672493D3030049D1A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB85DB732493D4850049D1A0 /* PDMArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDMArtist.h; sourceTree = "<group>"; };
+		DB85DB742493D4850049D1A0 /* PDMArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDMArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 		DB85DB6F2493D3500049D1A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB85DB732493D4850049D1A0 /* PDMArtist.h */,
+				DB85DB742493D4850049D1A0 /* PDMArtist.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			files = (
 				DB85DB572493D3020049D1A0 /* AppDelegate.m in Sources */,
 				DB85DB682493D3030049D1A0 /* main.m in Sources */,
+				DB85DB752493D4850049D1A0 /* PDMArtist.m in Sources */,
 				DB85DB5A2493D3020049D1A0 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

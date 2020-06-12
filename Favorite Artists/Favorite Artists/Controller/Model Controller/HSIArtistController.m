@@ -53,7 +53,7 @@
             return;
         }
 
-        NSDictionary *artistsDictionary = decodeDictionary[@"artists"][0];
+        NSDictionary *artistsDictionary = decodeDictionary[@"artists"][0]; //what happens if this is nil?
         if (!artistsDictionary) {
             NSLog(@"Error creating dictionary. No artists found?");
         } else {

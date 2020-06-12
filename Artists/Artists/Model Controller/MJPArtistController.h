@@ -20,12 +20,8 @@ typedef void (^MJPCompletionBlock)(MJPArtist *_Nullable artist, NSError *_Nullab
 @property NSMutableArray *fetchedArtists;
 
 - (void)createArtist:(MJPArtist *)artist;
-
-- (void)fetchArtist:(NSString *)name
-  completionBlock:(MJPCompletionBlock)completionBlock;
-
+- (void)fetchArtist:(NSString *)name completionBlock:(MJPCompletionBlock)completionBlock;
 - (MJPArtist *)fetchSavedArtist:(MJPArtist *)artist;
-
 - (void)deleteArtist:(MJPArtist *)artist;
 
 @end

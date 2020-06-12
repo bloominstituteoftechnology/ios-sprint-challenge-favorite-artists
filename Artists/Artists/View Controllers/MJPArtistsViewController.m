@@ -44,8 +44,8 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.searchedArtist = artist;
                 self.artistLabel.text = self.searchedArtist.strArtist;
-                if (self.artist.yearFormed != 0 ) {
-                    self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i",self.artist.yearFormed];
+                if (self.searchedArtist.yearFormed != 0 ) {
+                    self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i",self.searchedArtist.yearFormed];
                    } else {
                        self.yearLabel.text = @"Date formed not available.";
                    }

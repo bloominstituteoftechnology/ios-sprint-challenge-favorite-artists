@@ -10,6 +10,12 @@
 
 @interface SearchArtistViewController ()
 
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UILabel *artistName;
+@property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButtonOutlet;
+
 @end
 
 @implementation SearchArtistViewController
@@ -17,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
 }
 
 /*

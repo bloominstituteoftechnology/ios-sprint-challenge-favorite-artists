@@ -7,6 +7,9 @@
 //
 
 #import "ArtistsTableViewController.h"
+#import "LSIArtist.h"
+#import "LSIArtistController.h"
+#import "SearchArtistViewController.h"
 
 @interface ArtistsTableViewController ()
 

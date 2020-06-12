@@ -16,6 +16,7 @@
 		3FFB86882493D90F00AF6D5E /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB86872493D90F00AF6D5E /* ArtistsTableViewController.m */; };
 		3FFB868B2493D92A00AF6D5E /* SearchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB868A2493D92A00AF6D5E /* SearchArtistViewController.m */; };
 		3FFB868F2493D98400AF6D5E /* AddArtistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB868E2493D98400AF6D5E /* AddArtistTableViewCell.m */; };
+		3FFB86922493DC9E00AF6D5E /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB86912493DC9E00AF6D5E /* LSIArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		3FFB868A2493D92A00AF6D5E /* SearchArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchArtistViewController.m; sourceTree = "<group>"; };
 		3FFB868D2493D98400AF6D5E /* AddArtistTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddArtistTableViewCell.h; sourceTree = "<group>"; };
 		3FFB868E2493D98400AF6D5E /* AddArtistTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistTableViewCell.m; sourceTree = "<group>"; };
+		3FFB86902493DC9E00AF6D5E /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
+		3FFB86912493DC9E00AF6D5E /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 		3FFB86802493D67A00AF6D5E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3FFB86902493DC9E00AF6D5E /* LSIArtist.h */,
+				3FFB86912493DC9E00AF6D5E /* LSIArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				3FFB868B2493D92A00AF6D5E /* SearchArtistViewController.m in Sources */,
 				3FFB868F2493D98400AF6D5E /* AddArtistTableViewCell.m in Sources */,
 				3FFB866C2493D65700AF6D5E /* SceneDelegate.m in Sources */,
+				3FFB86922493DC9E00AF6D5E /* LSIArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

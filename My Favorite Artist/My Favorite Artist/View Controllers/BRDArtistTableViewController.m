@@ -20,6 +20,13 @@
 
 @implementation BRDArtistTableViewController
 
+- (BRDArtistController *)artistController {
+    if (!_artistController) {
+        _artistController = [[BRDArtistController alloc] init];
+    }
+    return _artistController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MJPArtist (NSJSONSerialization)
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
--(NSDictionary *)artistDictionary;
+-(NSDictionary *)toDictionary;
 
 @end
 

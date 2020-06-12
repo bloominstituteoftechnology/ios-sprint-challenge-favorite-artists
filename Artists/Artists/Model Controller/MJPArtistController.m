@@ -64,7 +64,7 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
             NSArray *dictionary = json[@"artists"];
             MJPArtist *artist = [[MJPArtist alloc] initWithDictionary:dictionary[0]];
             completionBlock(artist, nil);
-        }
+        } 
     }];
     [task resume];
 }

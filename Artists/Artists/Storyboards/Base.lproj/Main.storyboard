@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Artists Table View Controller-->
+        <!--Artists-->
         <scene sceneID="pyf-Pp-vB8">
             <objects>
                 <tableViewController id="5fk-ea-1Zn" customClass="MJPArtistsTableViewController" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                             <outlet property="delegate" destination="5fk-ea-1Zn" id="ofb-yR-yu9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="UK6-Bc-hHe">
+                    <navigationItem key="navigationItem" title="Artists" id="UK6-Bc-hHe">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UGI-tN-WI8">
                             <connections>
                                 <segue destination="de3-2L-IZS" kind="show" identifier="AddArtistSegue" id="HDD-84-QVq"/>
@@ -69,49 +69,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search for artist:" translatesAutoresizingMaskIntoConstraints="NO" id="LOp-6F-mYA">
-                                <rect key="frame" x="0.0" y="108" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <searchBar contentMode="redraw" text="" placeholder="Search for artist:" translatesAutoresizingMaskIntoConstraints="NO" id="LOp-6F-mYA">
+                                <rect key="frame" x="0.0" y="150" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                             </searchBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0GV-og-w71">
-                                <rect key="frame" x="8" y="245" width="398" height="547"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Akw-k6-YoF">
-                                <rect key="frame" x="8" y="184" width="398" height="53"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Akw-k6-YoF">
+                                <rect key="frame" x="18" y="221" width="378" height="61.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H82-QD-mD0">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H82-QD-mD0">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dL-z1-HcW">
-                                        <rect key="frame" x="0.0" y="32.5" width="398" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="42" width="378" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GV-og-w71">
+                                <rect key="frame" x="12" y="282.5" width="390" height="509.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" smartQuotesType="yes"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="LOp-6F-mYA" firstAttribute="top" secondItem="zwa-1W-4Od" secondAttribute="top" constant="20" id="HCR-yt-fen"/>
-                            <constraint firstItem="Akw-k6-YoF" firstAttribute="top" secondItem="LOp-6F-mYA" secondAttribute="bottom" constant="20" id="J0P-2J-zQr"/>
+                            <constraint firstItem="LOp-6F-mYA" firstAttribute="top" secondItem="zwa-1W-4Od" secondAttribute="top" constant="10" id="HCR-yt-fen"/>
+                            <constraint firstItem="Akw-k6-YoF" firstAttribute="top" secondItem="LOp-6F-mYA" secondAttribute="bottom" constant="15" id="J0P-2J-zQr"/>
                             <constraint firstItem="zwa-1W-4Od" firstAttribute="bottom" secondItem="0GV-og-w71" secondAttribute="bottom" constant="21" id="K0J-cx-yhO"/>
-                            <constraint firstItem="zwa-1W-4Od" firstAttribute="trailing" secondItem="Akw-k6-YoF" secondAttribute="trailing" constant="8" id="KM9-s8-xO3"/>
+                            <constraint firstItem="zwa-1W-4Od" firstAttribute="trailing" secondItem="Akw-k6-YoF" secondAttribute="trailing" constant="18" id="KM9-s8-xO3"/>
                             <constraint firstItem="LOp-6F-mYA" firstAttribute="trailing" secondItem="zwa-1W-4Od" secondAttribute="trailing" id="VIy-HA-aCa"/>
-                            <constraint firstItem="0GV-og-w71" firstAttribute="top" secondItem="Akw-k6-YoF" secondAttribute="bottom" constant="8" id="VSI-Jo-0Nj"/>
+                            <constraint firstItem="0GV-og-w71" firstAttribute="top" secondItem="Akw-k6-YoF" secondAttribute="bottom" id="VSI-Jo-0Nj"/>
                             <constraint firstItem="LOp-6F-mYA" firstAttribute="leading" secondItem="zwa-1W-4Od" secondAttribute="leading" id="WTf-ru-QAe"/>
-                            <constraint firstItem="Akw-k6-YoF" firstAttribute="leading" secondItem="zwa-1W-4Od" secondAttribute="leading" constant="8" id="pQw-s2-1LX"/>
-                            <constraint firstItem="0GV-og-w71" firstAttribute="top" secondItem="Akw-k6-YoF" secondAttribute="bottom" constant="8" id="sBK-qq-5Uf"/>
-                            <constraint firstItem="zwa-1W-4Od" firstAttribute="trailing" secondItem="0GV-og-w71" secondAttribute="trailing" constant="8" id="vQQ-hF-qCP"/>
-                            <constraint firstItem="0GV-og-w71" firstAttribute="leading" secondItem="zwa-1W-4Od" secondAttribute="leading" constant="8" id="xF2-aV-SH0"/>
+                            <constraint firstItem="Akw-k6-YoF" firstAttribute="leading" secondItem="zwa-1W-4Od" secondAttribute="leading" constant="18" id="pQw-s2-1LX"/>
+                            <constraint firstItem="zwa-1W-4Od" firstAttribute="trailing" secondItem="0GV-og-w71" secondAttribute="trailing" constant="12" id="vQQ-hF-qCP"/>
+                            <constraint firstItem="0GV-og-w71" firstAttribute="leading" secondItem="zwa-1W-4Od" secondAttribute="leading" constant="12" id="xF2-aV-SH0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zwa-1W-4Od"/>
                     </view>
@@ -140,8 +139,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pxU-yl-2Nw" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fov-NW-Mgg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="fov-NW-Mgg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

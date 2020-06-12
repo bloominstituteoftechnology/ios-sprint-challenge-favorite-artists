@@ -41,11 +41,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     MJPArtist *artist = [[_artistController artists] objectAtIndex:indexPath.row];
+
     cell.textLabel.text = artist.strArtist;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)artist.yearFormed];
+
+    if (artist.yearFormed != 0 ) {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)artist.yearFormed];
+    } else {
+        cell.detailTextLabel.text = @"Date formed unavailable.";
+    }
+
     return cell;
 }
-
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {

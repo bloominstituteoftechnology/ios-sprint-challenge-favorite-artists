@@ -18,7 +18,6 @@
     [super viewDidLoad];
     self.searchBar.delegate = self;
     [self updateViews];
-
 }
 
 - (void)updateViews {
@@ -47,7 +46,7 @@
                 if (self.searchedArtist.yearFormed != 0 ) {
                     self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i",self.searchedArtist.yearFormed];
                    } else {
-                       self.yearLabel.text = @"Date formed not available.";
+                       self.yearLabel.text = @"";
                    }
                 self.bioTextView.text = self.searchedArtist.strBiographyEN;
             });

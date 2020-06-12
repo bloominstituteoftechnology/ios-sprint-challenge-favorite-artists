@@ -14,13 +14,13 @@
                        yearFormed:(int)yearFormed
                    strBiographyEN:(NSString *)strBiographyEN
 {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         _strArtist = strArtist;
         _yearFormed = yearFormed;
         _strBiographyEN = strBiographyEN;
     }
-
+    
     return self;
 }
+
 @end

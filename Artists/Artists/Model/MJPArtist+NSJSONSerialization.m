@@ -26,7 +26,7 @@
     return self;
 }
 
-- (NSDictionary *)artistDictionary {
+- (NSDictionary *)toDictionary {
     NSMutableDictionary *artistDictionary = [NSMutableDictionary dictionary];
     [artistDictionary setObject:self.strArtist forKey:@"strArtist"];
     [artistDictionary setObject:self.strBiographyEN forKey:@"strBio"];

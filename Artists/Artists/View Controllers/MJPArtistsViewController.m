@@ -16,17 +16,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.searchBar.delegate = self;
+    if (_artist) {
+        self.searchBar.isHidden;
+        self.artistLabel.text = _artist.strArtist;
+        self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i",_artist.yearFormed];
+        self.bioTextView.text = _artist.strBiographyEN;
+        } else if (!_artist) {
+            self.artistLabel.text = @"";
+            self.yearLabel.text = @"";
+            self.bioTextView.text = @"";
+        }
+    }
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [_artistController fetchArtist:searchBar.text completionBlock:^(MJPArtist * _Nullable artist, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"Error getting artist info: %@", error);
+            return;
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.searchedArtist = artist;
+                self.artistLabel.text = self.searchedArtist.strArtist;
+                self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)self.searchedArtist.yearFormed];
+                self.bioTextView.text = self.searchedArtist.strBiographyEN;
+            });
+        }
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)saveButtonPressed:(id)sender
+{
+    if (_searchedArtist) {
+       [_artistController createArtist:_searchedArtist];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
 
 @end

@@ -7,10 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MJPArtist.h"
+#import "MJPArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MJPArtistsViewController : UIViewController
+@interface MJPArtistsViewController : UIViewController <UISearchBarDelegate>
+
+@property MJPArtistController *artistController;
+@property MJPArtist *artist;
+@property MJPArtist *searchedArtist;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
+
+- (IBAction)saveButtonPressed:(id)sender;
 
 @end
 

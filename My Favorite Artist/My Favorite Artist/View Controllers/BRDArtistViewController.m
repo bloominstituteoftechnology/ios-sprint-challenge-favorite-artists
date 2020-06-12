@@ -7,8 +7,11 @@
 //
 
 #import "BRDArtistViewController.h"
+#import "BRDArtistController.h"
+#import "BRDArtist.h"
+#import "BRDArtist+NSJSONSerialization.h"
 
-@interface BRDArtistViewController ()
+@interface BRDArtistViewController ()<UISearchBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
@@ -16,23 +19,97 @@
 @property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
+@property (nonatomic) BRDArtist *artistSearch;
+@property (nonatomic) BOOL isArtist;
+
 @end
 
 @implementation BRDArtistViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+        self.searchBar.delegate = self;
+    
+    if (self.artist == nil) {
+        self.isArtist = NO;
+    } else {
+        self.isArtist = YES;
+        [self updateViews];
+    }
+    
+    if (self.artistController == nil) {
+        NSLog(@"There's NO controller");
+    } else {
+        NSLog(@"There's a controller");
+    }
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews {
+    if (self.isArtist == YES) {
+        self.searchBar.hidden = YES;
+        self.title = self.artist.artist;
+        
+        self.nameLabel.hidden = NO;
+        self.yearFormedLabel.hidden = NO;
+        self.biographyTextView.hidden = NO;
+        
+        self.nameLabel.text = self.artist.artist;
+        
+        if (self.artist.yearFormed == 0) {
+            self.yearFormedLabel.text = @"N/A";
+        } else {
+            self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+        }
+        self.biographyTextView.text = self.artist.biography;
+    } else {
+        self.nameLabel.hidden = NO;
+        self.yearFormedLabel.hidden = NO;
+        self.biographyTextView.hidden = NO;
+        
+        self.nameLabel.text = self.artistSearch.artist;
+        
+        if (self.artistSearch.yearFormed == 0) {
+            self.yearFormedLabel.text = @"N/A";
+        } else {
+            self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artistSearch.yearFormed];
+        }
+        self.biographyTextView.text = self.artistSearch.biography;
+    }
 }
-*/
+    
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    NSLog(@"You hit return");
+    
+    [self.artistController fetchArtistWithName:searchBar.text completionBlock:^(BRDArtist * _Nullable artist, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Fetching Error: ");
+            return;
+        }
+        
+        NSLog(@"Artist: %@", artist);
+        self.artistSearch = artist;
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateViews];
+        });
+    }];
+}
+
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    if (self.artistSearch == nil) {
+        return;
+    }
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject: [self.artistSearch toDictionary] options:0 error:nil];
+    NSURL *directory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+    NSURL *url = [[directory URLByAppendingPathComponent:self.artistSearch.artist] URLByAppendingPathExtension: @"json"];
+    
+    NSLog(@"DIRECTORY: %@", directory);
+    NSLog(@"URL: %@", url);
+
+    [data writeToURL:url atomically:YES];
+}
 
 @end

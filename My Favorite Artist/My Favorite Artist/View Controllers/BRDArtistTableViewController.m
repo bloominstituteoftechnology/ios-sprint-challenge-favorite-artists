@@ -7,8 +7,14 @@
 //
 
 #import "BRDArtistTableViewController.h"
+#import "BRDArtistViewController.h"
+#import "BRDArtistController.h"
+#import "BRDArtist.h"
 
 @interface BRDArtistTableViewController ()
+
+@property (nonatomic) BRDArtistController *artistController;
+@property (nonatomic) NSMutableArray *savedArtists;
 
 @end
 
@@ -34,6 +40,21 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
     return 0;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if (self.artistController == nil) {
+        NSLog(@"There's NO controller in TB");
+    } else {
+        NSLog(@"There's a controller in TB");
+    }
+    
+    if([segue.identifier isEqualToString:@"SearchSegue"]){
+        NSLog(@"Ok it should have the search now");
+        BRDArtistViewController *vc = (BRDArtistViewController *)segue.destinationViewController;
+        vc.artistController = self.artistController;
+    }
 }
 
 /*

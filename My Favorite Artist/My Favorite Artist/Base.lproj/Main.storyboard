@@ -49,7 +49,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="j2D-oB-GsE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="g33-hX-sXS">
                             <connections>
-                                <segue destination="0ux-PM-q0O" kind="show" id="tFj-fA-Vai"/>
+                                <segue destination="0ux-PM-q0O" kind="show" identifier="SearchSegue" id="tFj-fA-Vai"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -98,7 +98,11 @@
                         <viewLayoutGuide key="safeArea" id="peF-Sv-mL0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add An Artist" id="rM6-ui-k1q">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="TwE-e6-ZRU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="TwE-e6-ZRU">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="0ux-PM-q0O" id="dcA-cw-IYG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="biographyTextView" destination="I9O-8M-hqd" id="Y7m-KH-KhE"/>

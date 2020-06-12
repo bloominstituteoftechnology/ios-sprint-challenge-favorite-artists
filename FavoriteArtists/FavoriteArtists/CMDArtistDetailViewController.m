@@ -38,12 +38,13 @@
     
     if (self.artist != nil){
         self.navigationItem.title = [NSString stringWithFormat:@"%@", self.artist.name];
-        self.nameLabel.text = self.artist.name;
+        self.nameLabel.hidden = YES;
         self.biographyLabel.text = self.artist.biography;
         self.yearLabel.text = [self yearStr];
         self.formedInLabel.text = @"Formed in:";
         self.formedInLabel.hidden = NO;
         self.saveButton.accessibilityElementsHidden = YES;
+        self.searchBar.hidden = YES;
     } else if (self.artist == nil){
         self.navigationItem.title = @"Add New Artists";
         self.nameLabel.text = @"";

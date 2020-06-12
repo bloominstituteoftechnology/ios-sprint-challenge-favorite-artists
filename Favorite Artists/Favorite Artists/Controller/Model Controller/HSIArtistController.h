@@ -7,14 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HSIArtist.h"
+@class HSIArtist;
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HSIArtistController : NSObject
 
+@property (nonatomic, copy) NSMutableArray *privateArtists;
 @property NSURL *baseURL;
+
+- (void)addArtist:(HSIArtist *)artist;
+- (void)saveArtists;
+- (NSArray *)loadArtists;
 
 - (instancetype)init;
 - (void)findArtistWithName:(NSString *)name completion:(void (^)(HSIArtist *))completion;

@@ -23,16 +23,4 @@
     return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    if (dictionary) {
-        NSString *name = dictionary[@"strArtist"];
-        NSString *biography = dictionary[@"strBiographyEN"];
-        NSNumber *year = dictionary[@"intFormedYear"];
-        if (name && biography && year) {
-            return [self initWithName:name biography:biography year:year.intValue];
-        }
-    }
-    return nil;
-}
-
 @end

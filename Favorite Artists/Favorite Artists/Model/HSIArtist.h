@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSInteger year;
 
 - (instancetype)initWithName:(NSString *)name biography:(NSString *)biography year:(NSInteger)year;
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

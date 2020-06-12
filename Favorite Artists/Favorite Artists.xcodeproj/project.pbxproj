@@ -19,6 +19,7 @@
 		B9C1E8912493D365007EAD24 /* HSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C1E8902493D365007EAD24 /* HSIArtist.m */; };
 		B9C1E8942493D377007EAD24 /* HSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C1E8932493D377007EAD24 /* HSIArtistController.m */; };
 		B9C1E8952493D3C7007EAD24 /* HSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C1E8932493D377007EAD24 /* HSIArtistController.m */; };
+		B9C1E8982493E440007EAD24 /* HSIArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C1E8972493E440007EAD24 /* HSIArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		B9C1E8902493D365007EAD24 /* HSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSIArtist.m; sourceTree = "<group>"; };
 		B9C1E8922493D377007EAD24 /* HSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSIArtistController.h; sourceTree = "<group>"; };
 		B9C1E8932493D377007EAD24 /* HSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSIArtistController.m; sourceTree = "<group>"; };
+		B9C1E8962493E440007EAD24 /* HSIArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HSIArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		B9C1E8972493E440007EAD24 /* HSIArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HSIArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 			children = (
 				B9C1E8922493D377007EAD24 /* HSIArtistController.h */,
 				B9C1E8932493D377007EAD24 /* HSIArtistController.m */,
+				B9C1E8962493E440007EAD24 /* HSIArtist+NSJSONSerialization.h */,
+				B9C1E8972493E440007EAD24 /* HSIArtist+NSJSONSerialization.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C1E8892493D2B8007EAD24 /* HSIArtistsTableViewController.m in Sources */,
+				B9C1E8982493E440007EAD24 /* HSIArtist+NSJSONSerialization.m in Sources */,
 				B9C1E8912493D365007EAD24 /* HSIArtist.m in Sources */,
 				B9C1E85D2493D1B3007EAD24 /* AppDelegate.m in Sources */,
 				B9C1E86E2493D1B5007EAD24 /* main.m in Sources */,

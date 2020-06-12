@@ -15,6 +15,8 @@
 
 @implementation HSIArtistControllerTests
 
+
+
 - (void) testFetchingArtists {
     XCTestExpectation *expectation = [self expectationWithDescription:@"Wait for API"];
     HSIArtistController *controller = [[HSIArtistController alloc] init];
@@ -23,9 +25,15 @@
         XCTAssertNotNil(artist);
         [expectation fulfill];
     }];
+
     NSArray *expectationArray = [[NSArray alloc] initWithObjects:expectation, nil];
     [self waitForExpectations:expectationArray timeout:5.0];
 
+}
+
+- (void) testLoadingArtists {
+    HSIArtistController *controller = [[HSIArtistController alloc] init];
+    XCTAssertNotNil([controller loadArtists]); //nothing to load. This should be empty and not cause a crash
 }
 
 @end

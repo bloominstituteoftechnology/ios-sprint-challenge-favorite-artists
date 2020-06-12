@@ -14,6 +14,11 @@
 		C4CC65C72493D3DB002DB5DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CC65C62493D3DB002DB5DD /* Assets.xcassets */; };
 		C4CC65CA2493D3DB002DB5DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CC65C82493D3DB002DB5DD /* LaunchScreen.storyboard */; };
 		C4CC65CD2493D3DB002DB5DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CC65CC2493D3DB002DB5DD /* main.m */; };
+		C4CC65D62493D6B0002DB5DD /* BRDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CC65D52493D6B0002DB5DD /* BRDArtist.m */; };
+		C4CC65D92493DA43002DB5DD /* BRDArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CC65D82493DA43002DB5DD /* BRDArtist+NSJSONSerialization.m */; };
+		C4CC65DD2493DB95002DB5DD /* BRDArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CC65DC2493DB95002DB5DD /* BRDArtistController.m */; };
+		C4CC65E12493DD32002DB5DD /* BRDArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CC65E02493DD32002DB5DD /* BRDArtistTableViewController.m */; };
+		C4CC65E42493DD4F002DB5DD /* BRDArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CC65E32493DD4F002DB5DD /* BRDArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,16 @@
 		C4CC65C92493D3DB002DB5DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4CC65CB2493D3DB002DB5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4CC65CC2493D3DB002DB5DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4CC65D42493D6B0002DB5DD /* BRDArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRDArtist.h; sourceTree = "<group>"; };
+		C4CC65D52493D6B0002DB5DD /* BRDArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRDArtist.m; sourceTree = "<group>"; };
+		C4CC65D72493DA43002DB5DD /* BRDArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BRDArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		C4CC65D82493DA43002DB5DD /* BRDArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BRDArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		C4CC65DB2493DB95002DB5DD /* BRDArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRDArtistController.h; sourceTree = "<group>"; };
+		C4CC65DC2493DB95002DB5DD /* BRDArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRDArtistController.m; sourceTree = "<group>"; };
+		C4CC65DF2493DD32002DB5DD /* BRDArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRDArtistTableViewController.h; sourceTree = "<group>"; };
+		C4CC65E02493DD32002DB5DD /* BRDArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRDArtistTableViewController.m; sourceTree = "<group>"; };
+		C4CC65E22493DD4F002DB5DD /* BRDArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRDArtistViewController.h; sourceTree = "<group>"; };
+		C4CC65E32493DD4F002DB5DD /* BRDArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRDArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +76,15 @@
 		C4CC65B92493D3CF002DB5DD /* My Favorite Artist */ = {
 			isa = PBXGroup;
 			children = (
+				C4CC65DE2493DCE5002DB5DD /* View Controllers */,
+				C4CC65DA2493DB77002DB5DD /* Controller */,
+				C4CC65D32493D65D002DB5DD /* Model */,
 				C4CC65BA2493D3CF002DB5DD /* AppDelegate.h */,
 				C4CC65BB2493D3CF002DB5DD /* AppDelegate.m */,
 				C4CC65BD2493D3CF002DB5DD /* SceneDelegate.h */,
 				C4CC65BE2493D3CF002DB5DD /* SceneDelegate.m */,
+				C4CC65D72493DA43002DB5DD /* BRDArtist+NSJSONSerialization.h */,
+				C4CC65D82493DA43002DB5DD /* BRDArtist+NSJSONSerialization.m */,
 				C4CC65C02493D3CF002DB5DD /* ViewController.h */,
 				C4CC65C12493D3CF002DB5DD /* ViewController.m */,
 				C4CC65C32493D3CF002DB5DD /* Main.storyboard */,
@@ -74,6 +94,35 @@
 				C4CC65CC2493D3DB002DB5DD /* main.m */,
 			);
 			path = "My Favorite Artist";
+			sourceTree = "<group>";
+		};
+		C4CC65D32493D65D002DB5DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4CC65D42493D6B0002DB5DD /* BRDArtist.h */,
+				C4CC65D52493D6B0002DB5DD /* BRDArtist.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4CC65DA2493DB77002DB5DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4CC65DB2493DB95002DB5DD /* BRDArtistController.h */,
+				C4CC65DC2493DB95002DB5DD /* BRDArtistController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4CC65DE2493DCE5002DB5DD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4CC65DF2493DD32002DB5DD /* BRDArtistTableViewController.h */,
+				C4CC65E02493DD32002DB5DD /* BRDArtistTableViewController.m */,
+				C4CC65E22493DD4F002DB5DD /* BRDArtistViewController.h */,
+				C4CC65E32493DD4F002DB5DD /* BRDArtistViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +196,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4CC65C22493D3CF002DB5DD /* ViewController.m in Sources */,
+				C4CC65E42493DD4F002DB5DD /* BRDArtistViewController.m in Sources */,
 				C4CC65BC2493D3CF002DB5DD /* AppDelegate.m in Sources */,
+				C4CC65DD2493DB95002DB5DD /* BRDArtistController.m in Sources */,
 				C4CC65CD2493D3DB002DB5DD /* main.m in Sources */,
 				C4CC65BF2493D3CF002DB5DD /* SceneDelegate.m in Sources */,
+				C4CC65D62493D6B0002DB5DD /* BRDArtist.m in Sources */,
+				C4CC65D92493DA43002DB5DD /* BRDArtist+NSJSONSerialization.m in Sources */,
+				C4CC65E12493DD32002DB5DD /* BRDArtistTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

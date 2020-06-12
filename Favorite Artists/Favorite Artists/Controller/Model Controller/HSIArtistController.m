@@ -53,7 +53,7 @@
             return;
         }
 
-        NSDictionary *artistsDictionary = decodeDictionary[@"artists"];
+        NSDictionary *artistsDictionary = decodeDictionary[@"artists"][0];
         if (!artistsDictionary) {
             NSLog(@"Error creating dictionary. No artists found?");
         } else {

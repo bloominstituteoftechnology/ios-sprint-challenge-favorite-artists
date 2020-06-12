@@ -16,6 +16,8 @@
 		DB85DB752493D4850049D1A0 /* PDMArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB742493D4850049D1A0 /* PDMArtist.m */; };
 		DB85DB782493D5430049D1A0 /* PDMArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB772493D5430049D1A0 /* PDMArtistController.m */; };
 		DB85DB7B2493D5E60049D1A0 /* PDMArtist+JSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB7A2493D5E60049D1A0 /* PDMArtist+JSONSerialization.m */; };
+		DB85DB7E2493D7F20049D1A0 /* PDMArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB7D2493D7F20049D1A0 /* PDMArtistsTableViewController.m */; };
+		DB85DB812493D8680049D1A0 /* PDMArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB802493D8680049D1A0 /* PDMArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		DB85DB772493D5430049D1A0 /* PDMArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDMArtistController.m; sourceTree = "<group>"; };
 		DB85DB792493D5E60049D1A0 /* PDMArtist+JSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDMArtist+JSONSerialization.h"; sourceTree = "<group>"; };
 		DB85DB7A2493D5E60049D1A0 /* PDMArtist+JSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PDMArtist+JSONSerialization.m"; sourceTree = "<group>"; };
+		DB85DB7C2493D7F20049D1A0 /* PDMArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDMArtistsTableViewController.h; sourceTree = "<group>"; };
+		DB85DB7D2493D7F20049D1A0 /* PDMArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDMArtistsTableViewController.m; sourceTree = "<group>"; };
+		DB85DB7F2493D8680049D1A0 /* PDMArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDMArtistDetailViewController.h; sourceTree = "<group>"; };
+		DB85DB802493D8680049D1A0 /* PDMArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDMArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,10 @@
 		DB85DB722493D3630049D1A0 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DB85DB7C2493D7F20049D1A0 /* PDMArtistsTableViewController.h */,
+				DB85DB7D2493D7F20049D1A0 /* PDMArtistsTableViewController.m */,
+				DB85DB7F2493D8680049D1A0 /* PDMArtistDetailViewController.h */,
+				DB85DB802493D8680049D1A0 /* PDMArtistDetailViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -190,7 +200,9 @@
 			files = (
 				DB85DB572493D3020049D1A0 /* AppDelegate.m in Sources */,
 				DB85DB782493D5430049D1A0 /* PDMArtistController.m in Sources */,
+				DB85DB7E2493D7F20049D1A0 /* PDMArtistsTableViewController.m in Sources */,
 				DB85DB682493D3030049D1A0 /* main.m in Sources */,
+				DB85DB812493D8680049D1A0 /* PDMArtistDetailViewController.m in Sources */,
 				DB85DB752493D4850049D1A0 /* PDMArtist.m in Sources */,
 				DB85DB5A2493D3020049D1A0 /* SceneDelegate.m in Sources */,
 				DB85DB7B2493D5E60049D1A0 /* PDMArtist+JSONSerialization.m in Sources */,

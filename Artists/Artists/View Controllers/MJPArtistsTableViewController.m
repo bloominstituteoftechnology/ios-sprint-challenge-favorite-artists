@@ -55,23 +55,22 @@
     }
 }
 
-
-//#pragma mark - Navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"ShowArtistSegue"])
-//    {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        MJPArtist *artist = self.artistController.artists[indexPath.row];
-//        MJPArtistsViewController *detailVC = segue.destinationViewController;
-//        detailVC.artistController = self.artistController;
-//        detailVC.artist = artist;
-//    }
-//    else if ([[segue identifier] isEqualToString:@"AddArtistSegue"])
-//    {
-//        MJPArtistsViewController *detailVC = segue.destinationViewController;
-//        detailVC.artistController = self.artistController;
-//    }
-//}
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"ShowArtistSegue"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        MJPArtist *artist = self.artistController.artists[indexPath.row];
+        MJPArtistsViewController *detailVC = segue.destinationViewController;
+        detailVC.artistController = self.artistController;
+        detailVC.artist = artist;
+    }
+    else if ([[segue identifier] isEqualToString:@"AddArtistSegue"])
+    {
+        MJPArtistsViewController *detailVC = segue.destinationViewController;
+        detailVC.artistController = self.artistController;
+    }
+}
 
 @end

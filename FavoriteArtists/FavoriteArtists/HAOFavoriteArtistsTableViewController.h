@@ -10,6 +10,5 @@
 
 @interface HAOFavoriteArtistsTableViewController : UIViewController
 
-
 @end
 

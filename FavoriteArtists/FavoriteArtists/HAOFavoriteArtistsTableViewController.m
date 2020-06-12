@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@property NSMutableArray<HAOArtist *> *favoriteArtists;
+@property (nonatomic) NSMutableArray<HAOArtist *> *favoriteArtists;
 
 @end
 

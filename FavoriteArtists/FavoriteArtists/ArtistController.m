@@ -7,14 +7,9 @@
 //
 
 #import "ArtistController.h"
+#import "Artist.h"
 
 @implementation ArtistController
-
-//: URL? {
-//    let fileManager = FileManager.default
-//    guard let documents = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-//    return documents.appendingPathComponent("ReadingList.plist")
-//}
 
 - (void)saveArtistToFavorites:(Artist *)artist
 {
@@ -31,7 +26,8 @@
     NSFileManager *fileManager = [[NSFileManager alloc] init];
 
     if ([fileManager fileExistsAtPath:self.artistListURL.path]) {
-        NSDictionary *artistDictionary = [NSDictionary initWithContentsOfURL:self.artistListURL];
+        // anytime you need to call init you need alloc
+        NSDictionary *artistDictionary = [[NSDictionary alloc] initWithContentsOfURL:self.artistListURL];
 
     }
 }

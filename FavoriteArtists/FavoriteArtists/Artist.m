@@ -10,7 +10,17 @@
 
 @implementation Artist
 
-- (instancetype)initWithName:(NSString *)artistName biography:(NSString *)artistBiography yearFormed:(int)yearFormed
+- (instancetype)init
+{
+    return [self initWithName:@""
+                    biography:@""
+                   yearFormed:1907];
+
+}
+
+- (instancetype)initWithName:(NSString *)artistName
+                   biography:(NSString *)artistBiography
+                  yearFormed:(int)yearFormed
 {
     if (self = [super init]) {
         _artistName = artistName.copy;
@@ -18,22 +28,6 @@
         _yearFormed = yearFormed;
     }
     return self;
-}
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
-
-    NSString *name = dictionary[@"strArtist"];
-    NSString *biography = dictionary[@"strBiographyEN"];
-    NSNumber *year = dictionary[@"intFormedYear"];
-
-    if ([year isKindOfClass:[NSNull class]]) {
-        year = nil;
-    }
-
-    return [self initWithName:name.copy
-                    biography:biography.copy
-                   yearFormed:year.intValue];
 }
 
 @end

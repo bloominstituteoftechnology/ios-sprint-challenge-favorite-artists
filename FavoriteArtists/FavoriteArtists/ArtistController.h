@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSURL *artistListURL;
 
-//- (nullable NSDictionary<NSString *, Artist *> *)initWithContentsOfURL:(NSURL *)url API_DEPRECATED_WITH_REPLACEMENT("initWithContentsOfURL:error:", macos(10.0, API_TO_BE_DEPRECATED), ios(2.0, API_TO_BE_DEPRECATED), watchos(2.0, API_TO_BE_DEPRECATED), tvos(9.0, API_TO_BE_DEPRECATED));
+//- (nullable NSDictionary<NSString *, Artist *> *)initWithContentsOfURL:(NSURL *)url; // this needs to be called on a dictionary but not defined any other way
 
 - (void)saveArtistToFavorites:(Artist *)artist;
 

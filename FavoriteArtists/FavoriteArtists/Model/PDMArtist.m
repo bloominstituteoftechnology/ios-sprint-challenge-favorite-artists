@@ -10,6 +10,8 @@
 
 @implementation PDMArtist
 
+const int PDM_Artist_UnknownYear = -1;
+
 - (instancetype)initWithName:(NSString *)name biography:(NSString *)biography yearFormed:(NSInteger)yearFormed
 {
     self = [super init];

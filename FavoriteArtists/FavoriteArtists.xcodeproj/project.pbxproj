@@ -15,6 +15,7 @@
 		DB85DB682493D3030049D1A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB672493D3030049D1A0 /* main.m */; };
 		DB85DB752493D4850049D1A0 /* PDMArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB742493D4850049D1A0 /* PDMArtist.m */; };
 		DB85DB782493D5430049D1A0 /* PDMArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB772493D5430049D1A0 /* PDMArtistController.m */; };
+		DB85DB7B2493D5E60049D1A0 /* PDMArtist+JSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB7A2493D5E60049D1A0 /* PDMArtist+JSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		DB85DB742493D4850049D1A0 /* PDMArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDMArtist.m; sourceTree = "<group>"; };
 		DB85DB762493D5430049D1A0 /* PDMArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDMArtistController.h; sourceTree = "<group>"; };
 		DB85DB772493D5430049D1A0 /* PDMArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDMArtistController.m; sourceTree = "<group>"; };
+		DB85DB792493D5E60049D1A0 /* PDMArtist+JSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDMArtist+JSONSerialization.h"; sourceTree = "<group>"; };
+		DB85DB7A2493D5E60049D1A0 /* PDMArtist+JSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PDMArtist+JSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +69,6 @@
 			children = (
 				DB85DB722493D3630049D1A0 /* View Controller */,
 				DB85DB712493D35D0049D1A0 /* Model Controller */,
-				DB85DB702493D3590049D1A0 /* View */,
 				DB85DB6F2493D3500049D1A0 /* Model */,
 				DB85DB6E2493D3490049D1A0 /* Resources */,
 				DB85DB5E2493D3020049D1A0 /* Main.storyboard */,
@@ -94,15 +96,10 @@
 			children = (
 				DB85DB732493D4850049D1A0 /* PDMArtist.h */,
 				DB85DB742493D4850049D1A0 /* PDMArtist.m */,
+				DB85DB792493D5E60049D1A0 /* PDMArtist+JSONSerialization.h */,
+				DB85DB7A2493D5E60049D1A0 /* PDMArtist+JSONSerialization.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		DB85DB702493D3590049D1A0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		DB85DB712493D35D0049D1A0 /* Model Controller */ = {
@@ -196,6 +193,7 @@
 				DB85DB682493D3030049D1A0 /* main.m in Sources */,
 				DB85DB752493D4850049D1A0 /* PDMArtist.m in Sources */,
 				DB85DB5A2493D3020049D1A0 /* SceneDelegate.m in Sources */,
+				DB85DB7B2493D5E60049D1A0 /* PDMArtist+JSONSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

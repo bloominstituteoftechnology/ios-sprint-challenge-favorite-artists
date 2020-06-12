@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern int const PDM_Artist_UnknownYear;
+
 @interface PDMArtist : NSObject
 
 @property (nonatomic, copy, readonly) NSString *name;

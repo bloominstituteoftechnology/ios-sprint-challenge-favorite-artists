@@ -1,5 +1,5 @@
 //
-//  CMDArtistsTableViewController.h
+//  CMDArtistDetailViewController.h
 //  FavoriteArtists
 //
 //  Created by Chris Dobek on 6/12/20.
@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @class CMDArtistController;
+@class CMDArtist;
 
-@interface CMDArtistsTableViewController : UITableViewController
+@interface CMDArtistDetailViewController : UIViewController<UISearchBarDelegate>
 
-@property CMDArtistController* artistController;
+@property CMDArtistController *artistController;
+@property CMDArtist *artist;
 
 @end
 

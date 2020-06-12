@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		2792693C2493D1B50092F4E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2792693B2493D1B50092F4E2 /* AppDelegate.m */; };
 		2792693F2493D1B50092F4E2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2792693E2493D1B50092F4E2 /* SceneDelegate.m */; };
-		279269422493D1B50092F4E2 /* CMDArtistsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279269412493D1B50092F4E2 /* CMDArtistsDetailViewController.m */; };
 		279269452493D1B50092F4E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279269432493D1B50092F4E2 /* Main.storyboard */; };
 		279269472493D1BF0092F4E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279269462493D1BF0092F4E2 /* Assets.xcassets */; };
 		2792694A2493D1BF0092F4E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279269482493D1BF0092F4E2 /* LaunchScreen.storyboard */; };
 		2792694D2493D1BF0092F4E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2792694C2493D1BF0092F4E2 /* main.m */; };
 		279269552493D2FA0092F4E2 /* CMDArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279269542493D2FA0092F4E2 /* CMDArtistsTableViewController.m */; };
 		279269582493D3E20092F4E2 /* CMDArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 279269572493D3E20092F4E2 /* CMDArtist.m */; };
+		2792695B2493D51E0092F4E2 /* CMDArtist+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2792695A2493D51E0092F4E2 /* CMDArtist+JSONHelper.m */; };
+		2792695E2493D64F0092F4E2 /* CMDArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2792695D2493D64F0092F4E2 /* CMDArtistController.m */; };
+		279269612493DA280092F4E2 /* CMDArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279269602493DA280092F4E2 /* CMDArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,6 @@
 		2792693B2493D1B50092F4E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2792693D2493D1B50092F4E2 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		2792693E2493D1B50092F4E2 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		279269402493D1B50092F4E2 /* CMDArtistsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDArtistsDetailViewController.h; sourceTree = "<group>"; };
-		279269412493D1B50092F4E2 /* CMDArtistsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDArtistsDetailViewController.m; sourceTree = "<group>"; };
 		279269442493D1B50092F4E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		279269462493D1BF0092F4E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		279269492493D1BF0092F4E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +35,12 @@
 		279269542493D2FA0092F4E2 /* CMDArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDArtistsTableViewController.m; sourceTree = "<group>"; };
 		279269562493D3E20092F4E2 /* CMDArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDArtist.h; sourceTree = "<group>"; };
 		279269572493D3E20092F4E2 /* CMDArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDArtist.m; sourceTree = "<group>"; };
+		279269592493D51E0092F4E2 /* CMDArtist+JSONHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMDArtist+JSONHelper.h"; sourceTree = "<group>"; };
+		2792695A2493D51E0092F4E2 /* CMDArtist+JSONHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CMDArtist+JSONHelper.m"; sourceTree = "<group>"; };
+		2792695C2493D64F0092F4E2 /* CMDArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDArtistController.h; sourceTree = "<group>"; };
+		2792695D2493D64F0092F4E2 /* CMDArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDArtistController.m; sourceTree = "<group>"; };
+		2792695F2493DA280092F4E2 /* CMDArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDArtistDetailViewController.h; sourceTree = "<group>"; };
+		279269602493DA280092F4E2 /* CMDArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +77,6 @@
 				2792693B2493D1B50092F4E2 /* AppDelegate.m */,
 				2792693D2493D1B50092F4E2 /* SceneDelegate.h */,
 				2792693E2493D1B50092F4E2 /* SceneDelegate.m */,
-				279269402493D1B50092F4E2 /* CMDArtistsDetailViewController.h */,
-				279269412493D1B50092F4E2 /* CMDArtistsDetailViewController.m */,
 				279269432493D1B50092F4E2 /* Main.storyboard */,
 				279269462493D1BF0092F4E2 /* Assets.xcassets */,
 				279269482493D1BF0092F4E2 /* LaunchScreen.storyboard */,
@@ -82,6 +86,12 @@
 				279269542493D2FA0092F4E2 /* CMDArtistsTableViewController.m */,
 				279269562493D3E20092F4E2 /* CMDArtist.h */,
 				279269572493D3E20092F4E2 /* CMDArtist.m */,
+				279269592493D51E0092F4E2 /* CMDArtist+JSONHelper.h */,
+				2792695A2493D51E0092F4E2 /* CMDArtist+JSONHelper.m */,
+				2792695C2493D64F0092F4E2 /* CMDArtistController.h */,
+				2792695D2493D64F0092F4E2 /* CMDArtistController.m */,
+				2792695F2493DA280092F4E2 /* CMDArtistDetailViewController.h */,
+				279269602493DA280092F4E2 /* CMDArtistDetailViewController.m */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -158,11 +168,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				279269552493D2FA0092F4E2 /* CMDArtistsTableViewController.m in Sources */,
-				279269422493D1B50092F4E2 /* CMDArtistsDetailViewController.m in Sources */,
 				2792693C2493D1B50092F4E2 /* AppDelegate.m in Sources */,
+				2792695B2493D51E0092F4E2 /* CMDArtist+JSONHelper.m in Sources */,
 				2792694D2493D1BF0092F4E2 /* main.m in Sources */,
 				2792693F2493D1B50092F4E2 /* SceneDelegate.m in Sources */,
 				279269582493D3E20092F4E2 /* CMDArtist.m in Sources */,
+				2792695E2493D64F0092F4E2 /* CMDArtistController.m in Sources */,
+				279269612493DA280092F4E2 /* CMDArtistDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

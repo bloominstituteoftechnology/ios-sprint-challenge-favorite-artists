@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="dk2-1i-deG" kind="show" identifier="ShowArtistsSegue" id="Nje-Tp-H6Z"/>
+                                    <segue destination="dk2-1i-deG" kind="show" identifier="ShowArtistSegue" id="Nje-Tp-H6Z"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,7 +61,7 @@
             </objects>
             <point key="canvasLocation" x="806" y="86"/>
         </scene>
-        <!--Artist Detail View Controller-->
+        <!--Add New Artist:-->
         <scene sceneID="krO-NH-wLz">
             <objects>
                 <viewController id="dk2-1i-deG" customClass="CMDArtistDetailViewController" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok9-cZ-WNq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Queen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok9-cZ-WNq">
                                 <rect key="frame" x="20" y="226" width="98" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Wvs-b0-WVP"/>
@@ -86,8 +86,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-0g-hsx">
-                                <rect key="frame" x="20" y="267" width="121.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Formed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-0g-hsx">
+                                <rect key="frame" x="20" y="267" width="87.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80.5" id="Cvg-KI-QUe"/>
                                     <constraint firstAttribute="height" constant="21" id="tUm-cq-OEC"/>
@@ -96,8 +96,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUi-Od-Onb">
-                                <rect key="frame" x="156.5" y="267" width="0.0" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1971" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUi-Od-Onb">
+                                <rect key="frame" x="122.5" y="267" width="34" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9tl-ZE-XpT"/>
                                 </constraints>
@@ -105,8 +105,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aNF-nV-wvp">
-                                <rect key="frame" x="10" y="296" width="414" height="566"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Information about Queen will show up here!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aNF-nV-wvp">
+                                <rect key="frame" x="20" y="296" width="374" height="566"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="566" id="cX0-tl-dcq"/>
@@ -119,14 +119,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="62z-5V-CtH" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ok9-cZ-WNq" secondAttribute="trailing" constant="296" id="0IC-Vo-k8f"/>
-                            <constraint firstItem="aNF-nV-wvp" firstAttribute="trailing" secondItem="62z-5V-CtH" secondAttribute="trailing" constant="10" id="7Nd-3P-dkm"/>
+                            <constraint firstItem="aNF-nV-wvp" firstAttribute="trailing" secondItem="62z-5V-CtH" secondAttribute="trailing" constant="-20" id="7Nd-3P-dkm"/>
                             <constraint firstItem="aNF-nV-wvp" firstAttribute="top" secondItem="7tB-0g-hsx" secondAttribute="bottom" constant="8" id="CS6-Ub-2uY"/>
                             <constraint firstItem="aNF-nV-wvp" firstAttribute="bottom" secondItem="62z-5V-CtH" secondAttribute="bottom" id="E6v-h1-7Sa"/>
                             <constraint firstItem="62z-5V-CtH" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="OUi-Od-Onb" secondAttribute="trailing" constant="257.5" id="EBq-PV-qLL"/>
                             <constraint firstItem="UCA-gh-1jT" firstAttribute="leading" secondItem="62z-5V-CtH" secondAttribute="leading" id="Fnh-Pi-c4h"/>
                             <constraint firstItem="OUi-Od-Onb" firstAttribute="centerY" secondItem="7tB-0g-hsx" secondAttribute="centerY" id="JDd-wT-tU3"/>
                             <constraint firstItem="7tB-0g-hsx" firstAttribute="leading" secondItem="62z-5V-CtH" secondAttribute="leading" constant="20" id="NMp-83-Jc7"/>
-                            <constraint firstItem="aNF-nV-wvp" firstAttribute="leading" secondItem="62z-5V-CtH" secondAttribute="leading" constant="10" id="QTZ-6T-QId"/>
+                            <constraint firstItem="aNF-nV-wvp" firstAttribute="leading" secondItem="62z-5V-CtH" secondAttribute="leading" constant="20" id="QTZ-6T-QId"/>
                             <constraint firstItem="UCA-gh-1jT" firstAttribute="top" secondItem="62z-5V-CtH" secondAttribute="top" constant="20" id="RmD-oq-LEZ"/>
                             <constraint firstItem="UCA-gh-1jT" firstAttribute="trailing" secondItem="62z-5V-CtH" secondAttribute="trailing" id="bM9-8m-ZcJ"/>
                             <constraint firstItem="OUi-Od-Onb" firstAttribute="leading" secondItem="7tB-0g-hsx" secondAttribute="trailing" constant="15" id="czl-3T-ypS"/>
@@ -136,9 +136,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="62z-5V-CtH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yQG-FR-RcR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kYX-Bn-UYT"/>
+                    <navigationItem key="navigationItem" title="Add New Artist:" id="yQG-FR-RcR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kYX-Bn-UYT">
+                            <connections>
+                                <action selector="saveTapped:" destination="dk2-1i-deG" id="XV0-TQ-9JE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="biographyLabel" destination="aNF-nV-wvp" id="68B-Tl-0Du"/>
+                        <outlet property="formedInLabel" destination="7tB-0g-hsx" id="8ED-ln-wGs"/>
+                        <outlet property="nameLabel" destination="ok9-cZ-WNq" id="Dyh-dm-3cR"/>
+                        <outlet property="saveButton" destination="kYX-Bn-UYT" id="Duf-33-bVE"/>
+                        <outlet property="searchBar" destination="UCA-gh-1jT" id="Wa3-vw-3Pm"/>
+                        <outlet property="yearLabel" destination="OUi-Od-Onb" id="HLa-8F-QG0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8at-sM-UmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,6 +176,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="svr-t0-hyh"/>
+        <segue reference="Nje-Tp-H6Z"/>
     </inferredMetricsTieBreakers>
 </document>

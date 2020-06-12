@@ -7,6 +7,9 @@
 //
 
 #import "CMDArtistsTableViewController.h"
+#import "CMDArtistController.h"
+#import "CMDArtist.h"
+#import "CMDArtistDetailViewController.h"
 
 @interface CMDArtistsTableViewController ()
 
@@ -16,78 +19,77 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.artistController loadArtistFromStore];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _artistController = [[CMDArtistController alloc] init];
+    }
+    return self;
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.artistController.artists.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
+    CMDArtist *artist = self.artistController.artists[indexPath.row];
+    cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = [self yearStr: artist];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSString *)yearStr:(CMDArtist *)artist {
+    if (artist.year != 0) {
+        return [NSString stringWithFormat:@"%i", artist.year];
+    } else {
+        return [NSString stringWithFormat:@"%i: (year not found)", 0];
+    }
 }
-*/
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        CMDArtist *artist = self.artistController.artists[indexPath.row];
+        [self.artistController deleteArtist:artist];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        NSLog(@"Artist Deleted!");
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    if ([segue.identifier isEqualToString:@"ShowArtistSegue"]) {
+        CMDArtistDetailViewController *detailVC = segue.destinationViewController;
+        CMDArtist *artist = self.artistController.artists[indexPath.row];
+        detailVC.artistController = self.artistController;
+        detailVC.artist = artist;
+    }
+    
+    
+    if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
+        CMDArtistDetailViewController *addVC = segue.destinationViewController;
+        addVC.artistController = self.artistController;
+    }
 }
-*/
-
 @end

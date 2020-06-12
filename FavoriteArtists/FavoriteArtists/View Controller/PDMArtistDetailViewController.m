@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *biographyLabel;
 
 
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 
@@ -39,6 +40,7 @@
     } else {
         NSLog(@"No Artist to Save - Add some UI feature to disable button if search field is empty.");
         [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

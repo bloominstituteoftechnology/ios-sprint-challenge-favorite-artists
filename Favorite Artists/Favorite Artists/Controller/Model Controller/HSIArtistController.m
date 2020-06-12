@@ -126,4 +126,9 @@ static NSString *artistKey = @"artists";
     return artists;
 }
 
+- (NSArray *)artists
+{
+    return self.privateArtists;
+}
+
 @end

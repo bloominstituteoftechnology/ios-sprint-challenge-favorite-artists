@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "HSIArtistController.h"
+#import "HSIArtist+NSJSONSerialization.h"
 
 @interface HSIArtistControllerTests : XCTestCase
 
@@ -31,9 +32,14 @@
 
 }
 
-- (void) testLoadingArtists {
+#warning "If you run this, it will save an artist to the app called "Test Artist. Delete" and there is no delete method"
+- (void) testSavingAndLoadingArtist {
     HSIArtistController *controller = [[HSIArtistController alloc] init];
-    XCTAssertNotNil([controller loadArtists]); //nothing to load. This should be empty and not cause a crash
+    HSIArtist *artist = [[HSIArtist alloc] initWithName:@"Test Artist. Delete" biography:@"I'm nobody" year:9999];
+
+    [controller addArtist:artist];
+    [controller saveArtists];
+    XCTAssertNotEqual([controller loadArtists].count, 0);
 }
 
 @end

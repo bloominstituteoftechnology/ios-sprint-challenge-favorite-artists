@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HSIArtistController;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HSIArtistsTableViewController : UITableViewController
+//readonly because no other class needs access to it
+@property (nonatomic, readonly, copy) HSIArtistController *controller;
 
 @end
 

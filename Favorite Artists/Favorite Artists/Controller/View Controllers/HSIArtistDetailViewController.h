@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class HSIArtist;
+@class HSIArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HSIArtistDetailViewController : UIViewController
+
+@property (nonatomic, strong) HSIArtist *artist;
+@property (nonatomic, strong) HSIArtistController *controller;
+
+- (void)updateViews;
+- (void)setupArtist;
 
 @end
 

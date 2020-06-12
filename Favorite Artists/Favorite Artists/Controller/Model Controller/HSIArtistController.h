@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSMutableArray *privateArtists;
 @property NSURL *baseURL;
 
+- (NSArray *)artists;
 - (void)addArtist:(HSIArtist *)artist;
 - (void)saveArtists;
 - (NSArray *)loadArtists;

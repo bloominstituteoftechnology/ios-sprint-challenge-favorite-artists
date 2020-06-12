@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class PDMArtist;
+@class PDMArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PDMArtistDetailViewController : UIViewController
+@interface PDMArtistDetailViewController : UIViewController <UISearchBarDelegate>
+
+- (void)updateViews;
+
+@property (nonatomic, strong) PDMArtist *artist;
+@property (nonatomic, strong) PDMArtistController *artistController;
 
 @end
 

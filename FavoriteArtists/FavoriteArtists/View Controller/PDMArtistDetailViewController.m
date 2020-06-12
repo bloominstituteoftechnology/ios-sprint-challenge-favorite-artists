@@ -7,6 +7,9 @@
 //
 
 #import "PDMArtistDetailViewController.h"
+#import "PDMArtist.h"
+#import "PDMArtistController.h"
+#import "PDMArtist+JSONSerialization.h"
 
 @interface PDMArtistDetailViewController ()
 

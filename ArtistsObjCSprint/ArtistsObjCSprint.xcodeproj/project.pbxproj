@@ -18,6 +18,7 @@
 		7FFE878C2493E35F008FD971 /* ArtistsObjCSprintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE878B2493E35F008FD971 /* ArtistsObjCSprintUITests.m */; };
 		7FFE879E2493E41E008FD971 /* CNSArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE879D2493E41E008FD971 /* CNSArtistModel.m */; };
 		7FFE87A02493E54C008FD971 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FFE879F2493E54C008FD971 /* Artist.json */; };
+		7FFE87AA2493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87A92493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		7FFE879C2493E41E008FD971 /* CNSArtistModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNSArtistModel.h; sourceTree = "<group>"; };
 		7FFE879D2493E41E008FD971 /* CNSArtistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNSArtistModel.m; sourceTree = "<group>"; };
 		7FFE879F2493E54C008FD971 /* Artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
+		7FFE87A82493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CNSArtistModel+ArtistSerialization.h"; sourceTree = "<group>"; };
+		7FFE87A92493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CNSArtistModel+ArtistSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				7FFE87762493E35F008FD971 /* main.m */,
 				7FFE879C2493E41E008FD971 /* CNSArtistModel.h */,
 				7FFE879D2493E41E008FD971 /* CNSArtistModel.m */,
+				7FFE87A82493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.h */,
+				7FFE87A92493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m */,
 			);
 			path = ArtistsObjCSprint;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				7FFE87772493E35F008FD971 /* main.m in Sources */,
 				7FFE879E2493E41E008FD971 /* CNSArtistModel.m in Sources */,
 				7FFE87692493E35D008FD971 /* SceneDelegate.m in Sources */,
+				7FFE87AA2493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

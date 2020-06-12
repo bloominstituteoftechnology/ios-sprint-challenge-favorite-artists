@@ -41,6 +41,7 @@
 		186E3B772493E42F00B630EA /* MJPArtistsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtistsViewController.m; sourceTree = "<group>"; };
 		186E3B792493E51900B630EA /* MJPArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPArtistController.h; sourceTree = "<group>"; };
 		186E3B7A2493E51900B630EA /* MJPArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtistController.m; sourceTree = "<group>"; };
+		186E3B7C2493E6DD00B630EA /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +126,7 @@
 		186E3B662493D2B400B630EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				186E3B7C2493E6DD00B630EA /* LSIFileHelper.h */,
 				186E3B492493D1F400B630EA /* AppDelegate.h */,
 				186E3B4A2493D1F400B630EA /* AppDelegate.m */,
 				186E3B4C2493D1F400B630EA /* SceneDelegate.h */,

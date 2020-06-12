@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MJPArtist.h"
+#import "MJPArtistController.h"
+#import "MJPArtistsViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MJPArtistsTableViewController : UITableViewController
+
+@property MJPArtistController *artistController;
 
 @end
 

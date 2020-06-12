@@ -61,19 +61,43 @@
 		1D542A0A2493D14200546C31 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				1D542A242493D19B00546C31 /* Application */,
+				1D542A262493D1C100546C31 /* ViewControllers */,
+				1D542A252493D1B400546C31 /* Storyboards */,
+			);
+			path = FavoriteArtists;
+			sourceTree = "<group>";
+		};
+		1D542A242493D19B00546C31 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				1D542A0B2493D14200546C31 /* AppDelegate.h */,
 				1D542A0C2493D14200546C31 /* AppDelegate.m */,
 				1D542A0E2493D14200546C31 /* SceneDelegate.h */,
 				1D542A0F2493D14200546C31 /* SceneDelegate.m */,
-				1D542A112493D14200546C31 /* ViewController.h */,
-				1D542A122493D14200546C31 /* ViewController.m */,
-				1D542A142493D14200546C31 /* Main.storyboard */,
 				1D542A172493D14400546C31 /* Assets.xcassets */,
-				1D542A192493D14400546C31 /* LaunchScreen.storyboard */,
 				1D542A1C2493D14400546C31 /* Info.plist */,
 				1D542A1D2493D14400546C31 /* main.m */,
 			);
-			path = FavoriteArtists;
+			name = Application;
+			sourceTree = "<group>";
+		};
+		1D542A252493D1B400546C31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1D542A142493D14200546C31 /* Main.storyboard */,
+				1D542A192493D14400546C31 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1D542A262493D1C100546C31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D542A112493D14200546C31 /* ViewController.h */,
+				1D542A122493D14200546C31 /* ViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

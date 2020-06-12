@@ -43,8 +43,17 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
             completionHandler(nil, jsonError);
             return;
         }
+        if ([dictionary[@"artists"] isKindOfClass:[NSNull class]]) {
+                 completionHandler(nil, [[NSError alloc] init]);
+                 return;
+             }
+
+             NSDictionary *artists = [[dictionary objectForKey:@"artists"] firstObject];
+             if (artists == nil) {
+                 completionHandler(nil, [[NSError alloc] init]);
+             }
         
-        LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dictionary];
+        LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artists];
         
         completionHandler(artist, nil);
         

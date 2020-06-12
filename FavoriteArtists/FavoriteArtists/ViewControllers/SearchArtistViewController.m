@@ -94,9 +94,7 @@
         
         NSLog(@"Fetched artist: %@", artist);
         self.artistSearch = artist;
-//        _artist = [[WAHArtist alloc] initWithArtist:artist.artist biography:artist.biography yearFormed:artist.yearFormed];
-        
-        // __weak typeof(self) weakSelf = self;
+
         dispatch_async(dispatch_get_main_queue(), ^{
             [self updateViews];
         });

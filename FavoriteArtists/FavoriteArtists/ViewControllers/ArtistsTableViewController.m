@@ -112,5 +112,13 @@
     // Pass the selected object to the new view controller.
 }
 
+- (LSIArtistController *)artistController {
+    if (!_artistController) {
+        _artistController = [[LSIArtistController alloc] init];
+    }
+    return _artistController;
+}
+
+
 
 @end

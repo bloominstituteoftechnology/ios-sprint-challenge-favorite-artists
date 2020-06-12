@@ -13,8 +13,8 @@
 - (NSDictionary *)withDictionary {
     
     NSDictionary *dictionary = @{@"strArtist": self.artist,
-                                 @"strBiographyEN": self.biography,
-                                 @"intFormedYear": [[NSNumber alloc] initWithInt:(int)self.yearFormed],
+                                   @"intFormedYear": [[NSNumber alloc] initWithInt:(int)self.yearFormed],
+                                   @"strBiographyEN": self.biography
     };
     
     return dictionary;

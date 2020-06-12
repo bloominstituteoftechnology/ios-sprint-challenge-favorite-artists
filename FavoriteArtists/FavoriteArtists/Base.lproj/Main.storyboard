@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="678" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="EvX-s9-dsL">
             <objects>
-                <viewController id="tCV-5v-q3O" sceneMemberID="viewController">
+                <viewController id="tCV-5v-q3O" customClass="PDMArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zIc-Ov-Fa6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c53-VS-cnE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="W0u-ag-Sem"/>
+                    <navigationItem key="navigationItem" id="W0u-ag-Sem">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="XPN-PJ-iIn">
+                            <connections>
+                                <action selector="saveArtist:" destination="tCV-5v-q3O" id="WWO-cW-62o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="2az-hv-t5b" id="HU5-ep-aVJ"/>
+                        <outlet property="biographyLabel" destination="trf-zU-9cu" id="dya-Hk-QR3"/>
+                        <outlet property="saveButton" destination="XPN-PJ-iIn" id="D2t-hM-aau"/>
+                        <outlet property="searchBar" destination="Ccu-d2-u95" id="9D5-kN-ltt"/>
+                        <outlet property="yearFormedLabel" destination="voe-L5-QfH" id="ZUa-JI-B1i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYl-Fm-4NN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

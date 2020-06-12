@@ -12,6 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SDJArtist : NSObject
 
+@property (nonatomic, readonly, copy) NSString *artistName;
+@property (nonatomic, readonly) int yearFormed;
+@property (nonatomic, readonly, copy) NSString *artistBiography;
+
+- (instancetype)initWithArtistName:(NSString *)artistName
+                        yearFormed:(int)yearFormed
+                   artistBiography:(NSString *)artistBiography;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

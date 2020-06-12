@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5sI-26-wB3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add New Artist-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HSIArtistDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Zni-sF-4HK">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XFT-Z7-dgH">
+                                <rect key="frame" x="8" y="196" width="398" height="672"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f5b-y6-qpg">
+                                        <rect key="frame" x="0.0" y="0.0" width="188.5" height="74.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weezer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOu-hv-p84">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="41"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed in 1992" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpJ-Dp-CI4">
+                                                <rect key="frame" x="0.0" y="41" width="188.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0AZ-3I-jDU">
+                                        <rect key="frame" x="0.0" y="84.5" width="398" height="587.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <mutableString key="text">Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. Some Really Cool facts about Weezer that make long text. Weezer is awesome. I love all of their songs. </mutableString>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0AZ-3I-jDU" firstAttribute="width" secondItem="XFT-Z7-dgH" secondAttribute="width" id="DWh-LP-oeb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zni-sF-4HK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9h8-9g-EqW"/>
+                            <constraint firstItem="Zni-sF-4HK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BdK-L7-3vq"/>
+                            <constraint firstItem="XFT-Z7-dgH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="Iug-lM-sAS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XFT-Z7-dgH" secondAttribute="trailing" constant="8" id="aaz-RL-OgS"/>
+                            <constraint firstItem="XFT-Z7-dgH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="dtY-c3-zWW"/>
+                            <constraint firstItem="XFT-Z7-dgH" firstAttribute="top" secondItem="Zni-sF-4HK" secondAttribute="bottom" id="hOJ-rm-FGj"/>
+                            <constraint firstItem="Zni-sF-4HK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="inL-5A-jAv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Artist" largeTitleDisplayMode="always" id="bs1-gJ-la5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Awe-gx-bHQ">
+                            <connections>
+                                <action selector="saveArtist:" destination="BYZ-38-t0r" id="Cqc-xv-yhg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="biographyLabel" destination="0AZ-3I-jDU" id="pWC-qx-dee"/>
+                        <outlet property="nameLabel" destination="lOu-hv-p84" id="rax-jx-pUO"/>
+                        <outlet property="saveButton" destination="Awe-gx-bHQ" id="cB3-de-man"/>
+                        <outlet property="searchBar" destination="Zni-sF-4HK" id="oR5-2R-po7"/>
+                        <outlet property="yearLabel" destination="XpJ-Dp-CI4" id="yol-uE-fvd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2539.130434782609" y="137.94642857142856"/>
+        </scene>
+        <!--Favorite Artists-->
+        <scene sceneID="wBp-LX-3gk">
+            <objects>
+                <tableViewController id="c0i-en-jk1" customClass="HSIArtistsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pcJ-CY-qgG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" id="XXY-nC-3JS">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XXY-nC-3JS" id="mSw-OV-oD8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ViewArtist" id="wTQ-jv-6Ss"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c0i-en-jk1" id="Pxo-ZZ-tbh"/>
+                            <outlet property="delegate" destination="c0i-en-jk1" id="BUR-v8-ba2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorite Artists" largeTitleDisplayMode="always" id="U0B-Zp-xdM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WvT-p6-Yr2">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddArtist" id="Q6V-k4-FcR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYh-a7-GHs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Item" id="xhv-GW-tpL"/>
+            </objects>
+            <point key="canvasLocation" x="1742.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2ab-2L-G3Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5sI-26-wB3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6aX-D8-Jxy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c0i-en-jk1" kind="relationship" relationship="rootViewController" id="yy9-J1-gqZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2U-IH-MhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831.88405797101461" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q6V-k4-FcR"/>
+    </inferredMetricsTieBreakers>
+</document>

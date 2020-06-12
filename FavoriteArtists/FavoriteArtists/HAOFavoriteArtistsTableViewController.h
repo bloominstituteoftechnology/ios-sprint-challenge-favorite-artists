@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HAOFavoriteArtistsTableViewController.h
 //  FavoriteArtists
 //
 //  Created by Hunter Oppel on 6/12/20.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface HAOFavoriteArtistsTableViewController : UIViewController
 
 
 @end

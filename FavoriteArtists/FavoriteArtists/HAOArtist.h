@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HAOArtist : NSObject
 
+@property NSString *artistName;
+@property NSString *artistBiography;
+@property int yearFormed;
+
+- (instancetype)initWithArtistName:(NSString *)artistName artistBiography:(NSString *)artistBiography yearFormed:(int)yearFormed;
+
 @end
 
 NS_ASSUME_NONNULL_END

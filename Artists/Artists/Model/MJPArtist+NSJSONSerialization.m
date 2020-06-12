@@ -15,7 +15,13 @@
     if (self) {
         self.strArtist = [dictionary objectForKey:@"strArtist"];
         self.strBiographyEN = [dictionary objectForKey:@"strBiographyEN"];
-        self.yearFormed = [[dictionary objectForKey:@"intFormedYear"] intValue];
+
+        NSString *yearNum = dictionary[@"intFormedYear"];
+        if ([yearNum isKindOfClass:[NSNull class]]) {
+             self.yearFormed = 0;
+        } else {
+            self.yearFormed = [[dictionary objectForKey:@"intFormedYear"] intValue];
+        }
     }
     return self;
 }

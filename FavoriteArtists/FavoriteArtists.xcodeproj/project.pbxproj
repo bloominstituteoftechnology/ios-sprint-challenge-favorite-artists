@@ -14,6 +14,7 @@
 		DB85DB652493D3030049D1A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB85DB632493D3030049D1A0 /* LaunchScreen.storyboard */; };
 		DB85DB682493D3030049D1A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB672493D3030049D1A0 /* main.m */; };
 		DB85DB752493D4850049D1A0 /* PDMArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB742493D4850049D1A0 /* PDMArtist.m */; };
+		DB85DB782493D5430049D1A0 /* PDMArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB85DB772493D5430049D1A0 /* PDMArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		DB85DB672493D3030049D1A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB85DB732493D4850049D1A0 /* PDMArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDMArtist.h; sourceTree = "<group>"; };
 		DB85DB742493D4850049D1A0 /* PDMArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDMArtist.m; sourceTree = "<group>"; };
+		DB85DB762493D5430049D1A0 /* PDMArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDMArtistController.h; sourceTree = "<group>"; };
+		DB85DB772493D5430049D1A0 /* PDMArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDMArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 		DB85DB712493D35D0049D1A0 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DB85DB762493D5430049D1A0 /* PDMArtistController.h */,
+				DB85DB772493D5430049D1A0 /* PDMArtistController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB85DB572493D3020049D1A0 /* AppDelegate.m in Sources */,
+				DB85DB782493D5430049D1A0 /* PDMArtistController.m in Sources */,
 				DB85DB682493D3030049D1A0 /* main.m in Sources */,
 				DB85DB752493D4850049D1A0 /* PDMArtist.m in Sources */,
 				DB85DB5A2493D3020049D1A0 /* SceneDelegate.m in Sources */,

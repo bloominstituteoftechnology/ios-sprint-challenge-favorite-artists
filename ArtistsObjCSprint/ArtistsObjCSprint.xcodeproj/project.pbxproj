@@ -16,6 +16,7 @@
 		7FFE87772493E35F008FD971 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87762493E35F008FD971 /* main.m */; };
 		7FFE87812493E35F008FD971 /* ArtistsObjCSprintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87802493E35F008FD971 /* ArtistsObjCSprintTests.m */; };
 		7FFE878C2493E35F008FD971 /* ArtistsObjCSprintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE878B2493E35F008FD971 /* ArtistsObjCSprintUITests.m */; };
+		7FFE879E2493E41E008FD971 /* CNSArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE879D2493E41E008FD971 /* CNSArtistModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		7FFE87872493E35F008FD971 /* ArtistsObjCSprintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistsObjCSprintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFE878B2493E35F008FD971 /* ArtistsObjCSprintUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsObjCSprintUITests.m; sourceTree = "<group>"; };
 		7FFE878D2493E35F008FD971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FFE879C2493E41E008FD971 /* CNSArtistModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNSArtistModel.h; sourceTree = "<group>"; };
+		7FFE879D2493E41E008FD971 /* CNSArtistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNSArtistModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				7FFE87722493E35F008FD971 /* LaunchScreen.storyboard */,
 				7FFE87752493E35F008FD971 /* Info.plist */,
 				7FFE87762493E35F008FD971 /* main.m */,
+				7FFE879C2493E41E008FD971 /* CNSArtistModel.h */,
+				7FFE879D2493E41E008FD971 /* CNSArtistModel.m */,
 			);
 			path = ArtistsObjCSprint;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				7FFE876C2493E35D008FD971 /* ViewController.m in Sources */,
 				7FFE87662493E35D008FD971 /* AppDelegate.m in Sources */,
 				7FFE87772493E35F008FD971 /* main.m in Sources */,
+				7FFE879E2493E41E008FD971 /* CNSArtistModel.m in Sources */,
 				7FFE87692493E35D008FD971 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

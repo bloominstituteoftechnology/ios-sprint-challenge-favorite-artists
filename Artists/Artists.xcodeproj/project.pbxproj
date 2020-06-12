@@ -14,6 +14,9 @@
 		186E3B592493D1F600B630EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186E3B572493D1F600B630EA /* LaunchScreen.storyboard */; };
 		186E3B5C2493D1F600B630EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B5B2493D1F600B630EA /* main.m */; };
 		186E3B692493D89B00B630EA /* MJPArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B682493D89B00B630EA /* MJPArtist.m */; };
+		186E3B722493DBE600B630EA /* MJPArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B712493DBE600B630EA /* MJPArtist+NSJSONSerialization.m */; };
+		186E3B752493E41800B630EA /* MJPArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B742493E41800B630EA /* MJPArtistsTableViewController.m */; };
+		186E3B782493E42F00B630EA /* MJPArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B772493E42F00B630EA /* MJPArtistsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		186E3B5B2493D1F600B630EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		186E3B672493D89B00B630EA /* MJPArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPArtist.h; sourceTree = "<group>"; };
 		186E3B682493D89B00B630EA /* MJPArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtist.m; sourceTree = "<group>"; };
+		186E3B702493DBE600B630EA /* MJPArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MJPArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		186E3B712493DBE600B630EA /* MJPArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MJPArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		186E3B732493E41800B630EA /* MJPArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPArtistsTableViewController.h; sourceTree = "<group>"; };
+		186E3B742493E41800B630EA /* MJPArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtistsTableViewController.m; sourceTree = "<group>"; };
+		186E3B762493E42F00B630EA /* MJPArtistsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPArtistsViewController.h; sourceTree = "<group>"; };
+		186E3B772493E42F00B630EA /* MJPArtistsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtistsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +84,8 @@
 			children = (
 				186E3B672493D89B00B630EA /* MJPArtist.h */,
 				186E3B682493D89B00B630EA /* MJPArtist.m */,
+				186E3B702493DBE600B630EA /* MJPArtist+NSJSONSerialization.h */,
+				186E3B712493DBE600B630EA /* MJPArtist+NSJSONSerialization.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +100,10 @@
 		186E3B642493D24F00B630EA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				186E3B732493E41800B630EA /* MJPArtistsTableViewController.h */,
+				186E3B742493E41800B630EA /* MJPArtistsTableViewController.m */,
+				186E3B762493E42F00B630EA /* MJPArtistsViewController.h */,
+				186E3B772493E42F00B630EA /* MJPArtistsViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -186,8 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186E3B752493E41800B630EA /* MJPArtistsTableViewController.m in Sources */,
+				186E3B722493DBE600B630EA /* MJPArtist+NSJSONSerialization.m in Sources */,
 				186E3B692493D89B00B630EA /* MJPArtist.m in Sources */,
 				186E3B4B2493D1F400B630EA /* AppDelegate.m in Sources */,
+				186E3B782493E42F00B630EA /* MJPArtistsViewController.m in Sources */,
 				186E3B5C2493D1F600B630EA /* main.m in Sources */,
 				186E3B4E2493D1F400B630EA /* SceneDelegate.m in Sources */,
 			);

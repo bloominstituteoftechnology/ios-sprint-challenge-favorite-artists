@@ -17,6 +17,7 @@
 		7FFE87812493E35F008FD971 /* ArtistsObjCSprintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87802493E35F008FD971 /* ArtistsObjCSprintTests.m */; };
 		7FFE878C2493E35F008FD971 /* ArtistsObjCSprintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE878B2493E35F008FD971 /* ArtistsObjCSprintUITests.m */; };
 		7FFE879E2493E41E008FD971 /* CNSArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE879D2493E41E008FD971 /* CNSArtistModel.m */; };
+		7FFE87A02493E54C008FD971 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FFE879F2493E54C008FD971 /* Artist.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7FFE878D2493E35F008FD971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FFE879C2493E41E008FD971 /* CNSArtistModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNSArtistModel.h; sourceTree = "<group>"; };
 		7FFE879D2493E41E008FD971 /* CNSArtistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNSArtistModel.m; sourceTree = "<group>"; };
+		7FFE879F2493E54C008FD971 /* Artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		7FFE877F2493E35F008FD971 /* ArtistsObjCSprintTests */ = {
 			isa = PBXGroup;
 			children = (
+				7FFE879F2493E54C008FD971 /* Artist.json */,
 				7FFE87802493E35F008FD971 /* ArtistsObjCSprintTests.m */,
 				7FFE87822493E35F008FD971 /* Info.plist */,
 			);
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFE87A02493E54C008FD971 /* Artist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

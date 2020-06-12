@@ -52,17 +52,22 @@
             completion(nil);
             return;
         }
-
-        NSDictionary *artistsDictionary = decodeDictionary[@"artists"][0]; //what happens if this is nil?
-        if (!artistsDictionary) {
-            NSLog(@"Error creating dictionary. No artists found?");
+        if (decodeDictionary[@"artists"] != [NSNull null]) {
+            NSDictionary *artistsDictionary = decodeDictionary[@"artists"][0]; //what happens if this is nil?
+            if (!artistsDictionary) {
+                NSLog(@"Error creating dictionary.");
+                completion(nil);
+            } else {
+                HSIArtist *artist = [[HSIArtist alloc] initWithDictionary:artistsDictionary];
+                completion(artist);
+                return;
+            }
         } else {
-            HSIArtist *artist = [[HSIArtist alloc] initWithDictionary:artistsDictionary];
-            completion(artist);
-            return;
+            NSLog(@"No artists found.");
+            completion(nil);
         }
 
-        completion(nil);
+
     }] resume];
 }
 

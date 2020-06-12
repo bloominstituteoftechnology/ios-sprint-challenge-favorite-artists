@@ -19,7 +19,7 @@
     XCTestExpectation *expectation = [self expectationWithDescription:@"Wait for API"];
     HSIArtistController *controller = [[HSIArtistController alloc] init];
 
-    [controller findArtistWithName:@"asfdsadf" completion:^(HSIArtist *artist) {
+    [controller findArtistWithName:@"Elton John" completion:^(HSIArtist *artist) {
         XCTAssertNotNil(artist);
         [expectation fulfill];
     }];

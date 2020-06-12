@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SDJArtist;
+typedef void (^CompletionHandler)(SDJArtist* _Nullable artist, NSError *_Nullable error);
+
 @interface SDJArtistClient : NSObject
+
+- (void) fetchArtistUsingSearchTerm:(NSString *)searchTerm
+                   completion:(CompletionHandler)completion;
+
+- (NSArray *)loadSavedArtistsFromDocumentsDirectory;
 
 @end
 

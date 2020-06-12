@@ -17,6 +17,7 @@
 		1DF2470E2493D45A00FEA423 /* SDJHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2470D2493D45A00FEA423 /* SDJHomeVC.m */; };
 		1DF247142493D52800FEA423 /* SDJArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF247132493D52800FEA423 /* SDJArtist.m */; };
 		1DF247182493D58B00FEA423 /* SDJArtistClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF247172493D58B00FEA423 /* SDJArtistClient.m */; };
+		1DF2471C2493DCA200FEA423 /* SDJArtist+JSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2471B2493DCA200FEA423 /* SDJArtist+JSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		1DF247132493D52800FEA423 /* SDJArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDJArtist.m; sourceTree = "<group>"; };
 		1DF247162493D58B00FEA423 /* SDJArtistClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDJArtistClient.h; sourceTree = "<group>"; };
 		1DF247172493D58B00FEA423 /* SDJArtistClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDJArtistClient.m; sourceTree = "<group>"; };
+		1DF2471A2493DCA200FEA423 /* SDJArtist+JSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDJArtist+JSONSerialization.h"; sourceTree = "<group>"; };
+		1DF2471B2493DCA200FEA423 /* SDJArtist+JSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SDJArtist+JSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 			children = (
 				1DF247122493D52800FEA423 /* SDJArtist.h */,
 				1DF247132493D52800FEA423 /* SDJArtist.m */,
+				1DF2471A2493DCA200FEA423 /* SDJArtist+JSONSerialization.h */,
+				1DF2471B2493DCA200FEA423 /* SDJArtist+JSONSerialization.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				1D542A0D2493D14200546C31 /* AppDelegate.m in Sources */,
 				1DF2470B2493D44600FEA423 /* SDJDetailVC.m in Sources */,
 				1DF2470E2493D45A00FEA423 /* SDJHomeVC.m in Sources */,
+				1DF2471C2493DCA200FEA423 /* SDJArtist+JSONSerialization.m in Sources */,
 				1D542A1E2493D14400546C31 /* main.m in Sources */,
 				1DF247142493D52800FEA423 /* SDJArtist.m in Sources */,
 				1D542A102493D14200546C31 /* SceneDelegate.m in Sources */,

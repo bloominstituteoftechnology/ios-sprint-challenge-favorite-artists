@@ -17,6 +17,7 @@
 		186E3B722493DBE600B630EA /* MJPArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B712493DBE600B630EA /* MJPArtist+NSJSONSerialization.m */; };
 		186E3B752493E41800B630EA /* MJPArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B742493E41800B630EA /* MJPArtistsTableViewController.m */; };
 		186E3B782493E42F00B630EA /* MJPArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B772493E42F00B630EA /* MJPArtistsViewController.m */; };
+		186E3B7B2493E51900B630EA /* MJPArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B7A2493E51900B630EA /* MJPArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		186E3B742493E41800B630EA /* MJPArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtistsTableViewController.m; sourceTree = "<group>"; };
 		186E3B762493E42F00B630EA /* MJPArtistsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPArtistsViewController.h; sourceTree = "<group>"; };
 		186E3B772493E42F00B630EA /* MJPArtistsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtistsViewController.m; sourceTree = "<group>"; };
+		186E3B792493E51900B630EA /* MJPArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPArtistController.h; sourceTree = "<group>"; };
+		186E3B7A2493E51900B630EA /* MJPArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 		186E3B632493D23900B630EA /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				186E3B792493E51900B630EA /* MJPArtistController.h */,
+				186E3B7A2493E51900B630EA /* MJPArtistController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				186E3B692493D89B00B630EA /* MJPArtist.m in Sources */,
 				186E3B4B2493D1F400B630EA /* AppDelegate.m in Sources */,
 				186E3B782493E42F00B630EA /* MJPArtistsViewController.m in Sources */,
+				186E3B7B2493E51900B630EA /* MJPArtistController.m in Sources */,
 				186E3B5C2493D1F600B630EA /* main.m in Sources */,
 				186E3B4E2493D1F400B630EA /* SceneDelegate.m in Sources */,
 			);

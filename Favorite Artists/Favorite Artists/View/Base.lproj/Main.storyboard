@@ -65,7 +65,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Artist" largeTitleDisplayMode="always" id="bs1-gJ-la5"/>
+                    <navigationItem key="navigationItem" title="Add New Artist" largeTitleDisplayMode="always" id="bs1-gJ-la5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Awe-gx-bHQ">
+                            <connections>
+                                <action selector="saveArtist:" destination="BYZ-38-t0r" id="Cqc-xv-yhg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="biographyLabel" destination="0AZ-3I-jDU" id="pWC-qx-dee"/>
+                        <outlet property="nameLabel" destination="lOu-hv-p84" id="rax-jx-pUO"/>
+                        <outlet property="saveButton" destination="Awe-gx-bHQ" id="cB3-de-man"/>
+                        <outlet property="searchBar" destination="Zni-sF-4HK" id="oR5-2R-po7"/>
+                        <outlet property="yearLabel" destination="XpJ-Dp-CI4" id="yol-uE-fvd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XXY-nC-3JS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" id="XXY-nC-3JS">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XXY-nC-3JS" id="mSw-OV-oD8">
@@ -100,7 +113,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" largeTitleDisplayMode="always" id="U0B-Zp-xdM">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WvT-p6-Yr2">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddArtistSegue" id="Q6V-k4-FcR"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddArtist" id="Q6V-k4-FcR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -130,6 +143,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wTQ-jv-6Ss"/>
+        <segue reference="Q6V-k4-FcR"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HSIArtistDetailViewController : UIViewController
+@interface HSIArtistDetailViewController : UIViewController <UISearchBarDelegate>
 
 @property (nonatomic, strong) HSIArtist *artist;
 @property (nonatomic, strong) HSIArtistController *controller;

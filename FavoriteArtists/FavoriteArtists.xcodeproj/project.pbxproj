@@ -17,6 +17,12 @@
 		3FFB868B2493D92A00AF6D5E /* SearchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB868A2493D92A00AF6D5E /* SearchArtistViewController.m */; };
 		3FFB868F2493D98400AF6D5E /* AddArtistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB868E2493D98400AF6D5E /* AddArtistTableViewCell.m */; };
 		3FFB86922493DC9E00AF6D5E /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB86912493DC9E00AF6D5E /* LSIArtist.m */; };
+		3FFB86952493E04200AF6D5E /* NSJSONSerialization+LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB86942493E04200AF6D5E /* NSJSONSerialization+LSIArtist.m */; };
+		3FFB86982493E29800AF6D5E /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB86972493E29800AF6D5E /* LSIArtistController.m */; };
+		3FFB86A22493E7C900AF6D5E /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB869A2493E7C900AF6D5E /* LSILog.m */; };
+		3FFB86A32493E7C900AF6D5E /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB869B2493E7C900AF6D5E /* LSIErrors.m */; };
+		3FFB86A42493E7C900AF6D5E /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB869C2493E7C900AF6D5E /* LSIFileHelper.m */; };
+		3FFB86A52493E7C900AF6D5E /* LSIQuakeFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB869D2493E7C900AF6D5E /* LSIQuakeFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,18 @@
 		3FFB868E2493D98400AF6D5E /* AddArtistTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistTableViewCell.m; sourceTree = "<group>"; };
 		3FFB86902493DC9E00AF6D5E /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
 		3FFB86912493DC9E00AF6D5E /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
+		3FFB86932493E04200AF6D5E /* NSJSONSerialization+LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+LSIArtist.h"; sourceTree = "<group>"; };
+		3FFB86942493E04200AF6D5E /* NSJSONSerialization+LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+LSIArtist.m"; sourceTree = "<group>"; };
+		3FFB86962493E29800AF6D5E /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
+		3FFB86972493E29800AF6D5E /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
+		3FFB869A2493E7C900AF6D5E /* LSILog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSILog.m; sourceTree = "<group>"; };
+		3FFB869B2493E7C900AF6D5E /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		3FFB869C2493E7C900AF6D5E /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
+		3FFB869D2493E7C900AF6D5E /* LSIQuakeFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIQuakeFetcher.m; sourceTree = "<group>"; };
+		3FFB869E2493E7C900AF6D5E /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		3FFB869F2493E7C900AF6D5E /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		3FFB86A02493E7C900AF6D5E /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
+		3FFB86A12493E7C900AF6D5E /* LSIQuakeFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIQuakeFetcher.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,7 @@
 				3FFB86812493D68500AF6D5E /* ModelController */,
 				3FFB86802493D67A00AF6D5E /* Models */,
 				3FFB86782493D65A00AF6D5E /* Info.plist */,
+				3FFB86992493E7C900AF6D5E /* LambdaSDK */,
 				3FFB86792493D65A00AF6D5E /* main.m */,
 			);
 			path = FavoriteArtists;
@@ -87,6 +106,8 @@
 			children = (
 				3FFB86902493DC9E00AF6D5E /* LSIArtist.h */,
 				3FFB86912493DC9E00AF6D5E /* LSIArtist.m */,
+				3FFB86932493E04200AF6D5E /* NSJSONSerialization+LSIArtist.h */,
+				3FFB86942493E04200AF6D5E /* NSJSONSerialization+LSIArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,6 +115,8 @@
 		3FFB86812493D68500AF6D5E /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				3FFB86962493E29800AF6D5E /* LSIArtistController.h */,
+				3FFB86972493E29800AF6D5E /* LSIArtistController.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -137,6 +160,21 @@
 				3FFB868E2493D98400AF6D5E /* AddArtistTableViewCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3FFB86992493E7C900AF6D5E /* LambdaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				3FFB869A2493E7C900AF6D5E /* LSILog.m */,
+				3FFB869B2493E7C900AF6D5E /* LSIErrors.m */,
+				3FFB869C2493E7C900AF6D5E /* LSIFileHelper.m */,
+				3FFB869D2493E7C900AF6D5E /* LSIQuakeFetcher.m */,
+				3FFB869E2493E7C900AF6D5E /* LSIFileHelper.h */,
+				3FFB869F2493E7C900AF6D5E /* LSIErrors.h */,
+				3FFB86A02493E7C900AF6D5E /* LSILog.h */,
+				3FFB86A12493E7C900AF6D5E /* LSIQuakeFetcher.h */,
+			);
+			path = LambdaSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,11 +247,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFB86A52493E7C900AF6D5E /* LSIQuakeFetcher.m in Sources */,
 				3FFB86882493D90F00AF6D5E /* ArtistsTableViewController.m in Sources */,
+				3FFB86A22493E7C900AF6D5E /* LSILog.m in Sources */,
+				3FFB86982493E29800AF6D5E /* LSIArtistController.m in Sources */,
 				3FFB86692493D65700AF6D5E /* AppDelegate.m in Sources */,
 				3FFB867A2493D65A00AF6D5E /* main.m in Sources */,
+				3FFB86A32493E7C900AF6D5E /* LSIErrors.m in Sources */,
+				3FFB86A42493E7C900AF6D5E /* LSIFileHelper.m in Sources */,
 				3FFB868B2493D92A00AF6D5E /* SearchArtistViewController.m in Sources */,
 				3FFB868F2493D98400AF6D5E /* AddArtistTableViewCell.m in Sources */,
+				3FFB86952493E04200AF6D5E /* NSJSONSerialization+LSIArtist.m in Sources */,
 				3FFB866C2493D65700AF6D5E /* SceneDelegate.m in Sources */,
 				3FFB86922493DC9E00AF6D5E /* LSIArtist.m in Sources */,
 			);

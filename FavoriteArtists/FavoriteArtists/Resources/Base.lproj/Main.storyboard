@@ -10,13 +10,13 @@
         <!--Find Artists-->
         <scene sceneID="amW-5j-n1l">
             <objects>
-                <tableViewController id="geb-Po-83D" sceneMemberID="viewController">
+                <tableViewController id="geb-Po-83D" customClass="ArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LuO-AF-11y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="iJh-8v-AP8" detailTextLabel="vE2-d0-Kkw" style="IBUITableViewCellStyleSubtitle" id="B3v-jb-2Be">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="iJh-8v-AP8" detailTextLabel="vE2-d0-Kkw" style="IBUITableViewCellStyleSubtitle" id="B3v-jb-2Be" customClass="AddArtistTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B3v-jb-2Be" id="tav-Kb-kzz">
@@ -64,7 +64,7 @@
         <!--Add Artist-->
         <scene sceneID="kTm-hO-vXZ">
             <objects>
-                <viewController id="Z3l-BC-5zX" sceneMemberID="viewController">
+                <viewController id="Z3l-BC-5zX" customClass="SearchArtistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Yc-pD-aqp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,24 +73,43 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MyJ-iO-pRU">
-                                <rect key="frame" x="20" y="204" width="374" height="650"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MyJ-iO-pRU">
+                                <rect key="frame" x="20" y="281.5" width="374" height="572.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hWM-39-PpB">
+                                <rect key="frame" x="20" y="204" width="374" height="69.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXU-jX-33m">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuM-q1-Bah">
+                                        <rect key="frame" x="0.0" y="39.5" width="59.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="MyJ-iO-pRU" firstAttribute="leading" secondItem="eJk-Wx-cIg" secondAttribute="leading" constant="20" id="Fxg-3k-JNa"/>
-                            <constraint firstItem="1Dg-10-5y0" firstAttribute="leading" secondItem="eJk-Wx-cIg" secondAttribute="leading" id="LuD-1E-hsU"/>
-                            <constraint firstItem="1Dg-10-5y0" firstAttribute="trailing" secondItem="eJk-Wx-cIg" secondAttribute="trailing" id="Nnp-bF-dyt"/>
-                            <constraint firstItem="MyJ-iO-pRU" firstAttribute="top" secondItem="1Dg-10-5y0" secondAttribute="bottom" constant="8" id="ZDH-4S-qPX"/>
-                            <constraint firstItem="eJk-Wx-cIg" firstAttribute="trailing" secondItem="MyJ-iO-pRU" secondAttribute="trailing" constant="20" id="gGD-VD-ZTq"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="MyJ-iO-pRU" secondAttribute="bottom" constant="8" id="j5G-aE-1mG"/>
-                            <constraint firstItem="1Dg-10-5y0" firstAttribute="top" secondItem="eJk-Wx-cIg" secondAttribute="top" id="yKT-ze-eLw"/>
+                            <constraint firstItem="1Dg-10-5y0" firstAttribute="leading" secondItem="eJk-Wx-cIg" secondAttribute="leading" id="OUo-jB-eWB"/>
+                            <constraint firstItem="hWM-39-PpB" firstAttribute="top" secondItem="1Dg-10-5y0" secondAttribute="bottom" constant="8" id="X3p-qt-lhq"/>
+                            <constraint firstItem="eJk-Wx-cIg" firstAttribute="trailing" secondItem="MyJ-iO-pRU" secondAttribute="trailing" constant="20" id="XPk-QI-yek"/>
+                            <constraint firstItem="eJk-Wx-cIg" firstAttribute="bottom" secondItem="MyJ-iO-pRU" secondAttribute="bottom" constant="8" id="YXY-8x-Ole"/>
+                            <constraint firstItem="1Dg-10-5y0" firstAttribute="trailing" secondItem="eJk-Wx-cIg" secondAttribute="trailing" id="Zpi-5C-HBo"/>
+                            <constraint firstItem="MyJ-iO-pRU" firstAttribute="leading" secondItem="eJk-Wx-cIg" secondAttribute="leading" constant="20" id="cL7-85-LQZ"/>
+                            <constraint firstItem="hWM-39-PpB" firstAttribute="leading" secondItem="eJk-Wx-cIg" secondAttribute="leading" constant="20" id="fWU-rM-8LH"/>
+                            <constraint firstItem="MyJ-iO-pRU" firstAttribute="top" secondItem="hWM-39-PpB" secondAttribute="bottom" constant="8" id="jhO-eg-bGj"/>
+                            <constraint firstItem="eJk-Wx-cIg" firstAttribute="trailing" secondItem="hWM-39-PpB" secondAttribute="trailing" constant="20" id="xom-q6-7QE"/>
+                            <constraint firstItem="1Dg-10-5y0" firstAttribute="top" secondItem="eJk-Wx-cIg" secondAttribute="top" id="ybc-tc-W0O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eJk-Wx-cIg"/>
                     </view>

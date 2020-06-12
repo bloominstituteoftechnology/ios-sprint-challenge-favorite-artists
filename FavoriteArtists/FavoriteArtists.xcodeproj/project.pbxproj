@@ -13,6 +13,9 @@
 		3FFB86742493D65A00AF6D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB86732493D65A00AF6D5E /* Assets.xcassets */; };
 		3FFB86772493D65A00AF6D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB86752493D65A00AF6D5E /* LaunchScreen.storyboard */; };
 		3FFB867A2493D65A00AF6D5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB86792493D65A00AF6D5E /* main.m */; };
+		3FFB86882493D90F00AF6D5E /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB86872493D90F00AF6D5E /* ArtistsTableViewController.m */; };
+		3FFB868B2493D92A00AF6D5E /* SearchArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB868A2493D92A00AF6D5E /* SearchArtistViewController.m */; };
+		3FFB868F2493D98400AF6D5E /* AddArtistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB868E2493D98400AF6D5E /* AddArtistTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		3FFB86762493D65A00AF6D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FFB86782493D65A00AF6D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FFB86792493D65A00AF6D5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FFB86862493D90F00AF6D5E /* ArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistsTableViewController.h; sourceTree = "<group>"; };
+		3FFB86872493D90F00AF6D5E /* ArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsTableViewController.m; sourceTree = "<group>"; };
+		3FFB86892493D92A00AF6D5E /* SearchArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchArtistViewController.h; sourceTree = "<group>"; };
+		3FFB868A2493D92A00AF6D5E /* SearchArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchArtistViewController.m; sourceTree = "<group>"; };
+		3FFB868D2493D98400AF6D5E /* AddArtistTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddArtistTableViewCell.h; sourceTree = "<group>"; };
+		3FFB868E2493D98400AF6D5E /* AddArtistTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 		3FFB86662493D65700AF6D5E /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				3FFB868C2493D94300AF6D5E /* Views */,
 				3FFB86852493D6AC00AF6D5E /* Application */,
 				3FFB86842493D6A300AF6D5E /* Resources */,
 				3FFB86832493D69900AF6D5E /* ViewControllers */,
@@ -86,6 +96,10 @@
 		3FFB86832493D69900AF6D5E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FFB86862493D90F00AF6D5E /* ArtistsTableViewController.h */,
+				3FFB86872493D90F00AF6D5E /* ArtistsTableViewController.m */,
+				3FFB86892493D92A00AF6D5E /* SearchArtistViewController.h */,
+				3FFB868A2493D92A00AF6D5E /* SearchArtistViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -109,6 +123,15 @@
 				3FFB866B2493D65700AF6D5E /* SceneDelegate.m */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		3FFB868C2493D94300AF6D5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FFB868D2493D98400AF6D5E /* AddArtistTableViewCell.h */,
+				3FFB868E2493D98400AF6D5E /* AddArtistTableViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +204,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFB86882493D90F00AF6D5E /* ArtistsTableViewController.m in Sources */,
 				3FFB86692493D65700AF6D5E /* AppDelegate.m in Sources */,
 				3FFB867A2493D65A00AF6D5E /* main.m in Sources */,
+				3FFB868B2493D92A00AF6D5E /* SearchArtistViewController.m in Sources */,
+				3FFB868F2493D98400AF6D5E /* AddArtistTableViewCell.m in Sources */,
 				3FFB866C2493D65700AF6D5E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

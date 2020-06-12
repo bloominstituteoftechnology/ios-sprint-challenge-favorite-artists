@@ -24,6 +24,11 @@
     _controller = [[HSIArtistController alloc] init];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 
 // MARK:  - Table View Data Source -
 

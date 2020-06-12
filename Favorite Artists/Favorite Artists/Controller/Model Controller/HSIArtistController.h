@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class HSIArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HSIArtistController : NSObject
+
+@property NSURL *baseURL;
+
+- (instancetype)init;
+- (void)findArtistWithName:(NSString *)name completion:(void (^)(HSIArtist *))completion;
 
 @end
 

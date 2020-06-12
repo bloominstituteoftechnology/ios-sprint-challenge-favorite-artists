@@ -13,6 +13,8 @@
 		1D542A182493D14400546C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D542A172493D14400546C31 /* Assets.xcassets */; };
 		1D542A1B2493D14400546C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D542A192493D14400546C31 /* LaunchScreen.storyboard */; };
 		1D542A1E2493D14400546C31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D542A1D2493D14400546C31 /* main.m */; };
+		1DF2470B2493D44600FEA423 /* SDJDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2470A2493D44600FEA423 /* SDJDetailVC.m */; };
+		1DF2470E2493D45A00FEA423 /* SDJHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2470D2493D45A00FEA423 /* SDJHomeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		1D542A1A2493D14400546C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D542A1C2493D14400546C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D542A1D2493D14400546C31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DF247092493D44600FEA423 /* SDJDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDJDetailVC.h; sourceTree = "<group>"; };
+		1DF2470A2493D44600FEA423 /* SDJDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDJDetailVC.m; sourceTree = "<group>"; };
+		1DF2470C2493D45A00FEA423 /* SDJHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDJHomeVC.h; sourceTree = "<group>"; };
+		1DF2470D2493D45A00FEA423 /* SDJHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDJHomeVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +97,28 @@
 		1D542A262493D1C100546C31 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1DF2470F2493D46700FEA423 /* HomeVC */,
+				1DF247102493D46F00FEA423 /* DetailVC */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1DF2470F2493D46700FEA423 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2470C2493D45A00FEA423 /* SDJHomeVC.h */,
+				1DF2470D2493D45A00FEA423 /* SDJHomeVC.m */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		1DF247102493D46F00FEA423 /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				1DF247092493D44600FEA423 /* SDJDetailVC.h */,
+				1DF2470A2493D44600FEA423 /* SDJDetailVC.m */,
+			);
+			path = DetailVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D542A0D2493D14200546C31 /* AppDelegate.m in Sources */,
+				1DF2470B2493D44600FEA423 /* SDJDetailVC.m in Sources */,
+				1DF2470E2493D45A00FEA423 /* SDJHomeVC.m in Sources */,
 				1D542A1E2493D14400546C31 /* main.m in Sources */,
 				1D542A102493D14200546C31 /* SceneDelegate.m in Sources */,
 			);

@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// This .h class is public presentation
 @interface ArtistDetailViewController : UIViewController
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;

@@ -8,7 +8,6 @@
 
 #import "ArtistDetailViewController.h"
 #import "ArtistFetcher.h"
-#import "Artist.h"
 #import "ArtistController.h"
 
 @interface ArtistDetailViewController () <UISearchBarDelegate>

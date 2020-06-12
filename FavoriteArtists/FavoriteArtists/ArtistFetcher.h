@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Artist.h"
+#import "Artist+NSJSONSerialization.h"
 
 typedef void(^ArtistFetcherCompletionHandler)(Artist * _Nullable artist, NSError * _Nullable error);
 

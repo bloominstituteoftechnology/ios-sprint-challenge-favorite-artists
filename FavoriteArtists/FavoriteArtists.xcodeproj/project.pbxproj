@@ -20,6 +20,7 @@
 		2B1327052493D95000D78C4A /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1327012493D95000D78C4A /* LSIFileHelper.m */; };
 		2B1327062493D95000D78C4A /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1327032493D95000D78C4A /* LSILog.m */; };
 		2B1327092493D9A500D78C4A /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1327072493D9A500D78C4A /* LSIErrors.m */; };
+		2B13270C2493E32900D78C4A /* HAOArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B13270B2493E32900D78C4A /* HAOArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		2B1327042493D95000D78C4A /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = "../../../../../Networking/ios-guided-project-networking-in-objective-c-starter/Quakes-Objc/LambdaSDK/LSIFileHelper.h"; sourceTree = "<group>"; };
 		2B1327072493D9A500D78C4A /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSIErrors.m; path = "../../../../../Networking/ios-guided-project-networking-in-objective-c-starter/Quakes-Objc/LambdaSDK/LSIErrors.m"; sourceTree = "<group>"; };
 		2B1327082493D9A500D78C4A /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIErrors.h; path = "../../../../../Networking/ios-guided-project-networking-in-objective-c-starter/Quakes-Objc/LambdaSDK/LSIErrors.h"; sourceTree = "<group>"; };
+		2B13270A2493E32900D78C4A /* HAOArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HAOArtistViewController.h; sourceTree = "<group>"; };
+		2B13270B2493E32900D78C4A /* HAOArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HAOArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 			children = (
 				2B1326DE2493D27700D78C4A /* HAOFavoriteArtistsTableViewController.h */,
 				2B1326DF2493D27700D78C4A /* HAOFavoriteArtistsTableViewController.m */,
+				2B13270A2493E32900D78C4A /* HAOArtistViewController.h */,
+				2B13270B2493E32900D78C4A /* HAOArtistViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				2B1326F72493D33F00D78C4A /* HAOArtist.m in Sources */,
 				2B1326DD2493D27700D78C4A /* SceneDelegate.m in Sources */,
 				2B1326FA2493D4A700D78C4A /* HAOArtist+HAOArtist_NSJSONSerialization.m in Sources */,
+				2B13270C2493E32900D78C4A /* HAOArtistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

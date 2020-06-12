@@ -22,7 +22,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     NSURLComponents *urlComponents = [NSURLComponents componentsWithString:baseURLString];
     
     urlComponents.queryItems = @[
-        [NSURLQueryItem queryItemWithName:@"s" value:name]
+        [NSURLQueryItem queryItemWithName:@"s" value:name.lowercaseString]
     ];
     
     NSURL *url = urlComponents.URL;

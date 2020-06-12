@@ -42,6 +42,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="EAg-eI-5XN" kind="show" identifier="DisplayArtistSegue" id="mIr-IR-ptd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -58,7 +61,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="VCt-Js-DtY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="usj-NW-a9u">
                             <connections>
-                                <segue destination="EAg-eI-5XN" kind="show" id="mUN-qh-Z5A"/>
+                                <segue destination="EAg-eI-5XN" kind="show" identifier="AddNewArtistSegue" id="mUN-qh-Z5A"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,7 +76,7 @@
         <!--Add New Artist-->
         <scene sceneID="Vpf-pf-zGY">
             <objects>
-                <viewController id="EAg-eI-5XN" sceneMemberID="viewController">
+                <viewController id="EAg-eI-5XN" customClass="HAOArtistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q7O-ab-thm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +84,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="teO-Ms-0HM">
                                 <rect key="frame" x="20" y="140" width="374" height="722"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vtT-VZ-1rh">
+                                    <searchBar contentMode="redraw" verticalCompressionResistancePriority="1000" placeholder="Search for artist:" translatesAutoresizingMaskIntoConstraints="NO" id="vtT-VZ-1rh">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
@@ -107,6 +110,8 @@
                                     </textView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="vtT-VZ-1rh" firstAttribute="leading" secondItem="teO-Ms-0HM" secondAttribute="leading" id="Kl9-c6-buZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="vtT-VZ-1rh" secondAttribute="trailing" id="Mg0-ES-3CN"/>
                                     <constraint firstAttribute="trailing" secondItem="wZw-Gm-BjO" secondAttribute="trailing" id="NKE-TC-tfj"/>
                                     <constraint firstAttribute="trailing" secondItem="GJN-zj-t5B" secondAttribute="trailing" id="Xha-1a-iU1"/>
                                     <constraint firstAttribute="trailing" secondItem="khJ-nc-PT2" secondAttribute="trailing" id="fgG-HJ-K5S"/>
@@ -123,8 +128,19 @@
                         <viewLayoutGuide key="safeArea" id="n3h-9K-VZd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="bvf-nr-F1f">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="usQ-rf-B7E"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="usQ-rf-B7E">
+                            <connections>
+                                <action selector="saveArtist:" destination="EAg-eI-5XN" id="4Eg-TD-Fub"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistBiographyTextView" destination="GJN-zj-t5B" id="OU6-ms-UDQ"/>
+                        <outlet property="artistNameLabel" destination="khJ-nc-PT2" id="tgB-ST-lBT"/>
+                        <outlet property="saveButton" destination="usQ-rf-B7E" id="qpo-zu-pmk"/>
+                        <outlet property="searchBar" destination="vtT-VZ-1rh" id="NRX-50-8rN"/>
+                        <outlet property="yearFormedLabel" destination="wZw-Gm-BjO" id="iu6-dy-AH9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDr-Cg-lgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,4 +165,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="90.401785714285708"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mIr-IR-ptd"/>
+    </inferredMetricsTieBreakers>
 </document>

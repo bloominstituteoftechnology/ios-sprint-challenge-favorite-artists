@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)fetchArtistName:(NSString *)name completionHandler:(CompletionHandler)completionHandler;
 
-- (void)fetchSavedArtist;
+- (NSArray *)fetchSavedArtist;
 
 @end
 

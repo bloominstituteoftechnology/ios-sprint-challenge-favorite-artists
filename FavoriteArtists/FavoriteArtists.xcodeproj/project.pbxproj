@@ -22,7 +22,6 @@
 		3FFB86A22493E7C900AF6D5E /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB869A2493E7C900AF6D5E /* LSILog.m */; };
 		3FFB86A32493E7C900AF6D5E /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB869B2493E7C900AF6D5E /* LSIErrors.m */; };
 		3FFB86A42493E7C900AF6D5E /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB869C2493E7C900AF6D5E /* LSIFileHelper.m */; };
-		3FFB86A52493E7C900AF6D5E /* LSIQuakeFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB869D2493E7C900AF6D5E /* LSIQuakeFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,11 +50,9 @@
 		3FFB869A2493E7C900AF6D5E /* LSILog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSILog.m; sourceTree = "<group>"; };
 		3FFB869B2493E7C900AF6D5E /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
 		3FFB869C2493E7C900AF6D5E /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
-		3FFB869D2493E7C900AF6D5E /* LSIQuakeFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIQuakeFetcher.m; sourceTree = "<group>"; };
 		3FFB869E2493E7C900AF6D5E /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		3FFB869F2493E7C900AF6D5E /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 		3FFB86A02493E7C900AF6D5E /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
-		3FFB86A12493E7C900AF6D5E /* LSIQuakeFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIQuakeFetcher.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,11 +165,9 @@
 				3FFB869A2493E7C900AF6D5E /* LSILog.m */,
 				3FFB869B2493E7C900AF6D5E /* LSIErrors.m */,
 				3FFB869C2493E7C900AF6D5E /* LSIFileHelper.m */,
-				3FFB869D2493E7C900AF6D5E /* LSIQuakeFetcher.m */,
 				3FFB869E2493E7C900AF6D5E /* LSIFileHelper.h */,
 				3FFB869F2493E7C900AF6D5E /* LSIErrors.h */,
 				3FFB86A02493E7C900AF6D5E /* LSILog.h */,
-				3FFB86A12493E7C900AF6D5E /* LSIQuakeFetcher.h */,
 			);
 			path = LambdaSDK;
 			sourceTree = "<group>";
@@ -247,7 +242,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FFB86A52493E7C900AF6D5E /* LSIQuakeFetcher.m in Sources */,
 				3FFB86882493D90F00AF6D5E /* ArtistsTableViewController.m in Sources */,
 				3FFB86A22493E7C900AF6D5E /* LSILog.m in Sources */,
 				3FFB86982493E29800AF6D5E /* LSIArtistController.m in Sources */,

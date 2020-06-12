@@ -13,6 +13,7 @@
 		186E3B562493D1F600B630EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186E3B552493D1F600B630EA /* Assets.xcassets */; };
 		186E3B592493D1F600B630EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186E3B572493D1F600B630EA /* LaunchScreen.storyboard */; };
 		186E3B5C2493D1F600B630EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B5B2493D1F600B630EA /* main.m */; };
+		186E3B692493D89B00B630EA /* MJPArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B682493D89B00B630EA /* MJPArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		186E3B582493D1F600B630EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		186E3B5A2493D1F600B630EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186E3B5B2493D1F600B630EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		186E3B672493D89B00B630EA /* MJPArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPArtist.h; sourceTree = "<group>"; };
+		186E3B682493D89B00B630EA /* MJPArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 		186E3B622493D21800B630EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				186E3B672493D89B00B630EA /* MJPArtist.h */,
+				186E3B682493D89B00B630EA /* MJPArtist.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186E3B692493D89B00B630EA /* MJPArtist.m in Sources */,
 				186E3B4B2493D1F400B630EA /* AppDelegate.m in Sources */,
 				186E3B5C2493D1F600B630EA /* main.m in Sources */,
 				186E3B4E2493D1F400B630EA /* SceneDelegate.m in Sources */,

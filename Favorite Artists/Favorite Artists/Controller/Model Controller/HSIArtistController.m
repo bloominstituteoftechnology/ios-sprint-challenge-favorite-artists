@@ -57,8 +57,8 @@
         if (!artistsDictionary) {
             NSLog(@"Error creating dictionary. No artists found?");
         } else {
-            // TODO: Create artist init from dictionary, complete artist
-            completion(nil);
+            HSIArtist *artist = [[HSIArtist alloc] initWithDictionary:artistsDictionary];
+            completion(artist);
             return;
         }
 

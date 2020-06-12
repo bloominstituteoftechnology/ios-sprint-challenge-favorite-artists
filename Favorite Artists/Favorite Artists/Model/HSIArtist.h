@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HSIArtist : NSObject
 
+//none of these should be modified by outside classes
+@property (nonatomic, copy, readonly) NSString *name;
+@property (nonatomic, copy, readonly) NSString *biography;
+@property (nonatomic, readonly) NSInteger year;
+
+- (instancetype)initWithName:(NSString *)name biography:(NSString *)biography year:(NSInteger)year;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

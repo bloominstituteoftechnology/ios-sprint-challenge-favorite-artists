@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HSIArtist.h"
 
-@class HSIArtist;
 
 NS_ASSUME_NONNULL_BEGIN
 

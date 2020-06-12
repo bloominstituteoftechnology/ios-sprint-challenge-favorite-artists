@@ -18,12 +18,14 @@
 - (void) testFetchingArtists {
     XCTestExpectation *expectation = [self expectationWithDescription:@"Wait for API"];
     HSIArtistController *controller = [[HSIArtistController alloc] init];
+    
     [controller findArtistWithName:@"Elton John" completion:^(HSIArtist *artist) {
-
+        XCTAssertNotNil(artist);
         [expectation fulfill];
     }];
     NSArray *expectationArray = [[NSArray alloc] initWithObjects:expectation, nil];
     [self waitForExpectations:expectationArray timeout:5.0];
+
 }
 
 @end

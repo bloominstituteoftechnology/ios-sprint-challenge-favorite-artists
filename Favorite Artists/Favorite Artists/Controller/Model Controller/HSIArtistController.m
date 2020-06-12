@@ -58,7 +58,7 @@
             NSLog(@"Error creating dictionary. No artists found?");
         } else {
             // TODO: Create artist init from dictionary, complete artist
-
+            completion(nil);
             return;
         }
 

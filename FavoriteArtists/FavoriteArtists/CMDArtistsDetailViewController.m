@@ -6,13 +6,13 @@
 //  Copyright © 2020 Chris Dobek. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CMDArtistsDetailViewController.h"
 
-@interface ViewController ()
+@interface CMDArtistsDetailViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CMDArtistsDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

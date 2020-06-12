@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="iJh-8v-AP8" detailTextLabel="vE2-d0-Kkw" style="IBUITableViewCellStyleSubtitle" id="B3v-jb-2Be" customClass="AddArtistTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="iJh-8v-AP8" detailTextLabel="vE2-d0-Kkw" style="IBUITableViewCellStyleSubtitle" id="B3v-jb-2Be" customClass="AddArtistTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B3v-jb-2Be" id="tav-Kb-kzz">
@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Z3l-BC-5zX" kind="show" id="B7w-2n-XsQ"/>
+                                    <segue destination="Z3l-BC-5zX" kind="show" identifier="artistDetailSegue" id="B7w-2n-XsQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Find Artists" id="nzV-RM-EqU">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="pUd-uC-yku">
                             <connections>
-                                <segue destination="Z3l-BC-5zX" kind="show" id="CUI-d2-Ccl"/>
+                                <segue destination="Z3l-BC-5zX" kind="show" identifier="searchArtistSegue" id="CUI-d2-Ccl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

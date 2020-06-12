@@ -23,34 +23,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSArray *newArtists = [self.artistController fetchSavedArtist];
+    self.savedArtist = [[NSMutableArray alloc] initWithArray:newArtists];
 }
 
-#pragma mark - Table view data source
+-(void)viewWillAppear:(BOOL)animated{
+   [super viewWillAppear:animated];
+    
+    NSArray *newArtists = [self.artistController fetchSavedArtist];
+    self.savedArtist = [[NSMutableArray alloc] initWithArray:newArtists];
+    
+    [self.tableView reloadData];
+}
+
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.savedArtist.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    LSIArtist *artist = self.savedArtist[indexPath.row];
+    cell.textLabel.text = artist.artist;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -86,14 +92,25 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+       if([segue.identifier isEqualToString:@"searchArtistSegue"]){
+        SearchArtistViewController *controller = (SearchArtistViewController *)segue.destinationViewController;
+        controller.artistController = self.artistController;
+    }
+    
+    if ([segue.identifier isEqualToString:@"artistDetailSegue"]) {
+       SearchArtistViewController *controller = (SearchArtistViewController *)segue.destinationViewController;
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        controller.artist = self.savedArtist[selectedIndexPath.row];
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

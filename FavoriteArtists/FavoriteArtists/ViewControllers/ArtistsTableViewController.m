@@ -13,6 +13,9 @@
 
 @interface ArtistsTableViewController ()
 
+@property (nonatomic) LSIArtistController *artistController;
+@property (nonatomic) NSMutableArray *savedArtist;
+
 @end
 
 @implementation ArtistsTableViewController

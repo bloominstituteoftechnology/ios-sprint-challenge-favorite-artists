@@ -17,14 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *biographyLabel;
-
-
-
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
-
 @end
-
 
 @implementation PDMArtistDetailViewController
 
@@ -40,10 +35,8 @@
     } else {
         NSLog(@"No Artist to Save - Add some UI feature to disable button if search field is empty.");
         [self.navigationController popViewControllerAnimated:YES];
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
 }
-
 
 - (void)updateViews
 {
@@ -53,7 +46,6 @@
         self.navigationItem.rightBarButtonItem = nil;
     } else {
         self.title = @"Add New Artist";
-        
         self.artistNameLabel.text = @"";
         self.yearFormedLabel.text = @"";
         self.biographyLabel.text = @"";

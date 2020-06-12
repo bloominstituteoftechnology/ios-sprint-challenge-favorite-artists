@@ -22,7 +22,5 @@
     }
 
     return self;
-
 }
-
 @end

@@ -16,6 +16,7 @@
 		1DF2470B2493D44600FEA423 /* SDJDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2470A2493D44600FEA423 /* SDJDetailVC.m */; };
 		1DF2470E2493D45A00FEA423 /* SDJHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2470D2493D45A00FEA423 /* SDJHomeVC.m */; };
 		1DF247142493D52800FEA423 /* SDJArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF247132493D52800FEA423 /* SDJArtist.m */; };
+		1DF247182493D58B00FEA423 /* SDJArtistClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF247172493D58B00FEA423 /* SDJArtistClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		1DF2470D2493D45A00FEA423 /* SDJHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDJHomeVC.m; sourceTree = "<group>"; };
 		1DF247122493D52800FEA423 /* SDJArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDJArtist.h; sourceTree = "<group>"; };
 		1DF247132493D52800FEA423 /* SDJArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDJArtist.m; sourceTree = "<group>"; };
+		1DF247162493D58B00FEA423 /* SDJArtistClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDJArtistClient.h; sourceTree = "<group>"; };
+		1DF247172493D58B00FEA423 /* SDJArtistClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDJArtistClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 				1D542A242493D19B00546C31 /* Application */,
 				1D542A262493D1C100546C31 /* ViewControllers */,
 				1D542A252493D1B400546C31 /* Storyboards */,
+				1DF247192493D59000FEA423 /* ModelController */,
 				1DF247112493D4D000FEA423 /* Model */,
 			);
 			path = FavoriteArtists;
@@ -132,6 +136,15 @@
 				1DF247132493D52800FEA423 /* SDJArtist.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1DF247192493D59000FEA423 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				1DF247162493D58B00FEA423 /* SDJArtistClient.h */,
+				1DF247172493D58B00FEA423 /* SDJArtistClient.m */,
+			);
+			path = ModelController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +224,7 @@
 				1D542A1E2493D14400546C31 /* main.m in Sources */,
 				1DF247142493D52800FEA423 /* SDJArtist.m in Sources */,
 				1D542A102493D14200546C31 /* SceneDelegate.m in Sources */,
+				1DF247182493D58B00FEA423 /* SDJArtistClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

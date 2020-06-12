@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		7FFE87662493E35D008FD971 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87652493E35D008FD971 /* AppDelegate.m */; };
 		7FFE87692493E35D008FD971 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87682493E35D008FD971 /* SceneDelegate.m */; };
-		7FFE876C2493E35D008FD971 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE876B2493E35D008FD971 /* ViewController.m */; };
 		7FFE876F2493E35D008FD971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFE876D2493E35D008FD971 /* Main.storyboard */; };
 		7FFE87712493E35F008FD971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFE87702493E35F008FD971 /* Assets.xcassets */; };
 		7FFE87742493E35F008FD971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFE87722493E35F008FD971 /* LaunchScreen.storyboard */; };
 		7FFE87772493E35F008FD971 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87762493E35F008FD971 /* main.m */; };
 		7FFE87812493E35F008FD971 /* ArtistsObjCSprintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87802493E35F008FD971 /* ArtistsObjCSprintTests.m */; };
 		7FFE878C2493E35F008FD971 /* ArtistsObjCSprintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE878B2493E35F008FD971 /* ArtistsObjCSprintUITests.m */; };
-		7FFE879E2493E41E008FD971 /* CNSArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE879D2493E41E008FD971 /* CNSArtistModel.m */; };
 		7FFE87A02493E54C008FD971 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FFE879F2493E54C008FD971 /* Artist.json */; };
 		7FFE87AA2493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87A92493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m */; };
+		7FFE87AB2493EF04008FD971 /* CNSArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE879D2493E41E008FD971 /* CNSArtistModel.m */; };
+		7FFE87AC2493EF05008FD971 /* CNSArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE879D2493E41E008FD971 /* CNSArtistModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,6 @@
 		7FFE87652493E35D008FD971 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7FFE87672493E35D008FD971 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		7FFE87682493E35D008FD971 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		7FFE876A2493E35D008FD971 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7FFE876B2493E35D008FD971 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7FFE876E2493E35D008FD971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FFE87702493E35F008FD971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FFE87732493E35F008FD971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,8 +114,6 @@
 				7FFE87652493E35D008FD971 /* AppDelegate.m */,
 				7FFE87672493E35D008FD971 /* SceneDelegate.h */,
 				7FFE87682493E35D008FD971 /* SceneDelegate.m */,
-				7FFE876A2493E35D008FD971 /* ViewController.h */,
-				7FFE876B2493E35D008FD971 /* ViewController.m */,
 				7FFE876D2493E35D008FD971 /* Main.storyboard */,
 				7FFE87702493E35F008FD971 /* Assets.xcassets */,
 				7FFE87722493E35F008FD971 /* LaunchScreen.storyboard */,
@@ -281,11 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FFE876C2493E35D008FD971 /* ViewController.m in Sources */,
 				7FFE87662493E35D008FD971 /* AppDelegate.m in Sources */,
 				7FFE87772493E35F008FD971 /* main.m in Sources */,
-				7FFE879E2493E41E008FD971 /* CNSArtistModel.m in Sources */,
 				7FFE87692493E35D008FD971 /* SceneDelegate.m in Sources */,
+				7FFE87AB2493EF04008FD971 /* CNSArtistModel.m in Sources */,
 				7FFE87AA2493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FFE87812493E35F008FD971 /* ArtistsObjCSprintTests.m in Sources */,
+				7FFE87AC2493EF05008FD971 /* CNSArtistModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

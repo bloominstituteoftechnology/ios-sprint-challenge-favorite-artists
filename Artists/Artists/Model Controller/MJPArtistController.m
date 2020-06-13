@@ -133,6 +133,4 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
     return savedArtist;
 }
 
-
-
 @end

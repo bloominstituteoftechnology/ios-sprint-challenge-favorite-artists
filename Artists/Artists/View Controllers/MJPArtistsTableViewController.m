@@ -49,7 +49,7 @@
     if (artist.yearFormed != 0 ) {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)artist.yearFormed];
     } else {
-        cell.detailTextLabel.text = @"Date formed unavailable.";
+        cell.detailTextLabel.text = @"Formed in unavailable";
     }
 
     return cell;

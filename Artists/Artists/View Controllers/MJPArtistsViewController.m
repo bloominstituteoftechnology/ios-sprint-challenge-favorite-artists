@@ -23,7 +23,12 @@
 - (void)updateViews {
     if (_artist) {
         self.artistLabel.text = _artist.strArtist;
-        self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i",_artist.yearFormed];
+
+        if (self.artist.yearFormed != 0 ) {
+            self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i",self.artist.yearFormed];
+        } else {
+            self.yearLabel.text = @"";
+        }
         self.bioTextView.text = _artist.strBiographyEN;
     } else if (!_artist) {
         self.artistLabel.text = @"";
@@ -49,9 +54,7 @@
             [alert addAction:ok];
 
            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-
                [self presentViewController:alert animated:YES completion:nil];
-
             }];
 
             return;

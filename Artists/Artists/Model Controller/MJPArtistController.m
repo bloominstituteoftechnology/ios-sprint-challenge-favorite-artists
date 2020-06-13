@@ -7,6 +7,7 @@
 //
 
 #import "MJPArtistController.h"
+#import "LSIErrors.h"
 
 @implementation MJPArtistController
 
@@ -111,14 +112,19 @@ static NSString *baseURLString = @"https://theaudiodb.com/api/v1/json/1/search.p
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         if (jsonError) {
             NSLog(@"JSON error: %@", jsonError);
-            completionBlock(nil, error);
+            completionBlock(nil, jsonError);
             return;
         }
 
         if (json[@"artists"] != [NSNull null]) {
             NSArray *dictionary = json[@"artists"];
             MJPArtist *artist = [[MJPArtist alloc] initWithDictionary:dictionary[0]];
+            NSLog(@"%@", artist);
             completionBlock(artist, nil);
+        } else {
+            NSError *error = errorWithMessage(@"Error returned from data task", LSIDataNilError);
+            completionBlock(nil, error);
+            return;
         }
     }];
     [task resume];

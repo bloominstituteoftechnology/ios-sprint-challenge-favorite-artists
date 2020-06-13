@@ -38,6 +38,22 @@
         
         if (error) {
             NSLog(@"Error getting artist info: %@", error);
+
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:@"Artist Not Found" preferredStyle:UIAlertControllerStyleAlert];
+
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                //button click event
+            }];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:cancel];
+            [alert addAction:ok];
+
+           [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+
+               [self presentViewController:alert animated:YES completion:nil];
+
+            }];
+
             return;
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{

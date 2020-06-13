@@ -18,6 +18,7 @@
 		186E3B752493E41800B630EA /* MJPArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B742493E41800B630EA /* MJPArtistsTableViewController.m */; };
 		186E3B782493E42F00B630EA /* MJPArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B772493E42F00B630EA /* MJPArtistsViewController.m */; };
 		186E3B7B2493E51900B630EA /* MJPArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E3B7A2493E51900B630EA /* MJPArtistController.m */; };
+		18C520BD24955C7300FBAB05 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C520BC24955C7300FBAB05 /* LSIErrors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		186E3B792493E51900B630EA /* MJPArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPArtistController.h; sourceTree = "<group>"; };
 		186E3B7A2493E51900B630EA /* MJPArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPArtistController.m; sourceTree = "<group>"; };
 		186E3B7C2493E6DD00B630EA /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		18C520BB24955C6900FBAB05 /* LSIErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		18C520BC24955C7300FBAB05 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				186E3B7C2493E6DD00B630EA /* LSIFileHelper.h */,
+				18C520BB24955C6900FBAB05 /* LSIErrors.h */,
+				18C520BC24955C7300FBAB05 /* LSIErrors.m */,
 				186E3B492493D1F400B630EA /* AppDelegate.h */,
 				186E3B4A2493D1F400B630EA /* AppDelegate.m */,
 				186E3B4C2493D1F400B630EA /* SceneDelegate.h */,
@@ -210,6 +215,7 @@
 			files = (
 				186E3B752493E41800B630EA /* MJPArtistsTableViewController.m in Sources */,
 				186E3B722493DBE600B630EA /* MJPArtist+NSJSONSerialization.m in Sources */,
+				18C520BD24955C7300FBAB05 /* LSIErrors.m in Sources */,
 				186E3B692493D89B00B630EA /* MJPArtist.m in Sources */,
 				186E3B4B2493D1F400B630EA /* AppDelegate.m in Sources */,
 				186E3B782493E42F00B630EA /* MJPArtistsViewController.m in Sources */,

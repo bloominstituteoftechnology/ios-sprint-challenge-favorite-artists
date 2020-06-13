@@ -14,15 +14,6 @@
 
 @implementation MJPArtistsTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    [self.tableView reloadData];
-}
-
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
@@ -31,6 +22,17 @@
     }
     return self;
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.artistController loadfromPersistentStore];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [self.tableView reloadData];
+}
+
 
 #pragma mark - Table view data source
 

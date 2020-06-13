@@ -7,7 +7,6 @@
 //
 
 #import "CNSArtistModel.h"
-#import "CNSArtistModel+ArtistSerialization.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CNSArtistModel (ArtistSerialization)

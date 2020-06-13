@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FDC8C582495315700E0A9D2 /* CNSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC8C572495315700E0A9D2 /* CNSTableViewController.m */; };
+		7FDC8C5B2495321500E0A9D2 /* CNSArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC8C5A2495321500E0A9D2 /* CNSArtistController.m */; };
+		7FDC8C5E249533FD00E0A9D2 /* CNSDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC8C5D249533FD00E0A9D2 /* CNSDetailController.m */; };
 		7FFE87662493E35D008FD971 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87652493E35D008FD971 /* AppDelegate.m */; };
 		7FFE87692493E35D008FD971 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87682493E35D008FD971 /* SceneDelegate.m */; };
 		7FFE876F2493E35D008FD971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFE876D2493E35D008FD971 /* Main.storyboard */; };
@@ -18,7 +21,6 @@
 		7FFE87A02493E54C008FD971 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FFE879F2493E54C008FD971 /* Artist.json */; };
 		7FFE87AA2493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE87A92493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m */; };
 		7FFE87AB2493EF04008FD971 /* CNSArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE879D2493E41E008FD971 /* CNSArtistModel.m */; };
-		7FFE87AC2493EF05008FD971 /* CNSArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE879D2493E41E008FD971 /* CNSArtistModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7FDC8C562495315700E0A9D2 /* CNSTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNSTableViewController.h; sourceTree = "<group>"; };
+		7FDC8C572495315700E0A9D2 /* CNSTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNSTableViewController.m; sourceTree = "<group>"; };
+		7FDC8C592495321500E0A9D2 /* CNSArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNSArtistController.h; sourceTree = "<group>"; };
+		7FDC8C5A2495321500E0A9D2 /* CNSArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNSArtistController.m; sourceTree = "<group>"; };
+		7FDC8C5C249533FD00E0A9D2 /* CNSDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNSDetailController.h; sourceTree = "<group>"; };
+		7FDC8C5D249533FD00E0A9D2 /* CNSDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNSDetailController.m; sourceTree = "<group>"; };
 		7FFE87612493E35D008FD971 /* ArtistsObjCSprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtistsObjCSprint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFE87642493E35D008FD971 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7FFE87652493E35D008FD971 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,9 +65,10 @@
 		7FFE878D2493E35F008FD971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FFE879C2493E41E008FD971 /* CNSArtistModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNSArtistModel.h; sourceTree = "<group>"; };
 		7FFE879D2493E41E008FD971 /* CNSArtistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNSArtistModel.m; sourceTree = "<group>"; };
-		7FFE879F2493E54C008FD971 /* Artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
+		7FFE879F2493E54C008FD971 /* Artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		7FFE87A82493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CNSArtistModel+ArtistSerialization.h"; sourceTree = "<group>"; };
 		7FFE87A92493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CNSArtistModel+ArtistSerialization.m"; sourceTree = "<group>"; };
+		7FFE87AE2493FBE1008FD971 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +132,12 @@
 				7FFE879D2493E41E008FD971 /* CNSArtistModel.m */,
 				7FFE87A82493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.h */,
 				7FFE87A92493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m */,
+				7FDC8C562495315700E0A9D2 /* CNSTableViewController.h */,
+				7FDC8C572495315700E0A9D2 /* CNSTableViewController.m */,
+				7FDC8C592495321500E0A9D2 /* CNSArtistController.h */,
+				7FDC8C5A2495321500E0A9D2 /* CNSArtistController.m */,
+				7FDC8C5C249533FD00E0A9D2 /* CNSDetailController.h */,
+				7FDC8C5D249533FD00E0A9D2 /* CNSDetailController.m */,
 			);
 			path = ArtistsObjCSprint;
 			sourceTree = "<group>";
@@ -131,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				7FFE879F2493E54C008FD971 /* Artist.json */,
+				7FFE87AE2493FBE1008FD971 /* LSIFileHelper.h */,
 				7FFE87802493E35F008FD971 /* ArtistsObjCSprintTests.m */,
 				7FFE87822493E35F008FD971 /* Info.plist */,
 			);
@@ -278,9 +294,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FFE87662493E35D008FD971 /* AppDelegate.m in Sources */,
+				7FDC8C5B2495321500E0A9D2 /* CNSArtistController.m in Sources */,
 				7FFE87772493E35F008FD971 /* main.m in Sources */,
+				7FDC8C5E249533FD00E0A9D2 /* CNSDetailController.m in Sources */,
 				7FFE87692493E35D008FD971 /* SceneDelegate.m in Sources */,
 				7FFE87AB2493EF04008FD971 /* CNSArtistModel.m in Sources */,
+				7FDC8C582495315700E0A9D2 /* CNSTableViewController.m in Sources */,
 				7FFE87AA2493EAD3008FD971 /* CNSArtistModel+ArtistSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FFE87812493E35F008FD971 /* ArtistsObjCSprintTests.m in Sources */,
-				7FFE87AC2493EF05008FD971 /* CNSArtistModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

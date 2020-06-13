@@ -7,6 +7,7 @@
 //
 
 #import "CNSArtistModel+ArtistSerialization.h"
+#import "CNSArtistModel.h"
 
 @implementation CNSArtistModel (ArtistSerialization)
 - (instancetype) initWithDictionary: (NSDictionary *)dictionary {

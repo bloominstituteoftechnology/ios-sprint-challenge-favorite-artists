@@ -10,7 +10,7 @@
         <!--Table View Controller-->
         <scene sceneID="af1-4r-qU4">
             <objects>
-                <tableViewController id="sGj-Yh-TeS" sceneMemberID="viewController">
+                <tableViewController id="sGj-Yh-TeS" customClass="CNSTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iSB-6O-dqM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1142.0289855072465" y="-725.22321428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Controller-->
         <scene sceneID="iaG-m7-abZ">
             <objects>
-                <viewController id="7aV-jA-v7l" sceneMemberID="viewController">
+                <viewController id="7aV-jA-v7l" customClass="CNSDetailController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SOl-LK-eFK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,6 +113,12 @@
                     <navigationItem key="navigationItem" id="U0K-tV-DNe">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="nfH-eO-leg"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistName" destination="9lW-Ni-mg1" id="Sby-sa-oG9"/>
+                        <outlet property="artistSearchBar" destination="6SV-ji-Zok" id="Jo1-bW-blj"/>
+                        <outlet property="bioTextView" destination="zXt-4D-VUT" id="WNd-DL-Ulm"/>
+                        <outlet property="yearFormed" destination="onj-pM-4ea" id="QeQ-c5-60d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bx-g8-cGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,6 +144,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kxY-On-U5h"/>
+        <segue reference="zKq-T6-vDM"/>
     </inferredMetricsTieBreakers>
 </document>

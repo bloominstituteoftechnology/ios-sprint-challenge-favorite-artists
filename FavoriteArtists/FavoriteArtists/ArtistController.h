@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Artist.h"
+@class Artist;
 
 NS_ASSUME_NONNULL_BEGIN
 

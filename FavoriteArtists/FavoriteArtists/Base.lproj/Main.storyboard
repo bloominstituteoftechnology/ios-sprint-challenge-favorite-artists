@@ -52,14 +52,12 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="2Lx-B7-7iN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3O3-iB-Jbd">
                             <connections>
-                                <action selector="addArtistButtonTapped:" destination="17a-eu-uv5" id="GrN-6D-YMn"/>
                                 <segue destination="rej-Mk-WSS" kind="show" identifier="SearchArtistSegue" id="HlL-s8-Y8A"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdL-Oi-Cqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="17a-eu-uv5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1272" y="123"/>
         </scene>

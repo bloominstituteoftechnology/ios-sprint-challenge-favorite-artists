@@ -20,7 +20,6 @@ static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api
     NSURL *baseURL = [[[NSURL alloc] initWithString:ArtistFetcherURLString] URLByAppendingPathComponent:@"/search.php"];
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithURL:baseURL resolvingAgainstBaseURL:YES];
 
-//    urlComponents.path = @"/search.php";
     urlComponents.query = [NSString stringWithFormat:@"s=%@",name.lowercaseString];
 
     NSURL *url = urlComponents.URL;

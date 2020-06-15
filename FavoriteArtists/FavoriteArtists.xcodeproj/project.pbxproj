@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95179983249328E70026BDB5 /* ArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 95179982249328E70026BDB5 /* ArtistResults.m */; };
 		956AA7D8248445D50057C0D0 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 956AA7D7248445D50057C0D0 /* Artist.json */; };
 		956AA7DE248471AD0057C0D0 /* ArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 956AA7DD248471AD0057C0D0 /* ArtistController.m */; };
 		95C8621D2481E996002B318E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8621C2481E996002B318E /* AppDelegate.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95179981249328E70026BDB5 /* ArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistResults.h; sourceTree = "<group>"; };
+		95179982249328E70026BDB5 /* ArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistResults.m; sourceTree = "<group>"; };
 		956AA7D7248445D50057C0D0 /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
 		956AA7DC248471AD0057C0D0 /* ArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistController.h; sourceTree = "<group>"; };
 		956AA7DD248471AD0057C0D0 /* ArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistController.m; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				95F8E03B2485F12700F780E8 /* Artist+NSJSONSerialization.m */,
 				95C8623A2481F2CE002B318E /* ArtistFetcher.h */,
 				95C8623B2481F2CE002B318E /* ArtistFetcher.m */,
+				95179981249328E70026BDB5 /* ArtistResults.h */,
+				95179982249328E70026BDB5 /* ArtistResults.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				95C862422482010D002B318E /* ArtistDetailViewController.m in Sources */,
 				95C8621D2481E996002B318E /* AppDelegate.m in Sources */,
 				95C8622E2481E996002B318E /* main.m in Sources */,
+				95179983249328E70026BDB5 /* ArtistResults.m in Sources */,
 				95C8623C2481F2CE002B318E /* ArtistFetcher.m in Sources */,
 				95C862202481E996002B318E /* SceneDelegate.m in Sources */,
 				956AA7DE248471AD0057C0D0 /* ArtistController.m in Sources */,

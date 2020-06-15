@@ -10,14 +10,6 @@
 
 @implementation Artist
 
-- (instancetype)init
-{
-    return [self initWithName:@""
-                    biography:@""
-                   yearFormed:1907];
-
-}
-
 - (instancetype)initWithName:(NSString *)artistName
                    biography:(NSString *)artistBiography
                   yearFormed:(int)yearFormed

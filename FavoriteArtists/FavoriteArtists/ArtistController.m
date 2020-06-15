@@ -28,7 +28,6 @@
     if ([fileManager fileExistsAtPath:self.artistListURL.path]) {
         // anytime you need to call init you need alloc
         NSDictionary *artistDictionary = [[NSDictionary alloc] initWithContentsOfURL:self.artistListURL];
-
     }
 }
 

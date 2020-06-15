@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistFetcher : NSObject
 
-- (void)fetchArtistWithName:(NSString *)name completionHandler:(nonnull ArtistFetcherCompletionHandler)completionHandler;
+- (void)fetchArtistWithName:(NSString *)name
+          completionHandler:(nonnull ArtistFetcherCompletionHandler)completionHandler;
 
 @end
 

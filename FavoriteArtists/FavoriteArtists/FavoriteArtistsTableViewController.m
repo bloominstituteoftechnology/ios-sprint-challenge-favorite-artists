@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     _artistController = [[ArtistController alloc] init];
     [self.tableView reloadData];
 }
@@ -34,9 +35,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.artistController.artists.count;
-}
-
-- (IBAction)addArtistButtonTapped:(UIBarButtonItem *)sender {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

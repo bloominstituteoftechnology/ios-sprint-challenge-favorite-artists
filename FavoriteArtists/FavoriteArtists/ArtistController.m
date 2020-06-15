@@ -9,16 +9,45 @@
 #import "ArtistController.h"
 #import "Artist.h"
 
+@interface ArtistController ()
+
+@property (nonatomic) NSMutableArray *internalArtists;
+
+@end
+
 @implementation ArtistController
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _internalArtists = [[NSMutableArray alloc] init];
+//
+//        Artist *artist = [[Artist alloc] initWithName:@"" biography:@"" yearFormed:1970];
+//        [_internalArtists addObject:artist];
+    }
+    return self;
+}
+
+- (NSArray *)artistsAtIndex:(NSIndexSet *)indexes{
+    return _internalArtists.copy;
+}
+
+- (Artist *)artistAtIndex:(NSInteger)index {
+    return [_internalArtists objectAtIndex:index];
+}
+
+- (NSInteger)artistCount {
+    return _internalArtists.count;
+}
 
 - (void)saveArtistToFavorites:(Artist *)artist
 {
-    [self.artists addObject:artist];
+    [_internalArtists addObject:artist];
 }
 
-- (void)saveTopersistentStore
+- (void)saveToPersistentStore
 {
-
+    [_internalArtists.copy writeToURL:self.artistListURL error:nil];
 }
 
 - (void)loadFromPersistentStore

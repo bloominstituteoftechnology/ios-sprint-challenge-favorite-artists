@@ -13,13 +13,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistController : NSObject
 
-@property (nonatomic) NSMutableArray<Artist *> *artists;
+@property (nonatomic, readonly, copy, nonnull) NSArray<Artist *> *artists;
 
 @property (nonatomic) NSURL *artistListURL;
 
-//- (nullable NSDictionary<NSString *, Artist *> *)initWithContentsOfURL:(NSURL *)url; // this needs to be called on a dictionary but not defined any other way
+- (nonnull Artist *)artistAtIndex:(NSInteger)index;
+
+@property (nonatomic, readonly) NSInteger artistCount;
 
 - (void)saveArtistToFavorites:(Artist *)artist;
+
+//- (nullable NSDictionary<NSString *, Artist *> *)initWithContentsOfURL:(NSURL *)url; // this needs to be called on a dictionary but not defined any other way
+
 
 @end
 

@@ -20,10 +20,10 @@
 
 @implementation FavoriteArtistsTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewWIllAppear {
+    [super viewWillAppear:YES];
 
-    _artistController = [[ArtistController alloc] init];
+    self.artistController = [[ArtistController alloc] init];
     [self.tableView reloadData];
 }
 
@@ -54,6 +54,7 @@
         if ([detailVC isKindOfClass:[ArtistDetailViewController class]])
         {
             detailVC.title = @"Add New Artist";
+            detailVC.artistController = self.artistController;
         }
     } else {
         ArtistDetailViewController *detailVC = [[ArtistDetailViewController alloc] init];

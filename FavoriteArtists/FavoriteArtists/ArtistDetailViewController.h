@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Artist.h"
+#import "ArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
 @property (nonatomic) Artist *artist;
+@property (nonatomic) ArtistController *artistController;
 
 @end
 

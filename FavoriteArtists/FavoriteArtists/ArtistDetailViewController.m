@@ -17,8 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *biographyLabel;
 
-@property (nonatomic) ArtistController *artistController;
-
 - (void)updateViews;
 
 @end
@@ -54,11 +52,13 @@
 
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
 
-    [self.navigationController dismissViewControllerAnimated:YES completion:^{
-//        [self.artistController saveArtistToFavorites:[[Artist alloc]initWithName:self.artist.artistName biography:self.artist.artistBiography yearFormed:self.artist.yearFormed]];
-        [self.artistController saveArtistToFavorites:self.artist];
+    [self.artistController saveArtistToFavorites:self.artist];
 
-    }];
+//    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+//
+//        [self.artistController saveArtistToFavorites:self.artist];
+//
+//    }];
 }
 
 @end

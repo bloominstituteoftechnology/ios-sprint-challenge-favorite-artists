@@ -23,6 +23,11 @@
 
 @implementation ArtistDetailViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self updateViews];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.searchBar.delegate = self;
@@ -41,24 +46,26 @@
 
 - (void)updateViews
 {
-    _artistNameLabel.text = self.artist.artistName;
-    if (self.artist.yearFormed != 0) {
-        _yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
-    } else {
-        _yearFormedLabel.text = @"Year formed unavailable.";
+    if (self.artist != nil) {
+        _artistNameLabel.text = self.artist.artistName;
+        if (self.artist.yearFormed != 0) {
+            _yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+        } else {
+            _yearFormedLabel.text = @"Year formed unavailable.";
+        }
+        _biographyLabel.text = self.artist.artistBiography;
     }
-    _biographyLabel.text = self.artist.artistBiography;
 }
 
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
 
+    // Saved to persistance
+//    [self.artistController saveToPersistentStore:self.artist];
+
     [self.artistController saveArtistToFavorites:self.artist];
 
-//    [self.navigationController dismissViewControllerAnimated:YES completion:^{
-//
-//        [self.artistController saveArtistToFavorites:self.artist];
-//
-//    }];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
 }
 
 @end

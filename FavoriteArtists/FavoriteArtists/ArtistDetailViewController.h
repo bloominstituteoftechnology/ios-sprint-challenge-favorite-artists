@@ -8,16 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "Artist.h"
-#import "ArtistController.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class ArtistController;
 
 // This .h class is public presentation
 @interface ArtistDetailViewController : UIViewController
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
 @property (nonatomic) Artist *artist;
-@property (nonatomic) ArtistController *artistController;
+@property ArtistController *artistController;
 
 @end
 

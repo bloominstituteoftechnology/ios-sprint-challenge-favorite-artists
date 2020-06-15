@@ -7,24 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Artist;
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class Artist;
+
 @interface ArtistController : NSObject
 
-@property (nonatomic, readonly, copy, nonnull) NSArray<Artist *> *artists;
+@property (nonatomic) NSArray<Artist *> *artists;
+//@property (nonatomic) Artist *artist;
 
-@property (nonatomic) NSURL *artistListURL;
+//@property (nonatomic) NSURL *artistListURL;
 
 - (nonnull Artist *)artistAtIndex:(NSInteger)index;
 
 @property (nonatomic, readonly) NSInteger artistCount;
 
 - (void)saveArtistToFavorites:(Artist *)artist;
-
-//- (nullable NSDictionary<NSString *, Artist *> *)initWithContentsOfURL:(NSURL *)url; // this needs to be called on a dictionary but not defined any other way
-
+- (void)saveToPersistentStore:(Artist *)artist;
+- (void)loadFromPersistentStore;
 
 @end
 

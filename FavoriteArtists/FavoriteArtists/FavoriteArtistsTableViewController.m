@@ -12,20 +12,36 @@
 
 @interface FavoriteArtistsTableViewController ()
 
-@property (nonatomic) NSArray<Artist *> *favoriteArtists;
-@property (nonatomic) ArtistController *artistController;
 @property (nonatomic, readonly) Artist *artist;
 
 @end
 
 @implementation FavoriteArtistsTableViewController
 
-- (void)viewWIllAppear {
-    [super viewWillAppear:YES];
-
-    self.artistController = [[ArtistController alloc] init];
-    [self.tableView reloadData];
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _artistController = [[ArtistController alloc] init];
+    }
+    return self;
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"Artist count: %ld", (long)self.artistController.artistCount);
+    [self.tableView reloadData];
+    [self.artistController loadFromPersistentStore];
+
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    // Load from persistence
+    [self.artistController loadFromPersistentStore];
+}
+
 
 #pragma mark - Table view data source
 
@@ -34,13 +50,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.artistController.artists.count;
+    return self.artistController.artistCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    Artist *cellArtist = self.artistController.artists[indexPath.row];
+    Artist *cellArtist = [self.artistController artistAtIndex:indexPath.row];
     cell.textLabel.text = cellArtist.artistName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Year formed %d", cellArtist.yearFormed];
     return cell;
@@ -49,30 +65,23 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
     if ([segue.identifier  isEqual:@"SearchArtistSegue"]) {
-        ArtistDetailViewController *detailVC = [[ArtistDetailViewController alloc] init];
-        if ([detailVC isKindOfClass:[ArtistDetailViewController class]])
-        {
+
+        NSLog(@" Search segue");
+
+        ArtistDetailViewController *detailVC = segue.destinationViewController;
+
             detailVC.title = @"Add New Artist";
-            detailVC.artistController = self.artistController;
-        }
+        detailVC.artistController = self.artistController;
+
+
     } else {
-        ArtistDetailViewController *detailVC = [[ArtistDetailViewController alloc] init];
+        NSLog(@" Detail segue");
+        ArtistDetailViewController *detailVC = segue.destinationViewController;
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
-        detailVC.artist = self.artistController.artists[indexPath.row];
+        detailVC.artist = [self.artistController artistAtIndex:indexPath.row];
     }
 }
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
 
 @end

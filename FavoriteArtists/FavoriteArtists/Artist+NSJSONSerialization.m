@@ -28,7 +28,13 @@
 
 - (NSDictionary *)toDictionary
 {
-    return [NSDictionary dictionaryWithObject:self forKey:@"artists"];
+    NSNumber *yearFormed = [NSNumber numberWithInt:self.yearFormed];
+    NSDictionary *dictionary = @{
+        @"strArtist" : self.artistName,
+        @"intFormedYear" : yearFormed,
+        @"strBiographyEN" : self.artistBiography
+    };
+    return dictionary;
 }
 
 @end

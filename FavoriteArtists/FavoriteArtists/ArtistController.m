@@ -38,7 +38,7 @@
 - (void)saveArtistToFavorites:(Artist *)artist
 {
     [_internalArtists addObject:artist];
-    [self saveToPersistentStore:artist];
+    [self saveToPersistentStore];
     NSLog(@"%@", artist);
 }
 
@@ -50,16 +50,18 @@
     return [documentDirectory URLByAppendingPathComponent:fileName];
 }
 
-- (void)saveToPersistentStore:(Artist *)artist
+- (void)saveToPersistentStore
 {
+
     NSLog(@"File URL: %@", self.fileURL);
+//    NSMutableArray *arrayOfArtists = [[NSMutableArray alloc] init];
     NSMutableArray *arrayOfArtists = [[NSMutableArray alloc] init];
 
     for (Artist *artist in self.internalArtists) {
         NSDictionary *dictionaryFromArtist = [artist toDictionary];
         [arrayOfArtists addObject:dictionaryFromArtist];
     }
-    NSDictionary *dictionary = @{@"artists" : arrayOfArtists};
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary: @{@"artists" : arrayOfArtists}];
     NSLog(@"%@", dictionary);
     [dictionary writeToURL:self.fileURL atomically:YES];
 }
@@ -72,7 +74,7 @@
 //        NSLog(@"File Exists");
 
     NSArray *artistDictionaries = [[[NSDictionary alloc] initWithContentsOfURL:self.fileURL] objectForKey:@"artists"];
-
+//    [self.internalArtists addObjectsFromArray:artistDictionaries];
     
     for (NSDictionary *artistDictionary in artistDictionaries) {
         if (![artistDictionary isKindOfClass:[NSDictionary class]]) continue;

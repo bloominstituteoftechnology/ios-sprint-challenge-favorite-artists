@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSInteger artistCount;
 
 - (void)saveArtistToFavorites:(Artist *)artist;
-- (void)saveToPersistentStore:(Artist *)artist;
+- (void)saveToPersistentStore;
 - (void)loadFromPersistentStore;
 
 @end

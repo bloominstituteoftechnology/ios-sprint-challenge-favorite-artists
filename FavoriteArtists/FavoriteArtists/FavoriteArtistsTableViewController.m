@@ -9,6 +9,7 @@
 #import "FavoriteArtistsTableViewController.h"
 #import "ArtistController.h"
 #import "ArtistDetailViewController.h"
+#import "Artist.h"
 
 @interface FavoriteArtistsTableViewController ()
 

@@ -70,9 +70,9 @@
 
         ArtistDetailViewController *detailVC = segue.destinationViewController;
 
-            detailVC.title = @"Add New Artist";
+        detailVC.title = @"Add New Artist";
         detailVC.artistController = self.artistController;
-
+        
 
     } else {
         NSLog(@" Detail segue");

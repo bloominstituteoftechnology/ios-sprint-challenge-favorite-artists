@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @class Artist;
 @class ArtistController;
 
-// This .h class is public presentation
 @interface ArtistDetailViewController : UIViewController
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+
 @property (nonatomic) Artist *artist;
 @property ArtistController *artistController;
 

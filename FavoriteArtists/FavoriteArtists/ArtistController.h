@@ -14,11 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistController : NSObject
 
-@property (nonatomic) NSArray<Artist *> *artists;
-//@property (nonatomic) Artist *artist;
-
-//@property (nonatomic) NSURL *artistListURL;
-
 - (nonnull Artist *)artistAtIndex:(NSInteger)index;
 
 @property (nonatomic, readonly) NSInteger artistCount;

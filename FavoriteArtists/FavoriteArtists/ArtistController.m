@@ -23,7 +23,6 @@
 {
     if (self = [super init]) {
         _internalArtists = [[NSMutableArray alloc] init];
-        _artists = _internalArtists;
     }
     return self;
 }

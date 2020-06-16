@@ -9,16 +9,18 @@
 #import "ArtistFetcher.h"
 #import "Artist.h"
 
-//static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=macklemore";
 static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api/v1/json/1";
-
 
 @implementation ArtistFetcher
 
-- (void)fetchArtistWithName:(NSString *)name completionHandler:(nonnull ArtistFetcherCompletionHandler)completionHandler
+- (void)fetchArtistWithName:(NSString *)name
+          completionHandler:(nonnull ArtistFetcherCompletionHandler)completionHandler
 {
-    NSURL *baseURL = [[[NSURL alloc] initWithString:ArtistFetcherURLString] URLByAppendingPathComponent:@"/search.php"];
-    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithURL:baseURL resolvingAgainstBaseURL:YES];
+    NSURL *baseURL = [[[NSURL alloc] initWithString:ArtistFetcherURLString]
+                      URLByAppendingPathComponent:@"/search.php"];
+
+    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithURL:baseURL
+                                                  resolvingAgainstBaseURL:YES];
 
     urlComponents.query = [NSString stringWithFormat:@"s=%@",name.lowercaseString];
 
@@ -39,14 +41,15 @@ static NSString *const ArtistFetcherURLString = @"https://www.theaudiodb.com/api
             return;
         }
         NSError *jsonError;
-        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:0
+                                                                     error:&jsonError];
         if (!dictionary) {
             NSLog(@"Error decoding json %@", jsonError);
 
             dispatch_async(dispatch_get_main_queue(), ^{
                 completionHandler(nil, jsonError);
             });
-
             return;
         }
 

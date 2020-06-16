@@ -60,9 +60,6 @@
 
 - (IBAction)saveTapped:(UIBarButtonItem *)sender {
 
-    // Saved to persistance
-//    [self.artistController saveToPersistentStore:self.artist];
-
     [self.artistController saveArtistToFavorites:self.artist];
 
     [self.navigationController popToRootViewControllerAnimated:YES];

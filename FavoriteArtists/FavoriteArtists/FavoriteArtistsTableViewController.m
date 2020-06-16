@@ -33,13 +33,10 @@
     NSLog(@"Artist count: %ld", (long)self.artistController.artistCount);
     [self.tableView reloadData];
     [self.artistController loadFromPersistentStore];
-
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Load from persistence
     [self.artistController loadFromPersistentStore];
 }
 

@@ -23,6 +23,7 @@
 {
     if (self = [super init]) {
         _internalArtists = [[NSMutableArray alloc] init];
+        _artists = _internalArtists;
     }
     return self;
 }
@@ -52,48 +53,40 @@
 
 - (void)saveToPersistentStore
 {
-
-    NSLog(@"File URL: %@", self.fileURL);
-//    NSMutableArray *arrayOfArtists = [[NSMutableArray alloc] init];
     NSMutableArray *arrayOfArtists = [[NSMutableArray alloc] init];
-
     for (Artist *artist in self.internalArtists) {
         NSDictionary *dictionaryFromArtist = [artist toDictionary];
         [arrayOfArtists addObject:dictionaryFromArtist];
     }
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary: @{@"artists" : arrayOfArtists}];
-    NSLog(@"%@", dictionary);
+
+    NSDictionary *dictionary = @{@"artists" : arrayOfArtists};
     [dictionary writeToURL:self.fileURL atomically:YES];
 }
 
 - (void)loadFromPersistentStore
 {
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//
-//    if ([fileManager fileExistsAtPath:self.fileURL.path]) {
-//        NSLog(@"File Exists");
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    if (![fileManager fileExistsAtPath:self.fileURL.path]) {
+        NSLog(@"File Exists");
+        return;
+    }
 
     NSArray *artistDictionaries = [[[NSDictionary alloc] initWithContentsOfURL:self.fileURL] objectForKey:@"artists"];
-//    [self.internalArtists addObjectsFromArray:artistDictionaries];
-    
+    NSMutableArray *artistArray = [[NSMutableArray alloc] init];
+
     for (NSDictionary *artistDictionary in artistDictionaries) {
         if (![artistDictionary isKindOfClass:[NSDictionary class]]) continue;
 
         Artist *artist = [[Artist alloc] initWithDictionary:artistDictionary];
 
         if (artist) {
-            [self.internalArtists addObject:artist];
+            [artistArray addObject:artist];
         } else {
-            // TODO: One of our "required" fields might be optional and we may need to debug this with real data
             NSLog(@"Unable to parse artist dictionary: %@", artistDictionary);
         }
     }
-//        NSDictionary *artistDictionary = [[NSDictionary alloc] initWithContentsOfURL:self.fileURL];
-//        self.artists = [NSArray arrayWithObject:artistDictionary];
-//        NSLog(@"%@", artistDictionary);
-//    } else {
-//        NSLog(@"File not found");
-//    }
+    self.internalArtists = artistArray;
 }
 
 @end

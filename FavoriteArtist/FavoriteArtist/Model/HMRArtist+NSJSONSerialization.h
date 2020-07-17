@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HMRArtist_NSJSONSerialization : NSObject
 
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+-(NSDictionary *)toDictionary;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

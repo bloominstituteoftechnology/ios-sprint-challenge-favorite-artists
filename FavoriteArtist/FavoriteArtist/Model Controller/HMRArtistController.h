@@ -10,7 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class HMRArtist;
+
+typedef void (^CompletionHandler)(HMRArtist * _Nullable artist, NSError * _Nullable error);
+
 @interface HMRArtistController : NSObject
+
+- (void)fetchArtistName:(NSString *)name
+      completionHandler:(CompletionHandler)completionHandler;
+
+-  (NSMutableArray *)fetchSavedArtist;
 
 @end
 

@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="KU6-Lr-BIr">
             <objects>
-                <tableViewController id="1Vj-ZU-cPz" customClass="DBEFavoritesTableViewController" sceneMemberID="viewController">
+                <tableViewController id="1Vj-ZU-cPz" customClass="DBEFaveArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PeY-IW-Faf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="kfR-0D-No2" kind="show" identifier="ShowDetail" id="izG-DJ-L5Q"/>
+                                    <segue destination="kfR-0D-No2" kind="showDetail" identifier="ShowDetail" id="pcz-Sp-YGc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="dcz-lu-34t">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="K1Q-yd-VsJ">
                             <connections>
-                                <segue destination="kfR-0D-No2" kind="show" identifier="ShowSearchArtist" id="vY6-x8-Rtj"/>
+                                <segue destination="kfR-0D-No2" kind="show" identifier="ShowSearchSegue" id="uNE-HA-TFX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -48,7 +48,7 @@
         <!--Add New Artist-->
         <scene sceneID="WVn-bz-eHH">
             <objects>
-                <viewController id="kfR-0D-No2" customClass="DBESearchViewController" sceneMemberID="viewController">
+                <viewController id="kfR-0D-No2" customClass="DBEShowSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zCL-EW-z9Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,14 +104,16 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="mrE-gS-Gi9"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="9aH-qu-Nd6">
                             <connections>
-                                <action selector="saveButtonTapped:" destination="kfR-0D-No2" id="ryS-hY-LCr"/>
+                                <action selector="saveButtonTapped:" destination="kfR-0D-No2" id="umS-I2-kDv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="biographyTextView" destination="deb-Lv-37I" id="Epo-cI-bKv"/>
-                        <outlet property="saveButton" destination="9aH-qu-Nd6" id="H03-7c-poS"/>
-                        <outlet property="searchBar" destination="Z7i-HF-yTs" id="gWc-a9-rP2"/>
+                        <outlet property="artistLabel" destination="CPQ-HG-yW2" id="5Nj-j8-qmM"/>
+                        <outlet property="biographyTextView" destination="deb-Lv-37I" id="Hna-hu-jht"/>
+                        <outlet property="saveButton" destination="9aH-qu-Nd6" id="psW-Ya-3p5"/>
+                        <outlet property="searchBar" destination="Z7i-HF-yTs" id="XaF-Ky-xLM"/>
+                        <outlet property="yearLabel" destination="AE6-dq-qMn" id="A6J-5A-vZ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rh-Ni-NDq" sceneMemberID="firstResponder"/>
@@ -138,6 +140,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="izG-DJ-L5Q"/>
+        <segue reference="uNE-HA-TFX"/>
     </inferredMetricsTieBreakers>
 </document>

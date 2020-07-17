@@ -17,6 +17,9 @@
 		996CDD5B24C1F76B001CB8B1 /* DBEArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 996CDD5A24C1F76B001CB8B1 /* DBEArtist+NSJSONSerialization.m */; };
 		996CDD5E24C1F8AB001CB8B1 /* DBEArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996CDD5D24C1F8AB001CB8B1 /* DBEArtistController.m */; };
 		996CDD6224C1FC94001CB8B1 /* DBEArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 996CDD6124C1FC94001CB8B1 /* DBEArtistFetcher.m */; };
+		99FCA69D24C1FE7700C2FD83 /* DBEErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FCA69C24C1FE7700C2FD83 /* DBEErrors.m */; };
+		99FCA6A024C1FF3A00C2FD83 /* DBEFaveArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FCA69F24C1FF3A00C2FD83 /* DBEFaveArtistsTableViewController.m */; };
+		99FCA6A424C1FF7300C2FD83 /* DBEShowSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FCA6A324C1FF7300C2FD83 /* DBEShowSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,12 @@
 		996CDD5D24C1F8AB001CB8B1 /* DBEArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBEArtistController.m; sourceTree = "<group>"; };
 		996CDD6024C1FC94001CB8B1 /* DBEArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBEArtistFetcher.h; sourceTree = "<group>"; };
 		996CDD6124C1FC94001CB8B1 /* DBEArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBEArtistFetcher.m; sourceTree = "<group>"; };
+		99FCA69B24C1FE7700C2FD83 /* DBEErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBEErrors.h; sourceTree = "<group>"; };
+		99FCA69C24C1FE7700C2FD83 /* DBEErrors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBEErrors.m; sourceTree = "<group>"; };
+		99FCA69E24C1FF3A00C2FD83 /* DBEFaveArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBEFaveArtistsTableViewController.h; sourceTree = "<group>"; };
+		99FCA69F24C1FF3A00C2FD83 /* DBEFaveArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBEFaveArtistsTableViewController.m; sourceTree = "<group>"; };
+		99FCA6A224C1FF7300C2FD83 /* DBEShowSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBEShowSearchViewController.h; sourceTree = "<group>"; };
+		99FCA6A324C1FF7300C2FD83 /* DBEShowSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBEShowSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,16 +81,15 @@
 			children = (
 				996CDD5824C1F73F001CB8B1 /* Model */,
 				996CDD5F24C1F8AF001CB8B1 /* Model Controller */,
+				99FCA69924C1FE4000C2FD83 /* Networking */,
+				99FCA6A124C1FF4400C2FD83 /* View Controllors */,
 				996CDD5424C1F583001CB8B1 /* Resources */,
+				99FCA69A24C1FE6100C2FD83 /* Helpers */,
 				996CDD4424C1F547001CB8B1 /* Main.storyboard */,
 				996CDD4724C1F548001CB8B1 /* Assets.xcassets */,
 				996CDD4924C1F548001CB8B1 /* LaunchScreen.storyboard */,
 				996CDD4C24C1F548001CB8B1 /* Info.plist */,
 				996CDD4D24C1F548001CB8B1 /* main.m */,
-				996CDD5924C1F76B001CB8B1 /* DBEArtist+NSJSONSerialization.h */,
-				996CDD5A24C1F76B001CB8B1 /* DBEArtist+NSJSONSerialization.m */,
-				996CDD6024C1FC94001CB8B1 /* DBEArtistFetcher.h */,
-				996CDD6124C1FC94001CB8B1 /* DBEArtistFetcher.m */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -113,6 +121,37 @@
 				996CDD5D24C1F8AB001CB8B1 /* DBEArtistController.m */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		99FCA69924C1FE4000C2FD83 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				996CDD5924C1F76B001CB8B1 /* DBEArtist+NSJSONSerialization.h */,
+				996CDD5A24C1F76B001CB8B1 /* DBEArtist+NSJSONSerialization.m */,
+				996CDD6024C1FC94001CB8B1 /* DBEArtistFetcher.h */,
+				996CDD6124C1FC94001CB8B1 /* DBEArtistFetcher.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		99FCA69A24C1FE6100C2FD83 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				99FCA69B24C1FE7700C2FD83 /* DBEErrors.h */,
+				99FCA69C24C1FE7700C2FD83 /* DBEErrors.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		99FCA6A124C1FF4400C2FD83 /* View Controllors */ = {
+			isa = PBXGroup;
+			children = (
+				99FCA69E24C1FF3A00C2FD83 /* DBEFaveArtistsTableViewController.h */,
+				99FCA69F24C1FF3A00C2FD83 /* DBEFaveArtistsTableViewController.m */,
+				99FCA6A224C1FF7300C2FD83 /* DBEShowSearchViewController.h */,
+				99FCA6A324C1FF7300C2FD83 /* DBEShowSearchViewController.m */,
+			);
+			path = "View Controllors";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +231,9 @@
 				996CDD4E24C1F548001CB8B1 /* main.m in Sources */,
 				996CDD5B24C1F76B001CB8B1 /* DBEArtist+NSJSONSerialization.m in Sources */,
 				996CDD6224C1FC94001CB8B1 /* DBEArtistFetcher.m in Sources */,
+				99FCA6A424C1FF7300C2FD83 /* DBEShowSearchViewController.m in Sources */,
+				99FCA69D24C1FE7700C2FD83 /* DBEErrors.m in Sources */,
+				99FCA6A024C1FF3A00C2FD83 /* DBEFaveArtistsTableViewController.m in Sources */,
 				996CDD4024C1F547001CB8B1 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,10 @@
 //
 
 #import "CAMArtistController.h"
+#import "CAMArtist.h"
 
 @implementation CAMArtistController
+
+
 
 @end

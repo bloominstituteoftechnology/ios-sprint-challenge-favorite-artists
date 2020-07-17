@@ -10,8 +10,19 @@
 #import "CAMArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
+typedef void (^artistCompletion) (CAMArtist *, NSError *);
 
 @interface CAMArtistController : NSObject
+
+@property (readonly, nonatomic) NSArray *favoriteArtists;
+@property (readonly, nonatomic) CAMArtist *currentArtist;
+
+-(void)loadArtists;
+-(void)saveArtist:(CAMArtist *)artist;
+-(void)deleteArtist:(CAMArtist *)artist;
+-(void)searchForName:(NSString *)name;
+
+
 
 
 @end

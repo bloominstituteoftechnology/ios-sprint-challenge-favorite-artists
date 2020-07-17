@@ -7,10 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EJSFavoriteArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EJSFavoriteArtist_NSJSONSerialization : NSObject
+@interface EJSFavoriteArtist (NSJSONSerialization)
+
+
+/// To decode from JSON
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+/// To decode from documents
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
+/// Used to save to documents
+- (NSDictionary *)toDictionary;
+
 
 @end
 

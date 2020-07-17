@@ -21,10 +21,8 @@ typedef void (^artistCompletion) (CAMArtist *, NSError *);
 -(void)loadArtists;
 -(void)saveArtist:(CAMArtist *)artist;
 -(void)deleteArtist:(CAMArtist *)artist;
--(void)searchForName:(NSString *)name;
-
-
-
+-(void)searchForName:(NSString *)name
+          completion:(artistCompletion)completion;
 
 @end
 

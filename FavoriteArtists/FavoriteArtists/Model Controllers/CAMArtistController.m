@@ -66,8 +66,49 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 }
 
 -(void)searchForName:(NSString *)name
+          completion:(nonnull artistCompletion)completion
 {
+    NSURL *baseURL = [NSURL URLWithString: baseURLString];
+    NSURLComponents *components = [NSURLComponents componentsWithURL: baseURL
+                                             resolvingAgainstBaseURL: YES];
+    NSURLQueryItem *searchTerm = [NSURLQueryItem queryItemWithName: @"s"
+                                                             value: name];
+    [components setQueryItems: @[searchTerm]];
+    NSURL *searchURL = [components URL];
     
+    
+    [[[NSURLSession sharedSession] dataTaskWithURL: searchURL completionHandler:^(NSData * _Nullable data,
+                                                                                  NSURLResponse * _Nullable response,
+                                                                                  NSError * _Nullable error)
+      {
+        if (error) {
+            completion(nil, error);
+            return;
+        }
+        
+        NSError *dataError = nil;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData: data
+                                                             options: 0
+                                                               error: &dataError];
+        if (dataError) {
+            completion(nil, dataError);
+            return;
+        }
+        
+        if (![json isKindOfClass: [NSDictionary class]]) {
+            NSLog(@"Unexpected, bad, or missing data.");
+            completion(nil, [[NSError alloc] init]);
+            return;
+        }
+        
+        if (json[@"artists"] != [NSNull null]) {
+            NSArray *artistsArray = json[@"artists"];
+            NSDictionary *artistsDictionary = artistsArray.firstObject;
+            CAMArtist *artist = [[CAMArtist alloc] initWithDictionary: artistsDictionary];
+            
+            completion(artist, nil);
+        }
+    }] resume];
 }
 
 

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DBEArtist (NSJSONSerialiazation)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+//- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 - (NSDictionary *)toDictionary;
 

@@ -11,15 +11,15 @@
 
 @implementation DBEArtist (NSJSONSerialiazation)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
-    if (self) {
-        self.name = [dictionary objectForKey:@"strArtist"];
-        self.biography = [dictionary objectForKey:@"strBiographyEN"];
-        self.year = [[dictionary objectForKey:@"intFormedYear"] intValue];
-    }
-    return self;
-}
+//- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+//    self = [super init];
+//    if (self) {
+//        self.name = [dictionary objectForKey:@"strArtist"];
+//        self.biography = [dictionary objectForKey:@"strBiographyEN"];
+//        self.year = [[dictionary objectForKey:@"intFormedYear"] intValue];
+//    }
+//    return self;
+//}
 
 - (NSDictionary *)toDictionary {
     NSMutableDictionary *artistDictionary = [NSMutableDictionary dictionary];

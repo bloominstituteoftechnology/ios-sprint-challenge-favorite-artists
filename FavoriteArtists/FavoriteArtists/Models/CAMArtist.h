@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CAMArtist : NSObject
 
-@property NSString *name;
-@property NSString *bio;
-@property int founded;
+@property (readonly, nonatomic) NSString *name;
+@property (readonly, nonatomic) NSString *bio;
+@property (readonly, nonatomic) int founded;
 
 - (instancetype)initWithName:(NSString *)name
                          bio:(NSString *)bio

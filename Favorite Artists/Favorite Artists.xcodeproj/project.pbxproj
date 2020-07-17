@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BEF40A5624C1F6140068E983 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A5524C1F6140068E983 /* AppDelegate.m */; };
 		BEF40A5924C1F6140068E983 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A5824C1F6140068E983 /* SceneDelegate.m */; };
-		BEF40A5C24C1F6140068E983 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A5B24C1F6140068E983 /* ViewController.m */; };
 		BEF40A5F24C1F6140068E983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF40A5D24C1F6140068E983 /* Main.storyboard */; };
 		BEF40A6224C1F6140068E983 /* Favorite_Artists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A6024C1F6140068E983 /* Favorite_Artists.xcdatamodeld */; };
 		BEF40A6424C1F6150068E983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF40A6324C1F6150068E983 /* Assets.xcassets */; };
@@ -19,6 +18,9 @@
 		BEF40A7F24C1F6160068E983 /* Favorite_ArtistsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A7E24C1F6160068E983 /* Favorite_ArtistsUITests.m */; };
 		BEF40A9124C1F6990068E983 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A9024C1F6990068E983 /* Artist.m */; };
 		BEF40A9424C1F94E0068E983 /* Artist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A9324C1F94E0068E983 /* Artist+NSJSONSerialization.m */; };
+		BEF40A9824C1FE570068E983 /* ArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A9724C1FE570068E983 /* ArtistsViewController.m */; };
+		BEF40A9B24C202310068E983 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A9A24C202310068E983 /* ArtistDetailViewController.m */; };
+		BEF40A9F24C207880068E983 /* ArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A9E24C207880068E983 /* ArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +46,6 @@
 		BEF40A5524C1F6140068E983 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BEF40A5724C1F6140068E983 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		BEF40A5824C1F6140068E983 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		BEF40A5A24C1F6140068E983 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BEF40A5B24C1F6140068E983 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BEF40A5E24C1F6140068E983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEF40A6124C1F6140068E983 /* Favorite_Artists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorite_Artists.xcdatamodel; sourceTree = "<group>"; };
 		BEF40A6324C1F6150068E983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +63,12 @@
 		BEF40A9024C1F6990068E983 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 		BEF40A9224C1F94E0068E983 /* Artist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		BEF40A9324C1F94E0068E983 /* Artist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		BEF40A9624C1FE570068E983 /* ArtistsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistsViewController.h; sourceTree = "<group>"; };
+		BEF40A9724C1FE570068E983 /* ArtistsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsViewController.m; sourceTree = "<group>"; };
+		BEF40A9924C202310068E983 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		BEF40A9A24C202310068E983 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		BEF40A9D24C207880068E983 /* ArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistController.h; sourceTree = "<group>"; };
+		BEF40A9E24C207880068E983 /* ArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,14 +119,14 @@
 		BEF40A5324C1F6140068E983 /* Favorite Artists */ = {
 			isa = PBXGroup;
 			children = (
+				BEF40A9C24C207700068E983 /* Controllers */,
+				BEF40A9524C1FE100068E983 /* View Controllers */,
 				BEF40A8E24C1F6740068E983 /* Model */,
 				BEF40A8C24C1F6350068E983 /* Lambda */,
 				BEF40A5424C1F6140068E983 /* AppDelegate.h */,
 				BEF40A5524C1F6140068E983 /* AppDelegate.m */,
 				BEF40A5724C1F6140068E983 /* SceneDelegate.h */,
 				BEF40A5824C1F6140068E983 /* SceneDelegate.m */,
-				BEF40A5A24C1F6140068E983 /* ViewController.h */,
-				BEF40A5B24C1F6140068E983 /* ViewController.m */,
 				BEF40A5D24C1F6140068E983 /* Main.storyboard */,
 				BEF40A6324C1F6150068E983 /* Assets.xcassets */,
 				BEF40A6524C1F6150068E983 /* LaunchScreen.storyboard */,
@@ -166,6 +172,26 @@
 				BEF40A9324C1F94E0068E983 /* Artist+NSJSONSerialization.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BEF40A9524C1FE100068E983 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEF40A9624C1FE570068E983 /* ArtistsViewController.h */,
+				BEF40A9724C1FE570068E983 /* ArtistsViewController.m */,
+				BEF40A9924C202310068E983 /* ArtistDetailViewController.h */,
+				BEF40A9A24C202310068E983 /* ArtistDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BEF40A9C24C207700068E983 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEF40A9D24C207880068E983 /* ArtistController.h */,
+				BEF40A9E24C207880068E983 /* ArtistController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,12 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF40A9B24C202310068E983 /* ArtistDetailViewController.m in Sources */,
 				BEF40A6A24C1F6150068E983 /* main.m in Sources */,
-				BEF40A5C24C1F6140068E983 /* ViewController.m in Sources */,
 				BEF40A5624C1F6140068E983 /* AppDelegate.m in Sources */,
 				BEF40A9424C1F94E0068E983 /* Artist+NSJSONSerialization.m in Sources */,
 				BEF40A6224C1F6140068E983 /* Favorite_Artists.xcdatamodeld in Sources */,
+				BEF40A9F24C207880068E983 /* ArtistController.m in Sources */,
 				BEF40A9124C1F6990068E983 /* Artist.m in Sources */,
+				BEF40A9824C1FE570068E983 /* ArtistsViewController.m in Sources */,
 				BEF40A5924C1F6140068E983 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

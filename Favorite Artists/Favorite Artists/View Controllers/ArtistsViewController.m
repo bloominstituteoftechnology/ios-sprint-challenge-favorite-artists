@@ -7,8 +7,12 @@
 //
 
 #import "ArtistsViewController.h"
+#import "Artist.h"
 
-@interface ArtistsViewController ()
+@interface ArtistsViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) NSArray<Artist *> *artistsArray;
 
 @end
 
@@ -16,17 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.tableView.delegate = self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"viewCell"
+                                                            forIndexPath:indexPath];
+    
+    Artist *selectedArtist = self.artistsArray[indexPath.row];
+    cell.textLabel.text = selectedArtist.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", selectedArtist.formed];
+    
+    return cell;
 }
-*/
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.artistsArray count];
+}
 
 @end

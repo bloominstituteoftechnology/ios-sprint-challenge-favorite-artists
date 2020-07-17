@@ -33,6 +33,7 @@
     self.controller = [ArtistController alloc];
     
     if (self.artist != nil) {
+        self.searchBar.hidden = YES;
         [self updateViews];
     }
 }
@@ -61,13 +62,13 @@
         [data writeToURL:extension
               atomically:YES];
     }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 // MARK: - Utility
 
 - (void)updateViews {
-    self.searchBar.hidden = YES;
-    
     self.title = self.artist.name;
     
     self.nameLabel.text = self.artist.name;
@@ -81,9 +82,9 @@
     [self search];
 }
 
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
-    [self search];
-}
+//- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+//    [self search];
+//}
 
 - (void)search {
 
@@ -106,6 +107,8 @@
         }];
         
     }
+    
+    [self.searchBar resignFirstResponder];
 }
 
 @end

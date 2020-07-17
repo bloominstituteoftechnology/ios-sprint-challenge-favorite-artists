@@ -7,6 +7,7 @@
 //
 
 #import "AddArtistViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface AddArtistViewController ()
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -14,7 +15,7 @@
 
 @end
 
-@implementation AddArtistViewController
+@implementation AddArtistViewController (UISearchBarDataSource)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +24,7 @@
 
 - (IBAction)saveArtist:(id)sender {
 }
+
 
 
 /*

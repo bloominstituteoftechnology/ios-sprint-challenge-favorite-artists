@@ -23,4 +23,16 @@
     return self;
 }
 
+// TODO: Write dictionary init
+
 @end
+
+
+/*
+ init(name: String, bio: String, founded: Int) {
+    super.init()
+    self.name = name
+    self.bio = bio
+    self.founded = founded
+ }
+ */

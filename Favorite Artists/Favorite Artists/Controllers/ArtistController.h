@@ -20,6 +20,7 @@ typedef void (^ArtistFetcherCompletion)(Artist * _Nullable artist, NSError * _Nu
                 completion:(ArtistFetcherCompletion)completion;
 
 - (NSMutableArray *)loadSavedArtists;
+- (void)save:(Artist *)artist;
 
 @end
 

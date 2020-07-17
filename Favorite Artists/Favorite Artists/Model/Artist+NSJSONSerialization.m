@@ -11,23 +11,16 @@
 @implementation Artist (Artist_NSJSONSerialization)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    NSArray *response = dictionary[@"artists"];
     
-    if (!response) {
-        return nil;
-    }
-    
-    NSDictionary *index = response.firstObject;
-    
-    NSString *name = index[@"strArtist"];
+    NSString *name = dictionary[@"strArtist"];
     
     if (!name) {
         return nil;
     }
     
-    NSString *bio = index[@"strBiographyEN"];
+    NSString *bio = dictionary[@"strBiographyEN"];
     
-    NSNumber *mapIndex = index[@"intFormedYear"];
+    NSNumber *mapIndex = dictionary[@"intFormedYear"];
     int formed = [mapIndex intValue];
     
     self = [self initWithName:name
@@ -38,10 +31,12 @@
 }
 
 - (NSDictionary *)toDictionary {
+
     
     NSDictionary *dict = @{@"strArtist": self.name,
-                           @"intFormedYear": [[NSNumber alloc] initWithInt:self.formed],
-                           @"strBiographyEN": self.bio };
+                                  @"intFormedYear": [[NSNumber alloc] initWithInt:self.formed],
+                                  @"strBiographyEN": self.bio
+    };
     
     return dict;
 }

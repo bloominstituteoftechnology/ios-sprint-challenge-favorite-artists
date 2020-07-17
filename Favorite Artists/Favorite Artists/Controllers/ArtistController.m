@@ -57,7 +57,9 @@ static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
             return;
         }
         
-        Artist *results = [[Artist alloc] initWithDictionary:jsonDictionary];
+        NSDictionary *dict = [jsonDictionary[@"artists"] firstObject];
+        
+        Artist *results = [[Artist alloc] initWithDictionary:dict];
         completion(results, nil);
         
     }];
@@ -66,34 +68,45 @@ static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
 }
 
 - (NSMutableArray *)loadSavedArtists {
-    NSMutableArray *artistsArray = [NSMutableArray alloc];
+    NSMutableArray *artistsArray = [[NSMutableArray alloc] init];
     
-    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                                NSUserDomainMask,
-                                                                YES);
+    NSURL *documentDir = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
     
-    NSString *index = [pathArray objectAtIndex:0];
+    NSURL *documentsURL = [documentDir URLByAppendingPathComponent:@"artists.json"];
     
-    NSArray *savedArray = [[NSFileManager defaultManager]
-                         subpathsOfDirectoryAtPath:index
-                         error:nil];
+    NSData *data = [NSData dataWithContentsOfURL:documentsURL];
     
-    for (NSString *artist in savedArray) {
-        NSURL *filepath = [NSURL fileURLWithPath:
-                           [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", artist]];
-        
-        NSData *data = [[NSData alloc] initWithContentsOfURL:filepath];
-        
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data
-                                                             options:0
-                                                               error:nil];
-        
-        Artist *artist = [[Artist alloc] initWithDictionary:dict];
-        
-        [artistsArray addObject:artist];
+    if (!data) {
+        return artistsArray;
     }
     
+    NSArray *artists = [NSJSONSerialization JSONObjectWithData:data
+                                                       options:0
+                                                         error:nil];
+    
+    for (NSDictionary *dict in artists) {
+        [artistsArray addObject:[[Artist alloc] initWithDictionary:dict]];
+    }
+    
+    
     return artistsArray;
+}
+
+- (void)save:(Artist *)artist {
+    NSMutableArray *locallySaved = [self loadSavedArtists];
+    
+    [locallySaved addObject:[artist toDictionary]];
+    
+    NSURL *documentDir = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    
+    NSURL *documentsURL = [documentDir URLByAppendingPathComponent:@"artists.json"];
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:locallySaved
+                                                   options: 0
+                                                     error: nil];
+    
+    [data writeToURL:documentsURL
+          atomically:YES];
 }
 
 @end

@@ -40,27 +40,14 @@
 
 // MARK: - IBAction
 - (IBAction)saveButtonPressed:(UIBarButtonItem *)sender {
+    NSLog(@"Save button pressed");
     [self save];
 }
 
 // MARK: - Persistence
 - (void) save {
     if (self.artist) {
-        NSData *data = [NSJSONSerialization dataWithJSONObject:[self.artist toDictionary]
-                                                       options:0
-                                                         error:nil];
-        
-        NSURL *directoryUrl = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
-                                                                     inDomain:NSUserDomainMask
-                                                            appropriateForURL:nil
-                                                                        create:YES
-                                                                        error:nil];
-        
-        NSURL *extension = [[directoryUrl URLByAppendingPathComponent:self.artist.name]
-                            URLByAppendingPathExtension: @"json"];
-        
-        [data writeToURL:extension
-              atomically:YES];
+        [self.controller save:self.artist];
     }
     
     [self.navigationController popViewControllerAnimated:YES];

@@ -14,7 +14,7 @@
 
 @property (nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSMutableArray<Artist *> *artistsArray;
-@property (nonatomic) ArtistController *controller;
+@property (nonatomic, strong) ArtistController *controller;
 
 @end
 
@@ -24,10 +24,16 @@
     [super viewDidLoad];
     
     self.controller = [ArtistController alloc];
-    self.artistsArray = [self.controller loadSavedArtists];
-
-
+    
     self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.artistsArray = [self.controller loadSavedArtists];
+    [self.tableView reloadData];
 }
 
 - (UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

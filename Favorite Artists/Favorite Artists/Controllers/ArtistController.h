@@ -19,6 +19,8 @@ typedef void (^ArtistFetcherCompletion)(Artist * _Nullable artist, NSError * _Nu
 - (void)fetchArtistsByName:(NSString *)name
                 completion:(ArtistFetcherCompletion)completion;
 
+- (NSMutableArray *)loadSavedArtists;
+
 @end
 
 NS_ASSUME_NONNULL_END

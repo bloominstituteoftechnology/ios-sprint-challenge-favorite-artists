@@ -8,11 +8,13 @@
 
 #import "ArtistsViewController.h"
 #import "Artist.h"
+#import "ArtistController.h"
 
 @interface ArtistsViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) NSArray<Artist *> *artistsArray;
+@property (nonatomic) NSMutableArray<Artist *> *artistsArray;
+@property (nonatomic) ArtistController *controller;
 
 @end
 
@@ -20,6 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.controller = [ArtistController alloc];
+    self.artistsArray = [self.controller loadSavedArtists];
+
 
     self.tableView.delegate = self;
 }

@@ -65,4 +65,35 @@ static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
     [dataTask resume];
 }
 
+- (NSMutableArray *)loadSavedArtists {
+    NSMutableArray *artistsArray = [NSMutableArray alloc];
+    
+    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                NSUserDomainMask,
+                                                                YES);
+    
+    NSString *index = [pathArray objectAtIndex:0];
+    
+    NSArray *savedArray = [[NSFileManager defaultManager]
+                         subpathsOfDirectoryAtPath:index
+                         error:nil];
+    
+    for (NSString *artist in savedArray) {
+        NSURL *filepath = [NSURL fileURLWithPath:
+                           [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", artist]];
+        
+        NSData *data = [[NSData alloc] initWithContentsOfURL:filepath];
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data
+                                                             options:0
+                                                               error:nil];
+        
+        Artist *artist = [[Artist alloc] initWithDictionary:dict];
+        
+        [artistsArray addObject:artist];
+    }
+    
+    return artistsArray;
+}
+
 @end

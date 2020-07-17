@@ -17,7 +17,6 @@
 		5E2E4DE624C1FEBE002B00B9 /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DE524C1FEBE002B00B9 /* AddArtistViewController.m */; };
 		5E2E4DE924C1FED9002B00B9 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DE824C1FED9002B00B9 /* ArtistDetailViewController.m */; };
 		5E2E4DEE24C20022002B00B9 /* CAMArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DED24C20022002B00B9 /* CAMArtist.m */; };
-		5E2E4DF124C202D5002B00B9 /* CAMSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DF024C202D5002B00B9 /* CAMSearchController.m */; };
 		5E2E4DF624C20AF3002B00B9 /* CAMArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DF524C20AF3002B00B9 /* CAMArtistController.m */; };
 		5E2E4DFB24C21BC2002B00B9 /* CAMArtist+Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DFA24C21BC2002B00B9 /* CAMArtist+Serialization.m */; };
 		5E2E4DFE24C226C9002B00B9 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E2E4DFD24C226C9002B00B9 /* Artist.json */; };
@@ -42,8 +41,6 @@
 		5E2E4DE824C1FED9002B00B9 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 		5E2E4DEC24C20022002B00B9 /* CAMArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMArtist.h; sourceTree = "<group>"; };
 		5E2E4DED24C20022002B00B9 /* CAMArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMArtist.m; sourceTree = "<group>"; };
-		5E2E4DEF24C202D5002B00B9 /* CAMSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMSearchController.h; sourceTree = "<group>"; };
-		5E2E4DF024C202D5002B00B9 /* CAMSearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMSearchController.m; sourceTree = "<group>"; };
 		5E2E4DF424C20AF3002B00B9 /* CAMArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMArtistController.h; sourceTree = "<group>"; };
 		5E2E4DF524C20AF3002B00B9 /* CAMArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMArtistController.m; sourceTree = "<group>"; };
 		5E2E4DF724C21B85002B00B9 /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
@@ -167,18 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				5E2E4DF824C21B8B002B00B9 /* Helpers */,
-				5E2E4DF324C20AC1002B00B9 /* Networking */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		5E2E4DF324C20AC1002B00B9 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				5E2E4DEF24C202D5002B00B9 /* CAMSearchController.h */,
-				5E2E4DF024C202D5002B00B9 /* CAMSearchController.m */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		5E2E4DF824C21B8B002B00B9 /* Helpers */ = {
@@ -276,7 +263,6 @@
 				5E2E4DC524C1F92D002B00B9 /* AppDelegate.m in Sources */,
 				5E2E4DF624C20AF3002B00B9 /* CAMArtistController.m in Sources */,
 				5E2E4DEE24C20022002B00B9 /* CAMArtist.m in Sources */,
-				5E2E4DF124C202D5002B00B9 /* CAMSearchController.m in Sources */,
 				5E2E4DE924C1FED9002B00B9 /* ArtistDetailViewController.m in Sources */,
 				5E2E4DE624C1FEBE002B00B9 /* AddArtistViewController.m in Sources */,
 				5E2E4DD624C1F934002B00B9 /* main.m in Sources */,

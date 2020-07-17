@@ -23,8 +23,6 @@
     return self;
 }
 
-// TODO: Write dictionary init
-
 @end
 
 

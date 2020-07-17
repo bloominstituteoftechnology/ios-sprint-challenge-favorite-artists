@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CAMArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CAMArtist_Serialization : NSObject
+@interface CAMArtist (Serialization)
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)createDictionary;
 
 @end
 

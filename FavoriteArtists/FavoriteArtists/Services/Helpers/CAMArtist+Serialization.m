@@ -7,7 +7,29 @@
 //
 
 #import "CAMArtist+Serialization.h"
+#import "CAMArtist.h"
 
-@implementation CAMArtist_Serialization
+@implementation CAMArtist (Serialization)
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    NSString *name = dictionary[@"strArtist"];
+    NSString *bio = dictionary[@"strBiographyEN"];
+    NSString *foundedString = dictionary[@"intFormedYear"];
+    int founded = [foundedString intValue];
+    
+    return [self initWithName: name
+                          bio: bio
+                      founded: founded];
+}
+
+- (NSDictionary *)createDictionary
+{
+    NSNumber *foundedObject = [NSNumber numberWithInt: self.founded];
+    NSDictionary *artistData = @{ @"name": self.name,
+                                  @"bio": self.bio,
+                                  @"founded": foundedObject
+    };
+    return artistData;
+}
 @end

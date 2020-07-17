@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithartist:(NSString *)artist
                     yearFormed:(int)yearFormed
-                   biography:(NSString *)biography;
+                     biography:(NSString *)biography;
 
 @end
 

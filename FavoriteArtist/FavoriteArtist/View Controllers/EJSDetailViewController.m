@@ -31,13 +31,13 @@
 - (IBAction)saveTapped:(id)sender {
     
     if (!_favoriteArtist) {
-         self.title = @"Why would you do that?";
-         return;
-     }
-     
-     [self.favoriteArtistController addArtistWithArtist:_favoriteArtist.artist year:_favoriteArtist.yearFormed bio:_favoriteArtist.biography];
-     
-     [self.navigationController popViewControllerAnimated:YES];
+        self.title = @"Why would you do that?";
+        return;
+    }
+    
+    [self.favoriteArtistController addArtistWithArtist:_favoriteArtist.artist year:_favoriteArtist.yearFormed bio:_favoriteArtist.biography];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -62,12 +62,12 @@
             return;
         }
         
-       dispatch_async(dispatch_get_main_queue(), ^{
-           self.favoriteArtist = favoriteArtist;
-           [self updateViews];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.favoriteArtist = favoriteArtist;
+            [self updateViews];
         });
     }];
-
+    
 }
 
 // didSet, called when self.favoriteArtist is set

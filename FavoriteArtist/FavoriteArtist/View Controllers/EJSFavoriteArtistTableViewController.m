@@ -56,7 +56,7 @@
     else {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", favoriteArtist.yearFormed];
     }
-        
+    
     return cell;
 }
 

@@ -12,7 +12,7 @@
 
 - (instancetype)initWithartist:(NSString *)artist
                     yearFormed:(int)yearFormed
-                   biography :(NSString *)biography {
+                    biography :(NSString *)biography {
     
     if (self = [super init]) {
         

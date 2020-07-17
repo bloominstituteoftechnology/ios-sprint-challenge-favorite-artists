@@ -12,7 +12,7 @@
 
 // Only used for decoding from JSON. Decodes from a dicitionary that has a key, which holds an array of dictionaries
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-
+    
     NSArray *artistArray = dictionary[@"artists"];
     
     if (![artistArray isKindOfClass:[NSArray class]]) {
@@ -50,7 +50,7 @@
     
     self = [[EJSFavoriteArtist alloc] initWithartist:artist
                                           yearFormed:yearFormed.intValue
-                                         biography:biography];
+                                           biography:biography];
     
     return self;
 }
@@ -63,7 +63,7 @@
         @"intFormedYear": [NSNumber numberWithInt:self.yearFormed],
         @"strBiographyEN": self.biography
     };
- 
+    
     return dictionary;
 }
 

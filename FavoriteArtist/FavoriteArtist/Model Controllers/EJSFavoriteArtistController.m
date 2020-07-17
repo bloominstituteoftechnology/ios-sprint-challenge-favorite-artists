@@ -26,9 +26,9 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:baseURLString];
     
     urlComponents.queryItems = @[
-                                [NSURLQueryItem queryItemWithName:@"s" value:artist]
-                                ];
-
+        [NSURLQueryItem queryItemWithName:@"s" value:artist]
+    ];
+    
     NSURL *url = urlComponents.URL;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSLog(@"request = %@", request);
@@ -99,7 +99,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     
     EJSFavoriteArtist *newArtist = [[EJSFavoriteArtist alloc] initWithartist:artist
                                                                   yearFormed:year
-                                                                 biography:bio];
+                                                                   biography:bio];
     [self.privateArtists addObject:newArtist];
     [self saveToPersistentStore];
 }

@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		B4DCF75A24C1F955005E26C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF75924C1F955005E26C0 /* AppDelegate.m */; };
 		B4DCF75D24C1F955005E26C0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF75C24C1F955005E26C0 /* SceneDelegate.m */; };
-		B4DCF76024C1F955005E26C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF75F24C1F955005E26C0 /* ViewController.m */; };
 		B4DCF76324C1F955005E26C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4DCF76124C1F955005E26C0 /* Main.storyboard */; };
 		B4DCF76524C1F95A005E26C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4DCF76424C1F95A005E26C0 /* Assets.xcassets */; };
 		B4DCF76824C1F95A005E26C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4DCF76624C1F95A005E26C0 /* LaunchScreen.storyboard */; };
 		B4DCF76B24C1F95A005E26C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF76A24C1F95A005E26C0 /* main.m */; };
+		B4DCF77A24C1FD66005E26C0 /* NNEArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF77924C1FD66005E26C0 /* NNEArtistTableViewController.m */; };
+		B4DCF77D24C1FD77005E26C0 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF77C24C1FD77005E26C0 /* ArtistDetailViewController.m */; };
+		B4DCF78024C1FDBF005E26C0 /* NNEArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF77F24C1FDBF005E26C0 /* NNEArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +24,17 @@
 		B4DCF75924C1F955005E26C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B4DCF75B24C1F955005E26C0 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		B4DCF75C24C1F955005E26C0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		B4DCF75E24C1F955005E26C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B4DCF75F24C1F955005E26C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B4DCF76224C1F955005E26C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4DCF76424C1F95A005E26C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4DCF76724C1F95A005E26C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4DCF76924C1F95A005E26C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4DCF76A24C1F95A005E26C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4DCF77824C1FD66005E26C0 /* NNEArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNEArtistTableViewController.h; sourceTree = "<group>"; };
+		B4DCF77924C1FD66005E26C0 /* NNEArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNEArtistTableViewController.m; sourceTree = "<group>"; };
+		B4DCF77B24C1FD77005E26C0 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		B4DCF77C24C1FD77005E26C0 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		B4DCF77E24C1FDBF005E26C0 /* NNEArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNEArtist.h; sourceTree = "<group>"; };
+		B4DCF77F24C1FDBF005E26C0 /* NNEArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNEArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +67,39 @@
 		B4DCF75724C1F955005E26C0 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				B4DCF76A24C1F95A005E26C0 /* main.m */,
 				B4DCF75824C1F955005E26C0 /* AppDelegate.h */,
 				B4DCF75924C1F955005E26C0 /* AppDelegate.m */,
 				B4DCF75B24C1F955005E26C0 /* SceneDelegate.h */,
 				B4DCF75C24C1F955005E26C0 /* SceneDelegate.m */,
-				B4DCF75E24C1F955005E26C0 /* ViewController.h */,
-				B4DCF75F24C1F955005E26C0 /* ViewController.m */,
 				B4DCF76124C1F955005E26C0 /* Main.storyboard */,
+				B4DCF78124C1FDC3005E26C0 /* Model */,
+				B4DCF77724C1FC9E005E26C0 /* View Controllers */,
 				B4DCF76424C1F95A005E26C0 /* Assets.xcassets */,
 				B4DCF76624C1F95A005E26C0 /* LaunchScreen.storyboard */,
 				B4DCF76924C1F95A005E26C0 /* Info.plist */,
-				B4DCF76A24C1F95A005E26C0 /* main.m */,
 			);
 			path = FavoriteArtists;
+			sourceTree = "<group>";
+		};
+		B4DCF77724C1FC9E005E26C0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4DCF77824C1FD66005E26C0 /* NNEArtistTableViewController.h */,
+				B4DCF77924C1FD66005E26C0 /* NNEArtistTableViewController.m */,
+				B4DCF77B24C1FD77005E26C0 /* ArtistDetailViewController.h */,
+				B4DCF77C24C1FD77005E26C0 /* ArtistDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B4DCF78124C1FDC3005E26C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4DCF77E24C1FDBF005E26C0 /* NNEArtist.h */,
+				B4DCF77F24C1FDBF005E26C0 /* NNEArtist.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DCF76024C1F955005E26C0 /* ViewController.m in Sources */,
+				B4DCF77D24C1FD77005E26C0 /* ArtistDetailViewController.m in Sources */,
+				B4DCF77A24C1FD66005E26C0 /* NNEArtistTableViewController.m in Sources */,
 				B4DCF75A24C1F955005E26C0 /* AppDelegate.m in Sources */,
 				B4DCF76B24C1F95A005E26C0 /* main.m in Sources */,
+				B4DCF78024C1FDBF005E26C0 /* NNEArtist.m in Sources */,
 				B4DCF75D24C1F955005E26C0 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

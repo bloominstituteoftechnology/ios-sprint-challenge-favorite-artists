@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ArtistDetailViewController.h
 //  FavoriteArtists
 //
 //  Created by Nonye on 7/17/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface ArtistDetailViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

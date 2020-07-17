@@ -111,7 +111,11 @@
                         <viewLayoutGuide key="safeArea" id="L6K-Mj-zg3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="dSU-1m-f77">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Mnu-Sg-4hK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Mnu-Sg-4hK">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="E8T-xG-mKm" id="4Wl-nk-tYb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OrQ-P1-IDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

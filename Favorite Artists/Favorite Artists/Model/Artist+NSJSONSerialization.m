@@ -37,4 +37,13 @@
     return self;
 }
 
+- (NSDictionary *)toDictionary {
+    
+    NSDictionary *dict = @{@"strArtist": self.name,
+                           @"intFormedYear": [[NSNumber alloc] initWithInt:self.formed],
+                           @"strBiographyEN": self.bio };
+    
+    return dict;
+}
+
 @end

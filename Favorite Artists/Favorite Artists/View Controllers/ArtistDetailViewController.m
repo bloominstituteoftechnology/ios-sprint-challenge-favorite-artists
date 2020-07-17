@@ -8,6 +8,8 @@
 
 #import "ArtistDetailViewController.h"
 #import "Artist.h"
+#import "ArtistController.h"
+#import "Artist+NSJSONSerialization.h"
 
 @interface ArtistDetailViewController () <UISearchBarDelegate>
 
@@ -17,6 +19,8 @@
 @property (nonatomic) UILabel IBOutlet *nameLabel;
 @property (nonatomic) UILabel IBOutlet *formedLabel;
 @property (nonatomic) UILabel IBOutlet *bioLabel;
+
+@property ArtistController *controller;
 
 @end
 
@@ -29,6 +33,32 @@
     
     if (self.artist) {
         [self updateViews];
+    }
+}
+
+// MARK: - IBAction
+- (IBAction)saveButtonPressed:(UIBarButtonItem *)sender {
+    [self save];
+}
+
+// MARK: - Persistence
+- (void) save {
+    if (self.artist) {
+        NSData *data = [NSJSONSerialization dataWithJSONObject:[self.artist toDictionary]
+                                                       options:0
+                                                         error:nil];
+        
+        NSURL *directoryUrl = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
+                                                                     inDomain:NSUserDomainMask
+                                                            appropriateForURL:nil
+                                                                        create:YES
+                                                                        error:nil];
+        
+        NSURL *extension = [[directoryUrl URLByAppendingPathComponent:self.artist.name]
+                            URLByAppendingPathExtension: @"json"];
+        
+        [data writeToURL:extension
+              atomically:YES];
     }
 }
 
@@ -46,14 +76,26 @@
     }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// MARK: - UISearchBarDelegate
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSString *query = self.searchBar.text;
+    
+    if (query) {
+        [self.controller fetchArtistsByName:query
+                                 completion:^(Artist * _Nullable artist, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"Error getting artists: %@", error);
+                return;
+            }
+            
+            self.artist = artist;
+            
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self updateViews];
+            });
+        }];
+    }
 }
-*/
 
 @end

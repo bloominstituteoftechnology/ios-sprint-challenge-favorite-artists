@@ -32,13 +32,12 @@
 
 - (NSDictionary *)toDictionary {
 
-    
-    NSDictionary *dict = @{@"strArtist": self.name,
-                                  @"intFormedYear": [[NSNumber alloc] initWithInt:self.formed],
-                                  @"strBiographyEN": self.bio
-    };
+    NSDictionary *dict = @{@"strArtist":self.name,
+                           @"strBiographyEN":self.bio,
+                           @"intFormedYear":[NSNumber numberWithInt:self.formed] };
     
     return dict;
+    
 }
 
 @end

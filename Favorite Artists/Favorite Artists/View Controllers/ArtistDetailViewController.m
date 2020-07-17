@@ -20,8 +20,6 @@
 @property (nonatomic) IBOutlet UILabel *formedLabel;
 @property (nonatomic) IBOutlet UILabel *bioLabel;
 
-@property (nonatomic, strong) ArtistController *controller;
-
 @end
 
 @implementation ArtistDetailViewController
@@ -30,10 +28,12 @@
     [super viewDidLoad];
     
     self.searchBar.delegate = self;
-    self.controller = [ArtistController alloc];
+    
+    self.saveButton.enabled = NO;
     
     if (self.artist != nil) {
         self.searchBar.hidden = YES;
+
         [self updateViews];
     }
 }
@@ -90,6 +90,7 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateViews];
+                self.saveButton.enabled = YES;
             });
         }];
         

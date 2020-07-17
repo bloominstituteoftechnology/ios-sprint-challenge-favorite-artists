@@ -72,7 +72,7 @@ static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
     
     NSURL *documentDir = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
     
-    NSURL *documentsURL = [documentDir URLByAppendingPathComponent:@"artists.json"];
+    NSURL *documentsURL = [documentDir URLByAppendingPathComponent:@"artists"];
     
     NSData *data = [NSData dataWithContentsOfURL:documentsURL];
     
@@ -80,28 +80,33 @@ static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
         return artistsArray;
     }
     
-    NSArray *artists = [NSJSONSerialization JSONObjectWithData:data
+    NSMutableArray *artists = [NSJSONSerialization JSONObjectWithData:data
                                                        options:0
                                                          error:nil];
     
     for (NSDictionary *dict in artists) {
         [artistsArray addObject:[[Artist alloc] initWithDictionary:dict]];
     }
-    
-    
     return artistsArray;
 }
 
 - (void)save:(Artist *)artist {
     NSMutableArray *locallySaved = [self loadSavedArtists];
     
-    [locallySaved addObject:[artist toDictionary]];
+    NSMutableArray *newSave = [[NSMutableArray alloc] init];
+    
+    for (Artist *a in locallySaved) {
+        [newSave addObject:[a toDictionary]];
+    }
+    
+    [newSave addObject:[artist toDictionary]];
+//    [locallySaved addObject:[artist toDictionary]];
     
     NSURL *documentDir = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
     
-    NSURL *documentsURL = [documentDir URLByAppendingPathComponent:@"artists.json"];
+    NSURL *documentsURL = [documentDir URLByAppendingPathComponent:@"artists"];
     
-    NSData *data = [NSJSONSerialization dataWithJSONObject:locallySaved
+    NSData *data = [NSJSONSerialization dataWithJSONObject:newSave
                                                    options: 0
                                                      error: nil];
     

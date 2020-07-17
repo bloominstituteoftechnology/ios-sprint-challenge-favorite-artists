@@ -9,6 +9,7 @@
 #import "ArtistsViewController.h"
 #import "Artist.h"
 #import "ArtistController.h"
+#import "ArtistDetailViewController.h"
 
 @interface ArtistsViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -33,6 +34,7 @@
     [super viewDidAppear:animated];
     
     self.artistsArray = [self.controller loadSavedArtists];
+    NSLog(@"%@", self.artistsArray);
     [self.tableView reloadData];
 }
 
@@ -46,6 +48,23 @@
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %d", selectedArtist.formed];
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"detailView"]) {
+        ArtistDetailViewController *destinationVC = [segue destinationViewController];
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
+        destinationVC.artist = [self.artistsArray objectAtIndex:indexPath.row];
+        destinationVC.controller = self.controller;
+    }
+    
+    if ([[segue identifier] isEqualToString:@"addSegue"]) {
+        ArtistDetailViewController *destinationVC = [segue destinationViewController];
+
+        destinationVC.controller = self.controller;
+    }
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

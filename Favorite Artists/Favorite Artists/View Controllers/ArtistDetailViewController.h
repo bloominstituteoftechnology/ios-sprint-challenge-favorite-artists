@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArtistController.h"
 
 @class Artist;
 
@@ -15,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ArtistDetailViewController : UIViewController
 
 @property (nonatomic, nullable) Artist *artist;
+@property (nonatomic, strong) ArtistController *controller;
 
 @end
 

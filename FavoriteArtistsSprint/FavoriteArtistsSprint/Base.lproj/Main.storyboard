@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="ias-nk-iI5">
             <objects>
-                <tableViewController id="Z1Y-lV-Azm" sceneMemberID="viewController">
+                <tableViewController id="Z1Y-lV-Azm" customClass="ArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CnU-wH-cJF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
         <!--Add New Artist-->
         <scene sceneID="otK-YL-oUc">
             <objects>
-                <viewController id="WX6-u4-e7f" sceneMemberID="viewController">
+                <viewController id="WX6-u4-e7f" customClass="ArtistSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WYP-u5-maB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -13,6 +13,10 @@
 		5AD11C2D24C203DD00D69E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD11C2C24C203DD00D69E0C /* Assets.xcassets */; };
 		5AD11C3024C203DD00D69E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD11C2E24C203DD00D69E0C /* LaunchScreen.storyboard */; };
 		5AD11C3324C203DD00D69E0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11C3224C203DD00D69E0C /* main.m */; };
+		5AD11C3B24C2085D00D69E0C /* ArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11C3A24C2085D00D69E0C /* ArtistTableViewController.m */; };
+		5AD11C3E24C2088D00D69E0C /* ArtistSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11C3D24C2088D00D69E0C /* ArtistSearchViewController.m */; };
+		5AD11C4224C20BB500D69E0C /* SABArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11C4124C20BB500D69E0C /* SABArtistFetcher.m */; };
+		5AD11C4624C20C3D00D69E0C /* SABArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11C4524C20C3D00D69E0C /* SABArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		5AD11C2F24C203DD00D69E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AD11C3124C203DD00D69E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD11C3224C203DD00D69E0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AD11C3924C2085D00D69E0C /* ArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistTableViewController.h; sourceTree = "<group>"; };
+		5AD11C3A24C2085D00D69E0C /* ArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableViewController.m; sourceTree = "<group>"; };
+		5AD11C3C24C2088D00D69E0C /* ArtistSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistSearchViewController.h; sourceTree = "<group>"; };
+		5AD11C3D24C2088D00D69E0C /* ArtistSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistSearchViewController.m; sourceTree = "<group>"; };
+		5AD11C4024C20BB500D69E0C /* SABArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SABArtistFetcher.h; sourceTree = "<group>"; };
+		5AD11C4124C20BB500D69E0C /* SABArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SABArtistFetcher.m; sourceTree = "<group>"; };
+		5AD11C4424C20C3D00D69E0C /* SABArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SABArtist.h; sourceTree = "<group>"; };
+		5AD11C4524C20C3D00D69E0C /* SABArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SABArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +75,44 @@
 				5AD11C2324C203DC00D69E0C /* SceneDelegate.h */,
 				5AD11C2424C203DC00D69E0C /* SceneDelegate.m */,
 				5AD11C2924C203DC00D69E0C /* Main.storyboard */,
+				5AD11C4724C20C4300D69E0C /* Model */,
+				5AD11C3F24C208BA00D69E0C /* View Controllers */,
+				5AD11C4324C20BBA00D69E0C /* Controller */,
 				5AD11C2C24C203DD00D69E0C /* Assets.xcassets */,
 				5AD11C2E24C203DD00D69E0C /* LaunchScreen.storyboard */,
 				5AD11C3124C203DD00D69E0C /* Info.plist */,
 				5AD11C3224C203DD00D69E0C /* main.m */,
 			);
 			path = FavoriteArtistsSprint;
+			sourceTree = "<group>";
+		};
+		5AD11C3F24C208BA00D69E0C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AD11C3C24C2088D00D69E0C /* ArtistSearchViewController.h */,
+				5AD11C3D24C2088D00D69E0C /* ArtistSearchViewController.m */,
+				5AD11C3924C2085D00D69E0C /* ArtistTableViewController.h */,
+				5AD11C3A24C2085D00D69E0C /* ArtistTableViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5AD11C4324C20BBA00D69E0C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5AD11C4024C20BB500D69E0C /* SABArtistFetcher.h */,
+				5AD11C4124C20BB500D69E0C /* SABArtistFetcher.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5AD11C4724C20C4300D69E0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AD11C4424C20C3D00D69E0C /* SABArtist.h */,
+				5AD11C4524C20C3D00D69E0C /* SABArtist.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD11C3B24C2085D00D69E0C /* ArtistTableViewController.m in Sources */,
+				5AD11C4224C20BB500D69E0C /* SABArtistFetcher.m in Sources */,
 				5AD11C2224C203DC00D69E0C /* AppDelegate.m in Sources */,
+				5AD11C4624C20C3D00D69E0C /* SABArtist.m in Sources */,
+				5AD11C3E24C2088D00D69E0C /* ArtistSearchViewController.m in Sources */,
 				5AD11C3324C203DD00D69E0C /* main.m in Sources */,
 				5AD11C2524C203DC00D69E0C /* SceneDelegate.m in Sources */,
 			);

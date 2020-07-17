@@ -13,14 +13,14 @@
 
 @interface ArtistDetailViewController () <UISearchBarDelegate>
 
-@property (nonatomic) UISearchBar IBOutlet *searchBar;
-@property (nonatomic) UIBarButtonItem IBOutlet *saveButton;
+@property (nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
-@property (nonatomic) UILabel IBOutlet *nameLabel;
-@property (nonatomic) UILabel IBOutlet *formedLabel;
-@property (nonatomic) UILabel IBOutlet *bioLabel;
+@property (nonatomic) IBOutlet UILabel *nameLabel;
+@property (nonatomic) IBOutlet UILabel *formedLabel;
+@property (nonatomic) IBOutlet UILabel *bioLabel;
 
-@property ArtistController *controller;
+@property (nonatomic, strong) ArtistController *controller;
 
 @end
 
@@ -30,8 +30,9 @@
     [super viewDidLoad];
     
     self.searchBar.delegate = self;
+    self.controller = [ArtistController alloc];
     
-    if (self.artist) {
+    if (self.artist != nil) {
         [self updateViews];
     }
 }
@@ -65,22 +66,31 @@
 // MARK: - Utility
 
 - (void)updateViews {
-    if (self.artist) {
-        self.searchBar.hidden = YES;
-        
-        self.title = self.artist.name;
-        
-        self.nameLabel.text = self.artist.name;
-        self.formedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.formed];
-        self.bioLabel.text = self.artist.bio;
-    }
+    self.searchBar.hidden = YES;
+    
+    self.title = self.artist.name;
+    
+    self.nameLabel.text = self.artist.name;
+    self.formedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.formed];
+    self.bioLabel.text = self.artist.bio;
 }
 
 // MARK: - UISearchBarDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSLog(@"search button pressed");
+    [self search];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [self search];
+}
+
+- (void)search {
+
     NSString *query = self.searchBar.text;
     
-    if (query) {
+    if (query.length > 0) {
+    
         [self.controller fetchArtistsByName:query
                                  completion:^(Artist * _Nullable artist, NSError * _Nullable error) {
             if (error) {
@@ -90,11 +100,11 @@
             
             self.artist = artist;
             
-            
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateViews];
             });
         }];
+        
     }
 }
 

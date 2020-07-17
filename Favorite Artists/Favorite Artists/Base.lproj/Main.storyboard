@@ -78,7 +78,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTF-5f-jlb" userLabel="Bio">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTF-5f-jlb" userLabel="Bio">
                                         <rect key="frame" x="10" y="30" width="394" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -117,6 +117,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bioLabel" destination="JTF-5f-jlb" id="EdI-5U-eKm"/>
+                        <outlet property="formedLabel" destination="NTl-2o-P68" id="7eJ-bD-QjD"/>
+                        <outlet property="nameLabel" destination="vJ3-0E-7l9" id="PaE-we-dPg"/>
+                        <outlet property="saveButton" destination="Mnu-Sg-4hK" id="pRa-ab-7sf"/>
+                        <outlet property="searchBar" destination="UzA-5p-0d2" id="6nn-yj-Wgs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OrQ-P1-IDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

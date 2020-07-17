@@ -10,27 +10,28 @@
 #import "Artist.h"
 #import "Artist+NSJSONSerialization.h"
 
-static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
+static NSString *baseURL = @"https://theaudiodb.com/api/v1/json/1/search.php";
 
 @implementation ArtistController
 
 - (void)fetchArtistsByName:(NSString *)name completion:(ArtistFetcherCompletion)completion {
+
     NSURLComponents *urlComponents = [NSURLComponents componentsWithString:baseURL];
     
     urlComponents.queryItems = @[[NSURLQueryItem queryItemWithName:@"s"
-                                 value:name.localizedLowercaseString]];
+                                 value:name.lowercaseString]];
     
     NSURL *requestURL = urlComponents.URL;
+    //NSURLRequest *request = [NSURLRequest requestWithURL:requestURL];
     
-    if (requestURL == nil) {
+    
+    if (!requestURL) {
+        NSLog(@"Request URL Invalid");
         completion(nil, [[NSError alloc] init]);
     }
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
-    request.HTTPMethod = @"GET";
-    
     NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession
-                                      dataTaskWithRequest:request
+                                      dataTaskWithURL: requestURL
                                       completionHandler:^(NSData * _Nullable data,
                                                           NSURLResponse * _Nullable response,
                                                           NSError * _Nullable error) {
@@ -49,7 +50,7 @@ static NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php
         
         NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data
                                                                        options:0
-                                                                         error:&error];
+                                                                         error:&jsonError];
         
         if (jsonError) {
             completion(nil, jsonError);

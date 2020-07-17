@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="xCw-XH-8fw" kind="showDetail" identifier="ArtistDetailSegue" id="VRn-Dp-K9v"/>
+                                    <segue destination="xCw-XH-8fw" kind="show" identifier="ArtistDetailSegue" id="VRn-Dp-K9v"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -66,23 +66,19 @@
             <objects>
                 <viewController id="xCw-XH-8fw" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F06-Nw-pfx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KY7-VK-khX">
-                                <rect key="frame" x="20" y="187" width="374" height="621"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KY7-VK-khX">
+                                <rect key="frame" x="20" y="241" width="374" height="621"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <searchBar contentMode="redraw" ambiguous="YES" placeholder="Artist Name:" translatesAutoresizingMaskIntoConstraints="NO" id="WEI-KR-Wgk">
-                                <rect key="frame" x="0.0" y="22" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0h6-Rk-nhY">
-                                <rect key="frame" x="20" y="87" width="117" height="104.5"/>
+                                <rect key="frame" x="20" y="141" width="117" height="104.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR3-mO-cme">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="60"/>
@@ -98,25 +94,38 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <searchBar contentMode="redraw" placeholder="Artist Name:" translatesAutoresizingMaskIntoConstraints="NO" id="WEI-KR-Wgk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="KY7-VK-khX" firstAttribute="bottom" secondItem="Qgw-jh-6tk" secondAttribute="bottom" id="24k-4Y-KRR"/>
                             <constraint firstItem="0h6-Rk-nhY" firstAttribute="leading" secondItem="Qgw-jh-6tk" secondAttribute="leading" constant="20" id="5WU-fc-hvx"/>
-                            <constraint firstItem="Qgw-jh-6tk" firstAttribute="trailing" secondItem="0h6-Rk-nhY" secondAttribute="trailing" constant="277" id="7ht-Aw-XSM"/>
                             <constraint firstItem="KY7-VK-khX" firstAttribute="leading" secondItem="Qgw-jh-6tk" secondAttribute="leading" constant="20" id="LdI-Yx-moR"/>
+                            <constraint firstItem="WEI-KR-Wgk" firstAttribute="trailing" secondItem="Qgw-jh-6tk" secondAttribute="trailing" id="Moq-6n-Lgp"/>
                             <constraint firstItem="KY7-VK-khX" firstAttribute="bottom" secondItem="Qgw-jh-6tk" secondAttribute="bottom" id="Rlp-nc-clC"/>
+                            <constraint firstItem="WEI-KR-Wgk" firstAttribute="top" secondItem="Qgw-jh-6tk" secondAttribute="top" id="VI5-SE-1JN"/>
                             <constraint firstItem="Qgw-jh-6tk" firstAttribute="trailing" secondItem="KY7-VK-khX" secondAttribute="trailing" constant="20" id="Vbg-mk-QvS"/>
                             <constraint firstItem="Qgw-jh-6tk" firstAttribute="bottom" secondItem="0h6-Rk-nhY" secondAttribute="bottom" constant="616.5" id="ixd-nO-Hno"/>
-                            <constraint firstItem="0h6-Rk-nhY" firstAttribute="top" secondItem="WEI-KR-Wgk" secondAttribute="bottom" constant="9" id="kVA-ae-fl0"/>
-                            <constraint firstItem="0h6-Rk-nhY" firstAttribute="top" secondItem="WEI-KR-Wgk" secondAttribute="bottom" constant="9" id="m4X-fC-RRA"/>
-                            <constraint firstItem="KY7-VK-khX" firstAttribute="top" secondItem="WEI-KR-Wgk" secondAttribute="bottom" constant="109" id="vI1-L0-zut"/>
+                            <constraint firstItem="WEI-KR-Wgk" firstAttribute="leading" secondItem="Qgw-jh-6tk" secondAttribute="leading" id="jNs-BU-KG1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qgw-jh-6tk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="Txv-lA-c7v">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="c3r-hp-wXQ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="c3r-hp-wXQ">
+                            <connections>
+                                <action selector="saveTapped:" destination="xCw-XH-8fw" id="U4M-qX-HNw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="dR3-mO-cme" id="0OL-XZ-JjN"/>
+                        <outlet property="detailTextView" destination="KY7-VK-khX" id="ErO-UC-6xZ"/>
+                        <outlet property="searchBar" destination="WEI-KR-Wgk" id="RMU-6F-xUU"/>
+                        <outlet property="yearFormedLabel" destination="wKL-q1-Bho" id="OHR-qu-ihH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Opz-dF-Jn7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,6 +151,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VRn-Dp-K9v"/>
+        <segue reference="Rps-Fn-jAh"/>
     </inferredMetricsTieBreakers>
 </document>

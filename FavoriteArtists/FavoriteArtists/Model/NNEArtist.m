@@ -10,18 +10,17 @@
 
 @implementation NNEArtist
 
-- (instancetype)initWithName:(NSString *)name
-                         bio:(NSString *)artistBio
-                  yearFormed:(int)yearFormed {
-    self = [super init];
-    if (self) {
-        _name = [name copy];
-        _artistBio = [artistBio copy];
+- (instancetype)initWithartist:(NSString *)artist
+                    yearFormed:(int)yearFormed
+                   biography :(NSString *)biography {
+    
+    if (self = [super init]) {
+        
+        _artist = [artist copy];
         _yearFormed = yearFormed;
+        _biography = [biography copy];
     }
-
     return self;
 }
-
 
 @end

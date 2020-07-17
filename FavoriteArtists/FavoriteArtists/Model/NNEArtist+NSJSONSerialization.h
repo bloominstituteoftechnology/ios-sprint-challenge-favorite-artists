@@ -7,12 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NNEArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NNEArtist (NSJSONSerialization)
 
+/// To decode from JSON
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+/// To decode from documents
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
+/// Used to save to documents
 - (NSDictionary *)toDictionary;
 
 @end

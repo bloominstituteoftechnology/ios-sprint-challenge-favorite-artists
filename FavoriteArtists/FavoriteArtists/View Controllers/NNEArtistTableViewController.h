@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class NNEArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NNEArtistTableViewController : UITableViewController
+
+@property (nonatomic) NNEArtistController *artistController;
 
 @end
 

@@ -7,18 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NNEArtist.h"
+
+@class NNEArtist;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NNEArtistController : NSObject
 
-typedef void(^ArtistFetchCompletion)(NNEArtist * _Nullable artist, NSError * _Nullable error);
+@property (nonatomic, readonly) NSArray *myArtists;
 
-@property (nonatomic, copy) NSArray<NNEArtist *> *artists;
+- (void)fetchArtistByName:(NSString *)artist completion:(void(^)(NNEArtist *, NSError *error))completion;
 
-- (void)findArtist:(NSString *)artistName completion:(ArtistFetchCompletion)completion;
-- (void)saveArtist:(NNEArtist *)artist;
+- (void)addArtistWithArtist:(NSString *)artist
+                       year:(int)year
+                        bio:(NSString *)bio;
+
+- (NSURL *)applicationDocumentsDirectory;
+
 
 @end
 

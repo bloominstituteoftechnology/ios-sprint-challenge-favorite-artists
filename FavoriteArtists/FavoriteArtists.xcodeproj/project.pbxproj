@@ -16,6 +16,7 @@
 		5E2E4DE324C1FE8E002B00B9 /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DE224C1FE8E002B00B9 /* FavoriteArtistsTableViewController.m */; };
 		5E2E4DE624C1FEBE002B00B9 /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DE524C1FEBE002B00B9 /* AddArtistViewController.m */; };
 		5E2E4DE924C1FED9002B00B9 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DE824C1FED9002B00B9 /* ArtistDetailViewController.m */; };
+		5E2E4DEE24C20022002B00B9 /* CAMArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DED24C20022002B00B9 /* CAMArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		5E2E4DE524C1FEBE002B00B9 /* AddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistViewController.m; sourceTree = "<group>"; };
 		5E2E4DE724C1FED9002B00B9 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
 		5E2E4DE824C1FED9002B00B9 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		5E2E4DEC24C20022002B00B9 /* CAMArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMArtist.h; sourceTree = "<group>"; };
+		5E2E4DED24C20022002B00B9 /* CAMArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +70,12 @@
 		5E2E4DC224C1F92D002B00B9 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DDF24C1F9B1002B00B9 /* Application */,
-				5E2E4DE024C1F9D9002B00B9 /* View Controllers */,
+				5E2E4DEA24C1FFC6002B00B9 /* Models */,
+				5E2E4DEB24C1FFD2002B00B9 /* Model Controllers */,
 				5E2E4DDD24C1F983002B00B9 /* Views */,
+				5E2E4DE024C1F9D9002B00B9 /* View Controllers */,
 				5E2E4DDE24C1F990002B00B9 /* Resources */,
+				5E2E4DDF24C1F9B1002B00B9 /* Application */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -126,6 +131,22 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		5E2E4DEA24C1FFC6002B00B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E2E4DEC24C20022002B00B9 /* CAMArtist.h */,
+				5E2E4DED24C20022002B00B9 /* CAMArtist.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5E2E4DEB24C1FFD2002B00B9 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +173,7 @@
 		5E2E4DB824C1F92D002B00B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CAM;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Cody Morley";
 				TargetAttributes = {
@@ -198,6 +220,7 @@
 			files = (
 				5E2E4DE324C1FE8E002B00B9 /* FavoriteArtistsTableViewController.m in Sources */,
 				5E2E4DC524C1F92D002B00B9 /* AppDelegate.m in Sources */,
+				5E2E4DEE24C20022002B00B9 /* CAMArtist.m in Sources */,
 				5E2E4DE924C1FED9002B00B9 /* ArtistDetailViewController.m in Sources */,
 				5E2E4DE624C1FEBE002B00B9 /* AddArtistViewController.m in Sources */,
 				5E2E4DD624C1F934002B00B9 /* main.m in Sources */,

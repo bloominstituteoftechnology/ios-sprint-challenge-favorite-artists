@@ -18,6 +18,7 @@
 		BEF40A7424C1F6160068E983 /* Favorite_ArtistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A7324C1F6160068E983 /* Favorite_ArtistsTests.m */; };
 		BEF40A7F24C1F6160068E983 /* Favorite_ArtistsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A7E24C1F6160068E983 /* Favorite_ArtistsUITests.m */; };
 		BEF40A9124C1F6990068E983 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A9024C1F6990068E983 /* Artist.m */; };
+		BEF40A9424C1F94E0068E983 /* Artist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF40A9324C1F94E0068E983 /* Artist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		BEF40A8D24C1F6650068E983 /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		BEF40A8F24C1F6990068E983 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
 		BEF40A9024C1F6990068E983 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		BEF40A9224C1F94E0068E983 /* Artist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		BEF40A9324C1F94E0068E983 /* Artist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 			children = (
 				BEF40A8F24C1F6990068E983 /* Artist.h */,
 				BEF40A9024C1F6990068E983 /* Artist.m */,
+				BEF40A9224C1F94E0068E983 /* Artist+NSJSONSerialization.h */,
+				BEF40A9324C1F94E0068E983 /* Artist+NSJSONSerialization.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				BEF40A6A24C1F6150068E983 /* main.m in Sources */,
 				BEF40A5C24C1F6140068E983 /* ViewController.m in Sources */,
 				BEF40A5624C1F6140068E983 /* AppDelegate.m in Sources */,
+				BEF40A9424C1F94E0068E983 /* Artist+NSJSONSerialization.m in Sources */,
 				BEF40A6224C1F6140068E983 /* Favorite_Artists.xcdatamodeld in Sources */,
 				BEF40A9124C1F6990068E983 /* Artist.m in Sources */,
 				BEF40A5924C1F6140068E983 /* SceneDelegate.m in Sources */,

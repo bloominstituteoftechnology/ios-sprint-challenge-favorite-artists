@@ -8,7 +8,7 @@
 
 #import "Artist.h"
 
-@implementation Artist
+@implementation Artist : NSObject
 
 - (instancetype)initWithName:(NSString *)name
                          bio:(NSString *)bio
@@ -22,6 +22,7 @@
         _formed = formed;
     }
     
+    return self;
 }
 
 @end

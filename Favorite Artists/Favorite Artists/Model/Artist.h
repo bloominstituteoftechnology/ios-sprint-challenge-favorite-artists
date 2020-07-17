@@ -14,7 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly, nullable, copy) NSString *bio;
-@property (nonatomic, readonly, nullable, assign) int formed;
+@property (nonatomic, readonly) int formed;
+
+- (instancetype)initWithName:(NSString *)name
+                         bio:(NSString *)bio
+                      formed:(int)formed;
 
 @end
 

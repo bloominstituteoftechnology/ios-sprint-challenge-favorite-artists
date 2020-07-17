@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Favorite Artists Table View Controller-->
         <scene sceneID="YWl-4c-reK">
             <objects>
-                <tableViewController id="Y9J-Kg-Q89" sceneMemberID="viewController">
+                <tableViewController id="Y9J-Kg-Q89" customClass="FavoriteArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CAm-c3-Hp0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="605.79710144927537" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="QsG-e7-fK3">
             <objects>
-                <viewController id="fAQ-Ok-Jhc" sceneMemberID="viewController">
+                <viewController id="fAQ-Ok-Jhc" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LXy-xd-J63">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="597" y="856"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Artist View Controller-->
         <scene sceneID="zgp-3e-J7C">
             <objects>
-                <viewController id="aoy-PE-uas" sceneMemberID="viewController">
+                <viewController id="aoy-PE-uas" customClass="AddArtistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DII-cg-tsk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

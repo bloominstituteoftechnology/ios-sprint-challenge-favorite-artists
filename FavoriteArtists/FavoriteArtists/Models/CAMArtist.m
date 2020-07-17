@@ -10,4 +10,17 @@
 
 @implementation CAMArtist
 
+- (instancetype)initWithName:(NSString *)name
+                         bio:(NSString *)bio
+                     founded:(int)founded
+{
+    self = [super init];
+    if (self) {
+        _name = name;
+        _bio = bio;
+        _founded = founded;
+    }
+    return self;
+}
+
 @end

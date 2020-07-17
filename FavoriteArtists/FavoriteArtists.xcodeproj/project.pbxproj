@@ -16,6 +16,8 @@
 		B4DCF77A24C1FD66005E26C0 /* NNEArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF77924C1FD66005E26C0 /* NNEArtistTableViewController.m */; };
 		B4DCF77D24C1FD77005E26C0 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF77C24C1FD77005E26C0 /* ArtistDetailViewController.m */; };
 		B4DCF78024C1FDBF005E26C0 /* NNEArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF77F24C1FDBF005E26C0 /* NNEArtist.m */; };
+		B4DCF78624C205EE005E26C0 /* NNEArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF78524C205EE005E26C0 /* NNEArtistController.m */; };
+		B4DCF78A24C20783005E26C0 /* NNEArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DCF78924C20783005E26C0 /* NNEArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		B4DCF77C24C1FD77005E26C0 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 		B4DCF77E24C1FDBF005E26C0 /* NNEArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNEArtist.h; sourceTree = "<group>"; };
 		B4DCF77F24C1FDBF005E26C0 /* NNEArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNEArtist.m; sourceTree = "<group>"; };
+		B4DCF78424C205EE005E26C0 /* NNEArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNEArtistController.h; sourceTree = "<group>"; };
+		B4DCF78524C205EE005E26C0 /* NNEArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNEArtistController.m; sourceTree = "<group>"; };
+		B4DCF78824C20783005E26C0 /* NNEArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NNEArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		B4DCF78924C20783005E26C0 /* NNEArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NNEArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,20 @@
 			children = (
 				B4DCF77E24C1FDBF005E26C0 /* NNEArtist.h */,
 				B4DCF77F24C1FDBF005E26C0 /* NNEArtist.m */,
+				B4DCF78724C205F2005E26C0 /* Model Controllers */,
+				B4DCF78824C20783005E26C0 /* NNEArtist+NSJSONSerialization.h */,
+				B4DCF78924C20783005E26C0 /* NNEArtist+NSJSONSerialization.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B4DCF78724C205F2005E26C0 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4DCF78424C205EE005E26C0 /* NNEArtistController.h */,
+				B4DCF78524C205EE005E26C0 /* NNEArtistController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DCF78624C205EE005E26C0 /* NNEArtistController.m in Sources */,
 				B4DCF77D24C1FD77005E26C0 /* ArtistDetailViewController.m in Sources */,
 				B4DCF77A24C1FD66005E26C0 /* NNEArtistTableViewController.m in Sources */,
 				B4DCF75A24C1F955005E26C0 /* AppDelegate.m in Sources */,
 				B4DCF76B24C1F95A005E26C0 /* main.m in Sources */,
 				B4DCF78024C1FDBF005E26C0 /* NNEArtist.m in Sources */,
+				B4DCF78A24C20783005E26C0 /* NNEArtist+NSJSONSerialization.m in Sources */,
 				B4DCF75D24C1F955005E26C0 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

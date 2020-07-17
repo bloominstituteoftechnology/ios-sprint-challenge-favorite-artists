@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class EJSFavoriteArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EJSFavoriteArtistTableViewController : UITableViewController
+
+@property (nonatomic) EJSFavoriteArtistController *favoriteArtistController;
 
 @end
 

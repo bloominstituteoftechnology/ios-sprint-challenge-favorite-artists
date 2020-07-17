@@ -20,9 +20,9 @@
         return nil;
     }
     
-    NSString *artist = artistArray[0][@"artist"];
-    NSNumber *yearFormed = artistArray[0][@"yearFormed"];
-    NSString *biography = artistArray[0][@"biography"];
+    NSString *artist = artistArray[0][@"strArtist"];
+    NSNumber *yearFormed = artistArray[0][@"intFormedYear"];
+    NSString *biography = artistArray[0][@"strBiographyEN"];
     
     // Failable init
     if ([yearFormed isKindOfClass:[NSNull class]]) {
@@ -45,8 +45,8 @@
 - (instancetype)initWithDict:(NSDictionary *)dict {
     
     NSString *artist = dict[@"strArtist"];
-    NSNumber *yearFormed = dict[@"yearFormed"];
-    NSString *biography = dict[@"biography"];
+    NSNumber *yearFormed = dict[@"intFormedYear"];
+    NSString *biography = dict[@"strBiographyEN"];
     
     self = [[EJSFavoriteArtist alloc] initWithartist:artist
                                           yearFormed:yearFormed.intValue
@@ -59,9 +59,9 @@
 - (NSDictionary *)toDictionary {
     
     NSDictionary *dictionary = @{
-        @"artist": self.artist,
-        @"yearFormed": [NSNumber numberWithInt:self.yearFormed],
-        @"biography": self.biography
+        @"strArtist": self.artist,
+        @"intFormedYear": [NSNumber numberWithInt:self.yearFormed],
+        @"strBiographyEN": self.biography
     };
  
     return dictionary;

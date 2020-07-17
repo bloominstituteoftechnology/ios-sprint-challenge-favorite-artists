@@ -8,9 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+@class EJSFavoriteArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EJSFavoriteArtistController : NSObject
+
+@property (nonatomic, readonly) NSArray *favoriteArtists;
+
+- (void)fetchFavoriteArtistByName:(NSString *)artist completion:(void(^)(EJSFavoriteArtist *, NSError *error))completion;
+
+- (void)addArtistWithArtist:(NSString *)artist
+                       year:(int)year
+                        bio:(NSString *)bio;
+
+- (NSURL *)applicationDocumentsDirectory;
 
 @end
 

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UG1-AZ-0WN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorite Artists-->
+        <scene sceneID="i4K-Wx-XMQ">
+            <objects>
+                <tableViewController id="vCR-0U-fGp" customClass="JDFArtistsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UQs-hZ-skY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="jgV-xm-tB0" detailTextLabel="0Ac-Nq-Pyw" style="IBUITableViewCellStyleSubtitle" id="gmQ-Mj-xfI">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gmQ-Mj-xfI" id="8xb-u4-FMS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jgV-xm-tB0">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Ac-Nq-Pyw">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vEp-qw-cKO" kind="show" identifier="ShowArtist" id="GsO-bm-9sT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vCR-0U-fGp" id="yb5-Ee-SPA"/>
+                            <outlet property="delegate" destination="vCR-0U-fGp" id="dDb-mw-Zw4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorite Artists" id="f8I-TR-MUp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JMC-yd-xIe">
+                            <connections>
+                                <segue destination="vEp-qw-cKO" kind="show" identifier="AddArtist" id="U4w-Tu-aPd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7f-jk-W3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="46"/>
+        </scene>
+        <!--Add New Artist-->
+        <scene sceneID="WUK-Y5-FNj">
+            <objects>
+                <viewController id="vEp-qw-cKO" customClass="TSBArtistDetailVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DHa-tU-Vvn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter artist:" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-md-w8v">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9B1-Kk-qe3">
+                                <rect key="frame" x="20" y="152" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ReJ-1B-mYG">
+                                <rect key="frame" x="20" y="218" width="374" height="644"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit. Pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Augue ut lectus arcu bibendum. Donec et odio pellentesque diam volutpat commodo sed. Nec feugiat nisl pretium fusce. Aliquet risus feugiat in ante metus. Aliquam malesuada bibendum arcu vitae elementum curabitur. Faucibus ornare suspendisse sed nisi. Sit amet dictum sit amet justo donec enim. Non diam phasellus vestibulum lorem sed risus. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Viverra accumsan in nisl nisi scelerisque eu ultrices. Vitae suscipit tellus mauris a diam maecenas sed enim.
+
+Quis varius quam quisque id diam. Sapien et ligula ullamcorper malesuada proin libero. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Duis at tellus at urna condimentum mattis pellentesque id. Nibh sed pulvinar proin gravida hendrerit. Viverra nibh cras pulvinar mattis nunc sed blandit libero. At consectetur lorem donec massa sapien faucibus. Magna ac placerat vestibulum lectus mauris ultrices eros. Malesuada fames ac turpis egestas integer eget aliquet. Nibh mauris cursus mattis molestie a. Amet luctus venenatis lectus magna. Gravida in fermentum et sollicitudin ac orci. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Quis auctor elit sed vulputate. Facilisis volutpat est velit egestas dui id. Cum sociis natoque penatibus et.
+
+Purus sit amet volutpat consequat mauris. Enim eu turpis egestas pretium aenean pharetra magna ac placerat. Sed id semper risus in hendrerit. Tempus quam pellentesque nec nam. Varius sit amet mattis vulputate enim. Dui id ornare arcu odio ut sem nulla pharetra diam. Arcu non sodales neque sodales ut. Metus dictum at tempor commodo ullamcorper a lacus vestibulum. Eu turpis egestas pretium aenean. Aliquet sagittis id consectetur purus ut faucibus. Egestas sed sed risus pretium quam.
+
+Suspendisse faucibus interdum posuere lorem. Mattis ullamcorper velit sed ullamcorper. Nam at lectus urna duis convallis. Tempus iaculis urna id volutpat lacus. Cursus euismod quis viverra nibh cras pulvinar mattis. Id donec ultrices tincidunt arcu non sodales neque. Habitasse platea dictumst quisque sagittis. Semper feugiat nibh sed pulvinar proin. Tempus imperdiet nulla malesuada pellentesque. Dictum sit amet justo donec enim diam. Bibendum est ultricies integer quis auctor. Elit ut aliquam purus sit amet luctus venenatis. Rhoncus dolor purus non enim praesent elementum facilisis leo. Vestibulum lectus mauris ultrices eros. Elit pellentesque habitant morbi tristique senectus et. Mattis rhoncus urna neque viverra justo. Iaculis nunc sed augue lacus viverra. Enim praesent elementum facilisis leo vel fringilla est ullamcorper.
+
+Diam volutpat commodo sed egestas egestas fringilla phasellus. Urna cursus eget nunc scelerisque viverra. Leo a diam sollicitudin tempor id eu nisl. Eu sem integer vitae justo eget magna. Morbi quis commodo odio aenean sed. Massa enim nec dui nunc. Sagittis nisl rhoncus mattis rhoncus. Faucibus interdum posuere lorem ipsum dolor sit. Dui id ornare arcu odio ut sem nulla. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Diam phasellus vestibulum lorem sed. Egestas quis ipsum suspendisse ultrices gravida. Lectus mauris ultrices eros in cursus turpis massa. Vel pharetra vel turpis nunc eget lorem dolor sed. Non consectetur a erat nam at lectus urna. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue.
+
+Faucibus a pellentesque sit amet porttitor. Rutrum quisque non tellus orci ac auctor. Viverra nam libero justo laoreet. Cursus sit amet dictum sit amet justo donec enim. Fermentum et sollicitudin ac orci. Pellentesque massa placerat duis ultricies. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Aliquet enim tortor at auctor urna nunc. Pretium nibh ipsum consequat nisl. Sed sed risus pretium quam vulputate dignissim. Vestibulum morbi blandit cursus risus at ultrices mi. Sed odio morbi quis commodo odio aenean. Amet purus gravida quis blandit. Aliquet bibendum enim facilisis gravida neque. Porttitor massa id neque aliquam vestibulum morbi blandit. Vulputate enim nulla aliquet porttitor lacus luctus. Neque volutpat ac tincidunt vitae semper quis lectus. Diam maecenas ultricies mi eget mauris pharetra et.
+
+Viverra maecenas accumsan lacus vel facilisis. Volutpat lacus laoreet non curabitur gravida arcu ac tortor. Id consectetur purus ut faucibus pulvinar. Risus viverra adipiscing at in tellus integer feugiat scelerisque. Tortor consequat id porta nibh venenatis cras sed felis. Pretium fusce id velit ut tortor pretium viverra suspendisse. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. At augue eget arcu dictum varius duis at consectetur lorem. Tincidunt tortor aliquam nulla facilisi. Augue mauris augue neque gravida in fermentum et. Leo in vitae turpis massa sed elementum tempus. Etiam sit amet nisl purus in mollis nunc sed. Molestie at elementum eu facilisis sed odio morbi. Turpis cursus in hac habitasse platea. Pellentesque adipiscing commodo elit at. Interdum varius sit amet mattis vulputate enim nulla. Mi proin sed libero enim sed faucibus turpis in eu. Venenatis a condimentum vitae sapien pellentesque habitant morbi.
+
+Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Facilisi morbi tempus iaculis urna id. In fermentum posuere urna nec tincidunt praesent semper feugiat. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Nunc mattis enim ut tellus elementum sagittis. Proin nibh nisl condimentum id. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Odio eu feugiat pretium nibh. Aenean euismod elementum nisi quis eleifend quam. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Varius duis at consectetur lorem. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. Morbi tempus iaculis urna id volutpat lacus. Massa tincidunt dui ut ornare lectus. Malesuada proin libero nunc consequat interdum varius sit amet mattis. Arcu felis bibendum ut tristique et. Magna ac placerat vestibulum lectus mauris ultrices eros in. Enim ut tellus elementum sagittis vitae et leo duis ut.
+
+Suspendisse interdum consectetur libero id faucibus nisl. Nec nam aliquam sem et tortor consequat id porta nibh. Dictumst quisque sagittis purus sit amet volutpat. Dui accumsan sit amet nulla facilisi morbi tempus. Arcu non odio euismod lacinia at quis risus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Eget sit amet tellus cras. Purus sit amet volutpat consequat mauris nunc congue nisi. Sit amet venenatis urna cursus eget. Id nibh tortor id aliquet lectus proin nibh nisl condimentum. Ac turpis egestas integer eget aliquet nibh praesent tristique magna. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Aliquam purus sit amet luctus.
+
+Enim sed faucibus turpis in eu. Neque viverra justo nec ultrices. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Tristique senectus et netus et malesuada fames ac turpis. Morbi quis commodo odio aenean sed adipiscing. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Cursus risus at ultrices mi. Nunc vel risus commodo viverra maecenas accumsan lacus vel. Lacus luctus accumsan tortor posuere ac ut consequat semper. Id venenatis a condimentum vitae sapien. Eget sit amet tellus cras adipiscing enim eu turpis egestas. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Vitae congue eu consequat ac felis donec. Tortor condimentum lacinia quis vel eros donec ac odio.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5L-dg-XMx">
+                                <rect key="frame" x="20" y="189" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NT6-md-w8v" firstAttribute="leading" secondItem="nwO-Ku-LuY" secondAttribute="leading" id="7qH-Hs-AIr"/>
+                            <constraint firstItem="m5L-dg-XMx" firstAttribute="leading" secondItem="nwO-Ku-LuY" secondAttribute="leading" constant="20" id="Kxk-pP-L8h"/>
+                            <constraint firstItem="ReJ-1B-mYG" firstAttribute="leading" secondItem="nwO-Ku-LuY" secondAttribute="leading" constant="20" id="Onz-3g-528"/>
+                            <constraint firstItem="nwO-Ku-LuY" firstAttribute="trailing" secondItem="m5L-dg-XMx" secondAttribute="trailing" constant="20" id="TxA-5V-a8c"/>
+                            <constraint firstItem="NT6-md-w8v" firstAttribute="trailing" secondItem="nwO-Ku-LuY" secondAttribute="trailing" id="Y6G-pc-dHO"/>
+                            <constraint firstItem="nwO-Ku-LuY" firstAttribute="trailing" secondItem="9B1-Kk-qe3" secondAttribute="trailing" constant="20" id="eek-gj-D0y"/>
+                            <constraint firstItem="m5L-dg-XMx" firstAttribute="top" secondItem="9B1-Kk-qe3" secondAttribute="bottom" constant="8" id="fAp-aD-9YY"/>
+                            <constraint firstItem="NT6-md-w8v" firstAttribute="top" secondItem="nwO-Ku-LuY" secondAttribute="top" id="j9x-gZ-7j7"/>
+                            <constraint firstItem="ReJ-1B-mYG" firstAttribute="top" secondItem="m5L-dg-XMx" secondAttribute="bottom" constant="8" id="kpY-23-IP0"/>
+                            <constraint firstItem="ReJ-1B-mYG" firstAttribute="top" secondItem="m5L-dg-XMx" secondAttribute="bottom" constant="8" id="lC9-0d-sAN"/>
+                            <constraint firstItem="9B1-Kk-qe3" firstAttribute="top" secondItem="NT6-md-w8v" secondAttribute="bottom" constant="8" id="leY-ye-GAe"/>
+                            <constraint firstItem="9B1-Kk-qe3" firstAttribute="leading" secondItem="nwO-Ku-LuY" secondAttribute="leading" constant="20" id="oBA-5a-j5x"/>
+                            <constraint firstItem="m5L-dg-XMx" firstAttribute="top" secondItem="9B1-Kk-qe3" secondAttribute="bottom" constant="8" id="qBs-it-39D"/>
+                            <constraint firstItem="nwO-Ku-LuY" firstAttribute="trailing" secondItem="ReJ-1B-mYG" secondAttribute="trailing" constant="20" id="vV2-h1-OCK"/>
+                            <constraint firstItem="ReJ-1B-mYG" firstAttribute="bottom" secondItem="nwO-Ku-LuY" secondAttribute="bottom" id="wM4-WH-yhh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nwO-Ku-LuY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Artist" id="zha-6b-gc6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="goh-WE-cvi">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="vEp-qw-cKO" id="Lsi-1x-3Zz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistLabel" destination="9B1-Kk-qe3" id="YQ3-Kd-Fqm"/>
+                        <outlet property="bioTextView" destination="ReJ-1B-mYG" id="Qtd-9M-Nab"/>
+                        <outlet property="saveButton" destination="goh-WE-cvi" id="FMR-Gh-93O"/>
+                        <outlet property="searchBar" destination="NT6-md-w8v" id="eBn-N0-hc2"/>
+                        <outlet property="yearFormedLabel" destination="m5L-dg-XMx" id="fTJ-B2-6Yy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOG-as-srp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="54"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RhX-2F-CrF">
+            <objects>
+                <navigationController id="UG1-AZ-0WN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r84-cF-O0u">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vCR-0U-fGp" kind="relationship" relationship="rootViewController" id="1KN-hD-rk7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLr-aM-MpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1154" y="54"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GsO-bm-9sT"/>
+    </inferredMetricsTieBreakers>
+</document>

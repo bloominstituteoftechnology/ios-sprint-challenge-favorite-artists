@@ -9,6 +9,8 @@
 #import "ArtistDetailViewController.h"
 
 @interface ArtistDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
 
 @end
 

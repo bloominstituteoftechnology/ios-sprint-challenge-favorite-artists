@@ -9,6 +9,8 @@
 #import "AddArtistViewController.h"
 
 @interface AddArtistViewController ()
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
 
 @end
 
@@ -18,6 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+- (IBAction)saveArtist:(id)sender {
+}
+
 
 /*
 #pragma mark - Navigation

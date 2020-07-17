@@ -16,12 +16,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" id="cRt-mq-KXL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="S7X-Ki-3Tl" style="IBUITableViewCellStyleDefault" id="cRt-mq-KXL">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cRt-mq-KXL" id="Nql-k0-ZoH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S7X-Ki-3Tl">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="fAQ-Ok-Jhc" kind="show" id="2UJ-Zc-2na"/>
@@ -52,10 +61,38 @@
                     <view key="view" contentMode="scaleToFill" id="LXy-xd-J63">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDe-Pu-nQj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Artist Bio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XK3-jq-vuN">
+                                <rect key="frame" x="0.0" y="129" width="414" height="733"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XK3-jq-vuN" firstAttribute="leading" secondItem="hs7-fk-SWB" secondAttribute="leading" id="AgV-Ws-YmK"/>
+                            <constraint firstItem="hs7-fk-SWB" firstAttribute="trailing" secondItem="UDe-Pu-nQj" secondAttribute="trailing" id="EvN-S4-Wvb"/>
+                            <constraint firstItem="hs7-fk-SWB" firstAttribute="trailing" secondItem="XK3-jq-vuN" secondAttribute="trailing" id="Lhr-aB-rhi"/>
+                            <constraint firstItem="UDe-Pu-nQj" firstAttribute="leading" secondItem="hs7-fk-SWB" secondAttribute="leading" id="UIZ-yq-g5B"/>
+                            <constraint firstItem="UDe-Pu-nQj" firstAttribute="top" secondItem="hs7-fk-SWB" secondAttribute="top" id="dbr-nf-oE8"/>
+                            <constraint firstItem="hs7-fk-SWB" firstAttribute="bottom" secondItem="XK3-jq-vuN" secondAttribute="bottom" id="nX6-Uk-RJn"/>
+                            <constraint firstItem="XK3-jq-vuN" firstAttribute="top" secondItem="UDe-Pu-nQj" secondAttribute="bottom" id="rTn-px-NNh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hs7-fk-SWB"/>
                     </view>
                     <navigationItem key="navigationItem" id="RMo-a1-39E"/>
+                    <connections>
+                        <outlet property="bioTextView" destination="XK3-jq-vuN" id="Coe-SP-cHx"/>
+                        <outlet property="nameLabel" destination="UDe-Pu-nQj" id="yY4-d9-iCk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EiS-Cw-lKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,12 +105,42 @@
                     <view key="view" contentMode="scaleToFill" id="DII-cg-tsk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="RXe-1X-sMb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Artist Bio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aBa-EN-6yk">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aBa-EN-6yk" firstAttribute="top" secondItem="RXe-1X-sMb" secondAttribute="bottom" id="9xt-oA-UjM"/>
+                            <constraint firstItem="kc5-Zc-m6A" firstAttribute="trailing" secondItem="aBa-EN-6yk" secondAttribute="trailing" id="Avr-Fg-nJg"/>
+                            <constraint firstItem="aBa-EN-6yk" firstAttribute="leading" secondItem="kc5-Zc-m6A" secondAttribute="leading" id="FZl-Ah-bzm"/>
+                            <constraint firstItem="RXe-1X-sMb" firstAttribute="leading" secondItem="kc5-Zc-m6A" secondAttribute="leading" id="YQe-97-vJI"/>
+                            <constraint firstItem="RXe-1X-sMb" firstAttribute="trailing" secondItem="kc5-Zc-m6A" secondAttribute="trailing" id="b4D-TR-AcN"/>
+                            <constraint firstItem="kc5-Zc-m6A" firstAttribute="bottom" secondItem="aBa-EN-6yk" secondAttribute="bottom" id="twa-fr-kQj"/>
+                            <constraint firstItem="RXe-1X-sMb" firstAttribute="top" secondItem="kc5-Zc-m6A" secondAttribute="top" id="wGB-ah-bhK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kc5-Zc-m6A"/>
                     </view>
                     <navigationItem key="navigationItem" id="jCK-v1-a6G">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="kbK-Ch-SYf"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="kbK-Ch-SYf">
+                            <connections>
+                                <action selector="saveArtist:" destination="aoy-PE-uas" id="AoN-lI-Ofq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bioTextView" destination="aBa-EN-6yk" id="G6Y-iA-tUW"/>
+                        <outlet property="searchBar" destination="RXe-1X-sMb" id="XJ5-8V-COf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNB-eU-nxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

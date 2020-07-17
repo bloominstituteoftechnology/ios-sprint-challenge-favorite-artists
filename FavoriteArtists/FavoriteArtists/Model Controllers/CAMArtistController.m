@@ -8,9 +8,28 @@
 
 #import "CAMArtistController.h"
 #import "CAMArtist.h"
+#import "CAMArtist+Serialization.h"
+
+@interface CAMArtistController () {}
+
+@property (nonatomic) NSMutableArray *favoriteArtistsSafeStore;
+
+@end
 
 @implementation CAMArtistController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _favoriteArtistsSafeStore = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (NSArray *)savedArtists {
+    return [self.favoriteArtistsSafeStore copy];
+}
 
 
 @end

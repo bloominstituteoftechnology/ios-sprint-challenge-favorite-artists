@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CAMArtist.h"
+#import "CAMArtist+Serialization.h"
 
 NS_ASSUME_NONNULL_BEGIN
 typedef void (^artistCompletion) (CAMArtist *, NSError *);

@@ -15,9 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
-
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
@@ -72,7 +70,7 @@
 
 }
 
-/// didSet, called when self.favoriteArtist is set
+// didSet, called when self.favoriteArtist is set
 - (void)setFavoriteArtist:(EJSFavoriteArtist *)favoriteArtist {
     NSLog(@"favoriteArtist SET");
     _favoriteArtist = favoriteArtist;

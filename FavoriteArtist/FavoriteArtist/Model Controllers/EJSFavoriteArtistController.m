@@ -14,7 +14,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 
 @interface EJSFavoriteArtistController()
 
-/// This is where they are stored
+// This is where they are stored
 @property (nonatomic) NSMutableArray *privateArtists;
 
 @end
@@ -78,7 +78,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     }] resume];
 }
 
-/// inits its array and thens load from documents
+// inits its array and thens load from documents
 - (instancetype)init {
     
     if (self = [super init]) {
@@ -88,7 +88,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     return self;
 }
 
-/// Returns private artists array
+// Returns private artists array
 - (NSArray *)favoriteArtists {
     return self.privateArtists;
 }
@@ -104,13 +104,13 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     [self saveToPersistentStore];
 }
 
-/// Documents URL
+// Documents URL
 - (NSURL *)applicationDocumentsDirectory {
     // documentsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return nil}
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
 }
 
-/// favoriteArtists URL
+// favoriteArtists URL
 - (NSURL *)favoriteArtistsURL {
     // itemsURL = documentsDir.appendingPathComponent("grillcountdown.plist")
     return [self.applicationDocumentsDirectory URLByAppendingPathComponent:@"favoriteArtists.json"];

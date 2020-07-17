@@ -10,7 +10,7 @@
 
 @implementation EJSFavoriteArtist (NSJSONSerialization)
 
-/// Only used for decoding from JSON. Decodes from a dicitionary that has a key, which holds an array of dictionaries
+// Only used for decoding from JSON. Decodes from a dicitionary that has a key, which holds an array of dictionaries
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
 
     NSArray *artistArray = dictionary[@"artists"];
@@ -41,7 +41,7 @@
     return self;
 }
 
-/// Only used for loading from documents. Loads from an array of dictionaries
+// Only used for loading from documents. Loads from an array of dictionaries
 - (instancetype)initWithDict:(NSDictionary *)dict {
     
     NSString *artist = dict[@"strArtist"];
@@ -55,7 +55,7 @@
     return self;
 }
 
-/// For saving to Documents (turns favoriteArtist into a dictionary object)
+// For saving to Documents (turns favoriteArtist into a dictionary object)
 - (NSDictionary *)toDictionary {
     
     NSDictionary *dictionary = @{

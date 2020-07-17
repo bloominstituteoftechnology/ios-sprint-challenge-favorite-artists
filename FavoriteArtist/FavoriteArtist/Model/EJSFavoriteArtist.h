@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EJSFavoriteArtist : NSObject
 
-@property (nonatomic, readonly, copy) NSString *artist; // "Coldplay"
-@property (nonatomic, readonly) int yearFormed; // "1996"
-@property (nonatomic, readonly, copy) NSString *biography; // "Cold play are a ..."
+@property (nonatomic, readonly, copy) NSString *artist; // Artist name
+@property (nonatomic, readonly) int yearFormed; // Year artist was formed
+@property (nonatomic, readonly, copy) NSString *biography; // biography
 
 - (instancetype)initWithartist:(NSString *)artist
                     yearFormed:(int)yearFormed

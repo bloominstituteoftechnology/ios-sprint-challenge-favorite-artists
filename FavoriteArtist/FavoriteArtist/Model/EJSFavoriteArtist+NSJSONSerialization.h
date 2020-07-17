@@ -14,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface EJSFavoriteArtist (NSJSONSerialization)
 
 
-/// To decode from JSON
+// To decode from JSON
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
-/// To decode from documents
+// To decode from documents
 - (instancetype)initWithDict:(NSDictionary *)dict;
 
-/// Used to save to documents
+// Used to save to documents
 - (NSDictionary *)toDictionary;
 
 

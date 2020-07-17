@@ -20,6 +20,7 @@
 		5E2E4DF124C202D5002B00B9 /* CAMSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DF024C202D5002B00B9 /* CAMSearchController.m */; };
 		5E2E4DF624C20AF3002B00B9 /* CAMArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DF524C20AF3002B00B9 /* CAMArtistController.m */; };
 		5E2E4DFB24C21BC2002B00B9 /* CAMArtist+Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DFA24C21BC2002B00B9 /* CAMArtist+Serialization.m */; };
+		5E2E4DFE24C226C9002B00B9 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E2E4DFD24C226C9002B00B9 /* Artist.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		5E2E4DF724C21B85002B00B9 /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		5E2E4DF924C21BC2002B00B9 /* CAMArtist+Serialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAMArtist+Serialization.h"; sourceTree = "<group>"; };
 		5E2E4DFA24C21BC2002B00B9 /* CAMArtist+Serialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAMArtist+Serialization.m"; sourceTree = "<group>"; };
+		5E2E4DFD24C226C9002B00B9 /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		5E2E4DDE24C1F990002B00B9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E2E4DFC24C22680002B00B9 /* Data */,
 				5E2E4DD524C1F934002B00B9 /* main.m */,
 				5E2E4DCF24C1F934002B00B9 /* Assets.xcassets */,
 				5E2E4DD424C1F934002B00B9 /* Info.plist */,
@@ -188,6 +191,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		5E2E4DFC24C22680002B00B9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5E2E4DFD24C226C9002B00B9 /* Artist.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +259,7 @@
 			files = (
 				5E2E4DD324C1F934002B00B9 /* LaunchScreen.storyboard in Resources */,
 				5E2E4DD024C1F934002B00B9 /* Assets.xcassets in Resources */,
+				5E2E4DFE24C226C9002B00B9 /* Artist.json in Resources */,
 				5E2E4DCE24C1F92D002B00B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

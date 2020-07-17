@@ -51,6 +51,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorite Artist" id="jxa-Ha-jlN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5xM-k9-Nmn">
+                            <color key="tintColor" red="0.43509857149999998" green="0.40909094460000001" blue="0.54401967009999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="xCw-XH-8fw" kind="show" identifier="AddArtistSegue" id="Rps-Fn-jAh"/>
                             </connections>
@@ -69,9 +70,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KY7-VK-khX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KY7-VK-khX">
                                 <rect key="frame" x="20" y="241" width="374" height="621"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" red="0.804565325" green="0.76042182719999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -83,13 +84,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR3-mO-cme">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.43509857149999998" green="0.40909094460000001" blue="0.54401967009999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKL-q1-Bho">
                                         <rect key="frame" x="0.0" y="60" width="87" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -99,7 +100,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KY7-VK-khX" firstAttribute="bottom" secondItem="Qgw-jh-6tk" secondAttribute="bottom" id="24k-4Y-KRR"/>
                             <constraint firstItem="0h6-Rk-nhY" firstAttribute="leading" secondItem="Qgw-jh-6tk" secondAttribute="leading" constant="20" id="5WU-fc-hvx"/>
@@ -110,11 +111,13 @@
                             <constraint firstItem="Qgw-jh-6tk" firstAttribute="trailing" secondItem="KY7-VK-khX" secondAttribute="trailing" constant="20" id="Vbg-mk-QvS"/>
                             <constraint firstItem="Qgw-jh-6tk" firstAttribute="bottom" secondItem="0h6-Rk-nhY" secondAttribute="bottom" constant="616.5" id="ixd-nO-Hno"/>
                             <constraint firstItem="WEI-KR-Wgk" firstAttribute="leading" secondItem="Qgw-jh-6tk" secondAttribute="leading" id="jNs-BU-KG1"/>
+                            <constraint firstItem="KY7-VK-khX" firstAttribute="top" secondItem="WEI-KR-Wgk" secondAttribute="bottom" constant="97" id="ro5-9A-gIL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qgw-jh-6tk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="Txv-lA-c7v">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="c3r-hp-wXQ">
+                            <color key="tintColor" red="0.43509857149999998" green="0.40909094460000001" blue="0.54401967009999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="saveTapped:" destination="xCw-XH-8fw" id="U4M-qX-HNw"/>
                             </connections>

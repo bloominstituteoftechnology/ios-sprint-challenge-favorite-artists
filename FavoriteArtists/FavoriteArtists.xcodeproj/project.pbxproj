@@ -7,50 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E2E4DC524C1F92D002B00B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DC424C1F92D002B00B9 /* AppDelegate.m */; };
-		5E2E4DC824C1F92D002B00B9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DC724C1F92D002B00B9 /* SceneDelegate.m */; };
-		5E2E4DCE24C1F92D002B00B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2E4DCC24C1F92D002B00B9 /* Main.storyboard */; };
-		5E2E4DD024C1F934002B00B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2E4DCF24C1F934002B00B9 /* Assets.xcassets */; };
-		5E2E4DD324C1F934002B00B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2E4DD124C1F934002B00B9 /* LaunchScreen.storyboard */; };
-		5E2E4DD624C1F934002B00B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DD524C1F934002B00B9 /* main.m */; };
-		5E2E4DE324C1FE8E002B00B9 /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DE224C1FE8E002B00B9 /* FavoriteArtistsTableViewController.m */; };
-		5E2E4DE624C1FEBE002B00B9 /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DE524C1FEBE002B00B9 /* AddArtistViewController.m */; };
-		5E2E4DE924C1FED9002B00B9 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DE824C1FED9002B00B9 /* ArtistDetailViewController.m */; };
-		5E2E4DEE24C20022002B00B9 /* CAMArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DED24C20022002B00B9 /* CAMArtist.m */; };
-		5E2E4DF624C20AF3002B00B9 /* CAMArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DF524C20AF3002B00B9 /* CAMArtistController.m */; };
-		5E2E4DFB24C21BC2002B00B9 /* CAMArtist+Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4DFA24C21BC2002B00B9 /* CAMArtist+Serialization.m */; };
-		5E2E4DFE24C226C9002B00B9 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E2E4DFD24C226C9002B00B9 /* Artist.json */; };
+		5E1B5F7524C286DA00005F18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5F7424C286DA00005F18 /* AppDelegate.m */; };
+		5E1B5F7824C286DA00005F18 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5F7724C286DA00005F18 /* SceneDelegate.m */; };
+		5E1B5F8024C286E100005F18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E1B5F7F24C286E100005F18 /* Assets.xcassets */; };
+		5E1B5F8624C286E100005F18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5F8524C286E100005F18 /* main.m */; };
+		5E1B5F9024C287A900005F18 /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E1B5F8F24C287A900005F18 /* Artist.json */; };
+		5E1B5F9824C287C800005F18 /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5F9324C287C800005F18 /* FavoriteArtistsTableViewController.m */; };
+		5E1B5F9924C287C800005F18 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5F9524C287C800005F18 /* ArtistDetailViewController.m */; };
+		5E1B5F9A24C287C800005F18 /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5F9724C287C800005F18 /* AddArtistViewController.m */; };
+		5E1B5FA124C287D800005F18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E1B5F9D24C287D700005F18 /* LaunchScreen.storyboard */; };
+		5E1B5FA224C287D800005F18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E1B5F9F24C287D700005F18 /* Main.storyboard */; };
+		5E1B5FA624C287EA00005F18 /* CAMArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5FA524C287EA00005F18 /* CAMArtistController.m */; };
+		5E1B5FAA24C287F300005F18 /* CAMArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5FA824C287F200005F18 /* CAMArtist.m */; };
+		5E1B5FB024C287FE00005F18 /* CAMArtist+Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5FAD24C287FE00005F18 /* CAMArtist+Serialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E2E4DC024C1F92D002B00B9 /* FavoriteArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E2E4DC324C1F92D002B00B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5E2E4DC424C1F92D002B00B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5E2E4DC624C1F92D002B00B9 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		5E2E4DC724C1F92D002B00B9 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		5E2E4DCD24C1F92D002B00B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5E2E4DCF24C1F934002B00B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5E2E4DD224C1F934002B00B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5E2E4DD424C1F934002B00B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E2E4DD524C1F934002B00B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5E2E4DE124C1FE8E002B00B9 /* FavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
-		5E2E4DE224C1FE8E002B00B9 /* FavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
-		5E2E4DE424C1FEBE002B00B9 /* AddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddArtistViewController.h; sourceTree = "<group>"; };
-		5E2E4DE524C1FEBE002B00B9 /* AddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistViewController.m; sourceTree = "<group>"; };
-		5E2E4DE724C1FED9002B00B9 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
-		5E2E4DE824C1FED9002B00B9 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
-		5E2E4DEC24C20022002B00B9 /* CAMArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMArtist.h; sourceTree = "<group>"; };
-		5E2E4DED24C20022002B00B9 /* CAMArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMArtist.m; sourceTree = "<group>"; };
-		5E2E4DF424C20AF3002B00B9 /* CAMArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMArtistController.h; sourceTree = "<group>"; };
-		5E2E4DF524C20AF3002B00B9 /* CAMArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMArtistController.m; sourceTree = "<group>"; };
-		5E2E4DF724C21B85002B00B9 /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
-		5E2E4DF924C21BC2002B00B9 /* CAMArtist+Serialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAMArtist+Serialization.h"; sourceTree = "<group>"; };
-		5E2E4DFA24C21BC2002B00B9 /* CAMArtist+Serialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAMArtist+Serialization.m"; sourceTree = "<group>"; };
-		5E2E4DFD24C226C9002B00B9 /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
+		5E1B5F7024C286DA00005F18 /* FavoriteArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E1B5F7324C286DA00005F18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5E1B5F7424C286DA00005F18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5E1B5F7624C286DA00005F18 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		5E1B5F7724C286DA00005F18 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		5E1B5F7F24C286E100005F18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E1B5F8424C286E100005F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E1B5F8524C286E100005F18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E1B5F8F24C287A900005F18 /* Artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
+		5E1B5F9224C287C800005F18 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		5E1B5F9324C287C800005F18 /* FavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		5E1B5F9424C287C800005F18 /* AddArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddArtistViewController.h; sourceTree = "<group>"; };
+		5E1B5F9524C287C800005F18 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		5E1B5F9624C287C800005F18 /* FavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		5E1B5F9724C287C800005F18 /* AddArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddArtistViewController.m; sourceTree = "<group>"; };
+		5E1B5F9E24C287D700005F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E1B5FA024C287D700005F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E1B5FA424C287EA00005F18 /* CAMArtistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMArtistController.h; sourceTree = "<group>"; };
+		5E1B5FA524C287EA00005F18 /* CAMArtistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAMArtistController.m; sourceTree = "<group>"; };
+		5E1B5FA824C287F200005F18 /* CAMArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAMArtist.m; sourceTree = "<group>"; };
+		5E1B5FA924C287F200005F18 /* CAMArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMArtist.h; sourceTree = "<group>"; };
+		5E1B5FAD24C287FE00005F18 /* CAMArtist+Serialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAMArtist+Serialization.m"; sourceTree = "<group>"; };
+		5E1B5FAE24C287FE00005F18 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		5E1B5FAF24C287FE00005F18 /* CAMArtist+Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAMArtist+Serialization.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5E2E4DBD24C1F92D002B00B9 /* Frameworks */ = {
+		5E1B5F6D24C286DA00005F18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,142 +60,142 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E2E4DB724C1F92D002B00B9 = {
+		5E1B5F6724C286DA00005F18 = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DC224C1F92D002B00B9 /* FavoriteArtists */,
-				5E2E4DC124C1F92D002B00B9 /* Products */,
+				5E1B5F7224C286DA00005F18 /* FavoriteArtists */,
+				5E1B5F7124C286DA00005F18 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5E2E4DC124C1F92D002B00B9 /* Products */ = {
+		5E1B5F7124C286DA00005F18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DC024C1F92D002B00B9 /* FavoriteArtists.app */,
+				5E1B5F7024C286DA00005F18 /* FavoriteArtists.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5E2E4DC224C1F92D002B00B9 /* FavoriteArtists */ = {
+		5E1B5F7224C286DA00005F18 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DEA24C1FFC6002B00B9 /* Models */,
-				5E2E4DF224C20AB1002B00B9 /* Services */,
-				5E2E4DEB24C1FFD2002B00B9 /* Model Controllers */,
-				5E2E4DDD24C1F983002B00B9 /* Views */,
-				5E2E4DE024C1F9D9002B00B9 /* View Controllers */,
-				5E2E4DDE24C1F990002B00B9 /* Resources */,
-				5E2E4DDF24C1F9B1002B00B9 /* Application */,
+				5E1B5FA724C287F200005F18 /* Models */,
+				5E1B5FAB24C287FE00005F18 /* Services */,
+				5E1B5FA324C287EA00005F18 /* Model Controllers */,
+				5E1B5F9B24C287D700005F18 /* Views */,
+				5E1B5F9124C287C800005F18 /* View Controllers */,
+				5E1B5F8D24C2875B00005F18 /* Resources */,
+				5E1B5F8C24C2874A00005F18 /* Application */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
 		};
-		5E2E4DDC24C1F979002B00B9 /* Storyboards */ = {
+		5E1B5F8C24C2874A00005F18 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DCC24C1F92D002B00B9 /* Main.storyboard */,
-				5E2E4DD124C1F934002B00B9 /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		5E2E4DDD24C1F983002B00B9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5E2E4DDC24C1F979002B00B9 /* Storyboards */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		5E2E4DDE24C1F990002B00B9 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5E2E4DFC24C22680002B00B9 /* Data */,
-				5E2E4DD524C1F934002B00B9 /* main.m */,
-				5E2E4DCF24C1F934002B00B9 /* Assets.xcassets */,
-				5E2E4DD424C1F934002B00B9 /* Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		5E2E4DDF24C1F9B1002B00B9 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				5E2E4DC324C1F92D002B00B9 /* AppDelegate.h */,
-				5E2E4DC424C1F92D002B00B9 /* AppDelegate.m */,
-				5E2E4DC624C1F92D002B00B9 /* SceneDelegate.h */,
-				5E2E4DC724C1F92D002B00B9 /* SceneDelegate.m */,
+				5E1B5F7324C286DA00005F18 /* AppDelegate.h */,
+				5E1B5F7424C286DA00005F18 /* AppDelegate.m */,
+				5E1B5F7624C286DA00005F18 /* SceneDelegate.h */,
+				5E1B5F7724C286DA00005F18 /* SceneDelegate.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		5E2E4DE024C1F9D9002B00B9 /* View Controllers */ = {
+		5E1B5F8D24C2875B00005F18 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DE124C1FE8E002B00B9 /* FavoriteArtistsTableViewController.h */,
-				5E2E4DE224C1FE8E002B00B9 /* FavoriteArtistsTableViewController.m */,
-				5E2E4DE424C1FEBE002B00B9 /* AddArtistViewController.h */,
-				5E2E4DE524C1FEBE002B00B9 /* AddArtistViewController.m */,
-				5E2E4DE724C1FED9002B00B9 /* ArtistDetailViewController.h */,
-				5E2E4DE824C1FED9002B00B9 /* ArtistDetailViewController.m */,
+				5E1B5F8E24C287A900005F18 /* Data */,
+				5E1B5F7F24C286E100005F18 /* Assets.xcassets */,
+				5E1B5F8524C286E100005F18 /* main.m */,
+				5E1B5F8424C286E100005F18 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5E1B5F8E24C287A900005F18 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5E1B5F8F24C287A900005F18 /* Artist.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5E1B5F9124C287C800005F18 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E1B5F9224C287C800005F18 /* ArtistDetailViewController.h */,
+				5E1B5F9324C287C800005F18 /* FavoriteArtistsTableViewController.m */,
+				5E1B5F9424C287C800005F18 /* AddArtistViewController.h */,
+				5E1B5F9524C287C800005F18 /* ArtistDetailViewController.m */,
+				5E1B5F9624C287C800005F18 /* FavoriteArtistsTableViewController.h */,
+				5E1B5F9724C287C800005F18 /* AddArtistViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		5E2E4DEA24C1FFC6002B00B9 /* Models */ = {
+		5E1B5F9B24C287D700005F18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DEC24C20022002B00B9 /* CAMArtist.h */,
-				5E2E4DED24C20022002B00B9 /* CAMArtist.m */,
+				5E1B5F9C24C287D700005F18 /* Storyboards */,
 			);
-			path = Models;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		5E2E4DEB24C1FFD2002B00B9 /* Model Controllers */ = {
+		5E1B5F9C24C287D700005F18 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DF424C20AF3002B00B9 /* CAMArtistController.h */,
-				5E2E4DF524C20AF3002B00B9 /* CAMArtistController.m */,
+				5E1B5F9D24C287D700005F18 /* LaunchScreen.storyboard */,
+				5E1B5F9F24C287D700005F18 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5E1B5FA324C287EA00005F18 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E1B5FA424C287EA00005F18 /* CAMArtistController.h */,
+				5E1B5FA524C287EA00005F18 /* CAMArtistController.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
-		5E2E4DF224C20AB1002B00B9 /* Services */ = {
+		5E1B5FA724C287F200005F18 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DF824C21B8B002B00B9 /* Helpers */,
+				5E1B5FA824C287F200005F18 /* CAMArtist.m */,
+				5E1B5FA924C287F200005F18 /* CAMArtist.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5E1B5FAB24C287FE00005F18 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5E1B5FAC24C287FE00005F18 /* Helpers */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		5E2E4DF824C21B8B002B00B9 /* Helpers */ = {
+		5E1B5FAC24C287FE00005F18 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E4DF724C21B85002B00B9 /* LSIFileHelper.h */,
-				5E2E4DF924C21BC2002B00B9 /* CAMArtist+Serialization.h */,
-				5E2E4DFA24C21BC2002B00B9 /* CAMArtist+Serialization.m */,
+				5E1B5FAD24C287FE00005F18 /* CAMArtist+Serialization.m */,
+				5E1B5FAE24C287FE00005F18 /* LSIFileHelper.h */,
+				5E1B5FAF24C287FE00005F18 /* CAMArtist+Serialization.h */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		5E2E4DFC24C22680002B00B9 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				5E2E4DFD24C226C9002B00B9 /* Artist.json */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5E2E4DBF24C1F92D002B00B9 /* FavoriteArtists */ = {
+		5E1B5F6F24C286DA00005F18 /* FavoriteArtists */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E2E4DD924C1F934002B00B9 /* Build configuration list for PBXNativeTarget "FavoriteArtists" */;
+			buildConfigurationList = 5E1B5F8924C286E100005F18 /* Build configuration list for PBXNativeTarget "FavoriteArtists" */;
 			buildPhases = (
-				5E2E4DBC24C1F92D002B00B9 /* Sources */,
-				5E2E4DBD24C1F92D002B00B9 /* Frameworks */,
-				5E2E4DBE24C1F92D002B00B9 /* Resources */,
+				5E1B5F6C24C286DA00005F18 /* Sources */,
+				5E1B5F6D24C286DA00005F18 /* Frameworks */,
+				5E1B5F6E24C286DA00005F18 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -203,25 +203,24 @@
 			);
 			name = FavoriteArtists;
 			productName = FavoriteArtists;
-			productReference = 5E2E4DC024C1F92D002B00B9 /* FavoriteArtists.app */;
+			productReference = 5E1B5F7024C286DA00005F18 /* FavoriteArtists.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5E2E4DB824C1F92D002B00B9 /* Project object */ = {
+		5E1B5F6824C286DA00005F18 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = CAM;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Cody Morley";
 				TargetAttributes = {
-					5E2E4DBF24C1F92D002B00B9 = {
-						CreatedOnToolsVersion = 11.5;
+					5E1B5F6F24C286DA00005F18 = {
+						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
-			buildConfigurationList = 5E2E4DBB24C1F92D002B00B9 /* Build configuration list for PBXProject "FavoriteArtists" */;
+			buildConfigurationList = 5E1B5F6B24C286DA00005F18 /* Build configuration list for PBXProject "FavoriteArtists" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,70 +228,70 @@
 				en,
 				Base,
 			);
-			mainGroup = 5E2E4DB724C1F92D002B00B9;
-			productRefGroup = 5E2E4DC124C1F92D002B00B9 /* Products */;
+			mainGroup = 5E1B5F6724C286DA00005F18;
+			productRefGroup = 5E1B5F7124C286DA00005F18 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E2E4DBF24C1F92D002B00B9 /* FavoriteArtists */,
+				5E1B5F6F24C286DA00005F18 /* FavoriteArtists */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5E2E4DBE24C1F92D002B00B9 /* Resources */ = {
+		5E1B5F6E24C286DA00005F18 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E2E4DD324C1F934002B00B9 /* LaunchScreen.storyboard in Resources */,
-				5E2E4DD024C1F934002B00B9 /* Assets.xcassets in Resources */,
-				5E2E4DFE24C226C9002B00B9 /* Artist.json in Resources */,
-				5E2E4DCE24C1F92D002B00B9 /* Main.storyboard in Resources */,
+				5E1B5FA124C287D800005F18 /* LaunchScreen.storyboard in Resources */,
+				5E1B5F9024C287A900005F18 /* Artist.json in Resources */,
+				5E1B5F8024C286E100005F18 /* Assets.xcassets in Resources */,
+				5E1B5FA224C287D800005F18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5E2E4DBC24C1F92D002B00B9 /* Sources */ = {
+		5E1B5F6C24C286DA00005F18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E2E4DE324C1FE8E002B00B9 /* FavoriteArtistsTableViewController.m in Sources */,
-				5E2E4DFB24C21BC2002B00B9 /* CAMArtist+Serialization.m in Sources */,
-				5E2E4DC524C1F92D002B00B9 /* AppDelegate.m in Sources */,
-				5E2E4DF624C20AF3002B00B9 /* CAMArtistController.m in Sources */,
-				5E2E4DEE24C20022002B00B9 /* CAMArtist.m in Sources */,
-				5E2E4DE924C1FED9002B00B9 /* ArtistDetailViewController.m in Sources */,
-				5E2E4DE624C1FEBE002B00B9 /* AddArtistViewController.m in Sources */,
-				5E2E4DD624C1F934002B00B9 /* main.m in Sources */,
-				5E2E4DC824C1F92D002B00B9 /* SceneDelegate.m in Sources */,
+				5E1B5FB024C287FE00005F18 /* CAMArtist+Serialization.m in Sources */,
+				5E1B5FA624C287EA00005F18 /* CAMArtistController.m in Sources */,
+				5E1B5F9924C287C800005F18 /* ArtistDetailViewController.m in Sources */,
+				5E1B5F9824C287C800005F18 /* FavoriteArtistsTableViewController.m in Sources */,
+				5E1B5F7524C286DA00005F18 /* AppDelegate.m in Sources */,
+				5E1B5F9A24C287C800005F18 /* AddArtistViewController.m in Sources */,
+				5E1B5F8624C286E100005F18 /* main.m in Sources */,
+				5E1B5FAA24C287F300005F18 /* CAMArtist.m in Sources */,
+				5E1B5F7824C286DA00005F18 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5E2E4DCC24C1F92D002B00B9 /* Main.storyboard */ = {
+		5E1B5F9D24C287D700005F18 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5E2E4DCD24C1F92D002B00B9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5E2E4DD124C1F934002B00B9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E2E4DD224C1F934002B00B9 /* Base */,
+				5E1B5F9E24C287D700005F18 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5E1B5F9F24C287D700005F18 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E1B5FA024C287D700005F18 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5E2E4DD724C1F934002B00B9 /* Debug */ = {
+		5E1B5F8724C286E100005F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -342,7 +341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -350,7 +349,7 @@
 			};
 			name = Debug;
 		};
-		5E2E4DD824C1F934002B00B9 /* Release */ = {
+		5E1B5F8824C286E100005F18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -394,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -402,7 +401,7 @@
 			};
 			name = Release;
 		};
-		5E2E4DDA24C1F934002B00B9 /* Debug */ = {
+		5E1B5F8A24C286E100005F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -419,7 +418,7 @@
 			};
 			name = Debug;
 		};
-		5E2E4DDB24C1F934002B00B9 /* Release */ = {
+		5E1B5F8B24C286E100005F18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -439,25 +438,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5E2E4DBB24C1F92D002B00B9 /* Build configuration list for PBXProject "FavoriteArtists" */ = {
+		5E1B5F6B24C286DA00005F18 /* Build configuration list for PBXProject "FavoriteArtists" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E2E4DD724C1F934002B00B9 /* Debug */,
-				5E2E4DD824C1F934002B00B9 /* Release */,
+				5E1B5F8724C286E100005F18 /* Debug */,
+				5E1B5F8824C286E100005F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E2E4DD924C1F934002B00B9 /* Build configuration list for PBXNativeTarget "FavoriteArtists" */ = {
+		5E1B5F8924C286E100005F18 /* Build configuration list for PBXNativeTarget "FavoriteArtists" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E2E4DDA24C1F934002B00B9 /* Debug */,
-				5E2E4DDB24C1F934002B00B9 /* Release */,
+				5E1B5F8A24C286E100005F18 /* Debug */,
+				5E1B5F8B24C286E100005F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5E2E4DB824C1F92D002B00B9 /* Project object */;
+	rootObject = 5E1B5F6824C286DA00005F18 /* Project object */;
 }

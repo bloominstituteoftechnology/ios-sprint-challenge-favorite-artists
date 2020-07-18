@@ -21,17 +21,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//MARK: - Methods -
+-(void)updateViews
+{
+    if (self.artist) {
+        NSString *founded = [NSString stringWithFormat: @"%i", self.artist.founded];
+        self.nameLabel.text = self.artist.name;
+        self.foundedLabel.text = founded;
+        self.bioTextView.text = self.artist.bio;
+    } else {
+        self.nameLabel.text = @"Error fetching artist, please try again.";
+        self.foundedLabel.text = @"";
+        self.bioTextView.text = @"";
+    }
 }
-*/
 
 @end

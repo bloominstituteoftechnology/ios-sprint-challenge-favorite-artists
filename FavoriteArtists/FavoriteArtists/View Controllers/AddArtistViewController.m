@@ -15,7 +15,7 @@
 
 @end
 
-@implementation AddArtistViewController (UISearchBarDataSource)
+@implementation AddArtistViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddArtistViewController : UIViewController
+@interface AddArtistViewController : UIViewController <UISearchBarDelegate>
 
 @property CAMArtistController *controller;
 

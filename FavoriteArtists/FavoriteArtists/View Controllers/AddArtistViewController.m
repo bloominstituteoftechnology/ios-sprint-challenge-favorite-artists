@@ -10,10 +10,14 @@
 #import <UIKit/UIKit.h>
 
 @interface AddArtistViewController ()
+//MARK: - Internal Properties -
+/// Outlets
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *foundedLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
-
 @end
+
 
 @implementation AddArtistViewController 
 

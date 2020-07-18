@@ -69,34 +69,44 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Artist Bio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XK3-jq-vuN">
-                                <rect key="frame" x="0.0" y="129" width="414" height="733"/>
+                                <rect key="frame" x="0.0" y="147" width="414" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Founded: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIJ-4v-Nkw">
+                                <rect key="frame" x="0.0" y="129" width="414" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="XK3-jq-vuN" firstAttribute="leading" secondItem="hs7-fk-SWB" secondAttribute="leading" id="AgV-Ws-YmK"/>
                             <constraint firstItem="hs7-fk-SWB" firstAttribute="trailing" secondItem="UDe-Pu-nQj" secondAttribute="trailing" id="EvN-S4-Wvb"/>
+                            <constraint firstItem="bIJ-4v-Nkw" firstAttribute="leading" secondItem="hs7-fk-SWB" secondAttribute="leading" id="H8J-1k-ZQT"/>
                             <constraint firstItem="hs7-fk-SWB" firstAttribute="trailing" secondItem="XK3-jq-vuN" secondAttribute="trailing" id="Lhr-aB-rhi"/>
                             <constraint firstItem="UDe-Pu-nQj" firstAttribute="leading" secondItem="hs7-fk-SWB" secondAttribute="leading" id="UIZ-yq-g5B"/>
+                            <constraint firstItem="bIJ-4v-Nkw" firstAttribute="top" secondItem="UDe-Pu-nQj" secondAttribute="bottom" id="XAu-Jx-kdH"/>
                             <constraint firstItem="UDe-Pu-nQj" firstAttribute="top" secondItem="hs7-fk-SWB" secondAttribute="top" id="dbr-nf-oE8"/>
                             <constraint firstItem="hs7-fk-SWB" firstAttribute="bottom" secondItem="XK3-jq-vuN" secondAttribute="bottom" id="nX6-Uk-RJn"/>
-                            <constraint firstItem="XK3-jq-vuN" firstAttribute="top" secondItem="UDe-Pu-nQj" secondAttribute="bottom" id="rTn-px-NNh"/>
+                            <constraint firstItem="hs7-fk-SWB" firstAttribute="trailing" secondItem="bIJ-4v-Nkw" secondAttribute="trailing" id="vaL-De-aSs"/>
+                            <constraint firstItem="XK3-jq-vuN" firstAttribute="top" secondItem="bIJ-4v-Nkw" secondAttribute="bottom" id="zCt-db-3f3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hs7-fk-SWB"/>
                     </view>
                     <navigationItem key="navigationItem" id="RMo-a1-39E"/>
                     <connections>
                         <outlet property="bioTextView" destination="XK3-jq-vuN" id="Coe-SP-cHx"/>
+                        <outlet property="foundedLabel" destination="bIJ-4v-Nkw" id="Y0J-rZ-qhQ"/>
                         <outlet property="nameLabel" destination="UDe-Pu-nQj" id="yY4-d9-iCk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EiS-Cw-lKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="856"/>
+            <point key="canvasLocation" x="595.6521739130435" y="855.80357142857144"/>
         </scene>
         <!--Add Artist View Controller-->
         <scene sceneID="zgp-3e-J7C">
@@ -111,22 +121,40 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Artist Bio" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aBa-EN-6yk">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="183" width="414" height="679"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Founded:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcX-s6-SG5">
+                                <rect key="frame" x="0.0" y="165" width="414" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ie-qx-x0L">
+                                <rect key="frame" x="0.0" y="144" width="414" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="aBa-EN-6yk" firstAttribute="top" secondItem="RXe-1X-sMb" secondAttribute="bottom" id="9xt-oA-UjM"/>
+                            <constraint firstItem="0Ie-qx-x0L" firstAttribute="leading" secondItem="kc5-Zc-m6A" secondAttribute="leading" id="29s-n9-tvy"/>
+                            <constraint firstItem="UcX-s6-SG5" firstAttribute="leading" secondItem="kc5-Zc-m6A" secondAttribute="leading" id="9k7-43-Pmx"/>
                             <constraint firstItem="kc5-Zc-m6A" firstAttribute="trailing" secondItem="aBa-EN-6yk" secondAttribute="trailing" id="Avr-Fg-nJg"/>
                             <constraint firstItem="aBa-EN-6yk" firstAttribute="leading" secondItem="kc5-Zc-m6A" secondAttribute="leading" id="FZl-Ah-bzm"/>
+                            <constraint firstItem="kc5-Zc-m6A" firstAttribute="trailing" secondItem="UcX-s6-SG5" secondAttribute="trailing" id="Rfh-gt-rRX"/>
+                            <constraint firstItem="0Ie-qx-x0L" firstAttribute="top" secondItem="RXe-1X-sMb" secondAttribute="bottom" id="Vg7-4i-0Ac"/>
                             <constraint firstItem="RXe-1X-sMb" firstAttribute="leading" secondItem="kc5-Zc-m6A" secondAttribute="leading" id="YQe-97-vJI"/>
                             <constraint firstItem="RXe-1X-sMb" firstAttribute="trailing" secondItem="kc5-Zc-m6A" secondAttribute="trailing" id="b4D-TR-AcN"/>
+                            <constraint firstItem="kc5-Zc-m6A" firstAttribute="trailing" secondItem="0Ie-qx-x0L" secondAttribute="trailing" id="mwj-bi-DoP"/>
                             <constraint firstItem="kc5-Zc-m6A" firstAttribute="bottom" secondItem="aBa-EN-6yk" secondAttribute="bottom" id="twa-fr-kQj"/>
+                            <constraint firstItem="UcX-s6-SG5" firstAttribute="top" secondItem="0Ie-qx-x0L" secondAttribute="bottom" id="vdm-Fe-mTi"/>
                             <constraint firstItem="RXe-1X-sMb" firstAttribute="top" secondItem="kc5-Zc-m6A" secondAttribute="top" id="wGB-ah-bhK"/>
+                            <constraint firstItem="aBa-EN-6yk" firstAttribute="top" secondItem="UcX-s6-SG5" secondAttribute="bottom" id="wuG-JA-q3q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kc5-Zc-m6A"/>
                     </view>
@@ -139,12 +167,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bioTextView" destination="aBa-EN-6yk" id="G6Y-iA-tUW"/>
+                        <outlet property="foundedLabel" destination="UcX-s6-SG5" id="bDQ-QS-jaS"/>
+                        <outlet property="nameLabel" destination="0Ie-qx-x0L" id="Uwp-rX-fIU"/>
                         <outlet property="searchBar" destination="RXe-1X-sMb" id="XJ5-8V-COf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNB-eU-nxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="115"/>
+            <point key="canvasLocation" x="1563.768115942029" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x2s-ca-ApC">

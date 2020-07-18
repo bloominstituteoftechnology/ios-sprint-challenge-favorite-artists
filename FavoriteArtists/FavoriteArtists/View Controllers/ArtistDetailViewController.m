@@ -9,10 +9,13 @@
 #import "ArtistDetailViewController.h"
 
 @interface ArtistDetailViewController ()
+//MARK: - Internal Properties -
+/// Outlets
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *foundedLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
-
 @end
+
 
 @implementation ArtistDetailViewController
 

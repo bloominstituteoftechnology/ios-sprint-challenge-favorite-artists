@@ -29,6 +29,8 @@
     NSString *strBiographyEN = dictionary[@"strBiographyEN"];
     NSNumber *intFormedyear = dictionary[@"intFormedYear"];
     
+    self = [self initWithStrArtist:strArtist strBiographyEN:strBiographyEN intFormedYear:intFormedyear.intValue];
+    
     return self;
     
 }

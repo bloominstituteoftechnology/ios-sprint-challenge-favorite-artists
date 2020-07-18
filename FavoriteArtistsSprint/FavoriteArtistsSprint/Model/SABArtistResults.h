@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class SABArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SABArtistResults : NSObject
 
+@property (nonatomic, readonly, copy) NSArray<SABArtist *> *artists;
+
+- (instancetype)initWithArtists:(NSArray<SABArtist *> *)artists;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

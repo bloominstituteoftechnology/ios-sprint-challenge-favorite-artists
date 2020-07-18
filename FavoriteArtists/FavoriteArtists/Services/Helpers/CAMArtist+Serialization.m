@@ -17,7 +17,7 @@
     NSString *bio = dictionary[@"strBiographyEN"];
     NSString *foundedString = dictionary[@"intFormedYear"];
     int founded;
-    if (!foundedString) {
+    if ([foundedString isKindOfClass:[NSNull class]]) {
         founded = 0000;
     } else {
         founded = [foundedString intValue];

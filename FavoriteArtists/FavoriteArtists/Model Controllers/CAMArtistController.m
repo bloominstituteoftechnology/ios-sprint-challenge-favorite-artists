@@ -20,7 +20,7 @@
 //MARK: - Internal Properties & Get Methods-
 static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
-- (NSArray *)savedArtists
+- (NSArray *)favoriteArtists
 {
     return [self.favoriteArtistsSafeStore copy];
 }

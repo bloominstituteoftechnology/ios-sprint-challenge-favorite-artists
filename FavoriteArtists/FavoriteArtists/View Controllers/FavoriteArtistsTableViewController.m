@@ -30,11 +30,13 @@
 {
     [super viewDidLoad];
     [self.controller loadArtists];
+    [self.tableView reloadData];
 }
 
 - (void)viewWillAppear: (BOOL)animated
 {
     [super viewWillAppear: YES];
+    [self.controller loadArtists];
     [self.tableView reloadData];
 }
 

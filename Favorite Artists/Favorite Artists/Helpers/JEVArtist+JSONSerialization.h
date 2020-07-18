@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JEVArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-@interface JEVArtist_JSONSerialization : NSObject
+@interface JEVArtist (NSJSONSerialiazation)
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
 - (NSDictionary *)createArtistDictionary;
 
 @end
+
+
 
 NS_ASSUME_NONNULL_END

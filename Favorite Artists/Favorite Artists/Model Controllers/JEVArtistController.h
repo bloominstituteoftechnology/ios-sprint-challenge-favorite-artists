@@ -13,11 +13,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JEVArtistController : NSObject
 
-//MARK: Model Properties
+@property (nonatomic, copy) NSMutableArray *privateArtists;
+@property NSURL *baseURL;
 
-@property NSString *name;
-@property NSString *biography;
-@property int yearFormed; 
+- (NSArray *) artists;
+- (void) addArtist:(JEVArtist *)artist;
+- (void) saveArtist;
+- (NSArray *) loadArtists;
+
+- (void)findArtistWithName:(NSString *)name
+                completion:(void (^)(JEVArtist*))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END

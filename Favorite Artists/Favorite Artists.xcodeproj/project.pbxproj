@@ -12,12 +12,15 @@
 		8E37E30924C32A03003957AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E37E30724C32A03003957AC /* Main.storyboard */; };
 		8E37E30B24C32A03003957AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E37E30A24C32A03003957AC /* Assets.xcassets */; };
 		8E37E30E24C32A03003957AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E37E30C24C32A03003957AC /* LaunchScreen.storyboard */; };
-		8E37E31124C32A03003957AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E31024C32A03003957AC /* main.m */; };
 		8E37E31B24C32A03003957AC /* Favorite_ArtistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E31A24C32A03003957AC /* Favorite_ArtistsTests.m */; };
 		8E37E32624C32A04003957AC /* Favorite_ArtistsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E32524C32A04003957AC /* Favorite_ArtistsUITests.m */; };
 		8E37E33B24C32B83003957AC /* JEVArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E33A24C32B83003957AC /* JEVArtist.m */; };
 		8E37E33F24C32BC2003957AC /* JEVArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E33E24C32BC2003957AC /* JEVArtistController.m */; };
-		8E37E34224C32F1F003957AC /* JEVArtist+JSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E34124C32F1F003957AC /* JEVArtist+JSONSerialization.m */; };
+		8E37E34724C33417003957AC /* JEVArtist+JSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E34624C33417003957AC /* JEVArtist+JSONSerialization.m */; };
+		8E37E34924C334A9003957AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E31024C32A03003957AC /* main.m */; };
+		8E37E34C24C336A2003957AC /* JEVArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E34B24C336A2003957AC /* JEVArtistTableViewController.m */; };
+		8E37E34F24C336B3003957AC /* JEVArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E37E34E24C336B3003957AC /* JEVArtistDetailViewController.m */; };
+		8E37E35124C3375A003957AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E37E35024C3375A003957AC /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +61,13 @@
 		8E37E33A24C32B83003957AC /* JEVArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JEVArtist.m; sourceTree = "<group>"; };
 		8E37E33D24C32BC2003957AC /* JEVArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JEVArtistController.h; sourceTree = "<group>"; };
 		8E37E33E24C32BC2003957AC /* JEVArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JEVArtistController.m; sourceTree = "<group>"; };
-		8E37E34024C32F1F003957AC /* JEVArtist+JSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JEVArtist+JSONSerialization.h"; sourceTree = "<group>"; };
-		8E37E34124C32F1F003957AC /* JEVArtist+JSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JEVArtist+JSONSerialization.m"; sourceTree = "<group>"; };
+		8E37E34524C33417003957AC /* JEVArtist+JSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JEVArtist+JSONSerialization.h"; sourceTree = "<group>"; };
+		8E37E34624C33417003957AC /* JEVArtist+JSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JEVArtist+JSONSerialization.m"; sourceTree = "<group>"; };
+		8E37E34A24C336A2003957AC /* JEVArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JEVArtistTableViewController.h; sourceTree = "<group>"; };
+		8E37E34B24C336A2003957AC /* JEVArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JEVArtistTableViewController.m; sourceTree = "<group>"; };
+		8E37E34D24C336B3003957AC /* JEVArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JEVArtistDetailViewController.h; sourceTree = "<group>"; };
+		8E37E34E24C336B3003957AC /* JEVArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JEVArtistDetailViewController.m; sourceTree = "<group>"; };
+		8E37E35024C3375A003957AC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +98,9 @@
 		8E37E2F224C32A02003957AC = {
 			isa = PBXGroup;
 			children = (
+				8E37E35024C3375A003957AC /* Default-568h@2x.png */,
 				8E37E2FD24C32A03003957AC /* Favorite Artists */,
+				8E37E31024C32A03003957AC /* main.m */,
 				8E37E31924C32A03003957AC /* Favorite ArtistsTests */,
 				8E37E32424C32A04003957AC /* Favorite ArtistsUITests */,
 				8E37E2FC24C32A03003957AC /* Products */,
@@ -111,13 +121,13 @@
 			isa = PBXGroup;
 			children = (
 				8E37E30724C32A03003957AC /* Main.storyboard */,
+				8E37E30F24C32A03003957AC /* Info.plist */,
 				8E37E33824C32AFF003957AC /* Helpers */,
 				8E37E33324C32A5F003957AC /* Resources */,
 				8E37E33724C32A9B003957AC /* View Controllers */,
 				8E37E33624C32A8E003957AC /* TableViewControllers */,
 				8E37E33524C32A72003957AC /* Model Controllers */,
 				8E37E33424C32A6A003957AC /* Models */,
-				8E37E31024C32A03003957AC /* main.m */,
 			);
 			path = "Favorite Artists";
 			sourceTree = "<group>";
@@ -149,7 +159,6 @@
 				8E37E30224C32A03003957AC /* SceneDelegate.m */,
 				8E37E30A24C32A03003957AC /* Assets.xcassets */,
 				8E37E30C24C32A03003957AC /* LaunchScreen.storyboard */,
-				8E37E30F24C32A03003957AC /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -175,6 +184,8 @@
 		8E37E33624C32A8E003957AC /* TableViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E37E34A24C336A2003957AC /* JEVArtistTableViewController.h */,
+				8E37E34B24C336A2003957AC /* JEVArtistTableViewController.m */,
 			);
 			path = TableViewControllers;
 			sourceTree = "<group>";
@@ -182,6 +193,8 @@
 		8E37E33724C32A9B003957AC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E37E34D24C336B3003957AC /* JEVArtistDetailViewController.h */,
+				8E37E34E24C336B3003957AC /* JEVArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -189,8 +202,8 @@
 		8E37E33824C32AFF003957AC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8E37E34024C32F1F003957AC /* JEVArtist+JSONSerialization.h */,
-				8E37E34124C32F1F003957AC /* JEVArtist+JSONSerialization.m */,
+				8E37E34524C33417003957AC /* JEVArtist+JSONSerialization.h */,
+				8E37E34624C33417003957AC /* JEVArtist+JSONSerialization.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -299,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E37E30E24C32A03003957AC /* LaunchScreen.storyboard in Resources */,
+				8E37E35124C3375A003957AC /* Default-568h@2x.png in Resources */,
 				8E37E30B24C32A03003957AC /* Assets.xcassets in Resources */,
 				8E37E30924C32A03003957AC /* Main.storyboard in Resources */,
 			);
@@ -325,11 +339,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E37E34F24C336B3003957AC /* JEVArtistDetailViewController.m in Sources */,
 				8E37E30024C32A03003957AC /* AppDelegate.m in Sources */,
-				8E37E31124C32A03003957AC /* main.m in Sources */,
 				8E37E33B24C32B83003957AC /* JEVArtist.m in Sources */,
-				8E37E34224C32F1F003957AC /* JEVArtist+JSONSerialization.m in Sources */,
+				8E37E34724C33417003957AC /* JEVArtist+JSONSerialization.m in Sources */,
+				8E37E34C24C336A2003957AC /* JEVArtistTableViewController.m in Sources */,
 				8E37E33F24C32BC2003957AC /* JEVArtistController.m in Sources */,
+				8E37E34924C334A9003957AC /* main.m in Sources */,
 				8E37E30324C32A03003957AC /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

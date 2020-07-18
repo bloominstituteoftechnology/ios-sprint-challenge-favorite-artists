@@ -10,4 +10,19 @@
 
 @implementation JEVArtist
 
+- (instancetype)initWithName:(NSString *)name
+                   biography:(NSString *)biography
+                        year:(NSInteger)year
+{
+    self = [super init];
+    
+    if(self)
+    {
+        _name = [name copy];
+        _biography = [biography copy];
+        _year = year;
+    }
+    return self;
+}
+
 @end

@@ -8,6 +8,40 @@
 
 #import "JEVArtist+JSONSerialization.h"
 
-@implementation JEVArtist_JSONSerialization
+@implementation JEVArtist (NSJSONSerialiazation)
+
+static NSString *artistNameKey = @"strArtist";
+static NSString *artistBioKey = @"strBiographyEN";
+static NSString *artistYearKey = @"intFormedYear";
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    if (dictionary)
+    {
+        NSString *name = dictionary[artistNameKey];
+        NSString *biography = dictionary[artistBioKey];
+        NSNumber *year = dictionary[artistYearKey];
+        
+        if (name && biography && year)
+        {
+            return [self initWithName:name
+                            biography:biography
+                                 year:year.intValue];
+        }
+    }
+    return nil;
+}
+
+- (NSDictionary *)createArtistDictionary
+{
+    return @{
+        artistNameKey: self.name,
+        artistBioKey: self.biography,
+        artistYearKey: @(self.year)
+    };
+}
+
+
+
 
 @end

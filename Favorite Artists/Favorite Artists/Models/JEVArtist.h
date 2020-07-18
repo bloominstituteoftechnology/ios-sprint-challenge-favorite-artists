@@ -12,6 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JEVArtist : NSObject
 
+
+//MARK: Model Properties
+
+@property (nonatomic, copy, readonly) NSString *name;
+@property (nonatomic, copy, readonly) NSString *biography;
+@property (nonatomic, readonly) NSInteger year;
+
+- (instancetype)initWithName:(NSString *)name
+                   biography:(NSString *)biography
+                        year:(NSInteger)year;
+
 @end
 
 NS_ASSUME_NONNULL_END

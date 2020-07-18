@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class SABArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^SABArtistFetcherCompletion)(NSArray <SABArtist *> *artists, NSError *error);
+
 @interface SABArtistFetcher : NSObject
+
+-(void)fetchArtistsByName:(NSString *)strArtist
+              completions:(SABArtistFetcherCompletion)completion;
 
 @end
 

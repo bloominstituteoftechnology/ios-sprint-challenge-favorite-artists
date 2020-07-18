@@ -18,6 +18,7 @@
 		5AD11C4224C20BB500D69E0C /* SABArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11C4124C20BB500D69E0C /* SABArtistFetcher.m */; };
 		5AD11C4624C20C3D00D69E0C /* SABArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11C4524C20C3D00D69E0C /* SABArtist.m */; };
 		5AD11C4A24C2371E00D69E0C /* SABArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11C4924C2371E00D69E0C /* SABArtistResults.m */; };
+		5AD11C5124C2951B00D69E0C /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11C5024C2951B00D69E0C /* LSIErrors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		5AD11C4524C20C3D00D69E0C /* SABArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SABArtist.m; sourceTree = "<group>"; };
 		5AD11C4824C2371E00D69E0C /* SABArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SABArtistResults.h; sourceTree = "<group>"; };
 		5AD11C4924C2371E00D69E0C /* SABArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SABArtistResults.m; sourceTree = "<group>"; };
+		5AD11C4F24C2951B00D69E0C /* LSIErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		5AD11C5024C2951B00D69E0C /* LSIErrors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 			children = (
 				5AD11C4024C20BB500D69E0C /* SABArtistFetcher.h */,
 				5AD11C4124C20BB500D69E0C /* SABArtistFetcher.m */,
+				5AD11C4F24C2951B00D69E0C /* LSIErrors.h */,
+				5AD11C5024C2951B00D69E0C /* LSIErrors.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			files = (
 				5AD11C3B24C2085D00D69E0C /* ArtistTableViewController.m in Sources */,
 				5AD11C4224C20BB500D69E0C /* SABArtistFetcher.m in Sources */,
+				5AD11C5124C2951B00D69E0C /* LSIErrors.m in Sources */,
 				5AD11C2224C203DC00D69E0C /* AppDelegate.m in Sources */,
 				5AD11C4624C20C3D00D69E0C /* SABArtist.m in Sources */,
 				5AD11C4A24C2371E00D69E0C /* SABArtistResults.m in Sources */,

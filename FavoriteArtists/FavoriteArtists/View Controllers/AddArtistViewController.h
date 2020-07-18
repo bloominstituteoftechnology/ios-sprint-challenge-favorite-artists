@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "CAMArtistController.h"
+#import "CAMArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddArtistViewController : UIViewController <UISearchBarDelegate>
 
 @property CAMArtistController *controller;
+@property CAMArtist *artist;
 
 @end
 

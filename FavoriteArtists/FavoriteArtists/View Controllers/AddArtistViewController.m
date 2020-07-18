@@ -8,6 +8,8 @@
 
 #import "AddArtistViewController.h"
 #import <UIKit/UIKit.h>
+#import "CAMArtistController.h"
+#import "CAMArtist.h"
 
 @interface AddArtistViewController ()
 //MARK: - Internal Properties -
@@ -20,25 +22,50 @@
 
 
 @implementation AddArtistViewController 
-
-- (void)viewDidLoad {
+//MARK: - Life Cycles -
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.searchBar setDelegate: self];
+    self.nameLabel.text = @"Search for an artist above.";
+    self.bioTextView.text = @"";
+    self.foundedLabel.text = @"";
 }
 
-- (IBAction)saveArtist:(id)sender {
+
+//MARK: - Actions -
+- (IBAction)saveArtist:(id)sender
+{
+    if (self.artist) {
+        [self.controller saveArtist: self.artist];
+        [self.navigationController popViewControllerAnimated: YES];
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSString *searchTerm = searchBar.text;
+    [self.controller searchForName: searchTerm
+                        completion:^(CAMArtist *artist, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!error) {
+                self.artist = artist;
+                [self updateViews];
+            } else {
+                self.nameLabel.text = @"No Artist Found. Try Again.";
+                NSLog(@"Something went wrong! %@", error);
+            }
+        });
+    }];
 }
 
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//MARK: - Methods -
+- (void)updateViews
+{
+    NSString *founded = [NSString stringWithFormat: @"%i", self.artist.founded];
+    self.nameLabel.text = self.artist.name;
+    self.foundedLabel.text = founded;
+    self.bioTextView.text = self.artist.bio;
 }
-*/
-
 @end

@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CAMArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FavoriteArtistsTableViewController : UITableViewController
+
+@property CAMArtistController *controller;
 
 @end
 

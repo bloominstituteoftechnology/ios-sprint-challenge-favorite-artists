@@ -7,6 +7,8 @@
 //
 
 #import "FavoriteArtistsTableViewController.h"
+#import "CAMArtistController.h"
+#import "CAMArtist.h"
 
 @interface FavoriteArtistsTableViewController ()
 

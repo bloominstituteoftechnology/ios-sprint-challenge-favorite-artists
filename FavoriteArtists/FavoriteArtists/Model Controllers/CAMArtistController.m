@@ -47,7 +47,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     if (![favoriteArtists[@"artists"] isEqual: @""]) {
         NSArray *artists = favoriteArtists[@"artists"];
         for (NSDictionary *dictionary in artists) {
-            CAMArtist *artist = [[CAMArtist alloc]initWithDictionary: dictionary];
+            CAMArtist *artist = [[CAMArtist alloc]loadFromDictionary: dictionary];
             [self.favoriteArtistsSafeStore addObject: artist];
         }
     }
@@ -115,10 +115,10 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 //MARK: - Methods -
 - (NSURL *)favoritesURL
 {
-    NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
-                                                                       inDomains:NSUserDomainMask] firstObject];
+    NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory
+                                                                       inDomains: NSUserDomainMask] firstObject];
     NSString *fileName = @"favoriteArtists.json";
-    return [documentDirectory URLByAppendingPathComponent:fileName];
+    return [documentDirectory URLByAppendingPathComponent: fileName];
 }
 
 - (void)saveArtists

@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "CAMArtistController.h"
 #import "CAMArtist.h"
+#import "CAMArtist+Serialization.h"
 
 @interface AddArtistViewController ()
 //MARK: - Internal Properties -
@@ -21,7 +22,7 @@
 @end
 
 
-@implementation AddArtistViewController 
+@implementation AddArtistViewController
 //MARK: - Life Cycles -
 - (void)viewDidLoad
 {
@@ -46,15 +47,14 @@
 {
     NSString *searchTerm = searchBar.text;
     [self.controller searchForName: searchTerm
-                        completion:^(CAMArtist *artist, NSError *error) {
+                        completion:^(CAMArtist *returnedArtist, NSError *error) {
+        if (error) {
+            NSLog(@"Error with search: %@", error);
+            return;
+        }
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (!error) {
-                self.artist = artist;
-                [self updateViews];
-            } else {
-                self.nameLabel.text = @"No Artist Found. Try Again.";
-                NSLog(@"Something went wrong! %@", error);
-            }
+            self.artist = returnedArtist;
+            [self updateViews];
         });
     }];
 }

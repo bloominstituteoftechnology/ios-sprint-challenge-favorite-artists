@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CAMArtistController.h"
+#import "CAMArtist+Serialization.h"
 #import "CAMArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN

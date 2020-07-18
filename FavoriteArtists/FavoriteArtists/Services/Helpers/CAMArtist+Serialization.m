@@ -16,12 +16,30 @@
     NSString *name = dictionary[@"strArtist"];
     NSString *bio = dictionary[@"strBiographyEN"];
     NSString *foundedString = dictionary[@"intFormedYear"];
-    int founded = [foundedString intValue];
+    int founded;
+    if (!foundedString) {
+        founded = 0000;
+    } else {
+        founded = [foundedString intValue];
+    }
     
     return [self initWithName: name
                           bio: bio
                       founded: founded];
 }
+
+- (instancetype)loadFromDictionary:(NSDictionary *)dictionary
+{
+    NSString *name = dictionary[@"strArtist"];
+    NSString *bio = dictionary[@"strBiographyEN"];
+    NSNumber *foundedNumber = dictionary[@"intFormedYear"];
+    int founded = [foundedNumber intValue];
+    
+    return [self initWithName: name
+                          bio: bio
+                      founded: founded];
+}
+
 
 - (NSDictionary *)createDictionary
 {

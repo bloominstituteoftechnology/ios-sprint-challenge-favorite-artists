@@ -123,12 +123,12 @@
 		5E1B5F9124C287C800005F18 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5E1B5F9224C287C800005F18 /* ArtistDetailViewController.h */,
+				5E1B5F9624C287C800005F18 /* FavoriteArtistsTableViewController.h */,
 				5E1B5F9324C287C800005F18 /* FavoriteArtistsTableViewController.m */,
 				5E1B5F9424C287C800005F18 /* AddArtistViewController.h */,
-				5E1B5F9524C287C800005F18 /* ArtistDetailViewController.m */,
-				5E1B5F9624C287C800005F18 /* FavoriteArtistsTableViewController.h */,
 				5E1B5F9724C287C800005F18 /* AddArtistViewController.m */,
+				5E1B5F9224C287C800005F18 /* ArtistDetailViewController.h */,
+				5E1B5F9524C287C800005F18 /* ArtistDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -179,9 +179,9 @@
 		5E1B5FAC24C287FE00005F18 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5E1B5FAF24C287FE00005F18 /* CAMArtist+Serialization.h */,
 				5E1B5FAD24C287FE00005F18 /* CAMArtist+Serialization.m */,
 				5E1B5FAE24C287FE00005F18 /* LSIFileHelper.h */,
-				5E1B5FAF24C287FE00005F18 /* CAMArtist+Serialization.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

@@ -17,6 +17,15 @@
 
 @implementation FavoriteArtistsTableViewController
 //MARK: - Life Cycles -
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _controller = [[CAMArtistController alloc] init];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

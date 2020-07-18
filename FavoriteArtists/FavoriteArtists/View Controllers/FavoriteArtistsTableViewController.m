@@ -9,79 +9,77 @@
 #import "FavoriteArtistsTableViewController.h"
 #import "CAMArtistController.h"
 #import "CAMArtist.h"
+#import "AddArtistViewController.h"
+#import "ArtistDetailViewController.h"
 
 @interface FavoriteArtistsTableViewController ()
-
 @end
 
 @implementation FavoriteArtistsTableViewController
-
-- (void)viewDidLoad {
+//MARK: - Life Cycles -
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    [self.controller loadArtists];
 }
 
-    //MARK: - Table view data source
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear: YES];
+    [self.tableView reloadData];
+}
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+
+//MARK: - Table view data source
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.controller.favoriteArtists.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    CAMArtist *artist = self.controller.favoriteArtists[indexPath.row];
+    cell.textLabel.text = artist.name;
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        
+        CAMArtist *artist = self.controller.favoriteArtists[indexPath.row];
+        [self.controller deleteArtist: artist];
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+
+//MARK: - Navigation -
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    if ([segue.identifier isEqualToString: @"AddArtistSegue"]) {
+        AddArtistViewController *addVC = segue.destinationViewController;
+        addVC.controller = self.controller;
+    }
+    
+    if ([segue.identifier isEqualToString: @"ArtistDetailSegue"]) {
+        ArtistDetailViewController *detailVC = segue.destinationViewController;
+        CAMArtist *artist = self.controller.favoriteArtists[indexPath.row];
+        detailVC.artist = artist;
+    }
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

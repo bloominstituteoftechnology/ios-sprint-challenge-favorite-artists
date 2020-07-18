@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CAMArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddArtistViewController : UIViewController
+
+@property CAMArtistController *controller;
 
 @end
 

@@ -24,10 +24,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-/*
- let name: String
- let bio: String
- let founded: Int
- 
- init(name: String, bio: String, founded: Int) {}
- */

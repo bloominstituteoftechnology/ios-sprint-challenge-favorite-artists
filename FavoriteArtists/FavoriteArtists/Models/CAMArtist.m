@@ -10,9 +10,9 @@
 
 @implementation CAMArtist
 
-- (instancetype)initWithName:(NSString *)name
-                         bio:(NSString *)bio
-                     founded:(int)founded
+- (instancetype)initWithName: (NSString *)name
+                         bio: (NSString *)bio
+                     founded: (int)founded
 {
     self = [super init];
     if (self) {
@@ -25,12 +25,3 @@
 
 @end
 
-
-/*
- init(name: String, bio: String, founded: Int) {
-    super.init()
-    self.name = name
-    self.bio = bio
-    self.founded = founded
- }
- */

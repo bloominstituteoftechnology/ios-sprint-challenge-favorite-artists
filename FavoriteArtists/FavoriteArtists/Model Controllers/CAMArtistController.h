@@ -19,10 +19,10 @@ typedef void (^artistCompletion) (CAMArtist *, NSError *);
 @property (readonly, nonatomic) CAMArtist *currentArtist;
 
 -(void)loadArtists;
--(void)saveArtist:(CAMArtist *)artist;
--(void)deleteArtist:(CAMArtist *)artist;
--(void)searchForName:(NSString *)name
-          completion:(artistCompletion)completion;
+-(void)saveArtist: (CAMArtist *)artist;
+-(void)deleteArtist: (CAMArtist *)artist;
+-(void)searchForName: (NSString *)name
+          completion: (artistCompletion)completion;
 
 @end
 

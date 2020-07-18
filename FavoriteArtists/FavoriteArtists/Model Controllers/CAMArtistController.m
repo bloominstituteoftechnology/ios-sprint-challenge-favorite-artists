@@ -26,7 +26,6 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
 }
 
 
-
 //MARK: - Inits -
 - (instancetype)init
 {
@@ -36,7 +35,6 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     }
     return self;
 }
-
 
 
 //MARK: - Actions -
@@ -53,20 +51,20 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
     }
 }
 
-- (void)saveArtist:(CAMArtist *)artist
+- (void)saveArtist: (CAMArtist *)artist
 {
     [self.favoriteArtistsSafeStore addObject: artist];
     [self saveArtists];
 }
 
-- (void)deleteArtist:(CAMArtist *)artist
+- (void)deleteArtist: (CAMArtist *)artist
 {
     [self.favoriteArtistsSafeStore removeObject:artist];
     [self saveArtists];
 }
 
--(void)searchForName:(NSString *)name
-          completion:(nonnull artistCompletion)completion
+-(void)searchForName: (NSString *)name
+          completion: (nonnull artistCompletion)completion
 {
     NSURL *baseURL = [NSURL URLWithString: baseURLString];
     NSURLComponents *components = [NSURLComponents componentsWithURL: baseURL
@@ -137,7 +135,7 @@ static NSString *baseURLString = @"https://www.theaudiodb.com/api/v1/json/1/sear
         @"artists" : artists
     };
     
-    bool success = [artistsToSave writeToURL:url error:nil];
+    bool success = [artistsToSave writeToURL:url error: nil];
     
     if (success) {
         return;

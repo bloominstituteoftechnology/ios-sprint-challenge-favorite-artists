@@ -11,7 +11,7 @@
 
 @implementation CAMArtist (Serialization)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+- (instancetype)initWithDictionary: (NSDictionary *)dictionary
 {
     NSString *name = dictionary[@"strArtist"];
     NSString *bio = dictionary[@"strBiographyEN"];
@@ -28,7 +28,7 @@
                       founded: founded];
 }
 
-- (instancetype)loadFromDictionary:(NSDictionary *)dictionary
+- (instancetype)loadFromDictionary: (NSDictionary *)dictionary
 {
     NSString *name = dictionary[@"strArtist"];
     NSString *bio = dictionary[@"strBiographyEN"];

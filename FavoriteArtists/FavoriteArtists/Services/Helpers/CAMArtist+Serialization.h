@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CAMArtist (Serialization)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-- (instancetype)loadFromDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionary: (NSDictionary *)dictionary;
+- (instancetype)loadFromDictionary: (NSDictionary *)dictionary;
 - (NSDictionary *)createDictionary;
 
 @end

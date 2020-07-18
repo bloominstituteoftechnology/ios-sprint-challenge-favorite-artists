@@ -17,9 +17,9 @@
 
 @implementation FavoriteArtistsTableViewController
 //MARK: - Life Cycles -
-- (instancetype)initWithCoder:(NSCoder *)coder
+- (instancetype)initWithCoder: (NSCoder *)coder
 {
-    self = [super initWithCoder:coder];
+    self = [super initWithCoder: coder];
     if (self) {
         _controller = [[CAMArtistController alloc] init];
     }
@@ -32,7 +32,7 @@
     [self.controller loadArtists];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewWillAppear: (BOOL)animated
 {
     [super viewWillAppear: YES];
     [self.tableView reloadData];
@@ -40,17 +40,17 @@
 
 
 //MARK: - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView: (UITableView *)tableView
 {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView: (UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.controller.favoriteArtists.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView: (UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
@@ -60,23 +60,23 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView
-commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView: (UITableView *)tableView
+commitEditingStyle: (UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath: (NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
         CAMArtist *artist = self.controller.favoriteArtists[indexPath.row];
         [self.controller deleteArtist: artist];
-        [tableView deleteRowsAtIndexPaths:@[indexPath]
-                         withRowAnimation:UITableViewRowAnimationFade];
+        [tableView deleteRowsAtIndexPaths: @[indexPath]
+                         withRowAnimation: UITableViewRowAnimationFade];
     }
 }
 
 
 //MARK: - Navigation -
-- (void)prepareForSegue:(UIStoryboardSegue *)segue
-                 sender:(id)sender
+- (void)prepareForSegue: (UIStoryboardSegue *)segue
+                 sender: (id)sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     

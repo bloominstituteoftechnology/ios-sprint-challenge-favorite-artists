@@ -35,7 +35,7 @@
 
 
 //MARK: - Actions -
-- (IBAction)saveArtist:(id)sender
+- (IBAction)saveArtist: (id)sender
 {
     if (self.artist) {
         [self.controller saveArtist: self.artist];
@@ -43,7 +43,7 @@
     }
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+- (void)searchBarSearchButtonClicked: (UISearchBar *)searchBar
 {
     NSString *searchTerm = searchBar.text;
     [self.controller searchForName: searchTerm

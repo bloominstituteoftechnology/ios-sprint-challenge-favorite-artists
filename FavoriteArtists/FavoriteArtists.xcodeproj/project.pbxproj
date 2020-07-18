@@ -162,8 +162,8 @@
 		5E1B5FA724C287F200005F18 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5E1B5FA824C287F200005F18 /* CAMArtist.m */,
 				5E1B5FA924C287F200005F18 /* CAMArtist.h */,
+				5E1B5FA824C287F200005F18 /* CAMArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";

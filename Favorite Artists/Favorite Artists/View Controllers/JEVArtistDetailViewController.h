@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class JEVArtist;
+@class JEVArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JEVArtistDetailViewController : UIViewController
+@interface JEVArtistDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property (nonatomic, strong) JEVArtist *artist;
+@property (nonatomic, strong) JEVArtistController *controller;
+
+- (void)updateViews;
+- (void)setArtist;
 
 @end
 

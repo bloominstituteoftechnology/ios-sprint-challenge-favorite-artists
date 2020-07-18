@@ -10,7 +10,7 @@
         <!--Add New Artist-->
         <scene sceneID="Hoa-fg-NM3">
             <objects>
-                <viewController id="dK0-iI-QV3" sceneMemberID="viewController">
+                <viewController id="dK0-iI-QV3" customClass="JEVArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JZn-1u-wp1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,16 +67,16 @@
                     <navigationItem key="navigationItem" title="Add New Artist" largeTitleDisplayMode="always" id="Aw8-C8-naz">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="bCq-Pf-pz5">
                             <connections>
-                                <action selector="saveArtist:" destination="dK0-iI-QV3" id="H9n-dd-ghQ"/>
+                                <action selector="saveArtist:" destination="dK0-iI-QV3" id="a9m-xR-xzM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="biographyLabel" destination="29K-Px-coC" id="OTQ-0v-n4t"/>
-                        <outlet property="nameLabel" destination="aQe-gH-A3U" id="Kb7-Sr-NA1"/>
-                        <outlet property="saveButton" destination="bCq-Pf-pz5" id="Qit-b3-vWG"/>
-                        <outlet property="searchBar" destination="Nz5-hC-sPp" id="zQA-Ei-XWZ"/>
-                        <outlet property="yearLabel" destination="cIa-jH-DKl" id="MQA-xz-xDR"/>
+                        <outlet property="biographyLabel" destination="29K-Px-coC" id="lOn-bZ-ap0"/>
+                        <outlet property="nameLabel" destination="aQe-gH-A3U" id="F9q-JA-V8s"/>
+                        <outlet property="saveButton" destination="bCq-Pf-pz5" id="JZn-8P-FFT"/>
+                        <outlet property="searchBar" destination="Nz5-hC-sPp" id="YLP-bw-Jln"/>
+                        <outlet property="yearLabel" destination="cIa-jH-DKl" id="CW3-NW-gwd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Txo-Vp-WqB" sceneMemberID="firstResponder"/>
@@ -86,7 +86,7 @@
         <!--Favorite Artists-->
         <scene sceneID="ya8-mJ-GAV">
             <objects>
-                <tableViewController id="ISw-Gw-UlB" sceneMemberID="viewController">
+                <tableViewController id="ISw-Gw-UlB" customClass="JEVArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aXE-eC-qcG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

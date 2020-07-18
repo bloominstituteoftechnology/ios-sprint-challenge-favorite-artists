@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) saveArtist;
 - (NSArray *) loadArtists;
 
+- (instancetype) init;
 - (void)findArtistWithName:(NSString *)name
                 completion:(void (^)(JEVArtist*))completion;
 

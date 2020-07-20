@@ -114,13 +114,13 @@
                     <navigationItem key="navigationItem" title="Artist Detail" id="sgg-HS-Hdm">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="lxW-T3-e8n">
                             <connections>
-                                <action selector="saveTapped:" destination="Xf7-nl-J2y" id="S4v-tr-AvD"/>
+                                <action selector="saveButtonTapped:" destination="Xf7-nl-J2y" id="MG0-Sy-Oj3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistNameLabel" destination="bBg-S5-6RP" id="DZP-Gx-RuB"/>
-                        <outlet property="searchBar" destination="kN8-Kf-emi" id="3Ce-45-0t5"/>
+                        <outlet property="searchBar" destination="kN8-Kf-emi" id="TlD-a6-IQ7"/>
                         <outlet property="textView" destination="6Sy-cC-Nz2" id="tGw-FD-wiP"/>
                         <outlet property="yearFormedLabel" destination="V2m-Wy-J4L" id="xZz-iD-cex"/>
                     </connections>

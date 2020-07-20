@@ -12,15 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HMRArtist : NSObject
 
-@property (nonatomic) NSString *artist;
-@property (nonatomic) int yearFormed;
-@property (nonatomic) NSString *biography;
+@property (nonatomic, readonly, copy) NSString *artist; 
+@property (nonatomic, readonly) int yearFormed;
+@property (nonatomic, readonly, copy) NSString *biography;
 
--(instancetype)initWithArtist:(NSString *)artist
-                   yearFormed:(int)yearFormed
-                    biography:(NSString *)biography;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithArtist:(NSString *)artist
+                    yearFormed:(int)yearFormed
+                     biography:(NSString *)biography;
 
 @end
 

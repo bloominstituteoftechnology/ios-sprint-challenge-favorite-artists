@@ -12,14 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class HMRArtist;
 
-typedef void (^CompletionHandler)(HMRArtist * _Nullable artist, NSError * _Nullable error);
-
 @interface HMRArtistController : NSObject
 
-- (void)fetchArtistName:(NSString *)name
-      completionHandler:(CompletionHandler)completionHandler;
+@property (nonatomic, readonly) NSArray *favoriteArtists;
 
--  (NSMutableArray *)fetchSavedArtist;
+- (void)favoriteArtistForName:(NSString *)artist completion:(void(^)(HMRArtist *, NSError *error))completion;
+
+- (void)addArtistWithArtist:(NSString *)artist
+                       year:(int)year
+                        bio:(NSString *)bio;
+
+- (NSURL *)applicationDocumentsDirectory;
 
 @end
 

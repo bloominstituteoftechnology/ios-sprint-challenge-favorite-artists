@@ -7,87 +7,80 @@
 //
 
 #import "HMRArtistsTableViewController.h"
+#import "HMRArtist.h"
+#import "HMRArtistController.h"
+#import "HMRArtistsViewController.h"
 
 @interface HMRArtistsTableViewController ()
+
+@property (nonatomic) HMRArtistController *artistController;
 
 @end
 
 @implementation HMRArtistsTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+// MARK: - Properties
+
+- (HMRArtistController *)artistController {
+
+    if (!_artistController) {
+        _artistController = [[HMRArtistController alloc] init];
+    }
+    return _artistController;
 }
 
-#pragma mark - Table view data source
+// MARK: - View Life Cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
+// MARK: - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [[self.artistController favoriteArtists] count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
+
+    HMRArtist *favoriteArtist = self.artistController.favoriteArtists[indexPath.row];
+    cell.textLabel.text = favoriteArtist.artist;
+    if ( favoriteArtist.yearFormed == 0 ) {
+        cell.detailTextLabel.text = @"";
+    }
+    else {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", favoriteArtist.yearFormed];
+    }
+
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+// MARK: - Navigation
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
+    if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
+        HMRArtistsViewController *detailVC = segue.destinationViewController;
+        detailVC.artistController = self.artistController;
+    }
+
+    if ([segue.identifier isEqualToString:@"DisplayArtistSegue"]) {
+        HMRArtistsViewController *detailVC = segue.destinationViewController;
+        detailVC.artistController = self.artistController;
+
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        detailVC.favoriteArtist = self.artistController.favoriteArtists[indexPath.row];
+    }
+}
 @end

@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class HMRArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HMRArtistsTableViewController : UITableViewController
+
+@property (nonatomic) HMRArtistController *artistContrller;
 
 @end
 

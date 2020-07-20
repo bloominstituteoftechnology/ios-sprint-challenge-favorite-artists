@@ -7,8 +7,15 @@
 //
 
 #import "HMRArtistsViewController.h"
+#import "HMRArtistController.h"
+#import "HMRArtist.h"
 
 @interface HMRArtistsViewController ()
+
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -16,17 +23,80 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.searchBar.delegate = self;
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
+- (IBAction)saveButtonTapped:(id)sender {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if (!_favoriteArtist) {
+        self.title = @"No Artist Available";
+        return;
+    }
+
+    [self.artistController addArtistWithArtist:_favoriteArtist.artist year:_favoriteArtist.yearFormed bio:_favoriteArtist.biography];
+
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+
+
+- (void)searchBarButtonClicked:(UISearchBar *)searchBar {
+
+    NSString *searchTerm = searchBar.text;
+    NSLog(@"searchTerm%@", searchTerm);
+    [self.artistController favoriteArtistForName:searchTerm completion:^(HMRArtist *favoriteArtist, NSError *error) {
+
+
+        if (error) {
+            NSLog(@"Error fetching artist");
+            return;
+        }
+
+        if (!favoriteArtist) {
+            NSLog(@"No valid results");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.title = [NSString stringWithFormat:@"%@ not found", searchTerm];
+            });
+            return;
+        }
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.favoriteArtist = favoriteArtist;
+            [self updateViews];
+        });
+    }];
+
+}
+
+- (void)setHMRArtist:(HMRArtist *)favoriteArtist {
+    _favoriteArtist = favoriteArtist;
+    NSLog(@"%@", _favoriteArtist.artist);
+    [self updateViews];
+}
+
+- (void)updateViews {
+    NSLog(@"updateViews");
+
+    if (!self.viewIfLoaded) { return; }
+
+    if (self.favoriteArtist) {
+        self.title = self.favoriteArtist.artist;
+        self.artistNameLabel.text = self.favoriteArtist.artist;
+        if ( self.favoriteArtist.yearFormed == 0 ) {
+            self.yearFormedLabel.text = @"";
+        }
+        else {
+            self.yearFormedLabel.text = [NSString stringWithFormat:@"%i", self.favoriteArtist.yearFormed];
+        }
+        self.textView.text = self.favoriteArtist.biography;
+    }
+
+    else {
+        self.title = @"Add New Artist";
+        self.artistNameLabel.text = self.favoriteArtist.artist;
+        self.yearFormedLabel.text = @"";
+        self.textView.text = self.favoriteArtist.biography;
+    }
+}
 
 @end

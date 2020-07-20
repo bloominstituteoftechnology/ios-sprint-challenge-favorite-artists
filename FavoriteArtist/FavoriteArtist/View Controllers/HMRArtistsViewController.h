@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class HMRArtistController;
+@class HMRArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HMRArtistsViewController : UIViewController
+
+@property (nonatomic) HMRArtistController *artistController;
+@property (nonatomic) HMRArtist *favoriteArtist;
 
 @end
 

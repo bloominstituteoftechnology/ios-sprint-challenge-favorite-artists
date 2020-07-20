@@ -7,14 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HMRArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HMRArtist_NSJSONSerialization : NSObject
+@interface HMRArtist (NSJSONSerialization)
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
--(NSDictionary *)toDictionary;
 
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
+- (NSDictionary *)toDictionary;
 
 @end
 

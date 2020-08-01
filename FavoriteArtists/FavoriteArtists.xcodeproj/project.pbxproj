@@ -14,6 +14,7 @@
 		3A3F934D24D4F713006CD829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3F934C24D4F713006CD829 /* Assets.xcassets */; };
 		3A3F935024D4F713006CD829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3F934E24D4F713006CD829 /* LaunchScreen.storyboard */; };
 		3A3F935324D4F713006CD829 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F935224D4F713006CD829 /* main.m */; };
+		3A3F935B24D4FB0C006CD829 /* ArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F935A24D4FB0C006CD829 /* ArtistsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		3A3F934F24D4F713006CD829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A3F935124D4F713006CD829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A3F935224D4F713006CD829 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A3F935924D4FB0C006CD829 /* ArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistsTableViewController.h; sourceTree = "<group>"; };
+		3A3F935A24D4FB0C006CD829 /* ArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				3A3F934424D4F712006CD829 /* SceneDelegate.m */,
 				3A3F934624D4F712006CD829 /* ArtistDetailViewController.h */,
 				3A3F934724D4F712006CD829 /* ArtistDetailViewController.m */,
+				3A3F935924D4FB0C006CD829 /* ArtistsTableViewController.h */,
+				3A3F935A24D4FB0C006CD829 /* ArtistsTableViewController.m */,
 				3A3F934924D4F712006CD829 /* Main.storyboard */,
 				3A3F934C24D4F713006CD829 /* Assets.xcassets */,
 				3A3F934E24D4F713006CD829 /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 				3A3F934824D4F712006CD829 /* ArtistDetailViewController.m in Sources */,
 				3A3F934224D4F712006CD829 /* AppDelegate.m in Sources */,
 				3A3F935324D4F713006CD829 /* main.m in Sources */,
+				3A3F935B24D4FB0C006CD829 /* ArtistsTableViewController.m in Sources */,
 				3A3F934524D4F712006CD829 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

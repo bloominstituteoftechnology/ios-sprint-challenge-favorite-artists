@@ -7,7 +7,37 @@
 //
 
 #import "CLPArtistController.h"
+#import "CLPArtist.h"
+
+@interface CLPArtistController ()
+
+@property (nonatomic) NSMutableArray *artists;
+
+@end
 
 @implementation CLPArtistController
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.artists = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (void)addArtist:(CLPArtist *)artist
+{
+    [self.artists addObject:artist];
+}
+
+- (NSUInteger)artistCount
+{
+    return self.artists.count;
+}
+
+- (CLPArtist *)artistAtIndex:(int)index
+{
+    return self.artists[index];
+}
 
 @end

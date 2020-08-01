@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class Artist;
+@class ArtistsController;
+
 @interface ArtistDetailViewController : UIViewController
 
+@property (nonatomic, nullable) Artist *artists;
+@property (nonatomic, nullable) ArtistsController *artistController;
+@property (nonatomic) BOOL isShowingArtistDetail;
 
 @end
 

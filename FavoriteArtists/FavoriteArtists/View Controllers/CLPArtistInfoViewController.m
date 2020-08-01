@@ -7,6 +7,7 @@
 //
 
 #import "CLPArtistInfoViewController.h"
+#import "CLPArtist.h"
 
 @interface CLPArtistInfoViewController ()
 
@@ -20,7 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.artistNameLabel.text = @"";
+    self.yearFormedLabel.text = @"";
+}
+
+- (void)setArtist:(CLPArtist *)artist
+{
+    self.artistNameLabel.text = artist.name;
+    self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+    self.biographyTextView.text = artist.biography;
 }
 
 /*

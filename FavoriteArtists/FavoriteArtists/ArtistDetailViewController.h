@@ -13,7 +13,7 @@
 
 @interface ArtistDetailViewController : UIViewController
 
-@property (nonatomic, nullable) Artist *artists;
+@property (nonatomic, nullable) Artist *artist;
 @property (nonatomic, nullable) ArtistsController *artistController;
 @property (nonatomic) BOOL isShowingArtistDetail;
 

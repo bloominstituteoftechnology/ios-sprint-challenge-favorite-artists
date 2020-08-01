@@ -1,0 +1,17 @@
+//
+//  CLPArtistInfoViewController.h
+//  FavoriteArtists
+//
+//  Created by Chad Parker on 7/31/20.
+//  Copyright © 2020 Chad Parker. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface CLPArtistInfoViewController : UIViewController
+
+@end
+
+NS_ASSUME_NONNULL_END

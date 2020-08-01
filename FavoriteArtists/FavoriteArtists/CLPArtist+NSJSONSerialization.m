@@ -10,4 +10,16 @@
 
 @implementation CLPArtist (NSJSONSerialization)
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+#warning implement
+    return [[CLPArtist alloc] init];
+}
+
+- (NSDictionary *)toDictionary
+{
+#warning implement
+    return [[NSDictionary alloc] init];
+}
+
 @end

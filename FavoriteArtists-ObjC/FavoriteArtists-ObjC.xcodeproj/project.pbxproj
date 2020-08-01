@@ -17,6 +17,9 @@
 		1148C1E024D5007100ED22D8 /* KSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1DF24D5007100ED22D8 /* KSIArtistController.m */; };
 		1148C1E324D5073500ED22D8 /* KSIArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1E224D5073500ED22D8 /* KSIArtistResults.m */; };
 		1148C1E624D5099900ED22D8 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1E524D5099900ED22D8 /* LSIErrors.m */; };
+		1148C1E924D50AA700ED22D8 /* KSIFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1E824D50AA700ED22D8 /* KSIFavoriteArtistsTableViewController.m */; };
+		1148C1EC24D50ABE00ED22D8 /* KSISearchForArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1EB24D50ABE00ED22D8 /* KSISearchForArtistViewController.m */; };
+		1148C1EF24D50ACA00ED22D8 /* KSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1EE24D50ACA00ED22D8 /* KSIArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,12 @@
 		1148C1E224D5073500ED22D8 /* KSIArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSIArtistResults.m; sourceTree = "<group>"; };
 		1148C1E424D5099900ED22D8 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 		1148C1E524D5099900ED22D8 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		1148C1E724D50AA700ED22D8 /* KSIFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSIFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		1148C1E824D50AA700ED22D8 /* KSIFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSIFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		1148C1EA24D50ABE00ED22D8 /* KSISearchForArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSISearchForArtistViewController.h; sourceTree = "<group>"; };
+		1148C1EB24D50ABE00ED22D8 /* KSISearchForArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSISearchForArtistViewController.m; sourceTree = "<group>"; };
+		1148C1ED24D50ACA00ED22D8 /* KSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSIArtistDetailViewController.h; sourceTree = "<group>"; };
+		1148C1EE24D50ACA00ED22D8 /* KSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSIArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +138,12 @@
 		1148C1DA24D4F84000ED22D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1148C1E724D50AA700ED22D8 /* KSIFavoriteArtistsTableViewController.h */,
+				1148C1E824D50AA700ED22D8 /* KSIFavoriteArtistsTableViewController.m */,
+				1148C1EA24D50ABE00ED22D8 /* KSISearchForArtistViewController.h */,
+				1148C1EB24D50ABE00ED22D8 /* KSISearchForArtistViewController.m */,
+				1148C1ED24D50ACA00ED22D8 /* KSIArtistDetailViewController.h */,
+				1148C1EE24D50ACA00ED22D8 /* KSIArtistDetailViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,10 +221,13 @@
 			files = (
 				1148C1DD24D4FB1700ED22D8 /* KSIArtist.m in Sources */,
 				1148C1E324D5073500ED22D8 /* KSIArtistResults.m in Sources */,
+				1148C1E924D50AA700ED22D8 /* KSIFavoriteArtistsTableViewController.m in Sources */,
 				1148C1BE24D4F7DB00ED22D8 /* AppDelegate.m in Sources */,
 				1148C1E624D5099900ED22D8 /* LSIErrors.m in Sources */,
+				1148C1EC24D50ABE00ED22D8 /* KSISearchForArtistViewController.m in Sources */,
 				1148C1CF24D4F7EE00ED22D8 /* main.m in Sources */,
 				1148C1C124D4F7DB00ED22D8 /* SceneDelegate.m in Sources */,
+				1148C1EF24D50ACA00ED22D8 /* KSIArtistDetailViewController.m in Sources */,
 				1148C1E024D5007100ED22D8 /* KSIArtistController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -139,6 +139,7 @@
 		1148C1B124D4F7DB00ED22D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KSI;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Kevin Stewart";
 				TargetAttributes = {

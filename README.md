@@ -1,4 +1,4 @@
-# Favorite Artists
+# Favorite Artists 
 
 ## Instructions
 

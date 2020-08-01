@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="irm-xN-ayf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="irm-xN-ayf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -168,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bpf-bk-lDp">
-                                <rect key="frame" x="20" y="20" width="374" height="626"/>
+                                <rect key="frame" x="20" y="20" width="374" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSR-lk-Zqs">
                                         <rect key="frame" x="0.0" y="0.0" width="142.5" height="33.5"/>
@@ -182,23 +182,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eNn-NR-wfp">
-                                        <rect key="frame" x="0.0" y="74" width="374" height="552"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eNn-NR-wfp">
+                                <rect key="frame" x="20" y="104" width="374" height="542"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Bpf-bk-lDp" firstAttribute="leading" secondItem="rfl-pA-Ccy" secondAttribute="leading" constant="20" id="1Oh-AD-HaN"/>
-                            <constraint firstAttribute="bottom" secondItem="Bpf-bk-lDp" secondAttribute="bottom" constant="20" id="K1O-He-3pj"/>
+                            <constraint firstItem="eNn-NR-wfp" firstAttribute="leading" secondItem="iVk-JC-OCM" secondAttribute="leading" constant="20" id="C0L-Bb-geL"/>
                             <constraint firstAttribute="trailing" secondItem="Bpf-bk-lDp" secondAttribute="trailing" constant="20" id="LDm-RS-14d"/>
                             <constraint firstItem="Bpf-bk-lDp" firstAttribute="top" secondItem="rfl-pA-Ccy" secondAttribute="top" constant="20" id="OJl-xZ-Ha8"/>
+                            <constraint firstItem="iVk-JC-OCM" firstAttribute="bottom" secondItem="eNn-NR-wfp" secondAttribute="bottom" constant="20" id="Y69-ww-fgD"/>
+                            <constraint firstItem="iVk-JC-OCM" firstAttribute="trailing" secondItem="eNn-NR-wfp" secondAttribute="trailing" constant="20" id="bMH-kt-LcB"/>
+                            <constraint firstItem="eNn-NR-wfp" firstAttribute="top" secondItem="Bpf-bk-lDp" secondAttribute="bottom" constant="20" id="mxD-F2-7hH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iVk-JC-OCM"/>
                     </view>

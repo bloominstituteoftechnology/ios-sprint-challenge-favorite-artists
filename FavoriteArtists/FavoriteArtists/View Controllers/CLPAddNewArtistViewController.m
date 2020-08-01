@@ -49,6 +49,16 @@
     self.infoVC = infoVC;
 }
 
+- (void)showAlertWithMessage:(NSString *)message
+{
+    UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                     message:message
+                                                              preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:nil];
+    [alertvc addAction:action];
+    [self presentViewController:alertvc animated:true completion:nil];
+}
+
 @end
 
 @implementation CLPAddNewArtistViewController (UISearchBarDelegate)
@@ -57,13 +67,13 @@
 {
     [self.artistController fetchArtistForQuery:searchBar.text :^(CLPArtist * _Nullable artist, NSError * _Nullable error) {
         if (error) {
-            NSLog(@"%@", error);
+            [self showAlertWithMessage:@"Artist not found. Please try again."];
             return;
         }
         if (artist) {
             self.artist = artist;
         } else {
-            NSLog(@"Artist is nil");
+            [self showAlertWithMessage:@"Artist not found. Please try again."];
         }
     }];
 }

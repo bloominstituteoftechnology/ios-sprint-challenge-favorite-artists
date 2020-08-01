@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 // Initializer
 - (instancetype) initWithName: (NSString *)name yearFormed:(int)yearFormed biography:(NSString *)biography NS_DESIGNATED_INITIALIZER;
 
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

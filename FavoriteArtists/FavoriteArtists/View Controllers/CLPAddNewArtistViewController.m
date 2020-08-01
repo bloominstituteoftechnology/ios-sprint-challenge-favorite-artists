@@ -32,6 +32,7 @@
     [super viewDidLoad];
 
     self.searchBar.delegate = self;
+    [self.searchBar becomeFirstResponder];
 }
 
 - (IBAction)save:(UIBarButtonItem *)sender {

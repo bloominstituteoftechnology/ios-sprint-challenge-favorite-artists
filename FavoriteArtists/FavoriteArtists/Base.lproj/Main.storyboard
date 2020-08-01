@@ -201,6 +201,11 @@
                             <constraint firstItem="Bpf-bk-lDp" firstAttribute="top" secondItem="rfl-pA-Ccy" secondAttribute="top" constant="20" id="OJl-xZ-Ha8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="eSR-lk-Zqs" id="hya-sN-8Mb"/>
+                        <outlet property="biographyTextView" destination="eNn-NR-wfp" id="QBd-5H-aef"/>
+                        <outlet property="yearFormedLabel" destination="42M-71-3P4" id="Nam-Gl-vmS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USL-13-K8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

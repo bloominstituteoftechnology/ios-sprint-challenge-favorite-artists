@@ -10,6 +10,10 @@
 
 @interface CLPArtistInfoViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (strong, nonatomic) IBOutlet UITextView *biographyTextView;
+
 @end
 
 @implementation CLPArtistInfoViewController

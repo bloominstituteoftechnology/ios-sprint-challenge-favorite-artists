@@ -10,15 +10,14 @@
 
 @class CLPArtist;
 
-NS_ASSUME_NONNULL_BEGIN
+typedef void(^CLPArtistCompletionHandler)(CLPArtist *_Nullable artist, NSError *_Nullable error);
 
 @interface CLPArtistController : NSObject
 
-- (void)addArtist:(CLPArtist *)artist;
-
+- (void)addArtist:(nonnull CLPArtist *)artist;
 - (NSUInteger)artistCount;
-- (CLPArtist *)artistAtIndex:(int)index;
+- (nonnull CLPArtist *)artistAtIndex:(int)index;
+
+- (void)fetchArtistForQuery:(NSString *_Nonnull)query :(CLPArtistCompletionHandler _Nonnull )completionHandler;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -7,12 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Artist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistsController : NSObject
 
+@property (nonatomic, readonly, copy) NSArray<Artist *> *artists;
 
+- (instancetype)init;
+
+- (void)addArtist:(Artist *)artist;
 
 @end
 

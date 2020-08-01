@@ -36,7 +36,8 @@
 }
 
 - (IBAction)save:(UIBarButtonItem *)sender {
-
+    [self.artistController addArtist:self.artist];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)setArtist:(CLPArtist *)artist

@@ -13,6 +13,8 @@
 		1148C1C924D4F7EE00ED22D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1148C1C824D4F7EE00ED22D8 /* Assets.xcassets */; };
 		1148C1CC24D4F7EE00ED22D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1148C1CA24D4F7EE00ED22D8 /* LaunchScreen.storyboard */; };
 		1148C1CF24D4F7EE00ED22D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1CE24D4F7EE00ED22D8 /* main.m */; };
+		1148C1DD24D4FB1700ED22D8 /* KSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1DC24D4FB1700ED22D8 /* KSIArtist.m */; };
+		1148C1E024D5007100ED22D8 /* KSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1DF24D5007100ED22D8 /* KSIArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,10 @@
 		1148C1CD24D4F7EE00ED22D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1148C1CE24D4F7EE00ED22D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1148C1D624D4F82100ED22D8 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../../LSIFileHelper.h; sourceTree = "<group>"; };
+		1148C1DB24D4FB1700ED22D8 /* KSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSIArtist.h; sourceTree = "<group>"; };
+		1148C1DC24D4FB1700ED22D8 /* KSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSIArtist.m; sourceTree = "<group>"; };
+		1148C1DE24D5007100ED22D8 /* KSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSIArtistController.h; sourceTree = "<group>"; };
+		1148C1DF24D5007100ED22D8 /* KSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSIArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 		1148C1D824D4F83300ED22D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1148C1DB24D4FB1700ED22D8 /* KSIArtist.h */,
+				1148C1DC24D4FB1700ED22D8 /* KSIArtist.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +110,8 @@
 		1148C1D924D4F83700ED22D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1148C1DE24D5007100ED22D8 /* KSIArtistController.h */,
+				1148C1DF24D5007100ED22D8 /* KSIArtistController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,9 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1148C1DD24D4FB1700ED22D8 /* KSIArtist.m in Sources */,
 				1148C1BE24D4F7DB00ED22D8 /* AppDelegate.m in Sources */,
 				1148C1CF24D4F7EE00ED22D8 /* main.m in Sources */,
 				1148C1C124D4F7DB00ED22D8 /* SceneDelegate.m in Sources */,
+				1148C1E024D5007100ED22D8 /* KSIArtistController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

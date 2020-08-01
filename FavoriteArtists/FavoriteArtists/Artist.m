@@ -30,8 +30,22 @@
     return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    return nil;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    NSString *name = [dictionary objectForKey:@"strArtist"];
+    if (![name isKindOfClass:[NSString class]]) return nil;
+
+    NSNumber *yearFormed = [dictionary objectForKey:@"intFormedYear"];
+    if ([yearFormed isKindOfClass:[NSNull class]]) yearFormed = nil;
+    else if (![yearFormed isKindOfClass:[NSNumber class]]) return nil;
+
+    NSString *biography = [dictionary objectForKey:@"strBiographyEN"];
+    if ([biography isKindOfClass:[NSNull class]]) biography = nil;
+    else if (![biography isKindOfClass:[NSString class]]) return nil;
+
+    return [self initWithName:name
+                   yearFormed:yearFormed.intValue
+                    biography:biography];
 }
 
 @end

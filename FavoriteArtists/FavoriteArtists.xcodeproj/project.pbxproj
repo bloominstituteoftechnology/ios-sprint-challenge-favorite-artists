@@ -18,6 +18,9 @@
 		3A3F935E24D4FB8D006CD829 /* ArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F935D24D4FB8D006CD829 /* ArtistFetcher.m */; };
 		3A3F936124D4FBE9006CD829 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F936024D4FBE9006CD829 /* Artist.m */; };
 		3A3F936424D4FC18006CD829 /* ArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F936324D4FC18006CD829 /* ArtistResults.m */; };
+		3A3F936C24D50186006CD829 /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F936624D50186006CD829 /* LSILog.m */; };
+		3A3F936D24D50186006CD829 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F936724D50186006CD829 /* LSIErrors.m */; };
+		3A3F936E24D50186006CD829 /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F936824D50186006CD829 /* LSIFileHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,12 @@
 		3A3F936024D4FBE9006CD829 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 		3A3F936224D4FC18006CD829 /* ArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistResults.h; sourceTree = "<group>"; };
 		3A3F936324D4FC18006CD829 /* ArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistResults.m; sourceTree = "<group>"; };
+		3A3F936624D50186006CD829 /* LSILog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSILog.m; sourceTree = "<group>"; };
+		3A3F936724D50186006CD829 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		3A3F936824D50186006CD829 /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
+		3A3F936924D50186006CD829 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		3A3F936A24D50186006CD829 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		3A3F936B24D50186006CD829 /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +98,25 @@
 				3A3F936324D4FC18006CD829 /* ArtistResults.m */,
 				3A3F934924D4F712006CD829 /* Main.storyboard */,
 				3A3F934C24D4F713006CD829 /* Assets.xcassets */,
+				3A3F936524D50186006CD829 /* LambdaSDK */,
 				3A3F934E24D4F713006CD829 /* LaunchScreen.storyboard */,
 				3A3F935124D4F713006CD829 /* Info.plist */,
 				3A3F935224D4F713006CD829 /* main.m */,
 			);
 			path = FavoriteArtists;
+			sourceTree = "<group>";
+		};
+		3A3F936524D50186006CD829 /* LambdaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				3A3F936624D50186006CD829 /* LSILog.m */,
+				3A3F936724D50186006CD829 /* LSIErrors.m */,
+				3A3F936824D50186006CD829 /* LSIFileHelper.m */,
+				3A3F936924D50186006CD829 /* LSIFileHelper.h */,
+				3A3F936A24D50186006CD829 /* LSIErrors.h */,
+				3A3F936B24D50186006CD829 /* LSILog.h */,
+			);
+			path = LambdaSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +192,10 @@
 				3A3F934824D4F712006CD829 /* ArtistDetailViewController.m in Sources */,
 				3A3F934224D4F712006CD829 /* AppDelegate.m in Sources */,
 				3A3F935E24D4FB8D006CD829 /* ArtistFetcher.m in Sources */,
+				3A3F936D24D50186006CD829 /* LSIErrors.m in Sources */,
 				3A3F936424D4FC18006CD829 /* ArtistResults.m in Sources */,
+				3A3F936C24D50186006CD829 /* LSILog.m in Sources */,
+				3A3F936E24D50186006CD829 /* LSIFileHelper.m in Sources */,
 				3A3F935324D4F713006CD829 /* main.m in Sources */,
 				3A3F935B24D4FB0C006CD829 /* ArtistsTableViewController.m in Sources */,
 				3A3F934524D4F712006CD829 /* SceneDelegate.m in Sources */,

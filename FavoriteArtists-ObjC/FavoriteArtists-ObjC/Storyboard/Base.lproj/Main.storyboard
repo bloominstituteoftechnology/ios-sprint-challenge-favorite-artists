@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ckg-Ru-irl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="PUT-2l-gh0">
             <objects>
-                <tableViewController id="mui-r9-Mkw" sceneMemberID="viewController">
+                <tableViewController id="mui-r9-Mkw" customClass="KSIFavoriteArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bzt-yI-2Ti">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
         <!--Artist name-->
         <scene sceneID="Gk1-Uh-vM4">
             <objects>
-                <viewController id="S5c-lU-9wK" sceneMemberID="viewController">
+                <viewController id="S5c-lU-9wK" customClass="KSIArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PkN-nY-fo5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +96,7 @@
         <!--Add New Artist-->
         <scene sceneID="A0y-n8-wvD">
             <objects>
-                <viewController id="xwP-GN-DzZ" sceneMemberID="viewController">
+                <viewController id="xwP-GN-DzZ" customClass="KSISearchForArtistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FYx-Jt-JGM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b3g-qz-30U"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Artist" id="TXB-Ym-Xmp"/>
+                    <navigationItem key="navigationItem" title="Add New Artist" id="TXB-Ym-Xmp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2oW-Ux-7pp">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="xwP-GN-DzZ" id="qjB-JH-KM4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistBiography" destination="EH0-iP-yoC" id="oHv-Yi-6Qc"/>
+                        <outlet property="artistNameLabel" destination="69J-aQ-ddX" id="gIr-RS-eR3"/>
+                        <outlet property="artistStartDateLabel" destination="CN3-fk-XLx" id="ZpY-TE-1hW"/>
+                        <outlet property="saveButton" destination="2oW-Ux-7pp" id="PqF-9g-KBH"/>
+                        <outlet property="searchBar" destination="Zvr-ya-qRN" id="DWk-5R-3Gb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYa-3w-Ck4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

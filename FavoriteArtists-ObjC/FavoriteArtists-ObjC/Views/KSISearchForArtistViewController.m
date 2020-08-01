@@ -7,8 +7,25 @@
 //
 
 #import "KSISearchForArtistViewController.h"
+#import "KSIArtistController.h"
+#import "KSIArtist.h"
 
 @interface KSISearchForArtistViewController ()
+
+// Properties
+@property (nonatomic) KSIArtistController *ksiArtistController;
+@property (nonatomic) KSIArtist *ksiArtist;
+
+// Outlets
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *artistStartDateLabel;
+@property (strong, nonatomic) IBOutlet UITextView *artistBiography;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
+// File Methods
+- (void)updateViews;
+- (void)saveArtist;
 
 @end
 
@@ -16,17 +33,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.ksiArtistController = [[KSIArtistController alloc]init];
+    self.searchBar.delegate = self;
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews
+{
+    self.artistNameLabel.text = self.ksiArtist.name;
+    self.artistStartDateLabel.text = [NSString localizedStringWithFormat:@"Started in %d", self.ksiArtist.yearArtistFormed];
+    self.artistBiography.text = self.ksiArtist.biography;
 }
-*/
+
+- (void)saveArtist
+{
+    [self.ksiArtistController addArtist:[[KSIArtist alloc] initWithName:self.ksiArtist.name
+                                                        artistBiography:self.ksiArtist.biography
+                                                       yearArtistFormed:self.ksiArtist.yearArtistFormed]];
+}
+
+- (IBAction)saveButtonTapped:(id)sender
+{
+    [self saveArtist];
+    [self.navigationController popToRootViewControllerAnimated:true];
+}
+
+//- (void)searchBarTapped:(UISearchBar *)searchBar
+//{
+//    NSString *searchTerm = searchBar.text;
+//    [self.ksiArtistController searchForArtists:searchTerm
+//                                    completion:^(KSIArtist *artist, NSError *error) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            self.ksiArtist = artist;
+//            [self updateViews];
+//            NSLog(@"Artist found: %@", artist);
+//        });
+//    }];
+//}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSLog(@"pressed Return inside search bar");
+    NSString *searchTerm = searchBar.text;
+    [self.ksiArtistController searchForArtists:searchTerm
+                                    completion:^(KSIArtist *artist, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.ksiArtist = artist;
+            [self updateViews];
+            NSLog(@"Artist found: %@", artist);
+        });
+    }];
+}
+
 
 @end

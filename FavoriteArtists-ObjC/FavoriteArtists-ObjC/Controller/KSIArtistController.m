@@ -11,9 +11,43 @@
 #import "KSIArtistResults.h"
 #import "LSIErrors.h"
 
+@interface KSIArtistController () {
+    NSMutableArray *_internalArtists;
+}
+
+@end
+
 static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
 
 @implementation KSIArtistController
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _internalArtists = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
+- (NSArray<KSIArtist *> *)artists
+    {
+        return _internalArtists.copy;
+    }
+
+- (NSUInteger)artistCount
+{
+    return _internalArtists.count;
+}
+
+- (KSIArtist *)artistAtIndex:(NSUInteger)index
+{
+    return [_internalArtists objectAtIndex:index];
+}
+
+- (void)addArtist:(KSIArtist *)anArtist
+{
+    [_internalArtists addObject:anArtist];
+}
 
 - (void)searchForArtists:(NSString *)name
               completion:(ArtistFetcherCompletionHandler)completionHandler
@@ -22,7 +56,7 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:ArtistFetcherBaseURLString];
     
-    NSURLQueryItem *searchTerm = [NSURLQueryItem queryItemWithName:@""
+    NSURLQueryItem *searchTerm = [NSURLQueryItem queryItemWithName:@"s"
                                                              value:name];
     [urlComponents setQueryItems:@[searchTerm]];
     NSURL *url = urlComponents.URL;
@@ -46,33 +80,18 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data
                                                                    options:0
                                                                      error:&jsonError];
-        if (!dictionary) {
-            NSLog(@"Error decoding JSON: %@", jsonError);
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completionHandler(nil, jsonError);
-            });
-            
-            return;
-        }
-        
-        KSIArtistResults *results = [[KSIArtistResults alloc] initWithDictionary:dictionary];
-        if (!results) {
-            NSError *apiError = errorWithMessage(@"Invalid JSON dictionary", LSIAPIError);
-            NSLog(@"Error decoding results dictionary: %@", apiError);
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completionHandler(nil, apiError);
-            });
-            
-            return;
-        }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            completionHandler(results.artists, nil);
-        });
+        if (![dictionary isKindOfClass:[NSDictionary class]]) {
+             NSError *apiError = errorWithMessage(@"Invalid JSON dictionary", LSIAPIError);
+             NSLog(@"Error decoding results dictionary: %@", apiError);
+             completionHandler(nil, [[NSError alloc] init]);
+             return;
+         } else if (dictionary[@"artists"] != [NSNull null]) {
+             NSArray *artistDictionaries = dictionary[@"artists"];
+             NSDictionary *artistDictionary = artistDictionaries.firstObject;
+             KSIArtist *artist = [[KSIArtist alloc] initWithDictionary:artistDictionary];
+
+             completionHandler(artist, nil);
+         }
     }] resume];
-
 }
-
 @end

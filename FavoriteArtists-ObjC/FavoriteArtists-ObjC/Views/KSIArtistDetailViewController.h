@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSIArtistController.h"
+#import "KSIArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KSIArtistDetailViewController : UIViewController
+@interface KSIArtistDetailViewController : UIViewController <UISearchBarDelegate>
+
+@property KSIArtistController *ksiArtistController;
+@property KSIArtist *ksiArtist;
 
 @end
 

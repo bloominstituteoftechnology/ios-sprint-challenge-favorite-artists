@@ -31,22 +31,17 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSDictionary *properties = [dictionary objectForKey:@"properties"];
-    if (![properties isKindOfClass:NSDictionary.class]) return nil;
-
-    NSString *name = [dictionary objectForKey:@"intFormedYear"];
+    NSString *name = [dictionary objectForKey:@"strArtist"];
     if (![name isKindOfClass:NSString.class]) return nil;
 
-    NSString *biography = [dictionary objectForKey:@"biography"];
+    NSString *biography = [dictionary objectForKey:@"strBiographyEN"];
     if (![biography isKindOfClass:NSString.class]) return nil;
 
-    NSString *yearArtistFormed = [dictionary objectForKey:@"strBiographyEN"];
+    NSString *yearArtistFormed = [dictionary objectForKey:@"intFormedYear"];
     if (![yearArtistFormed isKindOfClass:NSString.class]) return nil;
 
     return [self initWithName:name
               artistBiography:biography
              yearArtistFormed:yearArtistFormed.intValue];
-
 }
-
 @end

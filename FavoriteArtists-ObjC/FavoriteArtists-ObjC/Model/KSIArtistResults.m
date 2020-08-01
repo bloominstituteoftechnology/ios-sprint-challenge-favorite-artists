@@ -27,7 +27,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSArray *artistDicionaries = [dictionary objectForKey:@"features"];
+    NSArray *artistDicionaries = [dictionary objectForKey:@"strArtist"];
     if (![artistDicionaries isKindOfClass:NSArray.class]) return nil;
     
     NSMutableArray *artists = [[NSMutableArray alloc] initWithCapacity:artistDicionaries.count];

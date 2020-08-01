@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int yearFormed;
 @property (nonatomic, copy) NSString *biography;
 
+- (instancetype)initWithName:(NSString *)name yearFormed:(int)yearFormed biography:(NSString *)biography;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,4 +10,14 @@
 
 @implementation CLPArtist
 
+- (instancetype)initWithName:(NSString *)name yearFormed:(int)yearFormed biography:(NSString *)biography
+{
+    if (self = [super init]) {
+        _name = name;
+        _yearFormed = yearFormed;
+        _biography = biography;
+    }
+    return self;
+}
+
 @end

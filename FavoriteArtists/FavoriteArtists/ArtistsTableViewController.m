@@ -7,6 +7,8 @@
 //
 
 #import "ArtistsTableViewController.h"
+#import "Artist.h"
+#import "ArtistDetailViewController.h"
 
 @interface ArtistsTableViewController ()
 

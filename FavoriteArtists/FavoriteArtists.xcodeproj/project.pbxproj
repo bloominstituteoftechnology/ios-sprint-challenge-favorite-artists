@@ -21,6 +21,7 @@
 		3A3F936C24D50186006CD829 /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F936624D50186006CD829 /* LSILog.m */; };
 		3A3F936D24D50186006CD829 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F936724D50186006CD829 /* LSIErrors.m */; };
 		3A3F936E24D50186006CD829 /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F936824D50186006CD829 /* LSIFileHelper.m */; };
+		3A3F937124D5076D006CD829 /* ArtistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F937024D5076D006CD829 /* ArtistsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		3A3F936924D50186006CD829 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		3A3F936A24D50186006CD829 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 		3A3F936B24D50186006CD829 /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
+		3A3F936F24D5076D006CD829 /* ArtistsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistsController.h; sourceTree = "<group>"; };
+		3A3F937024D5076D006CD829 /* ArtistsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				3A3F936024D4FBE9006CD829 /* Artist.m */,
 				3A3F936224D4FC18006CD829 /* ArtistResults.h */,
 				3A3F936324D4FC18006CD829 /* ArtistResults.m */,
+				3A3F936F24D5076D006CD829 /* ArtistsController.h */,
+				3A3F937024D5076D006CD829 /* ArtistsController.m */,
 				3A3F934924D4F712006CD829 /* Main.storyboard */,
 				3A3F934C24D4F713006CD829 /* Assets.xcassets */,
 				3A3F936524D50186006CD829 /* LambdaSDK */,
@@ -193,6 +198,7 @@
 				3A3F934224D4F712006CD829 /* AppDelegate.m in Sources */,
 				3A3F935E24D4FB8D006CD829 /* ArtistFetcher.m in Sources */,
 				3A3F936D24D50186006CD829 /* LSIErrors.m in Sources */,
+				3A3F937124D5076D006CD829 /* ArtistsController.m in Sources */,
 				3A3F936424D4FC18006CD829 /* ArtistResults.m in Sources */,
 				3A3F936C24D50186006CD829 /* LSILog.m in Sources */,
 				3A3F936E24D50186006CD829 /* LSIFileHelper.m in Sources */,

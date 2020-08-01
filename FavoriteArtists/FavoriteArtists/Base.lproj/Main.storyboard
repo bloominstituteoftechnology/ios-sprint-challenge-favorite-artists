@@ -57,8 +57,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="kFR-g1-lbx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ndh-Kd-FoZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ndh-Kd-FoZ">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="BYZ-38-t0r" id="Daj-eU-o7k"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="29Q-J4-Uh8" id="ZYy-m2-N7c"/>
+                        <outlet property="biographyLabel" destination="ZyL-IV-hfs" id="v1L-4H-Evn"/>
+                        <outlet property="saveButton" destination="ndh-Kd-FoZ" id="3fB-69-WYD"/>
+                        <outlet property="searchBar" destination="YO0-yf-04b" id="lFF-3m-Mf6"/>
+                        <outlet property="yearFormedLabel" destination="LB4-e6-GMe" id="Z80-8e-M2h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,6 +149,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="W78-QH-OqL"/>
+        <segue reference="JxV-ZL-Qde"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class CLPArtistController;
 
 @interface CLPAddNewArtistViewController : UIViewController
 
-@end
+@property (nonatomic) CLPArtistController *artistController;
 
-NS_ASSUME_NONNULL_END
+@end

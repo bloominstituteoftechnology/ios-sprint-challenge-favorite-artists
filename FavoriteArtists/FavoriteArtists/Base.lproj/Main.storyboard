@@ -164,11 +164,11 @@
             <objects>
                 <viewController id="vLc-OR-cGg" customClass="CLPArtistInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rfl-pA-Ccy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bpf-bk-lDp">
-                                <rect key="frame" x="20" y="20" width="374" height="682"/>
+                                <rect key="frame" x="20" y="20" width="374" height="626"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSR-lk-Zqs">
                                         <rect key="frame" x="0.0" y="0.0" width="142.5" height="33.5"/>
@@ -183,7 +183,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eNn-NR-wfp">
-                                        <rect key="frame" x="0.0" y="74" width="374" height="608"/>
+                                        <rect key="frame" x="0.0" y="74" width="374" height="552"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -200,6 +200,7 @@
                             <constraint firstAttribute="trailing" secondItem="Bpf-bk-lDp" secondAttribute="trailing" constant="20" id="LDm-RS-14d"/>
                             <constraint firstItem="Bpf-bk-lDp" firstAttribute="top" secondItem="rfl-pA-Ccy" secondAttribute="top" constant="20" id="OJl-xZ-Ha8"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="iVk-JC-OCM"/>
                     </view>
                     <connections>
                         <outlet property="artistNameLabel" destination="eSR-lk-Zqs" id="hya-sN-8Mb"/>
@@ -213,6 +214,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="V0u-Ve-cv6"/>
+        <segue reference="aWn-ad-z9F"/>
     </inferredMetricsTieBreakers>
 </document>

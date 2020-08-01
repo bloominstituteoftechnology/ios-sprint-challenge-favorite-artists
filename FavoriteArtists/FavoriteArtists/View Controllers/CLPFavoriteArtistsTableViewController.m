@@ -9,6 +9,8 @@
 #import "CLPFavoriteArtistsTableViewController.h"
 #import "CLPArtistController.h"
 #import "CLPArtist.h"
+#import "CLPAddNewArtistViewController.h"
+#import "CLPViewArtistViewController.h"
 
 @interface CLPFavoriteArtistsTableViewController ()
 
@@ -54,9 +56,16 @@
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"NewArtistSegue"]) {
+
+        CLPAddNewArtistViewController *addVC = segue.destinationViewController;
+        addVC.artistController = self.artistController;
+
+    } else if ([segue.identifier isEqualToString:@"ViewArtistSegue"]) {
+        // set artist
+    }
 }
 
 @end

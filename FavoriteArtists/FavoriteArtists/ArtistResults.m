@@ -7,7 +7,23 @@
 //
 
 #import "ArtistResults.h"
+#import "Artist.h"
 
 @implementation ArtistResults
 
+- (instancetype)initWithArtists:(NSArray<Artist *> *)artists
+{
+    self = [super init];
+    if (self)
+    {
+        _artists = artists;
+    }
+    
+    return self;
+}
+
+- (instancetype)initwithDictionary:(NSDictionary *)dictionary
+{
+    return nil;
+}
 @end

@@ -6,13 +6,13 @@
 //  Copyright © 2020 thecoderpilot. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ArtistDetailViewController.h"
 
-@interface ViewController ()
+@interface ArtistDetailViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ArtistDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

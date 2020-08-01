@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef void(^ArtistFetcherCompletionHandler)(NSArray * _Nullable artist, NSError * _Nullable error);
 
 @interface KSIArtistController : NSObject
 
+- (void)searchForArtists:(nonnull NSString *)name
+              completion:(nonnull ArtistFetcherCompletionHandler)completionHandler;
+
 @end
 
-NS_ASSUME_NONNULL_END
+

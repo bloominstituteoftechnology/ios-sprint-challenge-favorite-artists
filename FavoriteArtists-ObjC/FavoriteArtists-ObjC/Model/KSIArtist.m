@@ -19,7 +19,7 @@
 
 - (instancetype)initWithName:(NSString *)name
              artistBiography:(NSString *)biography
-            yearArtistFormed:(NSNumber *)yearArtistFormed
+            yearArtistFormed:(int)yearArtistFormed
 {
     if (self = [super init]) {
         _name = name.copy;
@@ -33,20 +33,20 @@
 {
     NSDictionary *properties = [dictionary objectForKey:@"properties"];
     if (![properties isKindOfClass:NSDictionary.class]) return nil;
-    
-    NSString *name = [dictionary objectForKey:@"name"];
+
+    NSString *name = [dictionary objectForKey:@"intFormedYear"];
     if (![name isKindOfClass:NSString.class]) return nil;
-    
+
     NSString *biography = [dictionary objectForKey:@"biography"];
     if (![biography isKindOfClass:NSString.class]) return nil;
-    
-    NSNumber *yearArtistFormed = [dictionary objectForKey:@"yearArtistFormed"];
-    if (![yearArtistFormed isKindOfClass:NSNumber.class]) return nil;
-    
+
+    NSString *yearArtistFormed = [dictionary objectForKey:@"strBiographyEN"];
+    if (![yearArtistFormed isKindOfClass:NSString.class]) return nil;
+
     return [self initWithName:name
               artistBiography:biography
-             yearArtistFormed:yearArtistFormed];
-    
+             yearArtistFormed:yearArtistFormed.intValue];
+
 }
 
 @end

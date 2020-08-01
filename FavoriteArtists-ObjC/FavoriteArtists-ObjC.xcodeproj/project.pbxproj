@@ -15,6 +15,8 @@
 		1148C1CF24D4F7EE00ED22D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1CE24D4F7EE00ED22D8 /* main.m */; };
 		1148C1DD24D4FB1700ED22D8 /* KSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1DC24D4FB1700ED22D8 /* KSIArtist.m */; };
 		1148C1E024D5007100ED22D8 /* KSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1DF24D5007100ED22D8 /* KSIArtistController.m */; };
+		1148C1E324D5073500ED22D8 /* KSIArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1E224D5073500ED22D8 /* KSIArtistResults.m */; };
+		1148C1E624D5099900ED22D8 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148C1E524D5099900ED22D8 /* LSIErrors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,10 @@
 		1148C1DC24D4FB1700ED22D8 /* KSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSIArtist.m; sourceTree = "<group>"; };
 		1148C1DE24D5007100ED22D8 /* KSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSIArtistController.h; sourceTree = "<group>"; };
 		1148C1DF24D5007100ED22D8 /* KSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSIArtistController.m; sourceTree = "<group>"; };
+		1148C1E124D5073500ED22D8 /* KSIArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSIArtistResults.h; sourceTree = "<group>"; };
+		1148C1E224D5073500ED22D8 /* KSIArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSIArtistResults.m; sourceTree = "<group>"; };
+		1148C1E424D5099900ED22D8 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		1148C1E524D5099900ED22D8 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				1148C1D624D4F82100ED22D8 /* LSIFileHelper.h */,
+				1148C1E424D5099900ED22D8 /* LSIErrors.h */,
+				1148C1E524D5099900ED22D8 /* LSIErrors.m */,
 			);
 			path = LambdaSDK;
 			sourceTree = "<group>";
@@ -103,6 +111,8 @@
 			children = (
 				1148C1DB24D4FB1700ED22D8 /* KSIArtist.h */,
 				1148C1DC24D4FB1700ED22D8 /* KSIArtist.m */,
+				1148C1E124D5073500ED22D8 /* KSIArtistResults.h */,
+				1148C1E224D5073500ED22D8 /* KSIArtistResults.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,7 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1148C1DD24D4FB1700ED22D8 /* KSIArtist.m in Sources */,
+				1148C1E324D5073500ED22D8 /* KSIArtistResults.m in Sources */,
 				1148C1BE24D4F7DB00ED22D8 /* AppDelegate.m in Sources */,
+				1148C1E624D5099900ED22D8 /* LSIErrors.m in Sources */,
 				1148C1CF24D4F7EE00ED22D8 /* main.m in Sources */,
 				1148C1C124D4F7DB00ED22D8 /* SceneDelegate.m in Sources */,
 				1148C1E024D5007100ED22D8 /* KSIArtistController.m in Sources */,

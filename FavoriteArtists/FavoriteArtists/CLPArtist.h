@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CLPArtist : NSObject
 
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic) int yearFormed;
+@property (nonatomic, copy) NSString *biography;
+
 @end
 
 NS_ASSUME_NONNULL_END

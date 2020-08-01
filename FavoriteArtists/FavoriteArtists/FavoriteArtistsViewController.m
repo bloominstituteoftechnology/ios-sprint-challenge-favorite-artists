@@ -6,13 +6,13 @@
 //  Copyright © 2020 Chad Parker. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FavoriteArtistsViewController.h"
 
-@interface ViewController ()
+@interface FavoriteArtistsViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FavoriteArtistsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FavoriteArtistsViewController.h
 //  FavoriteArtists
 //
 //  Created by Chad Parker on 7/31/20.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface FavoriteArtistsViewController : UIViewController
 
 
 @end

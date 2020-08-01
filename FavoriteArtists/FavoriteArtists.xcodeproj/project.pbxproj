@@ -20,6 +20,7 @@
 		63F855F824D500E200661CDC /* CLPArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F855F724D500E200661CDC /* CLPArtist.m */; };
 		63F8560124D5021200661CDC /* CLPArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F8560024D5021200661CDC /* CLPArtist+NSJSONSerialization.m */; };
 		63F8560624D5043300661CDC /* CLPArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F8560524D5043300661CDC /* CLPArtistController.m */; };
+		63F8560924D5167A00661CDC /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F8560824D5167A00661CDC /* LSIErrors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		63F8560024D5021200661CDC /* CLPArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CLPArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		63F8560424D5043300661CDC /* CLPArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLPArtistController.h; sourceTree = "<group>"; };
 		63F8560524D5043300661CDC /* CLPArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLPArtistController.m; sourceTree = "<group>"; };
+		63F8560724D5167A00661CDC /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		63F8560824D5167A00661CDC /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				63F855DF24D4F83700661CDC /* LaunchScreen.storyboard */,
 				63F855E224D4F83700661CDC /* Info.plist */,
 				63F855E324D4F83700661CDC /* main.m */,
+				63F8560724D5167A00661CDC /* LSIErrors.h */,
+				63F8560824D5167A00661CDC /* LSIErrors.m */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				63F855E424D4F83700661CDC /* main.m in Sources */,
 				63F855EC24D4FBD600661CDC /* CLPFavoriteArtistsTableViewController.m in Sources */,
 				63F8560624D5043300661CDC /* CLPArtistController.m in Sources */,
+				63F8560924D5167A00661CDC /* LSIErrors.m in Sources */,
 				63F855F824D500E200661CDC /* CLPArtist.m in Sources */,
 				63F855EF24D4FCC200661CDC /* CLPAddNewArtistViewController.m in Sources */,
 				63F855D624D4F83500661CDC /* SceneDelegate.m in Sources */,

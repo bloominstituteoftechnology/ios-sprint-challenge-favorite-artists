@@ -80,10 +80,31 @@
 				63F855D224D4F83500661CDC /* AppDelegate.m */,
 				63F855D424D4F83500661CDC /* SceneDelegate.h */,
 				63F855D524D4F83500661CDC /* SceneDelegate.m */,
+				63F8560224D5038800661CDC /* Model */,
+				63F8560324D5039200661CDC /* View Controllers */,
+				63F855DA24D4F83500661CDC /* Main.storyboard */,
+				63F855DD24D4F83700661CDC /* Assets.xcassets */,
+				63F855DF24D4F83700661CDC /* LaunchScreen.storyboard */,
+				63F855E224D4F83700661CDC /* Info.plist */,
+				63F855E324D4F83700661CDC /* main.m */,
+			);
+			path = FavoriteArtists;
+			sourceTree = "<group>";
+		};
+		63F8560224D5038800661CDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				63F855F624D500E200661CDC /* CLPArtist.h */,
 				63F855F724D500E200661CDC /* CLPArtist.m */,
 				63F855FF24D5021200661CDC /* CLPArtist+NSJSONSerialization.h */,
 				63F8560024D5021200661CDC /* CLPArtist+NSJSONSerialization.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63F8560324D5039200661CDC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				63F855EA24D4FBD600661CDC /* CLPFavoriteArtistsTableViewController.h */,
 				63F855EB24D4FBD600661CDC /* CLPFavoriteArtistsTableViewController.m */,
 				63F855ED24D4FCC200661CDC /* CLPAddNewArtistViewController.h */,
@@ -92,13 +113,8 @@
 				63F855F124D4FD1800661CDC /* CLPViewArtistViewController.m */,
 				63F855F324D4FEBD00661CDC /* CLPArtistInfoViewController.h */,
 				63F855F424D4FEBD00661CDC /* CLPArtistInfoViewController.m */,
-				63F855DA24D4F83500661CDC /* Main.storyboard */,
-				63F855DD24D4F83700661CDC /* Assets.xcassets */,
-				63F855DF24D4F83700661CDC /* LaunchScreen.storyboard */,
-				63F855E224D4F83700661CDC /* Info.plist */,
-				63F855E324D4F83700661CDC /* main.m */,
 			);
-			path = FavoriteArtists;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

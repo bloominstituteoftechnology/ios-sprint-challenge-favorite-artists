@@ -101,11 +101,11 @@ static NSString *const ArtistControllerBaseURLString = @"https://www.theaudiodb.
             return;
         }
 
-        NSLog(@"%@", artists[0]);
+        CLPArtist *artist = [[CLPArtist alloc] initWithDictionary:artists[0]];
 
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            completionHandler(results.quakes, nil);
-//        });
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(artist, nil);
+        });
     }] resume];
 }
 

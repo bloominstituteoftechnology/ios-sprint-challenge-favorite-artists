@@ -24,13 +24,17 @@
 
     self.artistNameLabel.text = @"";
     self.yearFormedLabel.text = @"";
+    self.biographyTextView.text = @"";
 }
 
 - (void)setArtist:(CLPArtist *)artist
 {
-    self.artistNameLabel.text = artist.name;
-    self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
-    self.biographyTextView.text = artist.biography;
+    _artist = artist;
+    if (artist) {
+        self.artistNameLabel.text = artist.name;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
+        self.biographyTextView.text = artist.biography;
+    }
 }
 
 /*

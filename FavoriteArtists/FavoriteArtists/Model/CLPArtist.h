@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithName:(NSString *)name yearFormed:(int)yearFormed biography:(NSString *)biography;
 
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

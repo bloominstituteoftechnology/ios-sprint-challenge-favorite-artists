@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @property (nonatomic) CLPArtist *artist;
+@property (nonatomic) CLPArtistInfoViewController *infoVC;
 
 @end
 
@@ -31,17 +32,21 @@
     [super viewDidLoad];
 
     self.searchBar.delegate = self;
-
-    self.artist = [[CLPArtist alloc] init];
 }
 
 - (IBAction)save:(UIBarButtonItem *)sender {
 
 }
 
+- (void)setArtist:(CLPArtist *)artist
+{
+    _artist = artist;
+    self.infoVC.artist = self.artist;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     CLPArtistInfoViewController *infoVC = [segue destinationViewController];
-    infoVC.artist = self.artist;
+    self.infoVC = infoVC;
 }
 
 @end
@@ -51,7 +56,15 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self.artistController fetchArtistForQuery:searchBar.text :^(CLPArtist * _Nullable artist, NSError * _Nullable error) {
-        
+        if (error) {
+            NSLog(@"%@", error);
+            return;
+        }
+        if (artist) {
+            self.artist = artist;
+        } else {
+            NSLog(@"Artist is nil");
+        }
     }];
 }
 

@@ -27,13 +27,14 @@
     self.biographyTextView.text = @"";
 }
 
-- (void)setArtist:(CLPArtist *)artist
+- (void)viewDidAppear:(BOOL)animated
 {
-    _artist = artist;
-    if (artist) {
-        self.artistNameLabel.text = artist.name;
-        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
-        self.biographyTextView.text = artist.biography;
+    [super viewDidAppear:animated];
+    
+    if (self.artist) {
+        self.artistNameLabel.hidden = YES;
+        self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+        self.biographyTextView.text = self.artist.biography;
     }
 }
 

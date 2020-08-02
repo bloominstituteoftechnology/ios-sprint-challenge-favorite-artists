@@ -15,16 +15,18 @@
 
 @implementation CLPViewArtistViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    
+    self.title = @"";
 }
 
-- (void)setArtist:(CLPArtist *)artist
+- (void)viewDidAppear:(BOOL)animated
 {
-    _artist = artist;
-    NSLog(@"view artist: %@", artist);
+    [super viewDidAppear:animated];
+    
+    self.title = self.artist.name;
 }
 
 #pragma mark - Navigation

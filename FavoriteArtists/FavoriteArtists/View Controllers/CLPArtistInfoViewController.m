@@ -44,7 +44,12 @@
 - (void)updateViews
 {
     if (self.artist) {
-        self.artistNameLabel.hidden = YES;
+        if (self.showArtistName) {
+            self.artistNameLabel.hidden = NO;
+        } else {
+            self.artistNameLabel.hidden = YES;
+        }
+        self.artistNameLabel.text = self.artist.name;
         self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
         self.biographyTextView.text = self.artist.biography;
     }

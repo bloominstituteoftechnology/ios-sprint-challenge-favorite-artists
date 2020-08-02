@@ -13,5 +13,6 @@
 @interface CLPArtistInfoViewController : UIViewController
 
 @property (nonatomic) CLPArtist *artist;
+@property (nonatomic) BOOL showArtistName;
 
 @end

@@ -31,6 +31,7 @@
 {
     CLPArtistInfoViewController *infoVC = segue.destinationViewController;
     infoVC.artist = self.artist;
+    infoVC.showArtistName = NO;
 }
 
 @end

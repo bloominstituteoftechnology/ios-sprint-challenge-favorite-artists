@@ -51,6 +51,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     CLPArtistInfoViewController *infoVC = [segue destinationViewController];
+    infoVC.showArtistName = YES;
     self.infoVC = infoVC;
 }
 

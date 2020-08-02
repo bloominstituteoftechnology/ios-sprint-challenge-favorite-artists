@@ -28,14 +28,16 @@
 
 @implementation CLPAddNewArtistViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 
     self.searchBar.delegate = self;
     [self.searchBar becomeFirstResponder];
 }
 
-- (IBAction)save:(UIBarButtonItem *)sender {
+- (IBAction)save:(UIBarButtonItem *)sender
+{
     [self.artistController addArtist:self.artist];
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -46,7 +48,8 @@
     self.infoVC.artist = self.artist;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     CLPArtistInfoViewController *infoVC = [segue destinationViewController];
     self.infoVC = infoVC;
 }

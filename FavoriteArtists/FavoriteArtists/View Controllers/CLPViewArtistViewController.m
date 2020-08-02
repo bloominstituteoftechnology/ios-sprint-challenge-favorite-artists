@@ -9,10 +9,6 @@
 #import "CLPViewArtistViewController.h"
 #import "CLPArtistInfoViewController.h"
 
-@interface CLPViewArtistViewController ()
-
-@end
-
 @implementation CLPViewArtistViewController
 
 - (void)viewDidLoad

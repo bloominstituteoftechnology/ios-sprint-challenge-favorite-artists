@@ -31,6 +31,17 @@
 {
     [super viewDidAppear:animated];
     
+    [self updateViews];
+}
+
+- (void)setArtist:(CLPArtist *)artist
+{
+    _artist = artist;
+    [self updateViews];
+}
+
+- (void)updateViews
+{
     if (self.artist) {
         self.artistNameLabel.hidden = YES;
         self.yearFormedLabel.text = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];

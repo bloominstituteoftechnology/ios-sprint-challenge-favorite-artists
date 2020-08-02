@@ -9,8 +9,10 @@
 #import "CLPArtistController.h"
 #import "CLPArtist.h"
 #import "LSIErrors.h"
+#import "CLPArtist+NSJSONSerialization.h"
 
 static NSString *const ArtistControllerBaseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php";
+static NSString *const ArtistControllerFavoriteArtistsFilename = @"favoriteArtists.json";
 
 @interface CLPArtistController ()
 
@@ -24,6 +26,13 @@ static NSString *const ArtistControllerBaseURLString = @"https://www.theaudiodb.
 {
     if (self = [super init]) {
         self.artists = [[NSMutableArray alloc] init];
+        
+        NSURL *favArtistsURL = [self favoriteArtistsURL];
+        NSError *error;
+        NSArray *favArtists = [[NSArray alloc] initWithContentsOfURL:favArtistsURL error:&error];
+        for (NSDictionary *artistDict in favArtists) {
+            [self.artists addObject:[[CLPArtist alloc] initWithDictionary:artistDict]];
+        }
     }
     return self;
 }
@@ -31,6 +40,14 @@ static NSString *const ArtistControllerBaseURLString = @"https://www.theaudiodb.
 - (void)addArtist:(CLPArtist *)artist
 {
     [self.artists addObject:artist];
+    
+    NSMutableArray *artistsAsDicts = [[NSMutableArray alloc] init];
+    for (CLPArtist *artist in self.artists) {
+        [artistsAsDicts addObject:[artist toDictionary]];
+    }
+    NSURL *favArtistsURL = [self favoriteArtistsURL];
+    NSError *error;
+    [artistsAsDicts writeToURL:favArtistsURL error:&error];
 }
 
 - (NSUInteger)artistCount
@@ -107,6 +124,12 @@ static NSString *const ArtistControllerBaseURLString = @"https://www.theaudiodb.
             completionHandler(artist, nil);
         });
     }] resume];
+}
+
+- (NSURL *)favoriteArtistsURL
+{
+    NSURL *documentsURL = [NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0];
+    return [documentsURL URLByAppendingPathComponent:ArtistControllerFavoriteArtistsFilename];
 }
 
 @end

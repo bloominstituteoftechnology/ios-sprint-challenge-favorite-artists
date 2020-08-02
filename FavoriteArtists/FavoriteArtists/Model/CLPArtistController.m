@@ -27,12 +27,7 @@ static NSString *const ArtistControllerFavoriteArtistsFilename = @"favoriteArtis
     if (self = [super init]) {
         self.artists = [[NSMutableArray alloc] init];
         
-        NSURL *favArtistsURL = [self favoriteArtistsURL];
-        NSError *error;
-        NSArray *favArtists = [[NSArray alloc] initWithContentsOfURL:favArtistsURL error:&error];
-        for (NSDictionary *artistDict in favArtists) {
-            [self.artists addObject:[[CLPArtist alloc] initWithDictionary:artistDict]];
-        }
+        [self readFavoriteArtists];
     }
     return self;
 }
@@ -140,6 +135,16 @@ static NSString *const ArtistControllerFavoriteArtistsFilename = @"favoriteArtis
     NSURL *favArtistsURL = [self favoriteArtistsURL];
     NSError *error;
     [artistsAsDicts writeToURL:favArtistsURL error:&error];
+}
+
+- (void)readFavoriteArtists
+{
+    NSURL *favArtistsURL = [self favoriteArtistsURL];
+    NSError *error;
+    NSArray *favArtists = [[NSArray alloc] initWithContentsOfURL:favArtistsURL error:&error];
+    for (NSDictionary *artistDict in favArtists) {
+        [self.artists addObject:[[CLPArtist alloc] initWithDictionary:artistDict]];
+    }
 }
 
 @end

@@ -20,18 +20,4 @@
     return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
-    NSString *name = dictionary[@"strArtist"];
-    if (![name isKindOfClass:NSString.class]) return nil;
-
-    NSNumber *yearFormed = dictionary[@"intFormedYear"];
-    //if (![yearFormed isKindOfClass:NSNumber.class]) return nil;
-
-    NSString *biography = dictionary[@"strBiographyEN"];
-    if (![biography isKindOfClass:NSString.class]) return nil;
-
-    return [self initWithName:name yearFormed:yearFormed.intValue biography:biography];
-}
-
 @end

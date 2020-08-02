@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CLPArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CLPViewArtistViewController : UIViewController
+
+@property (nonatomic) CLPArtist *artist;
 
 @end
 

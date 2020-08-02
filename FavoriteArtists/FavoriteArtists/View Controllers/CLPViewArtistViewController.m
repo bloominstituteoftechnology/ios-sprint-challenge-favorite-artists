@@ -7,6 +7,7 @@
 //
 
 #import "CLPViewArtistViewController.h"
+#import "CLPArtistInfoViewController.h"
 
 @interface CLPViewArtistViewController ()
 
@@ -16,17 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
 }
 
-/*
+- (void)setArtist:(CLPArtist *)artist
+{
+    _artist = artist;
+    NSLog(@"view artist: %@", artist);
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    CLPArtistInfoViewController *infoVC = segue.destinationViewController;
+    infoVC.artist = self.artist;
 }
-*/
 
 @end

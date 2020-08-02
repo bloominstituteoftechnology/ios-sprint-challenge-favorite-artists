@@ -69,7 +69,10 @@
         addVC.artistController = self.artistController;
 
     } else if ([segue.identifier isEqualToString:@"ViewArtistSegue"]) {
-        // set artist
+        
+        CLPViewArtistViewController *viewVC = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        viewVC.artist = [self.artistController artistAtIndex:(int)indexPath.row];
     }
 }
 

@@ -16,7 +16,7 @@
     if (![name isKindOfClass:NSString.class]) return nil;
     
     NSNumber *yearFormed = dictionary[@"intFormedYear"];
-    //if (![yearFormed isKindOfClass:NSNumber.class]) return nil;
+    if ([yearFormed isKindOfClass:[NSNull class]]) yearFormed = nil;
     
     NSString *biography = dictionary[@"strBiographyEN"];
     if (![biography isKindOfClass:NSString.class]) return nil;
@@ -28,7 +28,7 @@
 {
     NSDictionary *dictionary = @{
         @"strArtist": self.name,
-        @"intFormedYear": [NSNumber numberWithInt:self.yearFormed],
+        @"intFormedYear": @(self.yearFormed),
         @"strBiographyEN": self.biography,
     };
     return dictionary;

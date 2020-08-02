@@ -12,8 +12,12 @@
 
 - (NSDictionary *)toDictionary
 {
-#warning implement
-    return [[NSDictionary alloc] init];
+    NSDictionary *dictionary = @{
+        @"strArtist": self.name,
+        @"intFormedYear": [NSNumber numberWithInt:self.yearFormed],
+        @"strBiographyEN": self.biography,
+    };
+    return dictionary;
 }
 
 @end

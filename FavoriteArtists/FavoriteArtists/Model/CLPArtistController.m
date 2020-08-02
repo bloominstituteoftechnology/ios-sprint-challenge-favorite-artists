@@ -40,14 +40,7 @@ static NSString *const ArtistControllerFavoriteArtistsFilename = @"favoriteArtis
 - (void)addArtist:(CLPArtist *)artist
 {
     [self.artists addObject:artist];
-    
-    NSMutableArray *artistsAsDicts = [[NSMutableArray alloc] init];
-    for (CLPArtist *artist in self.artists) {
-        [artistsAsDicts addObject:[artist toDictionary]];
-    }
-    NSURL *favArtistsURL = [self favoriteArtistsURL];
-    NSError *error;
-    [artistsAsDicts writeToURL:favArtistsURL error:&error];
+    [self saveFavoriteArtists];
 }
 
 - (NSUInteger)artistCount
@@ -58,6 +51,12 @@ static NSString *const ArtistControllerFavoriteArtistsFilename = @"favoriteArtis
 - (CLPArtist *)artistAtIndex:(int)index
 {
     return self.artists[index];
+}
+
+- (void)deleteArtistAtIndex:(int)index
+{
+    [self.artists removeObjectAtIndex:index];
+    [self saveFavoriteArtists];
 }
 
 - (void)fetchArtistForQuery:(NSString *)query :(CLPArtistCompletionHandler)completionHandler
@@ -130,6 +129,17 @@ static NSString *const ArtistControllerFavoriteArtistsFilename = @"favoriteArtis
 {
     NSURL *documentsURL = [NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0];
     return [documentsURL URLByAppendingPathComponent:ArtistControllerFavoriteArtistsFilename];
+}
+
+- (void)saveFavoriteArtists
+{
+    NSMutableArray *artistsAsDicts = [[NSMutableArray alloc] init];
+    for (CLPArtist *artist in self.artists) {
+        [artistsAsDicts addObject:[artist toDictionary]];
+    }
+    NSURL *favArtistsURL = [self favoriteArtistsURL];
+    NSError *error;
+    [artistsAsDicts writeToURL:favArtistsURL error:&error];
 }
 
 @end

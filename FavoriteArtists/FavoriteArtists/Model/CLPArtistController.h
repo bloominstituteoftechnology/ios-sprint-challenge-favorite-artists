@@ -17,6 +17,7 @@ typedef void(^CLPArtistCompletionHandler)(CLPArtist *_Nullable artist, NSError *
 - (void)addArtist:(nonnull CLPArtist *)artist;
 - (NSUInteger)artistCount;
 - (nonnull CLPArtist *)artistAtIndex:(int)index;
+- (void)deleteArtistAtIndex:(int)index;
 
 - (void)fetchArtistForQuery:(NSString *_Nonnull)query :(CLPArtistCompletionHandler _Nonnull )completionHandler;
 

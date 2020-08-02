@@ -12,7 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSISearchArtistsViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+@property (weak, nonatomic) IBOutlet UISearchBar *artistSearchBar;
+@property (weak, nonatomic) IBOutlet UILabel *dateFormedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *artistBioLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *artistSaveButton;
 
 
 @end

@@ -15,15 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="JuT-T8-an4">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JuT-T8-an4">
                                 <rect key="frame" x="5" y="111" width="365" height="541"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hc5-lU-KOb">
-                                        <rect key="frame" x="0.0" y="0.0" width="365" height="93"/>
+                                    <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="hc5-lU-KOb">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-UO-Din">
+                                        <rect key="frame" x="0.0" y="66" width="365" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed in: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0y-3I-QoK">
+                                        <rect key="frame" x="0.0" y="106" width="365" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aRB-42-fyc">
-                                        <rect key="frame" x="0.0" y="93" width="365" height="448"/>
+                                        <rect key="frame" x="0.0" y="140" width="365" height="401"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -42,8 +54,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="d08-MJ-pRQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sNl-Wc-gc8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sNl-Wc-gc8">
+                            <connections>
+                                <action selector="artistSaveButtonTapped:" destination="BYZ-38-t0r" id="tgF-NT-gjo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistBioLabel" destination="aRB-42-fyc" id="b3L-7V-bSG"/>
+                        <outlet property="artistLabel" destination="ghf-UO-Din" id="KMt-m0-h3c"/>
+                        <outlet property="artistSaveButton" destination="sNl-Wc-gc8" id="MhE-EN-ca7"/>
+                        <outlet property="artistSearchBar" destination="hc5-lU-KOb" id="6zS-tt-Ggx"/>
+                        <outlet property="dateFormedLabel" destination="U0y-3I-QoK" id="rKi-U2-Gge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,4 +22,10 @@
         NSLog(@"%@", artist);
 }
 
+- (IBAction)artistSaveButtonTapped:(id)sender
+{
+
+}
+
+
 @end

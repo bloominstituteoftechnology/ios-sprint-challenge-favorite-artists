@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SMAFavoriteArtist : NSObject
 
+- (instancetype)initWithArtistName:(NSString *)artistName
+                         biography:(NSString *)biography
+                     formationDate:(double)formationDate;
+
+@property (nonatomic, readonly, copy) NSString *artistName;
+@property (nonatomic, readonly, copy) NSString *biography;
+@property (nonatomic, readonly) double formationDate;
+
 @end
 
 NS_ASSUME_NONNULL_END

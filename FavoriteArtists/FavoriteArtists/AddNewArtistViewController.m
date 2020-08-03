@@ -27,6 +27,10 @@
     [super viewDidLoad];
     
     self.searchBar.delegate = self;
+    [self.artistBiographyLabel setHidden:YES];
+    [self.artistNameLabel setHidden:YES];
+    [self.artistFormationDateLabel setHidden:YES];
+    
 }
 
 - (IBAction)saveArtistTapped:(id)sender {
@@ -39,7 +43,11 @@
         return;
     }
     
-    [self.artistFetcher fetchArtistsWithArtistName:searchBar.text completionHandler:^(NSArray * _Nullable artists, NSError * _Nullable error) {
+    NSLog(@"%@", searchBar.text);
+    
+    ArtistFetcher *artistFetcher = [[ArtistFetcher alloc] init];
+    
+    [artistFetcher fetchArtistsWithArtistName:searchBar.text completionHandler:^(NSArray * _Nullable artists, NSError * _Nullable error) {
         NSLog(@"Got this error %@", error);
         NSLog(@"Got this artist %@", artists.firstObject);
         self.favoriteArtist = artists.firstObject;
@@ -49,6 +57,10 @@
 
 - (void)updateViews
 {
+    [self.artistBiographyLabel setHidden:NO];
+    [self.artistNameLabel setHidden:NO];
+    [self.artistFormationDateLabel setHidden:NO];
+    
     self.artistNameLabel.text = self.favoriteArtist.artistName;
     self.artistFormationDateLabel.text = [NSString stringWithFormat:@"%.0f", self.favoriteArtist.formationDate];
     self.artistBiographyLabel.text = self.favoriteArtist.biography;

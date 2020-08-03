@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSIArtistController;
+@class LSIArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistDetailViewController : UIViewController
+
+@property LSIArtistController *fetcher;
+@property LSIArtist *artist;
 
 @end
 

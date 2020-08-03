@@ -7,8 +7,16 @@
 //
 
 #import "FavoriteArtistsTableViewController.h"
+#import "ArtistDetailViewController.h"
+#import "LSIArtistController.h"
+#import "LSIArtist.h"
 
 @interface FavoriteArtistsTableViewController ()
+
+@property (nonatomic) LSIArtistController *fetcher;
+@property NSMutableArray *savedArtists;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
 
@@ -19,14 +27,17 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"SearchArtistSegue"]) {
+        ArtistDetailViewController * fetcher = (ArtistDetailViewController *)segue.destinationViewController;
+        fetcher.fetcher = self.fetcher;
+    }
+    
+    if ([segue.identifier isEqualToString:@"ShowDetailSegue"]) {
+        ArtistDetailViewController *controller = (ArtistDetailViewController *) segue.destinationViewController;
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        controller.artist = self.savedArtists[selectedIndexPath.row];
+    }
 }
-*/
 
 @end

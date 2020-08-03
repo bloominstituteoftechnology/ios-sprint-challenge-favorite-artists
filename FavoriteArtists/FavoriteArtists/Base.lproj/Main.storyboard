@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Swl-8G-fUD" kind="show" id="3OT-Au-ZXK"/>
+                                            <segue destination="Swl-8G-fUD" kind="show" identifier="ShowDetailSegue" id="3OT-Au-ZXK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -40,10 +40,13 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="g4b-Go-9Ur">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fPQ-PO-SAg">
                             <connections>
-                                <segue destination="Swl-8G-fUD" kind="show" id="Fhm-hO-lxS"/>
+                                <segue destination="Swl-8G-fUD" kind="show" identifier="SearchArtistSegue" id="Fhm-hO-lxS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2Di-WY-QJU" id="EJ8-Ne-30P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsD-lD-mfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,6 +128,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Fhm-hO-lxS"/>
+        <segue reference="3OT-Au-ZXK"/>
     </inferredMetricsTieBreakers>
 </document>

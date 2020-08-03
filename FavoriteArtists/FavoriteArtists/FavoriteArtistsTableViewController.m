@@ -20,6 +20,7 @@
 // MARK: - Outlets
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+-(void)compileArtists;
 
 @end
 
@@ -32,8 +33,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    NSArray *newArtists = [self.fetcher fetchSavedArtist];
-    self.savedArtists = [[NSMutableArray alloc] initWithArray:newArtists];
+    [self compileArtists];
     
     [self.tableView reloadData];
 }
@@ -42,14 +42,25 @@
     [super viewWillAppear:animated];
     [self.tableView reloadData];
     
-    
+    [self compileArtists];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     [self.tableView reloadData];
+    
+    [self compileArtists];
+
 }
+
+- (void)compileArtists {
+    NSArray *newArtists = [self.fetcher fetchSavedArtist];
+    self.savedArtists = [[NSMutableArray alloc] initWithArray:newArtists];
+    
+}
+
 
 // MARK: - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

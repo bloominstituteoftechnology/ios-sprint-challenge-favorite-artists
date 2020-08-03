@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef void(^ArtistFetcherCompletionHandler)(NSArray *_Nullable artists, NSError *_Nullable error);
 
 @interface ArtistFetcher : NSObject
 
+- (void)fetchArtistsWithCompletionHandler:(nonnull ArtistFetcherCompletionHandler)completionHandler;
+
+- (void)fetchArtistsWithArtistName:(nonnull NSString *)artistName
+                 completionHandler:(nonnull ArtistFetcherCompletionHandler)completionHandler;
+
 @end
 
-NS_ASSUME_NONNULL_END

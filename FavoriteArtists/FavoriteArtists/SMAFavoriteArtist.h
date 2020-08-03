@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithArtistName:(NSString *)artistName
                          biography:(NSString *)biography
-                     formationDate:(double)formationDate;
+                     formationDate:(double)formationDate NS_DESIGNATED_INITIALIZER;
+
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @property (nonatomic, readonly, copy) NSString *artistName;
 @property (nonatomic, readonly, copy) NSString *biography;

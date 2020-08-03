@@ -20,8 +20,8 @@
                      formationDate:(double)formationDate
 {
     if (self = [super init]) {
-        _artistName = artistName;
-        _biography = biography;
+        _artistName = artistName.copy;
+        _biography = biography.copy;
         _formationDate = formationDate;
     }
     return self;
@@ -37,9 +37,10 @@
     if ([biography isKindOfClass:NSNull.class]) biography = nil;
     else if (![biography isKindOfClass:NSString.class]) return nil;
     
-    NSNumber *formationDate = [dictionary objectForKey:@"intFormedYear"];
+    NSString *formationDate = [dictionary objectForKey:@"intFormedYear"];
     if ([formationDate isKindOfClass:NSNull.class]) formationDate = nil;
-    else if (![formationDate isKindOfClass:NSNumber.class]) return nil;
+    else if (![formationDate isKindOfClass:NSString.class]) return nil;
+    
     
     return [self initWithArtistName:artistName
                           biography:biography

@@ -84,10 +84,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add a new artist" id="5Nw-as-WnU">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="save" id="dB1-2R-Hu2"/>
-                            <barButtonItem title="Search" id="ve7-pi-u8T"/>
+                            <barButtonItem systemItem="save" id="dB1-2R-Hu2">
+                                <connections>
+                                    <action selector="saveArtistTapped:" destination="Swl-8G-fUD" id="TDd-og-34H"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Search" id="ve7-pi-u8T">
+                                <connections>
+                                    <action selector="searchArtistTapped:" destination="Swl-8G-fUD" id="BBw-iK-ZMu"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistDetailTextView" destination="asB-xP-F5z" id="daf-kg-wXn"/>
+                        <outlet property="searchForArtistBar" destination="Khj-Kz-Lvr" id="PWZ-HR-GEF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEf-MJ-WwD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

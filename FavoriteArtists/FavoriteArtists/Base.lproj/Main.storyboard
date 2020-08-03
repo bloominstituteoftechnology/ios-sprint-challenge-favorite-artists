@@ -121,7 +121,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zti-zQ-42h"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Artist" id="Uox-GW-2Wf"/>
+                    <navigationItem key="navigationItem" title="Add New Artist" id="Uox-GW-2Wf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="SU1-ZN-pZa"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="biographyLabel" destination="UJj-KW-791" id="BgR-S9-Jqk"/>
+                        <outlet property="nameLabel" destination="IME-6j-HZd" id="1Y2-UM-Lm7"/>
+                        <outlet property="saveButton" destination="SU1-ZN-pZa" id="6oN-OB-tit"/>
+                        <outlet property="searchBar" destination="mDZ-c5-Vo9" id="f39-53-2cB"/>
+                        <outlet property="yearFormedLabel" destination="brd-Fc-rs2" id="eEb-Sa-7W2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdt-FR-9es" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

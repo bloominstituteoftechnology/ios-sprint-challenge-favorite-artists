@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class Artist;
+@class ArtistController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchViewController : UIViewController
+
+@property (nonatomic, nullable) Artist *artist;
+@property (nonatomic, nullable) ArtistController *artistController;
 
 @end
 

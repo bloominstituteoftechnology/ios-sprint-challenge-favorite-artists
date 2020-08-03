@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class LSIArtist;
+
+typedef void (^LSIArtistFetcherCompletion)(LSIArtist * _Nullable artist, NSError * _Nullable error);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIArtistController : NSObject
+
+- (void)fetchArtistsWithArtistName:(NSString *)artistName
+completionBlock:(LSIArtistFetcherCompletion)completionBlock;
+
+
 
 @end
 

@@ -17,6 +17,7 @@
 		50444F3424D79D2D0048EFE7 /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F3324D79D2D0048EFE7 /* FavoriteArtistsTableViewController.m */; };
 		50444F3724D79D3E0048EFE7 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F3624D79D3E0048EFE7 /* ArtistDetailViewController.m */; };
 		50444F3A24D79D7B0048EFE7 /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F3924D79D7B0048EFE7 /* LSIArtistController.m */; };
+		50444F3D24D79F5F0048EFE7 /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 50444F3C24D79F5F0048EFE7 /* LSIArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		50444F3624D79D3E0048EFE7 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 		50444F3824D79D7B0048EFE7 /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
 		50444F3924D79D7B0048EFE7 /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
+		50444F3B24D79F5F0048EFE7 /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
+		50444F3C24D79F5F0048EFE7 /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				50444F3624D79D3E0048EFE7 /* ArtistDetailViewController.m */,
 				50444F3824D79D7B0048EFE7 /* LSIArtistController.h */,
 				50444F3924D79D7B0048EFE7 /* LSIArtistController.m */,
+				50444F3B24D79F5F0048EFE7 /* LSIArtist.h */,
+				50444F3C24D79F5F0048EFE7 /* LSIArtist.m */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				50444F1B24D79B5A0048EFE7 /* AppDelegate.m in Sources */,
 				50444F3724D79D3E0048EFE7 /* ArtistDetailViewController.m in Sources */,
 				50444F3424D79D2D0048EFE7 /* FavoriteArtistsTableViewController.m in Sources */,
+				50444F3D24D79F5F0048EFE7 /* LSIArtist.m in Sources */,
 				50444F2C24D79B5E0048EFE7 /* main.m in Sources */,
 				50444F1E24D79B5A0048EFE7 /* SceneDelegate.m in Sources */,
 			);

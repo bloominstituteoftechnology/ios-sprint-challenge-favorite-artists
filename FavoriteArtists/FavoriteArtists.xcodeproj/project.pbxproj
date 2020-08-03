@@ -14,6 +14,9 @@
 		C9AE23A224D7996D003290A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AE23A124D7996D003290A0 /* Assets.xcassets */; };
 		C9AE23A524D7996D003290A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AE23A324D7996D003290A0 /* LaunchScreen.storyboard */; };
 		C9AE23A824D7996D003290A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23A724D7996D003290A0 /* main.m */; };
+		C9AE23B024D799A7003290A0 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23AF24D799A7003290A0 /* Artist.m */; };
+		C9AE23BC24D79DD2003290A0 /* Artist+NJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23BB24D79DD2003290A0 /* Artist+NJSONSerialization.m */; };
+		C9AE23BF24D79EAF003290A0 /* ArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23BE24D79EAF003290A0 /* ArtistResults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		C9AE23A424D7996D003290A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9AE23A624D7996D003290A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9AE23A724D7996D003290A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9AE23AE24D799A7003290A0 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		C9AE23AF24D799A7003290A0 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		C9AE23BA24D79DD2003290A0 /* Artist+NJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artist+NJSONSerialization.h"; sourceTree = "<group>"; };
+		C9AE23BB24D79DD2003290A0 /* Artist+NJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NJSONSerialization.m"; sourceTree = "<group>"; };
+		C9AE23BD24D79EAF003290A0 /* ArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistResults.h; sourceTree = "<group>"; };
+		C9AE23BE24D79EAF003290A0 /* ArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistResults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,12 @@
 				C9AE23A324D7996D003290A0 /* LaunchScreen.storyboard */,
 				C9AE23A624D7996D003290A0 /* Info.plist */,
 				C9AE23A724D7996D003290A0 /* main.m */,
+				C9AE23AE24D799A7003290A0 /* Artist.h */,
+				C9AE23AF24D799A7003290A0 /* Artist.m */,
+				C9AE23BA24D79DD2003290A0 /* Artist+NJSONSerialization.h */,
+				C9AE23BB24D79DD2003290A0 /* Artist+NJSONSerialization.m */,
+				C9AE23BD24D79EAF003290A0 /* ArtistResults.h */,
+				C9AE23BE24D79EAF003290A0 /* ArtistResults.m */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -148,8 +163,11 @@
 			files = (
 				C9AE239D24D79968003290A0 /* ViewController.m in Sources */,
 				C9AE239724D79968003290A0 /* AppDelegate.m in Sources */,
+				C9AE23BC24D79DD2003290A0 /* Artist+NJSONSerialization.m in Sources */,
 				C9AE23A824D7996D003290A0 /* main.m in Sources */,
+				C9AE23BF24D79EAF003290A0 /* ArtistResults.m in Sources */,
 				C9AE239A24D79968003290A0 /* SceneDelegate.m in Sources */,
+				C9AE23B024D799A7003290A0 /* Artist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="bc6-v5-WWN">
             <objects>
-                <tableViewController id="gSW-2E-sMX" sceneMemberID="viewController">
+                <tableViewController id="gSW-2E-sMX" customClass="FavoriteArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qc4-i2-PDi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,6 +52,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" largeTitleDisplayMode="always" id="ol6-Iu-Qek">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="7zF-mm-8ob">
                             <connections>
+                                <action selector="addNewArtistTapped:" destination="gSW-2E-sMX" id="FU5-t6-hJr"/>
                                 <segue destination="4Ps-j4-s4v" kind="show" id="JcJ-QC-1s5"/>
                             </connections>
                         </barButtonItem>
@@ -59,12 +60,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOJ-WQ-o3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.62318840579712" y="-227.00892857142856"/>
+            <point key="canvasLocation" x="874" y="-227"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="Csa-s4-8hY">
             <objects>
-                <viewController id="cRD-rd-RqO" sceneMemberID="viewController">
+                <viewController id="cRD-rd-RqO" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xS0-kj-wzK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,6 +104,11 @@
                         <viewLayoutGuide key="safeArea" id="nqD-kZ-Z8f"/>
                     </view>
                     <navigationItem key="navigationItem" id="syc-fh-leT"/>
+                    <connections>
+                        <outlet property="artistBiographyLabel" destination="ZVg-fk-XHg" id="zKx-dp-KCU"/>
+                        <outlet property="artistFormationDateLabel" destination="y0k-hc-Lbt" id="Ev4-T9-IHN"/>
+                        <outlet property="artistNameLabel" destination="ZhC-c9-vRD" id="HrS-Sk-2XW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="En4-ku-Thp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,7 +117,7 @@
         <!--Add New Artist-->
         <scene sceneID="1fb-hr-pBx">
             <objects>
-                <viewController id="4Ps-j4-s4v" sceneMemberID="viewController">
+                <viewController id="4Ps-j4-s4v" customClass="AddNewArtistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lqD-3D-V9O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,8 +163,18 @@
                         <viewLayoutGuide key="safeArea" id="pug-qs-Rr5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="59d-l7-CeH">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="sSn-qW-9j5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="sSn-qW-9j5">
+                            <connections>
+                                <action selector="saveArtistTapped:" destination="4Ps-j4-s4v" id="1Ed-HG-5iU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistBiographyLabel" destination="3Ti-Ns-TN0" id="4Bi-rq-Jr3"/>
+                        <outlet property="artistFormationDateLabel" destination="jc5-Jf-Tvc" id="Mvq-9I-Pd6"/>
+                        <outlet property="artistNameLabel" destination="cKl-Uc-wJX" id="44q-uR-kxb"/>
+                        <outlet property="searchBar" destination="WCZ-Bi-WJD" id="GBM-0f-lgp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gy3-yO-2Vc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

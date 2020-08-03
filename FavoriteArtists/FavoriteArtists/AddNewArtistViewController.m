@@ -9,6 +9,10 @@
 #import "AddNewArtistViewController.h"
 
 @interface AddNewArtistViewController ()
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistFormationDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistBiographyLabel;
 
 @end
 
@@ -17,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (IBAction)saveArtistTapped:(id)sender {
 }
 
 /*

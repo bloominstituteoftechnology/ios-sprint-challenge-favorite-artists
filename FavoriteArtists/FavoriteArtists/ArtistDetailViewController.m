@@ -10,6 +10,10 @@
 
 @interface ArtistDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistFormationDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistBiographyLabel;
+
 @end
 
 @implementation ArtistDetailViewController

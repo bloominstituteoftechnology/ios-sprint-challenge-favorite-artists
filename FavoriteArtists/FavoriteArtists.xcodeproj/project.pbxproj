@@ -17,6 +17,7 @@
 		C9AE23B024D799A7003290A0 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23AF24D799A7003290A0 /* Artist.m */; };
 		C9AE23BC24D79DD2003290A0 /* Artist+NJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23BB24D79DD2003290A0 /* Artist+NJSONSerialization.m */; };
 		C9AE23BF24D79EAF003290A0 /* ArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23BE24D79EAF003290A0 /* ArtistResults.m */; };
+		C9AE23C224D7A09C003290A0 /* FetchArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23C124D7A09C003290A0 /* FetchArtist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		C9AE23BB24D79DD2003290A0 /* Artist+NJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NJSONSerialization.m"; sourceTree = "<group>"; };
 		C9AE23BD24D79EAF003290A0 /* ArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistResults.h; sourceTree = "<group>"; };
 		C9AE23BE24D79EAF003290A0 /* ArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistResults.m; sourceTree = "<group>"; };
+		C9AE23C024D7A09C003290A0 /* FetchArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchArtist.h; sourceTree = "<group>"; };
+		C9AE23C124D7A09C003290A0 /* FetchArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchArtist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				C9AE23BB24D79DD2003290A0 /* Artist+NJSONSerialization.m */,
 				C9AE23BD24D79EAF003290A0 /* ArtistResults.h */,
 				C9AE23BE24D79EAF003290A0 /* ArtistResults.m */,
+				C9AE23C024D7A09C003290A0 /* FetchArtist.h */,
+				C9AE23C124D7A09C003290A0 /* FetchArtist.m */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AE239D24D79968003290A0 /* ViewController.m in Sources */,
+				C9AE23C224D7A09C003290A0 /* FetchArtist.m in Sources */,
 				C9AE239724D79968003290A0 /* AppDelegate.m in Sources */,
 				C9AE23BC24D79DD2003290A0 /* Artist+NJSONSerialization.m in Sources */,
 				C9AE23A824D7996D003290A0 /* main.m in Sources */,

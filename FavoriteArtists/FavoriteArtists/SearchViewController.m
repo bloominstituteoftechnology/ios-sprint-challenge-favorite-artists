@@ -28,17 +28,20 @@
     [super viewDidLoad];
     self.searchBar.delegate = self;
     self.fetchArtist = [[FetchArtist alloc] init];
-    
+    [self updateViews];
 }
 
 -(void) updateViews
 {
-    if (self.artist == nil) return;
-    
-    self.nameLabel.text = self.artist.name;
-    NSString *yearFormed = [NSString stringWithFormat:@"%d", self.artist.yearFormed];
-    self.yearFormedLabel.text = yearFormed;
-    self.biographyLabel.text = self.artist.biography;
+    if (self.artist == nil) {
+        self.nameLabel.text = @"No artist found";
+    } else {
+        
+        self.nameLabel.text = self.artist.name;
+        NSString *yearFormed = [NSString stringWithFormat:@"%d", self.artist.yearFormed];
+        self.yearFormedLabel.text = yearFormed;
+        self.biographyLabel.text = self.artist.biography;
+    }
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -48,9 +51,18 @@
     if ([nameSearched isEqualToString:@""]) return;
     
     [self.fetchArtist fetchArtistWithSearchedName:nameSearched completionHandler:^(NSArray *artists, NSError *error) {
+        
         self.artist = [artists firstObject];
+        [self updateViews];
     }];
-    [self updateViews];
 }
+
+- (IBAction)saveButtonTapped:(id)sender {
+    if (self.artist == nil) return;
+    
+    [self.artistController addArtist:self.artist];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end

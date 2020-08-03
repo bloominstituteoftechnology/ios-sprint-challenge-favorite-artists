@@ -9,6 +9,7 @@
 #import "FavoriteArtistsTableViewController.h"
 #import "Artist.h"
 #import "ArtistController.h"
+#import "SearchViewController.h"
 
 @interface FavoriteArtistsTableViewController ()
 
@@ -20,8 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.artistController = [[ArtistController alloc] init];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -48,7 +54,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"SearchArtistSegue"]) {
-        
+        SearchViewController *searchViewControllerVC = [segue destinationViewController];
+        searchViewControllerVC.artistController = self.artistController;
+    } else if ([segue.identifier isEqualToString:@"DetailSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        SearchViewController *detailVC = [segue destinationViewController];
+        detailVC.artistController = self.artistController;
+        Artist *artist = [self.artistController.artists objectAtIndex:indexPath.row];
+        detailVC.artist = artist;
     }
 }
 

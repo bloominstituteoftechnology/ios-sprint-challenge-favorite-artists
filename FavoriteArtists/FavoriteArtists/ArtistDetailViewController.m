@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchForArtistBar;
 @property (weak, nonatomic) IBOutlet UITextView *artistDetailTextView;
 
+-(void)updateViews;
+
 @end
 
 @implementation ArtistDetailViewController
@@ -26,7 +28,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    if (self.artist == nil) {
+        self.hasArtist = NO;
+        self.artistDetailTextView.text = @"";
+    } else {
+        self.hasArtist = YES;
+        [self updateViews];
+    }
+    NSLog(@"Hey artist!");
+
 }
 
 - (void)updateViews {
@@ -73,7 +84,7 @@
         
         [data writeToURL:url atomically:YES];
     }
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

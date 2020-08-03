@@ -13,8 +13,11 @@
 
 @interface FavoriteArtistsTableViewController ()
 
+// MARK: - Properties
 @property (nonatomic) LSIArtistController *fetcher;
 @property NSMutableArray *savedArtists;
+
+// MARK: - Outlets
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
@@ -22,11 +25,33 @@
 
 @implementation FavoriteArtistsTableViewController
 
+// MARK: - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    NSArray *newArtists = [self.fetcher fetchSavedArtist];
+    self.savedArtists = [[NSMutableArray alloc] initWithArray:newArtists];
+    
+    [self.tableView reloadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+    
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.tableView reloadData];
+}
+
+// MARK: - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"SearchArtistSegue"]) {
         ArtistDetailViewController * fetcher = (ArtistDetailViewController *)segue.destinationViewController;
@@ -39,5 +64,28 @@
         controller.artist = self.savedArtists[selectedIndexPath.row];
     }
 }
+
+// MARK: - TableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.savedArtists.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
+    
+    LSIArtist *artist = self.savedArtists[indexPath.row];
+    cell.textLabel.text = artist.artistName;
+    
+    return cell;
+}
+
+- (LSIArtistController *)fetcher {
+    if (!_fetcher) {
+        _fetcher = [[LSIArtistController alloc] init];
+    }
+    return _fetcher;
+}
+
 
 @end

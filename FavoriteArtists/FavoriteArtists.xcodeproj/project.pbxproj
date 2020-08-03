@@ -13,6 +13,11 @@
 		66F7324F24D79AA0009FF9C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F7324E24D79AA0009FF9C3 /* Assets.xcassets */; };
 		66F7325224D79AA0009FF9C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F7325024D79AA0009FF9C3 /* LaunchScreen.storyboard */; };
 		66F7325524D79AA0009FF9C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F7325424D79AA0009FF9C3 /* main.m */; };
+		66F7325E24D79DFA009FF9C3 /* SMAFavoriteArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F7325D24D79DFA009FF9C3 /* SMAFavoriteArtist.m */; };
+		66F7326124D79E13009FF9C3 /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F7326024D79E13009FF9C3 /* FavoriteArtistsTableViewController.m */; };
+		66F7326424D79E41009FF9C3 /* AddNewArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F7326324D79E41009FF9C3 /* AddNewArtistViewController.m */; };
+		66F7326724D79E54009FF9C3 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F7326624D79E54009FF9C3 /* ArtistDetailViewController.m */; };
+		66F7326A24D79EC1009FF9C3 /* SMAFavoriteArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F7326924D79EC1009FF9C3 /* SMAFavoriteArtist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,16 @@
 		66F7325324D79AA0009FF9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66F7325424D79AA0009FF9C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		66F7325B24D79B74009FF9C3 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		66F7325C24D79DFA009FF9C3 /* SMAFavoriteArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAFavoriteArtist.h; sourceTree = "<group>"; };
+		66F7325D24D79DFA009FF9C3 /* SMAFavoriteArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAFavoriteArtist.m; sourceTree = "<group>"; };
+		66F7325F24D79E13009FF9C3 /* FavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		66F7326024D79E13009FF9C3 /* FavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		66F7326224D79E41009FF9C3 /* AddNewArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewArtistViewController.h; sourceTree = "<group>"; };
+		66F7326324D79E41009FF9C3 /* AddNewArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewArtistViewController.m; sourceTree = "<group>"; };
+		66F7326524D79E54009FF9C3 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		66F7326624D79E54009FF9C3 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		66F7326824D79EC1009FF9C3 /* SMAFavoriteArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMAFavoriteArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		66F7326924D79EC1009FF9C3 /* SMAFavoriteArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SMAFavoriteArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +78,18 @@
 				66F7324324D79A9C009FF9C3 /* AppDelegate.m */,
 				66F7324524D79A9C009FF9C3 /* SceneDelegate.h */,
 				66F7324624D79A9C009FF9C3 /* SceneDelegate.m */,
+				66F7325C24D79DFA009FF9C3 /* SMAFavoriteArtist.h */,
+				66F7325D24D79DFA009FF9C3 /* SMAFavoriteArtist.m */,
+				66F7326824D79EC1009FF9C3 /* SMAFavoriteArtist+NSJSONSerialization.h */,
+				66F7326924D79EC1009FF9C3 /* SMAFavoriteArtist+NSJSONSerialization.m */,
 				66F7325B24D79B74009FF9C3 /* LSIFileHelper.h */,
 				66F7324B24D79A9C009FF9C3 /* Main.storyboard */,
+				66F7326224D79E41009FF9C3 /* AddNewArtistViewController.h */,
+				66F7326324D79E41009FF9C3 /* AddNewArtistViewController.m */,
+				66F7326524D79E54009FF9C3 /* ArtistDetailViewController.h */,
+				66F7326624D79E54009FF9C3 /* ArtistDetailViewController.m */,
+				66F7325F24D79E13009FF9C3 /* FavoriteArtistsTableViewController.h */,
+				66F7326024D79E13009FF9C3 /* FavoriteArtistsTableViewController.m */,
 				66F7324E24D79AA0009FF9C3 /* Assets.xcassets */,
 				66F7325024D79AA0009FF9C3 /* LaunchScreen.storyboard */,
 				66F7325324D79AA0009FF9C3 /* Info.plist */,
@@ -145,6 +170,11 @@
 			files = (
 				66F7324424D79A9C009FF9C3 /* AppDelegate.m in Sources */,
 				66F7325524D79AA0009FF9C3 /* main.m in Sources */,
+				66F7326124D79E13009FF9C3 /* FavoriteArtistsTableViewController.m in Sources */,
+				66F7325E24D79DFA009FF9C3 /* SMAFavoriteArtist.m in Sources */,
+				66F7326724D79E54009FF9C3 /* ArtistDetailViewController.m in Sources */,
+				66F7326424D79E41009FF9C3 /* AddNewArtistViewController.m in Sources */,
+				66F7326A24D79EC1009FF9C3 /* SMAFavoriteArtist+NSJSONSerialization.m in Sources */,
 				66F7324724D79A9C009FF9C3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

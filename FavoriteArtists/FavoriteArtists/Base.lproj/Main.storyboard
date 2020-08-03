@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="DGz-v1-meG" detailTextLabel="1ys-NX-Sgi" rowHeight="66" style="IBUITableViewCellStyleSubtitle" id="NUA-s2-YK6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteArtistCell" textLabel="DGz-v1-meG" detailTextLabel="1ys-NX-Sgi" rowHeight="66" style="IBUITableViewCellStyleSubtitle" id="NUA-s2-YK6">
                                 <rect key="frame" x="0.0" y="28" width="414" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NUA-s2-YK6" id="dOz-PH-3cJ">
@@ -61,7 +61,7 @@
         <!--Add New Artist-->
         <scene sceneID="2Vc-Lu-Av8">
             <objects>
-                <viewController id="2n1-ds-G3r" sceneMemberID="viewController">
+                <viewController id="2n1-ds-G3r" customClass="SearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NSM-0j-p8L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

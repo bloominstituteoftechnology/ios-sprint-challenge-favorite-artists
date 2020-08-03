@@ -10,7 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class LSIArtist;
+
 @interface LSIArtistController : NSObject
+
+@property (nonatomic, readonly, copy) NSArray<LSIArtist *> *artists;
+
+@property (nonatomic) NSUInteger artistCount;
+
+- (void)addArtist:(LSIArtist *)anArtist;
+
+- (LSIArtist *)artistAtIndex:(NSUInteger)index;
 
 @end
 

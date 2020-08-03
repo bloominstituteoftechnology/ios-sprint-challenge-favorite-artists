@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistResults : NSObject
 
+- (instancetype)initWithArtists: (NSArray<Artist *> *)artists NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithDictionary: (NSDictionary *)dictionary;
+
+@property (nonatomic, readonly, copy) NSArray<Artist *> *artists;
 
 @end
 

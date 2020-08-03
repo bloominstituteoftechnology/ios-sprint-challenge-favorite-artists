@@ -24,9 +24,11 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
 {
     if (!completionHandler) return;
     
-    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:ArtistFetcherBaseURLString];
     
-    NSURL *url = [urlComponents.URL URLByAppendingPathComponent:artistName];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@",ArtistFetcherBaseURLString, artistName];
+    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:urlString];
+    
+    NSURL *url = urlComponents.URL;
     
     NSLog(@"Fetching artist at url: %@", url);
     

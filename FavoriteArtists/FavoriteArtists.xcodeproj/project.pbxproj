@@ -17,6 +17,8 @@
 		C9AE23BC24D79DD2003290A0 /* Artist+NJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23BB24D79DD2003290A0 /* Artist+NJSONSerialization.m */; };
 		C9AE23BF24D79EAF003290A0 /* ArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23BE24D79EAF003290A0 /* ArtistResults.m */; };
 		C9AE23C224D7A09C003290A0 /* FetchArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23C124D7A09C003290A0 /* FetchArtist.m */; };
+		C9AE23C524D7A55E003290A0 /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23C424D7A55E003290A0 /* FavoriteArtistsTableViewController.m */; };
+		C9AE23C824D7A582003290A0 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE23C724D7A582003290A0 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		C9AE23BE24D79EAF003290A0 /* ArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistResults.m; sourceTree = "<group>"; };
 		C9AE23C024D7A09C003290A0 /* FetchArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchArtist.h; sourceTree = "<group>"; };
 		C9AE23C124D7A09C003290A0 /* FetchArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchArtist.m; sourceTree = "<group>"; };
+		C9AE23C324D7A55E003290A0 /* FavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		C9AE23C424D7A55E003290A0 /* FavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		C9AE23C624D7A582003290A0 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		C9AE23C724D7A582003290A0 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,10 @@
 				C9AE23BE24D79EAF003290A0 /* ArtistResults.m */,
 				C9AE23C024D7A09C003290A0 /* FetchArtist.h */,
 				C9AE23C124D7A09C003290A0 /* FetchArtist.m */,
+				C9AE23C324D7A55E003290A0 /* FavoriteArtistsTableViewController.h */,
+				C9AE23C424D7A55E003290A0 /* FavoriteArtistsTableViewController.m */,
+				C9AE23C624D7A582003290A0 /* SearchViewController.h */,
+				C9AE23C724D7A582003290A0 /* SearchViewController.m */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -161,9 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AE23C524D7A55E003290A0 /* FavoriteArtistsTableViewController.m in Sources */,
 				C9AE23C224D7A09C003290A0 /* FetchArtist.m in Sources */,
 				C9AE239724D79968003290A0 /* AppDelegate.m in Sources */,
 				C9AE23BC24D79DD2003290A0 /* Artist+NJSONSerialization.m in Sources */,
+				C9AE23C824D7A582003290A0 /* SearchViewController.m in Sources */,
 				C9AE23A824D7996D003290A0 /* main.m in Sources */,
 				C9AE23BF24D79EAF003290A0 /* ArtistResults.m in Sources */,
 				C9AE239A24D79968003290A0 /* SceneDelegate.m in Sources */,

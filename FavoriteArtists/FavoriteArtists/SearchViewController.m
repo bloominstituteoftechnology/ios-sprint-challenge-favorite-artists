@@ -36,7 +36,6 @@
     if (self.artist == nil) {
         self.nameLabel.text = @"No artist found";
     } else {
-        
         self.nameLabel.text = self.artist.name;
         NSString *yearFormed = [NSString stringWithFormat:@"%d", self.artist.yearFormed];
         self.yearFormedLabel.text = yearFormed;

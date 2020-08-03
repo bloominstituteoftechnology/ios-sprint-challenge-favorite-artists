@@ -85,13 +85,13 @@
 				D79145C72482C5EB002C8A22 /* LSIArtistsTableViewController.m */,
 				D79145C32482C5B8002C8A22 /* LSISearchArtistsViewController.h */,
 				D79145C42482C5B8002C8A22 /* LSISearchArtistsViewController.m */,
+				D7C79D0524D818BD0006655E /* LSIArtistFetcher.h */,
+				D7C79D0624D818BD0006655E /* LSIArtistFetcher.m */,
 				D79145B32482C544002C8A22 /* Main.storyboard */,
 				D79145B62482C549002C8A22 /* Assets.xcassets */,
 				D79145B82482C549002C8A22 /* LaunchScreen.storyboard */,
 				D79145BB2482C549002C8A22 /* Info.plist */,
 				D79145BC2482C549002C8A22 /* main.m */,
-				D7C79D0524D818BD0006655E /* LSIArtistFetcher.h */,
-				D7C79D0624D818BD0006655E /* LSIArtistFetcher.m */,
 			);
 			path = Favorite_Artistis;
 			sourceTree = "<group>";

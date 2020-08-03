@@ -7,12 +7,17 @@
 //
 
 #import "AddNewArtistViewController.h"
+#import "ArtistFetcher.h"
+#import "SMAFavoriteArtist.h"
 
-@interface AddNewArtistViewController ()
+@interface AddNewArtistViewController () <UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistFormationDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistBiographyLabel;
+
+@property (nonatomic)ArtistFetcher *artistFetcher;
+@property (nonatomic)SMAFavoriteArtist *favoriteArtist;
 
 @end
 
@@ -20,12 +25,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.searchBar.delegate = self;
 }
 
 - (IBAction)saveArtistTapped:(id)sender {
 }
 
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    if (!searchBar.text) {
+        return;
+    }
+    
+    [self.artistFetcher fetchArtistsWithArtistName:searchBar.text completionHandler:^(NSArray * _Nullable artists, NSError * _Nullable error) {
+        NSLog(@"Got this error %@", error);
+        NSLog(@"Got this artist %@", artists.firstObject);
+        self.favoriteArtist = artists.firstObject;
+        [self updateViews];
+    }];
+}
+
+- (void)updateViews
+{
+    self.artistNameLabel.text = self.favoriteArtist.artistName;
+    self.artistFormationDateLabel.text = [NSString stringWithFormat:@"%.0f", self.favoriteArtist.formationDate];
+    self.artistBiographyLabel.text = self.favoriteArtist.biography;
+}
 /*
 #pragma mark - Navigation
 

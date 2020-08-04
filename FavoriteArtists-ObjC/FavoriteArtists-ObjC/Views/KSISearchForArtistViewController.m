@@ -12,10 +12,6 @@
 
 @interface KSISearchForArtistViewController ()
 
-// Properties
-@property (nonatomic) KSIArtistController *ksiArtistController;
-@property (nonatomic) KSIArtist *ksiArtist;
-
 // Outlets
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
@@ -33,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.ksiArtistController = [[KSIArtistController alloc]init];
     self.searchBar.delegate = self;
     [self updateViews];
 }
@@ -45,31 +40,13 @@
     self.artistBiography.text = self.ksiArtist.biography;
 }
 
-- (void)saveArtist
-{
-    [self.ksiArtistController addArtist:[[KSIArtist alloc] initWithName:self.ksiArtist.name
-                                                        artistBiography:self.ksiArtist.biography
-                                                       yearArtistFormed:self.ksiArtist.yearArtistFormed]];
-}
-
 - (IBAction)saveButtonTapped:(id)sender
 {
-    [self saveArtist];
+    [self.ksiArtistController addArtist:self.ksiArtist];
+    NSLog(@"Artist was saved");
+    NSLog(@"Artist count: %lu", (unsigned long)self.ksiArtistController.artistCount);
     [self.navigationController popToRootViewControllerAnimated:true];
 }
-
-//- (void)searchBarTapped:(UISearchBar *)searchBar
-//{
-//    NSString *searchTerm = searchBar.text;
-//    [self.ksiArtistController searchForArtists:searchTerm
-//                                    completion:^(KSIArtist *artist, NSError *error) {
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            self.ksiArtist = artist;
-//            [self updateViews];
-//            NSLog(@"Artist found: %@", artist);
-//        });
-//    }];
-//}
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSLog(@"pressed Return inside search bar");

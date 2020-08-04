@@ -7,8 +7,16 @@
 //
 
 #import "KSIArtistDetailViewController.h"
+#import "KSIArtistController.h"
+#import "KSIArtist.h"
 
 @interface KSIArtistDetailViewController ()
+
+// Outlets
+@property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *artistStartDateLabel;
+@property (strong, nonatomic) IBOutlet UITextView *artistBiographyLabel;
+
 
 @end
 
@@ -16,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.artistNameLabel.text =
 }
 
 /*

@@ -16,12 +16,10 @@ typedef void(^ArtistFetcherCompletionHandler)(KSIArtist * _Nullable artist, NSEr
 - (void)searchForArtists:(nonnull NSString *)name
               completion:(nonnull ArtistFetcherCompletionHandler)completionHandler;
 
-@property (nonatomic,readonly,copy) NSArray<KSIArtist *> *artists;
+@property (nonatomic,readonly,copy) NSArray* artists;
 @property (nonatomic, readonly) NSUInteger artistCount;
 
-- (KSIArtist *)artistAtIndex:(NSUInteger)index;
-
-- (void)addArtist:(KSIArtist *)anArtist;
+- (void)addArtist:(KSIArtist *_Nullable)anArtist;
 
 
 @end

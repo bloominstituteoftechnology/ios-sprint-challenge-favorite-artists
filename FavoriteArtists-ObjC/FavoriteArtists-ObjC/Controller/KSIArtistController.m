@@ -11,9 +11,9 @@
 #import "KSIArtistResults.h"
 #import "LSIErrors.h"
 
-@interface KSIArtistController () {
-    NSMutableArray *_internalArtists;
-}
+@interface KSIArtistController () {}
+
+@property (nonatomic) NSMutableArray *internalArtists;
 
 @end
 
@@ -29,24 +29,24 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     return self;
 }
 
-- (NSArray<KSIArtist *> *)artists
+- (NSArray *)artists
     {
-        return _internalArtists.copy;
+        return [self.internalArtists copy];
     }
 
 - (NSUInteger)artistCount
 {
-    return _internalArtists.count;
+    return [self.internalArtists count];
 }
 
 - (KSIArtist *)artistAtIndex:(NSUInteger)index
 {
-    return [_internalArtists objectAtIndex:index];
+    return [self.artists objectAtIndex:index];
 }
 
 - (void)addArtist:(KSIArtist *)anArtist
 {
-    [_internalArtists addObject:anArtist];
+    [self.internalArtists addObject:anArtist];
 }
 
 - (void)searchForArtists:(NSString *)name

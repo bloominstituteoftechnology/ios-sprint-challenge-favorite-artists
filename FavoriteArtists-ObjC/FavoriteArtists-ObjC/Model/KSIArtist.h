@@ -14,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithName:(NSString *)name
              artistBiography:(NSString *)biography
-            yearArtistFormed:(int)yearArtistFormed NS_DESIGNATED_INITIALIZER;
+            yearArtistFormed:(double)yearArtistFormed NS_DESIGNATED_INITIALIZER;
 
 - (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @property (nonatomic,readonly,copy) NSString *name;
 @property (nonatomic,readonly,copy) NSString *biography;
-@property (nonatomic,readonly) int yearArtistFormed;
+@property (nonatomic,readonly) double yearArtistFormed;
 
 @end
 

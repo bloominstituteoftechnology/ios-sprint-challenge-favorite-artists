@@ -12,10 +12,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KSIArtistDetailViewController : UIViewController <UISearchBarDelegate>
+@interface KSIArtistDetailViewController : UIViewController
 
 @property KSIArtistController *ksiArtistController;
 @property KSIArtist *ksiArtist;
+
+- (void)updateViews;
 
 @end
 

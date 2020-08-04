@@ -24,17 +24,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.artistNameLabel.text =
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews
+{
+    self.title = [NSString localizedStringWithFormat:@"%@", self.ksiArtist.name];
+    self.artistNameLabel.text = self.ksiArtist.name;
+    self.artistStartDateLabel.text = [NSString localizedStringWithFormat:@"Formed in %.0f", self.ksiArtist.yearArtistFormed];
+    self.artistBiographyLabel.text = self.ksiArtist.biography;
 }
-*/
 
 @end

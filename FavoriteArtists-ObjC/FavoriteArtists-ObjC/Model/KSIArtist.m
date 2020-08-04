@@ -19,7 +19,7 @@
 
 - (instancetype)initWithName:(NSString *)name
              artistBiography:(NSString *)biography
-            yearArtistFormed:(int)yearArtistFormed
+            yearArtistFormed:(double)yearArtistFormed
 {
     if (self = [super init]) {
         _name = name.copy;
@@ -42,6 +42,6 @@
 
     return [self initWithName:name
               artistBiography:biography
-             yearArtistFormed:yearArtistFormed.intValue];
+             yearArtistFormed:yearArtistFormed.doubleValue];
 }
 @end

@@ -55,13 +55,13 @@
     KSIArtist *artist = self.ksiArtistController.artists[indexPath.row];
     NSLog(@"Artist: %@", artist);
     cell.textLabel.text = artist.name;
+    cell.detailTextLabel.text = [NSString localizedStringWithFormat:@"Formed in %.0f", artist.yearArtistFormed];
     
     return cell;
 }
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"SearchNewArtistsSegue"]) {
@@ -70,8 +70,9 @@
             } else if ([segue.identifier isEqualToString:@"ArtistsDetailSegue"])
             {
                 NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+                KSIArtistDetailViewController *detailVC = segue.destinationViewController;
                 KSIArtist *artist = self.ksiArtistController.artists[indexPath.row];
-                detailVC.ksiArt = artist;
+                detailVC.ksiArtist = artist;
     }
 }
 

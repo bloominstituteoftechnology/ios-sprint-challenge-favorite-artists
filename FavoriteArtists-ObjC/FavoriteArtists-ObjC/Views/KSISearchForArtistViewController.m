@@ -21,7 +21,6 @@
 
 // File Methods
 - (void)updateViews;
-- (void)saveArtist;
 
 @end
 
@@ -36,7 +35,7 @@
 - (void)updateViews
 {
     self.artistNameLabel.text = self.ksiArtist.name;
-    self.artistStartDateLabel.text = [NSString localizedStringWithFormat:@"Started in %d", self.ksiArtist.yearArtistFormed];
+    self.artistStartDateLabel.text = [NSString localizedStringWithFormat:@"Formed in %.0f", self.ksiArtist.yearArtistFormed];
     self.artistBiography.text = self.ksiArtist.biography;
 }
 

@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="GmA-Ky-LSo">
             <objects>
-                <tableViewController id="IKV-AT-xHr" sceneMemberID="viewController">
+                <tableViewController id="IKV-AT-xHr" customClass="JMCArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Myy-O1-spz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="REi-6G-mrD">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="ynL-O9-86r">
                             <connections>
-                                <segue destination="fck-pb-M3i" kind="unwind" unwindAction="unwindToMainVC:" id="IA9-8b-UzK"/>
+                                <segue destination="fck-pb-M3i" kind="unwind" unwindAction="unwindToMainVC:" id="Kg6-mx-CEc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -11,9 +11,20 @@
 
 @interface LSISearchArtistsViewController ()
 
+
+
 @end
 
 @implementation LSISearchArtistsViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _lsiPersonController = [[LSIArtistController alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LSIArtist.h"
+#import "LSIArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *dateFormedLabel;
 @property (weak, nonatomic) IBOutlet UITextView *artistBioLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *artistSaveButton;
+
+@property (nonatomic) LSIArtistController *lsiPersonController;
 
 
 @end

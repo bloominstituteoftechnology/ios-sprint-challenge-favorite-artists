@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef void(^ArtistFetcherCompletionHandler)(NSArray *_Nullable artists, NSError *_Nullable error);
 
 @class LSIArtist;
 
@@ -18,10 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSUInteger artistCount;
 
-- (void)addArtist:(LSIArtist *)anArtist;
+//- (void)addArtist:(LSIArtist *_Nullable)anArtist;
 
 - (LSIArtist *)artistAtIndex:(NSUInteger)index;
 
 @end
-
-NS_ASSUME_NONNULL_END

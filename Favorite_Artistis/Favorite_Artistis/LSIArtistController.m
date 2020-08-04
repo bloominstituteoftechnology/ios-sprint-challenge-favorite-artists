@@ -7,10 +7,13 @@
 //
 
 #import "LSIArtistController.h"
+#import "LSIArtist.h"
 
-@interface LSIArtistController () {
-    NSMutableArray *_internalArtists;
-}
+static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
+
+@interface LSIArtistController ()
+    @property NSMutableArray *internalArtists;
+
 @end
 
 @implementation LSIArtistController
@@ -19,7 +22,7 @@
 {
     if (self = [super init]) {
         _internalArtists = [[NSMutableArray alloc] init];
-        [self addArtist];
+        [self artists];
     }
     return self;
 }
@@ -32,6 +35,39 @@
 - (void)addArtist:(LSIArtist *)anArtist
 {
     [_internalArtists addObject:anArtist];
+}
+
+- (void)searchForPeople:(void (^)(NSError *error))completion
+{
+    NSURL *baseURL = [NSURL URLWithString:ArtistFetcherBaseURLString];
+    NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession
+                                      dataTaskWithURL:baseURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            completion(error);
+            return;
+        }
+        NSError *jsonError = nil;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        if (jsonError) {
+            completion(nil);
+            return;
+        }
+        if (![json isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"JSON was not a dictionary as expected");
+            completion([[NSError alloc]init]);
+        }
+            NSArray *fetchedData = json[@"results"];
+            NSMutableArray *fetchedArtists = [[NSMutableArray alloc] init];
+        
+            for (NSDictionary *dictionary in fetchedData) {
+                LSIArtist *artist = [[LSIArtist  alloc] initWithDictionary:dictionary];
+                [fetchedArtists addObject:artist];
+            }
+         
+        self.internalArtists = fetchedArtists;
+        completion(nil);
+    }];
+    [dataTask resume];
 }
 
 

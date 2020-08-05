@@ -61,11 +61,17 @@
 {
     NSMutableArray *loadedArtistsArray = [[NSMutableArray alloc] init];
     
-    NSData *data = loadFile(@"SavedArtists.json", NSBundle.mainBundle);
+//    NSData *data = loadFile(@"SavedArtists.json", NSBundle.mainBundle.);
+    
+    NSURL *url = [[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject URLByAppendingPathComponent:@"SavedArtists.json" isDirectory:NO];
+    
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    
     if (!data) {
+        NSLog(@"no data at location");
         return;
     }
-    
+
     NSError *jsonError = nil;
     NSDictionary *artistsDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
     
@@ -74,10 +80,10 @@
     }
     
     if (![artistsDictionary isKindOfClass:NSDictionary.class]) {
-        NSLog(@"artistsDictionary isn't a dictionary");
+        NSLog(@"artistsDictionary isn't a dictionary: %@", artistsDictionary);
     }
     
-    for (NSDictionary *artistDictionary in artistsDictionary) {
+    for (NSDictionary *artistDictionary in artistsDictionary.allValues) {
         SMAFavoriteArtist *favoriteArtist = [[SMAFavoriteArtist alloc] initWithDictionary:artistDictionary];
         [loadedArtistsArray addObject:favoriteArtist];
     }

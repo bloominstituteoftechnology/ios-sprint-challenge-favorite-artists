@@ -22,7 +22,7 @@
     
     NSString *formationDate = [dictionary objectForKey:@"intFormedYear"];
     if ([formationDate isKindOfClass:NSNull.class]) formationDate = nil;
-    else if (![formationDate isKindOfClass:NSString.class]) return nil;
+//    else if (![formationDate isKindOfClass:NSNumber.class]) return nil;
     
     
     return [self initWithArtistName:artistName

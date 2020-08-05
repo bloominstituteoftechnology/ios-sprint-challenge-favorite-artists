@@ -8,6 +8,12 @@
 
 #import "SMAFavoriteArtistController.h"
 
+
 @implementation SMAFavoriteArtistController
+
+- (void)addArtist:(SMAFavoriteArtist *)artist
+{
+    
+}
 
 @end

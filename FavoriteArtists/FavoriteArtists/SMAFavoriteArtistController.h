@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SMAFavoriteArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SMAFavoriteArtistController : NSObject
+
+- (void)addArtist:(SMAFavoriteArtist *)artist;
+
+@property (nonatomic) NSArray<SMAFavoriteArtist *> *artists;
 
 @end
 

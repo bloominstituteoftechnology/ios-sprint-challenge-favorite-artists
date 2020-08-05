@@ -33,15 +33,18 @@
     return self.favoriteArtistController.artists.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    SMAFavoriteArtist *artist = [self.favoriteArtistController.artists objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = artist.artistName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in: %.0f", artist.formationDate];
     
     return cell;
 }
-*/
+
 
 
 /*

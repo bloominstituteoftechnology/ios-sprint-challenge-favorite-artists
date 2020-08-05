@@ -12,7 +12,7 @@
 
 @interface SMAFavoriteArtistController ()
 
-@property NSMutableArray *internalFavoriteArtists;
+@property NSMutableArray<SMAFavoriteArtist *> *internalFavoriteArtists;
 
 @end
 
@@ -30,8 +30,9 @@
 {
     NSLog(@"%@", artist);
     [self.internalFavoriteArtists addObject:artist];
-    [self saveArtists];
     NSLog(@"%@", self.internalFavoriteArtists);
+    [self saveArtists];
+    
 }
 
 - (NSArray<SMAFavoriteArtist *> *)artists

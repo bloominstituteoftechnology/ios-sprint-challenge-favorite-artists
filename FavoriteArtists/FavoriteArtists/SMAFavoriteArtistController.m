@@ -60,6 +60,10 @@
     NSMutableArray *loadedArtistsArray = [[NSMutableArray alloc] init];
     
     NSData *data = loadFile(@"SavedArtists.json", NSBundle.mainBundle);
+    if (!data) {
+        return;
+    }
+    
     NSError *jsonError = nil;
     NSDictionary *artistsDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
     

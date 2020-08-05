@@ -19,6 +19,7 @@
 @property (nonatomic)ArtistFetcher *artistFetcher;
 @property (nonatomic)SMAFavoriteArtist *favoriteArtist;
 
+
 @end
 
 @implementation AddNewArtistViewController
@@ -31,10 +32,15 @@
     [self.artistNameLabel setHidden:YES];
     [self.artistFormationDateLabel setHidden:YES];
     
+    
+    
 }
 
 - (IBAction)saveArtistTapped:(id)sender {
+    if (!self.favoriteArtist) return;
     
+    [self.favoriteArtistController addArtist:self.favoriteArtist];
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 

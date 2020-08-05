@@ -30,6 +30,7 @@
 {
     NSLog(@"%@", artist);
     [self.internalFavoriteArtists addObject:artist];
+    [self saveArtists];
     NSLog(@"%@", self.internalFavoriteArtists);
 }
 

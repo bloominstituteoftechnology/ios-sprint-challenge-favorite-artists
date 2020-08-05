@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="cRD-rd-RqO" kind="show" id="NAV-ya-OoG"/>
+                                    <segue destination="cRD-rd-RqO" kind="show" identifier="ShowDetailSegue" id="NAV-ya-OoG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

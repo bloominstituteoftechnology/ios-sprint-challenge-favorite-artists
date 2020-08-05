@@ -20,7 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.artistNameLabel.text = self.favoriteArtist.artistName;
+    self.artistBiographyLabel.text = self.favoriteArtist.biography;
+    self.artistFormationDateLabel.text = [NSString stringWithFormat:@"%.0f", self.favoriteArtist.formationDate];
 }
 
 /*

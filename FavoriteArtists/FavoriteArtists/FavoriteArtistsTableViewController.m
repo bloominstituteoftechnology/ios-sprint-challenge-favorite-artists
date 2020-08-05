@@ -10,6 +10,7 @@
 #import "SMAFavoriteArtist.h"
 #import "SMAFavoriteArtistController.h"
 #import "AddNewArtistViewController.h"
+#import "ArtistDetailViewController.h"
 
 @interface FavoriteArtistsTableViewController ()
 
@@ -62,6 +63,11 @@
     if ([segue.identifier isEqualToString: @"AddNewArtistSegue"]) {
         AddNewArtistViewController *addNewArtistVC = segue.destinationViewController;
         addNewArtistVC.favoriteArtistController = self.favoriteArtistController;
+    } else if ([segue.identifier isEqualToString:@"ShowDetailSegue"]) {
+        ArtistDetailViewController *artistDetailVC = segue.destinationViewController;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        artistDetailVC.favoriteArtist = [self.favoriteArtistController.artists objectAtIndex:indexPath.row];
     }
 }
 

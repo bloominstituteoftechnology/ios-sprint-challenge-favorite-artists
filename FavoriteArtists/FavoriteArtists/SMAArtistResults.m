@@ -8,6 +8,7 @@
 
 #import "SMAArtistResults.h"
 #import "SMAFavoriteArtist.h"
+#import "SMAFavoriteArtist+NSJSONSerialization.h"
 
 @implementation SMAArtistResults
 

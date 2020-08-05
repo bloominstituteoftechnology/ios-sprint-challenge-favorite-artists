@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addArtist:(SMAFavoriteArtist *)artist;
 
+- (void)saveArtists;
+
+- (void)loadArtists;
+
 @property (nonatomic) NSArray<SMAFavoriteArtist *> *artists;
 
 @end

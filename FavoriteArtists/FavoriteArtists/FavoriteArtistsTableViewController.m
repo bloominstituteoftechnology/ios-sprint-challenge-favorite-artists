@@ -9,6 +9,7 @@
 #import "FavoriteArtistsTableViewController.h"
 #import "SMAFavoriteArtist.h"
 #import "SMAFavoriteArtistController.h"
+#import "AddNewArtistViewController.h"
 
 @interface FavoriteArtistsTableViewController ()
 
@@ -22,6 +23,12 @@
     [super viewDidLoad];
     
     self.favoriteArtistController = [[SMAFavoriteArtistController alloc] init];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+    NSLog(@"%lu", (unsigned long)self.favoriteArtistController.artists.count);
 }
 
 - (IBAction)addNewArtistTapped:(id)sender {
@@ -47,14 +54,15 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString: @"AddNewArtistSegue"]) {
+        AddNewArtistViewController *addNewArtistVC = segue.destinationViewController;
+        addNewArtistVC.favoriteArtistController = self.favoriteArtistController;
+    }
 }
-*/
 
 @end

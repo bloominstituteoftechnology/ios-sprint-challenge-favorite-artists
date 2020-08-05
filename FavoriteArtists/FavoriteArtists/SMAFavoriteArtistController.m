@@ -21,6 +21,7 @@
 - (instancetype)init
 {
     if (self = [super init]) {
+        _internalFavoriteArtists = [[NSMutableArray alloc] init];
         [self loadArtists];
     }
     return self;

@@ -53,7 +53,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add" id="7zF-mm-8ob">
                             <connections>
                                 <action selector="addNewArtistTapped:" destination="gSW-2E-sMX" id="FU5-t6-hJr"/>
-                                <segue destination="4Ps-j4-s4v" kind="show" id="JcJ-QC-1s5"/>
+                                <segue destination="4Ps-j4-s4v" kind="show" identifier="AddNewArtistSegue" id="JcJ-QC-1s5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

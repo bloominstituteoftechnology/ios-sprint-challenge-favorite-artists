@@ -8,12 +8,22 @@
 
 #import "SMAFavoriteArtistController.h"
 
+@interface SMAFavoriteArtistController ()
+
+@property NSMutableArray *internalFavoriteArtists;
+
+@end
 
 @implementation SMAFavoriteArtistController
 
 - (void)addArtist:(SMAFavoriteArtist *)artist
 {
-    
+    [_internalFavoriteArtists addObject:artist];
+}
+
+- (NSArray<SMAFavoriteArtist *> *)artists
+{
+    return _internalFavoriteArtists.copy;
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "LSIArtistController.h"
 #import "LSIArtist.h"
+#import "LSIError.h"
 
 static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
 
@@ -37,37 +38,43 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     [_internalArtists addObject:anArtist];
 }
 
-- (void)searchForPeople:(void (^)(NSError *error))completion
+- (void)searchForPeople:(NSString *)searchItem completion:(ArtistFetcherCompletionHandler)completion
 {
-    NSURL *baseURL = [NSURL URLWithString:ArtistFetcherBaseURLString];
-    NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession
-                                      dataTaskWithURL:baseURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSString *searchURL = [ArtistFetcherBaseURLString stringByAppendingString: searchItem];
+    NSURL *baseURL = [NSURL URLWithString:searchURL];
+    NSLog(@"baseURL");
+
+    NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession dataTaskWithURL:baseURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
         if (error) {
             completion(error);
             return;
         }
+        
         NSError *jsonError = nil;
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         if (jsonError) {
             completion(nil);
             return;
         }
-        if (![json isKindOfClass:[NSDictionary class]]) {
-            NSLog(@"JSON was not a dictionary as expected");
-            completion([[NSError alloc]init]);
-        }
-            NSArray *fetchedData = json[@"results"];
-            NSMutableArray *fetchedArtists = [[NSMutableArray alloc] init];
         
-            for (NSDictionary *dictionary in fetchedData) {
-                LSIArtist *artist = [[LSIArtist  alloc] initWithDictionary:dictionary];
-                [fetchedArtists addObject:artist];
-            }
-         
+        if (![json isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"JSON was not a Dictionary as expected");
+            completion([[NSError alloc] init]);
+        }
+        
+        NSArray *fetchedData = json[@"artists"];
+        NSMutableArray *fetchedArtists = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *dictionary in fetchedData) {
+            LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:dictionary];
+            [fetchedArtists addObject:artist];
+        }
         self.internalArtists = fetchedArtists;
         completion(nil);
     }];
     [dataTask resume];
+        
 }
 
 

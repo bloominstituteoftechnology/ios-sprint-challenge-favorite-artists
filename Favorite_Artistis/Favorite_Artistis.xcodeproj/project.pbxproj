@@ -18,6 +18,7 @@
 		D79145CB2482D0FC002C8A22 /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = D79145CA2482D0FC002C8A22 /* LSIArtist.m */; };
 		D7C79D0424D744B60006655E /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C79D0324D744B60006655E /* LSIArtistController.m */; };
 		D7C79D0724D818BD0006655E /* LSIArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C79D0624D818BD0006655E /* LSIArtistFetcher.m */; };
+		D7C79D0B24D994670006655E /* LSIError.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C79D0A24D994670006655E /* LSIError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		D7C79D0324D744B60006655E /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
 		D7C79D0524D818BD0006655E /* LSIArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistFetcher.h; sourceTree = "<group>"; };
 		D7C79D0624D818BD0006655E /* LSIArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistFetcher.m; sourceTree = "<group>"; };
+		D7C79D0924D994670006655E /* LSIError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIError.h; sourceTree = "<group>"; };
+		D7C79D0A24D994670006655E /* LSIError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				D79145B82482C549002C8A22 /* LaunchScreen.storyboard */,
 				D79145BB2482C549002C8A22 /* Info.plist */,
 				D79145BC2482C549002C8A22 /* main.m */,
+				D7C79D0924D994670006655E /* LSIError.h */,
+				D7C79D0A24D994670006655E /* LSIError.m */,
 			);
 			path = Favorite_Artistis;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				D79145AC2482C544002C8A22 /* AppDelegate.m in Sources */,
 				D79145BD2482C549002C8A22 /* main.m in Sources */,
 				D79145CB2482D0FC002C8A22 /* LSIArtist.m in Sources */,
+				D7C79D0B24D994670006655E /* LSIError.m in Sources */,
 				D7C79D0724D818BD0006655E /* LSIArtistFetcher.m in Sources */,
 				D79145C82482C5EB002C8A22 /* LSIArtistsTableViewController.m in Sources */,
 				D79145AF2482C544002C8A22 /* SceneDelegate.m in Sources */,

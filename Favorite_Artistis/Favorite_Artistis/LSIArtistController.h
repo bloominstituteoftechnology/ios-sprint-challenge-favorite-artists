@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^ArtistFetcherCompletionHandler)(NSArray *_Nullable artists, NSError *_Nullable error);
+typedef void(^ArtistFetcherCompletionHandler)(NSError *error);
 
 @class LSIArtist;
 
@@ -18,7 +18,7 @@ typedef void(^ArtistFetcherCompletionHandler)(NSArray *_Nullable artists, NSErro
 
 @property (nonatomic) NSUInteger artistCount;
 
-//- (void)addArtist:(LSIArtist *_Nullable)anArtist;
+- (void)addArtist:(LSIArtist *)anArtist;
 
 - (LSIArtist *)artistAtIndex:(NSUInteger)index;
 

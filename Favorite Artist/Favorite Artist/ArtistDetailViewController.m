@@ -22,6 +22,9 @@
 @property (nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (nonatomic) IBOutlet UILabel *biogprahyLabel;
 
+@end
+
+@interface ArtistDetailViewController (UISearchBarDelegate) <UISearchBarDelegate>
 
 @end
 
@@ -29,17 +32,69 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.artistFetcher = [[ArtistFetcher alloc] init];
+    
+//    self.searchBar.delegate = self;
+    if (self.isShowingFavoriteArtist) {
+        [self.searchBar removeFromSuperview];
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+    
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender
+{
+    if (self.artist == nil) return;
+    [self.favoriteArtistController addArtist:self.artist];
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+
+- (void) updateViews
+{
+    if (self.artist != nil) {
+        
+        self.artistNameLabel.text = self.artist.name;
+        self.biogprahyLabel.text = self.artist.biography;
+        
+        if (self.artist.yearFormed != 0) {
+            NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+            self.yearFormedLabel.text = yearFormedString;
+        } else {
+            self.yearFormedLabel.text = @"Year formed: Unkown";
+        }
+        } else {
+            self.artistNameLabel.text = nil;
+            self.yearFormedLabel.text = nil;
+            self.biogprahyLabel.text = nil;
+        }
+}
+
+@end
+
+
+
+// MARK: UISearchBarDelegate Method
+
+@implementation ArtistDetailViewController(UISearchBarDelegate)
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSString *searchTerm = searchBar.text;
+    if ((searchTerm == nil) | [searchTerm isEqualToString:@""]) return;
+    
+    NSLog(@"Searching for %@", searchTerm);
+    
+    [self.artistFetcher fetchArtistsWithName:searchTerm completionHandler:^(NSArray * _Nullable artists, NSError * _Nullable error) {
+        NSLog(@"Found %ld results!", artists.count);
+        
+        if (artists.count > 0) {
+            self.artist = artists[0];
+        }
+        
+        [self updateViews];
+    }];
+}
 
 @end

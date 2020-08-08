@@ -50,7 +50,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G8k-YT-rzD"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="ol5-hj-Kqf" kind="show" identifier="AddArtistSegue" id="wTy-Wz-wsz"/>
+                        <segue destination="ol5-hj-Kqf" kind="show" identifier="ArtistDetailShowSegue" id="wTy-Wz-wsz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGu-qn-Q3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

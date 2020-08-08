@@ -45,10 +45,26 @@
     return _interalArtists.copy;
 }
 
+- (void)saveToPersistentStore
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    for (Artist *artist in _interalArtists) {
+        NSString *key = artist.name;
+        dictionary[key] = artist.toDictionary;
+    }
+
+    [dictionary writeToURL:self.getFileURL atomically:YES];
+}
 - (void)addArtist:(Artist *)artist
 {
     [_interalArtists addObject:artist];
-   
+    [self saveToPersistentStore];
+}
+
+- (void)deleteArtist:(Artist *)artist
+{
+    [_interalArtists removeObject:artist];
+    [self saveToPersistentStore];
 }
 
 - (NSURL *)getFileURL
@@ -65,16 +81,7 @@
     return self.getFileURL.path;
 }
 
-- (void)saveToPersistentStore
-{
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    for (Artist *artist in _interalArtists) {
-        NSString *key = artist.name;
-        dictionary[key] = artist.toDictionary;
-    }
 
-    [dictionary writeToURL:self.getFileURL atomically:YES];
-}
 
 - (void)updateArtistArrayWithDictionary:(NSDictionary *)dictionary
 {

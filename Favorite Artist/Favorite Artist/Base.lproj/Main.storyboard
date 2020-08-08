@@ -10,7 +10,7 @@
         <!--Favorite Artists-->
         <scene sceneID="W9N-zc-CMA">
             <objects>
-                <tableViewController id="Cet-pP-ITj" customClass="FavoriteAristTableViewController" sceneMemberID="viewController">
+                <tableViewController id="Cet-pP-ITj" customClass="FavoriteArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kTp-ux-q1O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ol5-hj-Kqf" kind="show" identifier="ArtistDetailShowSegue" id="zTl-lE-Avq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="l2x-S9-3MX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G8k-YT-rzD">
                             <connections>
-                                <segue destination="ol5-hj-Kqf" kind="show" identifier="ArtistDetailShowSegue" id="Q84-Og-656"/>
+                                <segue destination="ol5-hj-Kqf" kind="show" identifier="AddArtistShowSegue" id="Q84-Og-656"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wud-bz-dDX">
+                            <searchBar contentMode="redraw" placeholder="Add Artist Name:" translatesAutoresizingMaskIntoConstraints="NO" id="wud-bz-dDX">
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -82,7 +85,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Biography Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-d7-4yy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Biography Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-d7-4yy">
                                 <rect key="frame" x="20" y="277" width="374" height="577"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
@@ -110,11 +113,15 @@
                         <viewLayoutGuide key="safeArea" id="OXh-0V-gPq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="as2-y8-Bz5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jhb-Pb-jMO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jhb-Pb-jMO">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="ol5-hj-Kqf" id="zUI-AJ-Ifv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="artistNameLabel" destination="ZYu-IO-anQ" id="Swf-ep-F07"/>
-                        <outlet property="biogprahyLabel" destination="b3N-d7-4yy" id="YW5-8z-H9I"/>
+                        <outlet property="biographyLabel" destination="b3N-d7-4yy" id="B34-xi-HxT"/>
                         <outlet property="saveButton" destination="jhb-Pb-jMO" id="UsQ-Bi-ezN"/>
                         <outlet property="searchBar" destination="wud-bz-dDX" id="2zE-vF-LHs"/>
                         <outlet property="yearFormedLabel" destination="Zvp-3a-fbo" id="17j-ig-y4v"/>
@@ -143,4 +150,7 @@
             <point key="canvasLocation" x="-13.043478260869566" y="73.660714285714278"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zTl-lE-Avq"/>
+    </inferredMetricsTieBreakers>
 </document>

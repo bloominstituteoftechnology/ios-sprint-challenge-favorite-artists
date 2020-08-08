@@ -22,8 +22,7 @@
 
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         _interalArtists = [[NSMutableArray alloc] init];
         
         NSString *filePath = self.getFilePath;
@@ -85,10 +84,12 @@
 
 - (void)updateArtistArrayWithDictionary:(NSDictionary *)dictionary
 {
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (NSDictionary *artistDictionary in dictionary.allValues) {
-        Artist *artist = [[Artist alloc] initwithDictionary:artistDictionary];
-        [array addObject:artist];
-    }
+   NSMutableArray *array = [[NSMutableArray alloc] init];
+      for (NSDictionary *artistDictionary in dictionary.allValues) {
+          Artist *artist = [[Artist alloc] initWithDictionary:artistDictionary];
+          [array addObject:artist];
+      }
+      
+    _interalArtists = array;
 }
 @end

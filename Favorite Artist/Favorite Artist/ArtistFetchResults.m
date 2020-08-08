@@ -12,10 +12,10 @@
 
 @implementation ArtistFetchResults
 
-- (instancetype)initWithArtist:(NSArray<Artist *> *)artist
+- (instancetype)initWithArtists:(NSArray<Artist *> *)artists
 {
     if (self = [super init]) {
-        _artist = artist;
+        _artists = artists;
     }
     return self;
 }
@@ -28,17 +28,18 @@
     NSMutableArray *artists = [[NSMutableArray alloc] initWithCapacity:artistDictionaries.count];
     
     for (NSDictionary *artistDictionary in artistDictionaries) {
-        if (![artistDictionaries isKindOfClass:[NSDictionary class]]) continue;
+        if (![artistDictionary isKindOfClass:[NSDictionary class]]) continue;
         
-        Artist *artist = [[Artist alloc] initwithDictionary:artistDictionary];
+        Artist *artist = [[Artist alloc] initWithDictionary:artistDictionary];
         
         if (artist) {
             [artists addObject:artist];
         } else {
-            NSLog(@"Error parsing dictionary: %@", artistDictionary);
+            NSLog(@"Unable to parse artist dictionary: %@", artistDictionary);
         }
     }
-        return [self initWithArtist:artists];
+    
+    return [self initWithArtists:artists];
 }
 
 @end

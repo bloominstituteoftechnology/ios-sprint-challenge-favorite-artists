@@ -11,16 +11,16 @@
 
 @implementation Artist (NSJSONSerialization)
 
-- (instancetype)initwithDictionary:(NSDictionary *)dictionary
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     NSString *name = [dictionary objectForKey:@"strArtist"];
     if (![name isKindOfClass:[NSString class]]) return nil;
     
-    NSNumber *yearFormed = [dictionary objectForKey:@"initFormedYear"];
+    NSNumber *yearFormed = [dictionary objectForKey:@"intFormedYear"];
     if ([yearFormed isKindOfClass:[NSNull class]]) {
         yearFormed = nil;
     } else if ([yearFormed isKindOfClass:[NSString class]]) {
-        NSString *yearFormedString = [dictionary objectForKey:@"initFormedYear"];
+        NSString *yearFormedString = [dictionary objectForKey:@"intFormedYear"];
         yearFormed = @([yearFormedString intValue]);
     } else if (![yearFormed isKindOfClass:[NSNumber class]]) return nil;
     

@@ -20,7 +20,7 @@
 @property (nonatomic) IBOutlet UISearchBar *searchBar;
 @property (nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (nonatomic) IBOutlet UILabel *yearFormedLabel;
-@property (nonatomic) IBOutlet UILabel *biogprahyLabel;
+@property (nonatomic) IBOutlet UILabel *biographyLabel;
 
 @end
 
@@ -51,12 +51,12 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void) updateViews
+- (void)updateViews
 {
     if (self.artist != nil) {
         
         self.artistNameLabel.text = self.artist.name;
-        self.biogprahyLabel.text = self.artist.biography;
+        self.biographyLabel.text = self.artist.biography;
         
         if (self.artist.yearFormed != 0) {
             NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
@@ -67,7 +67,7 @@
         } else {
             self.artistNameLabel.text = nil;
             self.yearFormedLabel.text = nil;
-            self.biogprahyLabel.text = nil;
+            self.biographyLabel.text = nil;
         }
 }
 

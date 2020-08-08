@@ -6,19 +6,19 @@
 //  Copyright © 2020 Gerardo Hernandez. All rights reserved.
 //
 
-#import "FavoriteAristTableViewController.h"
+#import "FavoriteArtistsTableViewController.h"
 #import "Artist.h"
 #import "FavoriteArtistController.h"
 #import "ArtistDetailViewController.h"
 
 
-@interface FavoriteAristTableViewController ()
+@interface FavoriteArtistsTableViewController ()
 
 @property FavoriteArtistController *favoriteArtistController;
 
 @end
 
-@implementation FavoriteAristTableViewController
+@implementation FavoriteArtistsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,6 +45,7 @@
 
     Artist *artist = [self.favoriteArtistController.artist objectAtIndex:indexPath.row];
     cell.textLabel.text = artist.name;
+    
     
     if (artist.yearFormed != 0) {
         NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %d", artist.yearFormed];
@@ -79,7 +80,7 @@
         artistDetailVC.artist = artist;
         artistDetailVC.isShowingFavoriteArtist = YES;
         
-    } else if ([[segue identifier] isEqualToString:@"ArtistDetailShowSegue"]) {
+    } else if ([[segue identifier] isEqualToString:@"AddArtistShowSegue"]) {
         ArtistDetailViewController *artistDetailVC = [segue destinationViewController];
         
         artistDetailVC.isShowingFavoriteArtist = NO;

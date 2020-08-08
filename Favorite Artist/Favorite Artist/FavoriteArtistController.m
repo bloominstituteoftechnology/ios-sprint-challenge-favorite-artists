@@ -8,6 +8,8 @@
 
 #import "FavoriteArtistController.h"
 
+
+
 @implementation FavoriteArtistController
 
 @end

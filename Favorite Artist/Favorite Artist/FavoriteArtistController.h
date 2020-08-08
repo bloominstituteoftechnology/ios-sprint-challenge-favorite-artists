@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class Artist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FavoriteArtistController : NSObject
+
+- (instancetype)init;
+
+@property (nonatomic, readonly, copy) NSArray<Artist *> *artist;
+
+- (void)addArtist:(Artist *)artist;
+- (void)deleteArtist:(Artist *)artist;
 
 @end
 

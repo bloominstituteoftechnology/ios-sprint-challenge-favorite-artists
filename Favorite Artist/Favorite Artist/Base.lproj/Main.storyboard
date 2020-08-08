@@ -60,7 +60,7 @@
         <!--Add New Artist-->
         <scene sceneID="nca-xW-Cvo">
             <objects>
-                <viewController id="ol5-hj-Kqf" sceneMemberID="viewController">
+                <viewController id="ol5-hj-Kqf" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ewW-g6-C5D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

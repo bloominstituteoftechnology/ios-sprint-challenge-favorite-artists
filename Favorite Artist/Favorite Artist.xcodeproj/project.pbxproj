@@ -17,6 +17,8 @@
 		63A0A1D024DF1C4F00681E1F /* Artist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1CF24DF1C4F00681E1F /* Artist+NSJSONSerialization.m */; };
 		63A0A1D324DF219B00681E1F /* FavoriteAristTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1D224DF219B00681E1F /* FavoriteAristTableViewController.m */; };
 		63A0A1D624DF22A900681E1F /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1D524DF22A900681E1F /* ArtistDetailViewController.m */; };
+		63A0A1D924DF235300681E1F /* ArtistFetchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1D824DF235300681E1F /* ArtistFetchResults.m */; };
+		63A0A1DC24DF239300681E1F /* ArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1DB24DF239300681E1F /* ArtistFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		63A0A1D224DF219B00681E1F /* FavoriteAristTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteAristTableViewController.m; sourceTree = "<group>"; };
 		63A0A1D424DF22A900681E1F /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
 		63A0A1D524DF22A900681E1F /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		63A0A1D724DF235300681E1F /* ArtistFetchResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistFetchResults.h; sourceTree = "<group>"; };
+		63A0A1D824DF235300681E1F /* ArtistFetchResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistFetchResults.m; sourceTree = "<group>"; };
+		63A0A1DA24DF239300681E1F /* ArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistFetcher.h; sourceTree = "<group>"; };
+		63A0A1DB24DF239300681E1F /* ArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,10 @@
 				63A0A1D224DF219B00681E1F /* FavoriteAristTableViewController.m */,
 				63A0A1D424DF22A900681E1F /* ArtistDetailViewController.h */,
 				63A0A1D524DF22A900681E1F /* ArtistDetailViewController.m */,
+				63A0A1D724DF235300681E1F /* ArtistFetchResults.h */,
+				63A0A1D824DF235300681E1F /* ArtistFetchResults.m */,
+				63A0A1DA24DF239300681E1F /* ArtistFetcher.h */,
+				63A0A1DB24DF239300681E1F /* ArtistFetcher.m */,
 			);
 			path = "Favorite Artist";
 			sourceTree = "<group>";
@@ -163,6 +173,8 @@
 			files = (
 				63A0A1A824DA63FF00681E1F /* AppDelegate.m in Sources */,
 				63A0A1B924DA640E00681E1F /* main.m in Sources */,
+				63A0A1DC24DF239300681E1F /* ArtistFetcher.m in Sources */,
+				63A0A1D924DF235300681E1F /* ArtistFetchResults.m in Sources */,
 				63A0A1CA24DF1A1E00681E1F /* Artist.m in Sources */,
 				63A0A1D324DF219B00681E1F /* FavoriteAristTableViewController.m in Sources */,
 				63A0A1D624DF22A900681E1F /* ArtistDetailViewController.m in Sources */,

@@ -7,8 +7,21 @@
 //
 
 #import "ArtistDetailViewController.h"
+#import "Artist.h"
+#import "ArtistFetcher.h"
+#import "FavoriteArtistController.h"
 
 @interface ArtistDetailViewController ()
+
+@property ArtistFetcher *artistFetcher;
+
+// IBOutlets
+@property (nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (nonatomic) IBOutlet UILabel *biogprahyLabel;
+
 
 @end
 

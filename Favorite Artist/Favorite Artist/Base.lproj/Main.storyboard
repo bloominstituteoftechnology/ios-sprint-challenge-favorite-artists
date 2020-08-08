@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Formed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvp-3a-fbo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Formed Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvp-3a-fbo">
                                 <rect key="frame" x="20" y="240.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -81,7 +81,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Description Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-d7-4yy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Biography Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-d7-4yy">
                                 <rect key="frame" x="20" y="277" width="374" height="577"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
@@ -111,6 +111,13 @@
                     <navigationItem key="navigationItem" title="Add New Artist" id="as2-y8-Bz5">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="jhb-Pb-jMO"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="ZYu-IO-anQ" id="Swf-ep-F07"/>
+                        <outlet property="biogprahyLabel" destination="b3N-d7-4yy" id="YW5-8z-H9I"/>
+                        <outlet property="saveButton" destination="jhb-Pb-jMO" id="UsQ-Bi-ezN"/>
+                        <outlet property="searchBar" destination="wud-bz-dDX" id="2zE-vF-LHs"/>
+                        <outlet property="yearFormedLabel" destination="Zvp-3a-fbo" id="17j-ig-y4v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9F-xd-0gj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

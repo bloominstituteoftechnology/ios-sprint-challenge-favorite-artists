@@ -44,6 +44,7 @@
 		63A0A1D824DF235300681E1F /* ArtistFetchResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistFetchResults.m; sourceTree = "<group>"; };
 		63A0A1DA24DF239300681E1F /* ArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistFetcher.h; sourceTree = "<group>"; };
 		63A0A1DB24DF239300681E1F /* ArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistFetcher.m; sourceTree = "<group>"; };
+		63A0A1DE24DF25C800681E1F /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 				63A0A1D824DF235300681E1F /* ArtistFetchResults.m */,
 				63A0A1DA24DF239300681E1F /* ArtistFetcher.h */,
 				63A0A1DB24DF239300681E1F /* ArtistFetcher.m */,
+				63A0A1DE24DF25C800681E1F /* LSIFileHelper.h */,
 			);
 			path = "Favorite Artist";
 			sourceTree = "<group>";

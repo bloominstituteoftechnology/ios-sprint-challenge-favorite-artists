@@ -47,11 +47,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorite Artists" id="l2x-S9-3MX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="G8k-YT-rzD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="G8k-YT-rzD">
+                            <connections>
+                                <segue destination="ol5-hj-Kqf" kind="show" identifier="ArtistDetailShowSegue" id="Q84-Og-656"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="ol5-hj-Kqf" kind="show" identifier="ArtistDetailShowSegue" id="wTy-Wz-wsz"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGu-qn-Q3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -35,7 +35,7 @@
     
     self.artistFetcher = [[ArtistFetcher alloc] init];
     
-//    self.searchBar.delegate = self;
+    self.searchBar.delegate = self;
     if (self.isShowingFavoriteArtist) {
         [self.searchBar removeFromSuperview];
         self.navigationItem.rightBarButtonItem = nil;

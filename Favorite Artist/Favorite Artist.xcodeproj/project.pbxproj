@@ -14,6 +14,7 @@
 		63A0A1B624DA640E00681E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A0A1B424DA640E00681E1F /* LaunchScreen.storyboard */; };
 		63A0A1B924DA640E00681E1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1B824DA640E00681E1F /* main.m */; };
 		63A0A1CA24DF1A1E00681E1F /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1C924DF1A1E00681E1F /* Artist.m */; };
+		63A0A1D024DF1C4F00681E1F /* Artist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1CF24DF1C4F00681E1F /* Artist+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		63A0A1B824DA640E00681E1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63A0A1C824DF1A1E00681E1F /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
 		63A0A1C924DF1A1E00681E1F /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		63A0A1CE24DF1C4F00681E1F /* Artist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artist+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		63A0A1CF24DF1C4F00681E1F /* Artist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				63A0A1B824DA640E00681E1F /* main.m */,
 				63A0A1C824DF1A1E00681E1F /* Artist.h */,
 				63A0A1C924DF1A1E00681E1F /* Artist.m */,
+				63A0A1CE24DF1C4F00681E1F /* Artist+NSJSONSerialization.h */,
+				63A0A1CF24DF1C4F00681E1F /* Artist+NSJSONSerialization.m */,
 			);
 			path = "Favorite Artist";
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				63A0A1A824DA63FF00681E1F /* AppDelegate.m in Sources */,
 				63A0A1B924DA640E00681E1F /* main.m in Sources */,
 				63A0A1CA24DF1A1E00681E1F /* Artist.m in Sources */,
+				63A0A1D024DF1C4F00681E1F /* Artist+NSJSONSerialization.m in Sources */,
 				63A0A1AB24DA63FF00681E1F /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

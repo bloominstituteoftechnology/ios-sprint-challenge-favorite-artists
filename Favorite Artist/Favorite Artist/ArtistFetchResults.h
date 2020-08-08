@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class Artist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistFetchResults : NSObject
+
+- (instancetype)initWithArtist:(NSArray<Artist *> *)artist NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+@property (nonatomic, readonly, copy) NSArray<Artist *> *artist;
 
 @end
 

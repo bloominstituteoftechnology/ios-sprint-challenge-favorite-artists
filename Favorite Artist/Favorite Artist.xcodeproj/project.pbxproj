@@ -16,6 +16,7 @@
 		63A0A1CA24DF1A1E00681E1F /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1C924DF1A1E00681E1F /* Artist.m */; };
 		63A0A1D024DF1C4F00681E1F /* Artist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1CF24DF1C4F00681E1F /* Artist+NSJSONSerialization.m */; };
 		63A0A1D324DF219B00681E1F /* FavoriteAristTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1D224DF219B00681E1F /* FavoriteAristTableViewController.m */; };
+		63A0A1D624DF22A900681E1F /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A0A1D524DF22A900681E1F /* ArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		63A0A1CF24DF1C4F00681E1F /* Artist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		63A0A1D124DF219B00681E1F /* FavoriteAristTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteAristTableViewController.h; sourceTree = "<group>"; };
 		63A0A1D224DF219B00681E1F /* FavoriteAristTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteAristTableViewController.m; sourceTree = "<group>"; };
+		63A0A1D424DF22A900681E1F /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		63A0A1D524DF22A900681E1F /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				63A0A1CF24DF1C4F00681E1F /* Artist+NSJSONSerialization.m */,
 				63A0A1D124DF219B00681E1F /* FavoriteAristTableViewController.h */,
 				63A0A1D224DF219B00681E1F /* FavoriteAristTableViewController.m */,
+				63A0A1D424DF22A900681E1F /* ArtistDetailViewController.h */,
+				63A0A1D524DF22A900681E1F /* ArtistDetailViewController.m */,
 			);
 			path = "Favorite Artist";
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				63A0A1B924DA640E00681E1F /* main.m in Sources */,
 				63A0A1CA24DF1A1E00681E1F /* Artist.m in Sources */,
 				63A0A1D324DF219B00681E1F /* FavoriteAristTableViewController.m in Sources */,
+				63A0A1D624DF22A900681E1F /* ArtistDetailViewController.m in Sources */,
 				63A0A1D024DF1C4F00681E1F /* Artist+NSJSONSerialization.m in Sources */,
 				63A0A1AB24DA63FF00681E1F /* SceneDelegate.m in Sources */,
 			);

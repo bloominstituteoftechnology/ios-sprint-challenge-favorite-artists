@@ -10,10 +10,8 @@
 #import "KSIArtistController.h"
 #import "KSIArtist.h"
 
-@class KSIArtistController;
-@class KSIArtist;
-
 NS_ASSUME_NONNULL_BEGIN
+@class KSIArtistController;
 
 @interface KSIFavoriteArtistsTableViewController : UITableViewController
 

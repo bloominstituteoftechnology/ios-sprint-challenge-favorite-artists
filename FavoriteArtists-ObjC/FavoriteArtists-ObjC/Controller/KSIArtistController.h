@@ -9,19 +9,25 @@
 #import <Foundation/Foundation.h>
 #import "KSIArtist.h"
 
-typedef void(^ArtistFetcherCompletionHandler)(KSIArtist * _Nullable artist, NSError * _Nullable error);
+typedef void(^ArtistFetcherCompletionHandler)(KSIArtist * _Nonnull artist, NSError * _Nonnull error);
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface KSIArtistController : NSObject
 
-- (void)searchForArtists:(nonnull NSString *)name
-              completion:(nonnull ArtistFetcherCompletionHandler)completionHandler;
+- (void)searchForArtists:(NSString *)name
+              completion:( ArtistFetcherCompletionHandler)completionHandler;
 
-@property (nonatomic,readonly,copy) NSArray* _Nullable artists;
+@property (nonatomic,readonly) NSArray *artists;
 @property (nonatomic, readonly) NSUInteger artistCount;
 
-- (void)addArtist:(KSIArtist *_Nullable)anArtist;
+- (void)addArtist:(KSIArtist *)anArtist;
+
+- (void)savePersistence;
+- (void)loadPersistence;
 
 
 @end
 
+NS_ASSUME_NONNULL_END
 

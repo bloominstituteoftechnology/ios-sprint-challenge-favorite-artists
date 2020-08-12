@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) KSIArtistController *ksiArtistController;
 @property (nonatomic) KSIArtist *ksiArtist;
+
 - (void)updateViews;
 
 @end

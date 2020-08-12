@@ -7,7 +7,7 @@
 //
 
 #import "KSIFavoriteArtistsTableViewController.h"
-#import "KSIArtistController.h"
+#import "../Controller/KSIArtistController.h"
 #import "KSIArtist.h"
 #import "KSISearchForArtistViewController.h"
 #import "KSIArtistDetailViewController.h"
@@ -29,33 +29,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.ksiArtistController = [[KSIArtistController alloc]init];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.ksiArtistController artists];
     [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"Artist count: %lu", (unsigned long)self.ksiArtistController.artistCount);
     return self.ksiArtistController.artistCount;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
     KSIArtist *artist = self.ksiArtistController.artists[indexPath.row];
-    NSLog(@"Artist: %@", artist);
     cell.textLabel.text = artist.name;
-    cell.detailTextLabel.text = [NSString localizedStringWithFormat:@"Formed in %.0f", artist.yearArtistFormed];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)artist.yearArtistFormed];
     
     return cell;
 }

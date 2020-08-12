@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class KSIArtist;
+#import "KSIArtist.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

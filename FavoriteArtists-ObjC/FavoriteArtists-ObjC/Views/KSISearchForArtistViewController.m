@@ -35,27 +35,27 @@
 - (void)updateViews
 {
     self.artistNameLabel.text = self.ksiArtist.name;
-    self.artistStartDateLabel.text = [NSString localizedStringWithFormat:@"Formed in %.0f", self.ksiArtist.yearArtistFormed];
+    self.artistStartDateLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)self.ksiArtist.yearArtistFormed];
     self.artistBiography.text = self.ksiArtist.biography;
 }
 
 - (IBAction)saveButtonTapped:(id)sender
 {
+    if (!_ksiArtist) {
+        NSLog(@"Artist is nil");
+        return;
+    }
     [self.ksiArtistController addArtist:self.ksiArtist];
-    NSLog(@"Artist was saved");
-    NSLog(@"Artist count: %lu", (unsigned long)self.ksiArtistController.artistCount);
     [self.navigationController popToRootViewControllerAnimated:true];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"pressed Return inside search bar");
     NSString *searchTerm = searchBar.text;
     [self.ksiArtistController searchForArtists:searchTerm
                                     completion:^(KSIArtist *artist, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.ksiArtist = artist;
             [self updateViews];
-            NSLog(@"Artist found: %@", artist);
         });
     }];
 }

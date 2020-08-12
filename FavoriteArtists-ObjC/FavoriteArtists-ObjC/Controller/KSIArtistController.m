@@ -25,28 +25,61 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
 {
     if (self = [super init]) {
         _internalArtists = [[NSMutableArray alloc]init];
+        [self loadPersistence];
     }
     return self;
 }
 
 - (NSArray *)artists
-    {
-        return [self.internalArtists copy];
-    }
+{
+    return [self.internalArtists copy];
+}
 
 - (NSUInteger)artistCount
 {
     return [self.internalArtists count];
 }
 
-- (KSIArtist *)artistAtIndex:(NSUInteger)index
-{
-    return [self.artists objectAtIndex:index];
-}
-
 - (void)addArtist:(KSIArtist *)anArtist
 {
     [self.internalArtists addObject:anArtist];
+    [self savePersistence];
+}
+
+- (NSURL *)persistentFileURL {
+    NSURL *documentDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSString *fileName = @"artists.json";
+    NSURL *url = [documentDirectory URLByAppendingPathComponent:fileName];
+    NSDictionary *fileUrl = [NSDictionary dictionaryWithContentsOfURL:url];
+    NSLog(@"Url: %@", fileUrl);
+    return url;
+}
+
+- (void)savePersistence
+{
+    NSURL *url = [self persistentFileURL];
+    NSMutableArray *artists = [[NSMutableArray alloc]init];
+    
+    for (KSIArtist *artist in self.internalArtists) {
+        NSDictionary *artistDictioary = [artist dictionaryValue];
+        [artists addObject:artistDictioary];
+    }
+    
+    NSData *artistData = [NSJSONSerialization dataWithJSONObject:artists options:0 error:nil];
+    [artistData writeToURL:url atomically:YES];
+}
+
+- (void)loadPersistence
+{
+    NSURL *url = [self persistentFileURL];
+    NSData *artistData = [NSData dataWithContentsOfURL:url];
+    if (artistData != nil) {
+        NSArray *artistsArray = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:nil];
+        for (NSDictionary *favoriteArtistDictionary in artistsArray) {
+            KSIArtist *artists = [[KSIArtist alloc]initWithDict:favoriteArtistDictionary];
+            [self.internalArtists addObject:artists];
+        }
+    }
 }
 
 - (void)searchForArtists:(NSString *)name
@@ -81,17 +114,17 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
                                                                    options:0
                                                                      error:&jsonError];
         if (![dictionary isKindOfClass:[NSDictionary class]]) {
-             NSError *apiError = errorWithMessage(@"Invalid JSON dictionary", LSIAPIError);
-             NSLog(@"Error decoding results dictionary: %@", apiError);
-             completionHandler(nil, [[NSError alloc] init]);
-             return;
-         } else if (dictionary[@"artists"] != [NSNull null]) {
-             NSArray *artistDictionaries = dictionary[@"artists"];
-             NSDictionary *artistDictionary = artistDictionaries.firstObject;
-             KSIArtist *artist = [[KSIArtist alloc] initWithDictionary:artistDictionary];
-
-             completionHandler(artist, nil);
-         }
+            NSError *apiError = errorWithMessage(@"Invalid JSON dictionary", LSIAPIError);
+            NSLog(@"Error decoding results dictionary: %@", apiError);
+            completionHandler(nil, [[NSError alloc] init]);
+            return;
+        } else if (dictionary[@"artists"] != [NSNull null]) {
+            NSArray *artistDictionaries = dictionary[@"artists"];
+            NSDictionary *artistDictionary = artistDictionaries.firstObject;
+            KSIArtist *artist = [[KSIArtist alloc] initWithDictionary:artistDictionary];
+            
+            completionHandler(artist, nil);
+        }
     }] resume];
 }
 @end

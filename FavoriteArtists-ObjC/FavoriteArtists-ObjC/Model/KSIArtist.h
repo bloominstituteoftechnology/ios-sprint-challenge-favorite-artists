@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
+@property (nonatomic,readonly) NSDictionary *dictionaryValue;
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
 @property (nonatomic,readonly,copy) NSString *name;
 @property (nonatomic,readonly,copy) NSString *biography;
 @property (nonatomic,readonly) double yearArtistFormed;

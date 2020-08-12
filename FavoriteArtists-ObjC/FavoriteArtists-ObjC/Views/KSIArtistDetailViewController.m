@@ -31,7 +31,7 @@
 {
     self.title = [NSString localizedStringWithFormat:@"%@", self.ksiArtist.name];
     self.artistNameLabel.text = self.ksiArtist.name;
-    self.artistStartDateLabel.text = [NSString localizedStringWithFormat:@"Formed in %.0f", self.ksiArtist.yearArtistFormed];
+    self.artistStartDateLabel.text = [NSString stringWithFormat:@"Formed in %i", (int)self.ksiArtist.yearArtistFormed];
     self.artistBiographyLabel.text = self.ksiArtist.biography;
 }
 

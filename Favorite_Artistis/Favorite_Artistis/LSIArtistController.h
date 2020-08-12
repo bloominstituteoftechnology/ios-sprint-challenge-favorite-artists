@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^ArtistFetcherCompletionHandler)(NSError *error);
+typedef void(^ArtistFetcherCompletionHandler)(LSIArtist *newArtist, NSError *error);
 
 @class LSIArtist;
 

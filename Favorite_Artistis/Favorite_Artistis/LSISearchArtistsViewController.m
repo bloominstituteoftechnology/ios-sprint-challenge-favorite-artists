@@ -30,9 +30,13 @@
 {
     if (artist != _artist) {
         _artist = artist;
-        [self updateViews];
+             dispatch_async(dispatch_get_main_queue(), ^{
+              [self updateViews];
+          });
     } else {
-        [self clearViews];
+             dispatch_async(dispatch_get_main_queue(), ^{
+              [self clearViews];
+          });
     }
 }
 
@@ -55,7 +59,7 @@
 {
     [self.lsiArtistController addArtist:self.artist];
     [self.delegate sendControllerToTableView:_lsiArtistController];
-//    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 - (void)updateViews

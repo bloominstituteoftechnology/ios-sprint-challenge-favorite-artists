@@ -59,9 +59,10 @@
 {
     [self.lsiArtistController addArtist:self.artist];
     [self.delegate sendControllerToTableView:_lsiArtistController];
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    
+    self.lsiArtistController.artists;
+//    [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
 - (void)updateViews
 {
     self.artistLabel.text = self.artist.artistName;

@@ -88,6 +88,7 @@
     } else if ([segue.identifier isEqualToString:@"AddNewArtist"]){
         LSISearchArtistsViewController *destinationVC =
         segue.destinationViewController;
+        destinationVC.lsiArtistController = self.lsiArtistController;
         [destinationVC setDelegate:self];
     }
 }

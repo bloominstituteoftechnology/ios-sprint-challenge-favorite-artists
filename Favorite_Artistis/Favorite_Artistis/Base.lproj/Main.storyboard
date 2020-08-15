@@ -15,12 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JuT-T8-an4">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JuT-T8-an4">
                                 <rect key="frame" x="5" y="111" width="365" height="541"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="hc5-lU-KOb">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="xc9-9X-mpu"/>
+                                        </connections>
                                     </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-UO-Din">
                                         <rect key="frame" x="0.0" y="66" width="365" height="30"/>
@@ -64,8 +67,8 @@
                         <outlet property="artistBioLabel" destination="aRB-42-fyc" id="b3L-7V-bSG"/>
                         <outlet property="artistLabel" destination="ghf-UO-Din" id="KMt-m0-h3c"/>
                         <outlet property="artistSaveButton" destination="sNl-Wc-gc8" id="MhE-EN-ca7"/>
-                        <outlet property="artistSearchBar" destination="hc5-lU-KOb" id="6zS-tt-Ggx"/>
                         <outlet property="dateFormedLabel" destination="U0y-3I-QoK" id="rKi-U2-Gge"/>
+                        <outlet property="searchBar" destination="hc5-lU-KOb" id="SBQ-dq-oRK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,7 +108,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ArtistDetails" id="yGk-sB-ocm"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ToArtistDetails" id="yGk-sB-ocm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -146,6 +149,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yGk-sB-ocm"/>
+        <segue reference="R7P-Xz-jef"/>
     </inferredMetricsTieBreakers>
 </document>

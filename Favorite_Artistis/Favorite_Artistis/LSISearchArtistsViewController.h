@@ -7,20 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSIArtist.h"
 #import "LSIArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LSISearchArtistsViewController : UIViewController
+@interface LSISearchArtistsViewController : UIViewController <UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
-@property (weak, nonatomic) IBOutlet UISearchBar *artistSearchBar;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *dateFormedLabel;
 @property (weak, nonatomic) IBOutlet UITextView *artistBioLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *artistSaveButton;
 
-@property (nonatomic) LSIArtistController *lsiPersonController;
+@property (nonatomic, readwrite) LSIArtistController *lsiArtistController;
 
+@property (nonatomic) LSIArtist *artist;
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+
+- (void)updateViews;
+
+- (void)clearViews;
 
 @end
+
+//@protocol LSISearchArtistsViewControllerDelegate <NSObject>
+//
+//- (void)lsiSearchArtistsViewController:(LSISearchArtistsViewController *)lsiSearchArtistsViewController didGetUpdatedList:(id);
+//
+//@end
 
 NS_ASSUME_NONNULL_END

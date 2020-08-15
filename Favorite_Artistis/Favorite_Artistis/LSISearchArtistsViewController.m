@@ -7,12 +7,12 @@
 //
 
 #import "LSISearchArtistsViewController.h"
+#import "LSIArtistController.h"
 #import "LSIArtist.h"
 
-@interface LSISearchArtistsViewController ()
-
-
-
+@interface LSISearchArtistsViewController () {
+    
+}
 @end
 
 @implementation LSISearchArtistsViewController
@@ -21,22 +21,58 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-        _lsiPersonController = [[LSIArtistController alloc] init];
+        _lsiArtistController = [[LSIArtistController alloc] init];
     }
     return self;
 }
 
+- (void)setArtist:(LSIArtist *)artist
+{
+    if (artist != _artist) {
+        _artist = artist;
+        [self updateViews];
+    } else {
+        [self clearViews];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-        LSIArtist *artist = [LSIArtist new];
-        artist.artistName = @"Smashing Pumpkins";
-        NSLog(@"%@", artist);
+ 
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self.lsiArtistController searchForArtists:searchBar.text completion:^(LSIArtist *newArtist, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.artist = newArtist;
+            [self updateViews];
+        });
+    }];
 }
 
 - (IBAction)artistSaveButtonTapped:(id)sender
 {
-
+    [self.lsiArtistController addArtist:self.artist];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+- (void)updateViews
+{
+    self.artistLabel.text = self.artist.artistName;
+    self.artistBioLabel.text = self.artist.artistInfo;
+    self.dateFormedLabel.text = [NSString stringWithFormat:@"Date Formed: %@", self.artist.yearFormed];
+    self.navigationController.title = self.artist.artistName;
+    self.searchBar.text = @"";
 }
 
+- (void)clearViews
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.artistLabel.text = @"Add New Artist";
+        self.artistBioLabel.text = @"Artist Bio:";
+        self.dateFormedLabel.text = @"Date Formed:";
+    });
+}
 
 @end

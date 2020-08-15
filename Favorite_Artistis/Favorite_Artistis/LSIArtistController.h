@@ -8,18 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^ArtistFetcherCompletionHandler)(LSIArtist *newArtist, NSError *error);
-
 @class LSIArtist;
+
+typedef void(^ArtistFetcherCompletionHandler)(LSIArtist *newArtist, NSError *error);
 
 @interface LSIArtistController : NSObject
 
+@property (nonatomic, readwrite) LSIArtist *artist;
 @property (nonatomic, readonly, copy) NSArray<LSIArtist *> *artists;
 
-@property (nonatomic) NSUInteger artistCount;
+- (void)searchForArtists:(NSString *)searchItem completion:(ArtistFetcherCompletionHandler)completion;
 
 - (void)addArtist:(LSIArtist *)anArtist;
-
-- (LSIArtist *)artistAtIndex:(NSUInteger)index;
 
 @end

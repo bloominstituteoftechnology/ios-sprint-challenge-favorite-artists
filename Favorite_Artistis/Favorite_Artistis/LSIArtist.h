@@ -15,13 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: - Properties
 @property (nonatomic, copy) NSString *artistName;
 @property (nonatomic, copy) NSString *artistInfo;
-@property (nonatomic, copy) NSDate *yearFormed;
+@property (nonatomic, copy) NSString *yearFormed;
 
 // MARK: - Methods
 
 - (instancetype)initWithName:(NSString *)artistName
                   artistInfo:(NSString *)artistInfo
-                    yearFormed:(NSDate *)yearFormed;
+                    yearFormed:(NSString *)yearFormed;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

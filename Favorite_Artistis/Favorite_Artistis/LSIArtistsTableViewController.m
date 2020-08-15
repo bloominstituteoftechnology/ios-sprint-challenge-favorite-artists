@@ -7,41 +7,48 @@
 //
 
 #import "LSIArtistsTableViewController.h"
+#import "LSISearchArtistsViewController.h"
+#import "LSIArtist.h"
 
 @interface LSIArtistsTableViewController ()
+
+@property (nonatomic) NSString *artist;
 
 @end
 
 @implementation LSIArtistsTableViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _lsiArtistController = [[LSIArtistController alloc] init];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.tableView reloadData];
+        });
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.lsiArtistController.artists.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    LSIArtist *artist = self.lsiArtistController.artists[indexPath.row];
+    cell.textLabel.text = artist.artistName;
+    cell.detailTextLabel.text = @"";
     return cell;
 }
 
@@ -59,7 +66,12 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    if ([segue.identifier isEqualToString:@"ToArtistDetails"]) {
+        LSISearchArtistsViewController *destinationVC =
+        segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        destinationVC.artist = self.lsiArtistController.artists[indexPath.row];
+    }
 }
 
 

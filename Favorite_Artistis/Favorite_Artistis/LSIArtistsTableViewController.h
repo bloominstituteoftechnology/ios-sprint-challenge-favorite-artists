@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSIArtistController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIArtistsTableViewController : UITableViewController
 
-
+@property (nonatomic) LSIArtistController *lsiArtistController;
 
 @end
 

@@ -17,7 +17,6 @@
 		D79145C82482C5EB002C8A22 /* LSIArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79145C72482C5EB002C8A22 /* LSIArtistsTableViewController.m */; };
 		D79145CB2482D0FC002C8A22 /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = D79145CA2482D0FC002C8A22 /* LSIArtist.m */; };
 		D7C79D0424D744B60006655E /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C79D0324D744B60006655E /* LSIArtistController.m */; };
-		D7C79D0724D818BD0006655E /* LSIArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C79D0624D818BD0006655E /* LSIArtistFetcher.m */; };
 		D7C79D0B24D994670006655E /* LSIError.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C79D0A24D994670006655E /* LSIError.m */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +39,6 @@
 		D79145CA2482D0FC002C8A22 /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 		D7C79D0224D744B60006655E /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
 		D7C79D0324D744B60006655E /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
-		D7C79D0524D818BD0006655E /* LSIArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistFetcher.h; sourceTree = "<group>"; };
-		D7C79D0624D818BD0006655E /* LSIArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistFetcher.m; sourceTree = "<group>"; };
 		D7C79D0924D994670006655E /* LSIError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIError.h; sourceTree = "<group>"; };
 		D7C79D0A24D994670006655E /* LSIError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,8 +85,6 @@
 				D79145C72482C5EB002C8A22 /* LSIArtistsTableViewController.m */,
 				D79145C32482C5B8002C8A22 /* LSISearchArtistsViewController.h */,
 				D79145C42482C5B8002C8A22 /* LSISearchArtistsViewController.m */,
-				D7C79D0524D818BD0006655E /* LSIArtistFetcher.h */,
-				D7C79D0624D818BD0006655E /* LSIArtistFetcher.m */,
 				D79145B32482C544002C8A22 /* Main.storyboard */,
 				D79145B62482C549002C8A22 /* Assets.xcassets */,
 				D79145B82482C549002C8A22 /* LaunchScreen.storyboard */,
@@ -178,7 +173,6 @@
 				D79145BD2482C549002C8A22 /* main.m in Sources */,
 				D79145CB2482D0FC002C8A22 /* LSIArtist.m in Sources */,
 				D7C79D0B24D994670006655E /* LSIError.m in Sources */,
-				D7C79D0724D818BD0006655E /* LSIArtistFetcher.m in Sources */,
 				D79145C82482C5EB002C8A22 /* LSIArtistsTableViewController.m in Sources */,
 				D79145AF2482C544002C8A22 /* SceneDelegate.m in Sources */,
 			);
@@ -256,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -308,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -320,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WMWTV546RX;
 				INFOPLIST_FILE = Favorite_Artistis/Info.plist;
@@ -337,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WMWTV546RX;
 				INFOPLIST_FILE = Favorite_Artistis/Info.plist;

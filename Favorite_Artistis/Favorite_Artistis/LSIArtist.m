@@ -12,7 +12,7 @@
 // MARK: - Initializer for Artist Object
 - (instancetype)initWithName:(NSString *)artistName
                   artistInfo:(NSString *)artistInfo
-                  yearFormed:(NSDate *)yearFormed; {
+                  yearFormed:(NSString *)yearFormed; {
 
     if (self = [super init]) { // don't use == accidently! bug!
         // always use _propertyName (instance variable)
@@ -29,8 +29,8 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     NSString *artistName = dictionary[@"artistName"];
     NSString *artistInfo = dictionary[@"artistInfo"];
+    NSString *yearFormed = dictionary[@"intFormedYear"];
     
-    NSDate *yearFormed = [NSDate date];
     return[self initWithName:artistName artistInfo: artistInfo yearFormed:yearFormed];
 }
 

@@ -13,7 +13,7 @@
 static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
 
 @interface LSIArtistController () {
-    NSMutableArray *_internalArtists;
+    NSMutableArray<LSIArtist *> *_internalArtists;
     LSIArtist *_internalArtist;
 }
 @end
@@ -24,8 +24,9 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
 {
     self = [super init];
     if (self) {
-        _internalArtists = [[NSMutableArray alloc] init];
+        _internalArtists = [[NSMutableArray<LSIArtist *> alloc] init];
         [self artists];
+        _artists = _internalArtists;
         _internalArtist = [[LSIArtist alloc] init];
         [self artist];
     }
@@ -79,5 +80,6 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
 {
     [_internalArtists addObject:anArtist];
 }
+
 
 @end

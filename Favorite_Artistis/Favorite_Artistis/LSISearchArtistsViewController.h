@@ -12,6 +12,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol ArtistDelegate <NSObject>
+
+- (void)sendControllerToTableView:(LSIArtistController *)lsiArtistController;
+
+@end
+
 @interface LSISearchArtistsViewController : UIViewController <UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -20,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *artistSaveButton;
 
 @property (nonatomic, readwrite) LSIArtistController *lsiArtistController;
+@property (nonatomic, weak)id<ArtistDelegate>delegate;
 
 @property (nonatomic) LSIArtist *artist;
 
@@ -31,10 +38,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-//@protocol LSISearchArtistsViewControllerDelegate <NSObject>
-//
-//- (void)lsiSearchArtistsViewController:(LSISearchArtistsViewController *)lsiSearchArtistsViewController didGetUpdatedList:(id);
-//
-//@end
+
 
 NS_ASSUME_NONNULL_END

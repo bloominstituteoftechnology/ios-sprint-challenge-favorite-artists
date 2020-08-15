@@ -22,3 +22,4 @@ typedef void(^ArtistFetcherCompletionHandler)(LSIArtist *newArtist, NSError *err
 - (void)addArtist:(LSIArtist *)anArtist;
 
 @end
+

@@ -54,7 +54,8 @@
 - (IBAction)artistSaveButtonTapped:(id)sender
 {
     [self.lsiArtistController addArtist:self.artist];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.delegate sendControllerToTableView:_lsiArtistController];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 - (void)updateViews
@@ -73,6 +74,11 @@
         self.artistBioLabel.text = @"Artist Bio:";
         self.dateFormedLabel.text = @"Date Formed:";
     });
+}
+
+- (void)saveController
+{
+    [self.delegate sendControllerToTableView:self.lsiArtistController];
 }
 
 @end

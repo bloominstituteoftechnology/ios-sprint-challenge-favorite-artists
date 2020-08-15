@@ -10,19 +10,20 @@
 #import "LSISearchArtistsViewController.h"
 #import "LSIArtist.h"
 
-@interface LSIArtistsTableViewController ()
+@interface LSIArtistsTableViewController () {
 
-@property (nonatomic) NSString *artist;
-
+    NSString *artist;
+}
 @end
 
 @implementation LSIArtistsTableViewController
 
-- (instancetype)init
+- (instancetype)initWithCoder:(NSCoder *)coder
 {
-    self = [super init];
+    self = [super initWithCoder:coder];
     if (self) {
         _lsiArtistController = [[LSIArtistController alloc] init];
+        
     }
     return self;
 }
@@ -34,6 +35,19 @@
             [self.tableView reloadData];
         });
     
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+   
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+}
+
+- (void) sendControllerToTableView:(LSIArtistController *)lsiArtistController
+{
+    self.lsiArtistController = lsiArtistController;
 }
 
 #pragma mark - Table view data source
@@ -71,6 +85,10 @@
         segue.destinationViewController;
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         destinationVC.artist = self.lsiArtistController.artists[indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"AddNewArtist"]){
+        LSISearchArtistsViewController *destinationVC =
+        segue.destinationViewController;
+        [destinationVC setDelegate:self];
     }
 }
 

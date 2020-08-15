@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextView *artistBioLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *artistSaveButton;
 
+@property (nonatomic) NSFileManager *manager;
+
+- (NSString *)fileSavePath;
 @property (nonatomic, readwrite) LSIArtistController *lsiArtistController;
 @property (nonatomic, weak)id<ArtistDelegate>delegate;
 
@@ -35,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updateViews;
 
 - (void)clearViews;
+
+
 
 @end
 

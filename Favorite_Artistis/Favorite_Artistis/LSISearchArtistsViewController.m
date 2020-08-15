@@ -22,6 +22,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         _lsiArtistController = [[LSIArtistController alloc] init];
+        _manager = [[NSFileManager alloc] init];
     }
     return self;
 }
@@ -42,7 +43,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
+    
+}
+
+- (NSString *)fileSavePath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentFolder = [paths objectAtIndex:0];
+    NSLog(@"%@", paths);
+    return [documentFolder stringByAppendingFormat:@"saveFile.plist"];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -59,8 +68,16 @@
 {
     [self.lsiArtistController addArtist:self.artist];
     [self.delegate sendControllerToTableView:_lsiArtistController];
-    self.lsiArtistController.artists;
-//    [self.navigationController popToRootViewControllerAnimated:YES];
+    NSDictionary *savedArtists = [[NSMutableDictionary alloc]init];
+    for (_artist in self.lsiArtistController.artists) {
+        NSDictionary* artistDictionary = [self.lsiArtistController toDictionary: _artist];
+        NSString* artistName = [artistDictionary valueForKey:@"strArtist"];
+        [savedArtists setValue:artistDictionary forKey:artistName];
+        
+    }
+
+    [savedArtists writeToFile:self.fileSavePath atomically:YES];
+    
 }
 
 - (void)updateViews
@@ -85,5 +102,7 @@
 {
     [self.delegate sendControllerToTableView:self.lsiArtistController];
 }
+
+
 
 @end

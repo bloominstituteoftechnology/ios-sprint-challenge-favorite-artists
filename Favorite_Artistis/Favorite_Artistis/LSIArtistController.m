@@ -38,7 +38,6 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     searchItem = [searchItem stringByReplacingOccurrencesOfString:@" " withString:@"_"];
     NSString *searchURL = [ArtistFetcherBaseURLString stringByAppendingString: searchItem];
     NSURL *baseURL = [NSURL URLWithString:searchURL];
-    NSLog(@"baseURL");
     
     NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession dataTaskWithURL:baseURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
@@ -64,11 +63,13 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
         
         for (NSDictionary *dictionary in fetchedData) {
             LSIArtist *myArtist = [[LSIArtist alloc] initWithDictionary:dictionary];
+            
             myArtist.artistName = dictionary[@"strArtist"];
             myArtist.artistInfo = dictionary[@"strBiographyEN"];
             myArtist.yearFormed = dictionary[@"intFormedYear"];
             
             newArtist = myArtist;
+            
         }
         
         completion(newArtist, nil);
@@ -79,6 +80,16 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
 - (void)addArtist:(LSIArtist *)anArtist
 {
     [_internalArtists addObject:anArtist];
+}
+
+- (NSDictionary *)toDictionary:(LSIArtist *)inputtedArtist
+{
+    NSMutableDictionary *artistsInDict = [[NSMutableDictionary alloc] init];
+    
+    [artistsInDict setValue:inputtedArtist.artistName forKey:@"strArtist"];
+    [artistsInDict setValue:inputtedArtist.artistInfo forKey:@"strBiographyEN"];
+    [artistsInDict setValue:inputtedArtist.yearFormed forKey:@"intFormedYear"];
+    return artistsInDict;
 }
 
 

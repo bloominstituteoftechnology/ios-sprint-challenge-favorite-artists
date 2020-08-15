@@ -17,9 +17,12 @@ typedef void(^ArtistFetcherCompletionHandler)(LSIArtist *newArtist, NSError *err
 @property (nonatomic, readwrite) LSIArtist *artist;
 @property (nonatomic, readonly, copy) NSArray<LSIArtist *> *artists;
 
+
 - (void)searchForArtists:(NSString *)searchItem completion:(ArtistFetcherCompletionHandler)completion;
 
 - (void)addArtist:(LSIArtist *)anArtist;
+
+- (NSDictionary *)toDictionary:(LSIArtist *)artist;
 
 @end
 

@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) LSIArtistController *lsiArtistController;
 
+@property (nonatomic) NSFileManager *manager;
+
+- (NSString *)fileSavePath;
+
 @end
 
 NS_ASSUME_NONNULL_END

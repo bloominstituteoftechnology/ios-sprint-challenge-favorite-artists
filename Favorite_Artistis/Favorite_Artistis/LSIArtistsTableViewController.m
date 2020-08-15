@@ -29,13 +29,24 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+       [super viewDidLoad];
+    NSString *filePath = [self fileSavePath];
+    if ([[NSFileManager defaultManager]fileExistsAtPath:filePath]) {
+        NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
+    }
         dispatch_async(dispatch_get_main_queue(), ^{
             
             [self.tableView reloadData];
         });
     
     
+}
+
+- (NSString *)fileSavePath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentFolder = [paths objectAtIndex:0];
+    return [documentFolder stringByAppendingFormat:@"saveFile.plist"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

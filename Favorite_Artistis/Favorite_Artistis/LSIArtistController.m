@@ -41,7 +41,12 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     
     NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession dataTaskWithURL:baseURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
+        if (response) {
+            NSLog(@"There was a reponse: %@", response);
+        }
+        
         if (error) {
+            NSLog(@"There was an error: %@", error);
             completion(nil, error);
             return;
         }
@@ -49,6 +54,8 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
         NSError *jsonError = nil;
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         if (jsonError) {
+            NSLog(@"There was an Error");
+        
             completion(nil, error);
             return;
         }
@@ -59,19 +66,16 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
         }
         
         NSArray *fetchedData = json[@"artists"];
+        NSString *nullCheck = [json valueForKey:@"artists"];
         LSIArtist *newArtist = [[LSIArtist alloc] init];
-        
-        for (NSDictionary *dictionary in fetchedData) {
-            LSIArtist *myArtist = [[LSIArtist alloc] initWithDictionary:dictionary];
-            
-//            myArtist.artistName = dictionary[@"strArtist"];
-//            myArtist.artistInfo = dictionary[@"strBiographyEN"];
-//            myArtist.yearFormed = dictionary[@"intFormedYear"];
-            
-            newArtist = myArtist;
-            
+        if (nullCheck == (id)[NSNull null]) {
+           return;
         }
-        
+        for (NSDictionary *dictionary in fetchedData) {
+                       LSIArtist *myArtist = [[LSIArtist alloc] initWithDictionary:dictionary];
+                       newArtist = myArtist;
+                       
+                   }
         completion(newArtist, nil);
     }];
     [dataTask resume];

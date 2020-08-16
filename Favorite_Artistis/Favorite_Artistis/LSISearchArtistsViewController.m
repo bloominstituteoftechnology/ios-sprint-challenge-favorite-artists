@@ -50,7 +50,6 @@
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentFolder = [paths objectAtIndex:0];
-    NSLog(@"%@", paths);
     return [documentFolder stringByAppendingFormat:@"saveFile.plist"];
 }
 

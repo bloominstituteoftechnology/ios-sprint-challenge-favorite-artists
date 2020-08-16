@@ -92,5 +92,15 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
     return artistsInDict;
 }
 
+- (void)fromDictionary:(NSDictionary<NSString *, NSDictionary *> *)artistsFromFile
+{
+    for (NSDictionary *artist in artistsFromFile) {
+        NSArray *artistArray = artist.allValues;
+        for (NSDictionary *artist in artistArray) {
+            LSIArtist *myArtist = [[LSIArtist alloc] initWithDictionary:artist];
+             [_internalArtists addObject:myArtist];
+        }
+    }
+}
 
 @end

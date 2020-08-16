@@ -24,5 +24,7 @@ typedef void(^ArtistFetcherCompletionHandler)(LSIArtist *newArtist, NSError *err
 
 - (NSDictionary *)toDictionary:(LSIArtist *)artist;
 
+- (void)fromDictionary:(NSDictionary<NSString *, NSDictionary *> *)artistsFromFile;
+
 @end
 

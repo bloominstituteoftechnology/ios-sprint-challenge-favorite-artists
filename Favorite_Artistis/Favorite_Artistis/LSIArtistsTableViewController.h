@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)fileSavePath;
 
+- (void)loadPersistedData;
+
 @end
 
 NS_ASSUME_NONNULL_END

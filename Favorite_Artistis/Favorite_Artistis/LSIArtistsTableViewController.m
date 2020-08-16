@@ -11,7 +11,7 @@
 #import "LSIArtist.h"
 
 @interface LSIArtistsTableViewController () {
-
+    
     NSString *artist;
 }
 @end
@@ -29,15 +29,12 @@
 }
 
 - (void)viewDidLoad {
-       [super viewDidLoad];
-    NSString *filePath = [self fileSavePath];
-    if ([[NSFileManager defaultManager]fileExistsAtPath:filePath]) {
-        NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
-    }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            [self.tableView reloadData];
-        });
+    [super viewDidLoad];
+    [self.loadPersistedData];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+       [self.tableView reloadData];
+    });
     
     
 }
@@ -50,10 +47,21 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-   
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+}
+
+- (void)loadPersistedData
+{
+    NSURL *filePathSaveURL = [NSURL URLWithString:self.fileSavePath];
+    NSString *filePath = [self fileSavePath];
+    
+    if ([[NSFileManager defaultManager]fileExistsAtPath:filePath]) {
+        NSDictionary *loadedArtists = [[NSDictionary alloc] initWithContentsOfURL:filePathSaveURL];
+        [self.lsiArtistController fromDictionary:loadedArtists];
+    }
 }
 
 - (void) sendControllerToTableView:(LSIArtistController *)lsiArtistController
@@ -84,7 +92,7 @@
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
 #pragma mark - Navigation

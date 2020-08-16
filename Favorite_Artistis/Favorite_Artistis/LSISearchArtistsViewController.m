@@ -31,13 +31,13 @@
 {
     if (artist != _artist) {
         _artist = artist;
-             dispatch_async(dispatch_get_main_queue(), ^{
-              [self updateViews];
-          });
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateViews];
+        });
     } else {
-             dispatch_async(dispatch_get_main_queue(), ^{
-              [self clearViews];
-          });
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self clearViews];
+        });
     }
 }
 
@@ -59,6 +59,7 @@
     [self.lsiArtistController searchForArtists:searchBar.text completion:^(LSIArtist *newArtist, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.artist = newArtist;
+            
             [self updateViews];
         });
     }];
@@ -69,13 +70,13 @@
     [self.lsiArtistController addArtist:self.artist];
     [self.delegate sendControllerToTableView:_lsiArtistController];
     NSDictionary *savedArtists = [[NSMutableDictionary alloc]init];
-    for (_artist in self.lsiArtistController.artists) {
-        NSDictionary* artistDictionary = [self.lsiArtistController toDictionary: _artist];
+    for (LSIArtist *artist in _lsiArtistController.artists) {
+        NSDictionary* artistDictionary = [self.lsiArtistController toDictionary: artist];
         NSString* artistName = [artistDictionary valueForKey:@"strArtist"];
         [savedArtists setValue:artistDictionary forKey:artistName];
         
     }
-
+    
     [savedArtists writeToFile:self.fileSavePath atomically:YES];
     
 }

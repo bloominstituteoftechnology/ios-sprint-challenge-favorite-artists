@@ -30,20 +30,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.loadPersistedData];
-    
+    self.loadPersistedData;
     dispatch_async(dispatch_get_main_queue(), ^{
-       [self.tableView reloadData];
+        [self.tableView reloadData];
     });
     
-    
-}
-
-- (NSString *)fileSavePath
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentFolder = [paths objectAtIndex:0];
-    return [documentFolder stringByAppendingFormat:@"saveFile.plist"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -53,13 +44,20 @@
     });
 }
 
+- (NSString *)fileSavePath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentFolder = [paths objectAtIndex:0];
+    return [documentFolder stringByAppendingFormat:@"saveFile.plist"];
+}
+
 - (void)loadPersistedData
 {
     NSURL *filePathSaveURL = [NSURL URLWithString:self.fileSavePath];
     NSString *filePath = [self fileSavePath];
     
     if ([[NSFileManager defaultManager]fileExistsAtPath:filePath]) {
-        NSDictionary *loadedArtists = [[NSDictionary alloc] initWithContentsOfURL:filePathSaveURL];
+        NSDictionary *loadedArtists = [[NSDictionary alloc] initWithContentsOfFile:filePath];
         [self.lsiArtistController fromDictionary:loadedArtists];
     }
 }

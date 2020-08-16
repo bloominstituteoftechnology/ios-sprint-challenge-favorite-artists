@@ -64,9 +64,9 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
         for (NSDictionary *dictionary in fetchedData) {
             LSIArtist *myArtist = [[LSIArtist alloc] initWithDictionary:dictionary];
             
-            myArtist.artistName = dictionary[@"strArtist"];
-            myArtist.artistInfo = dictionary[@"strBiographyEN"];
-            myArtist.yearFormed = dictionary[@"intFormedYear"];
+//            myArtist.artistName = dictionary[@"strArtist"];
+//            myArtist.artistInfo = dictionary[@"strBiographyEN"];
+//            myArtist.yearFormed = dictionary[@"intFormedYear"];
             
             newArtist = myArtist;
             
@@ -94,12 +94,10 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
 
 - (void)fromDictionary:(NSDictionary<NSString *, NSDictionary *> *)artistsFromFile
 {
-    for (NSDictionary *artist in artistsFromFile) {
-        NSArray *artistArray = artist.allValues;
-        for (NSDictionary *artist in artistArray) {
-            LSIArtist *myArtist = [[LSIArtist alloc] initWithDictionary:artist];
-             [_internalArtists addObject:myArtist];
-        }
+    for (NSDictionary *artists in artistsFromFile.allValues) {
+      
+            LSIArtist *artist = [[LSIArtist alloc] initWithDictionary:artists];
+             [_internalArtists addObject:artist];
     }
 }
 

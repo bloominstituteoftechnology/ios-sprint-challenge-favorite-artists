@@ -31,16 +31,34 @@
 
     self.fetchArtist = [[JSKFetchArtistController alloc] init];
     self.artistSearchBar.delegate = self;
+    [self updateViews];
 
 }
 
 - (void)updateViews
 {
+    if (self.artist != nil) {
+        self.artistNameLabel.text = self.artist.artistName;
+        self.artistBioTextView.text = self.artist.artistBio;
 
+        if (self.artist.yearFormed !=0) {
+            NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %@", self.artist.yearFormed];
+            self.yearFormedLabel.text = yearFormedString;
+        } else {
+            self.yearFormedLabel.text = @"Year Not Known";
+        }
+    } else {
+        self.artistNameLabel.text = nil;
+        self.artistBioTextView.text = nil;
+        self.yearFormedLabel.text = nil;
+    }
 }
 
-- (IBAction)saveArtist:(UIBarButtonItem *)sender {
-
+- (IBAction)saveArtist:(UIBarButtonItem *)sender
+{
+    if (self.artist == nil) return;
+    [self.persistance addArtist:self.artist];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
@@ -57,11 +75,11 @@
         NSLog(@"Found %ld results!", artist.count);
 
         if (artist.count > 0) {
-            self. = artist[0];
+            self.artist = artist[0];
         }
 
+        [self updateViews];
     }];
-    
 }
 
 @end

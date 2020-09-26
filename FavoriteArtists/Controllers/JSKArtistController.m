@@ -25,8 +25,8 @@
     return self;
 }
 
-- (void)addArtist:(NSString *)artistName artistBio:(NSString *)aArtistBio yearFormed:(int)aYearFormed {
-    JSKArtist *artist = [[JSKArtist alloc] initWithArtistName:artistName artistBio:aArtistBio yearFormed:aYearFormed];
+- (void)addArtist:(JSKArtist *)artist {
+
     [self.internalArtist addObject:artist];
     [self saveArtist];
 }

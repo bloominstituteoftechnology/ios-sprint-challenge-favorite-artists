@@ -7,12 +7,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class JSKArtist;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JSKArtistController : NSObject
 
+@property (nonatomic, readonly, copy) NSArray<JSKArtist *> *artists;
+
 - (NSArray *)loadArtist;
-- (void)addArtist:(NSString *)artistName artistBio:(NSString *)aArtistBio yearFormed:(int)aYearFormed;
+- (void)addArtist:(JSKArtist *)artist;
 
 @end
 

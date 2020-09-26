@@ -10,19 +10,19 @@
 #import "JSKArtistController.h"
 #import "JSKAddArtistViewController.h"
 #import "JSKArtistDetailViewController.h"
+#import "JSKArtist+NSJSONSerialization.h"
 
 @interface JSKArtistTableViewController ()
-{
-    NSArray *artists;
-}
+
+@property (nonatomic, readonly) JSKArtistController *artistController;
+
 @end
 
 @implementation JSKArtistTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    artists = @[];
+    [self.artistController loadArtist];
 }
 
 #pragma mark - Table view data source
@@ -33,14 +33,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return artists.count;
+    return self.artistController.artists.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
 
-    cell.textLabel.text = artists[indexPath.row];
-    cell.detailTextLabel.text = artists[indexPath.item];
+    JSKArtist *artist = [self.artistController.artists objectAtIndex:indexPath.row];
+    cell.textLabel.text = artist.artistName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %@", artist.yearFormed];
     
     return cell;
 }
@@ -71,8 +72,11 @@
     if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
         NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
         JSKAddArtistViewController *addVC = segue.destinationViewController;
+        addVC.artist = self.artistController.artists[indexPath.row];
+        addVC.artistController = self.artistController;
     } else if ([segue.identifier isEqualToString:@"ArtistDetailSegue"]) {
         JSKArtistDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.artistController = self.artistController;
     }
 }
 

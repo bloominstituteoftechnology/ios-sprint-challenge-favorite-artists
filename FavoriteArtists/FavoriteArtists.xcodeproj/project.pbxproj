@@ -16,6 +16,7 @@
 		0B540E20251ECA300059773B /* FavoriteArtistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B540E1F251ECA300059773B /* FavoriteArtistsTests.m */; };
 		0B540E2B251ECA300059773B /* FavoriteArtistsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B540E2A251ECA300059773B /* FavoriteArtistsUITests.m */; };
 		0B540E43251ECE560059773B /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B540E42251ECE560059773B /* Artist.m */; };
+		0B540E49251ED51F0059773B /* Artist+JSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B540E48251ED51E0059773B /* Artist+JSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		0B540E2C251ECA300059773B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B540E41251ECE560059773B /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
 		0B540E42251ECE560059773B /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		0B540E47251ED51E0059773B /* Artist+JSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artist+JSONSerialization.h"; sourceTree = "<group>"; };
+		0B540E48251ED51E0059773B /* Artist+JSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+JSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				0B540E15251ECA2F0059773B /* main.m */,
 				0B540E41251ECE560059773B /* Artist.h */,
 				0B540E42251ECE560059773B /* Artist.m */,
+				0B540E47251ED51E0059773B /* Artist+JSONSerialization.h */,
+				0B540E48251ED51E0059773B /* Artist+JSONSerialization.m */,
 				0B540E0C251ECA2E0059773B /* Main.storyboard */,
 				0B540E11251ECA2F0059773B /* LaunchScreen.storyboard */,
 				0B540E0F251ECA2F0059773B /* Assets.xcassets */,
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B540E05251ECA2D0059773B /* AppDelegate.m in Sources */,
+				0B540E49251ED51F0059773B /* Artist+JSONSerialization.m in Sources */,
 				0B540E16251ECA2F0059773B /* main.m in Sources */,
 				0B540E43251ECE560059773B /* Artist.m in Sources */,
 				0B540E08251ECA2D0059773B /* SceneDelegate.m in Sources */,

@@ -6,7 +6,12 @@
 //
 
 #import "ArtistFetcher.h"
+#import "Artist.h"
+
 
 @implementation ArtistFetcher
+
+
+
 
 @end

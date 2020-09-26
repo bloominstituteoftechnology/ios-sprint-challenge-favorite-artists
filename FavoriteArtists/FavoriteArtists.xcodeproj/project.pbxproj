@@ -15,6 +15,7 @@
 		0B540E16251ECA2F0059773B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B540E15251ECA2F0059773B /* main.m */; };
 		0B540E20251ECA300059773B /* FavoriteArtistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B540E1F251ECA300059773B /* FavoriteArtistsTests.m */; };
 		0B540E2B251ECA300059773B /* FavoriteArtistsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B540E2A251ECA300059773B /* FavoriteArtistsUITests.m */; };
+		0B540E43251ECE560059773B /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B540E42251ECE560059773B /* Artist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		0B540E26251ECA300059773B /* FavoriteArtistsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavoriteArtistsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B540E2A251ECA300059773B /* FavoriteArtistsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsUITests.m; sourceTree = "<group>"; };
 		0B540E2C251ECA300059773B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B540E41251ECE560059773B /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		0B540E42251ECE560059773B /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +108,13 @@
 				0B540E04251ECA2D0059773B /* AppDelegate.m */,
 				0B540E06251ECA2D0059773B /* SceneDelegate.h */,
 				0B540E07251ECA2D0059773B /* SceneDelegate.m */,
-				0B540E0C251ECA2E0059773B /* Main.storyboard */,
-				0B540E0F251ECA2F0059773B /* Assets.xcassets */,
-				0B540E11251ECA2F0059773B /* LaunchScreen.storyboard */,
-				0B540E14251ECA2F0059773B /* Info.plist */,
 				0B540E15251ECA2F0059773B /* main.m */,
+				0B540E41251ECE560059773B /* Artist.h */,
+				0B540E42251ECE560059773B /* Artist.m */,
+				0B540E0C251ECA2E0059773B /* Main.storyboard */,
+				0B540E11251ECA2F0059773B /* LaunchScreen.storyboard */,
+				0B540E0F251ECA2F0059773B /* Assets.xcassets */,
+				0B540E14251ECA2F0059773B /* Info.plist */,
 			);
 			path = FavoriteArtists;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			files = (
 				0B540E05251ECA2D0059773B /* AppDelegate.m in Sources */,
 				0B540E16251ECA2F0059773B /* main.m in Sources */,
+				0B540E43251ECE560059773B /* Artist.m in Sources */,
 				0B540E08251ECA2D0059773B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

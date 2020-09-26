@@ -6,8 +6,20 @@
 //
 
 #import "SearchDetailViewController.h"
+#import "Artist.h"
+#import "ArtistFetcher.h"
+#import "ArtistPersistenceController.h"
 
 @interface SearchDetailViewController ()
+
+@property ArtistFetcher *artistFetcher;
+
+
+@property (nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (nonatomic) IBOutlet UILabel *bandLabel;
+@property (nonatomic) IBOutlet UILabel *yearLabel;
+@property (nonatomic) IBOutlet UITextView *bioTextView;
 
 @end
 
@@ -15,17 +27,65 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.artistFetcher = [[ArtistFetcher alloc] init];
+    
+    self.searchBar.delegate = self;
+    
+    if (self.isShowingFavoriteArtistDetail) {
+        [self.searchBar removeFromSuperview];
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)saveButtonTapped:(id)sender
+{
+    if (self.artist == nil) return ;
+    [self.persistenceController addArtist:self.artist];
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+
+- (void)updateViews
+{
+    if (self.artist != nil) {
+        self.bandLabel.text = self.artist.artistName;
+        self.bioTextView.text = self.artist.artistBio;
+        
+        if (self.artist.yearFormed != 0) {
+            NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %d", self.artist.yearFormed];
+            self.yearLabel.text = yearFormedString;
+        } else {
+            self.yearLabel.text = @"Unknown Label";
+        }
+    } else {
+        self.bandLabel.text = nil;
+        self.bioTextView.text = nil;
+        self.yearLabel.text = nil;
+    }
+}
+
+@end
+
+@implementation SearchDetailViewController(UISearchBarDelegate)
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSString *searchTerm = searchBar.text;
+    if ((searchTerm == nil) | [searchTerm isEqualToString:@""]) return;
+    
+    NSLog(@"Searching for %@", searchTerm);
+    
+    [self.artistFetcher fetchArtistWithName:searchTerm completionHandler:^(NSArray * _Nullable artists, NSError * _Nullable error)
+    {
+        NSLog(@"Found %ld results!", artists.count);
+        
+        if (artists.count > 0) {
+            self.artist = artists[0];
+        }
+        
+        [self updateViews];
+    }];
+}
 
 @end

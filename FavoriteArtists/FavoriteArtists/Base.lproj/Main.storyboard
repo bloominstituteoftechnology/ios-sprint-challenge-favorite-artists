@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="qaQ-Yn-pvp" detailTextLabel="PSb-zL-Shg" style="IBUITableViewCellStyleSubtitle" id="pzU-In-efO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="qaQ-Yn-pvp" detailTextLabel="PSb-zL-Shg" style="IBUITableViewCellStyleSubtitle" id="pzU-In-efO">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pzU-In-efO" id="OT6-fT-1HP">
@@ -40,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="XMU-CC-SzR" kind="show" identifier="ArtistDetailSegue" id="eLE-By-R2m"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,7 +54,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="0fJ-jx-XJm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wxN-EX-0Mo">
                             <connections>
-                                <segue destination="XMU-CC-SzR" kind="show" id="qyn-B0-7dX"/>
+                                <segue destination="XMU-CC-SzR" kind="show" identifier="AddArtistSegue" id="qyn-B0-7dX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -154,6 +157,9 @@
             <point key="canvasLocation" x="-362" y="76"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eLE-By-R2m"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

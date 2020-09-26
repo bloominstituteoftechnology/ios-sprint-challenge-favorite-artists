@@ -11,7 +11,7 @@
         <!--Favorite Artists-->
         <scene sceneID="c4c-st-a5z">
             <objects>
-                <tableViewController id="KXw-zO-1nK" sceneMemberID="viewController">
+                <tableViewController id="KXw-zO-1nK" customClass="FavoriteArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VqE-ds-8z7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="331.8840579710145" y="75.669642857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Detail View Controller-->
         <scene sceneID="1Mg-kw-xqs">
             <objects>
-                <viewController id="teO-n4-0jC" sceneMemberID="viewController">
+                <viewController id="teO-n4-0jC" customClass="SearchDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TeH-uZ-kvy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

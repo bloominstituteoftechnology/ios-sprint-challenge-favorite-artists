@@ -15,14 +15,12 @@
 		680A6A8F2520D46C00357060 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6A8E2520D46C00357060 /* main.m */; };
 		680A6A992520D46C00357060 /* FavoriteArtistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6A982520D46C00357060 /* FavoriteArtistsTests.m */; };
 		680A6AA42520D46C00357060 /* FavoriteArtistsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6AA32520D46C00357060 /* FavoriteArtistsUITests.m */; };
-		680A6AC12520D77800357060 /* LSIAddNewArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6AC02520D77800357060 /* LSIAddNewArtistViewController.m */; };
-		680A6AC82520D79000357060 /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6AC62520D79000357060 /* LSIArtistDetailViewController.m */; };
-		680A6AC92520D79000357060 /* LSIArtistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680A6AC72520D79000357060 /* LSIArtistDetailViewController.xib */; };
-		680A6AD02520D7F100357060 /* LSIFavoriteArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6ACE2520D7F100357060 /* LSIFavoriteArtistsViewController.m */; };
-		680A6AD12520D7F100357060 /* LSIFavoriteArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680A6ACF2520D7F100357060 /* LSIFavoriteArtistsViewController.xib */; };
-		680A6AE22520D9A000357060 /* Artist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6AE12520D9A000357060 /* Artist+NSJSONSerialization.m */; };
-		680A6AE82520D9F400357060 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6AE72520D9F400357060 /* Artist.m */; };
-		680A6AEF2520DBC400357060 /* ArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6AEE2520DBC400357060 /* ArtistController.m */; };
+		680A6AE82520D9F400357060 /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6AE72520D9F400357060 /* LSIArtist.m */; };
+		680A6AEF2520DBC400357060 /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6AEE2520DBC400357060 /* LSIArtistController.m */; };
+		680A6AF62520E0DF00357060 /* LSIArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6AF52520E0DF00357060 /* LSIArtistResults.m */; };
+		680A6B022520E41C00357060 /* LSIArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6B012520E41C00357060 /* LSIArtistFetcher.m */; };
+		680A6B172520E77A00357060 /* LSIFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6B162520E77A00357060 /* LSIFavoriteArtistsTableViewController.m */; };
+		680A6B232520E82800357060 /* LSIArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6B222520E82800357060 /* LSIArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,20 +57,18 @@
 		680A6A9F2520D46C00357060 /* FavoriteArtistsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavoriteArtistsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		680A6AA32520D46C00357060 /* FavoriteArtistsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsUITests.m; sourceTree = "<group>"; };
 		680A6AA52520D46C00357060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		680A6ABF2520D77800357060 /* LSIAddNewArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIAddNewArtistViewController.h; sourceTree = "<group>"; };
-		680A6AC02520D77800357060 /* LSIAddNewArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIAddNewArtistViewController.m; sourceTree = "<group>"; };
-		680A6AC52520D79000357060 /* LSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistDetailViewController.h; sourceTree = "<group>"; };
-		680A6AC62520D79000357060 /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
-		680A6AC72520D79000357060 /* LSIArtistDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSIArtistDetailViewController.xib; sourceTree = "<group>"; };
-		680A6ACD2520D7F100357060 /* LSIFavoriteArtistsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFavoriteArtistsViewController.h; sourceTree = "<group>"; };
-		680A6ACE2520D7F100357060 /* LSIFavoriteArtistsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIFavoriteArtistsViewController.m; sourceTree = "<group>"; };
-		680A6ACF2520D7F100357060 /* LSIFavoriteArtistsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSIFavoriteArtistsViewController.xib; sourceTree = "<group>"; };
-		680A6AE02520D9A000357060 /* Artist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artist+NSJSONSerialization.h"; sourceTree = "<group>"; };
-		680A6AE12520D9A000357060 /* Artist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Artist+NSJSONSerialization.m"; sourceTree = "<group>"; };
-		680A6AE62520D9F400357060 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
-		680A6AE72520D9F400357060 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
-		680A6AED2520DBC400357060 /* ArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistController.h; sourceTree = "<group>"; };
-		680A6AEE2520DBC400357060 /* ArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistController.m; sourceTree = "<group>"; };
+		680A6AE62520D9F400357060 /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
+		680A6AE72520D9F400357060 /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
+		680A6AED2520DBC400357060 /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
+		680A6AEE2520DBC400357060 /* LSIArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistController.m; sourceTree = "<group>"; };
+		680A6AF42520E0DF00357060 /* LSIArtistResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistResults.h; sourceTree = "<group>"; };
+		680A6AF52520E0DF00357060 /* LSIArtistResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistResults.m; sourceTree = "<group>"; };
+		680A6B002520E41C00357060 /* LSIArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistFetcher.h; sourceTree = "<group>"; };
+		680A6B012520E41C00357060 /* LSIArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistFetcher.m; sourceTree = "<group>"; };
+		680A6B152520E77A00357060 /* LSIFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		680A6B162520E77A00357060 /* LSIFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		680A6B212520E82800357060 /* LSIArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistDetailViewController.h; sourceTree = "<group>"; };
+		680A6B222520E82800357060 /* LSIArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +127,6 @@
 				680A6A852520D46800357060 /* Main.storyboard */,
 				680A6A8E2520D46C00357060 /* main.m */,
 				680A6A8D2520D46B00357060 /* Info.plist */,
-				680A6AB82520D4BB00357060 /* Helpers */,
 				680A6AB42520D49300357060 /* Resources */,
 			);
 			path = FavoriteArtists;
@@ -171,6 +166,10 @@
 		680A6AB52520D4A900357060 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				680A6B152520E77A00357060 /* LSIFavoriteArtistsTableViewController.h */,
+				680A6B162520E77A00357060 /* LSIFavoriteArtistsTableViewController.m */,
+				680A6B212520E82800357060 /* LSIArtistDetailViewController.h */,
+				680A6B222520E82800357060 /* LSIArtistDetailViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -178,14 +177,6 @@
 		680A6AB62520D4B300357060 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				680A6ABF2520D77800357060 /* LSIAddNewArtistViewController.h */,
-				680A6AC02520D77800357060 /* LSIAddNewArtistViewController.m */,
-				680A6AC52520D79000357060 /* LSIArtistDetailViewController.h */,
-				680A6AC62520D79000357060 /* LSIArtistDetailViewController.m */,
-				680A6AC72520D79000357060 /* LSIArtistDetailViewController.xib */,
-				680A6ACD2520D7F100357060 /* LSIFavoriteArtistsViewController.h */,
-				680A6ACE2520D7F100357060 /* LSIFavoriteArtistsViewController.m */,
-				680A6ACF2520D7F100357060 /* LSIFavoriteArtistsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,26 +184,17 @@
 		680A6AB72520D4B700357060 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				680A6AE62520D9F400357060 /* Artist.h */,
-				680A6AE72520D9F400357060 /* Artist.m */,
+				680A6AE62520D9F400357060 /* LSIArtist.h */,
+				680A6AE72520D9F400357060 /* LSIArtist.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		680A6AB82520D4BB00357060 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				680A6AE02520D9A000357060 /* Artist+NSJSONSerialization.h */,
-				680A6AE12520D9A000357060 /* Artist+NSJSONSerialization.m */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		680A6AEC2520DBB300357060 /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
-				680A6AED2520DBC400357060 /* ArtistController.h */,
-				680A6AEE2520DBC400357060 /* ArtistController.m */,
+				680A6AED2520DBC400357060 /* LSIArtistController.h */,
+				680A6AEE2520DBC400357060 /* LSIArtistController.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -220,6 +202,10 @@
 		680A6AF32520E0B300357060 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				680A6AF42520E0DF00357060 /* LSIArtistResults.h */,
+				680A6AF52520E0DF00357060 /* LSIArtistResults.m */,
+				680A6B002520E41C00357060 /* LSIArtistFetcher.h */,
+				680A6B012520E41C00357060 /* LSIArtistFetcher.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -327,9 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				680A6A8C2520D46B00357060 /* LaunchScreen.storyboard in Resources */,
-				680A6AC92520D79000357060 /* LSIArtistDetailViewController.xib in Resources */,
 				680A6A892520D46B00357060 /* Assets.xcassets in Resources */,
-				680A6AD12520D7F100357060 /* LSIFavoriteArtistsViewController.xib in Resources */,
 				680A6A872520D46800357060 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,15 +339,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				680A6AD02520D7F100357060 /* LSIFavoriteArtistsViewController.m in Sources */,
-				680A6AC82520D79000357060 /* LSIArtistDetailViewController.m in Sources */,
-				680A6AE82520D9F400357060 /* Artist.m in Sources */,
+				680A6B022520E41C00357060 /* LSIArtistFetcher.m in Sources */,
+				680A6AE82520D9F400357060 /* LSIArtist.m in Sources */,
+				680A6AF62520E0DF00357060 /* LSIArtistResults.m in Sources */,
+				680A6B172520E77A00357060 /* LSIFavoriteArtistsTableViewController.m in Sources */,
 				680A6A7E2520D46800357060 /* AppDelegate.m in Sources */,
-				680A6AE22520D9A000357060 /* Artist+NSJSONSerialization.m in Sources */,
-				680A6AEF2520DBC400357060 /* ArtistController.m in Sources */,
+				680A6B232520E82800357060 /* LSIArtistDetailViewController.m in Sources */,
+				680A6AEF2520DBC400357060 /* LSIArtistController.m in Sources */,
 				680A6A8F2520D46C00357060 /* main.m in Sources */,
 				680A6A812520D46800357060 /* SceneDelegate.m in Sources */,
-				680A6AC12520D77800357060 /* LSIAddNewArtistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

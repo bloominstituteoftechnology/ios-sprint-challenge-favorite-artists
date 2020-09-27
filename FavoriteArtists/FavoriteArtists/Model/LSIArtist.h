@@ -1,5 +1,5 @@
 //
-//  Artist.h
+//  LSIArtist.h
 //  FavoriteArtists
 //
 //  Created by Elizabeth Thomas on 9/27/20.
@@ -9,11 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Artist : NSObject
+@interface LSIArtist : NSObject
 
 - (instancetype)initWithArtistName:(NSString *)aName
                         yearFormed:(int)aYearFormed
                          biography:(NSString *)aBiography NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly) int yearFormed;

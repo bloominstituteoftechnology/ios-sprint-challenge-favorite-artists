@@ -12,8 +12,6 @@
 
 @interface JSKArtistDetailViewController ()
 
-@property (nonatomic) JSKArtist *artist;
-
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (strong, nonatomic) IBOutlet UITextView *artistBioTextView;

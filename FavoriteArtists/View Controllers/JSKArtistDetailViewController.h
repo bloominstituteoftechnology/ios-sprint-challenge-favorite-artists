@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSKArtistDetailViewController : UIViewController
 
+@property (nonatomic) JSKArtist *artist;
 @property (nonatomic) JSKArtistController *artistController;
 
 @end

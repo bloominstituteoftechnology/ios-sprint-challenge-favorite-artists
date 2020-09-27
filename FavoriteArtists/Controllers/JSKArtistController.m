@@ -8,10 +8,13 @@
 #import "JSKArtistController.h"
 #import "JSKArtist.h"
 #import "JSKArtist+NSJSONSerialization.h"
+#import "JSKAddArtistViewController.h"
 
-@interface JSKArtistController()
+@interface JSKArtistController() {
 
-@property(nonatomic) NSMutableArray *internalArtist;
+ NSMutableArray *_internalArtist;
+
+}
 
 @end
 
@@ -20,29 +23,42 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        _internalArtist = [[self loadArtist] mutableCopy];
+        _internalArtist = [[NSMutableArray alloc] init];
+
+        NSString *filePath = self.getArtistPath;
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+
+        if ([fileManager fileExistsAtPath:filePath]) {
+            NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfURL:self.getArtistURL];
+            [self updateArrayWithDictionary:dictionary];
+        }
     }
     return self;
 }
 
 - (void)addArtist:(JSKArtist *)artist {
 
-    [self.internalArtist addObject:artist];
-    [self saveArtist];
+    [_internalArtist addObject:artist];
+    [self saveToPersistentStore];
 }
 
+
 - (NSArray *)artists {
-    return self.internalArtist;
+    return _internalArtist;
 }
 
 - (NSURL *)getArtistURL {
 
-    NSURL *documentsDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]firstObject];
+    NSString *fileName = @"FavoriteArtistsData.plist";
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSURL *baseURL = [NSURL fileURLWithPath:path];
+    NSURL *artistURL = [baseURL URLByAppendingPathComponent:fileName];
+    return artistURL;
+}
 
-    NSString *artistFile = @"artists.json";
-
-    return [documentsDirectoryURL URLByAppendingPathComponent:artistFile];
-
+- (NSString *)getArtistPath
+{
+    return self.getArtistURL.path;
 }
 
 - (NSArray *)loadArtist {
@@ -70,19 +86,25 @@
     return artists;
 }
 
-- (void)saveArtist {
+- (void)saveToPersistentStore {
 
-    NSMutableArray *artistDictionary = [[NSMutableArray alloc] init];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
 
-    for(int i = 0; i < self.internalArtist.count; i++) {
-        JSKArtist *artist = self.internalArtist[i];
-        [artistDictionary addObject: [artist toDictionary]];
+    for (JSKArtist *artist in _internalArtist) {
+        NSString *key = artist.artistName;
+        dictionary[key] = artist.toDictionary;
     }
+    [dictionary writeToURL:[self getArtistURL] atomically:YES];
+}
 
-    NSData *artistData = [NSJSONSerialization dataWithJSONObject:artistDictionary options:0 error:nil];
-
-    [artistData writeToURL:[self getArtistURL] atomically:YES];
-
+- (void)updateArrayWithDictionary:(NSDictionary *)dictionary
+{
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (NSDictionary *artistDictionary in dictionary.allValues) {
+        JSKArtist *artist = [[JSKArtist alloc] initWithDictionary:artistDictionary];
+        [array addObject:artist];
+    }
+    _internalArtist = array;
 }
 
 @end

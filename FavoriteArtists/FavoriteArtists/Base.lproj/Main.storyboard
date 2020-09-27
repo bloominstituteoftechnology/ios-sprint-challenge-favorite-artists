@@ -53,7 +53,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="9Uh-ds-j9Z">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="clF-KK-iiM">
                             <connections>
-                                <segue destination="3Wz-Zp-0Zx" kind="show" identifier="AddArtistSegue" id="XVi-dl-5OZ"/>
+                                <segue destination="3Wz-Zp-0Zx" kind="show" id="PTa-gN-Wru"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5G-Fd-Mp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895.6521739130437" y="-560.49107142857144"/>
+            <point key="canvasLocation" x="1896" y="-545"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aN1-hS-5kA">

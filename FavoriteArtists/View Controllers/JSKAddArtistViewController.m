@@ -11,6 +11,7 @@
 #import "JSKArtistController.h"
 #import "JSKArtistResults.h"
 #import "JSKFetchArtistController.h"
+#import "JSKArtistTableViewController.h"
 
 
 @interface JSKAddArtistViewController ()
@@ -41,7 +42,7 @@
         self.artistNameLabel.text = self.artist.artistName;
         self.artistBioTextView.text = self.artist.artistBio;
 
-        if (self.artist.yearFormed !=0) {
+        if (self.artist.yearFormed != 0) {
             NSString *yearFormedString = [NSString stringWithFormat:@"Formed in %@", self.artist.yearFormed];
             self.yearFormedLabel.text = yearFormedString;
         } else {
@@ -57,15 +58,11 @@
 - (IBAction)saveArtist:(UIBarButtonItem *)sender
 {
     if (self.artist == nil) return;
-    [self.persistance addArtist:self.artist];
+    [self.artistController addArtist:self.artist];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-@end
-
-@implementation JSKAddArtistViewController(UISearchBarDelegate)
-
-- (void)searchBarClicked:(UISearchBar *)artistSearchBar
+- (void)searchBarSearchButtonClicked:(UISearchBar *)artistSearchBar
 {
     NSString *searchTerm = artistSearchBar.text;
     if ((searchTerm == nil) | [searchTerm isEqualToString:@""]) return;

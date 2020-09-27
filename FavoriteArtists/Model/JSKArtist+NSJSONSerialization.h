@@ -11,9 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSKArtist (NSJSONSerialization)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
 - (NSDictionary *)toDictionary;
-
 
 @end
 

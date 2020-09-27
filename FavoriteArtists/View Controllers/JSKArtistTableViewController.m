@@ -14,7 +14,7 @@
 
 @interface JSKArtistTableViewController ()
 
-@property (nonatomic, readonly) JSKArtistController *artistController;
+@property (nonatomic) JSKArtistController *artistController;
 
 @end
 
@@ -22,13 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.artistController loadArtist];
+    self.artistController = [[JSKArtistController alloc] init];
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -45,6 +44,7 @@
     
     return cell;
 }
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,19 +66,15 @@
 */
 
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
-        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
         JSKAddArtistViewController *addVC = segue.destinationViewController;
-        addVC.artist = self.artistController.artists[indexPath.row];
         addVC.artistController = self.artistController;
     } else if ([segue.identifier isEqualToString:@"ArtistDetailSegue"]) {
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
         JSKArtistDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.artist = self.artistController.artists[indexPath.row];
         detailVC.artistController = self.artistController;
     }
 }
-
-
 @end

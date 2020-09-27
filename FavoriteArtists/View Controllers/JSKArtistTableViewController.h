@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class JSKArtist;
+@class JSKArtistController;
+
 @interface JSKArtistTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
 
 @end
 

@@ -9,12 +9,22 @@
 
 @implementation JSKArtist (NSJSONSerialization)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
 
     NSString *artistName = dictionary[@"strArtist"];
+
     NSString *artistBio = dictionary[@"strBiographyEN"];
-    NSNumber *yearFormed = dictionary[@"intFormedYear"];
+
+    NSNumber *yearFormed = [dictionary objectForKey:@"intFormedYear"];
+    if ([yearFormed isKindOfClass:NSNull.class]) {
+        yearFormed = nil;
+    } else if ([yearFormed isKindOfClass:NSString.class]) {
+    NSString *yearFormedString = [dictionary objectForKey:@"inFormedYear"];
+        yearFormed = @([yearFormedString intValue]);
+    } else if (![yearFormed isKindOfClass:NSNumber.class]) {
+        return nil;
+    }
     int yearFormedNSNumber = [yearFormed intValue];
 
     return [self initWithArtistName:artistName artistBio:artistBio yearFormed:yearFormedNSNumber];

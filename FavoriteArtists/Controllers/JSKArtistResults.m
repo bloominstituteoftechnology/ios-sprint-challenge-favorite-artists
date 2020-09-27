@@ -27,7 +27,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSArray *artistDictionaries = [dictionary objectForKey:@"features"];
+    NSArray *artistDictionaries = [dictionary objectForKey:@"artists"];
     if (![artistDictionaries isKindOfClass:NSArray.class]) return nil;
 
     NSMutableArray *artists = [[NSMutableArray alloc] initWithCapacity:artistDictionaries.count];
@@ -40,8 +40,7 @@
         if (artist) {
             [artists addObject:artist];
         } else {
-            // TODO: One of our required fields might be optional and we may need to debug this with real data
-            NSLog(@"Unable to parse quake dictionary: %@", artistDictionary);
+            NSLog(@"Unable to parse artist dictionary: %@", artistDictionary);
         }
     }
 

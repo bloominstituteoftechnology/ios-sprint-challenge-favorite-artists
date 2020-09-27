@@ -12,11 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSKAddArtistViewController : UIViewController
+@interface JSKAddArtistViewController : UIViewController<UISearchBarDelegate>
 
-@property (nonatomic) JSKArtist *artist;
-@property (nonatomic) JSKArtistController *persistance;
-@property (nonatomic) JSKArtistController *artistController;
+@property (nonatomic, nullable) JSKArtist *artist;
+@property (nonatomic, nullable) JSKArtistController *artistController;
 
 @end
 

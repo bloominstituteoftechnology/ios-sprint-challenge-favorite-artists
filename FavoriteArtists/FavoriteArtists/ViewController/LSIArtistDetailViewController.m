@@ -37,6 +37,7 @@
     if (self.isShowingArtistDetail) {
         [self.searchBar removeFromSuperview];
         self.navigationItem.rightBarButtonItem = nil;
+        self.title = self.artist.name;
     }
 
     [self updateViews];

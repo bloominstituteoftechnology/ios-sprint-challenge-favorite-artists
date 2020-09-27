@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t8w-oE-9y0">
-                                <rect key="frame" x="20" y="206" width="71" height="70"/>
+                                <rect key="frame" x="20" y="200" width="71" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPv-JA-wZs">
                                         <rect key="frame" x="0.0" y="0.0" width="71" height="36"/>
@@ -92,7 +92,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iWq-gJ-ryd">
-                                <rect key="frame" x="20" y="286" width="374" height="576"/>
+                                <rect key="frame" x="20" y="280" width="374" height="582"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -108,7 +108,7 @@
                             <constraint firstItem="9cr-Dx-rMO" firstAttribute="leading" secondItem="UgJ-1j-nNX" secondAttribute="leading" id="aYL-IV-a4E"/>
                             <constraint firstItem="t8w-oE-9y0" firstAttribute="leading" secondItem="UgJ-1j-nNX" secondAttribute="leading" constant="20" id="mbC-Ca-6MU"/>
                             <constraint firstItem="iWq-gJ-ryd" firstAttribute="leading" secondItem="UgJ-1j-nNX" secondAttribute="leading" constant="20" id="oy6-eH-BY1"/>
-                            <constraint firstItem="t8w-oE-9y0" firstAttribute="top" secondItem="9cr-Dx-rMO" secondAttribute="bottom" constant="10" id="s3q-U5-seV"/>
+                            <constraint firstItem="t8w-oE-9y0" firstAttribute="top" secondItem="YDB-I2-rFq" secondAttribute="top" constant="200" id="s3q-U5-seV"/>
                             <constraint firstItem="UgJ-1j-nNX" firstAttribute="trailing" secondItem="iWq-gJ-ryd" secondAttribute="trailing" constant="20" id="s6z-r6-FSP"/>
                             <constraint firstItem="UgJ-1j-nNX" firstAttribute="bottom" secondItem="iWq-gJ-ryd" secondAttribute="bottom" id="wmg-Mc-08S"/>
                         </constraints>

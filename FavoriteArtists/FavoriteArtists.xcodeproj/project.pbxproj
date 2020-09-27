@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		02D5ADA1252144150084CA78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ADA0252144150084CA78 /* AppDelegate.m */; };
 		02D5ADA4252144150084CA78 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ADA3252144150084CA78 /* SceneDelegate.m */; };
-		02D5ADA7252144150084CA78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ADA6252144150084CA78 /* ViewController.m */; };
 		02D5ADAA252144150084CA78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D5ADA8252144150084CA78 /* Main.storyboard */; };
 		02D5ADAC252144180084CA78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D5ADAB252144180084CA78 /* Assets.xcassets */; };
 		02D5ADAF252144180084CA78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D5ADAD252144180084CA78 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,9 @@
 		02D5ADC7252144190084CA78 /* FavoriteArtistsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ADC6252144190084CA78 /* FavoriteArtistsUITests.m */; };
 		02D5ADE82521456B0084CA78 /* MJSArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D5ADE72521456B0084CA78 /* MJSArtist.m */; };
 		02D5AE04252147410084CA78 /* MJSArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D5AE03252147410084CA78 /* MJSArtist+NSJSONSerialization.m */; };
+		02D5AE0A252148790084CA78 /* MJSArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D5AE09252148790084CA78 /* MJSArtistController.m */; };
+		02D5AE1325214D370084CA78 /* MJSArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D5AE1225214D370084CA78 /* MJSArtistDetailViewController.m */; };
+		02D5AE1925214D4F0084CA78 /* MJSArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D5AE1825214D4F0084CA78 /* MJSArtistTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +45,6 @@
 		02D5ADA0252144150084CA78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		02D5ADA2252144150084CA78 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		02D5ADA3252144150084CA78 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		02D5ADA5252144150084CA78 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		02D5ADA6252144150084CA78 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		02D5ADA9252144150084CA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02D5ADAB252144180084CA78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02D5ADAE252144180084CA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +60,12 @@
 		02D5ADE72521456B0084CA78 /* MJSArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJSArtist.m; sourceTree = "<group>"; };
 		02D5AE02252147410084CA78 /* MJSArtist+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MJSArtist+NSJSONSerialization.h"; sourceTree = "<group>"; };
 		02D5AE03252147410084CA78 /* MJSArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MJSArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
+		02D5AE08252148790084CA78 /* MJSArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJSArtistController.h; sourceTree = "<group>"; };
+		02D5AE09252148790084CA78 /* MJSArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJSArtistController.m; sourceTree = "<group>"; };
+		02D5AE1125214D370084CA78 /* MJSArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJSArtistDetailViewController.h; sourceTree = "<group>"; };
+		02D5AE1225214D370084CA78 /* MJSArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJSArtistDetailViewController.m; sourceTree = "<group>"; };
+		02D5AE1725214D4F0084CA78 /* MJSArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJSArtistTableViewController.h; sourceTree = "<group>"; };
+		02D5AE1825214D4F0084CA78 /* MJSArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJSArtistTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +124,6 @@
 				02D5ADA0252144150084CA78 /* AppDelegate.m */,
 				02D5ADA2252144150084CA78 /* SceneDelegate.h */,
 				02D5ADA3252144150084CA78 /* SceneDelegate.m */,
-				02D5ADA5252144150084CA78 /* ViewController.h */,
-				02D5ADA6252144150084CA78 /* ViewController.m */,
 				02D5ADA8252144150084CA78 /* Main.storyboard */,
 				02D5ADAB252144180084CA78 /* Assets.xcassets */,
 				02D5ADAD252144180084CA78 /* LaunchScreen.storyboard */,
@@ -159,6 +163,8 @@
 		02D5ADD9252144D20084CA78 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02D5AE08252148790084CA78 /* MJSArtistController.h */,
+				02D5AE09252148790084CA78 /* MJSArtistController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -166,6 +172,10 @@
 		02D5ADDA252144EC0084CA78 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				02D5AE1125214D370084CA78 /* MJSArtistDetailViewController.h */,
+				02D5AE1225214D370084CA78 /* MJSArtistDetailViewController.m */,
+				02D5AE1725214D4F0084CA78 /* MJSArtistTableViewController.h */,
+				02D5AE1825214D4F0084CA78 /* MJSArtistTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -310,10 +320,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D5ADA7252144150084CA78 /* ViewController.m in Sources */,
 				02D5ADA1252144150084CA78 /* AppDelegate.m in Sources */,
+				02D5AE1925214D4F0084CA78 /* MJSArtistTableViewController.m in Sources */,
 				02D5ADE82521456B0084CA78 /* MJSArtist.m in Sources */,
+				02D5AE0A252148790084CA78 /* MJSArtistController.m in Sources */,
 				02D5ADB2252144180084CA78 /* main.m in Sources */,
+				02D5AE1325214D370084CA78 /* MJSArtistDetailViewController.m in Sources */,
 				02D5ADA4252144150084CA78 /* SceneDelegate.m in Sources */,
 				02D5AE04252147410084CA78 /* MJSArtist+NSJSONSerialization.m in Sources */,
 			);

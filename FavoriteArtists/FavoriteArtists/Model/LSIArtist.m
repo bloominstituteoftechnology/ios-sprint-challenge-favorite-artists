@@ -42,4 +42,13 @@
                     biography:biography];
 }
 
+- (NSDictionary *)toDictionary
+{
+    NSNumber *yearFormed = [NSNumber numberWithInt:self.yearFormed];
+
+    return @{ @"strArtist": self.name,
+              @"intFormedYear": yearFormed,
+              @"strBiographyEN": self.biography };
+}
+
 @end

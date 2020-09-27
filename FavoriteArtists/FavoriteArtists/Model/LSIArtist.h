@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
                          biography:(NSString *)aBiography NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
+- (NSDictionary *)toDictionary;
+
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly) int yearFormed;
 @property (nonatomic, readonly, copy, nullable) NSString *biography;

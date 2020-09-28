@@ -53,7 +53,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="9Uh-ds-j9Z">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="clF-KK-iiM">
                             <connections>
-                                <segue destination="3Wz-Zp-0Zx" kind="show" id="PTa-gN-Wru"/>
+                                <segue destination="3Wz-Zp-0Zx" kind="show" identifier="AddArtistSegue" id="PTa-gN-Wru"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

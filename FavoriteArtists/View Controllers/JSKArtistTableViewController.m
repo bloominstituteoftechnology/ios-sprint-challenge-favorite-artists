@@ -22,11 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.artistController = [[JSKArtistController alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.artistController = [[JSKArtistController alloc] init];
     [self.tableView reloadData];
 }
 

@@ -12,9 +12,9 @@
 - (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
 
-    NSString *artistName = dictionary[@"strArtist"];
+    NSString *artistName = [dictionary objectForKey:@"strArtist"];
 
-    NSString *artistBio = dictionary[@"strBiographyEN"];
+    NSString *artistBio = [dictionary objectForKey:@"strBiographyEN"];
 
     NSNumber *yearFormed = [dictionary objectForKey:@"intFormedYear"];
     if ([yearFormed isKindOfClass:NSNull.class]) {

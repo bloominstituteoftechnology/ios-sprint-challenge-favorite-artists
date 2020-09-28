@@ -25,11 +25,11 @@
     if (self = [super init]) {
         _internalArtist = [[NSMutableArray alloc] init];
 
-        NSString *filePath = self.getArtistPath;
+        NSString *filePath = self.getFilePath;
         NSFileManager *fileManager = [NSFileManager defaultManager];
 
         if ([fileManager fileExistsAtPath:filePath]) {
-            NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfURL:self.getArtistURL];
+            NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfURL:self.getFileURL];
             [self updateArrayWithDictionary:dictionary];
         }
     }
@@ -43,11 +43,11 @@
 }
 
 
-- (NSArray *)artists {
-    return _internalArtist;
+- (NSArray<JSKArtist *> *)artists {
+    return _internalArtist.copy;
 }
 
-- (NSURL *)getArtistURL {
+- (NSURL *)getFileURL {
 
     NSString *fileName = @"FavoriteArtistsData.plist";
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
@@ -56,34 +56,9 @@
     return artistURL;
 }
 
-- (NSString *)getArtistPath
+- (NSString *)getFilePath
 {
-    return self.getArtistURL.path;
-}
-
-- (NSArray *)loadArtist {
-
-    NSData *artistData = [NSData dataWithContentsOfURL: [self getArtistURL] ];
-
-    if(!artistData) {
-        return @[];
-    }
-
-    NSError *jsonError = nil;
-    NSArray *savedArtistsArray = [NSJSONSerialization JSONObjectWithData:artistData options:0 error:&jsonError];
-    if(jsonError) {
-        NSLog(@"failed to fetch movies from documents directory: %@", jsonError);
-        return @[];
-    }
-
-    NSMutableArray *artists = [[NSMutableArray alloc] init];
-    for(int i = 0; i < savedArtistsArray.count; i++) {
-        NSDictionary *artistDictionary = savedArtistsArray[i];
-        JSKArtist *artist = [[JSKArtist alloc] initWithDictionary:artistDictionary];
-        [artists addObject:artist];
-    }
-
-    return artists;
+    return self.getFileURL.path;
 }
 
 - (void)saveToPersistentStore {
@@ -94,7 +69,7 @@
         NSString *key = artist.artistName;
         dictionary[key] = artist.toDictionary;
     }
-    [dictionary writeToURL:[self getArtistURL] atomically:YES];
+    [dictionary writeToURL:self.getFileURL atomically:YES];
 }
 
 - (void)updateArrayWithDictionary:(NSDictionary *)dictionary

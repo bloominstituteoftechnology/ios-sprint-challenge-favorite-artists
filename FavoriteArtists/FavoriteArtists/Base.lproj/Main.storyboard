@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eFm-B0-GXj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Artist Table View Controller-->
+        <!--Arists-->
         <scene sceneID="w3i-GL-WtA">
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="G2p-A0-D4R" customClass="MJSArtistTableViewController" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="txD-gK-JLG" detailTextLabel="fvg-a4-7mG" style="IBUITableViewCellStyleSubtitle" id="OuP-bs-nb8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="txD-gK-JLG" detailTextLabel="fvg-a4-7mG" style="IBUITableViewCellStyleSubtitle" id="OuP-bs-nb8" customClass="Artist">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OuP-bs-nb8" id="6Dj-VA-1MP">
@@ -50,7 +50,7 @@
                             <outlet property="delegate" destination="G2p-A0-D4R" id="c9R-6O-iUM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9QE-uV-dmv">
+                    <navigationItem key="navigationItem" title="Arists" id="9QE-uV-dmv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NpD-o5-hql">
                             <connections>
                                 <segue destination="QZv-km-ne7" kind="show" identifier="AddArtist" id="eT0-d9-GAz"/>
@@ -65,17 +65,17 @@
         <!--Add New Artist-->
         <scene sceneID="yEe-5a-EAh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="QZv-km-ne7" customClass="MJSArtistDetailViewController" sceneMemberID="viewController">
+                <viewController title="Add New Artist" modalPresentationStyle="fullScreen" id="QZv-km-ne7" customClass="MJSArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Otf-3J-7DQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" prompt="Arist Name..." placeholder="Artist Name" translatesAutoresizingMaskIntoConstraints="NO" id="Z5j-th-68v">
-                                <rect key="frame" x="0.0" y="-2" width="414" height="185"/>
+                            <searchBar contentMode="redraw" placeholder="Artist Name" translatesAutoresizingMaskIntoConstraints="NO" id="Z5j-th-68v">
+                                <rect key="frame" x="0.0" y="150" width="414" height="90"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="qZ9-xU-AGg">
-                                <rect key="frame" x="20" y="203" width="374" height="580.5"/>
+                                <rect key="frame" x="20" y="260" width="374" height="523.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C19-ph-0It">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
@@ -86,17 +86,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nqv-f8-14J">
                                         <rect key="frame" x="0.0" y="60" width="374" height="26.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed in:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92S-Im-jvY">
-                                                <rect key="frame" x="0.0" y="0.0" width="110" height="26.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="110" id="Is5-0m-tB8"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssl-hC-cC2">
-                                                <rect key="frame" x="118" y="0.0" width="256" height="26.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="26.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -104,7 +95,7 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m75-11-NNO">
-                                        <rect key="frame" x="0.0" y="105.5" width="374" height="475"/>
+                                        <rect key="frame" x="0.0" y="105.5" width="374" height="418"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -119,7 +110,7 @@
                         <constraints>
                             <constraint firstItem="qZ9-xU-AGg" firstAttribute="top" secondItem="Z5j-th-68v" secondAttribute="bottom" constant="20" id="AaI-B8-4Pe"/>
                             <constraint firstItem="qZ9-xU-AGg" firstAttribute="leading" secondItem="EoS-ck-34O" secondAttribute="leading" constant="20" id="Jlc-19-Ljv"/>
-                            <constraint firstItem="Z5j-th-68v" firstAttribute="top" secondItem="Otf-3J-7DQ" secondAttribute="topMargin" constant="-46" id="TCA-dP-VCQ"/>
+                            <constraint firstItem="Z5j-th-68v" firstAttribute="top" secondItem="Otf-3J-7DQ" secondAttribute="topMargin" constant="10" id="TCA-dP-VCQ"/>
                             <constraint firstItem="Z5j-th-68v" firstAttribute="leading" secondItem="Otf-3J-7DQ" secondAttribute="leading" id="VUZ-Zd-CVg"/>
                             <constraint firstItem="EoS-ck-34O" firstAttribute="trailing" secondItem="qZ9-xU-AGg" secondAttribute="trailing" constant="20" id="c0R-XZ-dNL"/>
                             <constraint firstItem="EoS-ck-34O" firstAttribute="bottom" secondItem="qZ9-xU-AGg" secondAttribute="bottom" constant="29.5" id="ckO-Vi-TT2"/>
@@ -127,14 +118,21 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Add New Artist" id="DZL-KC-Hdx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dBO-X9-fSX">
+                    <navigationItem key="navigationItem" title="Add New Artist" id="OsU-63-3k7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1Z7-66-uj6">
                             <connections>
-                                <segue destination="G2p-A0-D4R" kind="show" identifier="SaveArtist" id="UPv-SZ-JLY"/>
+                                <action selector="saveButtonTapped:" destination="QZv-km-ne7" id="QAG-KX-BHS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="C19-ph-0It" id="dVA-gw-RYh"/>
+                        <outlet property="biographyTextView" destination="m75-11-NNO" id="eku-GH-7w4"/>
+                        <outlet property="saveButton" destination="1Z7-66-uj6" id="Yl7-9H-myH"/>
+                        <outlet property="searchBar" destination="Z5j-th-68v" id="1ax-P3-gxe"/>
+                        <outlet property="yearFormed" destination="Ssl-hC-cC2" id="6hf-m0-dJD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8C-No-8Q5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,7 +159,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="WZv-Ep-4Yq"/>
-        <segue reference="UPv-SZ-JLY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

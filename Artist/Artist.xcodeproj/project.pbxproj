@@ -16,6 +16,9 @@
 		926D6E0B251EE7DC0085F073 /* ArtistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 926D6E0A251EE7DC0085F073 /* ArtistTests.m */; };
 		926D6E16251EE7DC0085F073 /* ArtistUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 926D6E15251EE7DC0085F073 /* ArtistUITests.m */; };
 		926D6E33251EF0280085F073 /* Artists.m in Sources */ = {isa = PBXBuildFile; fileRef = 926D6E32251EF0280085F073 /* Artists.m */; };
+		92F20DD92521757700BEF301 /* ArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F20DD82521757700BEF301 /* ArtistTableViewController.m */; };
+		92F20DE22521872300BEF301 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F20DE12521872200BEF301 /* Networking.m */; };
+		92F20DE82521885F00BEF301 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F20DE72521885F00BEF301 /* ArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		926D6E17251EE7DC0085F073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		926D6E31251EF0280085F073 /* Artists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artists.h; sourceTree = "<group>"; };
 		926D6E32251EF0280085F073 /* Artists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artists.m; sourceTree = "<group>"; };
+		92F20DD72521757700BEF301 /* ArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistTableViewController.h; sourceTree = "<group>"; };
+		92F20DD82521757700BEF301 /* ArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableViewController.m; sourceTree = "<group>"; };
+		92F20DE02521872200BEF301 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		92F20DE12521872200BEF301 /* Networking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		92F20DE62521885F00BEF301 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		92F20DE72521885F00BEF301 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +124,12 @@
 				926D6E00251EE7DC0085F073 /* main.m */,
 				926D6E31251EF0280085F073 /* Artists.h */,
 				926D6E32251EF0280085F073 /* Artists.m */,
+				92F20DD72521757700BEF301 /* ArtistTableViewController.h */,
+				92F20DD82521757700BEF301 /* ArtistTableViewController.m */,
+				92F20DE02521872200BEF301 /* Networking.h */,
+				92F20DE12521872200BEF301 /* Networking.m */,
+				92F20DE62521885F00BEF301 /* ArtistDetailViewController.h */,
+				92F20DE72521885F00BEF301 /* ArtistDetailViewController.m */,
 			);
 			path = Artist;
 			sourceTree = "<group>";
@@ -271,6 +286,9 @@
 				926D6E01251EE7DC0085F073 /* main.m in Sources */,
 				926D6E33251EF0280085F073 /* Artists.m in Sources */,
 				926D6DF3251EE7D80085F073 /* SceneDelegate.m in Sources */,
+				92F20DE82521885F00BEF301 /* ArtistDetailViewController.m in Sources */,
+				92F20DD92521757700BEF301 /* ArtistTableViewController.m in Sources */,
+				92F20DE22521872300BEF301 /* Networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

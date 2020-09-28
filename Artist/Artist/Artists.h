@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *bio;
 @property (nonatomic, readonly) double year;
 
-// make a init use Quake project
+- (instancetype)initWithName: (NSString *)artistName bio: (NSString *)artistBio year: (double) yr;
 
 @end
 

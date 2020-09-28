@@ -9,4 +9,15 @@
 
 @implementation Artists
 
+- (instancetype)initWithName: (NSString *)artistName bio: (NSString *)artistBio year: (double) yr
+{
+    if(self = [super init]){
+        _name = artistName;
+        _bio = artistBio;
+        _year = yr;
+    }
+    
+    return self;
+}
+
 @end

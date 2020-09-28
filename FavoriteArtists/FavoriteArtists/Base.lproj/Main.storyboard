@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="1895.6521739130437" y="162.72321428571428"/>
         </scene>
-        <!--Add Artist View Controller-->
+        <!--Add New Artist-->
         <scene sceneID="FEt-zo-zwk">
             <objects>
                 <viewController id="3Wz-Zp-0Zx" customClass="JSKAddArtistViewController" sceneMemberID="viewController">
@@ -166,7 +166,7 @@
                             <constraint firstItem="uw2-z2-1cK" firstAttribute="leading" secondItem="xms-5C-LEF" secondAttribute="leading" constant="20" id="uEo-Ne-YAE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ml3-2F-1ER">
+                    <navigationItem key="navigationItem" title="Add New Artist" id="Ml3-2F-1ER">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Pbb-7f-6Ol">
                             <connections>
                                 <action selector="saveArtist:" destination="3Wz-Zp-0Zx" id="keK-J1-2Ex"/>

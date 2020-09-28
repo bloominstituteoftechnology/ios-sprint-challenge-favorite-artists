@@ -20,7 +20,7 @@
     if ([yearFormed isKindOfClass:NSNull.class]) {
         yearFormed = nil;
     } else if ([yearFormed isKindOfClass:NSString.class]) {
-    NSString *yearFormedString = [dictionary objectForKey:@"inFormedYear"];
+    NSString *yearFormedString = [dictionary objectForKey:@"intFormedYear"];
         yearFormed = @([yearFormedString intValue]);
     } else if (![yearFormed isKindOfClass:NSNumber.class]) {
         return nil;

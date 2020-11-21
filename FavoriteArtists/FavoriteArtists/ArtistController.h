@@ -6,11 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Artist.h"
 
-NS_ASSUME_NONNULL_BEGIN
+typedef void(^ArtistControllerCompletionHandler)(Artist *_Nullable artist, NSError *_Nullable error);
 
 @interface ArtistController : NSObject
 
-@end
++ (void)searchArtistsWithSearchTerm:(nonnull NSString *)searchTerm
+                completionHandler:(nonnull ArtistControllerCompletionHandler)completionHandler;
 
-NS_ASSUME_NONNULL_END
+@end

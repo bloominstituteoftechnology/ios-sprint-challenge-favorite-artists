@@ -23,25 +23,25 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSDictionary *artists = [dictionary objectForKey:@"artists"];
-    if (![artists isKindOfClass:NSDictionary.class]) return nil;
+    NSArray *artists = [dictionary objectForKey:@"artists"];
     
-    NSMutableArray *artistArray = [[NSMutableArray alloc] initWithCapacity:artists.count];
-    
-    NSDictionary *artist = [artistArray objectAtIndex:0];
-    
-    NSString *artistName = [artist objectForKey:@"strArtist"];
-    if (![artistName isKindOfClass:NSString.class]) return nil;
-    
-    NSNumber *formedYear = [artist objectForKey:@"intFormedYear"];
-    if (![formedYear isKindOfClass:NSNumber.class]) return nil;
-    
-    NSString *biography = [artist objectForKey:@"strBiographyEN"];
-    if (![biography isKindOfClass:NSString.class]) return nil;
-    
-    return [self initWithArtistName:artistName
-                         formedYear:formedYear.intValue
-                          biography:biography];
+    for (NSMutableDictionary *artistDict in artists) {
+        NSString *artistName = [artistDict objectForKey:@"strArtist"];
+        if (![artistName isKindOfClass:NSString.class]) return nil;
+        
+        NSNumber *formedYear = [artistDict objectForKey:@"intFormedYear"];
+        if ([formedYear isKindOfClass:NSNull.class]) {
+            formedYear = nil;
+        }
+        
+        NSString *biography = [artistDict objectForKey:@"strBiographyEN"];
+        if (![biography isKindOfClass:NSString.class]) return nil;
+        
+        return [self initWithArtistName:artistName
+                             formedYear:formedYear.intValue
+                              biography:biography];
+    }
+    return nil;
 }
 
 - (NSDictionary *)dictionaryValue

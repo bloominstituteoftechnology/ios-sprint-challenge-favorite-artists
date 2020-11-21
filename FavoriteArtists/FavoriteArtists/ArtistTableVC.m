@@ -6,6 +6,8 @@
 //
 
 #import "ArtistTableVC.h"
+#import "Artist.h"
+#import "Artists.h"
 
 @interface ArtistTableVC ()
 

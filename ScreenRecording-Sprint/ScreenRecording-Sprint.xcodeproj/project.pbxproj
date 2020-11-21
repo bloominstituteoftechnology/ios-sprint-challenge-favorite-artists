@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		22A35C4A256985EC00D73C4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A35C49256985EC00D73C4B /* AppDelegate.m */; };
 		22A35C4D256985EC00D73C4B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A35C4C256985EC00D73C4B /* SceneDelegate.m */; };
-		22A35C50256985EC00D73C4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A35C4F256985EC00D73C4B /* ViewController.m */; };
 		22A35C53256985EC00D73C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A35C51256985EC00D73C4B /* Main.storyboard */; };
 		22A35C55256985ED00D73C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A35C54256985ED00D73C4B /* Assets.xcassets */; };
 		22A35C58256985ED00D73C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A35C56256985ED00D73C4B /* LaunchScreen.storyboard */; };
 		22A35C5B256985ED00D73C4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A35C5A256985ED00D73C4B /* main.m */; };
+		22A35C692569A2CF00D73C4B /* SAEArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A35C682569A2CF00D73C4B /* SAEArtistTableViewController.m */; };
+		22A35C6D2569A3B200D73C4B /* SAENewArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A35C6C2569A3B200D73C4B /* SAENewArtistViewController.m */; };
+		22A35C712569A3D700D73C4B /* SAEDetialArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A35C702569A3D700D73C4B /* SAEDetialArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +24,17 @@
 		22A35C49256985EC00D73C4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		22A35C4B256985EC00D73C4B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		22A35C4C256985EC00D73C4B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		22A35C4E256985EC00D73C4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		22A35C4F256985EC00D73C4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		22A35C52256985EC00D73C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22A35C54256985ED00D73C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22A35C57256985ED00D73C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22A35C59256985ED00D73C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A35C5A256985ED00D73C4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22A35C672569A2CF00D73C4B /* SAEArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAEArtistTableViewController.h; sourceTree = "<group>"; };
+		22A35C682569A2CF00D73C4B /* SAEArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAEArtistTableViewController.m; sourceTree = "<group>"; };
+		22A35C6B2569A3B200D73C4B /* SAENewArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAENewArtistViewController.h; sourceTree = "<group>"; };
+		22A35C6C2569A3B200D73C4B /* SAENewArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAENewArtistViewController.m; sourceTree = "<group>"; };
+		22A35C6F2569A3D700D73C4B /* SAEDetialArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAEDetialArtistViewController.h; sourceTree = "<group>"; };
+		22A35C702569A3D700D73C4B /* SAEDetialArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAEDetialArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +67,11 @@
 		22A35C47256985EC00D73C4B /* ScreenRecording-Sprint */ = {
 			isa = PBXGroup;
 			children = (
+				22A35C6325699EDC00D73C4B /* View Controllers */,
 				22A35C48256985EC00D73C4B /* AppDelegate.h */,
 				22A35C49256985EC00D73C4B /* AppDelegate.m */,
 				22A35C4B256985EC00D73C4B /* SceneDelegate.h */,
 				22A35C4C256985EC00D73C4B /* SceneDelegate.m */,
-				22A35C4E256985EC00D73C4B /* ViewController.h */,
-				22A35C4F256985EC00D73C4B /* ViewController.m */,
 				22A35C51256985EC00D73C4B /* Main.storyboard */,
 				22A35C54256985ED00D73C4B /* Assets.xcassets */,
 				22A35C56256985ED00D73C4B /* LaunchScreen.storyboard */,
@@ -74,6 +79,43 @@
 				22A35C5A256985ED00D73C4B /* main.m */,
 			);
 			path = "ScreenRecording-Sprint";
+			sourceTree = "<group>";
+		};
+		22A35C6325699EDC00D73C4B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				22A35C732569A3E500D73C4B /* TableViewController */,
+				22A35C742569A3FE00D73C4B /* NewArtistViewController */,
+				22A35C752569A43B00D73C4B /* DetialViewController */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		22A35C732569A3E500D73C4B /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22A35C672569A2CF00D73C4B /* SAEArtistTableViewController.h */,
+				22A35C682569A2CF00D73C4B /* SAEArtistTableViewController.m */,
+			);
+			name = TableViewController;
+			sourceTree = "<group>";
+		};
+		22A35C742569A3FE00D73C4B /* NewArtistViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22A35C6B2569A3B200D73C4B /* SAENewArtistViewController.h */,
+				22A35C6C2569A3B200D73C4B /* SAENewArtistViewController.m */,
+			);
+			path = NewArtistViewController;
+			sourceTree = "<group>";
+		};
+		22A35C752569A43B00D73C4B /* DetialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22A35C6F2569A3D700D73C4B /* SAEDetialArtistViewController.h */,
+				22A35C702569A3D700D73C4B /* SAEDetialArtistViewController.m */,
+			);
+			name = DetialViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +144,7 @@
 		22A35C3D256985EC00D73C4B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SAE;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					22A35C44256985EC00D73C4B = {
@@ -145,9 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A35C50256985EC00D73C4B /* ViewController.m in Sources */,
+				22A35C692569A2CF00D73C4B /* SAEArtistTableViewController.m in Sources */,
 				22A35C4A256985EC00D73C4B /* AppDelegate.m in Sources */,
+				22A35C6D2569A3B200D73C4B /* SAENewArtistViewController.m in Sources */,
 				22A35C5B256985ED00D73C4B /* main.m in Sources */,
+				22A35C712569A3D700D73C4B /* SAEDetialArtistViewController.m in Sources */,
 				22A35C4D256985EC00D73C4B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

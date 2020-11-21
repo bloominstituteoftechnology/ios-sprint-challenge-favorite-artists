@@ -9,6 +9,10 @@
 
 @interface SAEDetialArtistViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateFormedLabel;
+@property (strong, nonatomic) IBOutlet UITextView *artistTextView;
+
 @end
 
 @implementation SAEDetialArtistViewController

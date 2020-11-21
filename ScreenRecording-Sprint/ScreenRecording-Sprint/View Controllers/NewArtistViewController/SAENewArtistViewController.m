@@ -9,6 +9,12 @@
 
 @interface SAENewArtistViewController ()
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (strong, nonatomic) IBOutlet UISearchBar *artistSearchBar;
+@property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateFormedLabel;
+@property (strong, nonatomic) IBOutlet UITextView *artistTextView;
+
 @end
 
 @implementation SAENewArtistViewController
@@ -27,5 +33,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)saveButtonTapped:(id)sender {
+}
 
 @end

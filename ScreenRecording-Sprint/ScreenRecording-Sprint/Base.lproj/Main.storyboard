@@ -115,8 +115,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" leftItemsSupplementBackButton="YES" id="Sgl-UC-gTh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Cdw-e2-GUo"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Cdw-e2-GUo">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="EUB-Lr-0cw" id="3cn-wM-2gc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="ePk-db-800" id="cff-6Z-KNY"/>
+                        <outlet property="artistSearchBar" destination="qLL-Hf-nB5" id="gUh-9B-SM4"/>
+                        <outlet property="artistTextView" destination="rQw-FN-kkI" id="xtc-5O-Yrw"/>
+                        <outlet property="dateFormedLabel" destination="1O9-h6-KI2" id="d1O-f5-INO"/>
+                        <outlet property="saveButton" destination="Cdw-e2-GUo" id="lea-um-Kgb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJA-Jy-3Ut" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,6 +179,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jQz-FK-zLV"/>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="rhj-EH-amm" id="6cL-0Y-vXC"/>
+                        <outlet property="artistTextView" destination="VsA-BB-7ve" id="IWO-qJ-H3q"/>
+                        <outlet property="dateFormedLabel" destination="dZf-LZ-Ame" id="Ksx-O1-uSM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlj-su-bVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

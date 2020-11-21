@@ -16,6 +16,8 @@
 		1A1461DE256980F800074BB3 /* FavoriteArtistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1461DD256980F800074BB3 /* FavoriteArtistsTests.m */; };
 		1A1462032569854100074BB3 /* ArtistTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1462022569854100074BB3 /* ArtistTableVC.m */; };
 		1A1462082569855E00074BB3 /* ArtistDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1462072569855E00074BB3 /* ArtistDetailVC.m */; };
+		1A14621025698B2000074BB3 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14620F25698B2000074BB3 /* Artist.m */; };
+		1A14621E2569975400074BB3 /* Artists.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14621D2569975400074BB3 /* Artists.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		1A1462022569854100074BB3 /* ArtistTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableVC.m; sourceTree = "<group>"; };
 		1A1462062569855E00074BB3 /* ArtistDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailVC.h; sourceTree = "<group>"; };
 		1A1462072569855E00074BB3 /* ArtistDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailVC.m; sourceTree = "<group>"; };
+		1A14620E25698B2000074BB3 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		1A14620F25698B2000074BB3 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		1A14621C2569975400074BB3 /* Artists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artists.h; sourceTree = "<group>"; };
+		1A14621D2569975400074BB3 /* Artists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artists.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		1A1461C0256980F300074BB3 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				1A14620D25698B0800074BB3 /* Models */,
 				1A1461FE2569850600074BB3 /* ViewControllers */,
 				1A1461C1256980F300074BB3 /* AppDelegate.h */,
 				1A1461C2256980F300074BB3 /* AppDelegate.m */,
@@ -119,6 +126,17 @@
 				1A1462072569855E00074BB3 /* ArtistDetailVC.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A14620D25698B0800074BB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A14620E25698B2000074BB3 /* Artist.h */,
+				1A14620F25698B2000074BB3 /* Artist.m */,
+				1A14621C2569975400074BB3 /* Artists.h */,
+				1A14621D2569975400074BB3 /* Artists.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,9 +239,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1462082569855E00074BB3 /* ArtistDetailVC.m in Sources */,
+				1A14621E2569975400074BB3 /* Artists.m in Sources */,
 				1A1461C3256980F300074BB3 /* AppDelegate.m in Sources */,
 				1A1461D4256980F700074BB3 /* main.m in Sources */,
 				1A1462032569854100074BB3 /* ArtistTableVC.m in Sources */,
+				1A14621025698B2000074BB3 /* Artist.m in Sources */,
 				1A1461C6256980F300074BB3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

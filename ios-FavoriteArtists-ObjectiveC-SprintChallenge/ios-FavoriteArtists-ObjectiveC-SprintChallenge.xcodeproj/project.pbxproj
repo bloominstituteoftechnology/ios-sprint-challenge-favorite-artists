@@ -14,6 +14,7 @@
 		7C2E52B0256984DA009C4BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2E52AF256984DA009C4BD7 /* Assets.xcassets */; };
 		7C2E52B3256984DA009C4BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2E52B1256984DA009C4BD7 /* LaunchScreen.storyboard */; };
 		7C2E52B6256984DA009C4BD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E52B5256984DA009C4BD7 /* main.m */; };
+		7C2E52BF25699246009C4BD7 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E52BE25699246009C4BD7 /* Artist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		7C2E52B2256984DA009C4BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C2E52B4256984DA009C4BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C2E52B5256984DA009C4BD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7C2E52BD25699246009C4BD7 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		7C2E52BE25699246009C4BD7 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				7C2E52B1256984DA009C4BD7 /* LaunchScreen.storyboard */,
 				7C2E52B4256984DA009C4BD7 /* Info.plist */,
 				7C2E52B5256984DA009C4BD7 /* main.m */,
+				7C2E52BD25699246009C4BD7 /* Artist.h */,
+				7C2E52BE25699246009C4BD7 /* Artist.m */,
 			);
 			path = "ios-FavoriteArtists-ObjectiveC-SprintChallenge";
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				7C2E52A5256984D7009C4BD7 /* AppDelegate.m in Sources */,
 				7C2E52B6256984DA009C4BD7 /* main.m in Sources */,
 				7C2E52A8256984D7009C4BD7 /* SceneDelegate.m in Sources */,
+				7C2E52BF25699246009C4BD7 /* Artist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

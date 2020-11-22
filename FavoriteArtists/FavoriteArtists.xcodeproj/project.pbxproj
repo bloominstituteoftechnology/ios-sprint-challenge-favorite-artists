@@ -17,7 +17,6 @@
 		1A1462032569854100074BB3 /* ArtistTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1462022569854100074BB3 /* ArtistTableVC.m */; };
 		1A1462082569855E00074BB3 /* ArtistDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1462072569855E00074BB3 /* ArtistDetailVC.m */; };
 		1A14621025698B2000074BB3 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14620F25698B2000074BB3 /* Artist.m */; };
-		1A14621E2569975400074BB3 /* Artists.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14621D2569975400074BB3 /* Artists.m */; };
 		1A1462342569A18300074BB3 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1462302569A18300074BB3 /* LSIErrors.m */; };
 		1A1462352569A18300074BB3 /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1462322569A18300074BB3 /* LSIFileHelper.m */; };
 		1A1462362569A18300074BB3 /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1462332569A18300074BB3 /* LSILog.m */; };
@@ -54,8 +53,6 @@
 		1A1462072569855E00074BB3 /* ArtistDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailVC.m; sourceTree = "<group>"; };
 		1A14620E25698B2000074BB3 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
 		1A14620F25698B2000074BB3 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
-		1A14621C2569975400074BB3 /* Artists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artists.h; sourceTree = "<group>"; };
-		1A14621D2569975400074BB3 /* Artists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artists.m; sourceTree = "<group>"; };
 		1A14622E2569A18300074BB3 /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
 		1A14622F2569A18300074BB3 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		1A1462302569A18300074BB3 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 			children = (
 				1A14620E25698B2000074BB3 /* Artist.h */,
 				1A14620F25698B2000074BB3 /* Artist.m */,
-				1A14621C2569975400074BB3 /* Artists.h */,
-				1A14621D2569975400074BB3 /* Artists.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -278,7 +273,6 @@
 				1A1462352569A18300074BB3 /* LSIFileHelper.m in Sources */,
 				1A1462362569A18300074BB3 /* LSILog.m in Sources */,
 				1A1462082569855E00074BB3 /* ArtistDetailVC.m in Sources */,
-				1A14621E2569975400074BB3 /* Artists.m in Sources */,
 				1A1461C3256980F300074BB3 /* AppDelegate.m in Sources */,
 				1A1462342569A18300074BB3 /* LSIErrors.m in Sources */,
 				1A1461D4256980F700074BB3 /* main.m in Sources */,

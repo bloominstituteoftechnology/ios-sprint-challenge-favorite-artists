@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ArtistController;
+
 @interface ArtistTableVC : UITableViewController
 
 @end

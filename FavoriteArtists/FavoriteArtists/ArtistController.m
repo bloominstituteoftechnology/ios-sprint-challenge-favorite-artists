@@ -13,6 +13,14 @@ static NSString *const artistSearchBaseURLString = @"https://www.theaudiodb.com/
 
 @implementation ArtistController
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _artists = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 + (void)searchArtistsWithSearchTerm:(nonnull NSString *)searchTerm
                 completionHandler:(nonnull ArtistControllerCompletionHandler)completionHandler
 {

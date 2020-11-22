@@ -12,6 +12,8 @@ typedef void(^ArtistControllerCompletionHandler)(Artist *_Nullable artist, NSErr
 
 @interface ArtistController : NSObject
 
+@property (nonatomic, readonly, copy, nullable) NSMutableArray<Artist *> *artists;
+
 + (void)searchArtistsWithSearchTerm:(nonnull NSString *)searchTerm
                 completionHandler:(nonnull ArtistControllerCompletionHandler)completionHandler;
 

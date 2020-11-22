@@ -17,4 +17,8 @@ typedef void(^ArtistControllerCompletionHandler)(Artist *_Nullable artist, NSErr
 + (void)searchArtistsWithSearchTerm:(nonnull NSString *)searchTerm
                 completionHandler:(nonnull ArtistControllerCompletionHandler)completionHandler;
 
+- (void)saveToPersistentStore;
+
+- (void)loadFromPersistentStore;
+
 @end

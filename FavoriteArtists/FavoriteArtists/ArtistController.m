@@ -61,7 +61,7 @@ static NSString *const artistSearchBaseURLString = @"https://www.theaudiodb.com/
             return;
         }
         
-        Artist *results = [[Artist alloc] initWithDictionary:dictionary];
+        Artist *results = [[Artist alloc] initWithSearchResults:dictionary];
         if (!results) {
             NSError *apiError = errorWithMessage(@"Invalid JSON Dictionary", LSIAPIError);
             NSLog(@"Error decoding results dictionary: %@", apiError.localizedDescription);
@@ -77,6 +77,51 @@ static NSString *const artistSearchBaseURLString = @"https://www.theaudiodb.com/
             completionHandler(results, nil);
         });
     }] resume];
+}
+
+- (NSString *)filePath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *path = paths[0];
+    path = [path stringByAppendingPathComponent:@"artists"];
+    path = [path stringByAppendingPathExtension:@"json"];
+    return path;
+}
+
+- (void)saveToPersistentStore {
+    NSString *artistKey = @"artist";
+    NSString *artistPath = [self filePath];
+    NSMutableArray *artists = [[NSMutableArray alloc] init];
+    
+    for (Artist *artist in self.artists) {
+        NSDictionary *artistDict = artist.dictionaryValue;
+        [artists addObject:artistDict];
+    }
+    
+    NSDictionary *dict = @{artistKey : artists};
+    NSError *error = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
+    NSURL *urlPath = [NSURL fileURLWithPath:artistPath];
+    [data writeToURL:urlPath atomically:YES];
+    
+}
+
+- (void)loadFromPersistentStore {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *artistKey = @"artist";
+    NSString *artistPath = [self filePath];
+    
+    if ([fileManager fileExistsAtPath:artistPath]) {
+        NSURL *urlPath = [NSURL fileURLWithPath:artistPath];
+        NSData *data = [NSData dataWithContentsOfURL:urlPath];
+        NSError *error = nil;
+        NSMutableDictionary *artistDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        NSArray *artistArray = artistDict[artistKey];
+        for (NSMutableDictionary *dict in artistArray) {
+            Artist *artist = [[Artist alloc] initFromStore:dict];
+            [self.artists addObject:artist];
+        }
+    }
 }
 
 @end

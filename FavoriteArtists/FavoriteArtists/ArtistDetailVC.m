@@ -27,6 +27,8 @@
     [super viewDidLoad];
     _searchBar.delegate = self;
     [self detailMode];
+    self.saveButton.enabled = NO;
+    self.saveButton.tintColor = UIColor.clearColor;
     [self updateViews];
 }
 
@@ -38,6 +40,8 @@
             NSLog(@"Error fetching artist: %@", error);
             self.artist = artist;
             [self updateViews];
+            self.saveButton.enabled = YES;
+            self.saveButton.tintColor = UIColor.blueColor;
         }];
     }
 }
@@ -45,6 +49,7 @@
 - (IBAction)saveButton:(id)sender
 {
     [self.artistController.artists addObject:self.artist];
+    [self.artistController saveToPersistentStore];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -71,11 +76,7 @@
 - (void)detailMode {
     if (self.artist) {
         self.searchBar.hidden = YES;
-        self.saveButton.enabled = NO;
-        self.saveButton.tintColor = UIColor.clearColor;
     } else {
-        self.saveButton.enabled = YES;
-        self.saveButton.tintColor = UIColor.blueColor;
         self.searchBar.hidden = NO;
     }
 }

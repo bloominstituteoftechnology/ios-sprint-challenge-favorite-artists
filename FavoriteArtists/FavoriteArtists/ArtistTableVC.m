@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _artistController = [[ArtistController alloc] init];
+    [self.artistController loadFromPersistentStore];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -21,7 +21,7 @@
     return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+- (instancetype)initWithSearchResults:(NSDictionary *)dictionary
 {
     NSArray *artists = [dictionary objectForKey:@"artists"];
     
@@ -31,7 +31,7 @@
         
         NSNumber *formedYear = [artistDict objectForKey:@"intFormedYear"];
         if ([formedYear isKindOfClass:NSNull.class]) {
-            formedYear = nil;
+            formedYear = 0;
         }
         
         NSString *biography = [artistDict objectForKey:@"strBiographyEN"];
@@ -42,6 +42,24 @@
                               biography:biography];
     }
     return nil;
+}
+
+- (instancetype)initFromStore:(NSDictionary *)dictionary
+{
+        NSString *artistName = [dictionary objectForKey:@"artistName"];
+        if (![artistName isKindOfClass:NSString.class]) return nil;
+        
+        NSNumber *formedYear = [dictionary objectForKey:@"formedYear"];
+        if ([formedYear isKindOfClass:NSNull.class]) {
+            formedYear = 0;
+        }
+        
+        NSString *biography = [dictionary objectForKey:@"biography"];
+        if (![biography isKindOfClass:NSString.class]) return nil;
+        
+        return [self initWithArtistName:artistName
+                             formedYear:formedYear.intValue
+                              biography:biography];
 }
 
 - (NSDictionary *)dictionaryValue

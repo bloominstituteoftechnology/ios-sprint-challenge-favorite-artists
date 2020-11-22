@@ -21,7 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
                         formedYear:(int)aYear
                          biography:(NSString *)aBiography;
 
-- (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (nullable instancetype)initWithSearchResults:(NSDictionary *)dictionary;
+
+- (instancetype)initFromStore:(NSDictionary *)dictionary;
 
 @end
 

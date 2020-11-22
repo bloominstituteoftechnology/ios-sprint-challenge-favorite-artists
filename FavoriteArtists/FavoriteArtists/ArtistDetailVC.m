@@ -37,7 +37,14 @@
     NSString *searchTerm = searchBar.text;
     if (searchTerm) {
         [ArtistController searchArtistsWithSearchTerm:searchTerm completionHandler:^(Artist *artist, NSError *error) {
-            NSLog(@"Error fetching artist: %@", error);
+            if (!artist) {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Results"
+                                                                               message:@"Your search returned no artists."
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *button = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                [alert addAction:button];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
             self.artist = artist;
             [self updateViews];
             self.saveButton.enabled = YES;

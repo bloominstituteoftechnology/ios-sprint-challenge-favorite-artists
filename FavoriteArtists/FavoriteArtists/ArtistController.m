@@ -37,13 +37,12 @@ static NSString *const artistSearchBaseURLString = @"https://www.theaudiodb.com/
 
     [[NSURLSession.sharedSession dataTaskWithURL:url
                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (error) {
+        if (![error isKindOfClass:NSNull.class]) {
             NSLog(@"Error fetching artist: %@", error);
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 completionHandler(nil, error);
             });
-            
             return;
         }
         

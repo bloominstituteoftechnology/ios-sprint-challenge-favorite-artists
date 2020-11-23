@@ -17,13 +17,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hWB-me-jMb">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="aJD-vL-a9B" detailTextLabel="Xqr-3C-2Ar" style="IBUITableViewCellStyleSubtitle" id="hWB-me-jMb">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hWB-me-jMb" id="9VU-hd-Vtq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aJD-vL-a9B">
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xqr-3C-2Ar">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="I3M-XL-7bs" kind="show" identifier="ShowArtist" id="KAV-96-Ag3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,14 +70,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7i2-ws-0cH">
-                                <rect key="frame" x="0.0" y="140" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7i2-ws-0cH">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m1M-hq-ECy">
+                                <rect key="frame" x="20" y="309" width="374" height="553"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh4-uN-JeT">
+                                <rect key="frame" x="20" y="210" width="374" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0R-Zo-pqL">
+                                <rect key="frame" x="20" y="261" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="84p-Ea-Ndp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7i2-ws-0cH" firstAttribute="leading" secondItem="84p-Ea-Ndp" secondAttribute="leading" id="3Hw-la-DZu"/>
+                            <constraint firstItem="m1M-hq-ECy" firstAttribute="top" secondItem="Z0R-Zo-pqL" secondAttribute="bottom" constant="27" id="4le-rd-gMS"/>
+                            <constraint firstItem="Z0R-Zo-pqL" firstAttribute="leading" secondItem="84p-Ea-Ndp" secondAttribute="leading" constant="20" id="HRH-RB-Xyl"/>
+                            <constraint firstItem="84p-Ea-Ndp" firstAttribute="trailing" secondItem="m1M-hq-ECy" secondAttribute="trailing" constant="20" id="HuI-dw-36P"/>
+                            <constraint firstItem="7i2-ws-0cH" firstAttribute="top" secondItem="84p-Ea-Ndp" secondAttribute="top" id="J3C-6p-cyy"/>
+                            <constraint firstItem="84p-Ea-Ndp" firstAttribute="trailing" secondItem="Uh4-uN-JeT" secondAttribute="trailing" constant="20" id="aFE-Ej-Ksa"/>
+                            <constraint firstItem="84p-Ea-Ndp" firstAttribute="trailing" secondItem="Z0R-Zo-pqL" secondAttribute="trailing" constant="20" id="bXl-LS-KsU"/>
+                            <constraint firstItem="Z0R-Zo-pqL" firstAttribute="top" secondItem="Uh4-uN-JeT" secondAttribute="bottom" constant="8" symbolic="YES" id="bkg-lc-vmp"/>
+                            <constraint firstItem="m1M-hq-ECy" firstAttribute="bottom" secondItem="84p-Ea-Ndp" secondAttribute="bottom" id="f4q-cN-lgn"/>
+                            <constraint firstItem="Uh4-uN-JeT" firstAttribute="leading" secondItem="84p-Ea-Ndp" secondAttribute="leading" constant="20" id="hxw-3G-Hsu"/>
+                            <constraint firstItem="Uh4-uN-JeT" firstAttribute="top" secondItem="7i2-ws-0cH" secondAttribute="bottom" constant="14" id="mvW-IE-bQf"/>
+                            <constraint firstItem="m1M-hq-ECy" firstAttribute="leading" secondItem="84p-Ea-Ndp" secondAttribute="leading" constant="20" id="nza-0C-fW0"/>
+                            <constraint firstItem="7i2-ws-0cH" firstAttribute="trailing" secondItem="84p-Ea-Ndp" secondAttribute="trailing" id="ukx-4r-yCQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artists" id="Jrh-hO-hq6">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="BYq-qR-TAB"/>
@@ -66,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr2-6I-8BA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2381" y="92"/>
+            <point key="canvasLocation" x="2452" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ExB-jq-PLJ">
@@ -87,7 +140,13 @@
             <point key="canvasLocation" x="1025" y="92"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KAV-96-Ag3"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

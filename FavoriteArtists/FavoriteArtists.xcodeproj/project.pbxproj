@@ -20,6 +20,8 @@
 		4452BA02256B56F000EBC864 /* FavoriteArtistResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452BA01256B56F000EBC864 /* FavoriteArtistResults.m */; };
 		4452BA0B256B58C700EBC864 /* FavoriteArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452BA0A256B58C700EBC864 /* FavoriteArtistTableViewController.m */; };
 		4452BA11256B58E800EBC864 /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452BA10256B58E800EBC864 /* AddArtistViewController.m */; };
+		4452BA16256B5A8F00EBC864 /* ColdplayArtist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4452BA15256B5A8F00EBC864 /* ColdplayArtist.json */; };
+		4452BA1B256B5B5300EBC864 /* theWeekndJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 4452BA1A256B5B5300EBC864 /* theWeekndJSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		4452BA0A256B58C700EBC864 /* FavoriteArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistTableViewController.m; sourceTree = "<group>"; };
 		4452BA0F256B58E800EBC864 /* AddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddArtistViewController.h; sourceTree = "<group>"; };
 		4452BA10256B58E800EBC864 /* AddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistViewController.m; sourceTree = "<group>"; };
+		4452BA15256B5A8F00EBC864 /* ColdplayArtist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ColdplayArtist.json; path = ../../../../../../../../Desktop/ColdplayArtist.json; sourceTree = "<group>"; };
+		4452BA1A256B5B5300EBC864 /* theWeekndJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = theWeekndJSON.json; path = ../../../../../../../../Desktop/theWeekndJSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 		4452B9FF256B56B300EBC864 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				4452BA1A256B5B5300EBC864 /* theWeekndJSON.json */,
+				4452BA15256B5A8F00EBC864 /* ColdplayArtist.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -272,6 +278,8 @@
 			files = (
 				4452B9CA256B54C100EBC864 /* LaunchScreen.storyboard in Resources */,
 				4452B9C7256B54C100EBC864 /* Assets.xcassets in Resources */,
+				4452BA1B256B5B5300EBC864 /* theWeekndJSON.json in Resources */,
+				4452BA16256B5A8F00EBC864 /* ColdplayArtist.json in Resources */,
 				4452B9C5256B54BE00EBC864 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

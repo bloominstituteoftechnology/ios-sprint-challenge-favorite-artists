@@ -16,6 +16,7 @@
 		C2055796256B199D000BC6A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2055795256B199D000BC6A0 /* main.m */; };
 		C20557A0256B1EBC000BC6A0 /* MyArtist+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C205579F256B1EBC000BC6A0 /* MyArtist+NSJSONSerialization.m */; };
 		C20557A4256B1FBB000BC6A0 /* MyArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C20557A3256B1FBB000BC6A0 /* MyArtist.m */; };
+		C20557AA256B2E35000BC6A0 /* MyArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20557A9256B2E35000BC6A0 /* MyArtistController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		C205579F256B1EBC000BC6A0 /* MyArtist+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MyArtist+NSJSONSerialization.m"; sourceTree = "<group>"; };
 		C20557A2256B1FBB000BC6A0 /* MyArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyArtist.h; sourceTree = "<group>"; };
 		C20557A3256B1FBB000BC6A0 /* MyArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyArtist.m; sourceTree = "<group>"; };
+		C20557A8256B2E35000BC6A0 /* MyArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyArtistController.h; sourceTree = "<group>"; };
+		C20557A9256B2E35000BC6A0 /* MyArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyArtistController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +89,30 @@
 		C205579D256B1E6D000BC6A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C20557A6256B2DE3000BC6A0 /* New Group */,
 				C205579E256B1EBC000BC6A0 /* MyArtist+NSJSONSerialization.h */,
 				C205579F256B1EBC000BC6A0 /* MyArtist+NSJSONSerialization.m */,
 				C20557A2256B1FBB000BC6A0 /* MyArtist.h */,
 				C20557A3256B1FBB000BC6A0 /* MyArtist.m */,
+				C20557A7256B2E00000BC6A0 /* Controllers */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C20557A6256B2DE3000BC6A0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C20557A7256B2E00000BC6A0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C20557A8256B2E35000BC6A0 /* MyArtistController.h */,
+				C20557A9256B2E35000BC6A0 /* MyArtistController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +186,7 @@
 			files = (
 				C20557A4256B1FBB000BC6A0 /* MyArtist.m in Sources */,
 				C205578B256B199A000BC6A0 /* ViewController.m in Sources */,
+				C20557AA256B2E35000BC6A0 /* MyArtistController.m in Sources */,
 				C20557A0256B1EBC000BC6A0 /* MyArtist+NSJSONSerialization.m in Sources */,
 				C2055785256B199A000BC6A0 /* AppDelegate.m in Sources */,
 				C2055796256B199D000BC6A0 /* main.m in Sources */,

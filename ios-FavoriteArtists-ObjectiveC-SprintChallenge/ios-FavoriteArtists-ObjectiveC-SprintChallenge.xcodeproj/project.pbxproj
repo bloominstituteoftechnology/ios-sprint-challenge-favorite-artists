@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		7C2E52A5256984D7009C4BD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E52A4256984D7009C4BD7 /* AppDelegate.m */; };
 		7C2E52A8256984D7009C4BD7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E52A7256984D7009C4BD7 /* SceneDelegate.m */; };
-		7C2E52AB256984D7009C4BD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E52AA256984D7009C4BD7 /* ViewController.m */; };
 		7C2E52AE256984D7009C4BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2E52AC256984D7009C4BD7 /* Main.storyboard */; };
 		7C2E52B0256984DA009C4BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2E52AF256984DA009C4BD7 /* Assets.xcassets */; };
 		7C2E52B3256984DA009C4BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2E52B1256984DA009C4BD7 /* LaunchScreen.storyboard */; };
 		7C2E52B6256984DA009C4BD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E52B5256984DA009C4BD7 /* main.m */; };
 		7C2E52BF25699246009C4BD7 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E52BE25699246009C4BD7 /* Artist.m */; };
 		7C2E52CE256B9E7D009C4BD7 /* NSJSONSerialization+Artists.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E52CD256B9E7D009C4BD7 /* NSJSONSerialization+Artists.m */; };
+		7C33C2AD256E2503004D7C49 /* FavoriteArtiistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C33C2AC256E2503004D7C49 /* FavoriteArtiistsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,6 @@
 		7C2E52A4256984D7009C4BD7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7C2E52A6256984D7009C4BD7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		7C2E52A7256984D7009C4BD7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		7C2E52A9256984D7009C4BD7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7C2E52AA256984D7009C4BD7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7C2E52AD256984D7009C4BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C2E52AF256984DA009C4BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2E52B2256984DA009C4BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +33,8 @@
 		7C2E52BE25699246009C4BD7 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 		7C2E52CC256B9E7D009C4BD7 /* NSJSONSerialization+Artists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+Artists.h"; sourceTree = "<group>"; };
 		7C2E52CD256B9E7D009C4BD7 /* NSJSONSerialization+Artists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+Artists.m"; sourceTree = "<group>"; };
+		7C33C2AB256E2503004D7C49 /* FavoriteArtiistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtiistsTableViewController.h; sourceTree = "<group>"; };
+		7C33C2AC256E2503004D7C49 /* FavoriteArtiistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtiistsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +71,9 @@
 				7C2E52A4256984D7009C4BD7 /* AppDelegate.m */,
 				7C2E52A6256984D7009C4BD7 /* SceneDelegate.h */,
 				7C2E52A7256984D7009C4BD7 /* SceneDelegate.m */,
-				7C2E52A9256984D7009C4BD7 /* ViewController.h */,
-				7C2E52AA256984D7009C4BD7 /* ViewController.m */,
 				7C2E52AC256984D7009C4BD7 /* Main.storyboard */,
+				7C33C2AB256E2503004D7C49 /* FavoriteArtiistsTableViewController.h */,
+				7C33C2AC256E2503004D7C49 /* FavoriteArtiistsTableViewController.m */,
 				7C2E52AF256984DA009C4BD7 /* Assets.xcassets */,
 				7C2E52B1256984DA009C4BD7 /* LaunchScreen.storyboard */,
 				7C2E52B4256984DA009C4BD7 /* Info.plist */,
@@ -155,10 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C2E52AB256984D7009C4BD7 /* ViewController.m in Sources */,
 				7C2E52A5256984D7009C4BD7 /* AppDelegate.m in Sources */,
 				7C2E52CE256B9E7D009C4BD7 /* NSJSONSerialization+Artists.m in Sources */,
 				7C2E52B6256984DA009C4BD7 /* main.m in Sources */,
+				7C33C2AD256E2503004D7C49 /* FavoriteArtiistsTableViewController.m in Sources */,
 				7C2E52A8256984D7009C4BD7 /* SceneDelegate.m in Sources */,
 				7C2E52BF25699246009C4BD7 /* Artist.m in Sources */,
 			);

@@ -15,6 +15,10 @@
 		CA03BF412575E21900B31108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03BF3F2575E21900B31108 /* LaunchScreen.storyboard */; };
 		CA03BF442575E21900B31108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF432575E21900B31108 /* main.m */; };
 		CA03BF4D2575E4E400B31108 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF4C2575E4E400B31108 /* Artist.m */; };
+		CA03BF532575E6D800B31108 /* ArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF522575E6D800B31108 /* ArtistController.m */; };
+		CA03BF5C2575E77E00B31108 /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF562575E77E00B31108 /* LSILog.m */; };
+		CA03BF5D2575E77E00B31108 /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF572575E77E00B31108 /* LSIFileHelper.m */; };
+		CA03BF5E2575E77E00B31108 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF5B2575E77E00B31108 /* LSIErrors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,14 @@
 		CA03BF432575E21900B31108 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA03BF4B2575E4E400B31108 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
 		CA03BF4C2575E4E400B31108 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		CA03BF512575E6D800B31108 /* ArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistController.h; sourceTree = "<group>"; };
+		CA03BF522575E6D800B31108 /* ArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistController.m; sourceTree = "<group>"; };
+		CA03BF562575E77E00B31108 /* LSILog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSILog.m; sourceTree = "<group>"; };
+		CA03BF572575E77E00B31108 /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
+		CA03BF582575E77E00B31108 /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
+		CA03BF592575E77E00B31108 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		CA03BF5A2575E77E00B31108 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		CA03BF5B2575E77E00B31108 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,8 @@
 		CA03BF302575E21600B31108 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				CA03BF602575E78300B31108 /* LambdaSDK */,
+				CA03BF502575E6BB00B31108 /* Controler */,
 				CA03BF4F2575E4F000B31108 /* Model */,
 				CA03BF312575E21600B31108 /* AppDelegate.h */,
 				CA03BF322575E21600B31108 /* AppDelegate.m */,
@@ -87,6 +101,28 @@
 				CA03BF4C2575E4E400B31108 /* Artist.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		CA03BF502575E6BB00B31108 /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				CA03BF512575E6D800B31108 /* ArtistController.h */,
+				CA03BF522575E6D800B31108 /* ArtistController.m */,
+			);
+			path = Controler;
+			sourceTree = "<group>";
+		};
+		CA03BF602575E78300B31108 /* LambdaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CA03BF5A2575E77E00B31108 /* LSIErrors.h */,
+				CA03BF5B2575E77E00B31108 /* LSIErrors.m */,
+				CA03BF592575E77E00B31108 /* LSIFileHelper.h */,
+				CA03BF572575E77E00B31108 /* LSIFileHelper.m */,
+				CA03BF582575E77E00B31108 /* LSILog.h */,
+				CA03BF562575E77E00B31108 /* LSILog.m */,
+			);
+			name = LambdaSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA03BF5C2575E77E00B31108 /* LSILog.m in Sources */,
 				CA03BF392575E21600B31108 /* ViewController.m in Sources */,
+				CA03BF5E2575E77E00B31108 /* LSIErrors.m in Sources */,
+				CA03BF5D2575E77E00B31108 /* LSIFileHelper.m in Sources */,
 				CA03BF332575E21600B31108 /* AppDelegate.m in Sources */,
+				CA03BF532575E6D800B31108 /* ArtistController.m in Sources */,
 				CA03BF442575E21900B31108 /* main.m in Sources */,
 				CA03BF362575E21600B31108 /* SceneDelegate.m in Sources */,
 				CA03BF4D2575E4E400B31108 /* Artist.m in Sources */,

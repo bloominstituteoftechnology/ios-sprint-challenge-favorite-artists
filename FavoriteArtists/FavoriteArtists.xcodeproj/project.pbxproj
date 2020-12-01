@@ -19,6 +19,8 @@
 		CA03BF5C2575E77E00B31108 /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF562575E77E00B31108 /* LSILog.m */; };
 		CA03BF5D2575E77E00B31108 /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF572575E77E00B31108 /* LSIFileHelper.m */; };
 		CA03BF5E2575E77E00B31108 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF5B2575E77E00B31108 /* LSIErrors.m */; };
+		CA03BF662575E91400B31108 /* ArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF652575E91400B31108 /* ArtistTableViewController.m */; };
+		CA03BF6B2575E95C00B31108 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF6A2575E95C00B31108 /* ArtistDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,10 @@
 		CA03BF592575E77E00B31108 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		CA03BF5A2575E77E00B31108 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 		CA03BF5B2575E77E00B31108 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		CA03BF642575E91400B31108 /* ArtistTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistTableViewController.h; sourceTree = "<group>"; };
+		CA03BF652575E91400B31108 /* ArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableViewController.m; sourceTree = "<group>"; };
+		CA03BF692575E95C00B31108 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		CA03BF6A2575E95C00B31108 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 		CA03BF302575E21600B31108 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				CA03BF632575E8BA00B31108 /* ViewController */,
 				CA03BF602575E78300B31108 /* LambdaSDK */,
 				CA03BF502575E6BB00B31108 /* Controler */,
 				CA03BF4F2575E4F000B31108 /* Model */,
@@ -123,6 +130,17 @@
 				CA03BF562575E77E00B31108 /* LSILog.m */,
 			);
 			name = LambdaSDK;
+			sourceTree = "<group>";
+		};
+		CA03BF632575E8BA00B31108 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CA03BF642575E91400B31108 /* ArtistTableViewController.h */,
+				CA03BF652575E91400B31108 /* ArtistTableViewController.m */,
+				CA03BF692575E95C00B31108 /* ArtistDetailViewController.h */,
+				CA03BF6A2575E95C00B31108 /* ArtistDetailViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,8 +214,10 @@
 			files = (
 				CA03BF5C2575E77E00B31108 /* LSILog.m in Sources */,
 				CA03BF392575E21600B31108 /* ViewController.m in Sources */,
+				CA03BF6B2575E95C00B31108 /* ArtistDetailViewController.m in Sources */,
 				CA03BF5E2575E77E00B31108 /* LSIErrors.m in Sources */,
 				CA03BF5D2575E77E00B31108 /* LSIFileHelper.m in Sources */,
+				CA03BF662575E91400B31108 /* ArtistTableViewController.m in Sources */,
 				CA03BF332575E21600B31108 /* AppDelegate.m in Sources */,
 				CA03BF532575E6D800B31108 /* ArtistController.m in Sources */,
 				CA03BF442575E21900B31108 /* main.m in Sources */,

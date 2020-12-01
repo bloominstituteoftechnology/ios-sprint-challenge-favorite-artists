@@ -11,7 +11,7 @@
         <!--Favorite Artists-->
         <scene sceneID="16f-aX-q4a">
             <objects>
-                <tableViewController id="pfM-IN-qr1" sceneMemberID="viewController">
+                <tableViewController id="pfM-IN-qr1" customClass="ArtistTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gkT-XO-1zd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="1384.0579710144928" y="178.79464285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="oLb-UJ-VUX">
             <objects>
-                <viewController id="vSf-iz-IO3" sceneMemberID="viewController">
+                <viewController id="vSf-iz-IO3" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CDf-h5-828">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,8 +103,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="YCT-nw-ptz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="F3F-Ny-X3I"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="F3F-Ny-X3I">
+                            <connections>
+                                <action selector="saveButton:" destination="vSf-iz-IO3" id="HSL-TI-0sP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="6JM-i8-T8n" id="1QN-CU-ZLs"/>
+                        <outlet property="descriptionTextView" destination="2j7-Rz-iWh" id="aB7-hN-CEY"/>
+                        <outlet property="foundedLabel" destination="hHP-9f-hmK" id="YNg-sV-GaS"/>
+                        <outlet property="saveButton" destination="F3F-Ny-X3I" id="5Y0-pE-7uq"/>
+                        <outlet property="searchBar" destination="Vgv-oa-OHe" id="RZ6-fO-48t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZa-OH-IMi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

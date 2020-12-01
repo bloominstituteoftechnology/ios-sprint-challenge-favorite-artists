@@ -14,6 +14,7 @@
 		CA03BF3E2575E21900B31108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA03BF3D2575E21900B31108 /* Assets.xcassets */; };
 		CA03BF412575E21900B31108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03BF3F2575E21900B31108 /* LaunchScreen.storyboard */; };
 		CA03BF442575E21900B31108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF432575E21900B31108 /* main.m */; };
+		CA03BF4D2575E4E400B31108 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03BF4C2575E4E400B31108 /* Artist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		CA03BF402575E21900B31108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA03BF422575E21900B31108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA03BF432575E21900B31108 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA03BF4B2575E4E400B31108 /* Artist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		CA03BF4C2575E4E400B31108 /* Artist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 		CA03BF302575E21600B31108 /* FavoriteArtists */ = {
 			isa = PBXGroup;
 			children = (
+				CA03BF4F2575E4F000B31108 /* Model */,
 				CA03BF312575E21600B31108 /* AppDelegate.h */,
 				CA03BF322575E21600B31108 /* AppDelegate.m */,
 				CA03BF342575E21600B31108 /* SceneDelegate.h */,
@@ -74,6 +78,15 @@
 				CA03BF432575E21900B31108 /* main.m */,
 			);
 			path = FavoriteArtists;
+			sourceTree = "<group>";
+		};
+		CA03BF4F2575E4F000B31108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA03BF4B2575E4E400B31108 /* Artist.h */,
+				CA03BF4C2575E4E400B31108 /* Artist.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +162,7 @@
 				CA03BF332575E21600B31108 /* AppDelegate.m in Sources */,
 				CA03BF442575E21900B31108 /* main.m in Sources */,
 				CA03BF362575E21600B31108 /* SceneDelegate.m in Sources */,
+				CA03BF4D2575E4E400B31108 /* Artist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

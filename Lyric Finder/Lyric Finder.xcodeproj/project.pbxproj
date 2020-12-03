@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F173ADCF219F1EFE006DC97D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADCE219F1EFE006DC97D /* AppDelegate.m */; };
+		F173ADD5219F1EFE006DC97D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F173ADD3219F1EFE006DC97D /* Main.storyboard */; };
+		F173ADD7219F1EFF006DC97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F173ADD6219F1EFF006DC97D /* Assets.xcassets */; };
+		F173ADDA219F1EFF006DC97D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F173ADD8219F1EFF006DC97D /* LaunchScreen.storyboard */; };
+		F173ADDD219F1EFF006DC97D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADDC219F1EFF006DC97D /* main.m */; };
+		F173ADE7219F2679006DC97D /* SLBLyricTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADE6219F2679006DC97D /* SLBLyricTableViewController.m */; };
+		F173ADEA219F2698006DC97D /* SLBLyricDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADE9219F2698006DC97D /* SLBLyricDetailViewController.m */; };
+		F173ADF0219F2773006DC97D /* SLBSong.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADEF219F2773006DC97D /* SLBSong.m */; };
+		F173ADF3219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADF2219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m */; };
+		F173ADF7219F2AFA006DC97D /* SLBSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = F173ADF6219F2AFA006DC97D /* SLBSongController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F173ADCA219F1EFE006DC97D /* Lyric Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lyric Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F173ADCD219F1EFE006DC97D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F173ADCE219F1EFE006DC97D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F173ADD4219F1EFE006DC97D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F173ADD6219F1EFF006DC97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F173ADD9219F1EFF006DC97D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F173ADDB219F1EFF006DC97D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F173ADDC219F1EFF006DC97D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F173ADE5219F2679006DC97D /* SLBLyricTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLBLyricTableViewController.h; sourceTree = "<group>"; };
+		F173ADE6219F2679006DC97D /* SLBLyricTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLBLyricTableViewController.m; sourceTree = "<group>"; };
+		F173ADE8219F2698006DC97D /* SLBLyricDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLBLyricDetailViewController.h; sourceTree = "<group>"; };
+		F173ADE9219F2698006DC97D /* SLBLyricDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLBLyricDetailViewController.m; sourceTree = "<group>"; };
+		F173ADEE219F2773006DC97D /* SLBSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLBSong.h; sourceTree = "<group>"; };
+		F173ADEF219F2773006DC97D /* SLBSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLBSong.m; sourceTree = "<group>"; };
+		F173ADF1219F2A0A006DC97D /* NSJSONSerialization+Dictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+Dictionary.h"; sourceTree = "<group>"; };
+		F173ADF2219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+Dictionary.m"; sourceTree = "<group>"; };
+		F173ADF5219F2AFA006DC97D /* SLBSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLBSongController.h; sourceTree = "<group>"; };
+		F173ADF6219F2AFA006DC97D /* SLBSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLBSongController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F173ADC7219F1EFE006DC97D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F173ADC1219F1EFE006DC97D = {
+			isa = PBXGroup;
+			children = (
+				F173ADCC219F1EFE006DC97D /* Lyric Finder */,
+				F173ADCB219F1EFE006DC97D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F173ADCB219F1EFE006DC97D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADCA219F1EFE006DC97D /* Lyric Finder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F173ADCC219F1EFE006DC97D /* Lyric Finder */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADF4219F2A1D006DC97D /* Catigories */,
+				F173ADEC219F26BB006DC97D /* Models */,
+				F173ADED219F26C1006DC97D /* Model Controllers */,
+				F173ADEB219F26A4006DC97D /* View Controllers */,
+				F173ADE4219F1F5E006DC97D /* Storyboards */,
+				F173ADE3219F1F41006DC97D /* Resources */,
+				F173ADDC219F1EFF006DC97D /* main.m */,
+			);
+			path = "Lyric Finder";
+			sourceTree = "<group>";
+		};
+		F173ADE3219F1F41006DC97D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADCD219F1EFE006DC97D /* AppDelegate.h */,
+				F173ADCE219F1EFE006DC97D /* AppDelegate.m */,
+				F173ADD6219F1EFF006DC97D /* Assets.xcassets */,
+				F173ADDB219F1EFF006DC97D /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F173ADE4219F1F5E006DC97D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADD3219F1EFE006DC97D /* Main.storyboard */,
+				F173ADD8219F1EFF006DC97D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F173ADEB219F26A4006DC97D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADE5219F2679006DC97D /* SLBLyricTableViewController.h */,
+				F173ADE6219F2679006DC97D /* SLBLyricTableViewController.m */,
+				F173ADE8219F2698006DC97D /* SLBLyricDetailViewController.h */,
+				F173ADE9219F2698006DC97D /* SLBLyricDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F173ADEC219F26BB006DC97D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADEE219F2773006DC97D /* SLBSong.h */,
+				F173ADEF219F2773006DC97D /* SLBSong.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F173ADED219F26C1006DC97D /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADF5219F2AFA006DC97D /* SLBSongController.h */,
+				F173ADF6219F2AFA006DC97D /* SLBSongController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		F173ADF4219F2A1D006DC97D /* Catigories */ = {
+			isa = PBXGroup;
+			children = (
+				F173ADF1219F2A0A006DC97D /* NSJSONSerialization+Dictionary.h */,
+				F173ADF2219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m */,
+			);
+			path = Catigories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F173ADC9219F1EFE006DC97D /* Lyric Finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F173ADE0219F1EFF006DC97D /* Build configuration list for PBXNativeTarget "Lyric Finder" */;
+			buildPhases = (
+				F173ADC6219F1EFE006DC97D /* Sources */,
+				F173ADC7219F1EFE006DC97D /* Frameworks */,
+				F173ADC8219F1EFE006DC97D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lyric Finder";
+			productName = "Lyric Finder";
+			productReference = F173ADCA219F1EFE006DC97D /* Lyric Finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F173ADC2219F1EFE006DC97D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SLB;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Scott Bennett";
+				TargetAttributes = {
+					F173ADC9219F1EFE006DC97D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = F173ADC5219F1EFE006DC97D /* Build configuration list for PBXProject "Lyric Finder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F173ADC1219F1EFE006DC97D;
+			productRefGroup = F173ADCB219F1EFE006DC97D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F173ADC9219F1EFE006DC97D /* Lyric Finder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F173ADC8219F1EFE006DC97D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F173ADDA219F1EFF006DC97D /* LaunchScreen.storyboard in Resources */,
+				F173ADD7219F1EFF006DC97D /* Assets.xcassets in Resources */,
+				F173ADD5219F1EFE006DC97D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F173ADC6219F1EFE006DC97D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F173ADF7219F2AFA006DC97D /* SLBSongController.m in Sources */,
+				F173ADDD219F1EFF006DC97D /* main.m in Sources */,
+				F173ADCF219F1EFE006DC97D /* AppDelegate.m in Sources */,
+				F173ADF0219F2773006DC97D /* SLBSong.m in Sources */,
+				F173ADE7219F2679006DC97D /* SLBLyricTableViewController.m in Sources */,
+				F173ADF3219F2A0A006DC97D /* NSJSONSerialization+Dictionary.m in Sources */,
+				F173ADEA219F2698006DC97D /* SLBLyricDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F173ADD3219F1EFE006DC97D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F173ADD4219F1EFE006DC97D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F173ADD8219F1EFF006DC97D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F173ADD9219F1EFF006DC97D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F173ADDE219F1EFF006DC97D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F173ADDF219F1EFF006DC97D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F173ADE1219F1EFF006DC97D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5KBWP959TD;
+				INFOPLIST_FILE = "$(SRCROOT)/Lyric Finder/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.expertservices.Lyric-Finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F173ADE2219F1EFF006DC97D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5KBWP959TD;
+				INFOPLIST_FILE = "$(SRCROOT)/Lyric Finder/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.expertservices.Lyric-Finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F173ADC5219F1EFE006DC97D /* Build configuration list for PBXProject "Lyric Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F173ADDE219F1EFF006DC97D /* Debug */,
+				F173ADDF219F1EFF006DC97D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F173ADE0219F1EFF006DC97D /* Build configuration list for PBXNativeTarget "Lyric Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F173ADE1219F1EFF006DC97D /* Debug */,
+				F173ADE2219F1EFF006DC97D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F173ADC2219F1EFE006DC97D /* Project object */;
+}

@@ -26,7 +26,7 @@ static NSString *const artistSearchBaseURLString = @"https://www.theaudiodb.com/
 {
     if (!completionHandler) return;
 
-    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:artistSearchBaseURLString];
+    NSURLComponents *urlComponents = [[NSURLComponents alloc]  initWithString:artistSearchBaseURLString];
 
     urlComponents.queryItems = @[
         [NSURLQueryItem queryItemWithName:@"s" value:searchTerm],

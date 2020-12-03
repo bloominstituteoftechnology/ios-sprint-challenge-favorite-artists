@@ -40,7 +40,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     cell.textLabel.text = [_artistController.artists objectAtIndex:indexPath.row].artistName;
     if ([_artistController.artists objectAtIndex:indexPath.row].formedYear > 0) {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", [_artistController.artists objectAtIndex:indexPath.row].formedYear];
@@ -65,7 +65,7 @@
         ArtistDetailViewController *detailVC = (ArtistDetailViewController *)segue.destinationViewController;
         detailVC.artistController = _artistController;
         detailVC.artist = [_artistController.artists objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-    } else if ([segue.identifier isEqualToString:@"addArtist"]) {
+    } else if ([segue.identifier isEqualToString:@"AddArtist"]) {
         ArtistDetailViewController *detailVC = (ArtistDetailViewController *)segue.destinationViewController;
         detailVC.artistController = _artistController;
     }

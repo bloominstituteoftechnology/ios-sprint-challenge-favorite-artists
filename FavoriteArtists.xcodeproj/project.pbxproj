@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		61BA8EF82579B5CD00022F3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8EF72579B5CD00022F3D /* AppDelegate.m */; };
 		61BA8EFB2579B5CD00022F3D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8EFA2579B5CD00022F3D /* SceneDelegate.m */; };
-		61BA8EFE2579B5CD00022F3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8EFD2579B5CD00022F3D /* ViewController.m */; };
 		61BA8F012579B5CD00022F3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61BA8EFF2579B5CD00022F3D /* Main.storyboard */; };
 		61BA8F032579B5D000022F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61BA8F022579B5D000022F3D /* Assets.xcassets */; };
 		61BA8F062579B5D000022F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61BA8F042579B5D000022F3D /* LaunchScreen.storyboard */; };
 		61BA8F092579B5D000022F3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8F082579B5D000022F3D /* main.m */; };
+		61BA8F142579B89B00022F3D /* MKJArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8F132579B89B00022F3D /* MKJArtist.m */; };
+		61BA8F1D2579B8C900022F3D /* MKJAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8F1C2579B8C900022F3D /* MKJAddArtistViewController.m */; };
+		61BA8F212579B8D800022F3D /* MKJViewArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8F202579B8D800022F3D /* MKJViewArtistViewController.m */; };
+		61BA8F262579BC0300022F3D /* MKJFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8F252579BC0300022F3D /* MKJFavoriteArtistsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +25,19 @@
 		61BA8EF72579B5CD00022F3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		61BA8EF92579B5CD00022F3D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		61BA8EFA2579B5CD00022F3D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		61BA8EFC2579B5CD00022F3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		61BA8EFD2579B5CD00022F3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		61BA8F002579B5CD00022F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61BA8F022579B5D000022F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61BA8F052579B5D000022F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61BA8F072579B5D000022F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61BA8F082579B5D000022F3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		61BA8F122579B89B00022F3D /* MKJArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKJArtist.h; sourceTree = "<group>"; };
+		61BA8F132579B89B00022F3D /* MKJArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKJArtist.m; sourceTree = "<group>"; };
+		61BA8F1B2579B8C900022F3D /* MKJAddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKJAddArtistViewController.h; sourceTree = "<group>"; };
+		61BA8F1C2579B8C900022F3D /* MKJAddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKJAddArtistViewController.m; sourceTree = "<group>"; };
+		61BA8F1F2579B8D800022F3D /* MKJViewArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKJViewArtistViewController.h; sourceTree = "<group>"; };
+		61BA8F202579B8D800022F3D /* MKJViewArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKJViewArtistViewController.m; sourceTree = "<group>"; };
+		61BA8F242579BC0300022F3D /* MKJFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKJFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		61BA8F252579BC0300022F3D /* MKJFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKJFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +74,14 @@
 				61BA8EF72579B5CD00022F3D /* AppDelegate.m */,
 				61BA8EF92579B5CD00022F3D /* SceneDelegate.h */,
 				61BA8EFA2579B5CD00022F3D /* SceneDelegate.m */,
-				61BA8EFC2579B5CD00022F3D /* ViewController.h */,
-				61BA8EFD2579B5CD00022F3D /* ViewController.m */,
+				61BA8F122579B89B00022F3D /* MKJArtist.h */,
+				61BA8F132579B89B00022F3D /* MKJArtist.m */,
+				61BA8F242579BC0300022F3D /* MKJFavoriteArtistsTableViewController.h */,
+				61BA8F252579BC0300022F3D /* MKJFavoriteArtistsTableViewController.m */,
+				61BA8F1B2579B8C900022F3D /* MKJAddArtistViewController.h */,
+				61BA8F1C2579B8C900022F3D /* MKJAddArtistViewController.m */,
+				61BA8F1F2579B8D800022F3D /* MKJViewArtistViewController.h */,
+				61BA8F202579B8D800022F3D /* MKJViewArtistViewController.m */,
 				61BA8EFF2579B5CD00022F3D /* Main.storyboard */,
 				61BA8F022579B5D000022F3D /* Assets.xcassets */,
 				61BA8F042579B5D000022F3D /* LaunchScreen.storyboard */,
@@ -102,6 +117,7 @@
 		61BA8EEB2579B5CD00022F3D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MKJ;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					61BA8EF22579B5CD00022F3D = {
@@ -145,10 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61BA8EFE2579B5CD00022F3D /* ViewController.m in Sources */,
+				61BA8F1D2579B8C900022F3D /* MKJAddArtistViewController.m in Sources */,
+				61BA8F212579B8D800022F3D /* MKJViewArtistViewController.m in Sources */,
 				61BA8EF82579B5CD00022F3D /* AppDelegate.m in Sources */,
+				61BA8F262579BC0300022F3D /* MKJFavoriteArtistsTableViewController.m in Sources */,
 				61BA8F092579B5D000022F3D /* main.m in Sources */,
 				61BA8EFB2579B5CD00022F3D /* SceneDelegate.m in Sources */,
+				61BA8F142579B89B00022F3D /* MKJArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

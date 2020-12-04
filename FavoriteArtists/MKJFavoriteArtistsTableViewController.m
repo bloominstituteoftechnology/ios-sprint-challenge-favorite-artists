@@ -6,8 +6,13 @@
 //
 
 #import "MKJFavoriteArtistsTableViewController.h"
+#import "MKJArtistFetcher.h"
+#import "MKJAddArtistViewController.h"
+#import "MKJViewArtistViewController.h"
 
 @interface MKJFavoriteArtistsTableViewController ()
+
+@property (nonatomic) MKJArtistFetcher *fetcher;
 
 @end
 
@@ -15,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.fetcher = [[MKJArtistFetcher alloc] init];
+    
+    [self.tableView reloadData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -23,27 +31,27 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _fetcher.artists.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    MKJArtist *artist = _fetcher.artists[indexPath.row];
+    cell.textLabel.text = artist.artist;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Formed in %i", artist.year];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -79,14 +87,17 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"AddArtistSegue"]) {
+        MKJAddArtistViewController *detailVC = [segue destinationViewController];
+        detailVC.fetcher = _fetcher;
+    } else if ([segue.identifier isEqualToString:@"ViewArtistSegue"]) {
+        MKJViewArtistViewController *detailVC = [segue destinationViewController];
+        detailVC.fetcher = _fetcher;
+        detailVC.artist = _fetcher.artists[[self.tableView indexPathForSelectedRow].row];
+    }
 }
-*/
 
 @end

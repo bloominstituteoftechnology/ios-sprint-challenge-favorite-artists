@@ -6,10 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MKJArtistFetcher.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKJAddArtistViewController : UIViewController
+@interface MKJAddArtistViewController : UIViewController <UISearchBarDelegate>
+
+@property (nonatomic) MKJArtistFetcher *fetcher;
 
 @end
 

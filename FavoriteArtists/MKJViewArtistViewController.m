@@ -19,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _artistLabel.text = _artist.artist;
+    _yearLabel.text = [NSString stringWithFormat:@"Formed in %i", _artist.year];
+    _biographyLabel.text = _artist.biography;
 }
 
 /*

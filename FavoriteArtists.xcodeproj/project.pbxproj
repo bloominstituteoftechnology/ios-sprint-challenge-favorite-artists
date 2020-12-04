@@ -17,6 +17,7 @@
 		61BA8F1D2579B8C900022F3D /* MKJAddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8F1C2579B8C900022F3D /* MKJAddArtistViewController.m */; };
 		61BA8F212579B8D800022F3D /* MKJViewArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8F202579B8D800022F3D /* MKJViewArtistViewController.m */; };
 		61BA8F262579BC0300022F3D /* MKJFavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8F252579BC0300022F3D /* MKJFavoriteArtistsTableViewController.m */; };
+		61BA8F2A2579C62000022F3D /* MKJArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8F292579C62000022F3D /* MKJArtistFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		61BA8F202579B8D800022F3D /* MKJViewArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKJViewArtistViewController.m; sourceTree = "<group>"; };
 		61BA8F242579BC0300022F3D /* MKJFavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKJFavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
 		61BA8F252579BC0300022F3D /* MKJFavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKJFavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		61BA8F282579C62000022F3D /* MKJArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKJArtistFetcher.h; sourceTree = "<group>"; };
+		61BA8F292579C62000022F3D /* MKJArtistFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKJArtistFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				61BA8EFA2579B5CD00022F3D /* SceneDelegate.m */,
 				61BA8F122579B89B00022F3D /* MKJArtist.h */,
 				61BA8F132579B89B00022F3D /* MKJArtist.m */,
+				61BA8F282579C62000022F3D /* MKJArtistFetcher.h */,
+				61BA8F292579C62000022F3D /* MKJArtistFetcher.m */,
 				61BA8F242579BC0300022F3D /* MKJFavoriteArtistsTableViewController.h */,
 				61BA8F252579BC0300022F3D /* MKJFavoriteArtistsTableViewController.m */,
 				61BA8F1B2579B8C900022F3D /* MKJAddArtistViewController.h */,
@@ -168,6 +173,7 @@
 				61BA8F092579B5D000022F3D /* main.m in Sources */,
 				61BA8EFB2579B5CD00022F3D /* SceneDelegate.m in Sources */,
 				61BA8F142579B89B00022F3D /* MKJArtist.m in Sources */,
+				61BA8F2A2579C62000022F3D /* MKJArtistFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

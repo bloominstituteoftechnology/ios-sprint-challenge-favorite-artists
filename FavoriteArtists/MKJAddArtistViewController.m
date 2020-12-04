@@ -14,16 +14,41 @@
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UILabel *biographyLabel;
 
+@property (nonatomic) NSString *artistName;
+@property (nonatomic) int year;
+@property (nonatomic) NSString *biography;
+
 @end
 
 @implementation MKJAddArtistViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _artistSearchBar.delegate = self;
+    _artistLabel.text = @"";
+    _yearLabel.text = @"";
+    _biographyLabel.text = @"";
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.fetcher fetchArtistWithArtist:searchBar.text completionHandler:^(MKJArtist *artist, NSError *error) {
+        self.artistLabel.text = artist.artist;
+        self.artistName = artist.artist;
+        self.yearLabel.text = [NSString stringWithFormat:@"Formed in %i", artist.year];
+        self.year = artist.year;
+        self.biographyLabel.text = artist.biography;
+        self.biography = artist.biography;
+    }];
 }
 
 - (IBAction)saveArtist:(id)sender {
+    if ([self.artistLabel.text isEqualToString:@""]) {
+        [self.navigationController popViewControllerAnimated:true];
+    } else {
+        MKJArtist *artistInfo = [[MKJArtist alloc] initWithArtist:_artistName year:_year biography:_biography];
+        [self.fetcher saveArtist:artistInfo];
+        [self.navigationController popViewControllerAnimated:true];
+    }
 }
 
 

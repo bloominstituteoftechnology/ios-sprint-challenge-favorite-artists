@@ -40,9 +40,7 @@
     if (![artist isKindOfClass:NSString.class]) return nil;
     
     NSNumber *yearNum = [selectArtist objectForKey:@"intFormedYear"];
-    if (![yearNum isKindOfClass:NSNumber.class]) return nil;
-    
-    int year = (int)yearNum;
+    int year = [yearNum intValue];
     
     NSString *biography = [selectArtist objectForKey:@"strBiographyEN"];
     if (![biography isKindOfClass:NSString.class]) return nil;

@@ -6,6 +6,8 @@
 //
 
 #import "SAEArtistTableViewController.h"
+#import "SAEDetialArtistViewController.h"
+#import "SAEArtist.h"
 
 @interface SAEArtistTableViewController ()
 

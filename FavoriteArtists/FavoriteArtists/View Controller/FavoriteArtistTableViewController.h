@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ArtistFetcher;
+
 @interface FavoriteArtistTableViewController : UITableViewController
+
+@property ArtistFetcher *artistsFetcher;
 
 @end
 

@@ -13,15 +13,12 @@
 		4452B9C7256B54C100EBC864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4452B9C6256B54C100EBC864 /* Assets.xcassets */; };
 		4452B9CA256B54C100EBC864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4452B9C8256B54C100EBC864 /* LaunchScreen.storyboard */; };
 		4452B9CD256B54C100EBC864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452B9CC256B54C100EBC864 /* main.m */; };
-		4452B9D7256B54C100EBC864 /* FavoriteArtistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452B9D6256B54C100EBC864 /* FavoriteArtistsTests.m */; };
-		4452B9E2256B54C100EBC864 /* FavoriteArtistsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452B9E1256B54C100EBC864 /* FavoriteArtistsUITests.m */; };
 		4452B9F5256B55FD00EBC864 /* FavoriteArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452B9F4256B55FD00EBC864 /* FavoriteArtist.m */; };
 		4452B9FB256B564100EBC864 /* ArtistFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452B9FA256B564100EBC864 /* ArtistFetcher.m */; };
 		4452BA0B256B58C700EBC864 /* FavoriteArtistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452BA0A256B58C700EBC864 /* FavoriteArtistTableViewController.m */; };
 		4452BA11256B58E800EBC864 /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452BA10256B58E800EBC864 /* AddArtistViewController.m */; };
-		4452BA30256B66C900EBC864 /* ColdplayArtist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4452BA2F256B66C900EBC864 /* ColdplayArtist.json */; };
-		4452BA35256B66D600EBC864 /* theWeekndJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 4452BA34256B66D500EBC864 /* theWeekndJSON.json */; };
 		4452BA47256B756900EBC864 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4452BA46256B756900EBC864 /* LSIErrors.m */; };
+		44A40D2625871D5600FF9EB7 /* FavoriteArtist+Artist_JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A40D2525871D5600FF9EB7 /* FavoriteArtist+Artist_JSON.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +50,8 @@
 		4452B9CB256B54C100EBC864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4452B9CC256B54C100EBC864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4452B9D2256B54C100EBC864 /* FavoriteArtistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavoriteArtistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4452B9D6256B54C100EBC864 /* FavoriteArtistsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsTests.m; sourceTree = "<group>"; };
-		4452B9D8256B54C100EBC864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4452B9DD256B54C100EBC864 /* FavoriteArtistsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavoriteArtistsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4452B9E1256B54C100EBC864 /* FavoriteArtistsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsUITests.m; sourceTree = "<group>"; };
-		4452B9E3256B54C100EBC864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4452B9F2256B55CB00EBC864 /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = ../../LSIFileHelper.h; sourceTree = "<group>"; };
+		4452B9F2256B55CB00EBC864 /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		4452B9F3256B55FD00EBC864 /* FavoriteArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtist.h; sourceTree = "<group>"; };
 		4452B9F4256B55FD00EBC864 /* FavoriteArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtist.m; sourceTree = "<group>"; };
 		4452B9F9256B564100EBC864 /* ArtistFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistFetcher.h; sourceTree = "<group>"; };
@@ -67,10 +60,10 @@
 		4452BA0A256B58C700EBC864 /* FavoriteArtistTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistTableViewController.m; sourceTree = "<group>"; };
 		4452BA0F256B58E800EBC864 /* AddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddArtistViewController.h; sourceTree = "<group>"; };
 		4452BA10256B58E800EBC864 /* AddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistViewController.m; sourceTree = "<group>"; };
-		4452BA2F256B66C900EBC864 /* ColdplayArtist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ColdplayArtist.json; path = ../../../../../../../.Trash/ColdplayArtist.json; sourceTree = "<group>"; };
-		4452BA34256B66D500EBC864 /* theWeekndJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = theWeekndJSON.json; path = ../../../../../../../.Trash/theWeekndJSON.json; sourceTree = "<group>"; };
 		4452BA45256B756900EBC864 /* LSIErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 		4452BA46256B756900EBC864 /* LSIErrors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		44A40D2425871D5600FF9EB7 /* FavoriteArtist+Artist_JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FavoriteArtist+Artist_JSON.h"; sourceTree = "<group>"; };
+		44A40D2525871D5600FF9EB7 /* FavoriteArtist+Artist_JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FavoriteArtist+Artist_JSON.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +91,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		444C361A257DDC2E007DC2FE /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4452BA09256B58C700EBC864 /* FavoriteArtistTableViewController.h */,
+				4452BA0A256B58C700EBC864 /* FavoriteArtistTableViewController.m */,
+				4452BA0F256B58E800EBC864 /* AddArtistViewController.h */,
+				4452BA10256B58E800EBC864 /* AddArtistViewController.m */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		444C361B257DDC79007DC2FE /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4452B9F9256B564100EBC864 /* ArtistFetcher.h */,
+				4452B9FA256B564100EBC864 /* ArtistFetcher.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		444C361F257DDC90007DC2FE /* Lambda SDK */ = {
+			isa = PBXGroup;
+			children = (
+				4452B9F2256B55CB00EBC864 /* LSIFileHelper.h */,
+				4452BA45256B756900EBC864 /* LSIErrors.h */,
+				4452BA46256B756900EBC864 /* LSIErrors.m */,
+			);
+			path = "Lambda SDK";
+			sourceTree = "<group>";
+		};
+		444C3629257DDCA0007DC2FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4452B9F3256B55FD00EBC864 /* FavoriteArtist.h */,
+				4452B9F4256B55FD00EBC864 /* FavoriteArtist.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4452B9AE256B54BD00EBC864 = {
 			isa = PBXGroup;
 			children = (
 				4452B9B9256B54BE00EBC864 /* FavoriteArtists */,
-				4452B9D5256B54C100EBC864 /* FavoriteArtistsTests */,
-				4452B9E0256B54C100EBC864 /* FavoriteArtistsUITests */,
 				4452B9B8256B54BE00EBC864 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,44 +155,19 @@
 				4452B9BB256B54BE00EBC864 /* AppDelegate.m */,
 				4452B9BD256B54BE00EBC864 /* SceneDelegate.h */,
 				4452B9BE256B54BE00EBC864 /* SceneDelegate.m */,
-				4452BA0F256B58E800EBC864 /* AddArtistViewController.h */,
-				4452BA10256B58E800EBC864 /* AddArtistViewController.m */,
-				4452BA09256B58C700EBC864 /* FavoriteArtistTableViewController.h */,
-				4452BA0A256B58C700EBC864 /* FavoriteArtistTableViewController.m */,
-				4452B9F9256B564100EBC864 /* ArtistFetcher.h */,
-				4452B9FA256B564100EBC864 /* ArtistFetcher.m */,
-				4452B9F3256B55FD00EBC864 /* FavoriteArtist.h */,
-				4452B9F4256B55FD00EBC864 /* FavoriteArtist.m */,
+				44A40D2425871D5600FF9EB7 /* FavoriteArtist+Artist_JSON.h */,
+				44A40D2525871D5600FF9EB7 /* FavoriteArtist+Artist_JSON.m */,
+				444C3629257DDCA0007DC2FE /* Model */,
+				444C361B257DDC79007DC2FE /* Model Controller */,
+				444C361A257DDC2E007DC2FE /* View Controller */,
+				444C361F257DDC90007DC2FE /* Lambda SDK */,
 				4452B9C3256B54BE00EBC864 /* Main.storyboard */,
 				4452B9C6256B54C100EBC864 /* Assets.xcassets */,
 				4452B9C8256B54C100EBC864 /* LaunchScreen.storyboard */,
 				4452B9CB256B54C100EBC864 /* Info.plist */,
-				4452BA2F256B66C900EBC864 /* ColdplayArtist.json */,
-				4452BA34256B66D500EBC864 /* theWeekndJSON.json */,
 				4452B9CC256B54C100EBC864 /* main.m */,
-				4452B9F2256B55CB00EBC864 /* LSIFileHelper.h */,
-				4452BA45256B756900EBC864 /* LSIErrors.h */,
-				4452BA46256B756900EBC864 /* LSIErrors.m */,
 			);
 			path = FavoriteArtists;
-			sourceTree = "<group>";
-		};
-		4452B9D5256B54C100EBC864 /* FavoriteArtistsTests */ = {
-			isa = PBXGroup;
-			children = (
-				4452B9D6256B54C100EBC864 /* FavoriteArtistsTests.m */,
-				4452B9D8256B54C100EBC864 /* Info.plist */,
-			);
-			path = FavoriteArtistsTests;
-			sourceTree = "<group>";
-		};
-		4452B9E0256B54C100EBC864 /* FavoriteArtistsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4452B9E1256B54C100EBC864 /* FavoriteArtistsUITests.m */,
-				4452B9E3256B54C100EBC864 /* Info.plist */,
-			);
-			path = FavoriteArtistsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4452B9CA256B54C100EBC864 /* LaunchScreen.storyboard in Resources */,
-				4452BA35256B66D600EBC864 /* theWeekndJSON.json in Resources */,
-				4452BA30256B66C900EBC864 /* ColdplayArtist.json in Resources */,
 				4452B9C7256B54C100EBC864 /* Assets.xcassets in Resources */,
 				4452B9C5256B54BE00EBC864 /* Main.storyboard in Resources */,
 			);
@@ -305,6 +308,7 @@
 				4452BA0B256B58C700EBC864 /* FavoriteArtistTableViewController.m in Sources */,
 				4452B9CD256B54C100EBC864 /* main.m in Sources */,
 				4452B9BF256B54BE00EBC864 /* SceneDelegate.m in Sources */,
+				44A40D2625871D5600FF9EB7 /* FavoriteArtist+Artist_JSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4452B9D7256B54C100EBC864 /* FavoriteArtistsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4452B9E2256B54C100EBC864 /* FavoriteArtistsUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

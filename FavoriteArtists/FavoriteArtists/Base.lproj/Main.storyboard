@@ -75,21 +75,20 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m1M-hq-ECy">
-                                <rect key="frame" x="20" y="309" width="374" height="553"/>
+                                <rect key="frame" x="20" y="245" width="374" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh4-uN-JeT">
-                                <rect key="frame" x="20" y="210" width="374" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh4-uN-JeT">
+                                <rect key="frame" x="20" y="210" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0R-Zo-pqL">
-                                <rect key="frame" x="20" y="261" width="374" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0R-Zo-pqL">
+                                <rect key="frame" x="20" y="218" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -103,6 +102,7 @@
                             <constraint firstItem="Z0R-Zo-pqL" firstAttribute="leading" secondItem="84p-Ea-Ndp" secondAttribute="leading" constant="20" id="HRH-RB-Xyl"/>
                             <constraint firstItem="84p-Ea-Ndp" firstAttribute="trailing" secondItem="m1M-hq-ECy" secondAttribute="trailing" constant="20" id="HuI-dw-36P"/>
                             <constraint firstItem="7i2-ws-0cH" firstAttribute="top" secondItem="84p-Ea-Ndp" secondAttribute="top" id="J3C-6p-cyy"/>
+                            <constraint firstItem="Uh4-uN-JeT" firstAttribute="top" secondItem="84p-Ea-Ndp" secondAttribute="top" constant="70" id="NwV-5k-R2h"/>
                             <constraint firstItem="84p-Ea-Ndp" firstAttribute="trailing" secondItem="Uh4-uN-JeT" secondAttribute="trailing" constant="20" id="aFE-Ej-Ksa"/>
                             <constraint firstItem="84p-Ea-Ndp" firstAttribute="trailing" secondItem="Z0R-Zo-pqL" secondAttribute="trailing" constant="20" id="bXl-LS-KsU"/>
                             <constraint firstItem="Z0R-Zo-pqL" firstAttribute="top" secondItem="Uh4-uN-JeT" secondAttribute="bottom" constant="8" symbolic="YES" id="bkg-lc-vmp"/>
@@ -114,8 +114,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artists" id="Jrh-hO-hq6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BYq-qR-TAB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BYq-qR-TAB">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="I3M-XL-7bs" id="gqm-lV-SZq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistBio" destination="m1M-hq-ECy" id="pFj-gE-ujW"/>
+                        <outlet property="artistLabel" destination="Uh4-uN-JeT" id="uKQ-0m-8Dd"/>
+                        <outlet property="artistYear" destination="Z0R-Zo-pqL" id="HHl-S4-xMe"/>
+                        <outlet property="searchBar" destination="7i2-ws-0cH" id="U7S-h3-dkt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr2-6I-8BA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

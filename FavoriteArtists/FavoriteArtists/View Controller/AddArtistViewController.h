@@ -9,9 +9,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddArtistViewController : UIViewController
+@class ArtistFetcher;
+@class FavoriteArtist;
 
-//Search Bar Delegate
+@interface AddArtistViewController : UIViewController<UISearchBarDelegate>
+
+@property (nonatomic, strong) ArtistFetcher *artistsFetcher;
+@property (nonatomic, strong) FavoriteArtist *artist;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistYear;
+@property (weak, nonatomic) IBOutlet UITextView *artistBio;
 
 @end
 

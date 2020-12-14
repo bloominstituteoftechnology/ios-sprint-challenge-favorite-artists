@@ -8,7 +8,7 @@
 #import "ArtistFetcher.h"
 #import "FavoriteArtist.h"
 #import "LSIFileHelper.h"
-#import "LSIErrors.h"
+#import "FavoriteArtist+Artist_JSON.h"
 
 @interface ArtistFetcher()
 
@@ -18,7 +18,8 @@
 
 @implementation ArtistFetcher
 
-static NSString *ArtistFetcherBaseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php?";
+static NSString *ArtistFetcherBaseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
+//@"https://www.theaudiodb.com/api/v1/json/1/search.php?";
 
 - (instancetype)init
 {

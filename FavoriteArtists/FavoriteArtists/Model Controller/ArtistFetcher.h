@@ -14,10 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistFetcher : NSObject
 
+@property (nonatomic, copy, readonly) NSArray *artists;
+
 - (void)fetchArtistWithSearchTerm:(nonnull NSString *)searchTerm
 completion:(void (^)(FavoriteArtist *,NSError *))completion;
 
 - (void) addArtist:(FavoriteArtist *)artist;
+
+- (void)saveToFileDirectory;
+- (void) loadFromFileDirectory;
 
 @end
 

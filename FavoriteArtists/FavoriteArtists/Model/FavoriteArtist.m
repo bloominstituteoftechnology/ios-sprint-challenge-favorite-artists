@@ -14,7 +14,7 @@
 {
     if (self = [super init]) {
         _artist = [artist copy];
-        _biography = biography.copy;
+        _biography = [biography copy];
         _year = year;
     }
     return self;

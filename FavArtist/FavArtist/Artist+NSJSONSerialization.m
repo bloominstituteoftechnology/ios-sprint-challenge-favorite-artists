@@ -18,7 +18,7 @@
     if ([formedYear isKindOfClass:[NSString class]]) {
         formedYear = nil;
     } else {
-        NSString *formedYear
+        NSString *formedYear;
     }
     
     

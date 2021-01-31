@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860E3C8E25C22A3C00897B08 /* ArtistTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 860E3C8D25C22A3C00897B08 /* ArtistTableView.m */; };
+		860E3C9225C2434600897B08 /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 860E3C9125C2434600897B08 /* DetailVC.m */; };
+		860E3C9725C2682000897B08 /* ArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860E3C9625C2682000897B08 /* ArtistController.m */; };
 		86EBC22B2575DD3200E19416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EBC22A2575DD3200E19416 /* AppDelegate.m */; };
 		86EBC22E2575DD3200E19416 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EBC22D2575DD3200E19416 /* SceneDelegate.m */; };
 		86EBC2312575DD3200E19416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EBC2302575DD3200E19416 /* ViewController.m */; };
@@ -19,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		860E3C8725C229D100897B08 /* FavArtist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FavArtist-Bridging-Header.h"; sourceTree = "<group>"; };
+		860E3C8C25C22A3C00897B08 /* ArtistTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistTableView.h; sourceTree = "<group>"; };
+		860E3C8D25C22A3C00897B08 /* ArtistTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistTableView.m; sourceTree = "<group>"; };
+		860E3C9025C2434600897B08 /* DetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
+		860E3C9125C2434600897B08 /* DetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
+		860E3C9525C2682000897B08 /* ArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistController.h; sourceTree = "<group>"; };
+		860E3C9625C2682000897B08 /* ArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistController.m; sourceTree = "<group>"; };
 		86EBC2262575DD3200E19416 /* FavArtist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavArtist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EBC2292575DD3200E19416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		86EBC22A2575DD3200E19416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +83,10 @@
 				86EBC22D2575DD3200E19416 /* SceneDelegate.m */,
 				86EBC22F2575DD3200E19416 /* ViewController.h */,
 				86EBC2302575DD3200E19416 /* ViewController.m */,
+				860E3C8C25C22A3C00897B08 /* ArtistTableView.h */,
+				860E3C8D25C22A3C00897B08 /* ArtistTableView.m */,
+				860E3C9025C2434600897B08 /* DetailVC.h */,
+				860E3C9125C2434600897B08 /* DetailVC.m */,
 				86EBC2322575DD3200E19416 /* Main.storyboard */,
 				86EBC2352575DD3300E19416 /* Assets.xcassets */,
 				86EBC2372575DD3300E19416 /* LaunchScreen.storyboard */,
@@ -82,6 +96,9 @@
 				86EBC2492575E7EA00E19416 /* Artist.m */,
 				86EBC24E2575F03200E19416 /* Artist+NSJSONSerialization.h */,
 				86EBC24F2575F03200E19416 /* Artist+NSJSONSerialization.m */,
+				860E3C9525C2682000897B08 /* ArtistController.h */,
+				860E3C9625C2682000897B08 /* ArtistController.m */,
+				860E3C8725C229D100897B08 /* FavArtist-Bridging-Header.h */,
 			);
 			path = FavArtist;
 			sourceTree = "<group>";
@@ -116,6 +133,7 @@
 				TargetAttributes = {
 					86EBC2252575DD3200E19416 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -156,10 +174,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				86EBC2312575DD3200E19416 /* ViewController.m in Sources */,
+				860E3C9225C2434600897B08 /* DetailVC.m in Sources */,
 				86EBC22B2575DD3200E19416 /* AppDelegate.m in Sources */,
 				86EBC23C2575DD3300E19416 /* main.m in Sources */,
 				86EBC22E2575DD3200E19416 /* SceneDelegate.m in Sources */,
+				860E3C9725C2682000897B08 /* ArtistController.m in Sources */,
 				86EBC2502575F03200E19416 /* Artist+NSJSONSerialization.m in Sources */,
+				860E3C8E25C22A3C00897B08 /* ArtistTableView.m in Sources */,
 				86EBC24A2575E7EA00E19416 /* Artist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2395UCK67;
 				INFOPLIST_FILE = FavArtist/Info.plist;
@@ -312,6 +334,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FavArtist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FavArtist/FavArtist-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -321,6 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2395UCK67;
 				INFOPLIST_FILE = FavArtist/Info.plist;
@@ -330,6 +356,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FavArtist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FavArtist/FavArtist-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

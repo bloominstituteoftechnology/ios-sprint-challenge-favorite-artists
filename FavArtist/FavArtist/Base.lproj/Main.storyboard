@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oUu-fg-zDc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Artist Table View-->
         <scene sceneID="2Qh-2S-lKa">
             <objects>
-                <tableViewController id="eTv-md-I0f" sceneMemberID="viewController">
+                <tableViewController id="eTv-md-I0f" customClass="ArtistTableView" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EZW-6n-BXJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7Ij-Z8-U3P" detailTextLabel="HhY-5V-zdj" style="IBUITableViewCellStyleSubtitle" id="ZVe-Pz-z1F">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="7Ij-Z8-U3P" detailTextLabel="HhY-5V-zdj" style="IBUITableViewCellStyleSubtitle" id="ZVe-Pz-z1F">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZVe-Pz-z1F" id="kAh-TL-bEQ">
@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="1668" y="124"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="fnf-TI-h0R">
             <objects>
-                <viewController id="ZCc-cw-1kc" sceneMemberID="viewController">
+                <viewController id="ZCc-cw-1kc" customClass="DetailVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9d6-J3-q7j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,8 +123,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cWa-lS-nop">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fAz-Op-q34"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fAz-Op-q34">
+                            <connections>
+                                <action selector="saveButton:" destination="ZCc-cw-1kc" id="O8h-qv-32x"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="qNo-tF-Aec" id="O9B-FI-qIN"/>
+                        <outlet property="introLabel" destination="OZi-ZC-JHS" id="Qnl-gU-laU"/>
+                        <outlet property="nameLabel" destination="qBi-Cp-Brb" id="rfO-u8-fFc"/>
+                        <outlet property="searchBar" destination="uOn-oH-oRJ" id="JaK-mz-9qa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZB-jf-8Os" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,7 +160,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TZj-nL-LFY"/>
+        <segue reference="ccT-UR-EyH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

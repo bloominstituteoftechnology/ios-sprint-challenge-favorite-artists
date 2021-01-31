@@ -7,20 +7,19 @@
 
 #import "Artist.h"
 
+
 @implementation Artist
 
 - (instancetype)initWithArtistName:(NSString *)aName
-                         artistBio:(NSString *)aBio
                         formedYear:(int)aYear
+                         biography:(NSString *)aBiography
 {
     if (self = [super init]) {
         _artistName = aName.copy;
-        _artistBio = aBio.copy;
         _formedYear = aYear;
+        _biography = aBiography.copy;
     }
     return self;
 }
-
-
 
 @end

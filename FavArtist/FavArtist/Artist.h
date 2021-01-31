@@ -12,14 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Artist : NSObject
 
 @property (nonatomic, readonly, copy) NSString *artistName;
-@property (nonatomic, readonly, copy) NSString *artistBio;
+@property (nonatomic, readonly, copy) NSString *biography;
 @property (nonatomic, readonly) int formedYear;
 
 - (instancetype)initWithArtistName:(NSString *)aName
-                         artistBio:(NSString *)aBio
                         formedYear:(int)aYear
+                         biography:(NSString *)aBiography;
 
-NS_DESIGNATED_INITIALIZER;
 
 @end
 

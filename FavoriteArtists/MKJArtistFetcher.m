@@ -11,10 +11,10 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
 
 @implementation MKJArtistFetcher
 
-- (instancetype)initWithArtists:(NSMutableArray<MKJArtist *> *)artists
+- (instancetype)init
 {
     if (self = [super init]) {
-        _artists = [[NSMutableArray alloc] init];
+        _artists = [NSMutableArray new];
     }
     return self;
 }
@@ -71,8 +71,9 @@ static NSString *const ArtistFetcherBaseURLString = @"https://www.theaudiodb.com
 
 - (void)saveArtist:(MKJArtist *)artist
 {
-    [self.artists addObject:artist];
-    NSLog(@"The Artists: %@", self.artists);
+    NSLog(@"The Artist: %@", artist);
+    [_artists addObject:artist];
+    NSLog(@"All The Artists: %@", _artists);
 }
 
 @end

@@ -19,8 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)saveArtist:(MKJArtist *)artist;
 
-//- (instancetype)initWithArtists:(NSMutableArray<MKJArtist *> *)artists;
-
 @property (nonatomic) NSMutableArray<MKJArtist *> *artists;
 
 @end

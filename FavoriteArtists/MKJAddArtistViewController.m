@@ -24,10 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _artistSearchBar.delegate = self;
-    _artistLabel.text = @"";
-    _yearLabel.text = @"";
-    _biographyLabel.text = @"";
+    self.artistSearchBar.delegate = self;
+    self.artistLabel.text = @"";
+    self.yearLabel.text = @"";
+    self.biographyLabel.text = @"";
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -45,7 +45,8 @@
     if ([self.artistLabel.text isEqualToString:@""]) {
         [self.navigationController popViewControllerAnimated:true];
     } else {
-        MKJArtist *artistInfo = [[MKJArtist alloc] initWithArtist:_artistName year:_year biography:_biography];
+        MKJArtist *artistInfo = [[MKJArtist alloc] initWithArtist:self.artistName year:self.year biography:self.biography];
+        NSLog(@"⭐️ This artist is legit awesome: %@", artistInfo);
         [self.fetcher saveArtist:artistInfo];
         [self.navigationController popViewControllerAnimated:true];
     }

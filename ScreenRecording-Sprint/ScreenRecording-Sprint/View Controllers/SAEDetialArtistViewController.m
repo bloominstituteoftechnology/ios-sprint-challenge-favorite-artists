@@ -9,9 +9,10 @@
 
 @interface SAEDetialArtistViewController ()
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateFormedLabel;
-@property (strong, nonatomic) IBOutlet UITextView *artistTextView;
+@property (strong, nonatomic) IBOutlet UITextView *artistDetialTextView;
 
 @end
 
@@ -31,5 +32,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)saveButton:(id)sender {
+}
 
 @end

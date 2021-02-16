@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SAEArtist;
+
+
 @interface SAEDetialArtistViewController : UIViewController
 
 @end

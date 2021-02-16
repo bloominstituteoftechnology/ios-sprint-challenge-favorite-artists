@@ -9,12 +9,12 @@
 
 @implementation SAEArtist
 
-- (instancetype)initWithArtist:(NSString *)artist
+- (instancetype)initWithArtistName:(NSString *)artistName
                         biography:(NSString *)biography
                        yearFormed:(int)yearFormed
 {
     if (self = [super init]) {
-        _name = artist.copy;
+        _artistName = artistName.copy;
         _biography = biography.copy;
         _yearFormed = yearFormed;
     }

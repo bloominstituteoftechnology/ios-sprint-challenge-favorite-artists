@@ -12,27 +12,29 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSString *artistName = [dictionary objectForKey:@"stringArtist"];
+    NSString *artistName = [dictionary objectForKey:@"strArtist"];
     if (![artistName isKindOfClass:NSString.class]) return nil;
     
-    NSString *biography = [dictionary objectForKey:@"stringBiography"];
+    NSString *biography = [dictionary objectForKey:@"strBiographyEN"];
     if (![biography isKindOfClass:NSString.class]) return nil;
     
-    NSNumber *yearFormed = [dictionary objectForKey:@"intYearFormed"];
-    if ([yearFormed isKindOfClass:NSNull.class]) { yearFormed = 0;}
+    NSNumber *formedYear = [dictionary objectForKey:@"intFormedYear"];
+    if ([formedYear isKindOfClass:NSNull.class])
+    {
+        formedYear = 0;
+    }
     
     return [self initWithArtistName:artistName
                           biography:biography
-                         yearFormed:yearFormed.intValue];
+                         formedYear:formedYear.intValue];
 }
 
-- (NSDictionary *)toDictionary
-{
-    NSNumber *yearFormed = [NSNumber numberWithInt:self.yearFormed];
+- (NSDictionary *)toDictionary {
+    NSNumber *formedYear = [NSNumber numberWithInt:self.formedYear];
     NSDictionary *dictionary = @{
-        @"stringArtist" : self.artistName,
-        @"stringBiography" : self.biography,
-        @"intYearFormed" : yearFormed
+        @"strArtist" : self.artistName,
+        @"strBiographyEN" : self.biography,
+        @"intFormedYear" : formedYear
     };
     return dictionary;
 }

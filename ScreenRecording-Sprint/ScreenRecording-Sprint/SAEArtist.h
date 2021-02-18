@@ -11,13 +11,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SAEArtist : NSObject
 
-- (instancetype)initWithArtistName:(NSString *)artistName
-                        biography:(NSString *)biography
-                       yearFormed:(int)yearFormed;
-
 @property (nonatomic, readonly, copy) NSString *artistName;
 @property (nonatomic, readonly, copy) NSString *biography;
-@property (nonatomic, readonly) int yearFormed;
+@property (nonatomic, readonly) int formedYear;
+
+- (instancetype)initWithArtistName:(NSString *)aName
+                         biography:(NSString *)aBiography
+                        formedYear:(int)aYear;
 
 @end
 

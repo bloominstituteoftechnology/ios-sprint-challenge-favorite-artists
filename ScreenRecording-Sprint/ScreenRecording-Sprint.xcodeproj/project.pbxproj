@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		226BAE5F257B10610069221A /* SAEAudioDBFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 226BAE5E257B10610069221A /* SAEAudioDBFetcher.m */; };
 		22A35C4A256985EC00D73C4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A35C49256985EC00D73C4B /* AppDelegate.m */; };
 		22A35C4D256985EC00D73C4B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A35C4C256985EC00D73C4B /* SceneDelegate.m */; };
 		22A35C53256985EC00D73C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A35C51256985EC00D73C4B /* Main.storyboard */; };
@@ -22,8 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		226BAE5D257B10610069221A /* SAEAudioDBFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAEAudioDBFetcher.h; sourceTree = "<group>"; };
-		226BAE5E257B10610069221A /* SAEAudioDBFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAEAudioDBFetcher.m; sourceTree = "<group>"; };
 		22A35C45256985EC00D73C4B /* ScreenRecording-Sprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScreenRecording-Sprint.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A35C48256985EC00D73C4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22A35C49256985EC00D73C4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,8 +57,8 @@
 		226BAE5C257B0E8F0069221A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				226BAE5D257B10610069221A /* SAEAudioDBFetcher.h */,
-				226BAE5E257B10610069221A /* SAEAudioDBFetcher.m */,
+				22E6029125DB012A00FE0294 /* SAEArtistController.h */,
+				22E6029225DB012A00FE0294 /* SAEArtistController.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -135,8 +132,6 @@
 				22BBAF44257728E00095F922 /* SAEArtist.m */,
 				22E6028925DAEBF500FE0294 /* SAEArtist+NSJSONSerialization.h */,
 				22E6028A25DAEBF500FE0294 /* SAEArtist+NSJSONSerialization.m */,
-				22E6029125DB012A00FE0294 /* SAEArtistController.h */,
-				22E6029225DB012A00FE0294 /* SAEArtistController.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -213,7 +208,6 @@
 			files = (
 				22A35C692569A2CF00D73C4B /* SAEArtistTableViewController.m in Sources */,
 				22A35C4A256985EC00D73C4B /* AppDelegate.m in Sources */,
-				226BAE5F257B10610069221A /* SAEAudioDBFetcher.m in Sources */,
 				22A35C5B256985ED00D73C4B /* main.m in Sources */,
 				22E6029325DB012A00FE0294 /* SAEArtistController.m in Sources */,
 				22BBAF45257728E00095F922 /* SAEArtist.m in Sources */,

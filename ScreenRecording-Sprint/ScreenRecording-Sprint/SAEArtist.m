@@ -9,14 +9,14 @@
 
 @implementation SAEArtist
 
-- (instancetype)initWithArtistName:(NSString *)artistName
-                        biography:(NSString *)biography
-                       yearFormed:(int)yearFormed
+- (instancetype)initWithArtistName:(NSString *)aName
+                         biography:(NSString *)aBiography
+                        formedYear:(int)aYear
 {
     if (self = [super init]) {
-        _artistName = artistName.copy;
-        _biography = biography.copy;
-        _yearFormed = yearFormed;
+        _artistName = aName.copy;
+        _biography = aBiography.copy;
+        _formedYear = aYear;
     }
     return self;
 }

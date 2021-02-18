@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SAEArtist (NSJSONSerialization)
 
 - (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary;
--(NSDictionary *)toDictionary;
+
+- (NSDictionary *)toDictionary;
 
 @end
 

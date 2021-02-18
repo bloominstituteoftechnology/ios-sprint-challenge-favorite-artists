@@ -10,9 +10,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class SAEArtist;
+@class SAEArtistController;
 
+@interface SAEDetialArtistViewController : UIViewController <UISearchBarDelegate>
 
-@interface SAEDetialArtistViewController : UIViewController
+@property (nonatomic) SAEArtist *artist;
+@property (nonatomic) SAEArtistController *artistController;
 
 @end
 

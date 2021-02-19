@@ -10,14 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^ArtistCompletionHandler)(Artist *_Nullable artist, NSError *_Nullable error);
+typedef void (^ArtistCompletion)(Artist *artist, NSError *error);
 
 @interface ArtistModelController : NSObject
 
 @property (nonatomic, readonly, copy, nullable) NSMutableArray<Artist *> *artists;
 
-+(void)searchWithSearchTerm:(nonnull NSString *)searchTerm
-          completionHandler:(nonnull ArtistCompletionHandler)completionHandler;
++(void)fetchArtist:(nonnull NSString *)searchTerm
+          completionHandler:(nonnull ArtistCompletion)completionHandler;
 
 - (void)saveToPersistentStore;
 

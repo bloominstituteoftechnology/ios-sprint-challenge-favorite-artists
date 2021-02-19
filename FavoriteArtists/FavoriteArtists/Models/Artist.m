@@ -30,4 +30,36 @@
     
 }
 
+- (instancetype)initWithSearchResults:(NSDictionary *)dictionary
+{
+    NSArray *artists = [dictionary objectForKey:@"artists"];
+    
+    for (NSMutableDictionary *artistDict in artists) {
+        NSString *artistName = [artistDict objectForKey:@"strArtist"];
+        if (![artistName isKindOfClass:NSString.class]) return nil;
+        
+        NSNumber *yearFormed = [artistDict objectForKey:@"intFormedYear"];
+        if ([yearFormed isKindOfClass:NSNull.class]) {
+            yearFormed = 0;
+        }
+        
+        NSString *bioText = [artistDict objectForKey:@"strBiographyEN"];
+        if (![bioText isKindOfClass:NSString.class]) return nil;
+        
+        return [self initWithArtistName:artistName yearFormed:yearFormed.intValue bioText:bioText];
+    }
+    return nil;
+}
+
+- (NSDictionary *)toDictionary
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary init] alloc];
+    
+    [dictionary setObject:self.artistName forKey:@"artistName"];
+    [dictionary setObject:@(self.yearFormed) forKey:@"yearFormed"];
+    [dictionary setObject:self.bioText forKey:@"bioText"];
+    
+    return  dictionary;
+}
+
 @end

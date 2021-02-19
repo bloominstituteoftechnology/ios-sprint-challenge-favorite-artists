@@ -52,7 +52,12 @@ static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json/
                 NSLog(@"No Decoding Dictionary");
             }
         
-        NSLog(@"%@", result.bioText);
+        NSLog(@"%@", result.artistName);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(result, nil);
+        });
+
             
         }] resume];
     

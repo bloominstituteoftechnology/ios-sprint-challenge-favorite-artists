@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ArtistsDetailViewController : UIViewController
+@interface ArtistsDetailViewController : UIViewController <UISearchBarDelegate>
 
 @property (nonatomic) Artist *artist;
 @property (nonatomic) ArtistModelController *artistModelController;

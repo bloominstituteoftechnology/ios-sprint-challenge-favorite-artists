@@ -32,8 +32,10 @@
     NSString *searchTerm = searchBar.text;
     
     if (searchTerm) {
+        NSLog(@"We got a search term now we are going to fetch artist");
         [ArtistModelController fetchArtist:searchTerm completionHandler:^(Artist *artist, NSError *error)
          {
+            NSLog(@"We got a search term and now we're gonna check for artist");
             if (!artist) {
                 [self presentAlert];
             }
@@ -67,6 +69,7 @@
         int yearFormedInt = self.artist.yearFormed;
         NSString *yearFormedString = [NSString stringWithFormat:@"%i", yearFormedInt];
         self.yearFormedLabel.text = yearFormedString;
+        self.artistNameLabel.text = self.artist.artistName;
         self.artistDescriptionTextView.text = self.artist.bioText;
     }
     

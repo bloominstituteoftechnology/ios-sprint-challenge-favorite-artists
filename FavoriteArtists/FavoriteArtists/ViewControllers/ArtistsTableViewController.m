@@ -8,6 +8,7 @@
 #import "ArtistsTableViewController.h"
 #import "Artist.h"
 #import "ArtistModelController.h"
+#import "ArtistsDetailViewController.h"
 
 @interface ArtistsTableViewController ()
 
@@ -36,9 +37,7 @@
     NSString *yearFormedString = [NSString stringWithFormat:@"%i", yearFormedInt];
     
     cell.detailTextLabel.text = yearFormedString;
-   
-    
-    // Configure the cell...
+
     
     return cell;
 }
@@ -78,14 +77,16 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"addArtist"]) {
+        ArtistsDetailViewController *destinationVC = (ArtistsDetailViewController *)segue.destinationViewController;
+        destinationVC.artistModelController = _artistModelController;
+    }
 }
-*/
+
 
 @end

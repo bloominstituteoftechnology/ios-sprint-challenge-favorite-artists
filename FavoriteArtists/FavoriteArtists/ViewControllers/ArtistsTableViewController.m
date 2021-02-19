@@ -29,15 +29,21 @@
     return _artistModelController.artists.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"artist" forIndexPath:indexPath];
+    cell.textLabel.text = [_artistModelController.artists objectAtIndex: indexPath.row].artistName;
+    int yearFormedInt = [_artistModelController.artists objectAtIndex:indexPath.row].yearFormed;
+    NSString *yearFormedString = [NSString stringWithFormat:@"%i", yearFormedInt];
+    
+    cell.detailTextLabel.text = yearFormedString;
+   
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

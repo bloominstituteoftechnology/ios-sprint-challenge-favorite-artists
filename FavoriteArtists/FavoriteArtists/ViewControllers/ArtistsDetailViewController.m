@@ -6,8 +6,16 @@
 //
 
 #import "ArtistsDetailViewController.h"
+#import "ArtistModelController.h"
+#import "Artist.h"
 
-@interface ArtistsDetailViewController ()
+@interface ArtistsDetailViewController () <UISearchBarDelegate>
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
+@property (weak, nonatomic) IBOutlet UITextView *artistDescriptionTextView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
 
 @end
 
@@ -15,7 +23,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+}
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:true];
+}
+
+-(void) updateViews {
+    _saveButton.enabled = false;
+}
+
+
+-(void) properViewLoaded {
+    if (self.artist) {
+        _searchBar.hidden = true;
+    } else {
+        _searchBar.hidden = false;
+    }
 }
 
 /*

@@ -11,13 +11,13 @@
         <!--Favorite Artists-->
         <scene sceneID="OEL-Fg-xXn">
             <objects>
-                <tableViewController id="l9v-0u-oVb" sceneMemberID="viewController">
+                <tableViewController id="l9v-0u-oVb" customClass="ArtistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6tc-Xq-eB7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="DF4-yL-K5C" detailTextLabel="mSm-Qs-Ul4" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="dT2-gW-XfY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="artist" textLabel="DF4-yL-K5C" detailTextLabel="mSm-Qs-Ul4" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="dT2-gW-XfY">
                                 <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dT2-gW-XfY" id="EEg-2T-RSM">
@@ -62,7 +62,7 @@
         <!--Add New Artist-->
         <scene sceneID="QFO-oM-f8x">
             <objects>
-                <viewController id="ATr-pp-AIb" sceneMemberID="viewController">
+                <viewController id="ATr-pp-AIb" customClass="ArtistsDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tks-Qy-MD1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,6 +102,9 @@
                                     <constraint firstAttribute="height" constant="44" id="8fE-zG-ZVB"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ATr-pp-AIb" id="Xi5-bn-PMU"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fjd-fS-g14"/>
@@ -122,8 +125,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="Nnv-zr-FKg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="DNL-95-mmS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="DNL-95-mmS">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="ATr-pp-AIb" id="Gyv-dE-cS2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistDescriptionTextView" destination="gcl-eO-8VS" id="lpY-sc-G22"/>
+                        <outlet property="artistNameLabel" destination="B9M-UC-CrO" id="opM-Xg-odw"/>
+                        <outlet property="saveButton" destination="DNL-95-mmS" id="XFq-B1-4r0"/>
+                        <outlet property="searchBar" destination="gIr-8M-2FI" id="MPc-cB-CqR"/>
+                        <outlet property="yearFormedLabel" destination="JSs-6g-oSQ" id="yge-OS-vku"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIx-Rg-6Ne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

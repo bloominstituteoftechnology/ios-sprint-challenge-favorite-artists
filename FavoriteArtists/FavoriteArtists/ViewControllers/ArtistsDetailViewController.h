@@ -7,9 +7,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class Artist;
+@class ArtistModelController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistsDetailViewController : UIViewController
+
+@property (nonatomic) Artist *artist;
+@property (nonatomic) ArtistModelController *artistModelController;
 
 @end
 

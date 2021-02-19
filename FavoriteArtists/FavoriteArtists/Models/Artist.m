@@ -12,12 +12,22 @@
 -(instancetype)initWithArtistName:(NSString *)aName yearFormed:(int)aYear bioText:(NSString *)aBioText
 {
     if (self = [super init]) {
-        _artistName = aName.copy;
+        _artistName = aName;
         _yearFormed = aYear;
         _bioText = aBioText;
         
     }
     return self;
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    NSString *artistName = dictionary[@"artistName"];
+    NSString *yearFormed = dictionary[@"yearFormed"];
+    NSString *bioText = dictionary[@"bioText"];
+    
+    return  [self initWithArtistName:artistName yearFormed:yearFormed.intValue bioText:bioText];
+    
 }
 
 @end

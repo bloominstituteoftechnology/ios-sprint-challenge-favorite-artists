@@ -23,15 +23,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Do any additional setup after loading the view.
+    [self updateViews];
+    _saveButton.enabled = false;
 }
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    [self.artistModelController.artists addObject:self.artist];
     [self.navigationController popViewControllerAnimated:true];
 }
 
 -(void) updateViews {
-    _saveButton.enabled = false;
+    //Checking to make sure we have an artist
+    if (self.artist) {
+        self.title = self.artist.artistName;
+        int yearFormedInt = self.artist.yearFormed;
+        NSString *yearFormedString = [NSString stringWithFormat:@"%i", yearFormedInt];
+        self.yearFormedLabel.text = yearFormedString;
+        self.artistDescriptionTextView.text = self.artist.bioText;
+    }
+    
 }
 
 

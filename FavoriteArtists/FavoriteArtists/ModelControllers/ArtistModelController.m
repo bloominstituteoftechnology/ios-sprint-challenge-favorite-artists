@@ -6,6 +6,7 @@
 //
 
 #import "ArtistModelController.h"
+#import "Artist.h"
 
 @implementation ArtistModelController
 
@@ -13,6 +14,7 @@
 {
     if (self = [super init]) {
         _artists = [[NSMutableArray alloc] init];
+        
     }
     return self;
 }

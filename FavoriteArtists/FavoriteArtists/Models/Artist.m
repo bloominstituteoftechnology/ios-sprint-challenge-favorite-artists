@@ -9,4 +9,15 @@
 
 @implementation Artist
 
+-(instancetype)initWithArtistName:(NSString *)aName yearFormed:(int)aYear bioText:(NSString *)aBioText
+{
+    if (self = [super init]) {
+        _artistName = aName.copy;
+        _yearFormed = aYear;
+        _bioText = aBioText;
+        
+    }
+    return self;
+}
+
 @end

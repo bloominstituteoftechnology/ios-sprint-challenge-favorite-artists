@@ -11,6 +11,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Artist : NSObject
 
+@property (nonatomic, readonly, copy) NSString *artistName;
+@property (nonatomic, readonly, copy) NSString *bioText;
+@property (nonatomic, readonly) int yearFormed;
+
+-(instancetype)initWithArtistName:(NSString *)aName
+                yearFormed:(int)aYear
+                          bioText:(NSString *)aBioText;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,7 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _artistModelController = [[ArtistModelController alloc] init];
+    [_artistModelController loadFromPersistentStore];
  
+   
 }
 
 - (void)viewWillAppear:(BOOL)animated

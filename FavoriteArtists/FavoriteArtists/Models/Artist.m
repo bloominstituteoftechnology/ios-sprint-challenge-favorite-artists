@@ -53,7 +53,7 @@
 
 - (NSDictionary *)toDictionary
 {
-    NSMutableDictionary *dictionary = [[NSMutableDictionary init] alloc];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
     
     [dictionary setObject:self.artistName forKey:@"artistName"];
     [dictionary setObject:@(self.yearFormed) forKey:@"yearFormed"];

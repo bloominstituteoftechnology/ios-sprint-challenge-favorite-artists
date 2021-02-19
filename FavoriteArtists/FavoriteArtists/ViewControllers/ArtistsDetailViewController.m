@@ -50,6 +50,7 @@
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     [self.artistModelController.artists addObject:self.artist];
     [self.navigationController popViewControllerAnimated:true];
+    [self.artistModelController saveToPersistentStore];
 }
 
 -(void)presentAlert

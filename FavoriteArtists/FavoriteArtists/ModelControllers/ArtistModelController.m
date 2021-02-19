@@ -9,4 +9,12 @@
 
 @implementation ArtistModelController
 
+-(instancetype)init
+{
+    if (self = [super init]) {
+        _artists = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end

@@ -23,6 +23,12 @@
  
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -84,6 +90,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"addArtist"]) {
         ArtistsDetailViewController *destinationVC = (ArtistsDetailViewController *)segue.destinationViewController;
+        destinationVC.artistModelController = _artistModelController;
+    } else if ([segue.identifier isEqualToString:@"artistDetail"])
+    {
+        ArtistsDetailViewController *destinationVC = (ArtistsDetailViewController *)segue.destinationViewController;
+        
+        destinationVC.artist = [_artistModelController.artists objectAtIndex:[self.tableView indexPathForSelectedRow].row];
         destinationVC.artistModelController = _artistModelController;
     }
 }

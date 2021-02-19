@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateViews];
+    [self properViewLoaded];
     _saveButton.enabled = false;
 }
 
@@ -78,6 +79,7 @@
 
 -(void) properViewLoaded {
     if (self.artist) {
+        NSLog(@"properViewLoaded called");
         _searchBar.hidden = true;
     } else {
         _searchBar.hidden = false;

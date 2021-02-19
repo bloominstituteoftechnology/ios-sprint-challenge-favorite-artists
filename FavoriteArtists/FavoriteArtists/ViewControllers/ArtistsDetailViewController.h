@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) Artist *artist;
 @property (nonatomic) ArtistModelController *artistModelController;
 
+
+
 @end
 
 NS_ASSUME_NONNULL_END

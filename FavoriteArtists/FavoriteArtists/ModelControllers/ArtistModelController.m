@@ -21,7 +21,7 @@ static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json/
     return self;
 }
 
-+ (void)fetchArtist:(NSString *)searchTerm completionHandler:(ArtistCompletion)completionHandler
++ (void)fetchArtist:(nonnull NSString *)searchTerm completionHandler:(nonnull ArtistCompletion)completionHandler
 {
     if (!completionHandler) return;
     
@@ -36,32 +36,66 @@ static NSString *const baseURLString = @"https://www.theaudiodb.com/api/v1/json/
     NSLog(@"2. URL: %@", url);
     
     [[NSURLSession.sharedSession dataTaskWithURL:url
-                                  completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                                  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
     NSLog(@"3. Starting URL Session DataTaskWithURL");
+    NSLog(@"Data: %@", data);
+    NSLog(@"Response: %@", response.description);
         
-            if (error) {
-                NSLog(@"Error fetching artist: %@", error);
-                return;
-            }
-            NSError *jsonError;
-            NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+        NSUInteger dataLength = [data length];
+    
+        if (error) {
+            NSLog(@"Error fetching artist: %@", error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            return;
+        }
+        
+        NSError *jsonError;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
             
+        if (!dictionary) {
+            NSLog(@"Error decoding JSON: %@", jsonError);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, jsonError);
+            });
+            return;
+        }
+        
+        NSError *dictError;
+        
+        @try
+        {
             Artist *result = [[Artist alloc] initWithSearchResults:dictionary];
+            
+            NSLog(@"Dictionary Artist: %@", dictionary);
             if (!result) {
                 NSLog(@"No Decoding Dictionary");
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completionHandler(nil, dictError);
+                });
+                return;
             }
-        
-        NSLog(@"%@", result.artistName);
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            completionHandler(result, nil);
-        });
-
             
-        }] resume];
+            NSLog(@"Result Data: %@", result);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(result, nil);
+            });
+        } @catch(id anException) {
+            NSLog(@"Error fetching artist: %@", error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            return;
+        }
     
-    
+      @finally {
+        
+      }
+    }] resume];
 }
 
 -(NSString *)filePath

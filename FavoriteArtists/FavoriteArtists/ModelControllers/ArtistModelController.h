@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^ArtistCompletion)(Artist *artist, NSError *error);
+typedef void (^ArtistCompletion)(Artist *_Nullable artist, NSError *_Nullable error);
 
 @interface ArtistModelController : NSObject
 

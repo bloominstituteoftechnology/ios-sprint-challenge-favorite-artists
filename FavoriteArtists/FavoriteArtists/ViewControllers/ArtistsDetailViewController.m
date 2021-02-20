@@ -37,12 +37,14 @@
         [ArtistModelController fetchArtist:searchTerm completionHandler:^(Artist *artist, NSError *error)
          {
             NSLog(@"We got a search term and now we're gonna check for artist");
-            if (!artist) {
-                [self presentAlert];
+            if (artist) {
+                self.artist = artist;
+                self.saveButton.enabled = true;
+                [self updateViews];
+            } else {
+            NSLog(@"We don't have an artist");
+            [self presentAlert];
             }
-            self.artist = artist;
-            self.saveButton.enabled = true;
-            [self updateViews];
         }];
     }
 }
